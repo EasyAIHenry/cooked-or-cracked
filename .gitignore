@@ -18,3 +18,4 @@ seen.json
 profiles.json
 node_modules/
 .sync.log
+!sites/pompette/assets/pipe.mp4

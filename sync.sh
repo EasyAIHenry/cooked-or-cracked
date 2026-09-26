@@ -9,6 +9,7 @@ SK="$HOME/.claude/skills"
 sync_dir() { # src dst
   mkdir -p "$2"
   rsync -a --delete \
+    --include '/assets/pipe.mp4' \
     --exclude '.DS_Store' --exclude '*.mp4' --exclude '*.MOV' --exclude '*.mov' --exclude '*.mp3' \
     --exclude '*.wav' --exclude '.env' --exclude '*.env' --exclude '04_raw-footage/' --exclude '05_cuts/' \
     --exclude 'reel.mp4' --exclude 'history.json' --exclude 'seen.json' --exclude 'profiles.json' --exclude 'runs/' \
