@@ -13,6 +13,7 @@ sync_dir() { # src dst
     --exclude '*.wav' --exclude '.env' --exclude '*.env' --exclude '04_raw-footage/' --exclude '05_cuts/' \
     --exclude 'reel.mp4' --exclude 'history.json' --exclude 'seen.json' --exclude 'profiles.json' --exclude 'runs/' \
     --exclude '*.pdf' --exclude 'screens/' --exclude '09_ai-edit-reel/' \
+    --exclude '/assets/gen/' --exclude '/assets/cones/*.png' \
     "$1/" "$2/"
 }
 
@@ -27,6 +28,7 @@ done
 
 sync_dir "$CC/lead-scout" "$REPO/tools/lead-scout"
 [ -d "$CC/pompette-site" ] && sync_dir "$CC/pompette-site" "$REPO/sites/pompette"
+[ -d "$CC/pompette-menu" ] && sync_dir "$CC/pompette-menu" "$REPO/sites/pompette-menu"
 
 for ep in "$CC"/DRIVE_Cooked-or-Cracked_Ep*; do
   [ -d "$ep" ] || continue

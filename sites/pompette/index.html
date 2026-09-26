@@ -45,8 +45,19 @@
   </header>
 
   <div class="stage" aria-hidden="true">
-    <img class="poster" src="assets/poster.png" alt="" width="434" height="930">
     <canvas id="scene"></canvas>
+    <div class="cone">
+      <div class="cone-stack">
+      <img class="cone-pipe" src="assets/cones/empty.webp?v=4" alt="" width="760" height="1400">
+      <img class="cone-layer" data-flavour="original" src="assets/cones/original.webp?v=4" alt="" width="760" height="1400" fetchpriority="high">
+      <img class="cone-layer" data-flavour="hojicha" src="assets/cones/hojicha.webp?v=4" alt="" width="760" height="1400" decoding="async">
+      <img class="cone-layer" data-flavour="black-sesame" src="assets/cones/black-sesame.webp?v=4" alt="" width="760" height="1400" decoding="async">
+      <img class="cone-layer" data-flavour="matcha" src="assets/cones/matcha.webp?v=4" alt="" width="760" height="1400" decoding="async">
+      <img class="cone-layer" data-flavour="yuzu" src="assets/cones/yuzu.webp?v=4" alt="" width="760" height="1400" decoding="async">
+      <img class="cone-layer" data-flavour="pistachio" src="assets/cones/pistachio.webp?v=4" alt="" width="760" height="1400" decoding="async">
+      <img class="cone-layer" data-flavour="hazelnut" src="assets/cones/hazelnut.webp?v=4" alt="" width="760" height="1400" decoding="async">
+      </div>
+    </div>
   </div>
 
   <main id="main">
@@ -60,7 +71,7 @@
           <a class="btn btn-ghost" href="#visit">Find the counter</a>
         </div>
       </div>
-      <p class="scroll-hint" aria-hidden="true"><span></span>Scroll to pipe</p>
+      <p class="scroll-hint" aria-hidden="true"><span></span>Scroll</p>
     </section>
 
     <section class="proof" aria-label="At a glance">
@@ -80,6 +91,13 @@
           <li class="step"><span class="n">02</span><p class="step-t">Light on sugar.</p><p class="step-b">Sweet enough to taste the flavour. Not so sweet you taste only sugar.</p></li>
           <li class="step"><span class="n">03</span><p class="step-t">Churned here. Piped to order.</p><p class="step-b">Every batch is made in the shop, then piped into your cone the moment you ask.</p></li>
         </ol>
+        <figure class="film">
+          <video id="pipe-film" muted playsinline preload="auto" poster="assets/pipe-start.jpg" width="720" height="1280"
+            aria-label="Soft serve being piped into a waffle cone, coil by coil">
+            <source src="assets/pipe.mp4" type="video/mp4">
+          </video>
+          <figcaption>Scroll to pipe</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -113,7 +131,7 @@
 
     <section class="maker" aria-labelledby="maker-title">
       <figure class="maker-photo">
-        <img src="assets/maker.jpg" alt="Pompette's maker piping soft serve into a waffle cone at the machine, pastel blue wall with sprinkle decorations behind" width="720" height="900" loading="lazy">
+        <img src="assets/maker.jpg" alt="Pompette's maker piping soft serve into a waffle cone at the machine, pastel blue wall with sprinkle decorations behind" width="720" height="900" decoding="async">
       </figure>
       <div class="maker-copy">
         <h2 id="maker-title" class="split">Small shop. One counter. Run by the people who make it.</h2>

@@ -15,7 +15,7 @@ Open http://localhost:5173. Needs an internet connection for fonts, Three.js, GS
 - **Type:** Bricolage Grotesque 800 for display, Figtree for body. Taste bans Instrument Serif and Fraunces as defaults, so neither is used.
 - **Sections:** hero, facts strip, how it is made (pinned, pipes the swirl), the rotation (pinned, 7 flavours), menu, the maker, how to find the counter, footer.
 - **Motion stack:** GSAP + ScrollTrigger, Lenis as the only smooth-scroll engine. Word-by-word heading reveals with accessible text. Reduced motion shows the finished swirl with no scrubbing and lists all flavours.
-- **3D:** Three.js r170. The swirl is a procedural tube along a tightening spiral with star-nozzle ridges; the cone is a lathe with a canvas waffle texture; sprinkles are one instanced mesh. Pixel ratio capped, rendering pauses when the tab is hidden, context loss falls back to `assets/poster.png`.
+- **Visuals (v2, Higgsfield):** photoreal cones replace the hand-built 3D swirl. The hero opens on an empty cone and the swirl rises into it with a soft creamy edge. "How it is made" is a Kling 3.0 film of the swirl being piped, scrubbed frame by frame by scroll. The rotation crossfades between seven matched flavour renders. Sprinkles stay as one Three.js instanced mesh. The old procedural version is kept as `main-v1-threejs.js`.
 
 ## Content sources (checked 26 Sep 2026)
 | Fact | Source |
@@ -38,3 +38,15 @@ Open http://localhost:5173. Needs an internet connection for fonts, Three.js, GS
 - **Taste:** its rules were applied (banned default serifs, no centred hero, hero copy under 20 words, one-line CTAs, dark mode, no raw scroll listeners).
 - **img2threejs:** not run. The swirl was built by hand in Three.js, which is the kind of output img2threejs produces. On camera, run it on a photo of the real cone and compare.
 - **Impeccable, Playwright CLI, Awesome Design:** not run yet. Good on-camera steps: `/impeccable audit index.html`, `playwright-cli open http://localhost:5173 --headed` then `screenshot`, and drop a DESIGN.md in to see what changes.
+
+## Higgsfield assets (v2, 26 Sep 2026)
+| File | Model | Notes |
+|---|---|---|
+| `assets/cones/original.*` | GPT Image 2.5, high, 2K, transparent | Master cone. Prompt in the session log; every other cone uses it as the reference |
+| `assets/cones/{hojicha,black-sesame,matcha,yuzu,pistachio,hazelnut}.*` | GPT Image 2.5, reference = master | Same angle, light and scale, flavour changed. Pistachio edge halo trimmed |
+| `assets/cones/empty.*`, `cup.webp` | GPT Image 2.5, reference = master | Empty cone for the piping start; cup for the menu |
+| `assets/pipe.mp4` | Kling 3.0 pro, 5 s, 9:16, start = empty cone, end = master | Re-encoded with a keyframe every 2 frames so scroll scrubbing is smooth |
+| `assets/gen/` | raw downloads, frames, previews | Not loaded by the page |
+
+Cost: 10 images at 2.75 credits + 1 video at 8.75 credits = 36.25 credits (382.5 to 346.25).
+All cones are aligned on one 760x1400 canvas, bottom-aligned, so crossfades line up. The rim sits at 51% of the height (`RIM` in `main.js`).

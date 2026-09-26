@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Order at Pompette.</title>
+  <meta name="theme-color" content="#E7F5FA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0B2A30" media="(prefers-color-scheme: dark)">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="menu.css">
+  <script src="menu.js" defer></script>
+</head>
+<body>
+  <header class="top">
+    <div class="top-row">
+      <a class="brand" href="#" aria-label="Pompette.">
+        <svg class="mark" viewBox="0 0 48 64" aria-hidden="true">
+          <path d="M14 30c-5 0-6-6 0-7 1-6 6-7 9-5 1-5 9-6 11 0 5 0 7 6 2 8-2 3-6 4-10 4H14z" fill="none" stroke="var(--teal)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M24 12c3-3 3-6 1-9" fill="none" stroke="var(--teal)" stroke-width="3.2" stroke-linecap="round"/>
+          <path d="M11 34h26L25 61z M16 40l14 10 M31 40L19 52" fill="none" stroke="var(--gold)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="wordmark">Pompette.</span>
+      </a>
+      <span class="table-chip" id="table-chip">Counter pickup</span>
+    </div>
+    <p class="status"><span class="dot" id="open-dot"></span><span id="open-text">Checking hours</span></p>
+    <h1 class="hello">What are we having?</h1>
+  </header>
+
+  <section class="ontap" aria-labelledby="ontap-title">
+    <div class="sec-head">
+      <h2 id="ontap-title">On tap this week</h2>
+      <p class="sec-note">Four flavours. Two change every week.</p>
+    </div>
+    <ul class="ontap-rail" id="ontap-rail"></ul>
+  </section>
+
+  <nav class="tabs" aria-label="Menu sections">
+    <a href="#soft-serve" class="tab is-active">Soft serve</a>
+    <a href="#toppings" class="tab">Toppings</a>
+    <a href="#good-to-know" class="tab">Good to know</a>
+  </nav>
+
+  <main>
+    <section id="soft-serve" class="list-sec" aria-labelledby="ss-title">
+      <h2 id="ss-title" class="list-title">Soft serve</h2>
+      <p class="sec-note">Cup or cone, piped to order. Made in the shop with Meiji milk.</p>
+      <ul class="items" id="items"></ul>
+    </section>
+
+    <section id="toppings" class="list-sec" aria-labelledby="tp-title">
+      <h2 id="tp-title" class="list-title">Toppings</h2>
+      <p class="sec-note">Add them when you pick a flavour.</p>
+      <ul class="topping-list" id="topping-list"></ul>
+    </section>
+
+    <section id="good-to-know" class="list-sec know" aria-labelledby="gk-title">
+      <h2 id="gk-title" class="list-title">Good to know</h2>
+      <ul class="know-list">
+        <li>No pork served.</li>
+        <li>Pay at the counter when you collect.</li>
+        <li>Tue to Fri 12pm to 9pm. Sat, Sun, PH 11am to 9pm. Closed Monday.</li>
+      </ul>
+      <p class="demo-note">Design preview. Prices and toppings are samples until Pompette confirms them.</p>
+    </section>
+  </main>
+
+  <!-- order bar -->
+  <div class="bar" id="bar" hidden>
+    <button class="bar-btn" id="bar-btn" type="button">
+      <span class="bar-count" id="bar-count">1</span>
+      <span class="bar-label">View order</span>
+      <span class="bar-total" id="bar-total">$0.00</span>
+    </button>
+  </div>
+  <p class="sr-only" aria-live="polite" id="live"></p>
+
+  <!-- item sheet -->
+  <dialog class="sheet" id="item-sheet" aria-labelledby="sheet-name">
+    <form method="dialog" class="sheet-inner" id="item-form">
+      <button class="sheet-close" value="cancel" aria-label="Close">×</button>
+      <div class="sheet-hero" id="sheet-hero">
+        <img id="sheet-img" alt="" width="380" height="700">
+      </div>
+      <div class="sheet-body">
+        <p class="sheet-tag" id="sheet-tag"></p>
+        <h2 class="sheet-name" id="sheet-name"></h2>
+        <p class="sheet-note" id="sheet-note"></p>
+
+        <fieldset class="group">
+          <legend>Serve it in</legend>
+          <div class="seg">
+            <label><input type="radio" name="vessel" value="Cone" checked><span>Waffle cone</span></label>
+            <label><input type="radio" name="vessel" value="Cup"><span>Cup</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="group">
+          <legend>Toppings <span class="opt">optional</span></legend>
+          <div class="chips" id="sheet-toppings"></div>
+        </fieldset>
+
+        <div class="qty-row">
+          <span class="qty-label" id="qty-label">Quantity</span>
+          <div class="qty" role="group" aria-labelledby="qty-label">
+            <button type="button" class="qty-btn" id="qty-minus" aria-label="One less">−</button>
+            <output id="qty-val">1</output>
+            <button type="button" class="qty-btn" id="qty-plus" aria-label="One more">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="sheet-foot">
+        <button class="cta" id="add-btn" value="add">Add to order <span id="add-price">$0.00</span></button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- order sheet -->
+  <dialog class="sheet" id="order-sheet" aria-labelledby="order-title">
+    <form method="dialog" class="sheet-inner order" id="order-form">
+      <button class="sheet-close" value="cancel" aria-label="Close">×</button>
+      <div class="sheet-body">
+        <h2 class="sheet-name" id="order-title">Your order</h2>
+        <ul class="lines" id="lines"></ul>
+        <label class="field">
+          <span>Name for pickup</span>
+          <input id="pickup-name" name="name" autocomplete="given-name" placeholder="So we can call you" required>
+        </label>
+        <label class="field">
+          <span>Note for the counter <span class="opt">optional</span></span>
+          <input id="order-note" name="note" placeholder="Less sweet, extra napkins…">
+        </label>
+        <dl class="sum">
+          <div><dt>Total</dt><dd id="order-total">$0.00</dd></div>
+        </dl>
+        <p class="pay-note">Pay at the counter when your name is called.</p>
+      </div>
+      <div class="sheet-foot">
+        <button class="cta" id="place-btn" value="place">Place order</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- confirmation -->
+  <dialog class="sheet done" id="done-sheet" aria-labelledby="done-title">
+    <div class="sheet-inner">
+      <div class="sheet-body done-body">
+        <img class="done-img" src="assets/original-sm.webp" alt="" width="190" height="350">
+        <p class="sheet-tag">Order sent to the counter</p>
+        <h2 class="sheet-name" id="done-title">You're number <span id="done-no">17</span></h2>
+        <p class="sheet-note" id="done-note">We'll call your name when it's piped. Pay at the counter.</p>
+      </div>
+      <div class="sheet-foot">
+        <button class="cta ghost" id="done-close" type="button">Back to menu</button>
+      </div>
+    </div>
+  </dialog>
+</body>
+</html>
