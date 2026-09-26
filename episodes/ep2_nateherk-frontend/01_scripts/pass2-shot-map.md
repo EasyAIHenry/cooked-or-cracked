@@ -29,4 +29,10 @@ Tracks, bottom to top: TALKING HEAD, B-ROLL 1 full-frame screens + paper, B-ROLL
 
 New files: `04_raw-footage/screen-clips/pass2/` (b3 prompt typing 11x, b4 v1 site pane 3x, b5 Higgsfield widget 10x, all cut from the original CleanShot recording), `02_graphics/pass2-cards/` (ruled paper, card PNGs with white border and shadow, card backings for the video cards).
 
-Open questions for Henry: the sting sits after "Well, let's test it out." (not before his first words, per the Ep1 data). The score line at 2:08 is take 1 on camera; if the laptop change bothers him, Pass 3 can cover it with the scoreboard card.
+Choices to confirm with Henry:
+- The sting sits after "Well, let's test it out.", not before his first words (Ep1 data: half the audience left by 0:08).
+- The Kling clip plays twice: fast under the sting as a teaser, then at normal speed when he explains what Higgsfield does.
+- The score line at 2:08 comes from take 1, where the laptop and a phone sit differently. It is punched in 1.3x on his face so it reads as an emphasis cut.
+- Levels before the voice chain: Nate's opener -19 LUFS, Henry -20, sting -18.
+
+Preview: `05_cuts/ep2-pass2-preview.mp4` (720p, 12.9 MB).
