@@ -1,0 +1,308 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>A website for a shop that has none. Cooked or Cracked companion</title><link rel="stylesheet" href="style.css">
+<style>
+  .shot img { max-height:92mm; object-fit:cover; object-position:top; }
+  .shot.tall img { max-height:120mm; }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  .grid3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; }
+  .grid4 { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+  .grid2 .shot, .grid3 .shot, .grid4 .shot { margin:0; }
+  .grid2 .shot img { max-height:58mm; } .grid3 .shot img { max-height:46mm; } .grid4 .shot img { max-height:88mm; object-position:top; }
+  .cap { font-family:Kalam,cursive; font-weight:700; font-size:10.5pt; color:var(--mute); margin:4px 0 0; }
+  table.t { width:100%; border-collapse:collapse; font-size:9.2pt; margin:8px 0 10px; table-layout:fixed; }
+  table.t col.c1 { width:24%; } table.t col.c2 { width:33%; } table.t col.c3 { width:43%; }
+  table.t th { text-align:left; font-family:Kalam,cursive; font-weight:700; color:var(--mute); font-size:11pt; padding:4px 8px 6px 0; border-bottom:1.5px solid var(--ink); }
+  table.t td { padding:7px 8px 7px 0; border-bottom:1px solid var(--rule); vertical-align:top; }
+  table.t code { font-size:8pt; word-break:break-all; }
+  .check li { margin:0 0 6px; padding-left:26px; position:relative; }
+  .check li::before { content:""; position:absolute; left:0; top:3px; width:14px; height:14px; border:1.5px solid var(--ink); background:var(--paper); box-shadow:2px 2px 0 var(--ink); }
+  .check { list-style:none; padding:0; margin:8px 0 12px; }
+  .quote { font-family:Fraunces,Georgia,serif; font-size:15pt; line-height:1.3; border-left:4px solid var(--coral); padding:4px 0 4px 14px; margin:10px 0 14px; }
+  .price { display:flex; gap:12px; margin:10px 0 14px; }
+  .price .card { flex:1; }
+  .kpi { font-family:Fraunces,Georgia,serif; font-weight:900; font-size:28pt; line-height:1; color:var(--coral); }
+  .src li { margin:0 0 3px; font-size:9pt; }
+</style></head><body>
+
+<!-- 1 COVER -->
+<section class="page cover">
+  <span class="pill">Cooked or Cracked</span>
+  <div class="big">A website for a shop <i>that has none.</i></div>
+  <p class="sub">The exact build from the episode, step by step. Two prompts, five free design tools, one Higgsfield run, and a menu page for the QR code on the table. One evening if you follow it top to bottom.</p>
+  <div class="contents torn">
+    <div class="k">what is inside</div>
+    <ol>
+      <li><span>1 · Find a shop with no website</span><span>p3</span></li>
+      <li><span>2 · Install the five tools</span><span>p4–5</span></li>
+      <li><span>3 · Build the first version</span><span>p6</span></li>
+      <li><span>4 · Photoreal product with Higgsfield</span><span>p7–8</span></li>
+      <li><span>5 · The scroll-to-pipe trick</span><span>p9</span></li>
+      <li><span>6 · The site, section by section</span><span>p10–11</span></li>
+      <li><span>7 · The scan-and-order menu</span><span>p12</span></li>
+      <li><span>8 · The last 40%, and what to charge</span><span>p13–14</span></li>
+    </ol>
+  </div>
+  <div class="stamps">
+    <div class="st torn">prompts typed<b>2</b></div>
+    <div class="st torn">Higgsfield credits<b>36</b></div>
+    <div class="st torn">done when I stopped<b>60%</b></div>
+  </div>
+  <div class="who">Written by Henry Chua after building it on my own machine and my own Higgsfield account. Checked 26 September 2026. Nothing here is sponsored.</div>
+  <div class="receipt torn">
+    <div class="hand mute">what it cost me</div>
+    <div class="n">36.25 cr</div>
+    <div>10 images at 2.75 credits and one 5-second clip at 8.75. The five design tools cost nothing. Claude usage is on my normal plan.</div>
+  </div>
+</section>
+
+<!-- 2 WHY -->
+<section class="page">
+  <span class="tag">before you start</span>
+  <h2 style="margin-top:14px">Why I wrote this down</h2>
+  <p>A creator said five free tools turn Claude into a designer. I did not want to review the claim from my chair, so I picked a real shop with no website and built one with those tools on camera. The layout, the type and the colours came out well. The product shot did not. That gap is the whole lesson, and it is why step 4 exists.</p>
+  <p>This guide is the part that does not fit in ninety seconds: the prompts as I typed them, the install lines, the Higgsfield settings, and the checklist of what was still missing when I stopped.</p>
+
+  <div class="note ruled">
+    <h3>How the pieces fit</h3>
+    <div class="flow">
+      <div class="box">You<small>two prompts</small></div><div class="arr">→</div>
+      <div class="box">Claude Code<small>on your Mac or PC</small></div><div class="arr">→</div>
+      <div class="box">5 design skills<small>layout, type, colour, tests</small></div><div class="arr">→</div>
+      <div class="box">Higgsfield<small>the photos and the clip</small></div><div class="arr">→</div>
+      <div class="box">Two pages<small>the site, the order menu</small></div>
+    </div>
+    <p class="small" style="margin:0">The design skills are markdown files Claude reads before it writes code. Higgsfield is where the images and video come from. Claude wires the two together and writes the page.</p>
+  </div>
+
+  <div class="two">
+    <div class="card"><div class="k">you will need</div>
+      <p style="margin:6px 0 0">Claude Code installed and signed in<br>Node 18 or newer<br>A Higgsfield account with about 40 credits<br>One evening</p></div>
+    <div class="card"><div class="k">you will not need</div>
+      <p style="margin:6px 0 0">A designer<br>Figma<br>A hosting plan yet. Everything runs locally first<br>Any coding. Every line below is copy and paste.</p></div>
+  </div>
+
+  <div class="callout"><b>One rule before anything else.</b> You are building with a real shop's name, logo and photos. Show the owner before anything goes public, and ask. The site is your pitch to them, not a thing you post about them.</div>
+  <div class="foot"><span>Cooked or Cracked · A website for a shop that has none</span><span>page 2</span></div>
+</section>
+
+<!-- 3 STEP 1 -->
+<section class="page">
+  <div class="step"><div class="badge">1</div><div><h3>Find a shop with no website</h3>
+  <p>Open Claude Code in an empty folder and type the first prompt. This is mine, word for word. Change the city.</p></div></div>
+<pre>Design a 3D scroll website for a local business that does not have a website,
+so I can promote their service and menu. Take the style from their look and logo.
+It has to feel like a two to three million dollar site, and say what they sell
+in a few words. Give me 5 businesses in Singapore to choose from.</pre>
+  <p>Claude searched Google Maps, dropped the ones that already had a site, and gave me five with their rating, review count, logo and a one-line idea for the hero. I picked Pompette, a soft-serve counter in Beauty World Centre.</p>
+  <div class="shot"><img src="screens/06-maps-pompette.png" alt="Google Maps listing for Pompette showing 4.9 stars, 378 reviews and an Add website link"><div class="mark" style="left:40px; top:172px"></div><div class="label" style="left:90px; top:200px">4.9 from 378 reviews</div><div class="mark" style="left:40px; top:378px"></div><div class="label" style="left:90px; top:406px">"Add website": there is none</div></div>
+  <p class="caption"><a href="https://www.google.com/maps/search/?api=1&query=Pompette.&query_place_id=ChIJO3CO-2AR2jER28Wz2MXmIeY">Pompette on Google Maps</a>, 26 September 2026.</p>
+  <div class="note"><h3>What makes a good pick</h3>
+    <ul class="check">
+      <li>4.5 stars or better and 150 or more reviews. Proof the shop is worth the work.</li>
+      <li>No website. Check the Maps card and a quick web search, not just one.</li>
+      <li>One product you can photograph in a single frame. A cone, a bouquet, a cup of coffee.</li>
+      <li>A logo with two clear colours. That becomes the palette for free.</li>
+    </ul>
+  </div>
+  <div class="foot"><span>Cooked or Cracked · A website for a shop that has none</span><span>page 3</span></div>
+</section>
+
+<!-- 4 STEP 2 TABLE -->
+<section class="page">
+  <div class="step"><div class="badge">2</div><div><h3>Install the five tools</h3>
+  <p>Five lines in the terminal. They are all free and open source. The last one is called img2threejs, not "image twenty-three".</p></div></div>
+  <table class="t"><colgroup><col class="c1"><col class="c2"><col class="c3"></colgroup>
+    <tr><th>Tool</th><th>What it does</th><th>Install</th></tr>
+    <tr><td><b>Taste</b><br><a href="https://github.com/Leonxlnx/taste-skill">github.com/Leonxlnx/taste-skill</a></td><td>Design rules Claude reads before it writes a page. Bans the usual AI look.</td><td><code>npx skills add https://github.com/Leonxlnx/taste-skill --skill "design-taste-frontend"</code></td></tr>
+    <tr><td><b>Impeccable</b><br><a href="https://github.com/pbakaus/impeccable">github.com/pbakaus/impeccable</a></td><td>24 commands for a page that exists: audit, critique, polish, typeset. Live browser mode.</td><td><code>npx impeccable install</code> then <code>/impeccable init</code> inside Claude Code</td></tr>
+    <tr><td><b>Playwright CLI</b><br><a href="https://github.com/microsoft/playwright-cli">github.com/microsoft/playwright-cli</a></td><td>Claude opens your page in a real browser, clicks through, takes screenshots.</td><td><code>npm install -g @playwright/cli@latest</code><br><code>playwright-cli install --skills -g</code></td></tr>
+    <tr><td><b>Awesome Design</b><br><a href="https://github.com/VoltAgent/awesome-design-md">github.com/VoltAgent/awesome-design-md</a></td><td>73 DESIGN.md files from real sites (Linear, Stripe, Apple). Drop one in the folder.</td><td>No install. Copy one <code>DESIGN.md</code> into your folder. Browse at <a href="https://getdesign.md/">getdesign.md</a></td></tr>
+    <tr><td><b>img2threejs</b><br><a href="https://github.com/img2threejs/img2threejs">github.com/img2threejs/img2threejs</a></td><td>One photo to a Three.js model, in code. Python 3.10 or newer.</td><td><code>git clone https://github.com/img2threejs/img2threejs.git ~/.claude/skills/img2threejs</code></td></tr>
+  </table>
+  <p>Check they landed: <code>ls ~/.claude/skills</code> should list taste, impeccable and img2threejs, and <code>playwright-cli --help</code> should print its commands.</p>
+  <div class="callout"><b>What actually shaped my build.</b> Taste did the most: it picked the type, refused the centred hero and kept the copy short. Playwright took the screenshots you see in this guide. Impeccable and DESIGN.md are for the polish pass in step 8. img2threejs I did not use on the final site, because the cone it makes is a model, not a photo, and step 4 explains why that matters.</div>
+  <div class="foot"><span>Cooked or Cracked · A website for a shop that has none</span><span>page 4</span></div>
+</section>
+
+<!-- 5 STEP 2 SHOTS -->
+<section class="page">
+  <h2>The five, as they look today</h2>
+  <p class="mute" style="margin-bottom:12px">GitHub pages on 26 September 2026. Star counts move; the install lines on the previous page are what matter.</p>
+  <div class="grid2">
+    <div><div class="shot"><img src="screens/01-taste.png" alt="Taste skill on GitHub"></div><p class="cap">Taste · 90k stars · MIT</p></div>
+    <div><div class="shot"><img src="screens/02-impeccable.png" alt="Impeccable on GitHub"></div><p class="cap">Impeccable · 24 commands</p></div>
+    <div><div class="shot"><img src="screens/03-playwright.png" alt="Playwright CLI on GitHub"></div><p class="cap">Playwright CLI · Microsoft</p></div>
+    <div><div class="shot"><img src="screens/04-awesome-design.png" alt="Awesome DESIGN.md on GitHub"></div><p class="cap">Awesome DESIGN.md · 118k stars</p></div>
+  </div>
+  <div class="grid2" style="margin-top:10px">
+    <div><div class="shot"><img src="screens/05-img2threejs.png" alt="img2threejs on GitHub"></div><p class="cap">img2threejs · photo to 3D, in code</p></div>
+    <div class="note" style="margin:0"><h3>Read one README first</h3><p style="margin:0">Taste's. It is the one that changes what Claude writes on the very first page. The others help after you have something to look at.</p></div>
+  </div>
+  <div class="foot"><span>Cooked or Cracked · A website for a shop that has none</span><span>page 5</span></div>
+</section>
+
+<!-- 6 STEP 3 -->
+<section class="page">
+  <div class="step"><div class="badge">3</div><div><h3>Build the first version</h3>
+  <p>Tell Claude what the page is for, in plain words, and let the design skills handle the look. Mine was one paragraph.</p></div></div>
+<pre>Build the Pompette site. Sections: hero with the product, how it is made,
+the flavour rotation (two of four change weekly), the menu with prices,
+the maker, how to find the counter, footer. Take the colours from their logo.
+Scroll should do something on every section. Dark mode. Works on a phone.</pre>
+  <p>Twenty minutes later I had a real page with the right fonts, the logo's teal and gold, a menu card and directions. And a cone built out of code that looked like a cartoon.</p>
+  <div class="shot"><img src="screens/09-site-v1-hero.png" alt="First version of the Pompette site with a code-built 3D cone"><div class="mark" style="right:300px; top:150px"></div><div class="label" style="right:120px; top:110px">the tell</div></div>
+  <p class="caption">Version 1. The layout is already the final layout. The cone is the only thing that changed after this.</p>
+  <div class="quote">Design tools decide where things go and what they are set in. They cannot take a photograph.</div>
+  <div class="foot"><span>Cooked or Cracked · A website for a shop that has none</span><span>page 6</span></div>
+</section>
+
+<!-- 7 STEP 4 -->
+<section class="page">
+  <div class="step"><div class="badge">4</div><div><h3>Photoreal product with Higgsfield</h3>
+  <p>Second prompt, again word for word. Higgsfield is connected to Claude through its MCP server, so Claude can call it directly.</p></div></div>
+<pre>Upgrade the cone visuals with Higgsfield. Keep the tone and the fonts.
+Separately, design a scan-and-order menu page for the QR code on the table.</pre>
+  <p>Claude used <b>GPT Image 2.5</b> at high quality, 2K, with a transparent background, and generated one master cone. Everything else on the site is made from that one image.</p>
+<pre>Premium studio product photograph of a single hand-piped soft serve ice cream in a
+golden waffle cone, isolated on a fully transparent background, whole object in frame
+with generous margin, centred, straight-on eye level with a very slight top-down angle.
+Milky off-white milk ice cream piped from a star nozzle: three and a half stacked coils
+with crisp fluted ridges, a thin curled tip. Classic crisp waffle cone, warm honey-gold,
+sharp diamond grid, rolled rim. Soft key light upper left, cool pastel-blue rim light from
+behind right. No drips, no toppings, no hand, no props, no text, no ground shadow.</pre>
+  <div class="shot"><img src="screens/19-master-cones.jpg" alt="Two master cone renders from GPT Image 2.5 on a sky-blue background"></div>
+  <p class="caption">Two variants from the same prompt. I kept the left one.</p>
+  <div class="three">
+    <div class="card"><div class="k">one image</div><div class="n">2.75</div><span class="small">credits, high, 2K, transparent</span></div>
+    <div class="card"><div class="k">one 5 s clip</div><div class="n">8.75</div><span class="small">credits, Kling 3.0 pro, 9:16</span></div>
+    <div class="card win"><div class="k">the whole site</div><div class="n">36.25</div><span class="small">10 images and 1 clip</span></div>
+  </div>
+  <div class="foot"><span>Cooked or Cracked · A website for a shop that has none</span><span>page 7</span></div>
+</section>
+
+<!-- 8 STEP 4b FLAVOURS -->
+<section class="page">
+  <h2>Seven flavours from one master</h2>
+  <p>Do not prompt seven cones. Prompt one, then pass it back as the reference image and change only the flavour. Same angle, same light, same size, so the page can crossfade between them without a jump.</p>
+<pre>Recreate the reference image exactly: same waffle cone, same swirl shape, same coil
+count, same camera angle, framing, scale and lighting, transparent background.
+Change only the ice cream flavour: <b>hojicha (roasted green tea), warm toasted
+caramel-brown with a soft milky tone</b>, velvety fluted ridges.</pre>
+  <div class="shot"><img src="screens/17-flavours-sheet.jpg" alt="Original, hojicha, black sesame, matcha, yuzu, pistachio and hazelnut cones, plus an empty cone and a cup"></div>
+  <p class="caption">All seven, plus an empty cone for the piping clip and a cup for the menu. Each one 2.75 credits.</p>
+  <div class="note ruled"><h3>Three things that saved a reroll</h3>
+    <p style="margin:0"><b>Transparent background</b> is a setting on GPT Image 2.5, not a prompt word. <b>Bottom-align</b> every cone on one canvas afterwards so the tips line up. <b>Look at every image</b> before you use it: the pistachio one came back with a faint halo and needed its edge trimmed.</p></div>
+  <div class="foot"><span>Cooked or Cracked · A website for a shop that has none</span><span>page 8</span></div>
+</section>
+
+<!-- 9 STEP 5 SCROLL -->
+<section class="page">
+  <div class="step"><div class="badge">5</div><div><h3>The scroll-to-pipe trick</h3>
+  <p>One five-second clip on <b>Kling 3.0</b>, start frame the empty cone, end frame the master cone, sound off. One object, so there is no need for Seedance here.</p></div></div>
+<pre>Locked-off macro product shot, camera completely still. A smooth ribbon of milky white
+soft serve flows down from above the frame, fills the waffle cone and coils upward in a
+spiral, layer by layer, building a tall swirl with crisp fluted ridges, finishing with a
+small curled tip. The cone stays perfectly still. Soft pastel sky-blue studio background.
+No hands, no machine, no text.</pre>
+  <div class="shot"><img src="screens/18-pipe-strip.jpg" alt="Eight frames from the Kling clip: an empty cone fills with a rising swirl"></div>
+  <p class="caption">Eight frames from the clip. The site does not play it as a video. It shows the frame that matches how far you have scrolled.</p>
+  <p>That is the whole trick. The page pins the section, and as you scroll it moves the clip's playhead. Scroll down and the ice cream pipes. Scroll up and it un-pipes. It feels like the food is moving under your hand because it is.</p>
+  <div class="note"><h3>One line that makes it smooth</h3>
+    <p>A normal web video has a keyframe every few seconds, so seeking jumps. Re-encode with a keyframe every second frame before you use it for scrubbing:</p>
+<pre style="margin:6px 0 0">ffmpeg -i clip.mp4 -an -vf scale=720:1280 -c:v libx264 -crf 22 -g 2 -keyint_min 2 -movflags +faststart pipe.mp4</pre></div>
+  <div class="foot"><span>Cooked or Cracked · A website for a shop that has none</span><span>page 9</span></div>
+</section>
+
+<!-- 10 STEP 6 SITE A -->
+<section class="page">
+  <div class="step"><div class="badge">6</div><div><h3>The site, section by section</h3>
+  <p>Seven sections. Each one does one thing for the shop, and scroll does something different in each.</p></div></div>
+  <div class="shot"><img src="screens/10-site-hero.png" alt="Pompette site hero: headline on the left, photoreal cone on the right"></div>
+  <p class="caption"><b>Hero.</b> The swirl rises into the empty cone as the page opens. One line of copy, two buttons, nothing else above the fold.</p>
+  <div class="grid2">
+    <div><div class="shot"><img src="screens/11-site-made.png" alt="How it is made section with the piping film"></div><p class="cap">How it is made. The clip scrubs while three steps light up.</p></div>
+    <div><div class="shot"><img src="screens/12-site-flavours.png" alt="The rotation section showing Black sesame"></div><p class="cap">The rotation. Seven flavours crossfade; the page tint follows.</p></div>
+  </div>
+  <div class="foot"><span>Cooked or Cracked · A website for a shop that has none</span><span>page 10</span></div>
+</section>
+
+<!-- 11 STEP 6 SITE B -->
+<section class="page">
+  <div class="grid2">
+    <div><div class="shot"><img src="screens/13-site-menu.png" alt="Menu card with prices"></div><p class="cap">Menu. Original from $3, flavours from $5, toppings $1 to $1.50. From a published review, not invented.</p></div>
+    <div><div class="shot"><img src="screens/16-site-maker.png" alt="The maker section with a photo of the owner at the machine"></div><p class="cap">The maker. A frame from the shop's own Instagram. Ask before you use it.</p></div>
+    <div><div class="shot"><img src="screens/14-site-visit.png" alt="Visit section with directions, hours and buttons"></div><p class="cap">Visit. The counter is hidden, so four steps to find it, plus hours and a Maps button.</p></div>
+    <div><div class="shot tall"><img src="screens/15-site-mobile.png" alt="The site on a phone"></div><p class="cap">On a phone the cone sits above the headline. Most of the shop's customers will see this version.</p></div>
+  </div>
+  <div class="note ruled" style="margin-top:12px"><h3>Rules I kept from Taste</h3>
+    <p style="margin:0">Two type families only (Bricolage Grotesque and Figtree). No centred hero. Hero copy under twenty words. Buttons on one line. Dark mode from the start. No raw scroll listeners, everything on GSAP and one smooth-scroll engine.</p></div>
+  <div class="foot"><span>Cooked or Cracked · A website for a shop that has none</span><span>page 11</span></div>
+</section>
+
+<!-- 12 STEP 7 MENU -->
+<section class="page">
+  <div class="step"><div class="badge">7</div><div><h3>The scan-and-order menu</h3>
+  <p>A second page, phone first, for the little QR code on the table. The link carries the table number, so <code>?table=4</code> shows "Table 4" at the top.</p></div></div>
+  <div class="grid4">
+    <div><div class="shot"><img src="screens/20-menu-home.png" alt="Menu home with this week's flavours"></div><p class="cap">Open or closed, live. This week's four.</p></div>
+    <div><div class="shot"><img src="screens/21-menu-item.png" alt="Item sheet for Hojicha with cup or cone and toppings"></div><p class="cap">Cup or cone, toppings, quantity, live price.</p></div>
+    <div><div class="shot"><img src="screens/22-menu-order.png" alt="Order review with name for pickup"></div><p class="cap">Review, remove, name for pickup.</p></div>
+    <div><div class="shot"><img src="screens/23-menu-done.png" alt="Confirmation with an order number"></div><p class="cap">A number. Pay at the counter.</p></div>
+  </div>
+  <div class="two" style="margin-top:12px">
+    <div class="card"><div class="k">edit every week</div><p style="margin:6px 0 0">One list at the top of <code>menu.js</code>: the four flavours on tap. Flavours not on the list show "Back soon" instead of a button.</p></div>
+    <div class="card"><div class="k">not connected yet</div><p style="margin:6px 0 0">"Place order" sends nothing. To go live, post the order to a Google Sheet, Supabase, or a WhatsApp sender and show the number it returns. Half a day of work.</p></div>
+  </div>
+  <div class="foot"><span>Cooked or Cracked · A website for a shop that has none</span><span>page 12</span></div>
+</section>
+
+<!-- 13 STEP 8 -->
+<section class="page">
+  <div class="step"><div class="badge">8</div><div><h3>The last 40%</h3>
+  <p>This is where I stopped for the episode. Everything below is under an hour, and most of it is a conversation with the owner, not a build.</p></div></div>
+  <ul class="check">
+    <li><b>Ask the owner.</b> Name, logo, the maker photo, the menu. Show them the page on your phone first.</li>
+    <li><b>Real prices and toppings.</b> Mine come from a March 2026 review. The topping list on the menu page is a sample.</li>
+    <li><b>A cup render for every flavour.</b> Only Original has one. Six more images, 16.5 credits.</li>
+    <li><b>Topping photos.</b> Five small transparent renders for the chips on the order sheet.</li>
+    <li><b>This week's four.</b> Set the rotation list, then teach the owner where to change it.</li>
+    <li><b>Halal status.</b> A 2024 post said certification was in progress. Confirm before you print it.</li>
+    <li><b>Polish pass.</b> <code>/impeccable audit index.html</code>, then drop a DESIGN.md in and see what changes.</li>
+    <li><b>Test pass.</b> <code>playwright-cli open http://localhost:5173 --headed</code>, click every button, screenshot.</li>
+    <li><b>Connect orders.</b> Sheet, Supabase or WhatsApp. Then a domain and hosting (Vercel or Cloudflare Pages are free at this size).</li>
+  </ul>
+  <div class="callout"><b>What to keep saying.</b> The layout came from the design tools. The photos came from Higgsfield. Neither one does the other's job, and the client pays for the two together.</div>
+  <div class="foot"><span>Cooked or Cracked · A website for a shop that has none</span><span>page 13</span></div>
+</section>
+
+<!-- 14 CLOSE -->
+<section class="page">
+  <span class="tag">the honest bit</span>
+  <h2 style="margin-top:14px">What to charge, and who this is for</h2>
+  <div class="price">
+    <div class="card win"><div class="k">the site</div><div class="kpi">$1,000</div><span class="small">one-off. Two pages, their photos rendered, connected orders, domain and hosting set up.</span></div>
+    <div class="card"><div class="k">to run it</div><div class="kpi" style="color:var(--ink)">$250</div><span class="small">a month. Weekly flavour update, price changes, one new render a month, hosting, and you answer the phone when it breaks.</span></div>
+  </div>
+  <p>My numbers for a one-counter shop in Singapore. A bigger menu is more work and a bigger number. The pitch: a site that looks like it cost a hundred times more, and they never touch it.</p>
+  <div class="two">
+    <div class="card win"><div class="k">do this if</div>
+      <p style="margin:6px 0 0">You can already run Claude Code and read a terminal. You have an eye for a shop that deserves better than a Facebook page. You are happy to walk in and show an owner your phone.</p></div>
+    <div class="card"><div class="k">not yet if</div>
+      <p style="margin:6px 0 0">You have never run a prompt in Claude Code. Start with one page for yourself first. And if the shop already has a decent site, this is not the pitch. Find one that has none.</p></div>
+  </div>
+  <div class="note ruled" style="margin-top:10px; padding:10px 16px">
+    <div class="hand mute">about the numbers in this guide</div>
+    <p style="margin:6px 0 0">Credit costs, tool versions and the shop's rating were checked on 26 September 2026 on the pages linked in each step. Higgsfield changes model prices and promotions at its own discretion, sometimes weekly, and the five repositories update often. Treat every figure here as a snapshot on that date, not a quote, and confirm on the linked page before you pay. I am not affiliated with any company named here and I do not earn from these links.</p>
+  </div>
+  <div class="note" style="margin-top:10px; padding:10px 16px"><h3>Sources</h3>
+    <ul class="src">
+      <li>Pompette on <a href="https://www.google.com/maps/search/?api=1&query=Pompette.&query_place_id=ChIJO3CO-2AR2jER28Wz2MXmIeY">Google Maps</a> and <a href="https://www.instagram.com/oui_pompette_/">Instagram</a>. Prices from <a href="http://www.memoirsofachocoholic.com/2026/03/pompette-beauty-world-centre.html">Memoirs of a Chocoholic</a>, March 2026.</li>
+      <li>Higgsfield: <a href="https://higgsfield.ai/higgsfield-api">the API</a> (launched 16 Sep 2026), <a href="https://higgsfield.ai/blog/gpt-image-2-5-higgsfield">GPT Image 2.5 on Higgsfield</a> (22 Sep 2026), <a href="https://higgsfield.ai/creator-hub/changelog">changelog</a>.</li>
+      <li>Claude Opus 5.5, released 22 Sep 2026 and now the default in Claude Code: <a href="https://www.anthropic.com/news">anthropic.com/news</a>. Claude Code: <a href="https://claude.com/product/claude-code">claude.com/product/claude-code</a>.</li>
+      <li>Playwright CLI docs: <a href="https://playwright.dev/docs/getting-started-cli">playwright.dev</a>. Taste: <a href="https://tasteskill.dev/">tasteskill.dev</a>. Impeccable: <a href="https://impeccable.style/">impeccable.style</a>.</li>
+    </ul>
+  </div>
+  <p style="margin:10px 0 0; font-size:10pt">If something here has changed by the time you read it, tell me in the comments and I will update the file.</p>
+  <p class="serif" style="font-size:15pt; margin:8px 0 0">Henry Chua<span class="coral">.</span></p>
+  <div class="foot"><span>Cooked or Cracked · A website for a shop that has none</span><span>page 14</span></div>
+</section>
+</body></html>

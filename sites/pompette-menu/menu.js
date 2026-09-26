@@ -186,3 +186,17 @@ const io = new IntersectionObserver((entries) => {
   });
 }, { rootMargin: "-40% 0px -55% 0px" });
 document.querySelectorAll(".list-sec").forEach((s) => io.observe(s));
+
+// ---------- capture hooks for the guide: ?demo=item | order | done ----------
+const demo = new URLSearchParams(location.search).get("demo");
+if (demo) {
+  setTimeout(() => {
+    if (demo === "item") { openItem("hojicha"); document.querySelectorAll('#sheet-toppings input')[4].checked = true; refreshSheet(); }
+    if (demo === "order" || demo === "done") {
+      order = [{ id: "hojicha", vessel: "Cup", tops: ["mochi"], qty: 1 }, { id: "original", vessel: "Cone", tops: [], qty: 2 }];
+      renderBar();
+      if (demo === "order") { renderLines(); $("#pickup-name").value = "Alex"; orderSheet.showModal(); }
+      else { $("#done-no").textContent = "17"; $("#done-note").textContent = "Thanks, Alex. We'll call your name when it's piped. Pay $12.50 at the counter."; $("#done-sheet").showModal(); }
+    }
+  }, 300);
+}

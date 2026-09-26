@@ -303,10 +303,47 @@ function initMotion() {
 
   document.fonts?.ready.then(() => ScrollTrigger.refresh());
   window.addEventListener("load", () => ScrollTrigger.refresh());
+  if (window.__shot) {
+    // Static capture: show only the target section at a given progress, no scrolling involved.
+    const [id, pStr] = window.__shot.split(":");
+    const p = Math.min(1, Math.max(0, parseFloat(pStr || "0")));
+    tl.progress(1);
+    pipe.v = 1;
+    gsap.globalTimeline.getChildren(true, true, true).forEach((t) => t.progress(1));
+    ScrollTrigger.getAll().forEach((t) => t.kill());
+    const poseMap = Object.fromEntries(poses.map(([sel, to]) => [sel.replace(/^[#.]/, ""), to]));
+    const target = id === "top" ? "top" : id;
+    if (target !== "top") {
+      document.querySelectorAll("main > section, .footer").forEach((sec) => { if (sec.id !== target && !sec.classList.contains(target)) sec.style.display = "none"; });
+      const el = document.getElementById(target) || document.querySelector("." + target);
+      if (target === "made" || target === "flavours") { el.style.height = "100vh"; el.style.minHeight = "100vh"; el.style.paddingTop = "0"; el.style.paddingBottom = "0"; }
+      else { el.style.minHeight = "100vh"; el.style.paddingTop = "120px"; el.style.paddingBottom = "60px"; }
+      el.querySelectorAll(".made-inner, .flav-inner").forEach((i) => { i.style.position = "static"; });
+      document.querySelector(".nav").classList.add("is-scrolled");
+      Object.assign(pose, poseMap[target] || {});
+      if (target === "made") {
+        const stepsEl = [...document.querySelectorAll(".step")]; const a = Math.min(2, Math.floor(p * 3));
+        stepsEl.forEach((st, i) => st.classList.toggle("is-active", i === a));
+        const film = document.getElementById("pipe-film");
+        const still = document.createElement("img");                       // headless Chrome cannot seek h264, so use a frame
+        still.src = p > 0.9 ? "assets/pipe-end.jpg" : p < 0.1 ? "assets/pipe-start.jpg" : "assets/pipe-mid.jpg";
+        still.width = 720; still.height = 1280; still.style.cssText = "width:100%;height:100%;object-fit:cover;display:block";
+        film.replaceWith(still);
+        if (p > 0.98) document.querySelector(".film").classList.add("is-done");
+      }
+      if (target === "flavours") { flav.v = Math.round(p * (FLAVOURS.length - 1)); showFlavour(flav.v); }
+    }
+    Object.assign(live, pose);
+    window.scrollTo(0, 0);
+    setTimeout(() => { document.documentElement.dataset.shotReady = "1"; }, 800);
+  }
 }
 
 // ---------- boot ----------
 function boot() {
+  // capture hook for the guide: ?shot=<sectionId>:<progress 0..1>  (jumps there, no intro, full swirl)
+  const shotQ = new URLSearchParams(location.search).get("shot");
+  if (shotQ) window.__shot = shotQ;
   if (webglOK()) { try { initGL(); } catch (err) { console.warn("WebGL sprinkles off", err); } }
   resize();
   window.addEventListener("resize", resize);

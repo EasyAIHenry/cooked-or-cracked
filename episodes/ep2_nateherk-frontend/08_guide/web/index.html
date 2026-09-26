@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A website for a shop that has none. Cooked or Cracked</title>
+<meta name="description" content="The exact build from the episode: two prompts, five free design tools, one Higgsfield run, and a menu page for the QR code on the table.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,400&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="scrollcraft.css">
+<style>
+  :root {
+    --sc-canvas: #FFFEFA; --sc-surface: #F3EFE7;
+    --sc-ink: #171411; --sc-ink-soft: #6B635B;
+    --sc-accent: #DF825F; --sc-accent-ink: #171411;
+    --sc-font-display: "Fraunces", Georgia, serif;
+    --sc-font-text: "Inter", system-ui, sans-serif;
+    --gold: #F2C14E; --sky: #CFEAF3;
+  }
+  .dark { --sc-ink: #FFFEFA; --sc-ink-soft: #BDB5AA; --sc-surface: #221E1A; color: var(--sc-ink); }
+  .site-bar { position: fixed; inset: 0 0 auto 0; z-index: 30; display: flex; justify-content: space-between; align-items: center; padding: 18px var(--sc-gutter); pointer-events: none; }
+  .site-bar > * { pointer-events: auto; }
+  .pill { display: inline-block; border: 1.5px solid currentColor; border-radius: 30px; padding: 5px 14px; font: 800 11px/1 var(--sc-font-text); letter-spacing: .16em; text-transform: uppercase; }
+  .cta { display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border-radius: 999px; background: var(--sc-ink); color: var(--sc-canvas); font: 800 15px/1 var(--sc-font-text); text-decoration: none; box-shadow: 4px 5px 0 rgba(23,20,17,.25); }
+  .dark .cta { background: var(--sc-accent); color: var(--sc-accent-ink); box-shadow: 4px 5px 0 rgba(0,0,0,.35); }
+  .kicker { font: 700 13px/1.2 var(--sc-font-text); letter-spacing: .14em; text-transform: uppercase; color: var(--sc-accent); margin: 0 0 14px; }
+  .hero-copy p.sc-body { max-width: 34ch; }
+  .prompts { max-width: 880px; margin: 0 auto; display: grid; gap: 22px; padding: 0 var(--sc-gutter); }
+  .prompt { position: relative; background: var(--sc-surface); color: var(--sc-ink); padding: 22px 26px 22px 30px; border-left: 4px solid var(--sc-accent); font: 500 clamp(14px, 1.3vw, 18px)/1.55 ui-monospace, Menlo, monospace; white-space: pre-wrap; box-shadow: 6px 7px 0 rgba(0,0,0,.35); }
+  .prompt small { display: block; font: 700 12px/1 var(--sc-font-text); letter-spacing: .14em; text-transform: uppercase; color: var(--sc-accent); margin-bottom: 12px; }
+  .split { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(28px, 6vw, 90px); align-items: center; }
+  figure { margin: 0; }
+  .shot { border: 1.5px solid var(--sc-ink); box-shadow: 8px 9px 0 rgba(23,20,17,.16); background: #fff; }
+  .shot img { width: 100%; height: auto; display: block; }
+  .check { list-style: none; padding: 0; margin: 20px 0 0; display: grid; gap: 10px; }
+  .check li { padding-left: 30px; position: relative; font-size: 17px; }
+  .check li::before { content: ""; position: absolute; left: 0; top: 5px; width: 15px; height: 15px; border: 1.5px solid var(--sc-ink); background: var(--sc-canvas); box-shadow: 2px 2px 0 var(--sc-ink); }
+  .rail { display: flex; align-items: center; gap: clamp(20px, 3vw, 44px); padding: 0 var(--sc-gutter); width: max-content; }
+  .rail__lead { flex: 0 0 min(34vw, 420px); }
+  .item { flex: 0 0 min(72vw, 520px); }
+  .item h3 { font: 900 clamp(24px, 2.2vw, 34px)/1 var(--sc-font-display); margin: 16px 0 6px; letter-spacing: -.02em; }
+  .item p { margin: 0 0 8px; color: var(--sc-ink-soft); font-size: 15px; }
+  .item code { display: block; font: 500 12.5px/1.5 ui-monospace, Menlo, monospace; background: var(--sc-surface); padding: 10px 12px; margin: 8px 0; word-break: break-all; }
+  .item a { color: var(--sc-ink); text-decoration-color: var(--sc-accent); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+  .numbers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; max-width: 980px; margin: 0 auto; padding: 0 var(--sc-gutter); }
+  .num { background: var(--sc-canvas); border: 1.5px solid var(--sc-ink); padding: 18px 20px; box-shadow: 6px 7px 0 rgba(23,20,17,.16); }
+  .num .k { font: 700 13px/1 var(--sc-font-text); letter-spacing: .12em; text-transform: uppercase; color: var(--sc-ink-soft); }
+  .num .n { font: 900 clamp(38px, 5vw, 72px)/1 var(--sc-font-display); letter-spacing: -.03em; margin: 8px 0 6px; }
+  .num.win { border-color: var(--sc-accent); box-shadow: 6px 7px 0 var(--sc-accent); } .num.win .n { color: var(--sc-accent); }
+  .num small { color: var(--sc-ink-soft); font-size: 13px; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .cap { margin: 8px 0 0; color: var(--sc-ink-soft); font-size: 14px; }
+  .price { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; max-width: 760px; margin: 28px auto 34px; }
+  .price .num .n { color: var(--sc-accent); }
+  .close__inner { text-align: center; padding: 0 var(--sc-gutter); }
+  .foot { position: absolute; left: 0; right: 0; bottom: 0; padding: 18px var(--sc-gutter); display: flex; justify-content: space-between; font-size: 12px; color: var(--sc-ink-soft); }
+  .sc-stage.sky { background: var(--sky); }
+  @media (max-width: 860px) {
+    .split, .grid2, .numbers, .price { grid-template-columns: 1fr; }
+    .grid4 { grid-template-columns: 1fr 1fr; }
+    .rail__lead { flex-basis: 78vw; }
+    .site-bar .cta { display: none; }
+    .sc-display--xl { font-size: var(--sc-t-2xl); }
+  }
+</style>
+</head>
+<body>
+<span data-sc-progress></span>
+
+<header class="site-bar">
+  <span class="pill">Cooked or Cracked</span>
+  <a class="cta" href="design-guide.pdf" download>Get the PDF</a>
+</header>
+
+<main id="top">
+
+  <!-- 1 · the pipe, under your hand -->
+  <section data-sc-act="scrub" data-sc-span="2.8" data-sc-dwell="0.34" data-sc-drift="#FFFEFA">
+    <div data-sc-stage class="sky">
+      <img class="sc-stage__poster" src="assets/pipe-poster.jpg" alt="" width="720" height="1280">
+      <video data-sc-scrub data-sc-src="assets/pipe.mp4" data-sc-src-mobile="assets/pipe-m.mp4" muted playsinline></video>
+      <div class="sc-scrim sc-scrim--lead" aria-hidden="true"></div>
+      <div class="sc-copy sc-copy--lead hero-copy" data-sc-cue="0 0.8 0">
+        <p class="kicker">The episode, written down</p>
+        <h1 class="sc-display sc-display--xl" data-sc-kinetic="lines">A website for a shop that has none.</h1>
+        <p class="sc-body">Two prompts, five free design tools, one Higgsfield run. Scroll, and you pipe the ice cream.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 · the two prompts -->
+  <section class="dark" data-sc-act="pin" data-sc-span="3.2" data-sc-drift="#171411">
+    <div data-sc-stage>
+      <div class="prompts">
+        <h2 class="sc-display sc-display--lg" data-sc-cue="0 0.3 0" data-sc-kinetic="lines">Everything started as two lines I typed.</h2>
+        <div class="prompt" data-sc-cue="0.22 0.62"><small>Prompt 1, in Claude Code</small>Design a 3D scroll website for a local business that does not have a website, so I can promote their service and menu. Take the style from their look and logo. It has to feel like a two to three million dollar site, and say what they sell in a few words. Give me 5 businesses in Singapore to choose from.</div>
+        <div class="prompt" data-sc-cue="0.56"><small>Prompt 2, once the first version existed</small>Upgrade the cone visuals with Higgsfield. Keep the tone and the fonts. Separately, design a scan-and-order menu page for the QR code on the table.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 · find the shop -->
+  <section class="sc-section" data-sc-act="flow" data-sc-drift="#FFFEFA">
+    <div class="sc-wrap split">
+      <div class="sc-stack" data-sc-in data-sc-stagger="70">
+        <p class="kicker">Step 1</p>
+        <h2 class="sc-display sc-display--lg">Find a shop with no website.</h2>
+        <p class="sc-body">Claude searched Google Maps, dropped the ones that already had a site and gave me five. I picked Pompette, a soft-serve counter in Beauty World Centre. 4.9 stars from 378 reviews, and an "Add website" link where a website should be.</p>
+        <ul class="check">
+          <li>4.5 stars or better, 150 reviews or more.</li>
+          <li>No website. Check Maps and a web search.</li>
+          <li>One product that fits in a single frame.</li>
+          <li>A logo with two clear colours. That is the palette.</li>
+        </ul>
+      </div>
+      <figure class="shot" data-sc-reveal="left" data-sc-reveal-at="0.15 0.6">
+        <img src="assets/06-maps-pompette.webp" width="1400" height="984" alt="Google Maps listing for Pompette showing 4.9 stars and 378 reviews">
+      </figure>
+    </div>
+  </section>
+
+  <!-- 4 · the five tools, on a rail -->
+  <section data-sc-act="pan" data-sc-span="4.2" data-sc-drift="#F3EFE7">
+    <div data-sc-stage>
+      <div class="rail" data-sc-pan="0.06">
+        <div class="rail__lead sc-stack">
+          <p class="kicker">Step 2</p>
+          <h2 class="sc-display sc-display--md">Install the five.</h2>
+          <p class="sc-body">Five lines in the terminal. All free. Taste is the one that changes the very first page.</p>
+        </div>
+        <article class="item"><div class="shot" data-sc-tilt="5"><img src="assets/01-taste.webp" width="1280" height="900" alt="Taste skill on GitHub"></div><h3>Taste</h3><p>Design rules Claude reads before it writes a page. Bans the usual AI look.</p><code>npx skills add https://github.com/Leonxlnx/taste-skill --skill "design-taste-frontend"</code><a href="https://github.com/Leonxlnx/taste-skill">github.com/Leonxlnx/taste-skill</a></article>
+        <article class="item"><div class="shot" data-sc-tilt="5"><img src="assets/02-impeccable.webp" width="1280" height="900" alt="Impeccable on GitHub"></div><h3>Impeccable</h3><p>24 commands for a page that exists: audit, critique, polish, typeset.</p><code>npx impeccable install</code><a href="https://github.com/pbakaus/impeccable">github.com/pbakaus/impeccable</a></article>
+        <article class="item"><div class="shot" data-sc-tilt="5"><img src="assets/03-playwright.webp" width="1280" height="900" alt="Playwright CLI on GitHub"></div><h3>Playwright CLI</h3><p>Claude opens your page in a real browser, clicks through it, takes screenshots.</p><code>npm install -g @playwright/cli@latest && playwright-cli install --skills -g</code><a href="https://github.com/microsoft/playwright-cli">github.com/microsoft/playwright-cli</a></article>
+        <article class="item"><div class="shot" data-sc-tilt="5"><img src="assets/04-awesome-design.webp" width="1280" height="900" alt="Awesome DESIGN.md on GitHub"></div><h3>Awesome Design</h3><p>73 DESIGN.md files from real sites. Drop one in the folder and Claude follows it.</p><code>curl -o DESIGN.md https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/linear.app/DESIGN.md</code><a href="https://github.com/VoltAgent/awesome-design-md">github.com/VoltAgent/awesome-design-md</a></article>
+        <article class="item"><div class="shot" data-sc-tilt="5"><img src="assets/05-img2threejs.webp" width="1280" height="900" alt="img2threejs on GitHub"></div><h3>img2threejs</h3><p>One photo to a Three.js model, in code. Not "image twenty-three". Python 3.10 or newer.</p><code>git clone https://github.com/img2threejs/img2threejs.git ~/.claude/skills/img2threejs</code><a href="https://github.com/img2threejs/img2threejs">github.com/img2threejs/img2threejs</a></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 · before and after -->
+  <section class="sc-section" data-sc-act="flow" data-sc-drift="#FFFEFA">
+    <div class="sc-wrap">
+      <div class="sc-stack" data-sc-in data-sc-stagger="70" style="max-width: 62ch">
+        <p class="kicker">Step 3 and 4</p>
+        <h2 class="sc-display sc-display--lg">The tools got the layout right. The cone was a cartoon.</h2>
+        <p class="sc-body">Version one already had the final layout, the logo's teal and gold, the menu and the directions. The cone was built out of code. Design tools decide where things go and what they are set in. They cannot take a photograph. So the second prompt sent the product to Higgsfield.</p>
+      </div>
+      <div class="grid2" style="margin-top: 36px">
+        <figure><div class="shot" data-sc-reveal="up" data-sc-reveal-at="0.1 0.5"><img src="assets/09-site-v1-hero.webp" width="1400" height="875" alt="Version one of the site with a code-built cone"></div><p class="cap">Before. The cone is the tell.</p></figure>
+        <figure><div class="shot" data-sc-reveal="left" data-sc-reveal-at="0.25 0.7"><img src="assets/10-site-hero.webp" width="1400" height="875" alt="Final hero with a photoreal cone from Higgsfield"></div><p class="cap">After. GPT Image 2.5 on Higgsfield, high, 2K, transparent background.</p></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 · the numbers -->
+  <section data-sc-act="pin" data-sc-span="2.8" data-sc-drift="#CFEAF3">
+    <div data-sc-stage class="sky">
+      <div style="padding: 0 var(--sc-gutter); max-width: 980px; margin: 0 auto 26px">
+        <p class="kicker" data-sc-cue="0 0.3 0">What it cost</p>
+        <h2 class="sc-display sc-display--lg" data-sc-cue="0.02 0.35 0" data-sc-kinetic="lines">One master cone. Seven flavours from it. One five-second clip.</h2>
+      </div>
+      <div class="numbers">
+        <div class="num" data-sc-cue="0.2 0.9"><div class="k">one image</div><div class="n" data-sc-count="0 2.75" data-sc-count-at="0.2 0.6">2.75</div><small>credits. GPT Image 2.5, high, 2K, transparent</small></div>
+        <div class="num" data-sc-cue="0.32 0.9"><div class="k">one 5 s clip</div><div class="n" data-sc-count="0 8.75" data-sc-count-at="0.32 0.7">8.75</div><small>credits. Kling 3.0 pro, 9:16, sound off</small></div>
+        <div class="num win" data-sc-cue="0.44 0.9"><div class="k">the whole site</div><div class="n" data-sc-count="0 36.25" data-sc-count-at="0.44 0.8">36.25</div><small>credits. 10 images and 1 clip</small></div>
+      </div>
+      <figure style="max-width: 980px; margin: 26px auto 0; padding: 0 var(--sc-gutter)" data-sc-cue="0.56">
+        <div class="shot"><img src="assets/17-flavours-sheet.jpg" width="1500" height="900" alt="Seven flavour cones, an empty cone and a cup, all from the same master"></div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 7 · the site and the menu -->
+  <section class="sc-section" data-sc-act="flow" data-sc-drift="#FFFEFA">
+    <div class="sc-wrap">
+      <div class="sc-stack" data-sc-in data-sc-stagger="70" style="max-width: 62ch">
+        <p class="kicker">Step 5 to 7</p>
+        <h2 class="sc-display sc-display--lg">Seven sections, then a menu for the table.</h2>
+        <p class="sc-body">The clip you scrubbed at the top is the same trick the site uses: pin the section, and move the playhead with the scroll. Then the flavours crossfade, the menu shows real prices, and the last section gets you to a hidden counter.</p>
+      </div>
+      <div class="grid2" style="margin-top: 36px" data-sc-in data-sc-stagger="90">
+        <figure><div class="shot"><img src="assets/11-site-made.webp" width="1400" height="875" alt="How it is made section with the piping clip"></div><p class="cap">How it is made. The clip scrubs while three steps light up.</p></figure>
+        <figure><div class="shot"><img src="assets/12-site-flavours.webp" width="1400" height="875" alt="The rotation section showing Black sesame"></div><p class="cap">The rotation. Seven flavours, the page tint follows.</p></figure>
+        <figure><div class="shot"><img src="assets/13-site-menu.webp" width="1400" height="875" alt="Menu card with prices"></div><p class="cap">Menu. Original from $3, flavours from $5. From a published review.</p></figure>
+        <figure><div class="shot"><img src="assets/14-site-visit.webp" width="1400" height="875" alt="Visit section with directions and hours"></div><p class="cap">Visit. Four steps to the counter, hours, a Maps button.</p></figure>
+      </div>
+      <div class="grid4" style="margin-top: 36px" data-sc-in data-sc-stagger="90">
+        <figure><div class="shot"><img src="assets/20-menu-home.webp" width="780" height="1688" alt="Order page home"></div><p class="cap">Open or closed, live. This week's four.</p></figure>
+        <figure><div class="shot"><img src="assets/21-menu-item.webp" width="780" height="1688" alt="Order page item sheet"></div><p class="cap">Cup or cone, toppings, quantity.</p></figure>
+        <figure><div class="shot"><img src="assets/22-menu-order.webp" width="780" height="1688" alt="Order review"></div><p class="cap">Review, name for pickup.</p></figure>
+        <figure><div class="shot"><img src="assets/23-menu-done.webp" width="780" height="1688" alt="Order confirmation"></div><p class="cap">A number. Pay at the counter.</p></figure>
+      </div>
+      <div class="sc-stack" data-sc-in data-sc-stagger="70" style="max-width: 62ch; margin-top: 48px">
+        <p class="kicker">Step 8</p>
+        <h2 class="sc-display sc-display--md">Where I stopped: 60% done.</h2>
+        <ul class="check">
+          <li>Ask the owner. Name, logo, the maker photo, the menu.</li>
+          <li>Real prices and toppings. Mine are from a March 2026 review.</li>
+          <li>A cup render for every flavour. Six images, 16.5 credits.</li>
+          <li>Topping photos for the order sheet.</li>
+          <li>Connect orders to a sheet, Supabase or WhatsApp. Then a domain.</li>
+          <li>Polish pass with Impeccable, test pass with Playwright.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 · what to charge, and the PDF -->
+  <section id="get" class="dark" data-sc-act="pin" data-sc-span="1.2" data-sc-drift="#171411">
+    <div data-sc-stage class="close" data-sc-spotlight>
+      <div class="close__inner">
+        <h2 class="sc-display sc-display--lg" data-sc-cue="0.06" data-sc-kinetic="lines">What I would charge.</h2>
+        <div class="price" data-sc-cue="0.08">
+          <div class="num"><div class="k">the site</div><div class="n">$1,000</div><small>one-off. Two pages, photos rendered, orders connected, domain and hosting.</small></div>
+          <div class="num"><div class="k">to run it</div><div class="n">$250</div><small>a month. Weekly flavour update, price changes, hosting, and you answer the phone.</small></div>
+        </div>
+        <a class="cta" href="design-guide.pdf" download data-sc-magnet="0.26" data-sc-cue="0.06" data-sc-rise="0">Get the PDF</a>
+      </div>
+      <footer class="foot"><span>Henry Chua. Checked 26 September 2026. Not sponsored.</span><span>Every figure is a snapshot on that date, not a quote.</span></footer>
+    </div>
+  </section>
+
+</main>
+
+<script src="scrollcraft.js"></script>
+<script>ScrollCraft.mount(document.body);</script>
+</body>
+</html>
