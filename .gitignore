@@ -17,3 +17,4 @@ history.json
 seen.json
 profiles.json
 node_modules/
+.sync.log
