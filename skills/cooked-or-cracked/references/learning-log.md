@@ -1,5 +1,8 @@
 # Learning log (append after every episode's retro; newest first)
 
+## Ep2 update (26 Sep 2026): format pivot
+Henry changed Ep2 from "test 5 tools" to "use the tools to build a real site for a local shop with no website" (Pompette, Beauty World), plus a QR order menu. His take after using it: design skills get the layout, fonts and colours right; photoreal visuals still need Higgsfield (GPT Image 2.5 for cones, Kling for the piping clip; Seedance not needed for a single object). He calls the build 60% done, the last 40% under an hour, and would price it at about $1,000 plus $250 a month. Final script: `script-ep2-final.md`. Keep the verdict split: tools cracked for layout, visuals need another tool.
+
 ## Ep2, Nate Herk, "5 free tools turn Claude into a designer" (planned 26 Sep 2026)
 Subject reel DdT_OwyFeoj, 337k plays, 7.1x his median, 9,400 comments (FRONTEND gate). Plan: 1 h test of Taste, Impeccable, Playwright CLI, awesome-design-md, img2threejs; 60 to 75 s cut; verdict at the midpoint; save frame; keyword DESIGN; post 15:00 UTC.
 Changes applied from Ep1: first line at 0:00, sting overlaps the first graphic, half the runtime, scorecard save frame, new supers (tally, tool card, wipe, terminal strip, time stamp).
