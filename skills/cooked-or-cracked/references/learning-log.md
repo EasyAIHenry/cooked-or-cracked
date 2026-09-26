@@ -1,5 +1,11 @@
 # Learning log (append after every episode's retro; newest first)
 
+## Ep2 edit, pass 2 v4 notes (27 Sep 2026)
+Henry on the first pass-2 preview: "you should have me typing at the background while we have a picture in picture look", cut lines that don't need emphasis (the seven flavours), too many long pauses, target 2:00.
+1. Picture-in-picture is the default whenever the screen recording plays: the recording full frame, Henry in a small window low-left, still talking. Face-only shots are reserved for the hook, the reaction, the verdict, the pitch, the score and the CTA.
+2. 2:00 was reached by cutting "installed the five repos" (the five GitHub cards moved under "the five connectors"), "I actually wanted it to be 3D", the flavour line, and tightening every pause to about 0.28 s.
+3. Order of work he wants: flow and cut first, then animation, then sound and sound effects, then colour.
+
 ## Ep2 edit, pass 2 notes (26 Sep 2026)
 1. Opener: Henry's chin-hold reaction (muted) under the reviewed reel's own claim, cut at the end of that sentence (3.5 s). His first words follow at 0:03.
 2. The sting goes after his hook line ("Well, let's test it out."), over a 2.6 s teaser of the best visual, with the title popping on the sung words. Never before his first words: that cost Ep1 half its audience.
