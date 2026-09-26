@@ -43,10 +43,11 @@ Write `01_scripts/script-ep<N>.md`: a scorecard to fill after the test, then a b
 - One save frame: the scorecard, held 2 s, "screenshot this".
 - Comment gate with Henry's own keyword, said once at the midpoint and once at the end.
 - 60 to 75 s total unless Henry says otherwise.
+- A real-life beat after the demo and before the price: who can use this and how. Henry called the Ep2 cut rushed until it had one.
 - New supers per episode: keep the template (pill, sting title, scoreboard, paper stamps, table, confetti, captions) and design 3 to 6 new supers that match what Henry will say. List them with props, as in `references/supers-library.md`, and add them to that library after the edit.
 
 ### 6. Edit (1 h target)
-Load `henry-scrapbook-reel` and run its passes in order. Build the new MG assets first from the supers list. Export by the v8 rule (single export + captions band). Deliver `05_cuts/UPLOAD-THIS-ep<N>-v<x>.mp4`.
+Load `henry-scrapbook-reel` and run its passes in order. After the speech cut, run `scripts/join_audit.py` and fix every flagged join (transcript word times drift), then do one unprimed verbatim listen of the render; see the Ep2 pass 1 entry in the learning log. Sentence breaks about 0.3 s. Build the new MG assets first from the supers list. Export by the v8 rule (single export + captions band). Deliver `05_cuts/UPLOAD-THIS-ep<N>-v<x>.mp4`.
 
 ### 7. Captions and guide (20 min)
 - `01_scripts/ig-captions-ep<N>.md`: three captions, first line under 90 characters, keyword gate, hashtags, posting hour, pinned comment with the test date.

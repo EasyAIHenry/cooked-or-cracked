@@ -45,6 +45,6 @@ git add -A
 if git diff --cached --quiet; then echo "Nothing changed."; exit 0; fi
 git commit -q -m "sync $(date '+%Y-%m-%d %H:%M')
 
-Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>"
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
 git push -q
 echo "Pushed."

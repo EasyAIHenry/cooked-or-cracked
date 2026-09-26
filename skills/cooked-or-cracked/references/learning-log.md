@@ -1,5 +1,13 @@
 # Learning log (append after every episode's retro; newest first)
 
+## Ep2 edit, pass 1 notes (26 Sep 2026)
+Henry on the v2 speech cut: remove the extra "so", "nice" should be "nicely", and "have me saying how we can use this for real life cases, it feels rushed".
+1. Every review needs a real-life beat after the demo and before the price: who can use this and how. Ep2's is POS ordering, a site for menu and opening hours, two business models (fix existing sites, or build one for shops without), "amazing for small business owners". The review is not done until he says it.
+2. Pacing: sentence breaks about 0.3 s, not 0.25 s. Where two sentences ran together with no pause in the source, insert a muted 7 to 8 frame piece of the same shot. It gives a breath with no visible jump.
+3. Transcript word times drift, up to 0.3 s in Ep2. The recognizer labelled "shop" as "uh", so striking the "uh" deleted "shop". Half a "So" rode at the end of "for me", and an "S" at the end of "perfectly". Run `scripts/join_audit.py` on every speech cut before showing it, fix each "<<" join at the valley, and check its GAPS list for removed words.
+4. Then do one unprimed verbatim listen of the rendered audio (Gemini, gemini-3.1-pro-preview): "transcribe verbatim, include fillers and partial words, list cut-off words". Never put example errors in the prompt. Gemini then reports them whether or not they exist. Test uncertain cut points as short clips padded with 0.4 s of silence.
+5. Length went from 1:37 to 2:13 on Henry's call. Keep a trim order in the cut list so he can pull it back.
+
 ## Ep2 update (26 Sep 2026): format pivot
 Henry changed Ep2 from "test 5 tools" to "use the tools to build a real site for a local shop with no website" (Pompette, Beauty World), plus a QR order menu. His take after using it: design skills get the layout, fonts and colours right; photoreal visuals still need Higgsfield (GPT Image 2.5 for cones, Kling for the piping clip; Seedance not needed for a single object). He calls the build 60% done, the last 40% under an hour, and would price it at about $1,000 plus $250 a month. Henry rejected the scripted lines ("I don't talk like that"); the series now uses pointer form: `pointers-ep2.md`, bullets he reads while scrolling the build on screen. Lead magnet: `08_guide/design-guide.pdf` (14 pages, screenshots, links checked by `check-links.py`) plus a scroll version on Nate's scrollcraft engine. Keep the verdict split: tools cracked for layout, visuals need another tool.
 
