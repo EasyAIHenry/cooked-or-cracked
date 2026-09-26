@@ -25,7 +25,7 @@ Say: "Five tools. Five install lines. Timer starts now." Then read each name as 
 ## Segment 2, the control test (0:06 to 0:16)
 Do: open three terminals or run one after another. Same prompt in a-plain, b-taste, c-impeccable:
 ```
-Build a one-page landing site for a Singapore coffee cart called Kopi Lah. Hero, three menu items with prices, opening hours, one button to order on WhatsApp. Single index.html, no framework.
+Build a one-page landing site for an AI screen-recording app called Snapcut. Hero with one line, three features, pricing with a free plan and a $12 plan, one sign-up button. Single index.html, no framework.
 ```
 In c-impeccable, after the page exists: `/impeccable init` then `/impeccable polish index.html`.
 Say while A builds: "Plain Claude, no skills. This is the baseline everybody complains about."
@@ -34,18 +34,18 @@ Say while C builds: "Same prompt, then Impeccable polish. He says it has a live 
 Open all three in the browser side by side. Say what you actually see, one sentence each. Examples of the shape, not the words: "A is Inter and three cards in a row." "B changed the font and the layout." "C fixed the spacing and the button." If B or C looks the same as A, say that. That is the video.
 
 ## Segment 3, Playwright as tester (0:16 to 0:21)
-Do: in c-impeccable, delete the WhatsApp link target so the button goes nowhere. Then:
+Do: in c-impeccable, delete the sign-up link target so the button goes nowhere. Then:
 ```
 Use playwright-cli to open index.html, click every link and button, screenshot each state, and tell me what is broken.
 ```
-Say: "I broke the order button on purpose. Does Claude catch it." Then read the answer: "It found it" or "It missed it." Point at the screenshot it saved.
+Say: "I broke the sign-up button on purpose. Does Claude catch it." Then read the answer: "It found it" or "It missed it." Point at the screenshot it saved.
 
 ## Segment 4, DESIGN.md (0:21 to 0:25)
 Do: in d-designmd:
 ```
 curl -o DESIGN.md https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/linear.app/DESIGN.md
 ```
-(Open the repo folder in the browser first to confirm the path.) Run the same Kopi Lah prompt. Do not mention the design file in the prompt.
+(Open the repo folder in the browser first to confirm the path.) Run the same Snapcut prompt. Do not mention the design file in the prompt.
 Say: "One file in the folder. I did not tell Claude about it. Does the page come out looking like Linear." Open it. Say yes or no and the one thing that proves it (colour, font, button shape).
 
 ## Segment 5, the 3D claim (0:25 to 0:30, plus waiting)

@@ -35,7 +35,7 @@ Note on the wording "completely free": the five repos are free. Running them cos
 
 0:10 to 0:25, the control test. Three fresh subfolders, one prompt, same model:
 ```
-Build a one-page landing site for a Singapore coffee cart called Kopi Lah. Hero, three menu items with prices, opening hours, one button to order on WhatsApp. Single index.html, no framework.
+Build a one-page landing site for an AI screen-recording app called Snapcut. Hero with one line, three features, pricing with a free plan and a $12 plan, one sign-up button. Single index.html, no framework.
 ```
 - A: plain Claude Code (no skills loaded, use `--no-skills` or a folder where they are off).
 - B: same prompt, Taste on.

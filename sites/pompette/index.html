@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Pompette. Hand-piped soft serve, Beauty World Centre</title>
+  <meta name="description" content="Soft serve made in the shop every day with Meiji milk. Four flavours on tap, two change every week. Beauty World Centre #01-11B, Singapore.">
+  <meta name="theme-color" content="#CFEAF3" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0B2A30" media="(prefers-color-scheme: dark)">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="importmap">
+    { "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+    } }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script type="module" src="main.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav" id="nav">
+    <a class="brand" href="#top" aria-label="Pompette, back to top">
+      <svg class="mark" viewBox="0 0 48 64" aria-hidden="true">
+        <path d="M14 30c-5 0-6-6 0-7 1-6 6-7 9-5 1-5 9-6 11 0 5 0 7 6 2 8-2 3-6 4-10 4H14z" fill="none" stroke="var(--teal)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M24 12c3-3 3-6 1-9" fill="none" stroke="var(--teal)" stroke-width="3.2" stroke-linecap="round"/>
+        <path d="M11 34h26L25 61z M16 40l14 10 M31 40L19 52" fill="none" stroke="var(--gold)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="wordmark">Pompette.</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav-links">
+        <li><a href="#flavours">Flavours</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#visit">Visit</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-small" href="https://www.google.com/maps/search/?api=1&amp;query=Pompette.&amp;query_place_id=ChIJO3CO-2AR2jER28Wz2MXmIeY" data-maps>Directions</a>
+  </header>
+
+  <div class="stage" aria-hidden="true">
+    <img class="poster" src="assets/poster.png" alt="" width="434" height="930">
+    <canvas id="scene"></canvas>
+  </div>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="kicker">Beauty World Centre, Singapore</p>
+        <h1 id="hero-title" class="split">Soft serve, piped by hand every day.</h1>
+        <p class="lede">Meiji milk, a light hand on sugar, and four flavours on tap. Two of them change every week.</p>
+        <div class="ctas">
+          <a class="btn" href="#flavours">See the flavours</a>
+          <a class="btn btn-ghost" href="#visit">Find the counter</a>
+        </div>
+      </div>
+      <p class="scroll-hint" aria-hidden="true"><span></span>Scroll to pipe</p>
+    </section>
+
+    <section class="proof" aria-label="At a glance">
+      <dl class="facts">
+        <div><dt>Google rating</dt><dd><strong>4.9</strong> from 378 reviews</dd></div>
+        <div><dt>Open</dt><dd>Tuesday to Sunday</dd></div>
+        <div><dt>Closed</dt><dd>Mondays</dd></div>
+        <div><dt>Made</dt><dd>In the shop, daily</dd></div>
+      </dl>
+    </section>
+
+    <section class="made" id="made" aria-labelledby="made-title">
+      <div class="made-inner">
+        <h2 id="made-title" class="eyebrow">How it is made</h2>
+        <ol class="steps">
+          <li class="step is-active"><span class="n">01</span><p class="step-t">Meiji milk base.</p><p class="step-b">A short ingredient list with nothing to hide behind.</p></li>
+          <li class="step"><span class="n">02</span><p class="step-t">Light on sugar.</p><p class="step-b">Sweet enough to taste the flavour. Not so sweet you taste only sugar.</p></li>
+          <li class="step"><span class="n">03</span><p class="step-t">Churned here. Piped to order.</p><p class="step-b">Every batch is made in the shop, then piped into your cone the moment you ask.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="flavours" id="flavours" aria-labelledby="flav-title">
+      <div class="flav-inner">
+        <h2 id="flav-title" class="eyebrow">The rotation</h2>
+        <div class="flav-card" aria-live="polite">
+          <p class="flav-count"><span id="flav-i">01</span> / <span id="flav-n">07</span></p>
+          <p class="flav-name" id="flav-name">Original</p>
+          <p class="flav-tag" id="flav-tag">Always on</p>
+          <p class="flav-note" id="flav-note">Meiji milk and nothing covering it up. The one to start with.</p>
+        </div>
+        <p class="flav-foot">Four on tap. Two change every week. <a href="https://www.instagram.com/oui_pompette_/" rel="noopener">This week's four are on Instagram</a>.</p>
+        <ul class="flav-list">
+          <li>Original</li><li>Hojicha</li><li>Black sesame</li><li>Matcha</li><li>Yuzu</li><li>Pistachio</li><li>Hazelnut</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="menu" id="menu" aria-labelledby="menu-title">
+      <div class="menu-card">
+        <h2 id="menu-title" class="split">Cup or cone. That is the whole decision.</h2>
+        <ul class="prices">
+          <li><span>Original</span><span class="dots" aria-hidden="true"></span><span class="p">from $3</span></li>
+          <li><span>Any rotating flavour</span><span class="dots" aria-hidden="true"></span><span class="p">from $5</span></li>
+          <li><span>Toppings</span><span class="dots" aria-hidden="true"></span><span class="p">+$1 to $1.50</span></li>
+        </ul>
+        <p class="menu-note">Waffle cone or cup. No pork served. Prices at the counter are the final word.</p>
+      </div>
+    </section>
+
+    <section class="maker" aria-labelledby="maker-title">
+      <figure class="maker-photo">
+        <img src="assets/maker.jpg" alt="Pompette's maker piping soft serve into a waffle cone at the machine, pastel blue wall with sprinkle decorations behind" width="720" height="900" loading="lazy">
+      </figure>
+      <div class="maker-copy">
+        <h2 id="maker-title" class="split">Small shop. One counter. Run by the people who make it.</h2>
+        <p>Ask what they are testing. The owner likes to share new ideas before they reach the board.</p>
+        <p class="aside">Say hi to the llamas on the way in.</p>
+      </div>
+    </section>
+
+    <section class="visit" id="visit" aria-labelledby="visit-title">
+      <h2 id="visit-title" class="split">It is a little hidden. Here is the way in.</h2>
+      <ol class="route">
+        <li><span class="n">1</span>Beauty World MRT, Downtown Line, into Beauty World Centre.</li>
+        <li><span class="n">2</span>Level 1. Walk past I-Bread.</li>
+        <li><span class="n">3</span>Turn into the walkway past Victory Boat Noodles.</li>
+        <li><span class="n">4</span>Unit #01-11B, next to the level 1 washroom. Look for the blue.</li>
+      </ol>
+      <div class="visit-grid">
+        <address>
+          <strong>Pompette.</strong><br>
+          144 Upper Bukit Timah Road<br>
+          #01-11B Beauty World Centre<br>
+          Singapore 588177
+        </address>
+        <table class="hours">
+          <caption class="sr-only">Opening hours</caption>
+          <tbody>
+            <tr><th scope="row">Tue to Fri</th><td>12pm to 9pm</td></tr>
+            <tr><th scope="row">Sat, Sun, PH</th><td>11am to 9pm</td></tr>
+            <tr><th scope="row">Monday</th><td>Closed</td></tr>
+          </tbody>
+        </table>
+        <div class="visit-ctas">
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Pompette.&amp;query_place_id=ChIJO3CO-2AR2jER28Wz2MXmIeY" data-maps>Open in Maps</a>
+          <a class="btn btn-ghost" href="tel:+6598770270">Call +65 9877 0270</a>
+          <a class="btn btn-ghost" href="https://www.instagram.com/oui_pompette_/" rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="giant" aria-hidden="true">Pompette.</p>
+    <p class="fine">Concept site by Henry Chua for Pompette, not the official website. Rating, hours and prices from Google Maps, Pompette's Instagram and published reviews, checked 26 Sep 2026. Maker photo from Pompette's Instagram.</p>
+  </footer>
+</body>
+</html>

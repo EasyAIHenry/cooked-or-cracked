@@ -26,6 +26,7 @@ for f in "$SK"/henry-scrapbook-reel/references/*.mp3 "$SK"/henry-scrapbook-reel/
 done
 
 sync_dir "$CC/lead-scout" "$REPO/tools/lead-scout"
+[ -d "$CC/pompette-site" ] && sync_dir "$CC/pompette-site" "$REPO/sites/pompette"
 
 for ep in "$CC"/DRIVE_Cooked-or-Cracked_Ep*; do
   [ -d "$ep" ] || continue
