@@ -1,5 +1,12 @@
 # Learning log (append after every episode's retro; newest first)
 
+## Ep2 edit, pass 2 notes (26 Sep 2026)
+1. Opener: Henry's chin-hold reaction (muted) under the reviewed reel's own claim, cut at the end of that sentence (3.5 s). His first words follow at 0:03.
+2. The sting goes after his hook line ("Well, let's test it out."), over a 2.6 s teaser of the best visual, with the title popping on the sung words. Never before his first words: that cost Ep1 half its audience.
+3. Screen recordings: 9:16 browser-pane crops go full frame. Landscape material (GitHub pages, Maps, chat, desktop site) goes on ruled paper as a white-bordered card with a soft shadow and a 1 to 1.5 degree tilt. Cut fresh crops from the original recording at the speed that fits the line (prompt typing 11x, Higgsfield widget 10x, site scroll 3x).
+4. When a line comes from the other take on camera, punch in 1.3x on the face. It reads as emphasis, not a continuity error.
+5. Levels before the voice chain: reviewed reel and sting about 1 to 2 LU above Henry's voice. Out of the box they were 5 and 7 LU louder.
+
 ## Ep2 edit, pass 1 notes (26 Sep 2026)
 Henry on the v2 speech cut: remove the extra "so", "nice" should be "nicely", and "have me saying how we can use this for real life cases, it feels rushed".
 1. Every review needs a real-life beat after the demo and before the price: who can use this and how. Ep2's is POS ordering, a site for menu and opening hours, two business models (fix existing sites, or build one for shops without), "amazing for small business owners". The review is not done until he says it.
