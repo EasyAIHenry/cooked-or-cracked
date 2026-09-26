@@ -1,0 +1,155 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Connect Kie to Claude — Cooked or Cracked companion</title><link rel="stylesheet" href="style.css"></head><body>
+
+<!-- COVER -->
+<section class="page cover">
+  <span class="pill">Cooked or Cracked</span>
+  <div class="big">Connect <i>Kie</i><br>to Claude.</div>
+  <p class="sub">The exact setup from the episode, written down properly. One API key, pay as you go, no monthly plan. Ten minutes if you follow it top to bottom.</p>
+  <div class="contents torn">
+    <div class="k">what is inside</div>
+    <ol>
+      <li><span>1 · Create your Kie account</span><span>p3</span></li>
+      <li><span>2 · Top up once, keep the credits</span><span>p4</span></li>
+      <li><span>3 · Create your API key</span><span>p5</span></li>
+      <li><span>4 · Install the Generate skill</span><span>p6</span></li>
+      <li><span>5 · Run your first generation</span><span>p7</span></li>
+      <li><span>6 · Check live prices, and who this is for</span><span>p7–8</span></li>
+    </ol>
+  </div>
+  <div class="stamps">
+    <div class="st torn">one image<b>4¢</b></div>
+    <div class="st torn">one 5-second clip<b>62¢</b></div>
+    <div class="st torn">start to finish<b>10 min</b></div>
+  </div>
+  <div class="who">Written by Henry Chua after testing it on my own account. Prices checked 25 September 2026. Nothing here is sponsored.</div>
+  <div class="receipt torn">
+    <div class="hand mute">what it cost me to test</div>
+    <div class="n">$5.00</div>
+    <div>1,000 credits. About 100 images, or 8 five-second clips. Credits do not expire.</div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="page">
+  <span class="tag">before you start</span>
+  <h2 style="margin-top:14px">Why I wrote this down</h2>
+  <p>I watched a creator generate video from Claude for cents and my first reaction was that it could not be that cheap. So I paid for it myself, ran the same tests three times, and built the price table you saw in the episode. This guide is the part I could not fit into 90 seconds.</p>
+  <p>It is for people who already know how to prompt. If you are new to AI video, a platform like Higgsfield gives you templates, presets and a visual editor, and you should start there. If you know what you want and you are tired of paying a subscription for it, keep reading.</p>
+
+  <div class="note ruled">
+    <h3>How the pieces fit</h3>
+    <div class="flow">
+      <div class="box">You<small>one line of text</small></div><div class="arr">→</div>
+      <div class="box">Claude Code<small>on your Mac or PC</small></div><div class="arr">→</div>
+      <div class="box">Generate skill<small>a small open-source script</small></div><div class="arr">→</div>
+      <div class="box">Kie API<small>your key, your credits</small></div><div class="arr">→</div>
+      <div class="box">The model<small>Nano Banana 2, Seedance, Kling</small></div>
+    </div>
+    <p class="small" style="margin:0">Kie does not make the models. It resells access to them at a lower rate than the official APIs, and lets you pay per generation instead of per month. Claude is just the thing that types the request for you.</p>
+  </div>
+
+  <div class="two">
+    <div class="card"><div class="k">you will need</div>
+      <p style="margin:6px 0 0">A Google or Microsoft login<br>US$5 for the first top-up<br>Claude Code installed<br>Ten minutes</p></div>
+    <div class="card"><div class="k">you will not need</div>
+      <p style="margin:6px 0 0">A subscription<br>A credit card on file with Kie<br>Any coding. Every command below is copy and paste.</p></div>
+  </div>
+
+  <div class="callout"><b>One rule before anything else.</b> Your API key is a password. Never paste it into a chat window, a screenshot, or a video. It lives in one file on your computer and nowhere else. I show you where in step 4.</div>
+  <div class="foot"><span>Cooked or Cracked · Connect Kie to Claude</span><span>page 2</span></div>
+</section>
+
+<!-- STEP 1 + 2 -->
+<section class="page">
+  <div class="step"><div class="badge">1</div><div><h3>Create your Kie account</h3>
+  <p>Go to <a href="https://kie.ai/">kie.ai</a> and click <b>Get Started</b> in the top right. Sign in with Google or Microsoft. There is no card step at this point.</p></div></div>
+  <div class="shot"><img src="screens/01-kie-home.png" alt="Kie homepage"><div class="mark" style="right:22px; top:6px"></div><div class="label" style="right:70px; top:30px">click here</div></div>
+  <p class="caption">kie.ai on 25 Sep 2026. The homepage changes often; the Get Started button has stayed top right.</p>
+
+  <div class="foot"><span>Cooked or Cracked · Connect Kie to Claude</span><span>page 3</span></div>
+</section>
+<section class="page">
+<div class="step"><div class="badge">2</div><div><h3>Top up once. Keep the credits.</h3>
+  <p>Open <a href="https://kie.ai/billing">kie.ai/billing</a>. The minimum top-up is US$5, which is 1,000 credits at half a cent each. Credits do not expire, so this one top-up covers every test in this guide with change to spare.</p></div></div>
+  <div class="shot"><img src="screens/03-kie-billing.png" alt="Kie billing page"><div class="label" style="left:24px; top:14px">sign in first, then Billing → Add credits</div></div>
+  <div class="three">
+    <div class="card"><div class="k">one image</div><div class="n">4¢</div><span class="small">Nano Banana 2, 8 credits</span></div>
+    <div class="card"><div class="k">one 5 s clip</div><div class="n">62¢</div><span class="small">Seedance 2.0 Fast, 720p</span></div>
+    <div class="card win"><div class="k">your $5</div><div class="n">≈100 images</div><span class="small">or 8 clips, or a mix</span></div>
+  </div>
+  <div class="foot"><span>Cooked or Cracked · Connect Kie to Claude</span><span>page 4</span></div>
+</section>
+
+<!-- STEP 3 -->
+<section class="page">
+  <div class="step"><div class="badge">3</div><div><h3>Create your API key</h3>
+  <p>Open <a href="https://kie.ai/api-key">kie.ai/api-key</a> and click <b>Create New Key</b>. Name it something you will recognise later, for example <code>claude-code</code>. Copy the key straight away. Kie shows the full key once; after that you only see the first few characters.</p></div></div>
+  <div class="shot"><img src="screens/02-kie-api-key.png" alt="Kie API keys page"><div class="mark" style="right:102px; top:150px"></div><div class="label" style="right:40px; top:200px">Create New Key lives here</div></div>
+  <p class="caption">The page asks you to sign in before it shows your keys. The blue button top right is the one you want.</p>
+
+  <div class="note">
+    <h3>What I do with the key</h3>
+    <p>I paste it into one file (next step) and close the tab. If I ever suspect it has leaked, I come back to this page, delete the key and make a new one. It takes ten seconds and costs nothing. Rotating a key is normal hygiene, not a sign you did something wrong.</p>
+  </div>
+  <div class="foot"><span>Cooked or Cracked · Connect Kie to Claude</span><span>page 5</span></div>
+</section>
+
+<!-- STEP 4 -->
+<section class="page">
+  <div class="step"><div class="badge">4</div><div><h3>Install the Generate skill</h3>
+  <p>A skill is a small folder of instructions Claude Code can read. This one, published openly by <a href="https://github.com/Blotato-Inc/blotato-skills/tree/main/blotato/skills/generate">Blotato on GitHub</a>, turns a plain sentence into a request to Kie. Open Terminal and paste these three lines one at a time.</p></div></div>
+<pre><b># 1. download the skills repo</b>
+git clone https://github.com/Blotato-Inc/blotato-skills
+
+<b># 2. copy just the generate skill into Claude's skills folder</b>
+cp -r blotato-skills/blotato/skills/generate ~/.claude/skills/generate
+
+<b># 3. create the settings file you will put your key in</b>
+cp ~/.claude/skills/generate/.env.example ~/.claude/skills/generate/.env</pre>
+  <p>Now open <code>~/.claude/skills/generate/.env</code> in any text editor and paste your key after <code>KIE_API_KEY=</code>. Save. That file is the only place the key lives.</p>
+  <div class="shot" style="max-height:60mm"><img src="screens/08-blotato-skills.png" alt="The generate skill on GitHub"><div class="label" style="left:24px; top:14px">this is the folder you are copying</div></div>
+
+  <div class="callout"><b>Read this before you install any skill from the internet.</b> I ran this one through a security scanner before touching it. It flagged the skill, and it was right to: the skill reads your key from that <code>.env</code> file and sends requests to <code>api.kie.ai</code>. That is exactly its job, so I was comfortable installing it. The habit to keep is this: open the files, check the key is read from a file you control, and check the requests only go to the provider you expect. If you cannot verify those two things, do not install it.</div>
+  <div class="foot"><span>Cooked or Cracked · Connect Kie to Claude</span><span>page 6</span></div>
+</section>
+
+<!-- STEP 5 + 6 -->
+<section class="page">
+  <div class="step"><div class="badge">5</div><div><h3>Run your first generation</h3>
+  <p>Restart Claude Code so it picks up the new skill, then type the line below. The skill works out which model fits, quotes the price in credits, and waits for you to say <b>go</b>. Nothing is charged until you do.</p></div></div>
+<pre>/generate a still: matte black skincare serum bottle on wet slate, morning light, no text</pre>
+  <div class="note ruled">
+    <div class="hand mute">what you should see</div>
+    <p style="margin:4px 0 0">A short reply like <i>"Nano Banana 2, 8 credits, about $0.04. Go?"</i> Type <b>go</b>. Thirty seconds later the image lands in your generations folder with a small text file next to it that records the prompt, the model and the cost. Every generation gets one, so you always know what a shot cost you.</p>
+  </div>
+  <p>Two more worth trying: a poster with words on it (<code>/generate a still with a poster that reads COOKED OR CRACKED, bold red stamp style</code>), which should switch to GPT Image 2 because it is better at text. Then a video from your still (<code>/generate animate the last still, 5 seconds, spend cap $1</code>). The spend cap is the habit that keeps this cheap.</p>
+
+  <div class="step" style="margin-top:12px"><div class="badge">6</div><div><h3>Check the live price before you scale up</h3>
+  <p>Every model and its current rate is on <a href="https://kie.ai/pricing">kie.ai/pricing</a>. Type a model name in the search box. The two from the episode: <a href="https://kie.ai/nano-banana-2">Nano Banana 2</a> and <a href="https://kie.ai/seedance-2-0">Seedance 2.0</a>. The developer notes live at <a href="https://docs.kie.ai/">docs.kie.ai</a>.</p></div></div>
+  <div class="shot"><img src="screens/04-kie-pricing.png" alt="Kie pricing page"><div class="mark" style="right:60px; top:96px"></div><div class="label" style="right:120px; top:126px">search any model here</div></div>
+  <div class="foot"><span>Cooked or Cracked · Connect Kie to Claude</span><span>page 7</span></div>
+</section>
+
+<!-- CLOSE -->
+<section class="page">
+  <span class="tag">the honest bit</span>
+  <h2 style="margin-top:14px">Who this is for, and who it is not for</h2>
+  <div class="two">
+    <div class="card win"><div class="k">use Kie + Claude if</div>
+      <p style="margin:6px 0 0">You already write good prompts. You care about the price per image and per clip. You are fine working from a line of text rather than a canvas. You want to stop paying for credits you do not use.</p></div>
+    <div class="card"><div class="k">stay on a platform if</div>
+      <p style="margin:6px 0 0">You are new to AI video. You want presets, a visual editor, and plugins for After Effects and Premiere. You will pay more per generation, and you will get a starting ground. That is a fair trade when you are learning.</p></div>
+  </div>
+  <div class="note" style="margin-top:18px">
+    <h3>Where I landed</h3>
+    <p>For images and cheaper clips, Kie beats both Higgsfield's website and its API. The API narrows the gap on video and is the right call if you are building a product on Higgsfield's model set. I run my own month, about 40 images and 16 short clips, on Kie for around eleven dollars. The full table with every number linked to its source is the second file in this folder.</p>
+  </div>
+  <div class="note ruled" style="margin-top:18px">
+    <div class="hand mute">about the numbers in this guide</div>
+    <p style="margin:6px 0 0">Prices, credits and plan details were checked on 25 September 2026 on the pages linked in each step. Kie and Higgsfield change pricing, credit rates, promotions and terms at their own discretion, sometimes weekly. Treat every figure here as a snapshot on that date, not a quote, and confirm on the linked page before you pay. I am not affiliated with either company and I do not earn from these links.</p>
+  </div>
+  <p style="margin-top:22px">If something here has changed by the time you read it, tell me in the comments and I will update the file. That is the point of keeping it as a shared document instead of a caption.</p>
+  <p class="serif" style="font-size:16pt; margin-top:18px">Henry Chua<span class="coral">.</span></p>
+  <div class="foot"><span>Cooked or Cracked · Connect Kie to Claude</span><span>page 8</span></div>
+</section>
+</body></html>

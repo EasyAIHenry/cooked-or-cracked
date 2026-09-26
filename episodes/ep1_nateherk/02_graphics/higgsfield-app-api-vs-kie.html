@@ -1,0 +1,38 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700;900&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1080px;height:1920px;background:#0b0b0f;color:#fff;font-family:Inter,system-ui,sans-serif;padding:100px 48px 80px;display:flex;flex-direction:column}
+h1{font-size:62px;font-weight:900;letter-spacing:-2px;line-height:1.02}
+.sub{color:#8f8f9d;font-size:24px;margin:16px 0 36px;font-weight:500}
+table{width:100%;border-collapse:separate;border-spacing:0 12px;font-size:26px}
+th{font-size:24px;font-weight:900;padding:0 10px 6px;text-align:center;line-height:1.15}
+th small{display:block;font-size:15px;color:#8f8f9d;font-weight:700;letter-spacing:1px;margin-top:4px}
+th.a{color:#ff8a8a}th.b{color:#ffb060}th.k{color:#ffd23f}
+td{background:#15151c;padding:22px 10px;text-align:center;font-weight:700;line-height:1.25}
+td.l{text-align:left;color:#fff;border-radius:16px 0 0 16px;width:250px;padding-left:18px}
+td.l small{display:block;color:#8f8f9d;font-size:17px;font-weight:500;margin-top:3px}
+td:last-child{border-radius:0 16px 16px 0}
+td.k{color:#ffd23f}td.a{color:#e8e8ee}td.b{color:#e8e8ee}
+td.no{color:#ff8a8a;font-size:20px}
+td.win{color:#7ef0a9}
+tr.big td{font-size:38px;padding:28px 10px}tr.big td.l{font-size:26px}
+.tag{display:inline-block;font-size:17px;font-weight:900;padding:8px 12px;border-radius:9px;line-height:1.2}
+.g{background:#1d3b2a;color:#7ef0a9}.r{background:#3b1d1d;color:#ff8a8a}.y{background:#3b321d;color:#ffd23f}
+.verdict{margin-top:auto;background:#ffd23f;color:#0b0b0f;border-radius:20px;padding:30px 36px;font-size:29px;font-weight:900;line-height:1.3}
+.verdict small{display:block;font-size:18px;font-weight:700;margin-top:10px;color:#3a3000;line-height:1.4}
+</style></head><body>
+<h1>Higgsfield website vs<br>Higgsfield API vs Kie</h1>
+<div class="sub">Higgsfield launched a pay-per-use API on 17 Sep. Does Nate's point still hold?</div>
+<table>
+<tr><th></th><th class="a">HIGGSFIELD<small>WEBSITE</small></th><th class="b">HIGGSFIELD<small>API, new</small></th><th class="k">KIE<small>+ CLAUDE</small></th></tr>
+<tr><td class="l">How you pay</td><td class="a">Monthly plan<br>$15 or $49</td><td class="b">Pay as you go<br>$15 free to start</td><td class="k">Pay as you go<br>$5 minimum, nothing free</td></tr>
+<tr><td class="l">Unused money</td><td class="a"><span class="tag r">GONE MONTHLY</span></td><td class="b"><span class="tag y">1 YEAR</span></td><td class="k"><span class="tag g">NEVER EXPIRES</span></td></tr>
+<tr><td class="l">Nano Banana 2 image<small>the one Nate uses</small></td><td class="a">$0.14</td><td class="b no">NOT OFFERED</td><td class="k win">$0.04</td></tr>
+<tr><td class="l">GPT Image 2<small>text in image</small></td><td class="a">n/a</td><td class="b no">NOT OFFERED</td><td class="k win">$0.03</td></tr>
+<tr><td class="l">Seedance 2.0 Fast<small>5s, 720p</small></td><td class="a">~$1.30</td><td class="b no">STANDARD ONLY<br>$1.51</td><td class="k win">$0.62</td></tr>
+<tr><td class="l">Seedance 2.5<small>5s, 480p</small></td><td class="a">~$2.50</td><td class="b">$1.03<br><small style="color:#8f8f9d;font-size:15px">$0.72 launch week</small></td><td class="k">$0.70</td></tr>
+<tr><td class="l">Kling 3.0 Standard<small>5s, no audio</small></td><td class="a">~$1.30</td><td class="b win">$0.63<br><small style="color:#8f8f9d;font-size:15px">$0.32 launch week</small></td><td class="k">$0.35</td></tr>
+<tr class="big"><td class="l">My month<small>40 images + 16 clips</small></td><td class="a" style="color:#ff8a8a">$49</td><td class="b">~$25</td><td class="k">$11.52</td></tr>
+</table>
+<div class="verdict">The API closes the gap on video. Kie still wins on images, on Seedance Fast, and on money that never expires.<small>Prices read live from higgsfield.ai, open.higgsfield.ai and kie.ai on 24 Sep 2026. Higgsfield API launch discounts are a 7-day offer. Kie Seedance 2.0 prices are a promo until 7 Oct. API month uses Marketing Studio images since Nano Banana isn't on it.</small></div>
+</body></html>
