@@ -15,6 +15,8 @@ This repo is the operating manual. It holds the SOP, the Claude Code skills that
 | `skills/henry-guide-pdf/` | The lead-magnet PDF format |
 | `tools/lead-scout/` | Daily Instagram scout that scores outlier reels from a watchlist |
 | `episodes/` | One folder per episode: scripts, research, captions, retro |
+| `students/` | The editor's guide: what the series is, how the edit is built and replicated. Read-only for students; Henry alone changes this repo |
+| `guides/` | Onboarding guides for handing a workflow to a teammate (first: COTE social edits in ChatCut) |
 
 ## Install the skills on a new machine
 ```
@@ -30,6 +32,6 @@ Edit the skills in `~/.claude/skills/` and the episodes in `Content Creation/DRI
 | Ep | Subject | Claim | Verdict | Cut |
 |---|---|---|---|---|
 | 1 | @nateherkai, the Generate skill | Claude makes video for cents via Higgsfield or Kie | CRACKED (Kie cheapest) | 2:12, posted 25 Sep 2026 |
-| 2 | @nateherkai, 5 free design tools | Taste, Impeccable, Playwright CLI, Awesome Design, img2threejs turn Claude into a designer | pending test | target 60 to 75 s |
+| 2 | @nateherkai, 5 free design tools | Taste, Impeccable, Playwright CLI, Awesome Design, img2threejs turn Claude into a designer; Henry built a site for a shop with them | CRACKED for layout, 7/10 (visuals need Higgsfield) | 1:29, delivered 27 Sep 2026 |
 
 The learning log in `skills/cooked-or-cracked/references/learning-log.md` records what each episode's numbers taught and what changed.

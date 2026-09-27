@@ -1,0 +1,433 @@
+{
+  "version": "1.0",
+  "concept_options": [
+    {
+      "id": "c1",
+      "title": "Why Perfect Parts Never Fit",
+      "hook": "These parts fit perfectly in CAD. In real life? They're welded.",
+      "narrative_structure": "myth_busting",
+      "visual_approach": "A tactile 2.5D forensic teardown of a pin trapped in a hole. Dark precision-workshop frames alternate with warm drawing-stock diagrams. A thin red clearance gauge appears in the hook at 0.00 and returns only at the payoff when the parts finally move.",
+      "suggested_playbook": "custom-measured-friction",
+      "target_audience": "Men 18–34 in India, the US, and Southeast Asia who use CAD, 3D printers, CNC, electronics enclosures, or workshop tools",
+      "target_platform": "youtube",
+      "target_duration_seconds": 75,
+      "key_points": [
+        "CAD dimensions are nominal ideals; every manufacturing process produces a range.",
+        "Tolerance describes variation, while clearance is intentional space between mating parts.",
+        "The correct fit depends on function and process, so a small fit gauge is more useful than a universal magic number."
+      ],
+      "core_message": "Perfect in CAD is not functional in reality; design the fit, then test the process.",
+      "cta": "Episode 2 will show how a fracture line reveals the direction a part was built.",
+      "tone": "cinematic, exact, tactile, lightly provocative",
+      "grounded_in": [
+        "Recurring tolerance-versus-clearance confusion in maker forums",
+        "CII/KPMG design-resource gap",
+        "Weak packaging of direct tolerance education on YouTube",
+        "Formlabs guidance that fit depends on function, material, and process"
+      ],
+      "why_this_works": "It attacks a misconception every builder encounters, demonstrates the answer with physical causality, and creates a repeatable series grammar without depending on a presenter."
+    },
+    {
+      "id": "c2",
+      "title": "The Crack Is a Map",
+      "hook": "That crack is pointing straight at the mistake you made.",
+      "narrative_structure": "story",
+      "visual_approach": "Open on a suspended broken bracket, then track the fracture path like a crime-scene map through layer direction, stress concentration, and part orientation.",
+      "suggested_playbook": "custom-forensic-materials",
+      "target_audience": "3D-printing and fabrication hobbyists troubleshooting structural failures",
+      "target_platform": "youtube",
+      "target_duration_seconds": 72,
+      "key_points": [
+        "Fracture location and direction preserve evidence about loading.",
+        "Layer orientation changes strength in anisotropic printed parts.",
+        "Geometry can redirect stress away from a weak plane."
+      ],
+      "core_message": "A failed part is a free test report if you know how to read it.",
+      "cta": "Next, read the shiny ring around a stripped screw.",
+      "tone": "forensic, tense, practical",
+      "grounded_in": [
+        "Build Failure Forensics angle",
+        "Repeated print-strength questions",
+        "Maker appetite for visible failure evidence"
+      ],
+      "why_this_works": "Failure imagery supplies immediate drama and the forensic framing turns a common frustration into a useful diagnostic habit."
+    },
+    {
+      "id": "c3",
+      "title": "One Extra Zero",
+      "hook": "One extra zero can multiply a part's cost without improving it.",
+      "narrative_structure": "data_narrative",
+      "visual_approach": "A technical drawing gains decimal places while its production route expands from one tool to multiple slow operations; cost, scrap risk, and inspection stack visually around the dimension.",
+      "suggested_playbook": "custom-cost-stack",
+      "target_audience": "Early-career engineers, CAD users, and hardware founders",
+      "target_platform": "youtube",
+      "target_duration_seconds": 80,
+      "key_points": [
+        "A tolerance should be tied to function, not aesthetics on a drawing.",
+        "Tighter limits can require slower processes and more inspection.",
+        "The widest functional tolerance is often the higher-quality engineering choice."
+      ],
+      "core_message": "Precision is a budget you spend only where function demands it.",
+      "cta": "Episode 2 will show the dimension that silently breaks assemblies.",
+      "tone": "contrarian, surgical, economically literate",
+      "grounded_in": [
+        "Mechanical-engineer warnings about over-tolerancing",
+        "Hardware-startup DFM cost discussions",
+        "Formlabs machining-cost explanation"
+      ],
+      "why_this_works": "It turns an invisible manufacturing rule into a visually escalating cost story with direct relevance to builders who order parts."
+    },
+    {
+      "id": "c4",
+      "title": "Prototype Is Not Product",
+      "hook": "It worked once. That proves almost nothing about unit one hundred.",
+      "narrative_structure": "journey",
+      "visual_approach": "Follow one handmade prototype as it becomes a row of one hundred units; each manual correction disappears and exposes a repeatability trap.",
+      "suggested_playbook": "custom-repeatability-line",
+      "target_audience": "Hardware founders and ambitious makers moving toward small-batch production",
+      "target_platform": "youtube",
+      "target_duration_seconds": 84,
+      "key_points": [
+        "A prototype proves concept, not repeatability.",
+        "Assembly access, testing, part supply, and process variation appear at batch scale.",
+        "Manufacturing constraints should enter before the design freezes."
+      ],
+      "core_message": "Design the hundredth unit while you are still building the first.",
+      "cta": "Episode 2 will reveal the test point most founders forget.",
+      "tone": "urgent, founder-focused, cinematic",
+      "grounded_in": [
+        "CII/KPMG hardware-startup research",
+        "r/hwstartups prototype-versus-production discussion",
+        "r/Entrepreneur content gap"
+      ],
+      "why_this_works": "It targets the most commercially valuable audience pain and uses a clear visual multiplication device, though it is less universal than c1 for a first episode."
+    },
+    {
+      "id": "c5",
+      "title": "Jugaad That Survives Batch 100",
+      "hook": "This clever shortcut works once. One change makes it repeatable.",
+      "narrative_structure": "comparison",
+      "visual_approach": "Split-screen a brilliant one-off fix against a production-minded revision, using the same low-cost materials but adding locating features, strain relief, and testability.",
+      "suggested_playbook": "custom-field-to-factory",
+      "target_audience": "Resourceful makers and early hardware teams across India and Southeast Asia, with universal relevance for US DIY audiences",
+      "target_platform": "youtube",
+      "target_duration_seconds": 78,
+      "key_points": [
+        "Improvisation is valuable during discovery but must be translated into constraints.",
+        "Repeatability comes from locating, fastening, strain relief, and test access.",
+        "Production thinking does not require expensive materials; it requires explicit interfaces."
+      ],
+      "core_message": "Keep the ingenuity; engineer the repeatability.",
+      "cta": "Episode 2 will test the same fix after heat, dust, and vibration.",
+      "tone": "resourceful, respectful, energetic",
+      "grounded_in": [
+        "Regional hardware-growth signal",
+        "Prototype-versus-production misconception",
+        "Need for low-cost globally adaptable examples"
+      ],
+      "why_this_works": "It has strong regional texture without excluding the global audience, but requires careful cultural execution, making it better after the channel establishes trust."
+    }
+  ],
+  "selected_concept": {
+    "concept_id": "c1",
+    "rationale": "First-ranked and self-approved under the user's unattended-session rule. It is the most universal topic, has the clearest sub-five-second physical hook, and establishes the recurring forensic format and red-gap motif.",
+    "modifications": [
+      "Keep the advice process-specific instead of claiming one universal clearance value.",
+      "Use a three-act structure and reserve the red-gap signature device for the hook and payoff only.",
+      "Closing line must explicitly tee up the fracture-forensics episode."
+    ]
+  },
+  "production_plan": {
+    "pipeline": "animated-explainer",
+    "playbook": "custom-measured-friction",
+    "stages": [
+      {
+        "stage": "script",
+        "tools": [],
+        "approach": "Write a 150–175 word, three-act narration with a cold open inside five seconds and performance direction for a calm, credible male voice.",
+        "fallback_if_unavailable": "Not applicable; local authored artifact."
+      },
+      {
+        "stage": "scene_plan",
+        "tools": [],
+        "approach": "Plan seven visually distinct bespoke scenes with deliberate pacing, title card, recurring red-gap motif, and no repeated primary visual subject.",
+        "fallback_if_unavailable": "Not applicable; local authored artifact."
+      },
+      {
+        "stage": "assets",
+        "tools": [
+          {
+            "tool_name": "google_tts",
+            "role": "Narration with SSML pacing",
+            "provider": "google_tts",
+            "available": true,
+            "estimated_cost_usd": 0.03,
+            "why_this_provider": "It is the only configured TTS provider and Chirp 3 HD offers the highest available naturalness."
+          },
+          {
+            "tool_name": "google_imagen",
+            "role": "One hook image/style anchor of interlocked precision parts",
+            "provider": "google_imagen",
+            "available": true,
+            "estimated_cost_usd": 0.04,
+            "why_this_provider": "It is the configured image provider and a single high-quality anchor avoids a slideshow while satisfying the image asset contract."
+          },
+          {
+            "tool_name": "google_music",
+            "role": "Original instrumental mechanical pulse",
+            "provider": "google",
+            "available": true,
+            "estimated_cost_usd": 0.08,
+            "why_this_provider": "A custom pulse can follow the gauge motif and costs little; no local library track exists."
+          },
+          {
+            "tool_name": "subtitle_gen",
+            "role": "Word-level caption data from narration timing",
+            "provider": "openmontage",
+            "available": true,
+            "estimated_cost_usd": 0.0,
+            "why_this_provider": "Local and designed for timed caption artifacts."
+          }
+        ],
+        "approach": "Generate one narration, one visual anchor, one music bed, and word timing; all other visuals are hand-authored motion design.",
+        "fallback_if_unavailable": "Stop and surface the blocked provider; do not switch provider or drop narration/music without a revised approval decision."
+      },
+      {
+        "stage": "edit",
+        "tools": [],
+        "approach": "Lock cuts to narration phrases, duck music under speech, and limit on-screen labels to information that captions do not duplicate.",
+        "fallback_if_unavailable": "Not applicable; local authored artifact."
+      },
+      {
+        "stage": "compose",
+        "tools": [
+          {
+            "tool_name": "video_compose",
+            "role": "Render bespoke Remotion composition",
+            "provider": "ffmpeg/remotion",
+            "available": true,
+            "estimated_cost_usd": 0.0,
+            "why_this_provider": "Remotion supports deterministic bespoke motion and word-level captions on this machine."
+          },
+          {
+            "tool_name": "audio_mixer",
+            "role": "Narration/music balance and final stereo mix",
+            "provider": "ffmpeg",
+            "available": true,
+            "estimated_cost_usd": 0.0,
+            "why_this_provider": "Local deterministic audio processing with no provider spend."
+          }
+        ],
+        "approach": "Render 1920×1080 at 30fps in atelier mode, mix narration and music, burn word-level captions, and validate with ffprobe and representative frames.",
+        "fallback_if_unavailable": "No runtime fallback is approved; surface a blocker if Remotion fails."
+      },
+      {
+        "stage": "publish",
+        "tools": [
+          {
+            "tool_name": "export_bundle",
+            "role": "Package final MP4 and metadata",
+            "provider": "local",
+            "available": true,
+            "estimated_cost_usd": 0.0,
+            "why_this_provider": "Local final-delivery packaging."
+          }
+        ],
+        "approach": "Deliver an upload-ready MP4 plus concise title, description, and sources.",
+        "fallback_if_unavailable": "Provide the verified MP4 and metadata files directly."
+      }
+    ],
+    "quality_tradeoffs": [
+      {
+        "tradeoff": "Google Chirp 3 HD ($0.03) versus cheaper Google Standard/WaveNet tiers",
+        "recommendation": "Use Chirp 3 HD Orus.",
+        "quality_impact": "A more natural, authoritative narrator matters in a faceless channel and the absolute cost difference is only cents."
+      },
+      {
+        "tradeoff": "Original Google Lyria music ($0.08) versus free Pixabay search",
+        "recommendation": "Generate one original instrumental.",
+        "quality_impact": "Custom rhythm can support the motif and avoids settling for a generic stock bed."
+      },
+      {
+        "tradeoff": "Atelier composition versus templated stock scene types",
+        "recommendation": "Use atelier.",
+        "quality_impact": "More local authoring and iteration, but a distinctive first episode instead of a generic motion-graphics template."
+      }
+    ],
+    "alternative_paths": [
+      {
+        "description": "Recommended bespoke path: Chirp 3 HD + one Imagen anchor + Lyria music + Remotion atelier",
+        "total_cost_usd": 0.15,
+        "quality_level": "premium",
+        "what_changes": "Distinctive hand-authored motion, original music, and natural narration."
+      },
+      {
+        "description": "Standard path: Chirp 3 HD + pure vector atelier + free Pixabay music",
+        "total_cost_usd": 0.03,
+        "quality_level": "standard",
+        "what_changes": "Drops the generated image and original score while keeping the bespoke motion design."
+      },
+      {
+        "description": "Free local composition path with diagrams and no paid media",
+        "total_cost_usd": 0.0,
+        "quality_level": "free",
+        "what_changes": "Would require no configured free local TTS; narration quality or presence would be compromised, so it is not recommended for this brief."
+      }
+    ],
+    "delivery_promise": {
+      "promise_type": "motion_led",
+      "motion_required": true,
+      "source_required": false,
+      "tone_mode": "cinematic educational",
+      "quality_floor": "broadcast",
+      "approved_fallback": null
+    },
+    "renderer_family": "animation-first",
+    "render_runtime": "remotion",
+    "composition_mode": "atelier",
+    "art_direction": "projects/faceless-builder-ep1/art-direction.md — Measured Friction: graphite workshop, warm drawing stock, steel cyan, warning red, monospaced measurements, physically motivated motion, and a red clearance-gap signature used only in hook and payoff.",
+    "taste_profile": {
+      "design_read": "A precision workshop inside a dark cinema: tactile for makers, exact for engineers, and fast enough for a discovery feed; every motion explains fit, force, or measurement.",
+      "visual_variance": 8,
+      "motion_intensity": 7,
+      "information_density": 5,
+      "palette_discipline": "Graphite and warm drawing-stock bases; steel cyan for neutral information, warning red only for interference and clearance, brass only for tools.",
+      "layout_variation": "Alternate macro evidence, wide title negative space, sectional diagrams, full-frame tolerance fields, mechanical triptych, and tactile test-gauge close-up.",
+      "reference_strategy": "One generated hook image plus per-scene locally rendered review stills; use Branch/Animagraffs only as clarity references, never as a visual template.",
+      "anti_patterns": [
+        "generic AI-purple gradients",
+        "floating glass cards",
+        "same hero object in every scene",
+        "decorative camera moves",
+        "caption text duplicated as headline text",
+        "universal clearance number presented as fact"
+      ],
+      "quality_gates": [
+        "Cold open resolves visually by second 5.",
+        "Each scene has a different primary visual subject.",
+        "Signature red gap appears in at most two beats.",
+        "Every movement has an explanatory purpose.",
+        "Word captions remain readable on mobile-safe center bands."
+      ]
+    },
+    "music_source": {
+      "source_type": "ai_generated",
+      "provider": "google_music",
+      "mood_direction": "104 BPM restrained mechanical pulse; dry clicks, low synth tension, no vocals, one satisfying release at the Act III fit test.",
+      "estimated_cost_usd": 0.08
+    },
+    "voice_selection": {
+      "provider": "google_tts",
+      "voice_id": "en-US-Chirp3-HD-Orus",
+      "rationale": "Rich male voice with international intelligibility and enough authority for an engineering forensic tone.",
+      "estimated_cost_usd": 0.03,
+      "delivery_style": "Calm expert who enjoys the reveal; precise, never salesy, with a slightly dry edge on the myth flip.",
+      "pacing_policy": "Fast cold open, 250–350 ms pauses at act turns, slow down for the definitions of tolerance and clearance, then accelerate into the three-fit payoff.",
+      "sample_approval_required": false
+    },
+    "decision_log_ref": "projects/faceless-builder-ep1/artifacts/decision_log.json",
+    "provider_rankings": {
+      "image": [
+        {
+          "tool_name": "google_imagen",
+          "provider": "google_imagen",
+          "weighted_score": 0.86,
+          "task_fit": 0.84,
+          "output_quality": 0.9,
+          "explanation": "Only configured image provider; strong for the single photoreal hook anchor."
+        }
+      ],
+      "tts": [
+        {
+          "tool_name": "google_tts",
+          "provider": "google_tts",
+          "weighted_score": 0.9,
+          "task_fit": 0.9,
+          "output_quality": 0.9,
+          "explanation": "Only configured TTS provider, with a premium Chirp 3 HD voice and SSML."
+        }
+      ],
+      "music": [
+        {
+          "tool_name": "google_music",
+          "provider": "google",
+          "weighted_score": 0.88,
+          "task_fit": 0.92,
+          "output_quality": 0.86,
+          "explanation": "Original instrumental with prompt-controlled style at low fixed cost."
+        },
+        {
+          "tool_name": "pixabay_music",
+          "provider": "pixabay_music",
+          "weighted_score": 0.72,
+          "task_fit": 0.7,
+          "output_quality": 0.78,
+          "explanation": "Free and commercially usable, but less tailored to the motif and pacing."
+        }
+      ]
+    }
+  },
+  "cost_estimate": {
+    "total_estimated_usd": 0.3,
+    "line_items": [
+      {
+        "tool": "google_tts",
+        "operation": "Chirp 3 HD narration, approximately 900 characters",
+        "quantity": 1,
+        "estimated_usd": 0.03,
+        "notes": "$30 per million characters; final cost depends on approved script length."
+      },
+      {
+        "tool": "google_imagen",
+        "operation": "One 16:9 hook image/style anchor",
+        "quantity": 1,
+        "estimated_usd": 0.04,
+        "notes": "Standard Imagen generation."
+      },
+      {
+        "tool": "google_music",
+        "operation": "One original instrumental music bed",
+        "quantity": 1,
+        "estimated_usd": 0.08,
+        "notes": "Flat per-generation estimate."
+      },
+      {
+        "tool": "provider regeneration reserve",
+        "operation": "At most one replacement narration, image, and music generation if QA fails",
+        "quantity": 1,
+        "estimated_usd": 0.15,
+        "notes": "Not spent unless a generated asset fails the approved quality bar."
+      },
+      {
+        "tool": "Remotion + FFmpeg + subtitle_gen",
+        "operation": "Bespoke composition, caption generation, mix, render, and technical QA",
+        "quantity": 1,
+        "estimated_usd": 0.0,
+        "notes": "Local execution."
+      }
+    ],
+    "budget_cap_usd": 5.0,
+    "budget_verdict": "within_budget",
+    "savings_options": [
+      "Use Pixabay music instead of Google Lyria to save $0.08.",
+      "Use a pure-vector cold open and skip Imagen to save $0.04.",
+      "Use a cheaper Google voice tier to save roughly $0.02, with lower naturalness."
+    ]
+  },
+  "approval": {
+    "status": "approved",
+    "user_notes": "The user explicitly instructed the unattended session to print each gate, select the first-ranked option, approve it, and continue. Gate G2 was printed and self-approved before any provider spend.",
+    "approved_budget_usd": 0.3
+  },
+  "metadata": {
+    "approval_policy": "full-run self-approval explicitly authorized by user",
+    "hard_session_cap_usd": 5.0,
+    "expected_spend_usd": 0.15,
+    "mood_board": [
+      "Macro caliper / tolerance gauge — tactile precision",
+      "Exploded pin-and-hole cross-section — visible causality",
+      "Dark graphite workshop with warm drafting stock — cinematic engineering",
+      "Dry mechanical clicks and low synth pulse — controlled momentum"
+    ]
+  }
+}

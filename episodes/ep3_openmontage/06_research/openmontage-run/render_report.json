@@ -1,0 +1,40 @@
+{
+  "version": "1.0",
+  "outputs": [
+    {
+      "path": "renders/why-perfect-parts-never-fit-upload.mp4",
+      "format": "mp4",
+      "codec": "h264",
+      "audio_codec": "aac",
+      "resolution": "1920x1080",
+      "fps": 30,
+      "duration_seconds": 75,
+      "file_size_bytes": 4894032,
+      "platform_target": "youtube_landscape"
+    }
+  ],
+  "render_time_seconds": 18.6,
+  "warnings": [
+    "The approved runtime changed from Remotion to FFmpeg after the managed macOS sandbox denied browser launch; override recorded as d-014/G5F."
+  ],
+  "verification_notes": [
+    "Nine midpoint frames inspected; no black frames, missing assets, broken overlays, or unreadable text.",
+    "Audio stream present; 75 seconds; final spoken words verified; no silence over one second; peak -1.34 dB.",
+    "Word-level captions use 169 timestamps and 35 display cues with active-word highlighting.",
+    "All nine scenes contain frame-driven motion; slideshow risk remains strong."
+  ],
+  "render_grammar": "animation-first",
+  "slideshow_risk_score": {"average": 0, "verdict": "strong"},
+  "decision_log_ref": "artifacts/decision_log.json",
+  "final_review_ref": "artifacts/final_review.json",
+  "metadata": {
+    "render_runtime": "ffmpeg",
+    "composition_mode": "atelier",
+    "runtime_override_decision_id": "d-014",
+    "subtitles_burned": true,
+    "audio_tracks_mixed": 8,
+    "total_cuts_rendered": 9,
+    "target_duration_seconds": 75,
+    "actual_duration_seconds": 75
+  }
+}

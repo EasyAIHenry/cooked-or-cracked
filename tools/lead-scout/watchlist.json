@@ -23,9 +23,15 @@
     "mara.gee95"
   ],
   "candidates": [
-    "buildingwithines"
+    "buildingwithines",
+    "charlieautomates",
+    "artificial.corner",
+    "itsmariahbrunner",
+    "lifewithleenor",
+    "switech_solution"
   ],
   "dropped": [
+    "_ldcuts_",
     "_natalieaguiar",
     "_will.victor",
     "aakeminha",
@@ -67,6 +73,7 @@
     "elevenlabsio",
     "eluna.ai",
     "eray.erden35",
+    "ernstneumeister",
     "espacolitoralnorte_ssa",
     "evolving.ai",
     "figure_robot",
@@ -107,8 +114,10 @@
     "mariliacaldasfotografia",
     "metav3rse",
     "mini_cart_tales",
+    "mobile_learning_ai",
     "mobileeditingclub",
     "mrs.crissia",
+    "napster.dev",
     "nataliefratto",
     "nayy_oliveira",
     "nexus_ai_bytes",
@@ -118,10 +127,12 @@
     "paige.prompts",
     "perplexity",
     "pinillajavierr",
+    "pixelaura950",
     "prequelapp",
     "realrileybrown",
     "reenatateles",
     "reidhoffman",
+    "rengga.dev",
     "rodrigosoaressr",
     "rourke",
     "simonsinek",
@@ -161,5 +172,12 @@
     "aitools",
     "n8n"
   ],
-  "pending": []
+  "pending": [
+    "vssn.ai",
+    "clovestudioo",
+    "marina_uiux",
+    "winkguys",
+    "farhannrakhangi",
+    "imabgold"
+  ]
 }

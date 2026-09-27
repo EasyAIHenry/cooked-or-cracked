@@ -1,0 +1,16 @@
+START 05:02:47
+SETUP 05:03:13 to 05:03:53 (40 s, zero errors)
+PREFLIGHT done 05:17:13
+PREFLIGHT: 41 of 117 tools configured with only a Google key (google_tts, google_imagen, veo_video, gemini_omni_video, pixabay_music, remotion, hyperframes). Piper TTS NOT listed as available despite make setup installing it.
+CLAUDE CLI headless run 05:22:45: "OAuth session expired and could not be refreshed" (claude auth status: loggedIn false). Henry must run claude login before his on-camera run.
+SWITCHED to Codex (codex exec --search, workspace-write + network) at 05:26:01
+KEY CHECK 05:33:28: Gemini (AI Studio) key lists veo-3.1 (generate/fast/lite), lyria-3.5, lyria-3-pro, gemini TTS models. No imagen model listed. Cloud Text-to-Speech returns 403 "API not enabled on project 1030227806951" (one-click enable in console, no gcloud needed). ADC script from Henry inspected, not run: installs gcloud SDK, asks for a Project ID, browser login, enables aiplatform. Not needed for this test.
+RECORDING seg1 05:02:47 to 05:39 (36.5 min, 1.86 GB, 3024x1964). seg2 started 05:39. Frame check: app visible with chat, file pane and terminal; terminal was on the dead Codex tab until 05:41, fixed.
+PROPOSAL checkpoint written ~05:40; still $0.00.
+PROPOSAL 05:43:39: 5 concepts (Why Perfect Parts Never Fit / The Crack Is a Map / One Extra Zero / Prototype Is Not Product / Jugaad That Survives Batch 100). Picked c1 "Why Perfect Parts Never Fit", niche "Build Failure Forensics". Plan: google_tts Chirp3 HD ($0.03) + 1 Imagen hook image ($0.04) + google_music bed ($0.08) + Remotion bespoke 7 scenes, estimate $0.30 total. No Veo video planned. Risk: Cloud TTS is disabled on the key project (403 earlier) and Imagen not in the key model list.
+SCRIPT done 05:45: 7 sections, 75 s target. Hook: "These parts fit perfectly in CAD. In real life? They are welded together." Closes with the Ep2 tease (why a crack tells you how the part was built). Still $0.00. Elapsed since prompt: 17.5 min.
+GOTCHA 05:51:37: checkpoint validator rejected the agent-invented playbook "custom-measured-friction" (only 6 built-in playbooks allowed). Agent is writing art-direction.md and retrying. Assets stage still at $0.00 after 27 min.
+ASSETS 05:52: google_tts FAILED 403 (Cloud Text-to-Speech not enabled on the key project), exactly as the key check predicted. Watching the fallback.
+ASSETS 06:03:48: narration fell back to Piper en_US-lessac-medium (free, offline, model auto-downloaded 63 MB); 1 Imagen hook image (hook-jammed-fit.png); Lyria music bed (forensic-pulse-source.mp3); final-mix.wav built. Remotion render started ~06:03.
+RENDERED 06:07: renders/faceless-builder-ep1-final.mp4, 75 s, 1920x1080 30fps, 4.8 MB. 39.5 min after the prompt (05:28:14). Provider spend reported $0.00 so far (Imagen + Lyria calls happened; cost tracker may report later). Copied to 03_reference/openmontage-output-v1-0607.mp4. Codex now in post-render QA.
+PIPELINE END 06:17:12. Wall clock from prompt 05:31:50: 45 min 22 s. Codex stage sum 43.4 min. Tokens 561,375 (Codex, gpt-5.6-sol high). Provider cost $0.119 (Gemini 2.5 Flash image $0.039 + Lyria 3 Pro $0.080). 12 self-approved gates. Final: why-perfect-parts-never-fit-upload.mp4, 75 s 1080p30 H.264/AAC, plus YouTube export bundle (SRT, thumbnail, description, chapters, tags). Recording seg2 stopped 06:17:50.

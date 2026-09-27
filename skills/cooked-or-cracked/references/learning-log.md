@@ -1,5 +1,15 @@
 # Learning log (append after every episode's retro; newest first)
 
+## Ep3 groundwork, Dr Alvaro Cintas, OpenMontage "one prompt to a YouTube video" (28 Sep 2026)
+Subject reel DdttZS1RTZu, 42k plays, 4.7x his median, gate VIDEO. Groundwork run by Claude with the screen recorded, Codex as the orchestrator because the Claude CLI was logged out.
+1. Result: one prompt to a 75 s 1080p MP4 plus a YouTube export bundle in 45 min 22 s, $0.119 in providers, 561k tokens, 12 gates. Gemini rates the output 6/10; the Piper voice is the weak link. Research stage 4/10: honest sources, but it picks a lane in the first query and infers "growing niche" from industry sales.
+2. Security gate: skillspector will score any large agent repo 100/100 CRITICAL because it flags every code file and every docs curl. Read the CRITICAL and HIGH lines by hand, run the independent sweep (invisible unicode, injection phrases, pipe-to-shell, eval/shell=True, outbound hosts, hooks, npm postinstall), and give Henry the one-page triage. Took 10 min and was the right call.
+3. Pre-flight the agent CLI and the API surface before recording: `claude auth status`, and a direct curl to each Google API the plan will use. The TTS 403 was predicted 40 minutes before it happened.
+4. Codex CLI 0.147: `-m gpt-5.6-sol -c model_reasoning_effort=high -c tools.web_search=true`, `--search` is not an exec flag, and prompts go in by `cat file | codex exec ... -` when the terminal tool refuses heredocs.
+5. Screen recording: `screencapture -x -v` from the shell records the main display at 3024x1964 and writes the file only on SIGINT, so record in segments and check a frame. Keep the live terminal tab fronted and close dead tabs; the first segment showed a failed tab for 15 min.
+6. Monitor the run with a `tail -f | grep` monitor on stage checkpoints, cost lines, tracebacks and the render path, and exclude diff lines (`^\+`) and repeated decision-log JSON, or every event is noise.
+7. For the de-myth: the reel's proof footage is a breakdown of an existing channel's Short, not the tool's own output. The tool's real output looks designed but the voice gives it away. That is the honest split for the verdict.
+
 ## Ep2 edit, pass 2 v4 notes (27 Sep 2026)
 Henry on the first pass-2 preview: "you should have me typing at the background while we have a picture in picture look", cut lines that don't need emphasis (the seven flavours), too many long pauses, target 2:00.
 1. Picture-in-picture is the default whenever the screen recording plays: the recording full frame, Henry in a small window low-left, still talking. Face-only shots are reserved for the hook, the reaction, the verdict, the pitch, the score and the CTA.

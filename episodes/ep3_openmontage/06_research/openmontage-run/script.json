@@ -1,0 +1,220 @@
+{
+  "version": "1.0",
+  "title": "Why Perfect Parts Never Fit",
+  "total_duration_seconds": 75,
+  "voice_performance": {
+    "performance_intent": "A calm workshop expert presenting forensic evidence: precise and controlled, with restrained satisfaction when the mechanism finally moves.",
+    "pacing_profile": "technical",
+    "energy_curve": "Immediate and provocative hook; measured explanation through the definitions; brisk mechanical cadence through the three fits; deliberate, satisfying close.",
+    "pause_policy": "Use short 250–350 ms pauses after contrast lines, a 500 ms pause before the clearance definition, and a 600 ms pause before the episode-two tease. Do not over-pause inside technical definitions.",
+    "sample_section_id": "s4",
+    "provider_notes": {
+      "google_tts": "Use SSML input from each section's provider_text with en-US-Chirp3-HD-Orus, speaking_rate 0.98, pitch -1.0. Preserve the contrast pauses and pronounce CAD as individual letters."
+    }
+  },
+  "sections": [
+    {
+      "id": "s1",
+      "label": "Cold Open",
+      "text": "These parts fit perfectly in CAD. In real life? They're welded together.",
+      "start_seconds": 0,
+      "end_seconds": 5,
+      "speaker_directions": "Hit 'perfectly' with confident speed, then pivot dryly on 'In real life?' Leave a short beat before 'welded together.'",
+      "delivery_cues": {
+        "pace": "brisk",
+        "energy": "provocative, controlled",
+        "emphasis_words": ["perfectly", "real life", "welded"],
+        "pause_after_seconds": 0.25,
+        "delivery_note": "Treat the final phrase as forensic evidence, not a joke.",
+        "provider_text": "These parts fit <emphasis level=\"moderate\">perfectly</emphasis> in C A D. In real life? <break time=\"300ms\"/> They're welded together."
+      },
+      "enhancement_cues": [
+        {
+          "type": "animation",
+          "description": "Macro pin and hole slide together in CAD, hard-cut to a real fused pair; the red gap gauge reads 0.00.",
+          "timestamp_seconds": 0
+        }
+      ],
+      "pronunciation_guides": [
+        {"word": "CAD", "phonetic": "C-A-D"}
+      ],
+      "source_ref": "https://formlabs.com/uk/blog/3D-printing-tolerances-for-engineering-fit/"
+    },
+    {
+      "id": "s2",
+      "label": "Title Card / Setup",
+      "text": "Welcome to Build Failure Forensics: where broken things tell us what the drawing forgot.",
+      "start_seconds": 5,
+      "end_seconds": 12,
+      "speaker_directions": "Warm slightly on the series name, then lower the voice on 'what the drawing forgot.'",
+      "delivery_cues": {
+        "pace": "measured",
+        "energy": "confident and inviting",
+        "emphasis_words": ["Build Failure Forensics", "forgot"],
+        "pause_after_seconds": 0.35,
+        "delivery_note": "This is the title promise; give the series name clean space.",
+        "provider_text": "Welcome to <emphasis level=\"moderate\">Build Failure Forensics</emphasis>: where broken things tell us what the drawing forgot."
+      },
+      "enhancement_cues": [
+        {
+          "type": "overlay",
+          "description": "Title card: BUILD FAILURE FORENSICS / CASE 001. A brass caliper jaw closes once as the title locks.",
+          "timestamp_seconds": 5
+        }
+      ],
+      "pronunciation_guides": [],
+      "source_ref": "projects/faceless-builder-ep1/artifacts/proposal_packet.json#concept_options/c1"
+    },
+    {
+      "id": "s3",
+      "label": "Act I — The Perfect Trap",
+      "text": "CAD gives you exact numbers. Manufacturing gives you a range. A pin designed at ten millimeters might land slightly larger; the hole might land slightly smaller. Therefore, zero gap is a trap.",
+      "start_seconds": 12,
+      "end_seconds": 27,
+      "speaker_directions": "Keep the first two sentences symmetrical. Slow slightly through the pin-versus-hole contrast. Land hard on 'trap.'",
+      "delivery_cues": {
+        "pace": "measured",
+        "energy": "analytical tension",
+        "emphasis_words": ["exact", "range", "larger", "smaller", "trap"],
+        "pause_after_seconds": 0.4,
+        "delivery_note": "Make the range feel inevitable, then deliver the consequence.",
+        "provider_text": "C A D gives you exact numbers. <break time=\"250ms\"/> Manufacturing gives you a range. A pin designed at ten millimeters might land slightly larger; the hole might land slightly smaller. Therefore, <emphasis level=\"strong\">zero gap is a trap</emphasis>."
+      },
+      "enhancement_cues": [
+        {
+          "type": "diagram",
+          "description": "Cross-section of a nominal 10.00 mm pin and hole; their real tolerance halos swell until the surfaces overlap.",
+          "timestamp_seconds": 13
+        },
+        {
+          "type": "animation",
+          "description": "A perfect CAD dimension splits into two real measurements: pin high, hole low; collision flashes red.",
+          "timestamp_seconds": 21
+        }
+      ],
+      "pronunciation_guides": [
+        {"word": "CAD", "phonetic": "C-A-D"}
+      ],
+      "source_ref": "https://formlabs.com/uk/blog/understanding-accuracy-precision-tolerance-in-3d-printing/"
+    },
+    {
+      "id": "s4",
+      "label": "Act II — Tolerance Is Not Clearance",
+      "text": "That range is tolerance: how far the real part can drift from nominal. Clearance is different. It's the space you choose between mating surfaces, so their tolerance zones never collide.",
+      "start_seconds": 27,
+      "end_seconds": 41,
+      "speaker_directions": "Teach the two definitions with calm precision. Pause before 'Clearance is different' and brighten slightly as the idea becomes useful.",
+      "delivery_cues": {
+        "pace": "slow",
+        "energy": "precise revelation",
+        "emphasis_words": ["tolerance", "Clearance", "choose", "never collide"],
+        "pause_before_seconds": 0.2,
+        "pause_after_seconds": 0.45,
+        "delivery_note": "This is the conceptual hinge; preserve contrast and intelligibility.",
+        "provider_text": "That range is <emphasis level=\"moderate\">tolerance</emphasis>: how far the real part can drift from nominal. <break time=\"500ms\"/> Clearance is different. It's the space <emphasis level=\"moderate\">you choose</emphasis> between mating surfaces, so their tolerance zones never collide."
+      },
+      "enhancement_cues": [
+        {
+          "type": "diagram",
+          "description": "Two cyan tolerance zones oscillate around nominal centerlines; a deliberate warm gap is inserted between them.",
+          "timestamp_seconds": 27
+        }
+      ],
+      "pronunciation_guides": [
+        {"word": "nominal", "phonetic": "NOM-ih-nuhl"}
+      ],
+      "source_ref": "https://formlabs.com/uk/blog/3D-printing-tolerances-for-engineering-fit/"
+    },
+    {
+      "id": "s5",
+      "label": "Act II — Three Jobs, Three Fits",
+      "text": "Want movement? Choose a clearance fit. Want location with light force? A transition fit. Want a permanent grip? An interference fit. Same geometry—three completely different jobs.",
+      "start_seconds": 41,
+      "end_seconds": 54,
+      "speaker_directions": "Build a crisp three-beat rhythm. Each question is slightly quicker; slow and widen on the final summary.",
+      "delivery_cues": {
+        "pace": "brisk",
+        "energy": "mechanical momentum",
+        "emphasis_words": ["movement", "location", "permanent", "three"],
+        "pause_after_seconds": 0.35,
+        "delivery_note": "Let each fit feel like a distinct tool choice, not a vocabulary list.",
+        "provider_text": "Want movement? Choose a clearance fit. <break time=\"180ms\"/> Want location with light force? A transition fit. <break time=\"180ms\"/> Want a permanent grip? An interference fit. <break time=\"260ms\"/> Same geometry—three completely different jobs."
+      },
+      "enhancement_cues": [
+        {
+          "type": "animation",
+          "description": "Three-part mechanical triptych: slider moves freely, keyed pin seats with a click, press-fit pin locks under force.",
+          "timestamp_seconds": 41
+        }
+      ],
+      "pronunciation_guides": [
+        {"word": "interference", "phonetic": "in-ter-FEER-ens"}
+      ],
+      "source_ref": "https://formlabs.com/uk/blog/3D-printing-tolerances-for-engineering-fit/"
+    },
+    {
+      "id": "s6",
+      "label": "Act III — Test the Process",
+      "text": "But there is no magic gap for every printer, material, or process. Print a tiny fit gauge first: several pins, several gaps, one quick test. Then put the winning value into your design.",
+      "start_seconds": 54,
+      "end_seconds": 69,
+      "speaker_directions": "Reject the magic-number myth firmly, then become practical and encouraging. Accelerate gently through the three-part test list.",
+      "delivery_cues": {
+        "pace": "conversational",
+        "energy": "practical payoff",
+        "emphasis_words": ["no magic gap", "fit gauge", "winning value"],
+        "pause_after_seconds": 0.55,
+        "delivery_note": "This is the action viewers can use tomorrow; sound decisive and economical.",
+        "provider_text": "But there is <emphasis level=\"strong\">no magic gap</emphasis> for every printer, material, or process. Print a tiny fit gauge first: several pins, several gaps, one quick test. <break time=\"300ms\"/> Then put the winning value into your design."
+      },
+      "enhancement_cues": [
+        {
+          "type": "animation",
+          "description": "A physical fit gauge is tested left to right; the third pin slides cleanly and the signature red gap opens from 0.00 to the tested value.",
+          "timestamp_seconds": 55
+        }
+      ],
+      "pronunciation_guides": [],
+      "source_ref": "https://formlabs.com/support/fit-tuning-test/"
+    },
+    {
+      "id": "s7",
+      "label": "Landing / Episode 2 Tease",
+      "text": "Perfect in CAD is only the start. Next episode: why a crack can tell you exactly how your part was built.",
+      "start_seconds": 69,
+      "end_seconds": 75,
+      "speaker_directions": "Deliver the recap with calm authority. Pause, then make episode two sound like the next case file opening.",
+      "delivery_cues": {
+        "pace": "measured",
+        "energy": "satisfied, then intriguing",
+        "emphasis_words": ["only the start", "crack", "exactly"],
+        "pause_before_seconds": 0.15,
+        "pause_after_seconds": 0.2,
+        "delivery_note": "Do not sound promotional; the tease is a new piece of evidence.",
+        "provider_text": "Perfect in C A D is only the start. <break time=\"600ms\"/> Next episode: why a crack can tell you exactly how your part was built."
+      },
+      "enhancement_cues": [
+        {
+          "type": "broll",
+          "description": "The fit gauge fades to black; a fractured printed bracket rotates into a narrow inspection light as CASE 002 appears.",
+          "timestamp_seconds": 69
+        }
+      ],
+      "pronunciation_guides": [
+        {"word": "CAD", "phonetic": "C-A-D"}
+      ],
+      "source_ref": "projects/faceless-builder-ep1/artifacts/proposal_packet.json#selected_concept"
+    }
+  ],
+  "metadata": {
+    "word_count": 169,
+    "estimated_speaking_rate_wpm": 135.2,
+    "acts": [
+      {"act": 1, "label": "The Perfect Trap", "start": 0, "end": 27},
+      {"act": 2, "label": "Tolerance Is Not Clearance", "start": 27, "end": 54},
+      {"act": 3, "label": "Test the Process", "start": 54, "end": 75}
+    ],
+    "hook_resolves_by_seconds": 5,
+    "title_card_seconds": [5, 8]
+  }
+}

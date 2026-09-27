@@ -1,0 +1,1 @@
+Columns: subscribers|upload_date|views|duration_seconds|title. Pulled from youtube.com with yt-dlp 2026.08.19 on 28 Sep 2026. Each file = the 8 most recent long-form uploads on the channel /videos tab (zackd = /shorts tab). v1-v4 .meta/.vtt/.jpg = top explainer videos used in section 3 (id|date|views|duration|channel|title|url; auto-captions; thumbnail).

@@ -1,0 +1,228 @@
+{
+  "version": "1.0",
+  "project_id": "faceless-builder-ep1",
+  "decisions": [
+    {
+      "decision_id": "d-001",
+      "stage": "proposal",
+      "category": "pipeline_selection",
+      "subject": "Production pipeline",
+      "options_considered": [
+        {"option_id": "animated", "label": "Animated explainer", "score": 0.97, "reason": "Research-first faceless narration, motion design, captions, and music match the brief."},
+        {"option_id": "avatar", "label": "Avatar spokesperson", "score": 0.2, "reason": "Conflicts with the faceless, object-led treatment and would require an unavailable avatar provider.", "rejected_because": "Wrong creative grammar and provider unavailable."},
+        {"option_id": "cinematic", "label": "Cinematic trailer", "score": 0.55, "reason": "Could deliver mood but is weaker for precise educational definitions.", "rejected_because": "Education, not atmosphere, is the primary promise."}
+      ],
+      "selected": "animated",
+      "reason": "The animated-explainer pipeline is the production contract that matches the requested research, narration, captions, music, and educational structure.",
+      "user_visible": true,
+      "user_approved": true,
+      "confidence": 0.97
+    },
+    {
+      "decision_id": "d-002",
+      "stage": "proposal",
+      "category": "concept_selection",
+      "subject": "Unattended full-run approval policy",
+      "options_considered": [
+        {"option_id": "manual", "label": "Pause for manual approval", "score": 0.1, "reason": "Default pipeline policy, but nobody is at the keyboard.", "rejected_because": "The user explicitly instructed self-approval at every gate."},
+        {"option_id": "self", "label": "Print and self-approve each gate", "score": 1.0, "reason": "Directly follows the user's session rule while preserving transparent gate records."}
+      ],
+      "selected": "self",
+      "reason": "The user provided explicit full-run pre-authorization for ranked self-approval, so every gate will still be printed and recorded before continuation.",
+      "user_visible": true,
+      "user_approved": true,
+      "confidence": 1.0
+    },
+    {
+      "decision_id": "d-003",
+      "stage": "proposal",
+      "category": "concept_selection",
+      "subject": "Episode 1 concept",
+      "options_considered": [
+        {"option_id": "c1", "label": "Why Perfect Parts Never Fit", "score": 0.95, "reason": "Universal maker pain, instant visual hook, and a strong recurring motif."},
+        {"option_id": "c2", "label": "The Crack Is a Map", "score": 0.89, "reason": "Visually dramatic and perfect for episode 2, but slightly narrower for a channel launch."},
+        {"option_id": "c3", "label": "One Extra Zero", "score": 0.82, "reason": "Commercially useful but less tactile for the first five seconds."},
+        {"option_id": "c4", "label": "Prototype Is Not Product", "score": 0.84, "reason": "High-value founder topic but less universal for hobby builders."},
+        {"option_id": "c5", "label": "Jugaad That Survives Batch 100", "score": 0.8, "reason": "Strong regional texture but better after the channel establishes its voice."}
+      ],
+      "selected": "c1",
+      "reason": "The first-ranked concept communicates its problem without context and establishes the series' failure-evidence grammar.",
+      "user_visible": true,
+      "user_approved": true,
+      "confidence": 0.95
+    },
+    {
+      "decision_id": "d-004",
+      "stage": "proposal",
+      "category": "render_runtime_selection",
+      "subject": "Composition runtime",
+      "options_considered": [
+        {"option_id": "remotion", "label": "Remotion", "score": 0.97, "reason": "Available, deterministic, supports bespoke React scenes and word-level captions."},
+        {"option_id": "hyperframes", "label": "HyperFrames", "score": 0.42, "reason": "Strong HTML/GSAP motion fit.", "rejected_because": "runtime not available on this machine and caption parity is unavailable"},
+        {"option_id": "ffmpeg", "label": "FFmpeg", "score": 0.35, "reason": "Available and reliable for packaging.", "rejected_because": "Cannot realize the approved bespoke motion-led treatment by itself."}
+      ],
+      "selected": "remotion",
+      "reason": "The brief explicitly requires word-level captions and motion-led bespoke diagrams; Remotion is the only available runtime satisfying both.",
+      "user_visible": true,
+      "user_approved": true,
+      "confidence": 0.98
+    },
+    {
+      "decision_id": "d-005",
+      "stage": "proposal",
+      "category": "composition_mode",
+      "subject": "Composition authoring mode",
+      "options_considered": [
+        {"option_id": "atelier", "label": "Atelier", "score": 0.96, "reason": "A first-episode hero piece benefits from a one-off visual language and scene-specific compositions."},
+        {"option_id": "templated", "label": "Templated", "score": 0.5, "reason": "Faster and reliable.", "rejected_because": "Would weaken distinctness for the channel launch."}
+      ],
+      "selected": "atelier",
+      "reason": "This is a single hero deliverable where quality and identity matter more than batch reuse.",
+      "user_visible": true,
+      "user_approved": true,
+      "confidence": 0.96
+    },
+    {
+      "decision_id": "d-006",
+      "stage": "proposal",
+      "category": "renderer_family_selection",
+      "subject": "Creative renderer family",
+      "options_considered": [
+        {"option_id": "animation-first", "label": "Animation-first", "score": 0.95, "reason": "Physical relationships become visible through custom diagram motion."},
+        {"option_id": "explainer-teacher", "label": "Teacher explainer", "score": 0.72, "reason": "Clear but would tend toward slides and presenter-like framing.", "rejected_because": "The object, not a teacher, should lead the story."},
+        {"option_id": "explainer-data", "label": "Data explainer", "score": 0.58, "reason": "Useful for stats but the core is a mechanical concept, not a dataset.", "rejected_because": "Wrong primary grammar."}
+      ],
+      "selected": "animation-first",
+      "reason": "The learning moment depends on seeing nominal geometry, variation, and clearance move relative to each other.",
+      "user_visible": true,
+      "user_approved": true,
+      "confidence": 0.94
+    },
+    {
+      "decision_id": "d-007",
+      "stage": "proposal",
+      "category": "playbook_selection",
+      "subject": "Visual identity",
+      "options_considered": [
+        {"option_id": "measured-friction", "label": "Custom Measured Friction", "score": 0.96, "reason": "Subject-derived palette, typography, and motion make fit and force tactile."},
+        {"option_id": "minimalist-diagram", "label": "Minimalist Diagram preset", "score": 0.76, "reason": "Accurate and legible.", "rejected_because": "Too neutral for a channel-defining hero piece."},
+        {"option_id": "flat-motion", "label": "Flat Motion Graphics preset", "score": 0.62, "reason": "Fast and social-friendly.", "rejected_because": "Insufficient material tactility and precision."}
+      ],
+      "selected": "measured-friction",
+      "reason": "The identity maps directly to workshop materials and dimensional fit while avoiding generic explainer aesthetics.",
+      "user_visible": true,
+      "user_approved": true,
+      "confidence": 0.94
+    },
+    {
+      "decision_id": "d-008",
+      "stage": "proposal",
+      "category": "voice_selection",
+      "subject": "Narration TTS provider",
+      "options_considered": [
+        {"option_id": "chirp-orus", "label": "Google Chirp 3 HD Orus", "score": 0.93, "reason": "Rich male voice, natural delivery, SSML, and configured access."},
+        {"option_id": "wavenet-d", "label": "Google WaveNet D", "score": 0.75, "reason": "Cheaper and clear.", "rejected_because": "Less natural for the cinematic forensic tone."},
+        {"option_id": "no-narration", "label": "No narration", "score": 0.1, "reason": "Free.", "rejected_because": "Violates the brief and weakens the educational promise."}
+      ],
+      "selected": "chirp-orus",
+      "reason": "Voice quality is disproportionately important in a faceless channel, and the premium adds only cents.",
+      "user_visible": true,
+      "user_approved": true,
+      "confidence": 0.92
+    },
+    {
+      "decision_id": "d-009",
+      "stage": "proposal",
+      "category": "music_source",
+      "subject": "Background music source",
+      "options_considered": [
+        {"option_id": "google-lyria", "label": "Google Lyria original instrumental", "score": 0.9, "reason": "Custom mechanical pulse and controlled energy at $0.08."},
+        {"option_id": "pixabay", "label": "Pixabay royalty-free search", "score": 0.76, "reason": "Free and commercially usable.", "rejected_because": "Less tailored to the motif and act pacing."},
+        {"option_id": "none", "label": "No music", "score": 0.2, "reason": "Zero cost.", "rejected_because": "Violates the requested music requirement."}
+      ],
+      "selected": "google-lyria",
+      "reason": "The custom bed supports the mechanical motif and stays far below budget.",
+      "user_visible": true,
+      "user_approved": true,
+      "confidence": 0.9
+    },
+    {
+      "decision_id": "d-010",
+      "stage": "proposal",
+      "category": "provider_selection",
+      "subject": "Hook image provider",
+      "options_considered": [
+        {"option_id": "imagen", "label": "Google Imagen", "score": 0.88, "reason": "Only configured image provider and strong for one photoreal macro anchor."},
+        {"option_id": "vector-only", "label": "Pure local vector construction", "score": 0.82, "reason": "Free, deterministic, and consistent.", "rejected_because": "One tactile anchor improves the cold open and satisfies the image asset contract."}
+      ],
+      "selected": "imagen",
+      "reason": "Use exactly one generated image, then keep the rest bespoke and diagrammatic to avoid slideshow risk.",
+      "user_visible": true,
+      "user_approved": true,
+      "confidence": 0.87
+    },
+    {
+      "decision_id": "d-011",
+      "stage": "proposal",
+      "category": "budget_tradeoff",
+      "subject": "Provider spend envelope",
+      "options_considered": [
+        {"option_id": "expected-plus-reserve", "label": "$0.15 expected + $0.15 regeneration reserve", "score": 0.96, "reason": "Preserves a full QA retry while staying dramatically below the $5 cap."},
+        {"option_id": "free", "label": "$0 free path", "score": 0.48, "reason": "Would require dropping the approved premium narration or original music.", "rejected_because": "Unnecessary quality sacrifice under the available cap."},
+        {"option_id": "generative-video", "label": "$2–$4 generative video path", "score": 0.4, "reason": "Adds motion clips.", "rejected_because": "The concept is better served by exact deterministic diagrams and captions."}
+      ],
+      "selected": "expected-plus-reserve",
+      "reason": "The approved working envelope is $0.30 with a $5 absolute cap, leaving ample safety margin.",
+      "user_visible": true,
+      "user_approved": true,
+      "confidence": 0.98
+    },
+    {
+      "decision_id": "d-012",
+      "stage": "assets",
+      "category": "fallback_decision",
+      "subject": "Narration provider after Google TTS 403",
+      "options_considered": [
+        {"option_id": "piper", "label": "Local Piper Lessac medium", "score": 0.88, "reason": "Zero provider cost, reproducible, and technically available."},
+        {"option_id": "macos-say", "label": "macOS system voice", "score": 0.58, "reason": "Available at zero cost.", "rejected_because": "Flatter delivery and outside the production registry."},
+        {"option_id": "wait-google", "label": "Wait for Google TTS enablement", "score": 0.3, "reason": "Would preserve the original voice choice.", "rejected_because": "Incompatible with unattended completion."}
+      ],
+      "selected": "piper",
+      "reason": "Google TTS returned an unbillable policy 403; no retries were spent, and Piper met timing and intelligibility checks.",
+      "user_visible": true,
+      "user_approved": true,
+      "confidence": 0.9
+    },
+    {
+      "decision_id": "d-013",
+      "stage": "assets",
+      "category": "fallback_decision",
+      "subject": "Hook image model after Imagen 4 endpoint 404",
+      "options_considered": [
+        {"option_id": "gemini-flash-image", "label": "Gemini 2.5 Flash Image", "score": 0.91, "reason": "Same Google stack, same 16:9 brief, $0.039."},
+        {"option_id": "vector-only", "label": "Vector-only hook", "score": 0.74, "reason": "Free and deterministic.", "rejected_because": "Less tactile for the five-second paradox."}
+      ],
+      "selected": "gemini-flash-image",
+      "reason": "The selected image passed the first visual review; no paid regeneration was needed.",
+      "user_visible": true,
+      "user_approved": true,
+      "confidence": 0.94
+    },
+    {
+      "decision_id": "d-014",
+      "stage": "assets",
+      "category": "render_runtime_selection",
+      "subject": "Runtime override after Chromium sandbox denial",
+      "options_considered": [
+        {"option_id": "ffmpeg-native", "label": "Native FFmpeg frame render", "score": 0.95, "reason": "Preserves timing, art direction, captions, audio, and budget without browser execution."},
+        {"option_id": "wait-entitlement", "label": "Wait for Chromium entitlement", "score": 0.25, "reason": "Would preserve the original runtime.", "rejected_because": "Host denied both bundled Chromium and system Chrome; no user was at the keyboard."},
+        {"option_id": "generated-video", "label": "Generated video replacement", "score": 0.35, "reason": "Avoids local browser rendering.", "rejected_because": "Adds cost and weakens diagram precision."}
+      ],
+      "selected": "ffmpeg-native",
+      "reason": "Gate G5F explicitly self-approved the runtime contingency under the unattended-session rule.",
+      "user_visible": true,
+      "user_approved": true,
+      "confidence": 0.97
+    }
+  ]
+}

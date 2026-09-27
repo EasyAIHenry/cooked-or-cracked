@@ -1,0 +1,96 @@
+{
+ "target": {
+  "shortcode": "DdttZS1RTZu",
+  "plays": 42000,
+  "likes": 1301,
+  "comments": 2497,
+  "like_rate_pct": 3.1,
+  "comment_rate_pct": 5.95,
+  "comments_per_like": 1.92
+ },
+ "baseline_12_excluding_target": {
+  "median_plays": 9004.5,
+  "multiple": 4.66,
+  "median_like_rate_pct": 2.12,
+  "median_comment_rate_pct": 1.96,
+  "posts": [
+   {
+    "shortcode": "Ddy1-MUy111",
+    "likes": 303,
+    "comments": 189,
+    "plays": 10600
+   },
+   {
+    "shortcode": "DdwRKUsx7aj",
+    "likes": 401,
+    "comments": 317,
+    "plays": 18400
+   },
+   {
+    "shortcode": "DdrFmrrRT_k",
+    "likes": 263,
+    "comments": 211,
+    "plays": 12000
+   },
+   {
+    "shortcode": "DdohEjQRk2E",
+    "likes": 226,
+    "comments": 278,
+    "plays": 13100
+   },
+   {
+    "shortcode": "DdmBUoExrtb",
+    "likes": 165,
+    "comments": 600,
+    "plays": 6474
+   },
+   {
+    "shortcode": "Ddjfdl-Rbsr",
+    "likes": 148,
+    "comments": 505,
+    "plays": 7153
+   },
+   {
+    "shortcode": "Ddg3yiFRtMg",
+    "likes": 3491,
+    "comments": 1623,
+    "plays": 108000
+   },
+   {
+    "shortcode": "DdeRXJ4x5cQ",
+    "likes": 148,
+    "comments": 248,
+    "plays": 8588
+   },
+   {
+    "shortcode": "Ddbtb7-x_S2",
+    "likes": 174,
+    "comments": 127,
+    "plays": 8806
+   },
+   {
+    "shortcode": "DdZQJ-NxUN6",
+    "likes": 101,
+    "comments": 155,
+    "plays": 6588
+   },
+   {
+    "shortcode": "DdX0FcDtuAT",
+    "likes": 102,
+    "comments": 215,
+    "plays": 7428
+   },
+   {
+    "shortcode": "DdT-FafRshC",
+    "likes": 207,
+    "comments": 166,
+    "plays": 9203
+   }
+  ]
+ },
+ "baseline_12_including_target": {
+  "median_plays": 9703.0,
+  "multiple": 4.33
+ },
+ "note": "Plays/likes/comments read from the public reels grid on instagram.com/drcintas/reels/ (logged-out browser pane, no cookies) on 2026-09-28. Grid values are rounded by Instagram (e.g. 42k, 10.6k). Apify instagram-scraper was unavailable: 'Monthly usage hard limit exceeded'."
+}

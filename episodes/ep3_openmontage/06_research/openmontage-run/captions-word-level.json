@@ -1,0 +1,1125 @@
+{
+  "cues": [
+    {
+      "index": 1,
+      "start": 0.0,
+      "end": 1.44,
+      "text": "These parts fit perfectly in",
+      "words": [
+        {
+          "word": "These",
+          "start": 0.0,
+          "end": 0.2
+        },
+        {
+          "word": "parts",
+          "start": 0.2,
+          "end": 0.44
+        },
+        {
+          "word": "fit",
+          "start": 0.44,
+          "end": 0.68
+        },
+        {
+          "word": "perfectly",
+          "start": 0.68,
+          "end": 1.16
+        },
+        {
+          "word": "in",
+          "start": 1.16,
+          "end": 1.44
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "start": 1.44,
+      "end": 3.88,
+      "text": "CAD. In real life, they're",
+      "words": [
+        {
+          "word": "CAD.",
+          "start": 1.44,
+          "end": 1.66
+        },
+        {
+          "word": "In",
+          "start": 2.38,
+          "end": 2.54
+        },
+        {
+          "word": "real",
+          "start": 2.54,
+          "end": 2.78
+        },
+        {
+          "word": "life,",
+          "start": 2.78,
+          "end": 3.2
+        },
+        {
+          "word": "they're",
+          "start": 3.58,
+          "end": 3.88
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "start": 3.88,
+      "end": 5.72,
+      "text": "welded together. Welcome to Build",
+      "words": [
+        {
+          "word": "welded",
+          "start": 3.88,
+          "end": 4.14
+        },
+        {
+          "word": "together.",
+          "start": 4.14,
+          "end": 4.56
+        },
+        {
+          "word": "Welcome",
+          "start": 5.08,
+          "end": 5.34
+        },
+        {
+          "word": "to",
+          "start": 5.34,
+          "end": 5.54
+        },
+        {
+          "word": "Build",
+          "start": 5.54,
+          "end": 5.72
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "start": 5.72,
+      "end": 7.66,
+      "text": "Failure Forensics: where broken",
+      "words": [
+        {
+          "word": "Failure",
+          "start": 5.72,
+          "end": 6.2
+        },
+        {
+          "word": "Forensics:",
+          "start": 6.2,
+          "end": 6.74
+        },
+        {
+          "word": "where",
+          "start": 7.28,
+          "end": 7.32
+        },
+        {
+          "word": "broken",
+          "start": 7.32,
+          "end": 7.66
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "start": 7.66,
+      "end": 8.84,
+      "text": "things tell us what the",
+      "words": [
+        {
+          "word": "things",
+          "start": 7.66,
+          "end": 7.92
+        },
+        {
+          "word": "tell",
+          "start": 7.92,
+          "end": 8.28
+        },
+        {
+          "word": "us",
+          "start": 8.28,
+          "end": 8.56
+        },
+        {
+          "word": "what",
+          "start": 8.56,
+          "end": 8.7
+        },
+        {
+          "word": "the",
+          "start": 8.7,
+          "end": 8.84
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "start": 8.84,
+      "end": 13.11,
+      "text": "drawing forgot. CAD gives you",
+      "words": [
+        {
+          "word": "drawing",
+          "start": 8.84,
+          "end": 9.1
+        },
+        {
+          "word": "forgot.",
+          "start": 9.1,
+          "end": 9.42
+        },
+        {
+          "word": "CAD",
+          "start": 12.05,
+          "end": 12.33
+        },
+        {
+          "word": "gives",
+          "start": 12.33,
+          "end": 12.87
+        },
+        {
+          "word": "you",
+          "start": 12.87,
+          "end": 13.11
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "start": 13.11,
+      "end": 15.69,
+      "text": "exact numbers. Manufacturing gives",
+      "words": [
+        {
+          "word": "exact",
+          "start": 13.11,
+          "end": 13.41
+        },
+        {
+          "word": "numbers.",
+          "start": 13.41,
+          "end": 13.91
+        },
+        {
+          "word": "Manufacturing",
+          "start": 14.85,
+          "end": 15.41
+        },
+        {
+          "word": "gives",
+          "start": 15.41,
+          "end": 15.69
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "start": 15.69,
+      "end": 17.23,
+      "text": "you a range. A pin",
+      "words": [
+        {
+          "word": "you",
+          "start": 15.69,
+          "end": 15.95
+        },
+        {
+          "word": "a",
+          "start": 15.95,
+          "end": 16.05
+        },
+        {
+          "word": "range.",
+          "start": 16.05,
+          "end": 16.25
+        },
+        {
+          "word": "A",
+          "start": 17.01,
+          "end": 17.09
+        },
+        {
+          "word": "pin",
+          "start": 17.09,
+          "end": 17.23
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "start": 17.23,
+      "end": 18.97,
+      "text": "designed at 10mm might land",
+      "words": [
+        {
+          "word": "designed",
+          "start": 17.23,
+          "end": 17.55
+        },
+        {
+          "word": "at",
+          "start": 17.55,
+          "end": 17.77
+        },
+        {
+          "word": "10mm",
+          "start": 17.77,
+          "end": 18.35
+        },
+        {
+          "word": "might",
+          "start": 18.35,
+          "end": 18.71
+        },
+        {
+          "word": "land",
+          "start": 18.71,
+          "end": 18.97
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "start": 18.97,
+      "end": 20.83,
+      "text": "slightly larger. The hole might",
+      "words": [
+        {
+          "word": "slightly",
+          "start": 18.97,
+          "end": 19.33
+        },
+        {
+          "word": "larger.",
+          "start": 19.33,
+          "end": 19.85
+        },
+        {
+          "word": "The",
+          "start": 20.39,
+          "end": 20.49
+        },
+        {
+          "word": "hole",
+          "start": 20.49,
+          "end": 20.65
+        },
+        {
+          "word": "might",
+          "start": 20.65,
+          "end": 20.83
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "start": 20.83,
+      "end": 22.91,
+      "text": "land slightly smaller. Therefore,",
+      "words": [
+        {
+          "word": "land",
+          "start": 20.83,
+          "end": 21.13
+        },
+        {
+          "word": "slightly",
+          "start": 21.13,
+          "end": 21.49
+        },
+        {
+          "word": "smaller.",
+          "start": 21.49,
+          "end": 22.01
+        },
+        {
+          "word": "Therefore,",
+          "start": 22.63,
+          "end": 22.91
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "start": 23.33,
+      "end": 24.37,
+      "text": "zero gap is a trap.",
+      "words": [
+        {
+          "word": "zero",
+          "start": 23.33,
+          "end": 23.55
+        },
+        {
+          "word": "gap",
+          "start": 23.55,
+          "end": 23.79
+        },
+        {
+          "word": "is",
+          "start": 23.79,
+          "end": 24.07
+        },
+        {
+          "word": "a",
+          "start": 24.07,
+          "end": 24.15
+        },
+        {
+          "word": "trap.",
+          "start": 24.15,
+          "end": 24.37
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "start": 26.97,
+      "end": 28.67,
+      "text": "That range is tolerance. How",
+      "words": [
+        {
+          "word": "That",
+          "start": 26.97,
+          "end": 27.17
+        },
+        {
+          "word": "range",
+          "start": 27.17,
+          "end": 27.45
+        },
+        {
+          "word": "is",
+          "start": 27.45,
+          "end": 27.71
+        },
+        {
+          "word": "tolerance.",
+          "start": 27.71,
+          "end": 27.99
+        },
+        {
+          "word": "How",
+          "start": 28.57,
+          "end": 28.67
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "start": 28.67,
+      "end": 29.87,
+      "text": "far the real part can",
+      "words": [
+        {
+          "word": "far",
+          "start": 28.67,
+          "end": 28.93
+        },
+        {
+          "word": "the",
+          "start": 28.93,
+          "end": 29.09
+        },
+        {
+          "word": "real",
+          "start": 29.09,
+          "end": 29.33
+        },
+        {
+          "word": "part",
+          "start": 29.33,
+          "end": 29.57
+        },
+        {
+          "word": "can",
+          "start": 29.57,
+          "end": 29.87
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "start": 29.87,
+      "end": 31.59,
+      "text": "drift from nominal? Clearance is",
+      "words": [
+        {
+          "word": "drift",
+          "start": 29.87,
+          "end": 30.09
+        },
+        {
+          "word": "from",
+          "start": 30.09,
+          "end": 30.33
+        },
+        {
+          "word": "nominal?",
+          "start": 30.33,
+          "end": 30.65
+        },
+        {
+          "word": "Clearance",
+          "start": 31.15,
+          "end": 31.45
+        },
+        {
+          "word": "is",
+          "start": 31.45,
+          "end": 31.59
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "start": 31.59,
+      "end": 33.31,
+      "text": "different. It's the space you",
+      "words": [
+        {
+          "word": "different.",
+          "start": 31.59,
+          "end": 31.89
+        },
+        {
+          "word": "It's",
+          "start": 31.89,
+          "end": 32.73
+        },
+        {
+          "word": "the",
+          "start": 32.73,
+          "end": 32.85
+        },
+        {
+          "word": "space",
+          "start": 32.85,
+          "end": 33.05
+        },
+        {
+          "word": "you",
+          "start": 33.05,
+          "end": 33.31
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "start": 33.31,
+      "end": 35.45,
+      "text": "choose between mating surfaces so",
+      "words": [
+        {
+          "word": "choose",
+          "start": 33.31,
+          "end": 33.65
+        },
+        {
+          "word": "between",
+          "start": 33.65,
+          "end": 34.03
+        },
+        {
+          "word": "mating",
+          "start": 34.03,
+          "end": 34.31
+        },
+        {
+          "word": "surfaces",
+          "start": 34.31,
+          "end": 34.81
+        },
+        {
+          "word": "so",
+          "start": 34.81,
+          "end": 35.45
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "start": 35.45,
+      "end": 36.67,
+      "text": "their tolerance zones never",
+      "words": [
+        {
+          "word": "their",
+          "start": 35.45,
+          "end": 35.61
+        },
+        {
+          "word": "tolerance",
+          "start": 35.61,
+          "end": 35.95
+        },
+        {
+          "word": "zones",
+          "start": 35.95,
+          "end": 36.29
+        },
+        {
+          "word": "never",
+          "start": 36.29,
+          "end": 36.67
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "start": 36.67,
+      "end": 42.65,
+      "text": "collide. Want movement? Choose a",
+      "words": [
+        {
+          "word": "collide.",
+          "start": 36.67,
+          "end": 37.09
+        },
+        {
+          "word": "Want",
+          "start": 41.21,
+          "end": 41.35
+        },
+        {
+          "word": "movement?",
+          "start": 41.35,
+          "end": 41.75
+        },
+        {
+          "word": "Choose",
+          "start": 42.33,
+          "end": 42.49
+        },
+        {
+          "word": "a",
+          "start": 42.49,
+          "end": 42.65
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "start": 42.65,
+      "end": 44.73,
+      "text": "clearance fit. Want location with",
+      "words": [
+        {
+          "word": "clearance",
+          "start": 42.65,
+          "end": 42.95
+        },
+        {
+          "word": "fit.",
+          "start": 42.95,
+          "end": 43.25
+        },
+        {
+          "word": "Want",
+          "start": 43.91,
+          "end": 44.01
+        },
+        {
+          "word": "location",
+          "start": 44.01,
+          "end": 44.37
+        },
+        {
+          "word": "with",
+          "start": 44.37,
+          "end": 44.73
+        }
+      ]
+    },
+    {
+      "index": 21,
+      "start": 44.73,
+      "end": 46.69,
+      "text": "light force? A transition fit.",
+      "words": [
+        {
+          "word": "light",
+          "start": 44.73,
+          "end": 44.89
+        },
+        {
+          "word": "force?",
+          "start": 44.89,
+          "end": 45.15
+        },
+        {
+          "word": "A",
+          "start": 45.79,
+          "end": 45.91
+        },
+        {
+          "word": "transition",
+          "start": 45.91,
+          "end": 46.31
+        },
+        {
+          "word": "fit.",
+          "start": 46.31,
+          "end": 46.69
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "start": 47.41,
+      "end": 48.95,
+      "text": "Want a permanent grip? An",
+      "words": [
+        {
+          "word": "Want",
+          "start": 47.41,
+          "end": 47.55
+        },
+        {
+          "word": "a",
+          "start": 47.55,
+          "end": 47.67
+        },
+        {
+          "word": "permanent",
+          "start": 47.67,
+          "end": 47.97
+        },
+        {
+          "word": "grip?",
+          "start": 47.97,
+          "end": 48.29
+        },
+        {
+          "word": "An",
+          "start": 48.81,
+          "end": 48.95
+        }
+      ]
+    },
+    {
+      "index": 23,
+      "start": 48.95,
+      "end": 51.09,
+      "text": "interference fit. Same geometry",
+      "words": [
+        {
+          "word": "interference",
+          "start": 48.95,
+          "end": 49.41
+        },
+        {
+          "word": "fit.",
+          "start": 49.41,
+          "end": 49.75
+        },
+        {
+          "word": "Same",
+          "start": 50.39,
+          "end": 50.59
+        },
+        {
+          "word": "geometry",
+          "start": 50.59,
+          "end": 51.09
+        }
+      ]
+    },
+    {
+      "index": 24,
+      "start": 51.09,
+      "end": 52.67,
+      "text": "three completely different jobs.",
+      "words": [
+        {
+          "word": "three",
+          "start": 51.09,
+          "end": 51.47
+        },
+        {
+          "word": "completely",
+          "start": 51.47,
+          "end": 51.99
+        },
+        {
+          "word": "different",
+          "start": 51.99,
+          "end": 52.31
+        },
+        {
+          "word": "jobs.",
+          "start": 52.31,
+          "end": 52.67
+        }
+      ]
+    },
+    {
+      "index": 25,
+      "start": 53.69,
+      "end": 54.81,
+      "text": "But there is no magic",
+      "words": [
+        {
+          "word": "But",
+          "start": 53.69,
+          "end": 54.13
+        },
+        {
+          "word": "there",
+          "start": 54.13,
+          "end": 54.27
+        },
+        {
+          "word": "is",
+          "start": 54.27,
+          "end": 54.37
+        },
+        {
+          "word": "no",
+          "start": 54.37,
+          "end": 54.51
+        },
+        {
+          "word": "magic",
+          "start": 54.51,
+          "end": 54.81
+        }
+      ]
+    },
+    {
+      "index": 26,
+      "start": 54.81,
+      "end": 56.69,
+      "text": "gap for every printer, material",
+      "words": [
+        {
+          "word": "gap",
+          "start": 54.81,
+          "end": 55.13
+        },
+        {
+          "word": "for",
+          "start": 55.13,
+          "end": 55.41
+        },
+        {
+          "word": "every",
+          "start": 55.41,
+          "end": 55.65
+        },
+        {
+          "word": "printer,",
+          "start": 55.65,
+          "end": 55.99
+        },
+        {
+          "word": "material",
+          "start": 56.35,
+          "end": 56.69
+        }
+      ]
+    },
+    {
+      "index": 27,
+      "start": 56.69,
+      "end": 58.73,
+      "text": "or process. Print a tiny",
+      "words": [
+        {
+          "word": "or",
+          "start": 56.69,
+          "end": 57.01
+        },
+        {
+          "word": "process.",
+          "start": 57.01,
+          "end": 57.47
+        },
+        {
+          "word": "Print",
+          "start": 58.17,
+          "end": 58.31
+        },
+        {
+          "word": "a",
+          "start": 58.31,
+          "end": 58.47
+        },
+        {
+          "word": "tiny",
+          "start": 58.47,
+          "end": 58.73
+        }
+      ]
+    },
+    {
+      "index": 28,
+      "start": 58.73,
+      "end": 60.75,
+      "text": "fit gauge first. Several pins,",
+      "words": [
+        {
+          "word": "fit",
+          "start": 58.73,
+          "end": 59.01
+        },
+        {
+          "word": "gauge",
+          "start": 59.01,
+          "end": 59.33
+        },
+        {
+          "word": "first.",
+          "start": 59.33,
+          "end": 59.67
+        },
+        {
+          "word": "Several",
+          "start": 60.17,
+          "end": 60.39
+        },
+        {
+          "word": "pins,",
+          "start": 60.39,
+          "end": 60.75
+        }
+      ]
+    },
+    {
+      "index": 29,
+      "start": 61.11,
+      "end": 63.03,
+      "text": "several gaps. One quick test.",
+      "words": [
+        {
+          "word": "several",
+          "start": 61.11,
+          "end": 61.33
+        },
+        {
+          "word": "gaps.",
+          "start": 61.33,
+          "end": 61.59
+        },
+        {
+          "word": "One",
+          "start": 62.19,
+          "end": 62.35
+        },
+        {
+          "word": "quick",
+          "start": 62.35,
+          "end": 62.63
+        },
+        {
+          "word": "test.",
+          "start": 62.63,
+          "end": 63.03
+        }
+      ]
+    },
+    {
+      "index": 30,
+      "start": 63.03,
+      "end": 64.77,
+      "text": "Then put the winning value",
+      "words": [
+        {
+          "word": "Then",
+          "start": 63.03,
+          "end": 63.77
+        },
+        {
+          "word": "put",
+          "start": 63.77,
+          "end": 63.97
+        },
+        {
+          "word": "the",
+          "start": 63.97,
+          "end": 64.17
+        },
+        {
+          "word": "winning",
+          "start": 64.17,
+          "end": 64.31
+        },
+        {
+          "word": "value",
+          "start": 64.31,
+          "end": 64.77
+        }
+      ]
+    },
+    {
+      "index": 31,
+      "start": 64.77,
+      "end": 69.48,
+      "text": "into your design. Perfect in",
+      "words": [
+        {
+          "word": "into",
+          "start": 64.77,
+          "end": 65.11
+        },
+        {
+          "word": "your",
+          "start": 65.11,
+          "end": 65.27
+        },
+        {
+          "word": "design.",
+          "start": 65.27,
+          "end": 65.65
+        },
+        {
+          "word": "Perfect",
+          "start": 68.78,
+          "end": 69.22
+        },
+        {
+          "word": "in",
+          "start": 69.22,
+          "end": 69.48
+        }
+      ]
+    },
+    {
+      "index": 32,
+      "start": 69.48,
+      "end": 70.6,
+      "text": "CAD is only the start.",
+      "words": [
+        {
+          "word": "CAD",
+          "start": 69.48,
+          "end": 69.72
+        },
+        {
+          "word": "is",
+          "start": 69.72,
+          "end": 70.06
+        },
+        {
+          "word": "only",
+          "start": 70.06,
+          "end": 70.22
+        },
+        {
+          "word": "the",
+          "start": 70.22,
+          "end": 70.36
+        },
+        {
+          "word": "start.",
+          "start": 70.36,
+          "end": 70.6
+        }
+      ]
+    },
+    {
+      "index": 33,
+      "start": 71.06,
+      "end": 72.44,
+      "text": "Next episode, why a crack",
+      "words": [
+        {
+          "word": "Next",
+          "start": 71.06,
+          "end": 71.28
+        },
+        {
+          "word": "episode,",
+          "start": 71.28,
+          "end": 71.74
+        },
+        {
+          "word": "why",
+          "start": 72.0,
+          "end": 72.2
+        },
+        {
+          "word": "a",
+          "start": 72.2,
+          "end": 72.32
+        },
+        {
+          "word": "crack",
+          "start": 72.32,
+          "end": 72.44
+        }
+      ]
+    },
+    {
+      "index": 34,
+      "start": 72.44,
+      "end": 73.7,
+      "text": "can tell you exactly how",
+      "words": [
+        {
+          "word": "can",
+          "start": 72.44,
+          "end": 72.68
+        },
+        {
+          "word": "tell",
+          "start": 72.68,
+          "end": 72.9
+        },
+        {
+          "word": "you",
+          "start": 72.9,
+          "end": 73.06
+        },
+        {
+          "word": "exactly",
+          "start": 73.06,
+          "end": 73.34
+        },
+        {
+          "word": "how",
+          "start": 73.34,
+          "end": 73.7
+        }
+      ]
+    },
+    {
+      "index": 35,
+      "start": 73.7,
+      "end": 74.46,
+      "text": "your part was built.",
+      "words": [
+        {
+          "word": "your",
+          "start": 73.7,
+          "end": 73.84
+        },
+        {
+          "word": "part",
+          "start": 73.84,
+          "end": 74.04
+        },
+        {
+          "word": "was",
+          "start": 74.04,
+          "end": 74.26
+        },
+        {
+          "word": "built.",
+          "start": 74.26,
+          "end": 74.46
+        }
+      ]
+    }
+  ],
+  "highlight_style": "word_by_word"
+}

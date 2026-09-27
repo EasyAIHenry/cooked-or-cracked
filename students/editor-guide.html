@@ -1,0 +1,747 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>The editor's guide to Cooked or Cracked</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="v2.css">
+<link rel="stylesheet" href="guide.css">
+</head>
+<body>
+
+<!-- 1 COVER -->
+<section class="page cover">
+  <span class="pill">Cooked or Cracked · for editors</span>
+  <div class="big" style="max-width:150mm">The editor's guide to <i>Cooked or Cracked.</i></div>
+  <p class="sub" style="max-width:150mm">What the series is, where every file lives in the repo, and how to replicate the edit in ChatCut so an episode lands on Henry's desk ready to post.</p>
+
+  <div class="contents torn" style="top:112mm">
+    <div class="k">what is inside</div>
+    <ol>
+      <li><span>Read this first · the repo is Henry's</span><span>p2</span></li>
+      <li><span>The series on one page</span><span>p3</span></li>
+      <li><span>The repo and the episode folder</span><span>p4–5</span></li>
+      <li><span>One episode, eight steps</span><span>p6</span></li>
+      <li><span>What arrives before you cut</span><span>p7–8</span></li>
+      <li><span>The tools · ChatCut, Claude Code, Higgsfield</span><span>p9–10</span></li>
+      <li><span>The frame and the style</span><span>p11–12</span></li>
+      <li><span>The three cuts you must learn</span><span>p13–15</span></li>
+      <li><span>The passes · speech cut to export</span><span>p16–18</span></li>
+      <li><span>Writing rules · Henry's standing notes</span><span>p19–20</span></li>
+      <li><span>Review loop · checklist · glossary · small print</span><span>p21–24</span></li>
+    </ol>
+  </div>
+  <div class="stamps" style="top:118mm;right:16mm;width:66mm;flex-direction:column">
+    <div class="st torn">steps per episode<b>8</b></div>
+    <div class="st torn">edit passes<b>8</b></div>
+    <div class="st torn">edit target<b>1 h</b></div>
+  </div>
+
+  <p class="who">Written by Henry Chua for the editors who cut this series. Checked against the repo on 28 September 2026.</p>
+  <div class="receipt torn">
+    <div class="hand mute">the one rule</div>
+    <div class="n">Read-only.</div>
+    <div>The repo holds Henry's style. You read it, install from it and cut with it. Only Henry changes it.</div>
+  </div>
+</section>
+
+<!-- 2 READ THIS FIRST -->
+<section class="page">
+  <div class="kick">read this first</div>
+  <h2><img class="ic lg" src="img/icons/shield-check-bold.svg">The repo is Henry's. You work from it. Only Henry works on it.</h2>
+  <p class="lead"><a href="https://github.com/EasyAIHenry/cooked-or-cracked">github.com/EasyAIHenry/cooked-or-cracked</a> is the operating manual for the series. It is private. Everything in it, from the colours to the length of a pause, is a decision Henry made after watching the numbers. The style is his. This page says what that means for you.</p>
+  <div class="two">
+    <div class="card win"><div class="k">you may</div>
+      <ul class="tight">
+        <li>Clone it and pull it as often as you like.</li>
+        <li>Read every file. Start with <code>sop/</code> and the learning log.</li>
+        <li>Copy the four skills into your own <code>~/.claude/skills/</code> so Claude Code can use them.</li>
+        <li>Run the scripts on your own machine (<code>join_audit.py</code>; <code>make-pdf.sh</code> rebuilds this guide), or have Claude run them.</li>
+        <li>Ask Henry a question with a frame and a timestamp attached.</li>
+      </ul></div>
+    <div class="card"><div class="k">you may not</div>
+      <ul class="tight">
+        <li>Push, open a pull request, or edit any file in the repo.</li>
+        <li>Change a colour, font, size, position, timing or sound in a skill, even to improve it.</li>
+        <li>Forward, screenshot or publish anything from the repo outside the team.</li>
+        <li>Add keys, footage, cuts or audio to it.</li>
+        <li>Post an episode. Henry posts.</li>
+      </ul></div>
+  </div>
+  <h3 style="margin-top:16px">How a change happens</h3>
+  <div class="flow">
+    <div class="box">You spot it<small>frame + timestamp + why</small></div><div class="arr">→</div>
+    <div class="box">Henry decides<small>yes, no, or later</small></div><div class="arr">→</div>
+    <div class="box">Henry edits the skill<small>on his Mac, runs sync.sh</small></div><div class="arr">→</div>
+    <div class="box">You pull<small>git pull, copy the skills again</small></div><div class="arr">→</div>
+    <div class="box">Next episode uses it<small>dated entry in the learning log</small></div>
+  </div>
+  <p class="small2">A rule is real when it is in <code>skills/cooked-or-cracked/references/learning-log.md</code> or in a <code>SKILL.md</code>. A rule in a chat message is a note until it is in the repo.</p>
+  <div class="callout" style="margin-top:12px"><b>Why it is this strict.</b> Ep1 got 118 follows from 10,765 views, 1.1%, in about a day. The format converts: the sting, the pill, the paper stamps, the scoreboard. Series die when the look drifts from episode to episode. Same pill, same sting, same paper, every time.</div>
+  <p class="small2" style="margin-top:10px">Not in the repo: video, raw footage, cuts, keys. They live in the Drive folders <code>DRIVE_Cooked-or-Cracked_Ep&lt;N&gt;_…</code> that Henry shares per episode. The sting, the bubble pop and the mouse click are small, so they are in the repo, in the scrapbook skill's <code>references/</code> folder. <code>sync.sh</code> refuses to commit a key.</p>
+  <div class="foot"><span>Cooked or Cracked · the editor's guide</span><span>page 2</span></div>
+</section>
+
+<!-- 3 THE SERIES -->
+<section class="page">
+  <div class="kick">what you are cutting</div>
+  <h2>One claim, tested, with a verdict</h2>
+  <p class="lead">A creator says an AI tool does something. Henry tests it with the timer on screen and says cooked or cracked. Every episode has the same three parts, and those three parts are what you learn to cut.</p>
+  <div class="three">
+    <div class="card win"><div class="k">1 · the hook</div><p style="margin:4px 0 0;font-size:9.8pt"><b>A creator's reel with a strong hook plays. Henry reacts.</b> The creator's own claim opens the video, in their voice, in a window beside Henry's face. He cuts in the moment the claim ends.</p></div>
+    <div class="card win"><div class="k">2 · the test</div><p style="margin:4px 0 0;font-size:9.8pt"><b>Henry tries it himself.</b> Screen recording, timer in the corner, narrated live. Where the tool needs pictures, he makes them on Higgsfield inside the same Claude session.</p></div>
+    <div class="card win"><div class="k">3 · the opinion</div><p style="margin:4px 0 0;font-size:9.8pt"><b>His expert verdict, with receipts.</b> Score out of ten, cooked or cracked, one line per claim with a time or a price, one thing to steal from the creator, then the comment keyword.</p></div>
+  </div>
+  <div class="two" style="margin-top:14px">
+    <div class="card"><div class="k">who is watching</div><p style="margin:4px 0 0;font-size:9.8pt">Men 18 to 34 who build things. India 22%, US 11%, then Canada, Singapore, Malaysia. 99.7% are not followers. They are on the Reels tab, on a phone, sound on, with no idea who Henry is. Every line and every super has to work first time.</p></div>
+    <div class="card"><div class="k">the verdict format</div><p style="margin:4px 0 0;font-size:9.8pt">Score /10. COOKED or CRACKED. Per tool or claim: works, meh, cooked. One line of receipt each: a time, a price, or what the screen showed. One thing to steal from the creator. If a step failed because of Henry's setup, it is "my setup" and scores meh, not cooked.</p></div>
+  </div>
+  <h3 style="margin-top:16px">The episodes so far</h3>
+  <table class="fx">
+    <tr><th>Ep</th><th>Subject and claim</th><th>Verdict</th><th>Cut</th></tr>
+    <tr><td>1</td><td>@nateherkai, the Generate skill. Claude makes video for cents through Higgsfield or Kie.</td><td>CRACKED. Kie cheapest for images and short clips.</td><td>2:12, posted 25 Sep 2026. Too long: the verdict at 2:05 was seen by almost nobody.</td></tr>
+    <tr><td>2</td><td>@nateherkai, five free design repos turn Claude into a designer. Henry built a real site for a soft serve shop with them.</td><td>CRACKED for layout, 7/10. Visuals still need Higgsfield.</td><td>1:29, delivered 27 Sep 2026. Henry talks from pointers.</td></tr>
+  </table>
+  <div class="callout" style="margin-top:12px"><b>Read the learning log before every episode.</b> <code>skills/cooked-or-cracked/references/learning-log.md</code>, newest entry first. It records what each episode's numbers taught and which rule changed. Two of Ep1's rules came straight from the drop-off curve.</div>
+  <div class="foot"><span>Cooked or Cracked · the editor's guide</span><span>page 3</span></div>
+</section>
+
+<!-- 4 REPO MAP -->
+<section class="page">
+  <div class="kick">the repo</div>
+  <h2><img class="ic lg" src="img/icons/layers-bold.svg">Where everything lives</h2>
+  <p class="lead">Text only. A skill is a folder Claude Code reads before it works: <code>SKILL.md</code> is the instructions, <code>references/</code> holds the numbers and the code.</p>
+  <table class="mx dense" style="border-spacing:0 4px">
+    <tr><th>path</th><th>what it is</th><th>who changes it</th><th>what you do with it</th></tr>
+    <tr><td>sop/</td><td>The eight steps of an episode, one file each.</td><td><span class="who2 henry">Henry</span></td><td>Read first. Ten minutes.</td></tr>
+    <tr><td>skills/cooked-or-cracked/</td><td>The series skill: pipeline, writing rules, learning log, supers library, episode templates, <code>scripts/join_audit.py</code>.</td><td><span class="who2 henry">Henry</span></td><td>The learning log before every episode.</td></tr>
+    <tr><td>skills/henry-scrapbook-reel/</td><td>The edit template for ChatCut Desktop: passes, layout numbers, style, gotchas, MG code, export recipe, sound cues, the sting.</td><td><span class="who2 henry">Henry</span></td><td>Your main file. Gotchas before pass 1.</td></tr>
+    <tr><td>skills/creator-audit/</td><td>Apify plus Gemini audit of a reel: transcript, beats, hook, baseline, verdict on the creator.</td><td><span class="who2 henry">Henry</span></td><td>Read its report. The code is Henry's.</td></tr>
+    <tr><td>skills/henry-guide-pdf/</td><td>The lead-magnet PDF format (this guide uses it).</td><td><span class="who2 henry">Henry</span></td><td>Not your job.</td></tr>
+    <tr><td>tools/lead-scout/</td><td>The daily Instagram scout that finds subjects.</td><td><span class="who2 henry">Henry</span></td><td>Not your job.</td></tr>
+    <tr><td>episodes/ep&lt;N&gt;_…/</td><td>One folder per episode: scripts, cut lists, research, captions, MG code, retro.</td><td><span class="who2 henry">Henry</span> via sync.sh</td><td>Read it all before you cut.</td></tr>
+    <tr><td>sites/ · students/</td><td>The Ep2 build (the Pompette site and QR menu), and this guide.</td><td><span class="who2 henry">Henry</span></td><td>Reference. You are here.</td></tr>
+  </table>
+  <div class="two" style="margin-top:10px">
+    <div class="card"><div class="k">how the repo gets updated</div>
+      <div class="flow" style="margin:8px 0 4px">
+        <div class="box">Henry's Mac<small>skills + Drive folders</small></div><div class="arr">→</div>
+        <div class="box">sync.sh<small>text only, refuses keys</small></div><div class="arr">→</div>
+        <div class="box">GitHub<small>dated commit</small></div><div class="arr">→</div>
+        <div class="box">you<small>git pull</small></div>
+      </div>
+      </div>
+    <div class="card"><div class="k">install once; rescan when skills/ changes</div><div class="term" style="margin:6px 0 0"><div class="bar"><i></i><i></i><i></i><span>terminal</span></div><pre><span class="p">$</span> git clone https://github.com/EasyAIHenry/cooked-or-cracked.git
+<span class="p">$</span> skillspector scan --no-llm cooked-or-cracked/skills
+<span class="p">$</span> cp -r cooked-or-cracked/skills/* ~/.claude/skills/</pre></div><p class="small2" style="margin:4px 0 0">skillspector: NVIDIA's scanner for AI skills (<code>uv tool install skillspector</code>). These four score low to medium. On HIGH or CRITICAL, ask Henry.</p></div>
+  </div>
+  <div class="foot"><span>Cooked or Cracked · the editor's guide</span><span>page 4</span></div>
+</section>
+
+<!-- 5 EPISODE FOLDER -->
+<section class="page">
+  <div class="kick">the episode folder</div>
+  <h2><img class="ic lg" src="img/icons/document-text-bold.svg">Eight numbered folders, the same every episode</h2>
+  <p class="lead">On Henry's Mac and in Drive the folder is called <code>DRIVE_Cooked-or-Cracked_Ep&lt;N&gt;_&lt;Creator&gt;-&lt;Topic&gt;</code>. In the repo it appears as <code>episodes/ep&lt;N&gt;_&lt;creator&gt;-&lt;topic&gt;</code> with the media stripped out.</p>
+  <div class="road">
+    <div class="st"><div class="dot">01</div><div class="t"><b>01_scripts/</b><em>in git</em><span>script-ep&lt;N&gt;.md (scorecard, beat sheet, new supers), pointers-ep&lt;N&gt;.md (what Henry reads on camera), recording-todo-and-say.md, the cut lists and shot maps from each pass, ig-captions-ep&lt;N&gt;.md, the rebuild scripts (Claude's Python that places every item, so a re-cut is one run).</span></div></div>
+    <div class="st"><div class="dot">02</div><div class="t"><b>02_graphics/</b><em>code and stills in git</em><span>Screenshots, the scorecard PNG, comparison tables (HTML plus PNG), <code>mg-code/</code> with the motion graphic sources, <code>pass2-cards/</code> with the card sizes.</span></div></div>
+    <div class="st"><div class="dot">03</div><div class="t"><b>03_reference/</b><em>metadata in git</em><span>The reviewed reel and its Apify metadata (plays, comments, caption, duration).</span></div></div>
+    <div class="st"><div class="dot">04</div><div class="t"><b>04_raw-footage/</b><em>never in git</em><span>Camera takes, screen recording, phone recording, proxies, transcripts. Drive only.</span></div></div>
+    <div class="st"><div class="dot">05</div><div class="t"><b>05_cuts/</b><em>never in git</em><span>Pass previews, the export passes, the episode's composite script (Claude writes it from export.md, starting from the previous episode's), and the deliverable <code>UPLOAD-THIS-ep&lt;N&gt;-v&lt;x&gt;.mp4</code>, plus <code>FOR-INSTAGRAM/</code>.</span></div></div>
+    <div class="st"><div class="dot">06</div><div class="t"><b>06_research/</b><em>in git</em><span>de-myth-sheet.md, &lt;creator&gt;-audit-report.md, delivery-review-take&lt;N&gt;.md, ep&lt;N&gt;-insights-retro.md.</span></div></div>
+    <div class="st"><div class="dot">07</div><div class="t"><b>07_audio/</b><em>Drive, and in git</em><span>cooked-or-cracked-sting-v3.wav, the series sting. The same file is in the repo at <code>skills/henry-scrapbook-reel/references/</code>.</span></div></div>
+    <div class="st"><div class="dot">08</div><div class="t"><b>08_guide/</b><em>HTML in git, PDF in Drive</em><span>The lead magnet for the comment keyword. Built by Claude with henry-guide-pdf, uploaded by Henry.</span></div></div>
+  </div>
+  <p class="small2" style="margin-top:8px"><b>The ChatCut project:</b> one per episode, named like the folder, on Henry's account. The reference project with every template asset is "Cooked or Cracked — Ep1 v4 (Cindy passes)"; asset code syncs across ChatCut surfaces, so Claude copies it from there with <code>inspect_asset includeCode</code>. <b>What you deliver:</b> <code>05_cuts/UPLOAD-THIS-ep&lt;N&gt;-v&lt;x&gt;.mp4</code>, 1080x1920, 30 fps, voice at -14 LUFS, with the export passes and the composite script beside it. Bump v&lt;x&gt; on every change; never overwrite a version Henry has seen.</p>
+  <div class="foot"><span>Cooked or Cracked · the editor's guide</span><span>page 5</span></div>
+</section>
+
+<!-- 6 PIPELINE -->
+<section class="page">
+  <div class="kick">one episode</div>
+  <h2><img class="ic lg" src="img/icons/checklist-minimalistic-bold.svg">Eight steps, and where you come in</h2>
+  <p class="lead">From <code>sop/00-overview.md</code>. Your step is 6. Steps 1 to 5 produce the files you cut from. Steps 7 and 8 change the rules you cut by.</p>
+  <div class="road">
+    <div class="st"><div class="dot">1</div><div class="t"><b>Subject</b><em><span class="who2 claude">Claude</span> <span class="who2 henry">Henry</span></em><span>The lead scout reports outlier reels daily. Henry picks one with a testable claim: a price, a count, a time, a "does X". No news, no drama. Receipts only.</span></div></div>
+    <div class="st"><div class="dot">2</div><div class="t"><b>Audit</b><em><span class="who2 claude">Claude</span></em><span>creator-audit pulls the reel and its numbers, Gemini watches it, the baseline is the creator's last 12 posts. Output: the audit report.</span></div></div>
+    <div class="st"><div class="dot">3</div><div class="t"><b>De-myth</b><em><span class="who2 claude">Claude</span> <span class="who2 henry">Henry</span> 1 h</em><span>Claude writes the de-myth sheet: each claim, what it really is, pass and fail written before the test. Henry tests for one hour with the timer on screen and fills the scorecard.</span></div></div>
+    <div class="st"><div class="dot">4</div><div class="t"><b>Record</b><em><span class="who2 henry">Henry</span> 30 + 10 min</em><span>Screen recording while testing, narrated live. Then the talking head: phone at eye level, DJI mic, same spot every episode, one take per beat, several attempts.</span></div></div>
+    <div class="st"><div class="dot">5</div><div class="t"><b>Script</b><em><span class="who2 claude">Claude</span> <span class="who2 henry">Henry</span></em><span>Scorecard plus beat sheet (time, say, screen, super) plus 3 to 6 new supers for the episode. Henry edits on set and talks from pointers.</span></div></div>
+    <div class="st"><div class="dot">6</div><div class="t"><b>Edit</b><em><span class="who2 you">you</span> with Claude in ChatCut · <span class="who2 henry">Henry</span> approves each pass</em><span>Load henry-scrapbook-reel. Passes in order, one job each. Export by the v8 rule. Deliver UPLOAD-THIS. Target one hour of hands-on time; Henry's review turnarounds sit outside it.</span></div></div>
+    <div class="st"><div class="dot">7</div><div class="t"><b>Publish</b><em><span class="who2 claude">Claude</span> <span class="who2 henry">Henry</span></em><span>Three captions, the pinned comment with the test date, the lead-magnet PDF. Henry uploads and posts at the subject creator's posting hour (Nate Herk: 15:04 UTC).</span></div></div>
+    <div class="st"><div class="dot">8</div><div class="t"><b>Retro</b><em><span class="who2 henry">Henry</span> <span class="who2 claude">Claude</span> after 48 h</em><span>Henry sends the Reel insights. Claude writes the retro and a dated learning-log entry. If a rule changed, the skill changes. sync.sh pushes it.</span></div></div>
+  </div>
+  <h3 style="margin-top:12px">The time budget Henry set</h3>
+  <div class="bar">
+    <div style="flex:60">de-myth 1 h</div><div style="flex:30">screen 30 min</div><div style="flex:10">face 10 min</div><div style="flex:60;background:#FFF1E8">edit 1 h</div><div style="flex:20">guide 20 min</div>
+  </div>
+  <p class="small2">This is Henry's budget for the whole episode; your part is the edit hour. Ep2's edit ran over two days and many passes. The target stands so the passes stay small, and if a pass will break it, say so before starting.</p>
+  <div class="foot"><span>Cooked or Cracked · the editor's guide</span><span>page 6</span></div>
+</section>
+
+<!-- 7 WHAT ARRIVES -->
+<section class="page">
+  <div class="kick">before you cut</div>
+  <h2><img class="ic lg" src="img/icons/videocamera-record-bold.svg">What lands in the folder, and what to check</h2>
+  <table class="fx" style="font-size:9pt">
+    <tr><th>file</th><th>what it is</th><th>what you do with it</th></tr>
+    <tr><td>04_raw-footage/henry-take&lt;N&gt;.MP4</td><td>Camera takes. HEVC 10-bit HLG, phone at eye level, DJI mic. Several attempts per line; Henry says "one more time" between them.</td><td>Scan for audio holes first (below). Ask Claude to transcribe it in ChatCut and fix the brand names before any cut.</td></tr>
+    <tr><td>04_raw-footage/ screen recording</td><td>Up to 30 minutes of Henry testing, 1080p 30 fps, timer in the corner, narrated live.</td><td>Claude cuts fresh crops at the speed that fits the line. Check the range for dead stretches first.</td></tr>
+    <tr><td>04_raw-footage/*-transcript.md</td><td>Word-timed transcript of each take, exported from ChatCut after Claude transcribes it.</td><td>Word times drift up to 0.3 s. Never take a cut point from them without join_audit.</td></tr>
+    <tr><td>06_research/delivery-review-take&lt;N&gt;.md</td><td>Gemini's per-attempt scores (confidence, energy, clarity, eye contact), the self-cues log, strongest and weakest moments.</td><td>Pick takes from it. The last attempt of a repeated line usually wins.</td></tr>
+    <tr><td>06_research/de-myth-sheet.md</td><td>Each claim as a row: what he says, what it really is, install line, cost. Pass and fail written before the test.</td><td>The receipts your stamps show, spelled exactly.</td></tr>
+    <tr><td>01_scripts/script-ep&lt;N&gt;.md</td><td>Scorecard, beat sheet (time, say, screen, super), the new supers.</td><td>Your map. If he said it differently on camera, the camera wins.</td></tr>
+    <tr><td>01_scripts/pointers-ep&lt;N&gt;.md</td><td>The bullets Henry reads on camera. Bold is the number to say.</td><td>What he meant to say. Use it to choose between attempts.</td></tr>
+    <tr><td>03_reference/</td><td>The reviewed reel as MP4 and its Apify metadata.</td><td>The opener window. Its numbers go in the caption.</td></tr>
+    <tr><td>07_audio/cooked-or-cracked-sting-v3.wav</td><td>The series sting, 2.6 s, sung. Version 3 is final.</td><td>Every episode, unchanged. Never regenerate it.</td></tr>
+  </table>
+  <div class="stepl" style="margin-top:10px"><b>1</b> Scan every camera take for audio holes before you cut</div>
+  <div class="term"><div class="bar"><i></i><i></i><i></i><span>terminal · prints the time and size of any gap over 30 ms</span></div><pre><span class="p">$</span> ffprobe -select_streams a:0 -show_entries packet=pts_time -of csv=p=0 henry-take2.MP4 \
+  | awk 'NR&gt;1{d=$1-p; if(d&gt;0.03)print p,d}{p=$1}'
+<span class="c">66.880000 0.256   ← Ep2, take 2: a 0.256 s hole. Every cut after it landed early.</span></pre></div>
+  <div class="fail"><b>Why this matters:</b> a plain wav extraction closes the hole. ChatCut plays it as silence, so every cut after it lands 0.256 s early and clips word endings ("Higgs fie-", "web-"). It cost Ep2 several review rounds. Give Claude the gap times; it offsets each source in-point past them when it builds the cut. Verify on the ChatCut export itself.</div>
+  <div class="foot"><span>Cooked or Cracked · the editor's guide</span><span>page 7</span></div>
+</section>
+
+<!-- 8 THE REVIEWED CREATOR -->
+<section class="page">
+  <div class="kick">before you cut · the reviewed reel</div>
+  <h2><img class="ic lg" src="img/icons/eye-bold.svg">Know the hook before you cut the reaction</h2>
+  <p class="lead">The audit report in <code>06_research/</code> is Gemini watching the creator's reel: transcript with timestamps, beat sheet, hook technique, pacing, CTA, and a verdict on the creator. You need five things from it.</p>
+  <div class="row">
+    <div class="col">
+      <div class="rule"><b class="n">1</b><span><b>The claim sentence and where it ends.</b> That is your opener cut point. Ep2: "You can now turn Claude into an insane AI designer with 5 free tools." 3.5 s. Cut after "tools".</span></div>
+      <div class="rule"><b class="n">2</b><span><b>The hook technique.</b> Benefit listicle, bold claim plus tool name, price shock. Henry's reaction sits on the claim. Cut the creator's intro.</span></div>
+      <div class="rule"><b class="n">3</b><span><b>Every tool name, spelled as the source.</b> The creator may say it wrong (Nate said "Image twenty-three"; the repo is img2threejs). Your super shows the real name.</span></div>
+      <div class="rule"><b class="n">4</b><span><b>The creator's comment keyword.</b> So you do not reuse it. Henry uses his own (Ep1: KIE, Ep2: DESIGN).</span></div>
+      <div class="rule"><b class="n">5</b><span><b>The multiple over their median.</b> Ep2's reel did 7.1x Nate's usual plays. It goes in the caption, never in the audio.</span></div>
+    </div>
+    <div class="col" style="flex:.8">
+      <div class="onp"><span class="k">the audit, Ep2, in short</span>
+        <p style="margin:4px 0 0;font-size:9.4pt">Hook 10/10, benefit-driven listicle. 12 to 15 cuts per 10 s. Split screen keeps a face visible under the B-roll. Comment gate FRONTEND: 9,400 comments on 337k plays. Score 9.5/10, CRACKED as a creator. One thing to steal: a list too fast to write down, then the written list behind a keyword.</p></div>
+      <div class="card" style="margin-top:10px"><div class="k">two different scores</div><p style="margin:4px 0 0;font-size:9.4pt">The audit scores the creator as a creator. The episode scores the claim. Henry's verdict is about the tool. Keep them separate on screen and in the captions.</p></div>
+    </div>
+  </div>
+  <h3 style="margin-top:12px">What Henry is doing when he reacts</h3>
+  <p style="font-size:10pt">He reacts as a viewer who already builds things, hearing a claim and deciding to check it. The reaction shot is muted and short: chin on hand, a small nod, then his own first line. The creator gets credit in the caption ("@nateherkai posted 5 free repos…"). Anything that reads as a takedown gets cut.</p>
+  <div class="callout"><b>A strong hook is the reason the episode exists.</b> The lead scout only surfaces reels that beat the creator's own median by 2.5x or more. When you cut the opener, you are borrowing that hook for three seconds. Do not shorten it below the claim, and do not let it run past it.</div>
+  <div class="foot"><span>Cooked or Cracked · the editor's guide</span><span>page 8</span></div>
+</section>
+
+<!-- 9 THE TOOLS -->
+<section class="page">
+  <div class="kick">the tools</div>
+  <h2><img class="ic lg" src="img/icons/settings-bold.svg">How the edit is built</h2>
+  <p class="lead">Claude Code drives ChatCut Desktop through its connector, following the henry-scrapbook-reel skill. You steer it one pass at a time and check every preview.</p>
+  <div class="flow">
+    <div class="box">You<small>brief, pick takes, check</small></div><div class="arr">→</div>
+    <div class="box">Claude Code<small>skills loaded, does the mechanics</small></div><div class="arr">→</div>
+    <div class="box">ChatCut Desktop<small>timeline, MG assets, captions, export</small></div><div class="arr">→</div>
+    <div class="box">ffmpeg, run by Claude<small>composite, voice, re-encode</small></div><div class="arr">→</div>
+    <div class="box">05_cuts/<small>UPLOAD-THIS</small></div>
+  </div>
+  <div class="two" style="margin:0 0 8px">
+    <div class="card win"><div class="k">you</div><p style="margin:2px 0 0;font-size:9.2pt">Brief one pass at a time. Pick the takes. Read every cut list and plan before saying go. Watch every preview and export end to end. Spell-check the supers. Send Henry the preview and your three lines.</p></div>
+    <div class="card"><div class="k">Claude</div><p style="margin:2px 0 0;font-size:9.2pt">The transcript fixes, the cut list and its cut.json, the join audit, the crops and speed-ups, the MG JSX (copied from the project assets and mg-code.md), every ChatCut placement, the ffmpeg composite, the voice chain, the contact sheet, the Gemini listen. You never write React or ffmpeg by hand; you check what it did.</p></div>
+  </div>
+  <div class="stepl"><b>1</b> Install ChatCut Desktop and Claude Code</div>
+  <p style="font-size:10pt;margin:0 0 4px">ChatCut Desktop from <a href="https://chatcut.io">chatcut.io</a>, signed in to the account Henry tells you to use. Ask whether it has ChatCut Pro: it tells you which export recipe on page 18 to expect; the test export confirms it. Claude Code inside the Claude desktop app (Code tab) or in the terminal. Copy the four skills in (page 4).</p>
+  <div class="stepl"><b>2</b> Connect ChatCut to Claude, then start every session the same way</div>
+  <p style="font-size:10pt;margin:0 0 4px">In ChatCut Desktop, connect the agent from its settings; Claude then sees tools named <code>chatcut_desktop</code>. Media stays on the Mac it was imported on.</p>
+  <div class="prompt"><span class="who">type in Claude</span><p>Load the henry-scrapbook-reel skill and the cooked-or-cracked skill. Target the ChatCut project "Cooked or Cracked — Ep&lt;N&gt; &lt;topic&gt;" and confirm its id. Read the learning log and the gotchas before pass 1. We are on pass &lt;N&gt;: &lt;one job&gt;. Show me the plan before you change anything.</p></div>
+  <div class="card win" style="margin-top:6px"><div class="k">settled with Henry once, on day one</div><ul class="tight" style="font-size:8.8pt;margin-top:2px;columns:2;column-gap:16px"><li>Which Mac and ChatCut login (the template project is on Henry's account), and whether it has ChatCut Pro.</li><li>Who creates the episode project and imports the footage: Claude, as pass 0, on the machine holding it.</li><li>Where previews and questions go (that channel's cap is the 30 MB on page 18).</li><li>A Gemini key for the unprimed listen.</li></ul></div>
+  <p class="small2" style="margin:6px 0 0">Tool names you will meet: <b>target_project</b> (points Claude at the episode project; the connection follows whatever the app has open, so Claude calls it first every time), <b>edit_item</b>, <b>propertyOverrides</b> (the props on one MG item), <b>inspect_item</b> (read back the timeline), <b>local_export</b>.</p>
+  <div class="foot"><span>Cooked or Cracked · the editor's guide</span><span>page 9</span></div>
+</section>
+
+<!-- 10 HIGGSFIELD -->
+<section class="page">
+  <div class="kick">the tools · Higgsfield</div>
+  <h2><img class="ic lg" src="img/icons/magic-stick-3-bold.svg">Higgsfield makes the pictures. ChatCut cuts them in.</h2>
+  <p class="lead">Higgsfield is in the series two ways. In Ep1 it was the subject: its website, its API and Kie, three prices for the same models, so the edit was a table that built as the prices were spoken. In Ep2 it was the tool Henry used inside the test. The five design repos got the layout right and the visuals wrong, so he generated the product photos and the clip on Higgsfield, through its Claude connector, in the same session.</p>
+  <div class="three">
+    <div class="card"><div class="k">in the test <span class="who2 henry">Henry</span></div><p style="margin:4px 0 0;font-size:9.4pt">He runs it live in Claude. The Higgsfield widget is on screen while it generates. Ep2: 10 images on GPT Image 2.5 (one master cone, then the flavours from it, same angle, same light) and one 5-second clip on Kling 3.0. 36.25 credits.</p></div>
+    <div class="card win"><div class="k">in the edit <span class="who2 you">you</span></div><p style="margin:4px 0 0;font-size:9.4pt">The recording of the widget generating goes on a paper card at about 10x, at the moment he says "Higgsfield". The results (the cone sheet, the raw clip, the 8-frame strip) follow as cards or in the window. Credits and model names are stamps.</p></div>
+    <div class="card"><div class="k">in the words <span class="who2 you">you</span></div><p style="margin:4px 0 0;font-size:9.4pt">Say only what it did. "Higgsfield made the clip. The page plays it frame by frame as you scroll." Never "all five tools built the site". The split verdict is the honest one: repos for layout, Higgsfield for visuals.</p></div>
+  </div>
+  <div class="row" style="margin-top:12px">
+    <div class="col" style="flex:.62">
+      <div class="fr"><img src="img/frames/ep2-33.jpg" alt="Ep2 at 0:33"><div class="label" style="left:6%;top:31%">the Kling clip, top-left window</div><div class="label" style="right:4%;top:9%">stamp on the spoken words</div></div>
+      <p class="cap2">Ep2, 0:33. "Scroll the page, 3D swirl." The generated clip in the window, the stamp beside it, scoreboard on the wall.</p>
+    </div>
+    <div class="col">
+      <div class="stepl" style="margin-top:0"><b>1</b> How Henry connects it (so you can read the recording)</div>
+      <div class="term"><div class="bar"><i></i><i></i><i></i><span>Claude · Settings · Connectors · Add custom connector</span></div><pre><span class="y">https://mcp.higgsfield.ai/mcp</span>
+<span class="c">Needs a paid Higgsfield plan. Starter from US$19 a month billed yearly (checked 27 Sep 2026).</span></pre></div>
+      <div class="stepl"><b>2</b> What ChatCut generates itself</div>
+      <p style="font-size:9.8pt;margin:0 0 6px">ChatCut has its own generation tools (music, shaders, images, voices). The series used them for the sting and for the skin-smoothing shader. It does not use them for visuals inside a test, because the test is about what the tool under review can do, on Henry's account, with the timer running.</p>
+      <div class="stepl"><b>3</b> The receipts to keep on screen</div>
+      <ul class="tight"><li>Model names as text: GPT Image 2.5, Kling 3.0, Seedance, Nano Banana 2.</li><li>Costs as numbers: credits or dollars, never "cheap".</li><li>The clock, when time is the claim.</li></ul>
+    </div>
+  </div>
+  <div class="foot"><span>Cooked or Cracked · the editor's guide</span><span>page 10</span></div>
+</section>
+
+<!-- 11 THE FRAME -->
+<section class="page">
+  <div class="kick">the frame</div>
+  <h2><img class="ic lg" src="img/icons/smartphone-bold.svg">Every zone has a job. No empty wall.</h2>
+  <p class="lead">1080x1920, 30 fps. Henry full frame is the background, same 1.1x crop on every clip, never tighter (the 1.3x punch-in on page 14 is the one exception). Two layouts: the table layout when the subject is a price, the window layout otherwise. The script's beat sheet says which.</p>
+  <div class="frames two-up">
+    <div>
+      <div class="fr"><img src="img/frames/ep2-21.jpg" alt="Ep2 at 0:21">
+        <div class="label" style="left:4%;top:5%">stamp, top zone</div>
+        <div class="label" style="left:3%;top:54%">scoreboard, whole video</div>
+        <div class="label" style="left:36%;top:84%">landscape card on paper</div>
+        <div class="label" style="right:3%;top:90%">bottom UI zone ~430 to 480 px</div>
+      </div>
+      <p class="cap2">Ep2 layout: Henry full frame, screen material in a top-left window or on a paper card, stamps in the top zone. Nothing on the face.</p>
+    </div>
+    <div>
+      <div class="fr"><img src="img/frames/ep1-41.jpg" alt="Ep1 at 0:41">
+        <div class="label" style="left:4%;top:3%">table builds at the top</div>
+        <div class="label" style="right:3%;top:27%">value pops on the spoken number</div>
+        <div class="label" style="left:3%;top:46%">scoreboard</div>
+        <div class="label" style="left:20%;top:78%">stamp at the bottom while a table is up</div>
+      </div>
+      <p class="cap2">Ep1 layout: the comparison table at the top (y 120 to 580), key-word stamps at the bottom (y 1140 to 1500). Stamps move up when the table leaves.</p>
+    </div>
+  </div>
+  <div class="two" style="margin-top:8px">
+    <div class="card"><div class="k">the numbers (width x height at left/top; skill, 27 Sep 2026)</div>
+      <ul class="tight" style="font-size:9.2pt">
+        <li>Safe zone: top ~220 px, bottom ~430 to 480 px, sides ~65 px, x under ~850 below y ~1150 (icon rail); the 3 s opener reel is the accepted exception.</li>
+        <li>Top stamps 820x328 at 130/228. Bottom stamps 760x304 at 120/1130. Bottom cards end by y 1440.</li>
+        <li>Screen windows 300x533 at 64/230, frame MG 12 to 14 px larger each side. Paper cards: centre y 500, max height 700.</li>
+        <li>Scoreboard 220x195 at 40/790 (Ep2). Title at y 140, verdict stamps at y 150.</li>
+      </ul></div>
+    <div class="card"><div class="k">the three laws of the frame</div>
+      <ul class="tight" style="font-size:9.2pt">
+        <li><b>Nothing on the face.</b> Ever. Shrink a window before it touches his hair or chin.</li><li><b>No empty wall.</b> If a zone is empty, the current stamp goes there. One stamp per key phrase, start to end, no gaps, never the same phrase twice.</li><li><b>Inside the safe zone.</b> Check at 2x before export. Captions, when used, sit in Ep1's band (y 1440 to 1740), which overlaps the bottom UI zone: check them on a phone.</li></ul></div>
+  </div>
+  <div class="foot"><span>Cooked or Cracked · the editor's guide</span><span>page 11</span></div>
+</section>
+
+<!-- 12 STYLE -->
+<section class="page">
+  <div class="kick">the style · do not drift</div>
+  <h2><img class="ic lg" src="img/icons/palette-bold.svg">Paper, ink, coral. Fraunces, Kalam, Inter.</h2>
+  <div class="sw">
+    <div><i style="background:#FFFEFA;border-bottom:1.5px solid var(--ink)"></i><b>#FFFEFA paper</b><span>every card, with ruled lines</span></div>
+    <div><i style="background:#171411"></i><b>#171411 ink</b><span>words, borders, shadows</span></div>
+    <div><i style="background:#DF825F"></i><b>#DF825F accent</b><span>winner, underline, active word</span></div>
+    <div><i style="background:#F2C14E"></i><b>#F2C14E gold</b><span>confetti only</span></div>
+  </div>
+  <div class="three">
+    <div class="card"><div class="k">type</div><p style="margin:4px 0 0;font-size:9pt"><b class="serif" style="font-size:12pt">Fraunces 900</b> for numbers and the big word. <b class="hand" style="font-size:11pt">Kalam 700</b> for the handwritten label. <b style="font-family:Inter;font-weight:800">Inter 800</b> for the pill and captions.</p></div>
+    <div class="card"><div class="k">motion</div><p style="margin:4px 0 0;font-size:9pt">Pop-in with overshoot: scale 0.3 → 1.1 → 1 over about 13 frames, 1 to 3° tilt. The orange underline draws over 18 frames. Then <b>hold still</b>. No fades, no pulsing, no spinning.</p></div>
+    <div class="card"><div class="k">sound</div><p style="margin:4px 0 0;font-size:9pt">Bubble pop on every graphic entrance, mouse click on every price card. Files in the skill's references folder. Impacts land in the silent gap after the word. Music bed at -22 dB, only after the sting.</p></div>
+  </div>
+  <h3 style="margin-top:12px">The template assets (copy the code, change only the props)</h3>
+  <p class="small2" style="margin:0 0 4px">Sizes here are the asset canvas; on the timeline the item is placed smaller (page 11) and scales.</p>
+  <table class="fx" style="font-size:9pt">
+    <tr><th>asset</th><th>where and when</th><th>props you set</th></tr>
+    <tr><td>Series pill "Cooked or Cracked?"</td><td>Top centre, opener only.</td><td>text</td></tr>
+    <tr><td>Window frame (portrait 640x1107, landscape 640x360)</td><td>Around every screen window and the reviewed reel, as a box 12 to 14 px larger on every side. One continuous item per position.</td><td>border = the border you want in px ÷ (frame width ÷ 640), plus radius. A 300x533 window with a 12 px border: 324x557 frame, border 24, radius 59</td></tr>
+    <tr><td>Jingle title COOKED · OR / CRACKED?</td><td>Top, y 140, over the sting.</td><td>word1..3, beat1..3 (frames 4/18/30)</td></tr>
+    <tr><td>Paper stamp with icon badge (1000x400)</td><td>One per key phrase. Top zone, or bottom while a table is up.</td><td>label, word, wordSize, wordColor, icon</td></tr>
+    <tr><td>Compare table header and rows; tier card, tool card, time stamp, tally, wipe, terminal strip</td><td>Top zone, built on the spoken words. Reuse when the episode calls for them.</td><td>d1..d3 pop frames, values, winner; see supers-library.md</td></tr>
+    <tr><td>Scoreboard COOKED / CRACKED (260x230)</td><td>Left wall, from the end of the sting to the end.</td><td>tickAt = verdict frame minus item start</td></tr>
+    <tr><td>Verdict stamp, price stamps; confetti burst (1080x1920, 130 f)</td><td>Top, y 150, on the spoken word. Confetti full frame, CRACKED only, table clears first.</td><td>word, score, value; count</td></tr>
+  </table>
+  <p class="small2" style="margin-top:4px"><b>New supers per episode: three to six, for what Henry says</b>, listed with props in the script; Claude writes their JSX in the ChatCut project; Henry adds them to <code>supers-library.md</code> after the edit. Shared code (torn edge, ruled paper, pop) is in <code>references/mg-code.md</code>. Never restyle a template asset.</p>
+  <div class="foot"><span>Cooked or Cracked · the editor's guide</span><span>page 12</span></div>
+</section>
+
+<!-- 13 CUT 1: THE HOOK -->
+<section class="page">
+  <div class="kick">the three cuts · 1 of 3</div>
+  <h2>The hook: their reel, his face</h2>
+  <p class="lead">The first four seconds decide everything. Ep1 lost half its audience by 0:08 because six seconds passed before a claim was spoken. The opener is now fixed.</p>
+  <div class="frames">
+    <div style="flex:.8">
+      <div class="fr"><img src="img/frames/ep2-1.5.jpg" alt="Ep2 opener">
+        <div class="label" style="left:8%;top:5%">pill, top centre</div>
+        <div class="label" style="right:2%;top:36%">reel on the right, beside the chin</div>
+        <div class="label" style="left:4%;top:44%">Henry muted, reacting</div>
+      </div>
+      <p class="cap2">Ep2, 0:01. Their audio only. Cut at the end of the claim.</p>
+    </div>
+    <div style="flex:.8">
+      <div class="fr"><img src="img/frames/ep2-5.5.jpg" alt="Ep2 sting title">
+        <div class="label" style="left:6%;top:33%">title pops on the sung words</div>
+      </div>
+      <p class="cap2">Ep2, 0:05. The sting, after his hook line, never before his first words.</p>
+    </div>
+    <div style="flex:.8">
+      <div class="fr"><img src="img/frames/ep1-2.0.jpg" alt="Ep1 opener, window on the left"><div class="cross"></div></div>
+      <p class="cap2">Ep1 had the window on the left; Ep2 pass 4 repeated it and Henry called it out: "it's so weird." Right side is the rule.</p>
+    </div>
+  </div>
+  <div class="rule" style="margin-top:8px"><b class="n">1</b><span><b>0:00 the reviewed reel plays in a portrait window on the right</b>, low, beside the chin, over the phone or laptop that is in the shot, never over the face. Ep2: reel 380x676 at 628/790, frame 408x704 at 614/776 (border 22, radius 53), white rounded frame with a shadow. If it cannot fit, make it smaller. Its audio is the only audio.</span></div>
+  <div class="rule"><b class="n">2</b><span><b>Henry is muted and reacting</b>: chin on hand, a small nod. Pick the take where he is looking at the phone. The base export can draw green speckles in this window; Claude re-lays the clean reel into the rectangle in the composite (page 18).</span></div>
+  <div class="rule"><b class="n">3</b><span><b>Pill "Cooked or Cracked?" top centre</b>, Inter 800, white. It stays until the window closes.</span></div>
+  <div class="rule"><b class="n">4</b><span><b>Cut at the end of the creator's claim sentence</b>, about 3 to 4 s. Not one word later. Henry's first words follow the cut, by about 0:03. A claim is heard from frame one: the creator's, then his. No silent hold before the first claim, ever.</span></div>
+  <div class="rule"><b class="n">5</b><span><b>The sting comes after his hook line</b> ("Well, let's test it out."), over a 2.6 s teaser of the episode's best visual, or Henry on screen not talking (a hold under the sting is fine; the sting is the sound). The title COOKED · OR / CRACKED? pops word by word on the sung beats (frames 4/18/30), two rows at the top, never on the face. Sting at about -5 dB, 1 to 2 LU above his voice.</span></div>
+  <div class="rule"><b class="n">6</b><span><b>The scoreboard appears when the sting ends</b> and stays to the last frame.</span></div>
+  <div class="foot"><span>Cooked or Cracked · the editor's guide</span><span>page 13</span></div>
+</section>
+
+<!-- 14 CUT 2: THE TEST -->
+<section class="page">
+  <div class="kick">the three cuts · 2 of 3</div>
+  <h2>The test: show the thing while he says it</h2>
+  <p class="lead">Henry narrates what he did. Your job is to have the screen prove it at the exact word, with the number on screen when he says the number.</p>
+  <div class="frames three-up">
+    <div style="flex:.72">
+      <div class="fr"><img src="img/frames/ep2-6.5.jpg" alt="Ep2 tool running">
+        <div class="label" style="left:6%;top:6%">real terminal output, on a card</div>
+        <div class="label" style="left:8%;top:62%">tool name as text</div>
+      </div>
+      <p class="cap2">Ep2, 0:06. Taste installing on Henry's Mac, one 0.9 s card per repo.</p>
+    </div>
+    <div style="flex:.72">
+      <div class="fr"><img src="img/frames/ep2-53.jpg" alt="Ep2 order page window">
+        <div class="label" style="left:34%;top:9%">phone in the window</div>
+      </div>
+      <p class="cap2">Ep2, 0:53. "One more item, order page." The phone recording plays in the top-left window.</p>
+    </div>
+    <div style="flex:.72">
+      <div class="fr"><img src="img/frames/ep1-71.jpg" alt="Ep1 table">
+        <div class="label" style="left:5%;top:24%">rows build as he speaks</div>
+      </div>
+      <p class="cap2">Ep1, 1:11. Values pop on the spoken number, winner in orange.</p>
+    </div>
+  </div>
+  <div class="row" style="margin-top:8px">
+    <div class="col">
+      <div class="rule"><b class="n">1</b><span><b>Henry stays full frame.</b> Screen material goes in the top-left window (9:16 crops of the browser pane or the terminal, cut by Claude with ffmpeg) or on a ruled-paper card. The card has a white border, a soft shadow and a 1 to 1.5° tilt, and takes the landscape material: GitHub pages, Maps, the chat, the desktop site. One continuous window frame per position; never restart it at each clip cut.</span></div>
+      <div class="rule"><b class="n">2</b><span><b>Speed to fit the line.</b> Prompt typing about 11x, the Higgsfield widget about 10x, a site scroll about 3x, set as playbackRate on the ChatCut item. Cut fresh crops from the original each time. A still stretch reads as "the screen froze".</span></div>
+      <div class="rule"><b class="n">3</b><span><b>Show the tools running.</b> Real terminal output and results from Henry's machine. GitHub pages alone are not enough. One 0.9 s card per tool, in the order he names them, spelled exactly as the source: playwright-cli, awesome-design-md, img2threejs.</span></div>
+    </div>
+    <div class="col">
+      <div class="rule"><b class="n">4</b><span><b>Say the number, show the number.</b> A value card pops on the spoken word. Bubble pop on entrance, click on a price. Nothing appears before he says it. When the subject is a price, build the table: header tags as he names each column, values on each spoken number, rows stay until the verdict line.</span></div>
+      <div class="rule"><b class="n">5</b><span><b>The real-life beat.</b> After the demo and before the price: who can use this and how. Ep2: POS ordering, a site for menu and opening hours, and Henry's line "amazing for small business owners". Henry called the cut rushed until it had one.</span></div>
+      <div class="rule"><b class="n">6</b><span><b>Punch in instead of cutting around the line.</b> When a line comes from the other take on camera, punch in 1.3x on the face. It reads as emphasis.</span></div>
+    </div>
+  </div>
+  <div class="foot"><span>Cooked or Cracked · the editor's guide</span><span>page 14</span></div>
+</section>
+
+<!-- 15 CUT 3: THE OPINION -->
+<section class="page">
+  <div class="kick">the three cuts · 3 of 3</div>
+  <h2>The opinion: verdict, receipts, then the ask</h2>
+  <p class="lead">This is the part people follow Henry for. Henry says what worked, what did not, what he would charge, and the score. Once. Then the save frame and the keyword.</p>
+  <div class="frames">
+    <div style="flex:.72">
+      <div class="fr"><img src="img/frames/ep2-83.jpg" alt="Ep2 price stamps"><div class="label" style="left:4%;top:5%">stamps on the spoken prices</div></div>
+      <p class="cap2">Ep2, 1:23. "$1,000 the website. $250 month upkeep."</p>
+    </div>
+    <div style="flex:.72">
+      <div class="fr"><img src="img/frames/ep2-85.5.jpg" alt="Ep2 verdict"><div class="label" style="left:4%;top:5%">verdict stamp, top</div><div class="label" style="left:3%;top:50%">tick on the word</div><div class="label" style="left:30%;top:80%">confetti, CRACKED only</div></div>
+      <p class="cap2">Ep2, 1:25. The scoreboard ticks on "cracked". Confetti because it is.</p>
+    </div>
+    <div style="flex:.72">
+      <div class="fr"><img src="img/frames/ep2-88.5.jpg" alt="Ep2 CTA"><div class="label" style="left:10%;top:62%">comment stamp, to the end</div></div>
+      <p class="cap2">Ep2, 1:28. "Comment DESIGN." Henry's keyword, never the creator's.</p>
+    </div>
+  </div>
+  <div class="row" style="margin-top:8px">
+    <div class="col">
+      <div class="rule"><b class="n">1</b><span><b>Where the verdict lands.</b> The beat sheet fixes it. The series default is 45 to 55% of runtime, so people see it (Ep1's at 2:05 of 2:12 was missed); Ep2's came just before the CTA on Henry's call. If the beat sheet is silent, ask Henry once.</span></div>
+      <div class="rule"><b class="n">2</b><span><b>Say it once.</b> "Cracked" and the score come once, together. Do not repeat the verdict with a second score later.</span></div>
+      <div class="rule"><b class="n">3</b><span><b>Tick on the word.</b> Scoreboard <code>tickAt</code> = verdict frame minus the item's start frame. Extend the MG asset's duration first. Verdict stamp at the top, y 150.</span></div>
+      <div class="rule"><b class="n">4</b><span><b>Confetti only for CRACKED</b> or a declared winner (Ep1: "Kie beats both"). Table clears first. Full-frame paper confetti, then a trophy stamp at the top.</span></div>
+    </div>
+    <div class="col">
+      <div class="rule"><b class="n">5</b><span><b>Keep only what a tool did.</b> Cut "I wish", "it didn't", "I actually wanted". A flaw gets one line and a receipt.</span></div>
+      <div class="rule"><b class="n">6</b><span><b>The business beat is the price line.</b> "I'd charge", never "you can make". Price stamps pop on each number.</span></div>
+      <div class="rule"><b class="n">7</b><span><b>The save frame.</b> The scorecard as one clean card, held 2 full seconds with no other super, on "screenshot this". Saves were Ep1's top action at 3.5%.</span></div>
+      <div class="rule"><b class="n">8</b><span><b>The ask.</b> Comment stamp with Henry's keyword, held to the last frame. The keyword is said once around the verdict and once at the end. Dates never in the audio; they go in the pinned comment.</span></div>
+    </div>
+  </div>
+  <p class="small2" style="margin-top:2px"><b>One thing to steal:</b> every verdict names one move worth copying from the creator (it is in the audit report; a stamp if he says it). <b>Sound:</b> impacts in the silent gap after the word, tails trimmed.</p>
+  <div class="foot"><span>Cooked or Cracked · the editor's guide</span><span>page 15</span></div>
+</section>
+
+<!-- 16 PASS 1 -->
+<section class="page">
+  <div class="kick">the passes · pass 1</div>
+  <h2><img class="ic lg" src="img/icons/cursor-bold.svg">Cut the speech first. Everything else waits.</h2>
+  <p class="lead">Cindy Zhu's passes: one job per pass, preview a frame before committing, keep everything editable, confirm with Henry between passes. The three cuts on pages 13 to 15 are built across the passes: the hook in passes 1, 2 and 5, the test in 1, 3, 4 and 5, the opinion in 1, 3 and 5. Pass 1 is the speech, and it is where most review rounds are lost.</p>
+  <div class="rule"><b class="n">1</b><span><b>Fix the transcript before any cut.</b> Claude does it with <code>manage_transcript</code>: Higgsfield, Kie, Claude, Seedance, Nano Banana, Kling, and the episode's repo names. If the transcript vanishes (captions show 0 cards), re-transcribe and re-run the fixes; word indices stayed stable across re-transcription on Ep1.</span></div>
+  <div class="rule"><b class="n">2</b><span><b>Pick takes from the delivery review.</b> The last attempt of a repeated line usually wins. Never the "one more time" or "cut this in the edit" bits.</span></div>
+  <div class="rule"><b class="n">3</b><span><b>Full sentences only.</b> Drop tangents, stray "so", "uh", "actually". Keep the hook, the test, the real-life beat, the price, the verdict, the CTA, and a trim order (which lines go first if it must be shorter). The beat sheet sets the length (the series default is 60 to 75 s; Ep2 shipped at 1:29 on Henry's call).</span></div>
+  <div class="rule"><b class="n">4</b><span><b>Pauses.</b> About 0.28 s after a sentence, 0.16 s inside one. Squeeze only silence (below the noise floor join_audit measures, plus 6 dB; gaps of 0.35 s or more; keep 0.10 s either side). Never squeeze a brand name. The final word gets a 0.35 s tail. Durations computed from cut points use round(), so the last consonant survives; an item can never be longer than its asset (page 17).</span></div>
+  <div class="rule"><b class="n">5</b><span><b>Breaths.</b> Where two sentences run together with no gap, insert a 6 to 8 frame muted breath of the same shot. Use real silence from the next line's lead-in or the previous line's tail first; a still frame only when there is none.</span></div>
+  <div class="rule"><b class="n">6</b><span><b>Run the join audit.</b> Claude writes <code>cut.json</code> from the cut list it proposed (take, in-point, frames per item) and runs the script; you read the output. Move every "&lt;&lt;" join to the valley, the quietest point within 100 ms. Check the GAPS list for a word the recogniser mislabelled: on Ep2 it called "shop" an "uh", and striking the "uh" deleted "shop".</span></div>
+  <div class="term"><div class="bar"><i></i><i></i><i></i><span>terminal · skills/cooked-or-cracked/scripts/join_audit.py</span></div><pre><span class="p">$</span> python3 ~/.claude/skills/cooked-or-cracked/scripts/join_audit.py cut.json --render cut.wav
+<span class="c"># JOINS: "&lt;&lt;" means the cut sits inside speech. GAPS: removed stretches that still hold a word. PAUSES: under 0.15 s sounds rushed.</span></pre></div>
+  <div class="rule"><b class="n">7</b><span><b>One unprimed listen</b> of the rendered audio by a model that has not seen the cut list. Ask Claude to run it (Gemini 3.1 Pro with the key from page 9; the Gemini app with cut.wav uploaded works too): "Transcribe verbatim, include fillers and partial words, list cut-off words." Never put example errors in the prompt; it will report them whether or not they exist.</span></div>
+  <div class="rule"><b class="n">8</b><span><b>Show Henry the cut list, wait for "apply".</b> Then build. Verify on the ChatCut export itself: Claude cross-correlates each exported clip against its source and reports the offset per clip (anything but 0 ms is a mis-cut), and you listen once more.</span></div>
+  <div class="fail"><b>Never cut through a word.</b> "Higgs fie-" and "web-" cost Ep2 several rounds: the audio hole on page 7, and trusted transcript times.</div>
+  <div class="foot"><span>Cooked or Cracked · the editor's guide</span><span>page 16</span></div>
+</section>
+
+<!-- 17 PASSES 2-7 -->
+<section class="page">
+  <div class="kick">the passes · 2 to 7</div>
+  <h2>One job per pass, in this order</h2>
+  <p class="lead">Henry's order of work: flow and cut first, then animation, then sound, then colour. Each pass ends with a 720p preview to him and his notes.</p>
+  <table class="fx" style="font-size:9pt">
+    <tr><th>pass</th><th>the job</th><th>done means</th></tr>
+    <tr><td>2 · Reaction opener</td><td>Reviewed reel in the right window, pill, Henry muted, cut at the claim, sting after his hook line with the title.</td><td>First words by 0:03. No silent hold. Their audio, then his.</td></tr>
+    <tr><td>3 · Stamps</td><td>One paper stamp per key phrase: label, big word, icon badge. Top zone, or bottom while a table is up. Claude builds the episode's new MG assets first, as JSX in the ChatCut project.</td><td>No empty wall. Every stamp spelled as the source. Never the same phrase twice.</td></tr>
+    <tr><td>4 · Table, windows, cards</td><td>The table at the top when prices are the subject. Screen windows and paper cards at the word he names the thing. Speeds set per line.</td><td>Values pop on the spoken number. Nothing on the face. One frame MG per window position.</td></tr>
+    <tr><td>5 · Sound</td><td>Bubble pop on each entrance, click on each price card, impacts in the gap after the word. Music bed on its own track at -22 dB from after the sting, fade in 15 frames, fade out 45. Other SFX from ChatCut's sound library; Ep2 levels: pops and clicks -9, whoosh -12, ding -16, boom -19.</td><td>Reel and sting 1 to 2 LU above his voice, not 5 to 7. No SFX masks a word.</td></tr>
+    <tr><td>6 · Captions</td><td>ChatCut preset Paper Stack, Fraunces 900 uppercase, ink, orange active word, brand names spelled as the source. In the bottom band (y 1440 to 1740), only in dead-air windows: 1.5 s or more with no stamp in the bottom zone. Ep1 used them from 1:31; Ep2 shipped without.</td><td>Never over a stamp. Off unless the beat sheet asks for them.</td></tr>
+    <tr><td>7 · Colour</td><td>None. Skin smoothing 0.55 (Claude's Ep2 shader, copied per project) on the COLOUR 1 pixel-effect track under the supers.</td><td>The camera's original colour. No exposure, saturation, vignette or bands.</td></tr>
+  </table>
+  <div class="card" style="margin-top:6px"><div class="k">ChatCut gotchas (parameters Claude passes; you see them in its output and inspect_item)</div><ul class="tight" style="font-size:8.8pt;columns:2;column-gap:16px">
+      <li><code>ripple:true</code> shifts only the edited track; shift the others with <code>startDeltaFrames</code>.</li>
+      <li>An MG dropped on an occupied span silently moves to another track: pass <code>trackId</code>.</li>
+      <li>Moving or resizing an MG item can wipe its <code>propertyOverrides</code>. Re-set, then <code>inspect_item</code>.</li>
+      <li>An item can never be longer than its asset: floor the asset length (7.233 s is 216 frames, not 217).</li>
+      <li>Rows re-added by <code>apply_script</code> can inherit -60 dB: set <code>decibelAdjustment</code> 0 on every speech clip.</li>
+      <li>Library SFX fail with auto duration: import once, then place with an explicit <code>durationFrames</code>.</li></ul></div>
+  <div class="foot"><span>Cooked or Cracked · the editor's guide</span><span>page 17</span></div>
+</section>
+
+<!-- 18 EXPORT -->
+<section class="page">
+  <div class="kick">the passes · pass 8</div>
+  <h2><img class="ic lg" src="img/icons/rocket-2-bold.svg">Export, check, hand over</h2>
+  <p class="lead">ChatCut's export has changed behaviour from day to day on Henry's account, so the rule is: test one export, then pick the recipe. Claude runs every ffmpeg step below; you check the result.</p>
+  <div class="rule"><b class="n">1</b><span><b>Test one full export</b>, 1080x1920, 30 fps, captions off. Look at a graphic's edge at 2x.</span></div>
+  <div class="rule"><b class="n">2</b><span><b>If the graphics are transparent (the v8 rule):</b> one app export, plus a captions-only export when the beat sheet has captions. The episode's composite script (Ep1's was <code>composite-v8.sh</code>) overlays the caption band in the dead-air windows, levels the voice, and re-lays the clean reviewed reel into the opener window if the base shows green speckles. The normal case.</span></div>
+  <div class="rule"><b class="n">3</b><span><b>If the graphics sit on a green box (the account has no ChatCut Pro):</b> three passes (four with confetti), all 1080p 30 fps. Base: graphic tracks hidden, captions off. Graphics: tracks on, captions off. Captions: tracks hidden, captions on. Key with ffmpeg <code>colorkey</code>; chromakey keys the wrong thing. Any full-frame MG (confetti) needs its own pass, overlaid with <code>enable='between(t,start,end)'</code>. Recipe in <code>henry-scrapbook-reel/references/export.md</code>. If MG items overlap on the matte, they hide each other; ask Henry for the per-track recipe from the DET reel (his event reel, cut with the same skill).</span></div>
+  <div class="term"><div class="bar"><i></i><i></i><i></i><span>terminal · the graphics key from references/export.md (confetti 0.10:0.04, captions 0.14:0.10)</span></div><pre>[1:v]colorkey=0x005800:0.12:0.05,format=rgba,split[c][a];[a]alphaextract,erosion,erosion[m];[c][m]alphamerge[fg];[0:v][fg]overlay[v]</pre></div>
+  <div class="rule"><b class="n">4</b><span><b>Voice chain</b> on the composite: highpass 70 Hz, compressor 2.5:1 (threshold -24 dB, makeup 2), then two-pass loudnorm I=-14, TP=-1.5, LRA=7. Check with volumedetect: about -14 LUFS, peaks at or under -1.5 dBTP.</span></div>
+  <div class="rule"><b class="n">5</b><span><b>Re-encode with libx264 CRF 18</b>, yuv420p, AAC 192k. The app export is an intermediate (one day in September 2026 it came out HEVC 10-bit at 0.6 Mbps whatever codec was asked for). Every delivery file, 1080p or 4K, is the libx264 re-encode.</span></div>
+  <div class="rule"><b class="n">6</b><span><b>Check before hand-over.</b> A contact sheet of the whole cut (ffmpeg tile). Edges at 2x: no green, no fringes, inside the safe zones. Every super spelled against the source. Scoreboard from the sting to the end, save frame held 2 s, keyword stamp to the last frame.</span></div>
+  <div class="rule"><b class="n">7</b><span><b>Deliver</b> <code>05_cuts/UPLOAD-THIS-ep&lt;N&gt;-v&lt;x&gt;.mp4</code>, Ep2 also got a <code>FOR-INSTAGRAM/</code> folder: a 4K pair (a 2160x3840 app export of the same timeline, re-encoded the same way, with and without music) and a phone pair (1080p at about 2.4 Mbps, under 30 MB). UPLOAD-THIS is the master; when the pairs exist Henry posts from them (Ep2: the 4K file). Ask him whether the episode needs them. Keep the export passes and the composite script next to the cut so it can be rebuilt.</span></div>
+  <div class="two" style="margin-top:8px">
+    <div class="card win"><div class="k">previews for Henry</div><p style="margin:4px 0 0;font-size:9.6pt">720p, CRF 25, about 25 MB (the upload cap is 30 MB). Never a 540p proxy: he judges quality from what you send (his note from the DET reel, 25 Sep 2026; not yet in the skill). Name them <code>ep&lt;N&gt;-pass&lt;P&gt;-v&lt;x&gt;-preview.mp4</code>.</p></div>
+    <div class="card"><div class="k">HLG takes</div><p style="margin:4px 0 0;font-size:9.6pt">The camera records HEVC 10-bit HLG (bt2020, arib-std-b67). ChatCut tone-maps it before any shader, so Ep1's grade numbers wash the face out. Check with <code>ffprobe … color_transfer</code>. The current rule makes this moot: no grade.</p></div>
+  </div>
+  <div class="foot"><span>Cooked or Cracked · the editor's guide</span><span>page 18</span></div>
+</section>
+
+<!-- 19 WRITING RULES -->
+<section class="page">
+  <div class="kick">words on screen</div>
+  <h2><img class="ic lg" src="img/icons/pen-bold.svg">Writing rules for every super and caption</h2>
+  <p class="lead">From <code>skills/cooked-or-cracked/references/writing-rules.md</code>. The viewer is on a phone, on the Reels tab, sound on, no context. Every line must be followable on first hearing and readable on first sight.</p>
+  <div class="two" style="font-size:9.4pt">
+    <div class="card win"><div class="k">do</div><ul class="tight">
+      <li>One idea per sentence. Under 12 words spoken, under 6 words on a super.</li>
+      <li>Say the number, show the number, at the same moment.</li>
+      <li>Name the tool once on screen and once out loud, at the same moment.</li>
+      <li>Receipts only: "4 cents", "11 minutes", "it found the broken button".</li>
+      <li>Plain verbs: works, costs, found, missed, took.</li>
+      <li>UK English. Present tense for what the screen shows.</li>
+      <li>If Henry's setup caused a failure, say "my setup".</li>
+      <li>Dates in the caption and the pinned comment, never in the audio.</li></ul></div>
+    <div class="card"><div class="k">do not</div><ul class="tight">
+      <li>No rhetorical reversals: "it is not X, it is Y". Say the fact.</li>
+      <li>No hype words: insane, crazy, game changer, honestly, literally, mind-blowing, shocking.</li>
+      <li>No throat-clearing: "so basically", "let me show you", "here is the thing".</li>
+      <li>No questions the video then answers.</li>
+      <li>No em dashes, no exclamation marks, no emoji in supers.</li>
+      <li>No time-bound words in speech or labels: last week, today, just launched.</li>
+      <li>No adjectives before a number: "62 cents", not "a whopping 62 cents".</li>
+      <li>Never the same key phrase on two stamps.</li></ul></div>
+  </div>
+  <h3 style="margin-top:14px">What this means for the stamps you write</h3>
+  <p style="font-size:10pt">Henry says the line his way; the stamp is the receipt in six words or fewer. The label is the context in Kalam, the word is the fact in Fraunces. Examples that shipped:</p>
+  <table class="fx">
+    <tr><th>he said</th><th>label</th><th>word</th></tr>
+    <tr><td>"Kie is cheaper by 10 cents."</td><td>Kie is</td><td>10 CENTS CHEAPER</td></tr>
+    <tr><td>"...doesn't have a website. It's called Pompette."</td><td>the test subject</td><td>POMPETTE</td></tr>
+    <tr><td>"Why not, let's put in Higgsfield."</td><td>one more tool</td><td>HIGGSFIELD</td></tr>
+    <tr><td>"I'd charge them $1,000 for the website."</td><td>the website</td><td>$1,000</td></tr>
+    <tr><td>"Comment down DESIGN and I'll send you my entire workflow."</td><td>comment</td><td>DESIGN</td></tr>
+  </table>
+  <p class="small2" style="margin-top:8px"><b>Self-check before you show Henry anything.</b> Read every super out loud once. If it needs two lines to fit the stamp, shorten it. If it survives with the adjective removed, remove it. If Henry said "crazy" on camera, the audio stays as he said it; the stamp does not repeat it.</p>
+  <div class="foot"><span>Cooked or Cracked · the editor's guide</span><span>page 19</span></div>
+</section>
+
+<!-- 20 STANDING NOTES -->
+<section class="page">
+  <div class="kick">Henry's standing notes</div>
+  <h2><img class="ic lg" src="img/icons/danger-triangle-bold.svg">Things he has already called out once</h2>
+  <p class="lead">Each of these cost a review round on Ep1 or Ep2. They are in the skills with the date. Do not make him say them again. When he gives a new note, it becomes a dated line in the skill and the learning log; until it is in the repo, it applies to this episode only.</p>
+  <table class="fx" style="font-size:9pt">
+    <tr><th>the note</th><th>what it means for the cut</th><th>when</th></tr>
+    <tr><td>"It's so weird" (window on the left, as in Ep1)</td><td>The reviewed reel's window goes on the right, beside the chin, as big as fits without touching the face.</td><td>27 Sep, Ep2 pass 4</td></tr>
+    <tr><td>No colour grade</td><td>He rejected a brightened grade, a darker grade and a wall-darkening pass. Original camera colour. Skin smoothing 0.55 only.</td><td>27 Sep, Ep2</td></tr>
+    <tr><td>Spell-check every super</td><td>Repo and brand names exactly as the source: playwright-cli, awesome-design-md. The chips had shortened names.</td><td>27 Sep, Ep2</td></tr>
+    <tr><td>Scoreboard always on the side</td><td>From the end of the sting to the end of the video, like Ep1.</td><td>27 Sep, Ep2</td></tr>
+    <tr><td>Show the tools running</td><td>Real runs from his Mac: terminal output, result screenshots.</td><td>27 Sep, Ep2</td></tr>
+    <tr><td>"It feels rushed"</td><td>Add the real-life beat after the demo. Sentence breaks about 0.28 s. Breaths where sentences run together.</td><td>26 Sep, Ep2 pass 1</td></tr>
+    <tr><td>"Too many long pauses"</td><td>0.28 s after a sentence, 0.16 s inside. Squeeze silence only, never a word or a brand name.</td><td>27 Sep, Ep2 pass 2</td></tr>
+    <tr><td>"You should have me typing at the background while we have a picture in picture look"</td><td>When the screen recording plays, he stays on screen. The current form: he is full frame, the screen is in the top-left window.</td><td>27 Sep, Ep2 pass 2</td></tr>
+    <tr><td>First words by 0:03, sting overlaps</td><td>Six seconds of window plus sting hold cost Ep1 half its audience. First words by 0:03, sting after the hook line.</td><td>26 Sep, Ep1 retro</td></tr>
+    <tr><td>Keep only what a tool did</td><td>Cut "I wish", "it didn't", "I actually wanted it to be 3D". The business beat is the price line only.</td><td>27 Sep, Ep2 rebuild 8</td></tr>
+    <tr><td>Order of work</td><td>Flow and cut, then animation, then sound and SFX, then colour.</td><td>27 Sep, Ep2</td></tr>
+    <tr><td>"I don't talk like that"</td><td>He does not read scripts. He reads pointers. Cut what he said and move the supers to match.</td><td>26 Sep, Ep2</td></tr>
+    <tr><td>Evergreen wording</td><td>"Last week" was cut from Ep1's audio and label. No time-bound words anywhere in the video.</td><td>25 Sep, Ep1 v7</td></tr>
+    <tr><td>The sting is sung</td><td>Autotuned vocal, near-silent backing, 2.6 s, abrupt start. Spoken tags and busy beds were rejected. Version 3 is final.</td><td>25 Sep, Ep1 v7</td></tr>
+  </table>
+  <div class="foot"><span>Cooked or Cracked · the editor's guide</span><span>page 20</span></div>
+</section>
+
+<!-- 21 REVIEW LOOP -->
+<section class="page">
+  <div class="kick">the review loop</div>
+  <h2><img class="ic lg" src="img/icons/chat-round-dots-bold.svg">How a pass gets approved, and how the series learns</h2>
+  <div class="flow">
+    <div class="box">You build the pass<small>one job</small></div><div class="arr">→</div>
+    <div class="box">720p preview<small>under 30 MB, named by pass</small></div><div class="arr">→</div>
+    <div class="box">Henry's notes<small>short, in his words</small></div><div class="arr">→</div>
+    <div class="box">You fix, bump v&lt;x&gt;<small>never overwrite</small></div><div class="arr">→</div>
+    <div class="box">"apply"<small>then the next pass</small></div>
+  </div>
+  <div class="two">
+    <div class="card"><div class="k">how to send a pass</div><ul class="tight">
+      <li>One file, one message: what changed since the last version, in three lines, and where to look (timestamps).</li>
+      <li>Anything you are unsure of, ask as a choice: "A or B at 0:41".</li>
+      <li>If a rule and the footage disagree, say which you followed and why.</li>
+      <li>Never send a pass you have not watched end to end with the sound on, on a phone.</li></ul></div>
+    <div class="card"><div class="k">how to read his notes</div><ul class="tight">
+      <li>"Feels rushed" = breaths at 0.28 s and the real-life beat is missing.</li>
+      <li>"Long pauses" = squeeze to 0.28 / 0.16, silence only.</li>
+      <li>"Overblown" = the shirt is clipping; you graded. Remove the grade.</li>
+      <li>"Weird" = a layout rule is broken. Check the window side and the face first.</li>
+      <li>"Abrupt", "words cut off" = a join inside a word, or the audio hole. Back to join_audit.</li></ul></div>
+  </div>
+  <h3 style="margin-top:14px">After posting: the retro that changes the rules</h3>
+  <div class="flow">
+    <div class="box">48 h of insights<small>Henry sends screenshots</small></div><div class="arr">→</div>
+    <div class="box">retro file<small>06_research/ep&lt;N&gt;-insights-retro.md</small></div><div class="arr">→</div>
+    <div class="box">learning log<small>dated entry, newest first</small></div><div class="arr">→</div>
+    <div class="box">SKILL.md<small>if a rule changed</small></div><div class="arr">→</div>
+    <div class="box">sync.sh<small>you pull before the next episode</small></div>
+  </div>
+  <table class="fx" style="margin-top:6px">
+    <tr><th>Ep1 number</th><th>value</th><th>what it changed</th></tr>
+    <tr><td>Average watch</td><td>31 s of 132 s (23%)</td><td>Target 60 to 75 s. Verdict earlier: the series default is 45 to 55%.</td></tr>
+    <tr><td>Gone by 0:08</td><td>about 50%</td><td>A claim heard from 0:00, Henry's first words by 0:03. Sting overlaps the teaser; no silent hold.</td></tr>
+    <tr><td>Saves</td><td>377 (3.5%), the top action</td><td>A save frame held 2 s on purpose.</td></tr>
+    <tr><td>Follows</td><td>118 (1.1%)</td><td>Keep the format. Do not drift.</td></tr>
+    <tr><td>Audience</td><td>India 22%, US 11%, men 97%</td><td>Plain English, tool names as text, prices as numbers.</td></tr>
+  </table>
+  <p class="small2" style="margin-top:8px">Numbers to beat on the next episode: average watch 40 s or better on a 70 s cut, saves 4%+, follows 1.5%+, comments 3%+ with the comment gate.</p>
+  <div class="foot"><span>Cooked or Cracked · the editor's guide</span><span>page 21</span></div>
+</section>
+
+<!-- 22 CHECKLIST -->
+<section class="page cheat">
+  <span style="display:inline-block;border:1.5px solid var(--paper);border-radius:30px;padding:4px 14px;font-weight:800;font-size:9.5pt;letter-spacing:2px;text-transform:uppercase">Cooked or Cracked · save this page</span>
+  <h1 style="margin:10px 0 4px;font-size:30pt">The episode checklist <i>for editors.</i></h1>
+  <p style="color:#D9D6D1;margin:0 0 12px">Tick every line before the next pass. The cut is done when the last box is done.</p>
+  <div class="two">
+    <div>
+      <div class="cs"><div class="h">Before pass 1 <small>read, scan, target</small></div><ul>
+        <li>git pull, skills copied and scanned, project targeted</li><li>Learning log read, newest entry first</li><li>Episode folder read: script, pointers, de-myth sheet, audit, delivery reviews</li><li>Takes scanned for audio holes</li><li>Transcript brand names fixed</li></ul></div>
+      <div class="cs"><div class="h">Pass 1 <small>speech</small></div><ul>
+        <li>Full sentences, tangents out, fillers out, no word cut</li><li>Real-life beat kept</li><li>Pauses 0.28 / 0.16, breaths from real silence</li><li>join_audit clean, GAPS empty</li><li>Unprimed verbatim listen clean</li><li>Cut list shown, "apply" received</li></ul></div>
+      <div class="cs"><div class="h">Passes 2 to 7 <small>layout, stamps, sound, captions, colour</small></div><ul>
+        <li>Reel window right, pill, first words by 0:03, sting after the hook line</li><li>Scoreboard from the sting to the last frame, tick on the verdict word</li><li>No empty wall, nothing on the face, inside the safe zone</li><li>Tools shown running, names as the source; values pop on the spoken number</li><li>Captions in dead air only; no grade, skin smoothing 0.55</li></ul></div>
+    </div>
+    <div>
+      <div class="cs"><div class="h">The opinion <small>verdict, save frame, ask</small></div><ul>
+        <li>Verdict and score once; confetti only if CRACKED</li><li>Save frame held 2 s alone</li><li>Keyword stamp to the last frame, Henry's keyword</li><li>No dates or hype words on a stamp</li></ul></div>
+      <div class="cs"><div class="h">Pass 8 <small>export and hand-over</small></div><ul>
+        <li>One test export at 2x, then the right recipe (v8 or three-pass)</li><li>Voice -14 LUFS, peaks under -1.5 dBTP</li><li>libx264 CRF 18; pairs if Henry asked</li><li>Contact sheet, edges, spelling, safe zones checked</li><li>UPLOAD-THIS-ep&lt;N&gt;-v&lt;x&gt;.mp4 in 05_cuts with the passes and the script</li></ul></div>
+      <div class="cs" style="background:#FFF6EF"><div class="h">Every preview to Henry <small>the habit</small></div><ul>
+        <li>720p CRF 25, under 30 MB, watched on a phone; three lines: what changed, where to look, what you need</li></ul></div>
+      <div class="cs" style="background:#FFF6EF"><div class="h">Never <small>the repo rule</small></div><ul>
+        <li>Push, edit or share the repo</li><li>Change a colour, font, timing or sound in a skill</li><li>Regenerate the sting</li><li>Post the episode</li></ul></div>
+    </div>
+  </div>
+  <div class="foot"><span>Cooked or Cracked · the editor's guide</span><span>page 22</span></div>
+</section>
+
+<!-- 23 GLOSSARY -->
+<section class="page">
+  <div class="kick">glossary</div>
+  <h2>The words in the repo</h2>
+  <div class="gl" style="margin-top:10px">
+    <p><b>Apply</b> Henry's word for "go ahead and build it". Nothing changes on the timeline before it.</p>
+    <p><b>Audit</b> The creator-audit report: Gemini watching the reviewed reel, plus the baseline maths.</p>
+    <p><b>Baseline, multiple</b> The creator's median plays over their last 12 posts, and how many times the reviewed reel beat it.</p>
+    <p><b>Beat sheet</b> The script's table: time, say, screen, super.</p>
+    <p><b>Breath</b> A 6 to 8 frame muted piece of the same shot inserted where two sentences run together.</p>
+    <p><b>Comment gate</b> "Comment KEYWORD and I'll send it." The keyword triggers an automated DM with the guide.</p>
+    <p><b>Composite</b> The ffmpeg step that overlays export passes, levels the voice and re-encodes for delivery.</p>
+    <p><b>Cooked / cracked</b> Fails the claim / lives up to it. Also the scoreboard's two boxes.</p>
+    <p><b>Dead air</b> A stretch of 1.5 s or more with no stamp in the bottom zone. The only place captions go.</p>
+    <p><b>De-myth sheet</b> Each claim as a row: what he says, what it really is, install line, cost, pass and fail written before the test.</p>
+    <p><b>Delivery review</b> Gemini's scores of every attempt in a camera take, with the self-cues log.</p>
+    <p><b>Green matte</b> ChatCut exporting graphics on a solid green box instead of transparent. Keyed out with colorkey.</p>
+    <p><b>Join audit</b> <code>join_audit.py</code>. Checks every cut point for speech, removed words and pause length.</p>
+    <p><b>Key phrase</b> The words in a line worth a stamp. One stamp each, never repeated.</p>
+    <p><b>Learning log</b> The dated list of what each episode taught. Newest first. Read it before every episode.</p>
+    <p><b>MG, motion graphic</b> A ChatCut asset written in JSX with props. Stamps, table, scoreboard, confetti, title, frames.</p>
+    <p><b>Pass</b> One job on the timeline, approved before the next. Eight per episode.</p>
+    <p><b>PiP, window</b> A small framed video inside the frame: the reviewed reel in the opener, screen recordings during the test.</p>
+    <p><b>Pointers</b> The bullets Henry reads on camera instead of a script.</p>
+    <p><b>Props, propertyOverrides</b> The editable values on one MG item: label, word, icon, tickAt.</p>
+    <p><b>Real-life beat</b> Who can use this and how. After the demo, before the price.</p>
+    <p><b>Receipt</b> A time, a price, or what the screen showed. The only kind of proof the series uses.</p>
+    <p><b>Safe zone</b> The part of a 1080x1920 frame Instagram does not cover with its own UI.</p>
+    <p><b>Save frame</b> The scorecard held 2 s alone so people screenshot it.</p>
+    <p><b>Scoreboard</b> The COOKED / CRACKED checkbox card on the left wall, ticked on the verdict.</p>
+    <p><b>Skill</b> A folder Claude Code reads before it works: SKILL.md plus references.</p>
+    <p><b>Super, stamp</b> A super is any on-screen graphic the script calls for. A stamp is the torn-paper super with a Kalam label, a Fraunces word and an icon badge.</p>
+    <p><b>Sting, jingle</b> The 2.6 s sung "Cooked or cracked?" after Henry's hook line. Version 3, final.</p>
+    <p><b>sync.sh</b> Henry's script that copies skills and episode text into the repo and pushes. His only.</p>
+    <p><b>Unprimed listen</b> A verbatim transcription of the rendered audio by a model that was not told what to look for.</p>
+    <p><b>UPLOAD-THIS</b> The master deliverable. Henry posts it, or the FOR-INSTAGRAM pair made from it.</p>
+    <p><b>v8 rule</b> Test one export; if graphics come out transparent, one export plus a captions band. Otherwise three-pass keying. Named after Ep1's v8 cut.</p>
+  </div>
+  <div class="foot"><span>Cooked or Cracked · the editor's guide</span><span>page 23</span></div>
+</section>
+
+<!-- 24 SMALL PRINT -->
+<section class="page">
+  <div class="kick">the small print</div>
+  <h2>Who this is for, and the sources</h2>
+  <div class="two" style="margin-top:12px">
+    <div class="card win"><div class="k">this guide is for you if</div><p style="margin:4px 0 0;font-size:10pt">You are cutting Cooked or Cracked for Henry, or learning to. You can run Claude Code, you can open ChatCut Desktop, and you can read a folder before touching a timeline. You are fine with a template that does not bend.</p></div>
+    <div class="card"><div class="k">not yet if</div><p style="margin:4px 0 0;font-size:10pt">You want to bring your own look. This series has one, and it is measured. Learn to hit it exactly first; the place to try ideas is a preview with "A or B". Also not for anyone outside the team: the repo is private.</p></div>
+  </div>
+  <div class="note ruled" style="margin-top:14px">
+    <div class="hand mute">about the numbers in this guide</div>
+    <p style="font-size:9.6pt;margin:4px 0 0">Every layout number, level, timing and rule here was read from the repo on 28 September 2026: the SOP, the four skills, the learning log and the Ep1 and Ep2 folders. The repo changes after every retro, and the skill files win over this guide wherever they differ. The Higgsfield plan price was checked on 27 September 2026 and changes at the company's discretion.</p>
+  </div>
+  <div class="card" style="margin-top:14px"><div class="k">where each page came from</div>
+    <ul class="src" style="margin:4px 0 0;padding-left:16px;font-size:9pt">
+      <li>The pipeline and owners: <code>sop/00-overview.md</code> to <code>sop/08-retro.md</code>.</li>
+      <li>The audience, the verdict format, the writing rules, the supers, the learning log: <code>skills/cooked-or-cracked/SKILL.md</code> and its <code>references/</code>.</li>
+      <li>The passes, layout numbers, style constants, gotchas, export recipe and Henry's dated notes: <code>skills/henry-scrapbook-reel/SKILL.md</code>, <code>references/export.md</code>, <code>references/mg-code.md</code>.</li>
+      <li>The worked examples and the frames: <code>episodes/ep1_nateherk/</code> (v8 cut, 25 Sep 2026) and <code>episodes/ep2_nateherk-frontend/</code> (FINAL2 cut, 27 Sep 2026): cut lists, shot maps, delivery reviews, the Ep1 ChatCut prompt set, the de-myth sheet, the DESIGN guide v2, and the Ep1 retro (filed in the Ep2 folder).</li>
+    </ul></div>
+  <div class="card" style="margin-top:12px"><div class="k">where the repo disagrees with itself (this guide took the newer line; Henry settles it in the skill)</div><ul class="src" style="margin:4px 0 0;padding-left:16px;font-size:9pt"><li>Opener: <code>sop/05-script.md</code> says first spoken line at 0:00; the learning log's Ep2 entry says the creator's claim first, Henry at 0:03.</li><li>Verdict: series skill 45 to 55% of runtime; scrapbook skill Ep2 v8 rule: once, just before the CTA.</li><li>Picture in picture: learning log says recording full frame, Henry low-left; scrapbook v8 rule says Henry full frame, screen top-left.</li><li>Length: 60 to 75 s (series skill), 60 to 130 s (scrapbook pass 1), 1:45 or less (Ep2 v8), 2:00 (Ep2 pass 2).</li><li>From the Drive folder, not the repo: Ep2's length (1:29, measured on FINAL2), the FOR-INSTAGRAM pairs, the preview-size note.</li></ul></div>
+  <p style="margin-top:8px;font-size:10pt">If a page here disagrees with a skill file, the skill file is right and this guide gets fixed. Say so with the page number and the file.</p>
+  <p class="serif" style="font-size:20pt;font-weight:900;margin:2px 0 0">Henry Chua<span class="coral">.</span></p>
+  <div class="foot"><span>Cooked or Cracked · the editor's guide</span><span>page 24</span></div>
+</section>
+
+<script>
+document.querySelectorAll('.prompt p, .term pre, .cs code, td code, .fail code').forEach(function(el){
+  Array.from(el.childNodes).forEach(function(n){
+    if(n.nodeType!==3) return;
+    var parts=n.textContent.split(/(\S*-\S*)/);
+    if(parts.length<2) return;
+    var frag=document.createDocumentFragment();
+    parts.forEach(function(p){ if(/\S*-\S*/.test(p)&&p.indexOf('-')>=0){ var s=document.createElement('span'); s.className='nb'; s.textContent=p; frag.appendChild(s);} else frag.appendChild(document.createTextNode(p)); });
+    n.replaceWith(frag);
+  });
+});
+</script>
+</body>
+</html>

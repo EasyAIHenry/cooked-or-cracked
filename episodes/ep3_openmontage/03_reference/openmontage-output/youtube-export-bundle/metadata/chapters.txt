@@ -1,0 +1,8 @@
+0:00 - Perfect in CAD, jammed in reality
+0:05 - Build Failure Forensics
+0:12 - Nominal size vs manufacturing range
+0:27 - Tolerance vs clearance
+0:41 - Three kinds of fit
+0:54 - Print a fit gauge first
+1:03 - Use the winning value
+1:09 - Next case: why parts crack

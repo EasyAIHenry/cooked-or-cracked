@@ -1,0 +1,83 @@
+{
+  "version": "1.0",
+  "cuts": [
+    {"id": "cut-01", "source": "snapshot-01", "in_seconds": 0, "out_seconds": 5, "layer": "primary", "transform": {"scale": 1.06, "position": "center-right", "animation": "controlled-macro-dolly"}, "transition_in": "hard-open-on-motion", "transition_out": "caliper-snap", "transition_duration": 0, "backgroundColor": "#0B0D10", "reason": "Tactile paradox before explanation."},
+    {"id": "cut-02", "source": "snapshot-02", "in_seconds": 5, "out_seconds": 12, "layer": "primary", "transform": {"scale": 1, "position": "center", "animation": "weighted-card-slide-and-stamp"}, "transition_in": "impact-cut", "transition_out": "brass-jaw-wipe", "transition_duration": 0, "backgroundColor": "#0B0D10", "reason": "Series title card and pace reset."},
+    {"id": "cut-03", "source": "snapshot-03", "in_seconds": 12, "out_seconds": 18, "layer": "primary", "transform": {"scale": 1, "position": "center", "animation": "dimension-line-draw"}, "transition_in": "construction-line", "transition_out": "range-split", "transition_duration": 0, "backgroundColor": "#F3EBDD", "reason": "Establish nominal geometry."},
+    {"id": "cut-04", "source": "snapshot-04", "in_seconds": 18, "out_seconds": 27, "layer": "primary", "transform": {"scale": 1, "position": "center", "animation": "tolerance-halo-collision"}, "transition_in": "range-peel", "transition_out": "collision-unfold", "transition_duration": 0, "backgroundColor": "#0B0D10", "reason": "Visualize worst-case overlap."},
+    {"id": "cut-05", "source": "snapshot-05", "in_seconds": 27, "out_seconds": 41, "layer": "primary", "transform": {"scale": 1, "position": "center", "animation": "range-breath-lock-open"}, "transition_in": "horizontal-unfold", "transition_out": "band-fold", "transition_duration": 0, "backgroundColor": "#F3EBDD", "reason": "Conceptual hinge: tolerance versus clearance."},
+    {"id": "cut-06", "source": "snapshot-06", "in_seconds": 41, "out_seconds": 54, "layer": "primary", "transform": {"scale": 1, "position": "center", "animation": "three-fit-sequential-mechanics"}, "transition_in": "bay-fold", "transition_out": "press-platen-cut", "transition_duration": 0, "backgroundColor": "#0B0D10", "reason": "Three fit classes demonstrated as jobs."},
+    {"id": "cut-07", "source": "snapshot-07", "in_seconds": 54, "out_seconds": 63, "layer": "primary", "transform": {"scale": 1, "position": "center", "animation": "five-pin-gauge-test"}, "transition_in": "platen-match-cut", "transition_out": "rack-focus-dive", "transition_duration": 0, "backgroundColor": "#151515", "reason": "Concrete low-cost action for builders."},
+    {"id": "cut-08", "source": "snapshot-08", "in_seconds": 63, "out_seconds": 69, "layer": "primary", "transform": {"scale": 1, "position": "center", "animation": "verified-fit-glide"}, "transition_in": "interface-dive", "transition_out": "fracture-cut", "transition_duration": 0, "backgroundColor": "#F3EBDD", "reason": "Payoff and second use of the red clearance motif."},
+    {"id": "cut-09", "source": "snapshot-09", "in_seconds": 69, "out_seconds": 75, "layer": "primary", "transform": {"scale": 1, "position": "center", "animation": "fracture-path-reveal"}, "transition_in": "hard-fracture", "transition_out": "hold", "transition_duration": 0, "backgroundColor": "#0B0D10", "reason": "Episode-two setup."}
+  ],
+  "audio": {
+    "narration": {
+      "segments": [
+        {"asset_id": "narration-s1", "start_seconds": 0, "end_seconds": 4.835},
+        {"asset_id": "narration-s2", "start_seconds": 5, "end_seconds": 9.702},
+        {"asset_id": "narration-s3", "start_seconds": 12, "end_seconds": 24.729},
+        {"asset_id": "narration-s4", "start_seconds": 27, "end_seconds": 37.312},
+        {"asset_id": "narration-s5", "start_seconds": 41, "end_seconds": 53.094},
+        {"asset_id": "narration-s6", "start_seconds": 54, "end_seconds": 65.903},
+        {"asset_id": "narration-s7", "start_seconds": 69, "end_seconds": 74.622}
+      ]
+    },
+    "music": {
+      "asset_id": "score-source",
+      "volume": 0.27,
+      "fade_in_seconds": 0.25,
+      "fade_out_seconds": 3,
+      "ducking": {"enabled": true, "threshold_db": -34, "reduction_db": -11, "attack_ms": 120, "release_ms": 450}
+    },
+    "sfx": []
+  },
+  "subtitles": {
+    "enabled": true,
+    "style": "word-by-word",
+    "source": "word-captions-json",
+    "font": "SF Compact / Arial",
+    "font_size": 44,
+    "color": "#F3EBDD",
+    "outline_color": "#000000",
+    "background": "#06080ADA",
+    "position": "bottom-center",
+    "max_words_per_line": 5
+  },
+  "transitions": [
+    {"type": "hard-open-on-motion", "at_seconds": 0, "duration_seconds": 0},
+    {"type": "caliper-snap", "at_seconds": 5, "duration_seconds": 0},
+    {"type": "construction-line", "at_seconds": 12, "duration_seconds": 0},
+    {"type": "range-peel", "at_seconds": 18, "duration_seconds": 0},
+    {"type": "horizontal-unfold", "at_seconds": 27, "duration_seconds": 0},
+    {"type": "bay-fold", "at_seconds": 41, "duration_seconds": 0},
+    {"type": "platen-match-cut", "at_seconds": 54, "duration_seconds": 0},
+    {"type": "interface-dive", "at_seconds": 63, "duration_seconds": 0},
+    {"type": "hard-fracture", "at_seconds": 69, "duration_seconds": 0}
+  ],
+  "renderer_family": "animation-first",
+  "render_runtime": "ffmpeg",
+  "composition_mode": "atelier",
+  "bespoke": {
+    "entry": "projects/faceless-builder-ep1/index.tsx",
+    "composition_id": "BuildFailureForensics",
+    "art_direction": "projects/faceless-builder-ep1/art-direction.md",
+    "props_path": "/Users/henrychua/coc-ep3-test/OpenMontage/projects/faceless-builder-ep1/artifacts/props.json",
+    "public_dir": "/Users/henrychua/coc-ep3-test/OpenMontage/projects/faceless-builder-ep1/public",
+    "scale": 1,
+    "crf": 18,
+    "concurrency": 8
+  },
+  "slideshow_risk_score": {"average": 0, "verdict": "strong"},
+  "metadata": {
+    "duration_seconds": 75,
+    "fps": 30,
+    "compose_target": {"width": 1920, "height": 1080},
+    "loudnorm_target": -14,
+    "proposal_render_runtime": "remotion",
+    "runtime_override_decision_id": "d-014",
+    "runtime_override_gate": "G5F",
+    "runtime_override_reason": "Both bundled Chromium and system Chrome were denied macOS Mach-port registration by the managed host sandbox.",
+    "delivery_promise": {"duration_min_seconds": 60, "duration_max_seconds": 90, "word_level_captions": true, "music": true, "narration": true}
+  }
+}

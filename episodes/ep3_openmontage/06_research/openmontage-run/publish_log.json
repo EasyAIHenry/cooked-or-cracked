@@ -1,0 +1,32 @@
+{
+  "version": "1.0",
+  "entries": [
+    {
+      "platform": "youtube",
+      "status": "exported",
+      "export_path": "projects/faceless-builder-ep1/exports/youtube",
+      "timestamp": "2026-09-27T22:15:53.630915+00:00",
+      "metadata_used": {
+        "title": "Why Perfect Parts Never Fit (Tolerance Explained)",
+        "description": "A part can be perfect in CAD and still jam in real life. In 75 seconds, learn the difference between tolerance and clearance, when to use clearance, transition, and interference fits, and why a tiny fit gauge beats a universal magic number.\n\nChapters:\n0:00 Perfect in CAD, jammed in reality\n0:05 Build Failure Forensics\n0:12 Nominal size vs manufacturing range\n0:27 Tolerance vs clearance\n0:41 Three kinds of fit\n0:54 Print a fit gauge first\n1:03 Use the winning value\n1:09 Next case: why parts crack\n\nSubscribe for short, visual build-failure investigations for makers, engineers, and hardware builders.",
+        "hashtags": ["#Engineering", "#3DPrinting", "#CAD", "#Maker"],
+        "chapters": [
+          {"start_seconds": 0, "title": "Perfect in CAD, jammed in reality"},
+          {"start_seconds": 5, "title": "Build Failure Forensics"},
+          {"start_seconds": 12, "title": "Nominal size vs manufacturing range"},
+          {"start_seconds": 27, "title": "Tolerance vs clearance"},
+          {"start_seconds": 41, "title": "Three kinds of fit"},
+          {"start_seconds": 54, "title": "Print a fit gauge first"},
+          {"start_seconds": 63, "title": "Use the winning value"},
+          {"start_seconds": 69, "title": "Next case: why parts crack"}
+        ]
+      },
+      "visibility": "private"
+    }
+  ],
+  "metadata": {
+    "upload_performed": false,
+    "package_contains": ["video", "subtitles", "thumbnail", "description", "chapters", "tags", "metadata"],
+    "provider_cost_usd": 0
+  }
+}

@@ -1,0 +1,22 @@
+A part can be perfect in CAD and still jam in real life. In 75 seconds, learn the difference between tolerance and clearance, when to use clearance, transition, and interference fits, and why a tiny fit gauge beats a universal magic number.
+
+Chapters:
+0:00 Perfect in CAD, jammed in reality
+0:05 Build Failure Forensics
+0:12 Nominal size vs manufacturing range
+0:27 Tolerance vs clearance
+0:41 Three kinds of fit
+0:54 Print a fit gauge first
+1:03 Use the winning value
+1:09 Next case: why parts crack
+
+Subscribe for short, visual build-failure investigations for makers, engineers, and hardware builders.
+
+0:00 - Perfect in CAD, jammed in reality
+0:05 - Build Failure Forensics
+0:12 - Nominal size vs manufacturing range
+0:27 - Tolerance vs clearance
+0:41 - Three kinds of fit
+0:54 - Print a fit gauge first
+1:03 - Use the winning value
+1:09 - Next case: why parts crack

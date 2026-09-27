@@ -1,0 +1,6 @@
+{
+  "durationSeconds": 75,
+  "audioPath": "audio/final-mix.wav",
+  "hookImagePath": "images/hook-jammed-fit.png",
+  "captionsPath": "data/captions-word-level.json"
+}

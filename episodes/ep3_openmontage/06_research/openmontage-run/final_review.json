@@ -1,0 +1,83 @@
+{
+  "version": "1.0",
+  "output_path": "renders/why-perfect-parts-never-fit-upload.mp4",
+  "status": "pass",
+  "checks": {
+    "technical_probe": {
+      "valid_container": true,
+      "duration_seconds": 75,
+      "resolution": "1920x1080",
+      "fps": 30,
+      "has_audio": true,
+      "codec": "h264/aac",
+      "file_size_bytes": 4894032,
+      "issues": []
+    },
+    "visual_spotcheck": {
+      "frames_sampled": 9,
+      "frame_paths": [
+        "review-frames/frame_0000.png",
+        "review-frames/frame_0001.png",
+        "review-frames/frame_0002.png",
+        "review-frames/frame_0003.png",
+        "review-frames/frame_0004.png",
+        "review-frames/frame_0005.png",
+        "review-frames/frame_0006.png",
+        "review-frames/frame_0007.png",
+        "review-frames/frame_0008.png"
+      ],
+      "black_frames_detected": false,
+      "broken_overlays": false,
+      "missing_assets": false,
+      "unreadable_text": false,
+      "issues": []
+    },
+    "audio_spotcheck": {
+      "narration_present": true,
+      "music_present": true,
+      "unexpected_silence": false,
+      "clipping_detected": false,
+      "mix_intelligible": true,
+      "issues": []
+    },
+    "promise_preservation": {
+      "delivery_promise_honored": true,
+      "renderer_family_used": "animation-first",
+      "render_runtime_used": "ffmpeg",
+      "runtime_swap_detected": true,
+      "runtime_swap_check": "detected — approved runtime override d-014 at Gate G5F after both bundled Chromium and system Chrome were denied by the managed macOS sandbox",
+      "motion_ratio_actual": 1,
+      "silent_downgrade_detected": false,
+      "issues": []
+    },
+    "subtitle_check": {
+      "subtitles_expected": true,
+      "subtitles_present": true,
+      "coverage_ratio": 1,
+      "timing_drift_detected": false,
+      "issues": []
+    },
+    "transcript_comparison": {
+      "transcript_matches_script": true,
+      "word_accuracy": 0.9521,
+      "issues": ["The base ASR model produced minor homophone substitutions in technical phrases, while the burned captions use the corrected approved script and actual word timing map."]
+    },
+    "atelier": {
+      "stock_reuse_detected": false,
+      "offending_imports": [],
+      "art_direction_declared": true,
+      "art_direction": "Measured Friction: graphite field, warm drawing stock, steel cyan, warning red, brass; red clearance gauge appears only in the hook and payoff.",
+      "issues": []
+    }
+  },
+  "issues_found": [],
+  "recommended_action": "present_to_user",
+  "metadata": {
+    "audio_peak_db": -1.3401,
+    "audio_rms_db": -12.7752,
+    "rendered_transcript_words": 170,
+    "source_caption_words": 169,
+    "last_words_verified": "tell you exactly how your part was built",
+    "contact_sheet": "review-frames/contact-sheet.png"
+  }
+}

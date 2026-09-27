@@ -1,0 +1,15 @@
+{
+  "render_runtime": "ffmpeg",
+  "cuts": [
+    {"id": "cut-01", "source": "snapshots/scene-01.png", "in_seconds": 0, "out_seconds": 5},
+    {"id": "cut-02", "source": "snapshots/scene-02.png", "in_seconds": 5, "out_seconds": 12},
+    {"id": "cut-03", "source": "snapshots/scene-03.png", "in_seconds": 12, "out_seconds": 18},
+    {"id": "cut-04", "source": "snapshots/scene-04.png", "in_seconds": 18, "out_seconds": 27},
+    {"id": "cut-05", "source": "snapshots/scene-05.png", "in_seconds": 27, "out_seconds": 41},
+    {"id": "cut-06", "source": "snapshots/scene-06.png", "in_seconds": 41, "out_seconds": 54},
+    {"id": "cut-07", "source": "snapshots/scene-07.png", "in_seconds": 54, "out_seconds": 63},
+    {"id": "cut-08", "source": "snapshots/scene-08.png", "in_seconds": 63, "out_seconds": 69},
+    {"id": "cut-09", "source": "snapshots/scene-09.png", "in_seconds": 69, "out_seconds": 75}
+  ],
+  "audio": {}
+}
