@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>Build a website for a shop that has none. Cooked or Cracked guide</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="v2.css">
+</head>
+<body>
+
+<!-- 1 COVER -->
+<section class="page cover">
+  <span class="pill">Cooked or Cracked</span>
+  <img class="conehero" src="img/original.png" alt="">
+  <div class="big">Build a website for a shop <i>that has none.</i></div>
+  <p class="sub">The full Pompette build from the episode. Every prompt I typed and what came out. Plus the five free design tools, all run on my Mac, and what each one found.</p>
+
+  <div class="contents torn">
+    <div class="k">what is inside</div>
+    <ol>
+      <li><span>What you end up with</span><span>p2</span></li>
+      <li><span>The eight steps</span><span>p3</span></li>
+      <li><span>Step 1 · Set up Claude and Higgsfield</span><span>p4</span></li>
+      <li><span>Step 2 · The five design tools</span><span>p5–10</span></li>
+      <li><span>Steps 3 to 7 · The Pompette build</span><span>p11–17</span></li>
+      <li><span>Step 8 · Test, put it online, show the owner</span><span>p18</span></li>
+      <li><span>Prompt pack · When it breaks · What to charge</span><span>p19–21</span></li>
+      <li><span>Cheat sheet to save</span><span>p23</span></li>
+    </ol>
+  </div>
+  <div class="stamps">
+    <div class="st torn">free design tools<b>5</b></div>
+    <div class="st torn">prompts I typed<b>3</b></div>
+  </div>
+
+  <p class="who">Written by Henry Chua after building it on my own computer and my own Higgsfield account. Checked 27 September 2026. Nothing here is sponsored.</p>
+  <div class="receipt torn">
+    <div class="hand mute">what it cost me</div>
+    <div class="n">36.25</div><div class="hand" style="font-size:12pt">Higgsfield credits</div>
+    <p style="margin:6px 0 0;font-size:9.5pt">For 10 images and one 5-second clip. On top of my Claude and Higgsfield plans. The five tools are free.</p>
+  </div>
+</section>
+
+<!-- 2 RESULT -->
+<section class="page">
+  <div class="kick">what you end up with</div>
+  <h2>From "Add website" to this</h2>
+  <p class="lead">Pompette, a soft serve counter in Singapore, has 4.9 stars and no website. It is my case study. The steps work for any shop.</p>
+  <div style="display:grid;grid-template-columns:.8fr 1.2fr;gap:16px;align-items:start;margin-top:8px">
+    <div>
+      <div class="stamp ink" style="font-size:20pt;margin:0 0 10px">BEFORE</div>
+      <div class="browser"><div class="bar"><i></i><i></i><i></i><span>Google Maps</span></div><img src="img/maps-nowebsite.jpg"></div>
+      <p class="cap2">4.9 stars from 378 reviews. Google still asks someone to add a website.</p>
+    </div>
+    <div>
+      <div class="stamp coral" style="font-size:20pt;margin:0 0 10px">AFTER · ONE EVENING</div>
+      <div class="browser"><div class="bar"><i></i><i></i><i></i><span>the website</span></div><img src="img/10-site-hero.jpg"></div>
+      <div class="row" style="margin-top:12px;align-items:flex-start">
+        <div class="col"><div class="phone"><img src="img/15-site-mobile.jpg" style="height:66mm;object-fit:cover;object-position:top"></div><p class="cap2">The site on a phone.</p></div>
+        <div class="col"><div class="phone"><img src="img/20-menu-home.jpg" style="height:66mm;object-fit:cover;object-position:top"></div><p class="cap2">The QR menu on the table.</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="callout" style="margin-top:12px"><b>Taste set the layout. Higgsfield made the photos.</b> You need both.</div>
+  <div class="foot"><span>Cooked or Cracked · Build a website for a shop that has none</span><span>page 2</span></div>
+</section>
+
+<!-- 3 ROADMAP -->
+<section class="page">
+  <div class="kick">the whole build on one page</div>
+  <h2>Eight steps, in this order</h2>
+  <p class="lead">Pompette is my case study. The same steps work for any small business with no website.</p>
+  <div class="road">
+    <div class="st"><div class="dot">1</div><div class="t"><b>Set up Claude and Higgsfield</b><em>p4</em><span>Claude writes the site. Higgsfield makes the photos. You connect them once.</span></div></div>
+    <div class="st"><div class="dot">2</div><div class="t"><b>Install the design tools</b><em>p5–10</em><span>I ran all five. Taste is a must. Two more for testing and polish. Two are optional.</span></div></div>
+    <div class="st"><div class="dot">3</div><div class="t"><b>Find a shop with no website</b><em>p11</em><span>Prompt 1. Claude gives you five shops. You pick one.</span></div></div>
+    <div class="st"><div class="dot">4</div><div class="t"><b>Build version 1</b><em>p12</em><span>Prompt 2. The full layout in 20 minutes.</span></div></div>
+    <div class="st"><div class="dot">5</div><div class="t"><b>Make the product photos</b><em>p13–14</em><span>Prompt 3. One master photo, then one per flavour.</span></div></div>
+    <div class="st"><div class="dot">6</div><div class="t"><b>Add the scroll clip</b><em>p15</em><span>The ice cream pipes as you scroll.</span></div></div>
+    <div class="st"><div class="dot">7</div><div class="t"><b>Check the site and the QR menu</b><em>p16–17</em><span>Scroll it on a laptop and a phone.</span></div></div>
+    <div class="st"><div class="dot">8</div><div class="t"><b>Test, put it online, show the owner</b><em>p18</em><span>Test and polish with the tools. Then go live and meet the owner.</span></div></div>
+  </div>
+  <div class="callout" style="margin-top:12px"><b>Cost to you:</b> Claude Pro US$20 a month. Higgsfield Starter US$19 a month, paid yearly, so US$228 up front. <b>First time with Claude:</b> do steps 1 to 7 for a practice shop first and skip step 8.</div>
+  <div class="two" style="margin-top:12px">
+    <div class="card"><div class="k">you will need</div><ul style="margin:4px 0 0;padding-left:18px;font-size:10pt"><li>A Mac or Windows computer</li><li>Claude Pro, US$20 a month. Claude Code comes with it</li><li>Higgsfield Starter, from US$19 a month billed yearly. It comes with 270 credits. Connecting to Claude needs a paid plan</li><li>40 of those credits for the photos and the clip. 17 more for a cup photo of every flavour</li><li>One evening</li></ul></div>
+    <div class="card"><div class="k">you will not need</div><ul style="margin:4px 0 0;padding-left:18px;font-size:10pt"><li>A designer or Figma</li><li>Any coding. You type plain sentences to Claude</li><li>Hosting until step 8</li><li>A Mac. The Claude app works the same on Windows</li></ul></div>
+  </div>
+  <div class="foot"><span>Cooked or Cracked · Build a website for a shop that has none</span><span>page 3</span></div>
+</section>
+
+<!-- 4 SETUP -->
+<section class="page">
+  <div class="kick">step 1 · set up</div>
+  <h2>Claude and Higgsfield</h2>
+  <p class="lead">Do this once. After this page you only type into Claude.</p>
+
+  <div class="kick" style="color:var(--mute);margin-top:4px">how to read this guide</div>
+  <div class="legend">
+    <div class="lg you"><b>Cream box</b>You type this into Claude, word for word.</div>
+    <div class="lg runs"><b>Dark box</b>What Claude runs or shows you. You do not type it.</div>
+  </div>
+
+  <div class="stepl"><b>1</b> Make two accounts</div>
+  <p style="font-size:10pt;margin:0 0 4px">Claude Pro at <a href="https://claude.com/pricing">claude.com/pricing</a>. Higgsfield Starter at <a href="https://higgsfield.ai/pricing">higgsfield.ai/pricing</a>. Then download the Claude app from <a href="https://claude.com/download">claude.com/download</a> and sign in.</p>
+
+  <div class="stepl"><b>2</b> Open the Code tab and pick a folder</div>
+  <p style="font-size:10pt;margin:0 0 4px">Click Code at the top. Make a new empty folder called <b>pompette-site</b> (name it after your shop) and choose it. Everything Claude makes goes into that folder. To come back tomorrow, open the Code tab and pick the same folder.</p>
+
+  <div class="stepl"><b>3</b> Connect Higgsfield</div>
+  <p style="font-size:10pt;margin:0 0 4px">In Claude: Settings, Connectors, Add custom connector. Name it Higgsfield. Paste the URL below. Click Connect and sign in to Higgsfield.</p>
+  <div class="term" style="width:110mm"><div class="bar"><i></i><i></i><i></i><span>paste this as the connector URL</span></div><pre><span class="y">https://mcp.higgsfield.ai/mcp</span></pre></div>
+
+  <div class="stepl"><b>4</b> Check both work</div>
+  <div class="prompt"><span class="who">you type in Claude</span><p>What is my Higgsfield credit balance? Also check if Node 18 or newer is installed on this computer. If it is not, install it for me.</p></div>
+  <div class="reply"><span class="who">you should see</span>Your credit balance, and a Node version like v22. If Claude answers without checking Higgsfield, open Settings, Connectors, and connect it again.</div>
+  <div class="card" style="margin-top:10px"><div class="k">six words you will see</div><p style="margin:0;font-size:9.4pt"><b>Prompt:</b> what you type to Claude. <b>Session:</b> one chat in the Code tab. <b>Node:</b> free software some tools need. Claude installs it. <b>Skill:</b> an add-on that teaches Claude a job. <b>Credits:</b> Higgsfield&rsquo;s currency for images and clips. <b>localhost:</b> a web address that only works on your own computer. <b>Allow:</b> Claude asks before it runs a command. Read it, then click Allow.</p></div>
+  <p class="small">Source: <a href="https://higgsfield.ai/creator-hub/help-center/integrations/how-do-i-connect-higgsfield-to-ai-agent">Higgsfield, "How do I connect Higgsfield to Claude"</a>. For the terminal instead, see <a href="https://code.claude.com/docs/en/setup">Claude Code setup</a>.</p>
+  <div class="foot"><span>Cooked or Cracked · Build a website for a shop that has none</span><span>page 4</span></div>
+</section>
+
+<!-- 5 TOOLS AT A GLANCE -->
+<section class="page">
+  <div class="kick">step 2 · the design tools</div>
+  <h2>Five free tools. I ran all five.</h2>
+  <p class="lead">They are add-ons for Claude, called skills. I installed each one on my Mac and ran it on the Pompette test. Here is what each one did.</p>
+  <table class="mx">
+    <tr><th>tool</th><th>what it does</th><th>on my Pompette test</th><th>tonight</th></tr>
+    <tr><td>Taste</td><td>Design rules. Stops the usual AI look.</td><td>Shaped the whole site</td><td><span class="must">must</span></td></tr>
+    <tr><td>Playwright CLI</td><td>Clicks through your site and takes screenshots.</td><td>Tested the site and menu on an iPhone 15</td><td><span class="rec">install</span></td></tr>
+    <tr><td>Impeccable</td><td>Checks a page for design problems.</td><td>Flagged 44 things. No real bugs, 1 design tip</td><td><span class="rec">install</span></td></tr>
+    <tr><td>DESIGN.md</td><td>Copies the style of a real website.</td><td>Restyled the menu. I kept mine</td><td><span class="opt">optional</span></td></tr>
+    <tr><td>img2threejs</td><td>Turns a photo of an object into a 3D model.</td><td>Built the cone in 3D, in 2 passes</td><td><span class="opt">skip tonight</span></td></tr>
+  </table>
+  <div class="stepl" style="margin-top:14px"><b>1</b> Install the three in one go</div>
+  <div class="prompt"><span class="who">you type in Claude</span><p>Install these for me:
+1. Taste: npx skills add https://github.com/Leonxlnx/taste-skill --skill "design-taste-frontend" -a claude-code -y
+2. Playwright CLI: npm install @playwright/cli@latest, then npx playwright-cli install --skills
+3. Impeccable: npx impeccable install --providers=claude --scope=project
+Tell me when each one is done.</p></div>
+  <div class="fail"><b>Impeccable failed for me with "Download failed: HTTP 404".</b> The fix that worked: "Copy the impeccable skill from github.com/pbakaus/impeccable (the folder .claude/skills/impeccable) into this project's .claude/skills folder."</div>
+  <div class="stepl"><b>2</b> Start a new session so Claude loads them</div>
+  <p style="font-size:10pt;margin:0 0 4px">Start a new session in the Code tab and choose the same folder. Then check:</p>
+  <div class="prompt"><span class="who">you type in Claude</span><p>Which skills do you have loaded? Is playwright-cli installed?</p></div>
+  <div class="foot"><span>Cooked or Cracked · Build a website for a shop that has none</span><span>page 5</span></div>
+</section>
+
+<!-- 6 TASTE -->
+<section class="page">
+  <div class="kick">step 2 · tool 1 of 5</div>
+  <div class="toolhead"><div class="num">1</div><div><h2>Taste</h2><p class="one">Design rules Claude reads before it writes a page.</p></div></div>
+  <div class="chips"><span class="chip">free · MIT licence</span><span class="chip">github.com/Leonxlnx/taste-skill</span><span class="chip used">ran on my Mac · shaped the site</span></div>
+  <div class="term"><div class="bar"><i></i><i></i><i></i><span>real output from my Mac, 27 Sep 2026</span></div><pre>Security Risk Assessments
+                          Gen      Socket      Snyk
+  design-taste-frontend   Safe     0 alerts    Low Risk
+<span class="ok">Installation complete
+  ✓ design-taste-frontend (copied)</span></pre></div>
+  <p class="see">The installer checks the skill with three security scanners before it copies it.</p>
+  <div class="stepl"><b>1</b> Use it</div>
+  <div class="prompt"><span class="who">add to your prompt</span><p>Use the taste skill for every design decision.</p></div>
+  <div class="stepl"><b>2</b> What it did on Pompette</div>
+  <div style="position:relative;margin-top:8px">
+    <div class="browser"><div class="bar"><i></i><i></i><i></i><span>the Pompette hero, with Taste's rules marked</span></div><img src="img/10-site-hero.jpg" style="height:88mm;object-fit:cover;object-position:top"></div>
+    <div class="label" style="left:4%;top:21%">words on the left, not centred</div>
+    <div class="label" style="left:30%;top:92%">under 20 words</div>
+    <div class="label" style="left:6%;top:83%">buttons on one line</div>
+    <div class="label" style="right:6%;top:13%">a real product image</div>
+  </div>
+  <div class="two" style="margin-top:12px">
+    <div class="card"><div class="k">the fonts</div><p style="margin:0;font-size:9.8pt">Claude picked Bricolage Grotesque and Figtree. Taste steers it away from Inter and the serif fonts AI sites overuse.</p></div>
+    <div class="card"><div class="k">if the page looks worse</div><p style="margin:0;font-size:9.8pt">Version 2 is marked experimental. Ask Claude to install <span class="nb"><code>design-taste-frontend-v1</code></span> instead.</p></div>
+  </div>
+  <div class="foot"><span>Cooked or Cracked · Build a website for a shop that has none</span><span>page 6</span></div>
+</section>
+
+<!-- 7 PLAYWRIGHT -->
+<section class="page">
+  <div class="kick">step 2 · tool 2 of 5</div>
+  <div class="toolhead"><div class="num">2</div><div><h2>Playwright CLI</h2><p class="one">Claude opens your site in a real browser, clicks through it and takes screenshots.</p></div></div>
+  <div class="chips"><span class="chip">free · by Microsoft</span><span class="chip">github.com/microsoft/playwright-cli</span><span class="chip used">ran on my Mac · tested site and menu</span></div>
+  <div class="browser" style="margin:6px 0 4px"><div class="bar"><i></i><i></i><i></i><span>Playwright placing a real order on the menu, as an iPhone 15</span></div><img src="img/run-playwright-flow.png"></div>
+  <p class="cap2">Open the site. Pick Original. Add to order. Place order. The page answers "You're number 49".</p>
+  <div class="row" style="margin-top:8px">
+    <div class="col">
+      <div class="prompt"><span class="who">you type in Claude</span><p>Use playwright-cli to open my site and the menu. Click every button and link. Screenshot each section on a laptop and on an iPhone 15. Place one test order. Tell me what is broken.</p></div>
+    </div>
+    <div class="col" style="flex:.9">
+      <div class="onp" style="margin-top:14px"><span class="k">what it found on Pompette</span>
+        <ul style="margin:4px 0 0;padding-left:16px">
+          <li>All 7 page links go somewhere</li>
+          <li>No broken images</li>
+          <li>Nothing spills sideways on a phone</li>
+          <li>The order flow works end to end</li>
+          <li>One error: no favicon, the small tab icon</li>
+        </ul></div>
+    </div>
+  </div>
+  <div class="fail"><b>If it hangs:</b> ask Claude to run <span class="nb"><code>playwright-cli close-all</code></span> and try again. It used the Chrome already on my Mac, so there was nothing extra to download.</div>
+  <div class="foot"><span>Cooked or Cracked · Build a website for a shop that has none</span><span>page 7</span></div>
+</section>
+
+<!-- 8 IMPECCABLE -->
+<section class="page">
+  <div class="kick">step 2 · tool 3 of 5</div>
+  <div class="toolhead"><div class="num">3</div><div><h2>Impeccable</h2><p class="one">A design checker for a page that already exists. It finds problems for you to fix.</p></div></div>
+  <div class="chips"><span class="chip">free · Apache 2.0 licence</span><span class="chip">github.com/pbakaus/impeccable</span><span class="chip used">ran on my Mac · checked the site</span></div>
+  <div class="term"><div class="bar"><i></i><i></i><i></i><span>real output from my Mac: impeccable detect, on the Pompette site</span></div><pre>index.html
+  [hero-eyebrow-chip] eyebrow chip (tracked-caps) "Beauty World Centre, Singapore" above h1
+    → A tiny uppercase label above an oversized hero headline is now the default AI SaaS hero.
+  [cramped-padding] &lt;div&gt; "menu-card": children flush against bg on right/left (no inset)
+    → Add at least 8px (ideally 12–16px) of space inside coloured containers.
+  [low-contrast] 1.1:1 (need 4.5:1) — text #eaf7f8 on #fefbf7
+<span class="c">  ... 44 flags in total</span></pre></div>
+  <div class="three" style="margin-top:4px">
+    <div class="card"><div class="k">false alarm</div><p style="margin:0;font-size:9.4pt">"Menu card text touches the edge." I measured it with Playwright: 28px of space on a phone. Fine.</p></div>
+    <div class="card"><div class="k">design tip</div><p style="margin:0;font-size:9.4pt">The small caps label above the headline is a common AI habit. Worth a look.</p></div>
+    <div class="card"><div class="k">false alarm</div><p style="margin:0;font-size:9.4pt">35 contrast flags checked dark mode colours against the light page. Check each flag before you fix it.</p></div>
+  </div>
+  <div class="stepl" style="margin-top:10px"><b>1</b> Use it</div>
+  <div class="row"><div class="col">
+    <div class="prompt"><span class="who">you type in Claude</span><p>/impeccable init</p></div>
+    <div class="prompt"><span class="who">then</span><p>/impeccable audit index.html</p></div>
+  </div><div class="col">
+    <div class="cmds" style="grid-template-columns:1fr;margin-top:14px">
+      <div class="cmd"><code>/impeccable critique</code><span>A design review of what reads first</span></div>
+      <div class="cmd"><code>/impeccable polish</code><span>A final clean-up before you show anyone</span></div>
+      <div class="cmd"><code>/impeccable typeset</code><span>Fixes font sizes and spacing</span></div>
+    </div>
+  </div></div>
+  <div class="foot"><span>Cooked or Cracked · Build a website for a shop that has none</span><span>page 8</span></div>
+</section>
+
+<!-- 9 DESIGN.MD -->
+<section class="page">
+  <div class="kick">step 2 · tool 4 of 5 · optional</div>
+  <div class="toolhead"><div class="num">4</div><div><h2>Awesome DESIGN.md</h2><p class="one">74 style files taken from real websites. Claude copies the look of the one you pick.</p></div></div>
+  <div class="chips"><span class="chip">free · MIT licence</span><span class="chip">github.com/VoltAgent/awesome-design-md</span><span class="chip used">ran on my Mac · restyled the menu</span></div>
+  <div class="row" style="margin-top:6px;align-items:flex-start">
+    <div class="col" style="flex:1.15">
+      <div class="browser"><div class="bar"><i></i><i></i><i></i><span>left: my menu · right: with Airbnb's DESIGN.md</span></div><img src="img/run-designmd-compare.png"></div>
+      <p class="cap2">Same colours. The Airbnb file made the type smaller and quieter, the corners tighter, and the shadows softer.</p>
+    </div>
+    <div class="col">
+      <div class="stepl"><b>1</b> Pick a site you like</div>
+      <p style="font-size:10pt;margin:0">Browse all 74 at <a href="https://getdesign.md">getdesign.md</a>. Some of them:</p>
+      <div class="brands"><span>airbnb</span><span>apple</span><span>claude</span><span>notion</span><span>stripe</span><span>starbucks</span><span>spotify</span><span>nike</span><span>framer</span><span>vercel</span></div>
+      <div class="stepl"><b>2</b> Get it and use it</div>
+      <div class="prompt"><span class="who">you type in Claude</span><p>Download the airbnb DESIGN.md from github.com/VoltAgent/awesome-design-md (folder design-md/airbnb) into this folder. Use its type, spacing and buttons for my menu. Keep the shop's own colours.</p></div>
+    </div>
+  </div>
+  <div class="onp"><span class="k">which one I kept</span>My own. The Airbnb version is clean, but it looks like every booking app. Pompette's bold headline has more character. Use DESIGN.md when a shop has no look of its own yet.</div>
+  <div class="foot"><span>Cooked or Cracked · Build a website for a shop that has none</span><span>page 9</span></div>
+</section>
+
+<!-- 10 IMG2THREEJS -->
+<section class="page">
+  <div class="kick">step 2 · tool 5 of 5 · skip tonight</div>
+  <div class="toolhead"><div class="num">5</div><div><h2>img2threejs</h2><p class="one">Give Claude one photo of an object. It rebuilds the object as a 3D model, in code.</p></div></div>
+  <div class="chips"><span class="chip">free · Python 3.10+</span><span class="chip">github.com/img2threejs/img2threejs</span><span class="chip used">ran on my Mac · built the cone</span></div>
+  <div class="row" style="margin-top:6px;align-items:flex-start">
+    <div class="col">
+      <div class="browser"><div class="bar"><i></i><i></i><i></i><span>pass 1: failed · only the rim showed</span></div><img src="img/run-img2threejs-pass1.png"></div>
+    </div>
+    <div class="col">
+      <div class="browser"><div class="bar"><i></i><i></i><i></i><span>pass 2: photo on the left, 3D model on the right</span></div><img src="img/run-img2threejs-pass2.png"></div>
+    </div>
+  </div>
+  <p class="cap2">I gave it the empty cone photo. Pass 2 is a real 3D cone you can spin. It still looks like a model, not like food.</p>
+  <div class="row" style="margin-top:6px">
+    <div class="col">
+      <div class="prompt"><span class="who">you type in Claude</span><p>Check my Python is 3.10 or newer. Then install img2threejs from github.com/img2threejs/img2threejs into this project's .claude/skills folder.</p></div>
+      <div class="prompt"><span class="who">then attach a photo and type</span><p>/img2threejs Rebuild this object as a Three.js model, keep the proportions, angles, and colours.</p></div>
+    </div>
+    <div class="col" style="flex:.9">
+      <div class="onp" style="margin-top:14px"><span class="k">what I learned</span>It is strict. Its checklist has 23 steps before the first model is signed off, and it checks your photo first. Mine passed. Each pass gets compared with the photo, so a bad pass gets caught, like my pass 1.</div>
+      <div class="card"><div class="k">use it for</div><p style="margin:0;font-size:10pt">Hard objects a customer would spin round: a sneaker, a bottle, a speaker. For food, use a photo.</p></div>
+    </div>
+  </div>
+  <div class="foot"><span>Cooked or Cracked · Build a website for a shop that has none</span><span>page 10</span></div>
+</section>
+
+<!-- 11 FIND SHOP -->
+<section class="page">
+  <div class="kick">step 3 · the Pompette build begins</div>
+  <h2>Find a shop with no website</h2>
+  <p class="lead">Type this in Claude. Change the city to yours.</p>
+  <div class="prompt"><span class="who">prompt I typed</span><span class="n">1</span><p>Design a 3D scroll website for a local business that does not have a website, so I can promote their service and menu. Take the style from their look and logo. It has to feel like a two to three million dollar site, and say what they sell in a few words. Give me 5 businesses in Singapore to choose from.</p></div>
+  <div class="reply"><span class="who">what came back</span>Five shops with their rating, review count, logo and a one-line idea for the hero page.</div>
+
+  <div class="row" style="margin-top:8px">
+    <div class="col" style="flex:1.4"><div class="browser"><div class="bar"><i></i><i></i><i></i><span>Google Maps · Pompette.</span></div><img src="img/06-maps-pompette.jpg" style="height:104mm;object-fit:cover;object-position:top left"></div></div>
+    <div class="col">
+      <div class="shopcard"><div class="hand mute">my pick</div><div class="nm">Pompette.</div><div class="small">Soft serve counter, Beauty World Centre</div><div class="rt" style="margin-top:6px">4.9 <span style="font-size:14pt">★</span></div><div class="small">378 Google reviews</div><span class="x">Website: none</span></div>
+      <div class="card" style="margin-top:12px"><div class="k">a good pick has</div>
+        <ul class="check" style="margin:6px 0 0;font-size:9.6pt">
+          <li>4.5 stars or more, 150+ reviews</li>
+          <li>No website. Search the name yourself to be sure</li>
+          <li>One product that fits in one photo</li>
+          <li>A logo with two clear colours</li>
+        </ul></div>
+    </div>
+  </div>
+  <div class="foot"><span>Cooked or Cracked · Build a website for a shop that has none</span><span>page 11</span></div>
+</section>
+
+<!-- 12 BUILD V1 -->
+<section class="page">
+  <div class="kick">step 4</div>
+  <h2>Build version 1</h2>
+  <p class="lead">Say what the page is for and list the sections. Taste handles the look.</p>
+  <div class="prompt"><span class="who">prompt I typed</span><span class="n">2</span><p>Build the Pompette site. Sections: hero with the product, how it is made, the flavour rotation (two of four change weekly), the menu with prices, the maker, how to find the counter, footer. Take the colours from their logo. Scroll should do something on every section. Dark mode. Works on a phone.</p></div>
+
+  <div class="browser" style="margin-top:12px"><div class="bar"><i></i><i></i><i></i><span>my screen while Claude built it</span></div><img src="img/rec-site-hero-pane-blur.jpg" style="height:98mm;object-fit:cover;object-position:top"></div>
+  <p class="cap2">Claude works on the left and shows the page on the right. My version 1 had this layout with a cone drawn in code. Step 5 swapped in photos.</p>
+  <div class="stepl"><b>1</b> Open your site</div>
+  <div class="prompt"><span class="who">you type in Claude</span><p>Start the site and give me the link.</p></div>
+  <p class="see">Open the link it gives you, like localhost:5173. It works while this Claude session is open.</p>
+  <div class="three" style="margin-top:14px">
+    <div class="card"><div class="k">20 minutes</div><p style="margin:0;font-size:9.6pt">From prompt 2 to a full page with the right fonts, the logo colours, a menu and directions.</p></div>
+    <div class="card"><div class="k">dark mode</div><p style="margin:0;font-size:9.6pt">It is there. The page turns deep teal when your phone or laptop is set to dark mode.</p></div>
+    <div class="card"><div class="k">what it is made of</div><p style="margin:0;font-size:9.6pt">Plain web files in your folder: index.html, styles.css, main.js. Scroll effects use a free library called GSAP.</p></div>
+  </div>
+  <div class="foot"><span>Cooked or Cracked · Build a website for a shop that has none</span><span>page 12</span></div>
+</section>
+
+<!-- 13 HIGGSFIELD -->
+<section class="page">
+  <div class="kick">step 5</div>
+  <h2>Make the product photos</h2>
+  <p class="lead">Higgsfield is connected, so Claude writes the image prompt and runs it. Order: prompt 3 here, then the flavour prompt on page 14, then the clip on page 15.</p>
+  <div class="prompt"><span class="who">prompt I typed</span><span class="n">3</span><p>Upgrade the cone visuals with Higgsfield. Keep the tone and the fonts. Separately, design a scan-and-order menu page for the QR code on the table.</p></div>
+
+  <div class="row" style="margin-top:4px">
+    <div class="col" style="flex:1.25">
+      <div class="browser"><div class="bar"><i></i><i></i><i></i><span>my screen while it worked</span></div><img src="img/rec-cones-generating.jpg" style="height:70mm;object-fit:cover;object-position:top left"></div>
+      <p class="cap2">Claude on the left. The cones coming back on the right.</p>
+    </div>
+    <div class="col" style="flex:.8">
+      <div class="browser"><div class="bar"><i></i><i></i><i></i><span>two tries</span></div><img src="img/19-master-cones.jpg" style="height:70mm;object-fit:cover"></div>
+      <p class="cap2">I kept the left one.</p>
+    </div>
+  </div>
+
+  <div class="term" style="margin-top:8px"><div class="bar"><i></i><i></i><i></i><span>the image prompt Claude wrote · GPT Image 2.5, high quality, 2K, transparent background</span></div><pre>Premium studio product photograph of a single hand-piped soft serve ice cream in a golden waffle cone, isolated on a fully transparent background, whole object in frame with generous margin, centred, straight-on eye level with a very slight top-down angle. Milky off-white milk ice cream piped from a star nozzle: three and a half stacked coils with crisp fluted ridges, a thin curled tip. Classic crisp waffle cone, warm honey-gold, sharp diamond grid, rolled rim. Soft key light upper left, cool pastel-blue rim light from behind right. No drips, no toppings, no hand, no props, no text, no ground shadow.</pre></div>
+  <div class="k hand mute" style="font-size:11.5pt">where my 36.25 credits went</div>
+  <div class="bar"><div style="flex:27.5;background:var(--gold)">10 images × 2.75 = 27.5</div><div style="flex:8.75;background:var(--coral);color:var(--paper)">clip 8.75</div></div>
+  <p class="see" style="margin-top:4px">Each image and clip uses credits once. Nothing is charged twice unless you ask for a new try.</p>
+  <div class="foot"><span>Cooked or Cracked · Build a website for a shop that has none</span><span>page 13</span></div>
+</section>
+
+<!-- 14 FLAVOURS -->
+<section class="page">
+  <div class="kick">step 5, continued</div>
+  <h2>Seven flavours from one photo</h2>
+  <p class="lead">Make one master cone. Then give it back as the reference and change only the flavour. In my run, prompt 3 did this by itself. If yours makes only one cone, type this.</p>
+  <div class="prompt"><span class="who">you type in Claude</span><p>Use the master cone as the reference. Make one image per flavour: hojicha, black sesame, matcha, yuzu, pistachio, hazelnut. Change only the ice cream. Same cone, same angle, same size, transparent background. Save every image into the site's assets folder and use them on the page.</p></div>
+  <div class="term"><div class="bar"><i></i><i></i><i></i><span>what Claude sent to Higgsfield for each one</span></div><pre>Recreate the reference image exactly: same waffle cone, same swirl shape, same coil count, same camera angle, framing, scale and lighting, transparent background.
+Change only the ice cream flavour: <span class="y">hojicha (roasted green tea), warm toasted caramel-brown with a soft milky tone, velvety fluted ridges.</span></pre></div>
+  <div class="browser" style="margin-top:8px"><div class="bar"><i></i><i></i><i></i><span>all seven, plus an empty cone for the clip and a cup for the menu</span></div><img src="img/17-flavours-sheet.jpg" style="height:92mm;object-fit:cover;object-position:center"></div>
+  <div class="three" style="margin-top:14px">
+    <div class="card"><div class="k">1 · use the setting</div><p style="margin:0;font-size:9.6pt">Ask for "transparent background" as a setting on GPT Image 2.5. Claude sets it when you name it.</p></div>
+    <div class="card"><div class="k">2 · line them up</div><p style="margin:0;font-size:9.6pt">Ask Claude to bottom-align every cone on the same canvas so the tips sit at one height.</p></div>
+    <div class="card"><div class="k">3 · look at each one</div><p style="margin:0;font-size:9.6pt">My pistachio came back with a faint halo. Check every image before it goes on the page.</p></div>
+  </div>
+  <div class="foot"><span>Cooked or Cracked · Build a website for a shop that has none</span><span>page 14</span></div>
+</section>
+
+<!-- 15 SCROLL CLIP -->
+<section class="page">
+  <div class="kick">step 6</div>
+  <h2>The ice cream pipes as you scroll</h2>
+  <p class="lead">One 5-second clip. It starts on the empty cone and ends on the master cone.</p>
+  <div class="browser"><div class="bar"><i></i><i></i><i></i><span>eight frames from the clip</span></div><img src="img/18-pipe-strip.jpg"></div>
+  <div class="prompt" style="margin-top:16px"><span class="who">you type in Claude</span><p>Make a 5-second vertical clip on Kling 3.0 with Higgsfield. Start frame: the empty cone. End frame: the master cone. Soft serve pipes into the cone. Camera still, no sound. Then put it in the "how it is made" section so scrolling plays it forward and back.</p></div>
+  <p class="see">In my run, prompt 3 made the clip too. If yours did not, type this.</p>
+  <div class="row" style="margin-top:6px">
+    <div class="col">
+      <div class="term"><div class="bar"><i></i><i></i><i></i><span>the clip prompt Claude wrote</span></div><pre>Locked-off macro product shot, camera completely still. A smooth ribbon of milky white soft serve flows down from above the frame, fills the waffle cone and coils upward in a spiral, layer by layer, building a tall swirl with crisp fluted ridges, finishing with a small curled tip. The cone stays perfectly still. Soft pastel sky-blue studio background. No hands, no machine, no text.</pre></div>
+    </div>
+    <div class="col" style="flex:.85">
+      <div class="card"><div class="k">how the trick works</div>
+        <div class="flow" style="margin:8px 0 4px"><div class="box">You scroll<small>top to bottom</small></div><div class="arr">→</div><div class="box">The clip moves<small>first to last frame</small></div></div>
+        <p style="margin:6px 0 0;font-size:9.6pt">The page shows the frame that matches how far you have scrolled. Scroll back up and the ice cream un-pipes.</p></div>
+      <div class="fail"><b>If it jumps when you scroll:</b> ask Claude to "re-encode the clip with a keyframe every 2 frames". It runs a tool called ffmpeg and installs it if needed.</div>
+    </div>
+  </div>
+  <div class="foot"><span>Cooked or Cracked · Build a website for a shop that has none</span><span>page 15</span></div>
+</section>
+
+<!-- 16 SECTIONS -->
+<section class="page">
+  <div class="kick">step 7</div>
+  <h2>Check the whole site</h2>
+  <p class="lead">Scroll it on your laptop. For the phone view, ask Claude: "Show me the site as it looks on an iPhone 15." Each section does one job for the shop.</p>
+  <div class="two">
+    <div><div class="browser"><div class="bar"><i></i><i></i><i></i><span>how it is made</span></div><img src="img/11-site-made.jpg" ></div><p class="cap2">The clip plays as three steps light up.</p></div>
+    <div><div class="browser"><div class="bar"><i></i><i></i><i></i><span>the rotation</span></div><img src="img/12-site-flavours.jpg" ></div><p class="cap2">All seven flavours swap in turn. The page colour follows.</p></div>
+    <div><div class="browser"><div class="bar"><i></i><i></i><i></i><span>menu</span></div><img src="img/13-site-menu.jpg" ></div><p class="cap2">Prices from a published review. Confirm them with the owner.</p></div>
+    <div><div class="browser"><div class="bar"><i></i><i></i><i></i><span>find the counter</span></div><img src="img/14-site-visit.jpg" ></div><p class="cap2">The counter is hard to find, so four steps and a Maps button.</p></div>
+  </div>
+  <div class="callout" style="margin-top:12px"><b>If a section looks off, say what you see.</b> For example: "The menu prices are too small on a phone." Claude fixes that one thing.</div>
+  <div class="foot"><span>Cooked or Cracked · Build a website for a shop that has none</span><span>page 16</span></div>
+</section>
+
+<!-- 17 MENU -->
+<section class="page">
+  <div class="kick">step 7, the second page</div>
+  <h2>The scan-and-order menu</h2>
+  <p class="lead">Prompt 3 also asked for this page. Each table's QR code opens it with the table number, so table 4 sees "Table 4" at the top.</p>
+  <div class="flowph">
+    <div class="phone"><img src="img/20-menu-home.jpg"></div><div class="a">→</div>
+    <div class="phone"><img src="img/21-menu-item.jpg"></div><div class="a">→</div>
+    <div class="phone"><img src="img/22-menu-order.jpg"></div><div class="a">→</div>
+    <div class="phone"><img src="img/23-menu-done.jpg"></div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 18px 1fr 18px 1fr 18px 1fr;gap:4px">
+    <p class="cap2">Open or closed. This week's four flavours.</p><span></span>
+    <p class="cap2">Cup or cone, toppings, live price.</p><span></span>
+    <p class="cap2">Check the order, add a name.</p><span></span>
+    <p class="cap2">An order number. Pay at the counter.</p>
+  </div>
+  <div class="two" style="margin-top:14px">
+    <div class="card"><div class="k">seven flavours, four on tap</div><p style="margin:0;font-size:10pt">The shop makes seven. Four are on tap, and two of those change each week. The website shows all seven. The menu shows this week's four. Show the owner where to change the list.</p></div>
+    <div class="card"><div class="k">not connected yet</div><p style="margin:0;font-size:10pt">"Place order" sends nothing yet. Step 8 shows how to send orders to a Google Sheet.</p></div>
+  </div>
+  <div class="foot"><span>Cooked or Cracked · Build a website for a shop that has none</span><span>page 17</span></div>
+</section>
+
+<!-- 18 STEP 8 -->
+<section class="page">
+  <div class="kick">step 8</div>
+  <h2>Test, put it online, show the owner</h2>
+  <p class="lead">Five prompts to finish the job. I ran 4 and 5 on Pompette (pages 7 and 8). I have not run 6 to 8 yet. Prompts 6 and 8 ask you to make a free account and sign in yourself.</p>
+  <div class="prompt"><span class="who">test</span><span class="n">4</span><p>Use playwright-cli to open the site and the menu page. Click every button. Screenshot each section on a laptop and an iPhone 15. List what is broken, then fix it.</p></div>
+  <div class="prompt"><span class="who">polish</span><span class="n">5</span><p>/impeccable audit index.html</p></div>
+  <p class="see">Read the list. Ask Claude to fix the top three. Then run <span class="nb"><code>/impeccable polish index.html</code></span>.</p>
+  <div class="prompt"><span class="who">put it online</span><span class="n">6</span><p>Put this site and the menu page online on Cloudflare Pages. Walk me through making the free account. Give me the link.</p></div>
+  <div class="prompt"><span class="who">QR codes</span><span class="n">7</span><p>Make a printable QR code for tables 1 to 8. Each one opens the menu page with its table number.</p></div>
+  <div class="prompt"><span class="who">orders · advanced</span><span class="n">8</span><p>When a customer places an order, add it as a row in a Google Sheet the owner can see on their phone. Walk me through signing in to Google.</p></div>
+  <div class="card" style="margin-top:14px"><div class="k">before you show the owner</div>
+    <ul class="check" style="margin:6px 0 0;font-size:9.6pt;columns:2;column-gap:18px">
+      <li>Their real prices and toppings</li>
+      <li>Their yes to use the name, logo and photos</li>
+      <li>Tell them the cones are AI photos. Swap in real ones if they prefer</li>
+      <li>Check halal status before you print it</li>
+      <li>A cup photo for each flavour (16.5 credits)</li>
+      <li>Open the link on your phone and walk in</li>
+    </ul></div>
+  <div class="foot"><span>Cooked or Cracked · Build a website for a shop that has none</span><span>page 18</span></div>
+</section>
+
+<!-- 19 PROMPT PACK -->
+<section class="page">
+  <div class="kick">prompt pack</div>
+  <h2>Every prompt, ready to copy</h2>
+  <p class="lead">Change the words in coral for your shop. 1 to 3 are what I typed, word for word. 4 to 8 finish the job.</p>
+  <div class="prompt"><span class="who">find a shop</span><span class="n">1</span><p>Design a 3D scroll website for a local business that does not have a website, so I can promote their service and menu. Take the style from their look and logo. It has to feel like a two to three million dollar site, and say what they sell in a few words. Give me 5 businesses in <b class="coral">Singapore</b> to choose from.</p></div>
+  <div class="prompt"><span class="who">build version 1</span><span class="n">2</span><p>Build the <b class="coral">Pompette</b> site. Sections: <b class="coral">hero with the product, how it is made, the flavour rotation (two of four change weekly), the menu with prices, the maker, how to find the counter, footer</b>. Take the colours from their logo. Scroll should do something on every section. Dark mode. Works on a phone.</p></div>
+  <div class="prompt"><span class="who">photos and menu</span><span class="n">3</span><p>Upgrade the <b class="coral">cone</b> visuals with Higgsfield. Keep the tone and the fonts. Separately, design a scan-and-order menu page for the QR code on the table.</p></div>
+  <div class="row"><div class="col">
+    <div class="prompt"><span class="who">test</span><span class="n">4</span><p>Use playwright-cli to open the site and the menu page. Click every button. Screenshot each section on a laptop and an iPhone 15. List what is broken, then fix it.</p></div>
+    <div class="prompt"><span class="who">polish</span><span class="n">5</span><p>/impeccable audit index.html</p></div>
+  </div><div class="col">
+    <div class="prompt"><span class="who">online</span><span class="n">6</span><p>Put this site and the menu page online on Cloudflare Pages. Walk me through making the free account. Give me the link.</p></div>
+    <div class="prompt"><span class="who">QR codes</span><span class="n">7</span><p>Make a printable QR code for tables <b class="coral">1 to 8</b>. Each one opens the menu page with its table number.</p></div>
+    <div class="prompt"><span class="who">orders · advanced</span><span class="n">8</span><p>When a customer places an order, add it as a row in a Google Sheet the owner can see on their phone. Walk me through signing in to Google.</p></div>
+  </div></div>
+  <p class="small">Tip: add "Use the taste skill for every design decision." to the end of prompt 2.</p>
+  <div class="foot"><span>Cooked or Cracked · Build a website for a shop that has none</span><span>page 19</span></div>
+</section>
+
+<!-- 20 WHEN IT BREAKS -->
+<section class="page">
+  <div class="kick">when it breaks</div>
+  <h2>The fix for each problem</h2>
+  <p class="lead">The Impeccable one happened to me. The rest come from my build and the tools' own notes. Paste the fix into Claude.</p>
+  <table class="fx">
+    <tr><th>What you see</th><th>What to do</th></tr>
+    <tr><td colspan="2" class="grp">setting up</td></tr>
+    <tr><td>Claude answers without checking Higgsfield</td><td>Settings, Connectors, disconnect Higgsfield, connect again. Start a new chat and say "use Higgsfield".</td></tr>
+    <tr><td>"command not found: npx" or "node"</td><td>"Install Node LTS for me." Then start a new session.</td></tr>
+    <tr><td>A tool does not show up</td><td>Start a new session in the same folder. Ask "Which skills do you have loaded?"</td></tr>
+    <tr><td>Impeccable: "Download failed: HTTP 404"</td><td>"Copy the impeccable skill from github.com/pbakaus/impeccable (.claude/skills/impeccable) into this project's .claude/skills folder." This worked for me.</td></tr>
+    <tr><td>"/impeccable" is not a command</td><td>It went into another folder. "Run npx impeccable install --providers=claude --scope=project in this folder."</td></tr>
+    <tr><td>img2threejs fails straight away</td><td>Python is too old. "Update Python to 3.12 for me."</td></tr>
+    <tr><td colspan="2" class="grp">photos and clip</td></tr>
+    <tr><td>The flavour photos do not match</td><td>Make one master. Use it as the reference. Change only the flavour.</td></tr>
+    <tr><td>A cut-out photo has a grey box or halo</td><td>"Use transparent background as a setting and clean the edge of this image."</td></tr>
+    <tr><td>The clip jumps when you scroll</td><td>"Re-encode the clip with a keyframe every 2 frames."</td></tr>
+    <tr><td colspan="2" class="grp">the site</td></tr>
+    <tr><td>It looks like every other AI site</td><td>Add "Use the taste skill for every design decision." If it is still off, try Taste version 1.</td></tr>
+    <tr><td>Fine on a laptop, broken on a phone</td><td>Prompt 4. Ask for an iPhone 15 screenshot of every section.</td></tr>
+    <tr><td>Playwright hangs or opens nothing</td><td>"Run playwright-cli close-all and try again."</td></tr>
+    <tr><td>The link stopped working</td><td>The site only runs while Claude runs it. "Start the site again and give me the link." For a link that always works, prompt 6.</td></tr>
+  </table>
+  <div class="foot"><span>Cooked or Cracked · Build a website for a shop that has none</span><span>page 20</span></div>
+</section>
+
+<!-- 21 MONEY -->
+<section class="page">
+  <div class="tag">the money</div>
+  <h2 style="margin-top:12px">What to charge, and who this is for</h2>
+  <div class="price" style="margin-top:14px">
+    <div class="card win"><div class="k">the site</div><div class="n">S$1,000</div><p style="margin:4px 0 0;font-size:9.6pt">Once. Two pages, their photos, orders connected, hosting set up.</p></div>
+    <div class="card"><div class="k">to run it</div><div class="n">S$250</div><p style="margin:4px 0 0;font-size:9.6pt">A month. Weekly flavour update, price changes, one new photo a month, hosting, and you pick up the phone when it breaks.</p></div>
+  </div>
+  <div class="k hand mute" style="font-size:11.5pt;margin-top:14px">one shop, running total in year one</div>
+  <div class="yr"><div style="height:25%" class="first"></div><div style="height:31%" class=""></div><div style="height:38%" class=""></div><div style="height:44%" class=""></div><div style="height:50%" class=""></div><div style="height:56%" class=""></div><div style="height:62%" class=""></div><div style="height:69%" class=""></div><div style="height:75%" class=""></div><div style="height:81%" class=""></div><div style="height:88%" class=""></div><div style="height:94%" class=""></div><div style="height:100%" class=""></div></div>
+  <div class="yrl"><span>build</span><span>m1</span><span>m2</span><span>m3</span><span>m4</span><span>m5</span><span>m6</span><span>m7</span><span>m8</span><span>m9</span><span>m10</span><span>m11</span><span>m12</span></div>
+  <p style="margin:8px 0 0"><b class="serif" style="font-size:18pt">S$4,000</b> <span class="mute">in year one: S$1,000 plus 12 × S$250.</span></p>
+  <p style="font-size:10pt;margin-top:10px">These are my numbers for a one-counter shop in Singapore. I have not sold this one yet. Scale them to prices in your city.</p>
+  <div class="two" style="margin-top:16px">
+    <div class="card"><div class="k">do this if</div><p style="margin:0;font-size:10pt">You can follow steps written out like this. You spot shops that deserve better than a Facebook page. You are happy to walk in and show an owner your phone.</p></div>
+    <div class="card"><div class="k">not yet if</div><p style="margin:0;font-size:10pt">You have never used Claude. Do steps 1 to 7 for a practice shop first. If the shop already has a good site, pick another shop.</p></div>
+  </div>
+  <div class="foot"><span>Cooked or Cracked · Build a website for a shop that has none</span><span>page 21</span></div>
+</section>
+
+<!-- 22 NUMBERS + SOURCES -->
+<section class="page">
+  <div class="kick">the small print</div>
+  <h2>About the numbers, and sources</h2>
+  <div class="note" style="margin-top:14px">
+    <div class="hand mute">about the numbers in this guide</div>
+    <p style="font-size:10pt;margin:4px 0 0">Credit costs, tool versions and the shop's rating were checked on 27 September 2026 on the pages linked in each step. Higgsfield changes model prices and promotions at its own discretion, sometimes weekly, and the five repositories update often. Treat every figure here as a snapshot on that date, not a quote, and confirm on the linked page before you pay. I am not affiliated with any company named here and I do not earn from these links.</p>
+  </div>
+  <div class="card" style="margin-top:14px"><div class="k">sources</div>
+    <ul class="src" style="margin:6px 0 0;padding-left:16px">
+      <li>Pompette on <a href="https://www.google.com/maps/search/?api=1&amp;query=Pompette.&amp;query_place_id=ChIJO3CO-2AR2jER28Wz2MXmIeY">Google Maps</a> and <a href="https://www.instagram.com/oui_pompette_/">Instagram</a>. Prices from <a href="http://www.memoirsofachocoholic.com/2026/03/pompette-beauty-world-centre.html">Memoirs of a Chocoholic</a>, March 2026.</li>
+      <li>The tools: <a href="https://github.com/Leonxlnx/taste-skill">Taste</a>, <a href="https://github.com/microsoft/playwright-cli">Playwright CLI</a>, <a href="https://github.com/pbakaus/impeccable">Impeccable</a>, <a href="https://github.com/VoltAgent/awesome-design-md">awesome-design-md</a>, <a href="https://github.com/img2threejs/img2threejs">img2threejs</a>.</li>
+      <li><a href="https://claude.com/pricing">Claude plans</a>. <a href="https://claude.com/download">Claude desktop app</a>. <a href="https://code.claude.com/docs/en/setup">Claude Code setup</a>.</li>
+      <li><a href="https://higgsfield.ai/creator-hub/help-center/integrations/how-do-i-connect-higgsfield-to-ai-agent">Connecting Higgsfield to Claude</a>. <a href="https://higgsfield.ai/pricing">Higgsfield plans</a>. <a href="https://higgsfield.ai/blog/gpt-image-2-5-higgsfield">GPT Image 2.5 on Higgsfield</a>.</li>
+    </ul></div>
+  <div class="card" style="margin-top:14px"><div class="k">what I used, exactly</div>
+    <p style="margin:0;font-size:10pt">Claude Code in the Claude desktop app, on a Mac. Version 1 of the cone was drawn in code, then replaced with photos. Taste shaped the site. Higgsfield connected as a custom connector: GPT Image 2.5 for the photos, Kling 3.0 for the clip. Afterwards I ran the other four on the same site in a test copy: Playwright tested it, Impeccable checked it (44 flags, no real bugs), DESIGN.md restyled the menu, and img2threejs built the cone in 3D. Real output from each is on pages 6 to 10.</p></div>
+  <p style="margin-top:18px;font-size:10.5pt">If something here has changed by the time you read it, tell me in the comments and I will update the file.</p>
+  <p class="serif" style="font-size:22pt;font-weight:900;margin:4px 0 0">Henry Chua<span class="coral">.</span></p>
+  <div class="foot"><span>Cooked or Cracked · Build a website for a shop that has none</span><span>page 22</span></div>
+</section>
+
+<!-- 23 CHEAT SHEET -->
+<section class="page cheat" id="cheat">
+  <span style="display:inline-block;border:1.5px solid var(--paper);border-radius:30px;padding:4px 14px;font-weight:800;font-size:9.5pt;letter-spacing:2px;text-transform:uppercase">Cooked or Cracked · save this page</span>
+  <h1 style="margin:16px 0 4px">5 free design tools <i>for Claude.</i></h1>
+  <p style="color:#D9D6D1;margin:0 0 14px">What each one does, and one line to install it. Paste the line into Claude.</p>
+  <div class="cs"><div class="h">1 · Taste <small>must · stops the AI look</small></div><code>npx skills add https://github.com/Leonxlnx/taste-skill --skill "design-taste-frontend" -a claude-code -y</code></div>
+  <div class="cs"><div class="h">2 · Playwright CLI <small>install · clicks and screenshots your site</small></div><code>npm install @playwright/cli@latest && npx playwright-cli install --skills</code></div>
+  <div class="cs"><div class="h">3 · Impeccable <small>install · checks and polishes a page</small></div><code>npx impeccable install --providers=claude --scope=project   then   /impeccable init</code></div>
+  <div class="cs"><div class="h">4 · Awesome DESIGN.md <small>optional · copies a real site's style</small></div><code>Download the airbnb DESIGN.md from github.com/VoltAgent/awesome-design-md into this folder.</code></div>
+  <div class="cs"><div class="h">5 · img2threejs <small>skip tonight · photo to 3D model</small></div><code>Install img2threejs from github.com/img2threejs/img2threejs into my Claude skills folder.</code></div>
+  <div class="cs" style="background:#FFF6EF"><div class="h">Short versions of my three prompts <small>full ones on page 19</small></div>
+    <p style="font-size:8.8pt;margin:4px 0 0"><b>1</b> Design a 3D scroll website for a local business that does not have a website. Give me 5 businesses in Singapore to choose from.<br><b>2</b> Build the [shop] site. Sections: [list]. Take the colours from their logo. Scroll should do something on every section. Works on a phone.<br><b>3</b> Upgrade the product visuals with Higgsfield. Separately, design a scan-and-order menu page for the QR code on the table.</p></div>
+  <p style="color:#D9D6D1;font-size:9.5pt;margin:8px 0 0">All five ran on my Mac. Taste shaped the site. The other four tested, checked and restyled it. Full steps with screenshots are in this guide. Henry Chua, 27 September 2026.</p>
+  <div class="foot"><span>Cooked or Cracked · Build a website for a shop that has none</span><span>page 23</span></div>
+</section>
+
+<script>
+// keep flags and hyphenated words from splitting across lines
+document.querySelectorAll('.prompt p, .term pre, .cs code, .cmd code, td code, .fail code').forEach(function(el){
+  Array.from(el.childNodes).forEach(function(n){
+    if(n.nodeType!==3) return;
+    var parts=n.textContent.split(/(\S*-\S*)/);
+    if(parts.length<2) return;
+    var frag=document.createDocumentFragment();
+    parts.forEach(function(p){ if(/\S*-\S*/.test(p)&&p.indexOf('-')>=0){ var s=document.createElement('span'); s.className='nb'; s.textContent=p; frag.appendChild(s);} else frag.appendChild(document.createTextNode(p)); });
+    n.replaceWith(frag);
+  });
+});
+</script>
+</body>
+</html>
