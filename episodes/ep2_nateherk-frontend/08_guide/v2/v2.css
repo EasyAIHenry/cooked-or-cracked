@@ -142,3 +142,29 @@ table.mx td:last-child { border-right:1.5px solid var(--ink); }
 .cover .contents { top:150mm; }
 .cover .stamps { top:176mm; right:18mm; }
 .road .st { margin:0 0 6px; } .road .st .t { padding:5px 12px; }
+
+/* ---- round 4: icons, tiles, prompt table ---- */
+.ic { width:22px; height:22px; vertical-align:-5px; margin-right:6px; }
+.ic.lg { width:34px; height:34px; }
+.icbadge { flex:0 0 44px; width:44px; height:44px; border-radius:12px; background:#FFF1E8; border:1.5px solid var(--ink); display:flex; align-items:center; justify-content:center; box-shadow:2px 3px 0 var(--ink); }
+.icbadge img { width:26px; height:26px; }
+.tiles { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:8px 0 12px; }
+.tile { border:1.5px solid var(--ink); background:#fff; padding:10px 12px; box-shadow:3px 4px 0 rgba(23,20,17,.15); display:flex; gap:10px; align-items:center; font-weight:700; font-size:10pt; }
+.tile img { width:28px; height:28px; flex:0 0 28px; }
+.tile.on { background:#FFF1E8; border-color:var(--coral); box-shadow:3px 4px 0 var(--coral); }
+.tile small { display:block; font-weight:400; color:var(--mute); font-size:8.6pt; }
+.repo5 { display:grid; grid-template-columns:repeat(5,1fr); gap:8px; margin:8px 0 12px; }
+.repo5 .r { border:1.5px solid var(--ink); background:var(--paper); padding:10px 8px; text-align:center; box-shadow:3px 4px 0 rgba(23,20,17,.15); }
+.repo5 .r img { width:30px; height:30px; }
+.repo5 .r b { display:block; font-family:Fraunces; font-size:11pt; margin:4px 0 2px; }
+.repo5 .r span { font-size:8.4pt; color:var(--mute); line-height:1.3; display:block; }
+table.pp { width:100%; border-collapse:separate; border-spacing:0 7px; }
+table.pp td { vertical-align:top; }
+table.pp td.s { width:36%; padding:8px 10px; border:1.5px solid var(--ink); border-right:0; background:var(--paper); font-weight:800; font-size:10pt; }
+table.pp td.s img { width:20px; height:20px; vertical-align:-4px; margin-right:6px; }
+table.pp td.s small { display:block; font-weight:400; color:var(--mute); font-size:8.4pt; margin:2px 0 0 26px; }
+table.pp td.p { padding:8px 12px; border:1.5px solid var(--ink); background:#FFF6EF; font-family:ui-monospace,Menlo,monospace; font-size:8.5pt; line-height:1.45; }
+.safe { display:flex; gap:12px; align-items:flex-start; border:1.5px solid var(--ink); background:#F3FAF3; padding:10px 14px; box-shadow:4px 5px 0 rgba(23,20,17,.15); margin:10px 0; font-size:9.6pt; page-break-inside:avoid; }
+.safe img { width:32px; height:32px; flex:0 0 32px; }
+.safe b { font-family:Fraunces; font-size:11.5pt; display:block; }
+.lvl { font-weight:800; font-size:8.5pt; padding:2px 9px; border-radius:20px; white-space:nowrap; }
