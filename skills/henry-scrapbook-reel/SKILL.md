@@ -12,7 +12,7 @@ Follow Cindy Zhu's sequential passes: cut speech first, everything else second, 
 - Paper #FFFEFA with ruled lines, ink #171411, accent #DF825F, fourth colour #F2C14E (confetti only).
 - Fonts: Fraunces 900 for numbers and words, Kalam 700 for handwritten labels, Inter 800 for captions and the pill.
 - Motion: pop-in with overshoot (scale 0.3→1.1→1 over ~13 frames) and 1–3° tilt, orange underline draws in over ~18 frames, then HOLD STILL. No fades, no pulsing, no spinning.
-- Torn edge clipPath and ruled background are in `references/mg-code.md`. Reuse that code; only change text/props.
+- The full code of every template asset is in `references/mg/*.jsx` (README lists sizes and props); shaders in `references/shaders/`; composite scripts in `references/export-scripts/`. Shared snippets in `references/mg-code.md`. Reuse that code; only change text/props.
 - Sound: Synthetic Bubble Pop on every graphic entrance, Mouse Click on every price card. Files in `references/`.
 
 ## Layout rules

@@ -8,6 +8,7 @@ const pop = (delay, baseRot) => { const t = frame - delay;
            transform: "rotate(" + interpolate(t,[0,7,13],[baseRot*6,-baseRot*0.5,baseRot],clampBoth) + "deg) scale(" + interpolate(t,[0,7,13],[0.3,1.1,1],clampBoth) + ")" }; };
 // orange underline: <svg viewBox="0 0 600 40"><path d="M18 24 Q160 8 300 20 T582 14" stroke=accent strokeWidth=13 strokeLinecap=round strokeDasharray=640 strokeDashoffset={640*(1-draw)}/></svg>, draw over frames 20→38
 
+# Full asset code (exported 28 Sep 2026) is in `mg/*.jsx` and the shaders in `shaders/*.ts`; the export recipe scripts are in `export-scripts/`.
 # Assets in project "Cooked or Cracked — Ep1 v4 (Cindy passes)" to copy code from (inspect_asset includeCode:true):
 - Paper stamp — v4 with icon badge (1000x400, props label/word/wordSize/wordColor/icon)
 - Compare table — header (v4) / row (v4) (1000x130 / 1000x150, d1..d3 delays, winner)

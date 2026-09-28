@@ -8,7 +8,7 @@ Build the PDF: `./make-pdf.sh` (headless Chrome, keeps the links, tiles the page
 This repo is Henry's. It holds his style, and every number in it is a decision he made from the episode insights.
 
 - You may clone it, pull it, read it, copy the four skills into your own `~/.claude/skills/` (scan them first with `skillspector scan --no-llm`), and run the scripts.
-- You may not push, open pull requests, edit any file, change a colour, font, timing or sound in a skill, share the repo outside the team, add keys or footage, or post an episode.
+- You may not push, open pull requests, edit any file, change a colour, font, timing or sound in a skill, present the style as your own, add keys or footage, or post an episode.
 - To suggest a change: send Henry the frame, the timestamp and the reason. He decides, edits the skill, runs `sync.sh`, and you pull. A rule is real when it is in the learning log or a `SKILL.md`.
 
 ## Read in this order

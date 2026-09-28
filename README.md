@@ -1,5 +1,7 @@
 # Cooked or Cracked
 
+New here? Read `START-HERE.md`.
+
 Henry Chua's creator-review reel series. A creator claims an AI tool does X. Henry tests it with the timer on screen and gives a verdict: cooked or cracked.
 
 This repo is the operating manual. It holds the SOP, the Claude Code skills that run each step, the daily lead-scout tool, and the text of every episode (scripts, research, captions, retros). Video and audio stay in the Drive folders.
@@ -11,7 +13,7 @@ This repo is the operating manual. It holds the SOP, the Claude Code skills that
 | `sop/` | The standard operating procedure, one file per step, in order |
 | `skills/cooked-or-cracked/` | The series skill. Pipeline, writing rules, learning log, supers library, episode templates |
 | `skills/creator-audit/` | Apify + Gemini audit of a reel (transcript, beats, baseline, verdict) |
-| `skills/henry-scrapbook-reel/` | The edit template for ChatCut Desktop (paper stamps, table, scoreboard, sting, captions, export) |
+| `skills/henry-scrapbook-reel/` | The edit template for ChatCut Desktop (paper stamps, table, scoreboard, sting, captions, export). `references/mg/` has every template graphic as code, `references/shaders/` the skin shader, `references/export-scripts/` the composite script |
 | `skills/henry-guide-pdf/` | The lead-magnet PDF format |
 | `tools/lead-scout/` | Daily Instagram scout that scores outlier reels from a watchlist |
 | `episodes/` | One folder per episode: scripts, research, captions, retro |
