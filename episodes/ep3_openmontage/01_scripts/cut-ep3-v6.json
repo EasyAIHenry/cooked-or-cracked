@@ -1,0 +1,176 @@
+{
+ "fps": 30,
+ "sources": {
+  "t1": "/Users/henrychua/Content Creation/DRIVE_Cooked-or-Cracked_Ep3_OpenMontage/04_raw-footage/henry-take-ep3.wav"
+ },
+ "items": [
+  {
+   "spacer": 131
+  },
+  {
+   "take": "t1",
+   "in": 39.56,
+   "frames": 180,
+   "label": "crazy"
+  },
+  {
+   "spacer": 75
+  },
+  {
+   "take": "t1",
+   "in": 49.4,
+   "frames": 96,
+   "label": "install"
+  },
+  {
+   "take": "t1",
+   "in": 52.68,
+   "frames": 140,
+   "label": "prelude0"
+  },
+  {
+   "take": "t1",
+   "in": 57.35,
+   "frames": 161,
+   "label": "prelude1"
+  },
+  {
+   "take": "t1",
+   "in": 63.5,
+   "frames": 34,
+   "label": "prelude2"
+  },
+  {
+   "take": "t1",
+   "in": 65.56,
+   "frames": 74,
+   "label": "misc0"
+  },
+  {
+   "take": "t1",
+   "in": 68.71,
+   "frames": 64,
+   "label": "misc1"
+  },
+  {
+   "take": "t1",
+   "in": 84.05,
+   "frames": 39,
+   "label": "script0"
+  },
+  {
+   "take": "t1",
+   "in": 85.71,
+   "frames": 133,
+   "label": "script1"
+  },
+  {
+   "take": "t1",
+   "in": 101.05,
+   "frames": 28,
+   "label": "voice0"
+  },
+  {
+   "take": "t1",
+   "in": 102.32,
+   "frames": 55,
+   "label": "voice1"
+  },
+  {
+   "take": "t1",
+   "in": 104.39,
+   "frames": 56,
+   "label": "voice2"
+  },
+  {
+   "take": "t1",
+   "in": 106.4,
+   "frames": 90,
+   "label": "45min"
+  },
+  {
+   "take": "t1",
+   "in": 115.98,
+   "frames": 46,
+   "label": "showyou"
+  },
+  {
+   "spacer": 123
+  },
+  {
+   "take": "t1",
+   "in": 120.64,
+   "frames": 183,
+   "label": "choppy0"
+  },
+  {
+   "take": "t1",
+   "in": 127.2,
+   "frames": 74,
+   "label": "choppy1"
+  },
+  {
+   "take": "t1",
+   "in": 133.68,
+   "frames": 326,
+   "label": "claude"
+  },
+  {
+   "take": "t1",
+   "in": 210.78,
+   "frames": 129,
+   "label": "five0"
+  },
+  {
+   "take": "t1",
+   "in": 215.33,
+   "frames": 81,
+   "label": "five1"
+  },
+  {
+   "take": "t1",
+   "in": 218.13,
+   "frames": 85,
+   "label": "five2"
+  },
+  {
+   "take": "t1",
+   "in": 245.48,
+   "frames": 69,
+   "label": "look"
+  },
+  {
+   "spacer": 108
+  },
+  {
+   "take": "t1",
+   "in": 279.02,
+   "frames": 257,
+   "label": "30min"
+  },
+  {
+   "take": "t1",
+   "in": 333.08,
+   "frames": 156,
+   "label": "price"
+  },
+  {
+   "take": "t1",
+   "in": 365.56,
+   "frames": 177,
+   "label": "cooked0"
+  },
+  {
+   "take": "t1",
+   "in": 371.49,
+   "frames": 146,
+   "label": "cooked1"
+  },
+  {
+   "take": "t1",
+   "in": 417.12,
+   "frames": 104,
+   "label": "paper"
+  }
+ ]
+}

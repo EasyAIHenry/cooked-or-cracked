@@ -58,3 +58,12 @@ Lessons:
 5. Global young male audience. Plain English, tool names as text, prices as numbers.
 6. Post at the subject's posting hour (Nate: 15:04 UTC).
 Edit lessons (from the v4 to v8 builds): the whole scrapbook template, Reels safe zones, jingle rule and export rule live in the `henry-scrapbook-reel` skill. Nine ChatCut gotchas are recorded there; read them before pass 1.
+
+## Ep3 v2 (29 Sep 2026)
+- Henry's v1 notes rejected the Ep2 layout for this take: his head sits lower (hair from y ~537), so the top zone is y 205-520; every super goes there, 750x300 stamps at 165/215, nothing ever on the face. Scoreboard on the LEFT wall (60/600). No captions at all. No screen recordings ("take it away"), replaced by transparent ProRes overlays rendered with Pillow (install loader, hero stamp, styles pick, tips icons) in 02_graphics/overlays/render_overlays.py.
+- Opener = the reviewed creator's own hook (his claim must be clear in 3-4 s) in the right window with HIS audio, Henry muted. Sting plays on Henry's face after the first line, only the jingle title at the top.
+- Result cut-aways: full frame with the clip's own narration while Henry is silent (end on a sentence boundary, whisper the clip first), then the clip continues muted in a 300x533 window right (740/240) while he talks. Clips were ~4 dB louder than Henry: -5 dB on the cut-aways.
+- Voice "muffled" fix: ChatCut isolate_voice on every speech item (must `clear` it before deleting the item, or the delete fails with "Audio effect references missing target"), then EQ presence (+5 dB 3 kHz, +4 dB shelf 4.5 kHz, -4 dB 250 Hz) and two-pass loudnorm in ffmpeg.
+- Export check: cross-correlate every speech item against the source; a uniform -30 ms offset on all items is AAC encoder delay, not a bad join.
+- Gemini 3.1 Pro mislocated graphics ("overlaps the hair") on a 9:16 reel; trust the frame sheet over its layout claims, keep its audio-balance and flow notes.
+- Ripple: deleting a speech line means startDeltaFrames on every later item on every track in one batch, earliest first, and re-sending propertyOverrides on every moved MG.
