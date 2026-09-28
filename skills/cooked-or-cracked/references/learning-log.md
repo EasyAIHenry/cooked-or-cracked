@@ -80,3 +80,5 @@ Edit lessons (from the v4 to v8 builds): the whole scrapbook template, Reels saf
 - The CTA stays the series comment stamp, centred top. Henry rejected a speech bubble beside the shoulder.
 - Colour: for this take Henry asked for a grade ("well lit, not overexposed"): ffmpeg contrast 1.08 / saturation 1.10 / gamma 1.05 / highlight curve, no vignette; face luma ~0.48. ChatCut custom shaders need credits (submit_shader) and push_asset of .ts fails, so the grade lives in composite-ep3-v5.sh.
 - Result clips inside the edit need about -6 dB in the composite to sit level with the isolated voice (the -5 dB item gain alone left them 2-3 dB hot).
+- Ep3 v6: Henry wants a 2-3 s "what we're testing" line before the ask ("create an informational video") with a testing stamp. During the sting the topic stamp goes UNDER the teaser window, the jingle title holds on top (extend the jingle MG asset duration to 100 s so it can hold past 75 frames).
+- ChatCut can silently revert a delete+add pair (an undo in the app?): re-read the timeline before exporting when a swap was made in the same batch as other edits.
