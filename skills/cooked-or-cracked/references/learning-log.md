@@ -71,3 +71,12 @@ Edit lessons (from the v4 to v8 builds): the whole scrapbook template, Reels saf
 ## Ep3 v3 (29 Sep 2026)
 - Henry's v2 notes: tease the best result under his face (no "his/mine" label) during the first line; loader must not sit idle after 100% (add a second stage); a dragged phrase is cut, not sped up (Gemini blind test: 1.35x and 1.8x pitch-preserved both read as glitches, a straight word-to-word cut at an energy valley passed); he wants real logos in the hero card; icon beats over his chest on "simplify / downloading / steps"; style pick = pointer hovering the strip with a glow, click SFX, chosen card grows BELOW the face, the rest go greyscale; five steps in HIS order RESEARCH, SCRIPT, CUT, ANIMATE, VOICE (never "receipt"); the CTA bubble must be a real speech bubble whose tail points at the Reels comment button (beside the shoulder, 420x383 at 655/880).
 - Gemini flags any 0.2 s sentence gap as "colliding"; a 5-frame breath fixed it. Ripple +N means startDeltaFrames on every later item on every track, latest first, with propertyOverrides re-sent on each moved MG.
+
+## Ep3 v5 (29 Sep 2026, Henry rushing to post)
+- Window frames must NOT pop on the opener: use the static frame MGs (no opacity/scale animation). Henry: "the border that comes in is very weird".
+- Drop the "that's crazy" reaction line: hook → sting on a silent hold with the result teaser under the face and the topic stamp inside the sting hold. Silent hold source for Ep3: take 145.0-149.5.
+- When Henry remembers a line that is not on tape, build it from fragments (here "it's a bit choppy" + "let me show you what I mean", two different spots) and tell him.
+- Body cards: filled accent panels, white icons, kraft label strips, 48 px ExtraBold labels; thin line icons on small paper squares were rejected as unreadable.
+- The CTA stays the series comment stamp, centred top. Henry rejected a speech bubble beside the shoulder.
+- Colour: for this take Henry asked for a grade ("well lit, not overexposed"): ffmpeg contrast 1.08 / saturation 1.10 / gamma 1.05 / highlight curve, no vignette; face luma ~0.48. ChatCut custom shaders need credits (submit_shader) and push_asset of .ts fails, so the grade lives in composite-ep3-v5.sh.
+- Result clips inside the edit need about -6 dB in the composite to sit level with the isolated voice (the -5 dB item gain alone left them 2-3 dB hot).

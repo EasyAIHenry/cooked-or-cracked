@@ -7,8 +7,9 @@ After rendering, each .mov is decoded back with ffmpeg and a 1 fps strip on
 mid-grey is written next to it so the real output can be eyeballed.
 
 Overlays: the original four (styles-pick, install-loader, my-way-hero,
-tips-icons) and the seven v2 pieces (install-loader-v2, my-way-hero-v2,
-simplify-body, styles-strip, styles-selected, tips-icons-v2, comment-bubble).
+tips-icons), the seven v2 pieces (install-loader-v2, my-way-hero-v2,
+simplify-body, styles-strip, styles-selected, tips-icons-v2, comment-bubble)
+and simplify-body-v2 (the richer three-card replacement for simplify-body).
 
 Usage:
     render_overlays.py                 # render everything + strips
@@ -22,6 +23,7 @@ import random
 import subprocess
 import sys
 
+import numpy as np
 from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageFont, ImageOps
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -31,7 +33,8 @@ SS = 2  # supersample factor for all sprite drawing
 PAPER = (255, 254, 250)
 INK = (23, 20, 17)
 ACCENT = (223, 130, 95)
-GOLD = (242, 193, 78)  # confetti only; unused here on purpose
+GOLD = (242, 193, 78)  # star badges (simplify-body-v2); confetti elsewhere
+KRAFT = (233, 217, 184)  # darker kraft paper, label strips in simplify-body-v2
 WHITE = (255, 255, 255)
 RULE = (196, 206, 220)
 GREY = (128, 128, 128)
@@ -218,17 +221,20 @@ _paper_base_cache = {}
 
 def paper_sprite(w, h, seed, tilt=0.0, radius=0, amp=2.0, color=PAPER, ruled=True,
                  shadow=(0, 5, 7, 0.28), pad=28, draw_fn=None, max_out=None,
-                 outline=None, anchor=None):
+                 outline=None, anchor=None, sheet_fn=None, sheet_key=None):
     """Torn-edge paper card (w x h in 1x px) with faint ruled lines, soft
     shadow and a tilt. draw_fn(img, P) draws contents at SS px offset P.
     Anchor is the centre of the paper unless `anchor` (1x px inside the w x h
     box) is given. `outline` (closed polygon, 1x px, clockwise) replaces the
     rectangle. The empty paper (shadow + sheet) is cached per geometry so
-    per-frame contents only cost the drawing and the rotation."""
+    per-frame contents only cost the drawing and the rotation.
+    `sheet_fn(paper, P)` draws onto the flat sheet BEFORE the torn mask is
+    applied (for fills that must be cut by the tear, e.g. a coloured panel);
+    it is part of the cached base, so pass a unique `sheet_key` with it."""
     P = pad * SS
     W, H = int(w * SS + 2 * P), int(h * SS + 2 * P)
     key = (w, h, seed, radius, amp, color, ruled, shadow, pad, max_out,
-           None if outline is None else tuple(outline))
+           None if outline is None else tuple(outline), sheet_key)
     base = _paper_base_cache.get(key)
     if base is None:
         if outline is None:
@@ -257,6 +263,8 @@ def paper_sprite(w, h, seed, tilt=0.0, radius=0, amp=2.0, color=PAPER, ruled=Tru
             while y < P + h * SS:
                 d.line([(0, y), (W, y)], fill=rule, width=SS)
                 y += int(26 * SS)
+        if sheet_fn:
+            sheet_fn(paper, P)
         paper.putalpha(mask)
         base.alpha_composite(paper)
         if len(_paper_base_cache) > 96:
@@ -1098,6 +1106,238 @@ def render_simplify_body():
         yield c
 
 
+# ------------------------------------------------------- 7b simplify-body-v2
+
+def draw_tracked(d, xc, base, text, fnt, fill, tracking=0.0):
+    """One centred line of text with letter tracking (1x px, may be negative).
+    Kerning is kept because each glyph is placed by the advance of its prefix."""
+    total = fnt.getlength(text) + tracking * SS * (len(text) - 1)
+    x = xc - total / 2
+    for i, ch in enumerate(text):
+        d.text((x + fnt.getlength(text[:i]) + i * tracking * SS, base), ch, font=fnt,
+               fill=fill, anchor="ls")
+
+
+def grain_fill(w, h, color, seed, amp=5.0):
+    """w x h (SS px) RGBA sheet of `color` with subtle, slightly fibrous paper
+    grain (deterministic per seed; amp = grain std in 8-bit levels)."""
+    rng = np.random.default_rng(seed)
+    n = rng.normal(0.0, 1.0, (h, w)).astype(np.float32)
+    g = Image.fromarray(np.clip(128 + n * 30, 0, 255).astype(np.uint8), "L")
+    g = g.filter(ImageFilter.GaussianBlur(0.45 * SS))
+    n = np.asarray(g).astype(np.float32) - 128
+    n = n / max(n.std(), 1e-6) * amp
+    arr = np.empty((h, w, 4), np.uint8)
+    for c in range(3):
+        arr[..., c] = np.clip(color[c] + n, 0, 255).astype(np.uint8)
+    arr[..., 3] = 255
+    return Image.fromarray(arr, "RGBA")
+
+
+def resample(pts, n):
+    """n points evenly spaced by arc length along the polyline pts."""
+    segs = [math.hypot(pts[i + 1][0] - pts[i][0], pts[i + 1][1] - pts[i][1])
+            for i in range(len(pts) - 1)]
+    total = sum(segs)
+    out = []
+    for k in range(n):
+        target = total * k / (n - 1)
+        run = 0.0
+        for i, L in enumerate(segs):
+            if run + L >= target or i == len(segs) - 1:
+                t = (target - run) / L if L else 0.0
+                t = clamp01(t)
+                out.append((pts[i][0] + (pts[i + 1][0] - pts[i][0]) * t,
+                            pts[i][1] + (pts[i + 1][1] - pts[i][1]) * t))
+                break
+            run += L
+    return out
+
+
+def star_badge(R=20, seed=93, tilt=-12):
+    """Gold paper star, 2R px point to point, hand-cut edges, small shadow."""
+    pts = []
+    for k in range(10):
+        a = math.radians(-90 + 36 * k)
+        r = R if k % 2 == 0 else R * 0.46
+        pts.append((R + r * math.cos(a), R + r * math.sin(a)))
+    return paper_sprite(2 * R, 2 * R, seed, tilt=tilt, amp=0.5, color=GOLD, ruled=False,
+                        shadow=(0, 2, 3, 0.3), pad=12, outline=pts, max_out=1.0)
+
+
+def no_sign_sprite(R=80, lw=12, halo=3):
+    """Prohibited ring-and-slash: ink, `lw` px stroke, outer radius R, with a
+    thin paper halo so it separates from white artwork underneath. Centre anchor."""
+    pad = 8
+    S = int((2 * R + 2 * pad) * SS)
+    c = S / 2
+    img = Image.new("RGBA", (S, S), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    for col, g in ((PAPER, halo), (INK, 0)):
+        ro = (R + g) * SS
+        w = (lw + 2 * g) * SS
+        d.ellipse((c - ro, c - ro, c + ro, c + ro), outline=col + (255,), width=int(round(w)))
+        k = (R - lw / 2) / math.sqrt(2) * SS
+        stroke(d, [(c - k, c - k), (c + k, c + k)], w, col + (255,))
+    return Spr(img, c, c)
+
+
+def render_simplify_body_v2():
+    """Three 260x300 torn cards in a row: accent panel (top 200) with a big
+    white icon, kraft strip (bottom 100) with the label. Card 1 untangles a
+    rope into an arrow, cards 2 and 3 get an ink prohibited stamp. A gold star
+    pops at each card's top-right corner. No fades, no pulsing; holds."""
+    W, H, N = 900, 460, int(6.0 * FPS)
+    CW, CH, PH, GAP = 260, 300, 200, 40
+    XS = [W / 2 - CW - GAP, W / 2, W / 2 + CW + GAP]      # 150, 450, 750
+    CY = 230
+    tilts = [-1.2, 1.5, -1.1]
+    starts = [int(0.3 * FPS), int(round(1.83 * FPS)), int(5.2 * FPS)]   # 9, 55, 156
+    # 1.1 would push the outer cards' torn edge to the 900 px box edge (the
+    # same reason styles-pick uses 1.04), so the cards peak at 1.06.
+    PEAK = 1.06
+    POP_D, UNT_D, STAMP_D = 13, 14, 10
+    STAMP_AT, STAR_AT = 8, 6      # frames after the card's pop starts
+    OL = 3                        # thin ink outline around the white icons
+    f48 = font(FONT_XB, 48)
+    f40 = font(FONT_XB, 40)
+    # (text, font, baseline y in card px, tracking); "NO DOWNLOAD" is 379 px at
+    # 48 and even "DOWNLOAD" is 295 px, so it stacks with DOWNLOAD at 40.
+    labels = [[("SIMPLIFY", f48, 268, -1.0)],
+              [("NO", f48, 250, -1.0), ("DOWNLOAD", f40, 286, -1.5)],
+              [("NO STEPS", f48, 268, -1.0)]]
+    star = star_badge(20)
+    sign = no_sign_sprite(78)
+    SIGN_C = [(0, 0), (0, 4), (8, 6)]     # stamp centre per card (panel-centre coords)
+
+    # rope -> arrow, same point count so it can morph
+    NPTS = 160
+    tangled = []
+    for i in range(NPTS):
+        t = i / (NPTS - 1)
+        th = 6 * math.pi * t
+        tangled.append((-76 + 152 * t + 26 * math.cos(th + math.pi),
+                        26 * math.sin(th + math.pi) + 9 * math.sin(2 * math.pi * 1.3 * t + 1.0)))
+    arrow = resample([(-100, 0), (100, 0), (64, -34), (100, 0), (64, 34)], NPTS)
+
+    def rope(d, Q, e):
+        pts = [Q(a[0] + (b[0] - a[0]) * e, a[1] + (b[1] - a[1]) * e)
+               for a, b in zip(tangled, arrow)]
+        stroke(d, pts, (14 + 2 * OL) * SS, INK + (255,))
+        stroke(d, pts, 14 * SS, PAPER + (255,))
+
+    def cloud_icon(d, Q, col, g):
+        """Cloud, thick down-arrow, tray. Drawn twice: ink grown by g, then white."""
+        for cx, cy, r in ((-48, -46, 21), (-16, -62, 29), (22, -52, 25), (50, -36, 19)):
+            r += g
+            d.ellipse(Q(cx - r, cy - r) + Q(cx + r, cy + r), fill=col)
+        d.rounded_rectangle(Q(-70 - g, -44 - g) + Q(70 + g, -20 + g), radius=10 * SS, fill=col)
+        lw = (14 + 2 * g) * SS
+        stroke(d, [Q(0, -8), Q(0, 46)], lw, col)
+        stroke(d, [Q(-24, 24), Q(0, 48), Q(24, 24)], lw, col)
+        stroke(d, [Q(-56, 30), Q(-56, 80), Q(56, 80), Q(56, 30)], (12 + 2 * g) * SS, col)
+
+    def stairs_icon(d, Q, col, g):
+        """Five chunky steps rising right, stick figure at the foot."""
+        x0, y0, sw, sh = -66, 84, 33, 26
+        pts = [(x0, y0)]
+        for k in range(5):
+            pts += [(x0 + k * sw, y0 - (k + 1) * sh), (x0 + (k + 1) * sw, y0 - (k + 1) * sh)]
+        pts.append((x0 + 5 * sw, y0))
+        poly = [Q(*p) for p in pts]
+        d.polygon(poly, fill=col)
+        if g:
+            stroke(d, poly, 2 * g * SS, col, closed=True)
+        # stick figure, one arm up towards the stairs
+        hx, hy, hr = -104, 34, 9 + g
+        d.ellipse(Q(hx - hr, hy - hr) + Q(hx + hr, hy + hr), fill=col)
+        lw = (7 + 2 * g) * SS
+        stroke(d, [Q(-104, 44), Q(-104, 66)], lw, col)
+        stroke(d, [Q(-118, 62), Q(-104, 50), Q(-90, 40)], lw, col)
+        stroke(d, [Q(-112, 84), Q(-104, 66), Q(-96, 84)], lw, col)
+
+    def panel_poly(i, w, h):
+        """Accent panel outline in a (w x h) SS image: straight top/sides
+        (they run past the sheet and get cut by the tear), torn lower edge."""
+        rng = random.Random(600 + i)
+        pts = [(0, 0), (w, 0)]
+        n = int(w / (6 * SS))
+        ph = rng.random() * 6.28
+        for k in range(n + 1):
+            x = w - w * k / n
+            y = h + (rng.gauss(0, 1.1) + 1.2 * math.sin(k * 0.5 + ph)) * SS
+            pts.append((x, y))
+        return pts
+
+    def sheet_fn(i):
+        def fn(paper, P):
+            gw, gh = (CW + 20) * SS, (PH + 10) * SS
+            g = grain_fill(gw, gh, ACCENT, 500 + i)
+            m = Image.new("L", (gw, gh), 0)
+            ImageDraw.Draw(m).polygon(panel_poly(i, gw, gh), fill=255)
+            g.putalpha(m)
+            paper.alpha_composite(g, (P - 10 * SS, P - 10 * SS))
+            d = ImageDraw.Draw(paper)
+            for text, fnt, base, tr in labels[i]:
+                draw_tracked(d, P + CW / 2 * SS, P + base * SS, text, fnt, INK + (255,), tr)
+        return fn
+
+    cache = {}
+
+    def card(i, q):
+        """q: card 0 = untangle progress (0..1, 14 steps); cards 1, 2 = stamp scale."""
+        key = (i, q)
+        if key not in cache:
+            def contents(img, P):
+                d = ImageDraw.Draw(img)
+                Q = lambda x, y: (P + (CW / 2 + x) * SS, P + (PH / 2 + y) * SS)
+                if i == 0:
+                    rope(d, Q, smooth(q))
+                else:
+                    icon = cloud_icon if i == 1 else stairs_icon
+                    icon(d, Q, INK + (255,), OL)
+                    icon(d, Q, PAPER + (255,), 0)
+                    if q > 0:
+                        sx, sy = Q(*SIGN_C[i])
+                        blit(img, sign, sx, sy, q, ss=SS)
+            cache[key] = paper_sprite(CW, CH, 70 + i, tilt=tilts[i], amp=1.6, color=KRAFT,
+                                      ruled=False, shadow=(0, 4, 3.5, 0.28), max_out=2.0,
+                                      sheet_fn=sheet_fn(i), sheet_key=("sb2", i),
+                                      draw_fn=contents)
+        return cache[key]
+
+    def star_pos(i, s):
+        """Top-right corner of card i (inset 13 px), following its tilt and scale."""
+        dx, dy = CW / 2 - 13, -CH / 2 + 13
+        th = math.radians(tilts[i])
+        nx = math.cos(th) * dx + math.sin(th) * dy
+        ny = -math.sin(th) * dx + math.cos(th) * dy
+        return XS[i] + nx * s, CY + ny * s
+
+    border_max = 0
+    for f in range(N):
+        c = new_canvas(W, H)
+        for i in range(3):
+            s = pop(f - starts[i], dur=POP_D, peak=PEAK)
+            if s <= 0:
+                continue
+            if i == 0:
+                q = clamp01((f - (starts[i] + POP_D)) / UNT_D)
+                q = round(q * UNT_D) / UNT_D
+            else:
+                q = round(pop(f - (starts[i] + STAMP_AT), dur=STAMP_D, peak=1.15), 4)
+            blit(c, card(i, q), XS[i], CY, s)
+            st = pop(f - (starts[i] + STAR_AT))
+            if st > 0:
+                sx, sy = star_pos(i, s)
+                blit(c, star, sx, sy, st)
+        a = np.asarray(c)[..., 3]
+        border_max = max(border_max, int(a[0].max()), int(a[-1].max()),
+                         int(a[:, 0].max()), int(a[:, -1].max()))
+        yield c
+    print(f"[simplify-body-v2] max alpha on the 1 px frame border: {border_max}")
+
+
 # ----------------------------------------------------------- 8 styles-strip
 
 def pointer_sprite(height=46):
@@ -1377,6 +1617,7 @@ OVERLAYS = {
     "install-loader-v2": (render_install_loader_v2, 900, 440, 9.0),
     "my-way-hero-v2": (render_my_way_hero_v2, 1000, 460, 14.0),
     "simplify-body": (render_simplify_body, 900, 420, 6.0),
+    "simplify-body-v2": (render_simplify_body_v2, 900, 460, 6.0),
     "styles-strip": (render_styles_strip, 1000, 420, 10.0),
     "styles-selected": (render_styles_selected, 600, 470, 4.0),
     "tips-icons-v2": (render_tips_icons_v2, 1000, 420, 12.0),
