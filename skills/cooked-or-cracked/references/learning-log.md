@@ -1,5 +1,14 @@
 # Learning log (append after every episode's retro; newest first)
 
+## Ep3 A/B test and pivots (28 Sep 2026, evening)
+1. Henry's format for a tool claim is now a same-brief A/B: his way (one prompt, self-approved gates) vs my way (plan every shot, pick the voice from samples, approve stills, animate only what moves), same topic, same style lock, same Gemini prompt for both cuts. Receipts are time, money, gates, Gemini score, and whether the style lock held.
+2. Judge with an identical Gemini prompt or the scores are not comparable. Gemini is harsh on any AI motion; use it for relative ranking and facts, and let Henry judge the absolute.
+3. Photoreal macro metal is the worst brief for Kling (warps when it moves, stalls when it does not). Paper cut-out animates cleanly first pass; flat 2D shapes are the safe style for Kling 3.0 std.
+4. For Shorts pace: Nadine at 151 wpm, nine lines of about 17 words, lands 60 to 70 s with no trimming. Elodie at 120 wpm needs silence trimming.
+5. Keep the music fade after loudnorm, or the normaliser lifts the tail back up.
+6. A Claude session restart kills terminal tabs and background processes; OpenMontage checkpoints survived and Codex resumed. Keep a timeline file and screencapture segments so nothing is lost. screencapture also stops on its own around the 1 h 40 min mark; check the pid before assuming it is still rolling.
+7. Henry pivoted twice mid-episode (engineering to unsolved case to misunderstood job). Cheap style samples (five stills, 1.25 credits) settled the look in one round; use that before any video spend.
+
 ## Ep3 groundwork, Dr Alvaro Cintas, OpenMontage "one prompt to a YouTube video" (28 Sep 2026)
 Subject reel DdttZS1RTZu, 42k plays, 4.7x his median, gate VIDEO. Groundwork run by Claude with the screen recorded, Codex as the orchestrator because the Claude CLI was logged out.
 1. Result: one prompt to a 75 s 1080p MP4 plus a YouTube export bundle in 45 min 22 s, $0.119 in providers, 561k tokens, 12 gates. Gemini rates the output 6/10; the Piper voice is the weak link. Research stage 4/10: honest sources, but it picks a lane in the first query and infers "growing niche" from industry sales.

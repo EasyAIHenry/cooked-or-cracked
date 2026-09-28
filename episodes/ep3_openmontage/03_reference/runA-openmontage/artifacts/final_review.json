@@ -1,0 +1,84 @@
+{
+  "version": "1.0",
+  "output_path": "projects/flight-attendant-safety-crew/renders/final.mp4",
+  "status": "pass",
+  "checks": {
+    "technical_probe": {
+      "valid_container": true,
+      "duration_seconds": 70.0,
+      "resolution": "1080x1920",
+      "fps": 30.0,
+      "has_audio": true,
+      "codec": "h264",
+      "file_size_bytes": 6387158,
+      "issues": []
+    },
+    "visual_spotcheck": {
+      "frames_sampled": 9,
+      "frame_paths": [
+        "projects/flight-attendant-safety-crew/renders/review/scene-01.png",
+        "projects/flight-attendant-safety-crew/renders/review/scene-02.png",
+        "projects/flight-attendant-safety-crew/renders/review/scene-03.png",
+        "projects/flight-attendant-safety-crew/renders/review/scene-04.png",
+        "projects/flight-attendant-safety-crew/renders/review/scene-05.png",
+        "projects/flight-attendant-safety-crew/renders/review/scene-06.png",
+        "projects/flight-attendant-safety-crew/renders/review/scene-07.png",
+        "projects/flight-attendant-safety-crew/renders/review/scene-08.png",
+        "projects/flight-attendant-safety-crew/renders/review/scene-09.png"
+      ],
+      "black_frames_detected": false,
+      "broken_overlays": false,
+      "missing_assets": false,
+      "unreadable_text": false,
+      "issues": []
+    },
+    "audio_spotcheck": {
+      "narration_present": true,
+      "music_present": true,
+      "unexpected_silence": false,
+      "clipping_detected": false,
+      "mix_intelligible": true,
+      "issues": []
+    },
+    "promise_preservation": {
+      "delivery_promise_honored": true,
+      "renderer_family_used": "animation-first",
+      "render_runtime_used": "ffmpeg",
+      "runtime_swap_detected": true,
+      "runtime_swap_check": "detected and approved — proposal runtime Remotion was blocked by macOS Mach-port restrictions; subsequent browser capture was unavailable; self-approved runtime decisions d-010 and d-011 authorize the bespoke SVG-frame atelier plus FFmpeg path",
+      "motion_ratio_actual": 1.0,
+      "silent_downgrade_detected": false,
+      "issues": []
+    },
+    "subtitle_check": {
+      "subtitles_expected": true,
+      "subtitles_present": true,
+      "coverage_ratio": 1.0,
+      "timing_drift_detected": false,
+      "issues": []
+    },
+    "transcript_comparison": {
+      "transcript_matches_script": true,
+      "word_accuracy": 0.98,
+      "issues": []
+    },
+    "atelier": {
+      "stock_reuse_detected": false,
+      "offending_imports": [],
+      "art_direction_declared": true,
+      "art_direction": "Paper cut-out collage animation with fibrous colored paper, rough edges, soft shadows, stop-motion registration, a muted storybook palette, and one warm coral safety accent.",
+      "issues": []
+    }
+  },
+  "issues_found": [],
+  "recommended_action": "present_to_user",
+  "metadata": {
+    "contact_sheet": "projects/flight-attendant-safety-crew/renders/review/contact-sheet.png",
+    "final_transcript": "projects/flight-attendant-safety-crew/renders/review/final_transcript.json",
+    "audio_peak_db": -5.9,
+    "audio_mean_db": -20.2,
+    "audio_sample_rate_hz": 48000,
+    "audio_channels": 2,
+    "sha256": "20a9f194f35f0ba180fad5d553ad80c06a046bc452126065aaea5d76fb58422c"
+  }
+}

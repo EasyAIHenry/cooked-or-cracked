@@ -1,0 +1,187 @@
+{
+  "version": "1.0",
+  "cuts": [
+    {
+      "id": "sc01_coffee_to_fire",
+      "source": "projects/flight-attendant-safety-crew/assets/video/paper-collage-silent.mp4",
+      "in_seconds": 0.0,
+      "out_seconds": 4.4,
+      "layer": "primary",
+      "transition_in": "cut",
+      "transition_out": "object-morph",
+      "transition_duration": 0.18,
+      "reason": "Cold-open service-to-safety reversal lands inside five seconds; the reaction pose holds for the final 0.55 seconds."
+    },
+    {
+      "id": "sc02_title_window",
+      "source": "projects/flight-attendant-safety-crew/assets/video/paper-collage-silent.mp4",
+      "in_seconds": 4.4,
+      "out_seconds": 6.7,
+      "layer": "primary",
+      "transition_in": "transform",
+      "transition_out": "paper-peel",
+      "transition_duration": 0.2,
+      "reason": "Short title card with a 0.7-second full-composition hold after letter assembly."
+    },
+    {
+      "id": "sc03_badge_reveal",
+      "source": "projects/flight-attendant-safety-crew/assets/video/paper-collage-silent.mp4",
+      "in_seconds": 6.7,
+      "out_seconds": 10.5,
+      "layer": "primary",
+      "transition_in": "paper-peel",
+      "transition_out": "badge-to-book",
+      "transition_duration": 0.22,
+      "reason": "Cart clears first, then the safety badge and evidence label appear in hierarchy order."
+    },
+    {
+      "id": "sc04_training_scrapbook",
+      "source": "projects/flight-attendant-safety-crew/assets/video/paper-collage-silent.mp4",
+      "in_seconds": 10.5,
+      "out_seconds": 19.3,
+      "layer": "primary",
+      "transition_in": "badge-to-book",
+      "transition_out": "porthole-match",
+      "transition_duration": 0.24,
+      "reason": "Training tabs stagger with the spoken list and then hold together for recognition."
+    },
+    {
+      "id": "sc05_cabin_build",
+      "source": "projects/flight-attendant-safety-crew/assets/video/paper-collage-silent.mp4",
+      "in_seconds": 19.3,
+      "out_seconds": 27.5,
+      "layer": "primary",
+      "transition_in": "porthole-match",
+      "transition_out": "aisle-stretch",
+      "transition_duration": 0.25,
+      "reason": "Cabin outline, seats, passenger dots, and exits reveal in sequence before the rule threshold label settles."
+    },
+    {
+      "id": "sc06_ninety_second_hero",
+      "source": "projects/flight-attendant-safety-crew/assets/video/paper-collage-silent.mp4",
+      "in_seconds": 27.5,
+      "out_seconds": 35.9,
+      "layer": "primary",
+      "transition_in": "aisle-stretch",
+      "transition_out": "doorway-wipe",
+      "transition_duration": 0.22,
+      "reason": "The 90-second number arrives first; the certification caveat flips in second and receives a protected 1.2-second hold."
+    },
+    {
+      "id": "sc07_doorway_check",
+      "source": "projects/flight-attendant-safety-crew/assets/video/paper-collage-silent.mp4",
+      "in_seconds": 35.9,
+      "out_seconds": 47.8,
+      "layer": "primary",
+      "transition_in": "doorway-wipe",
+      "transition_out": "timecard-slide",
+      "transition_duration": 0.24,
+      "reason": "Greeting pose leads; the assistance and readiness scan marks arrive later so the joke does not obscure the fact."
+    },
+    {
+      "id": "sc08_pay_clock",
+      "source": "projects/flight-attendant-safety-crew/assets/video/paper-collage-silent.mp4",
+      "in_seconds": 47.8,
+      "out_seconds": 61.7,
+      "layer": "primary",
+      "transition_in": "timecard-slide",
+      "transition_out": "receipt-rip",
+      "transition_duration": 0.25,
+      "reason": "Boarding work appears before the main hourly-pay clock; the current-pay-practice caveat holds after the clock comparison."
+    },
+    {
+      "id": "sc09_rescue_crew_close",
+      "source": "projects/flight-attendant-safety-crew/assets/video/paper-collage-silent.mp4",
+      "in_seconds": 61.7,
+      "out_seconds": 70.0,
+      "layer": "primary",
+      "transition_in": "receipt-rip",
+      "transition_out": "hold",
+      "transition_duration": 0.0,
+      "reason": "The rescue-crew summary holds before a separate tray-table teaser establishes the next episode."
+    }
+  ],
+  "audio": {
+    "narration": {
+      "segments": [
+        {
+          "asset_id": "narration_master",
+          "start_seconds": 0.0,
+          "end_seconds": 69.522
+        }
+      ]
+    },
+    "music": {
+      "asset_id": "music_master",
+      "volume": 0.12,
+      "fade_in_seconds": 0.8,
+      "fade_out_seconds": 2.5,
+      "ducking": {
+        "enabled": true,
+        "threshold_db": -30,
+        "reduction_db": -9,
+        "attack_ms": 70,
+        "release_ms": 420
+      }
+    },
+    "sfx": []
+  },
+  "subtitles": {
+    "enabled": true,
+    "style": "word-by-word karaoke baked into the SVG animation",
+    "source": "projects/flight-attendant-safety-crew/assets/captions.json",
+    "font": "Arial Rounded MT Bold",
+    "font_size": 62,
+    "color": "#203E42",
+    "outline_color": "#F5E8CE",
+    "background": "#F5E8CEE8",
+    "position": "bottom-center",
+    "max_words_per_line": 5
+  },
+  "transitions": [
+    {"type": "object-morph", "at_seconds": 4.4, "duration_seconds": 0.18},
+    {"type": "paper-peel", "at_seconds": 6.7, "duration_seconds": 0.2},
+    {"type": "badge-to-book", "at_seconds": 10.5, "duration_seconds": 0.22},
+    {"type": "porthole-match", "at_seconds": 19.3, "duration_seconds": 0.24},
+    {"type": "aisle-stretch", "at_seconds": 27.5, "duration_seconds": 0.25},
+    {"type": "doorway-wipe", "at_seconds": 35.9, "duration_seconds": 0.22},
+    {"type": "timecard-slide", "at_seconds": 47.8, "duration_seconds": 0.24},
+    {"type": "receipt-rip", "at_seconds": 61.7, "duration_seconds": 0.25}
+  ],
+  "renderer_family": "animation-first",
+  "render_runtime": "ffmpeg",
+  "composition_mode": "atelier",
+  "bespoke": {
+    "entry": "projects/flight-attendant-safety-crew/canvas/render-frames.mjs",
+    "composition_id": "PaperSafetyCrewSVG",
+    "art_direction": "projects/flight-attendant-safety-crew/art-direction.md",
+    "props_path": "projects/flight-attendant-safety-crew/artifacts/props.json",
+    "public_dir": "projects/flight-attendant-safety-crew/public",
+    "scale": 1.0,
+    "crf": 18,
+    "concurrency": 4
+  },
+  "slideshow_risk_score": {
+    "average": 0.0,
+    "verdict": "strong"
+  },
+  "metadata": {
+    "proposal_render_runtime": "remotion",
+    "approved_runtime_override_decision": "d-011",
+    "compose_target": {"width": 1080, "height": 1920, "fit": "cover"},
+    "target_duration_seconds": 70.0,
+    "render_fps": 30,
+    "hold_windows": [
+      {"scene_id": "sc01_coffee_to_fire", "start_seconds": 3.85, "end_seconds": 4.4, "purpose": "hook reaction"},
+      {"scene_id": "sc06_ninety_second_hero", "start_seconds": 34.7, "end_seconds": 35.9, "purpose": "certification caveat"},
+      {"scene_id": "sc09_rescue_crew_close", "start_seconds": 65.0, "end_seconds": 67.1, "purpose": "rescue-crew conclusion"}
+    ],
+    "stagger_rules": [
+      "Primary evidence enters before supporting labels.",
+      "Captions remain stable while object transformations occur.",
+      "No more than one major paper transition and one secondary accent move at once."
+    ],
+    "transition_map": "Physical paper actions only: morph, peel, flip, stretch, wipe, slide, and rip.",
+    "scene_timing_notes": "Scene boundaries were aligned to the approved 69.522-second narration; the final 0.478 seconds is an intentional music-and-image tail."
+  }
+}

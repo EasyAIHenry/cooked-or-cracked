@@ -1,0 +1,261 @@
+{
+  "version": "1.0",
+  "assets": [
+    {
+      "id": "narration_master",
+      "type": "narration",
+      "path": "assets/audio/narration.wav",
+      "source_tool": "tts_selector",
+      "scene_id": "all",
+      "model": "en_US-lessac-medium",
+      "cost_usd": 0.0,
+      "duration_seconds": 69.522,
+      "format": "wav",
+      "quality_score": 0.86,
+      "subtype": "generated_local",
+      "generation_summary": "Generated locally through tts_selector using Piper after Google Cloud TTS returned HTTP 403 and macOS Samantha produced a zero-sample file.",
+      "provider": "piper",
+      "voice_performance": {
+        "source_section_id": "s4",
+        "delivery_cues_applied": true,
+        "provider_text_used": false,
+        "provider_settings": {
+          "voice": "en_US-lessac-medium",
+          "speaker_id": 0,
+          "length_scale": 1.05,
+          "sentence_silence": 0.35
+        },
+        "sample_approved": true,
+        "sample_path": "assets/audio/narration_sample_s4.wav",
+        "review_notes": "Sample duration 16.594 seconds for a 17-second target; local Whisper recovered all factual phrases with high confidence."
+      }
+    },
+    {
+      "id": "music_master",
+      "type": "music",
+      "path": "assets/music/paper-safety-bed.mp3",
+      "source_tool": "pixabay_music",
+      "scene_id": "all",
+      "cost_usd": 0.0,
+      "duration_seconds": 66.216,
+      "format": "mp3",
+      "quality_score": 0.84,
+      "subtype": "stock",
+      "generation_summary": "Pixabay track 'Happiness - Let It Go_66Sec' by Easy_Eva, selected for light stop-motion rhythm and looped/faded under the final seconds.",
+      "provider": "pixabay_music",
+      "license": "Pixabay Content License (free, no attribution required)"
+    },
+    {
+      "id": "word_captions",
+      "type": "subtitle",
+      "path": "assets/captions.json",
+      "source_tool": "subtitle_gen",
+      "scene_id": "all",
+      "cost_usd": 0.0,
+      "format": "json",
+      "quality_score": 0.96,
+      "subtype": "word_level",
+      "generation_summary": "Local Whisper word timestamps grouped into two-to-five-word SVG caption pages with active-word coral highlighting; exit-row and closing-phrase ASR errors corrected against the approved script.",
+      "provider": "openmontage"
+    },
+    {
+      "id": "subtitles_srt",
+      "type": "subtitle",
+      "path": "assets/subtitles.srt",
+      "source_tool": "subtitle_gen",
+      "scene_id": "all",
+      "cost_usd": 0.0,
+      "format": "srt",
+      "quality_score": 0.95,
+      "subtype": "word_level_sidecar",
+      "generation_summary": "Word-level SRT sidecar retained for publication and accessibility checks.",
+      "provider": "openmontage"
+    },
+    {
+      "id": "atelier_svg_renderer",
+      "type": "animation",
+      "path": "canvas/render-frames.mjs",
+      "source_tool": "project_local_svg_atelier",
+      "scene_id": "all",
+      "cost_usd": 0.0,
+      "resolution": "1080x1920",
+      "format": "mjs",
+      "quality_score": 0.9,
+      "subtype": "bespoke_source",
+      "generation_summary": "Hand-authored deterministic SVG frame renderer implementing all nine approved paper-collage scenes after Chromium launch restrictions blocked the Remotion render path.",
+      "provider": "local"
+    },
+    {
+      "id": "snapshot_sc01",
+      "type": "image",
+      "path": "snapshots/sc01_coffee_to_fire.png",
+      "source_tool": "resvg",
+      "scene_id": "sc01_coffee_to_fire",
+      "cost_usd": 0.0,
+      "resolution": "1080x1920",
+      "format": "png",
+      "quality_score": 0.91,
+      "subtype": "assets_gate_snapshot",
+      "generation_summary": "Representative transformed hook frame from the bespoke SVG composition.",
+      "provider": "local"
+    },
+    {
+      "id": "snapshot_sc02",
+      "type": "image",
+      "path": "snapshots/sc02_title_window.png",
+      "source_tool": "resvg",
+      "scene_id": "sc02_title_window",
+      "cost_usd": 0.0,
+      "resolution": "1080x1920",
+      "format": "png",
+      "quality_score": 0.9,
+      "subtype": "assets_gate_snapshot",
+      "generation_summary": "Title-card filmstrip frame.",
+      "provider": "local"
+    },
+    {
+      "id": "snapshot_sc03",
+      "type": "image",
+      "path": "snapshots/sc03_badge_reveal.png",
+      "source_tool": "resvg",
+      "scene_id": "sc03_badge_reveal",
+      "cost_usd": 0.0,
+      "resolution": "1080x1920",
+      "format": "png",
+      "quality_score": 0.89,
+      "subtype": "assets_gate_snapshot",
+      "generation_summary": "Safety-badge reveal frame.",
+      "provider": "local"
+    },
+    {
+      "id": "snapshot_sc04",
+      "type": "image",
+      "path": "snapshots/sc04_training_scrapbook.png",
+      "source_tool": "resvg",
+      "scene_id": "sc04_training_scrapbook",
+      "cost_usd": 0.0,
+      "resolution": "1080x1920",
+      "format": "png",
+      "quality_score": 0.92,
+      "subtype": "assets_gate_snapshot",
+      "generation_summary": "Training scrapbook frame with five distinct emergency/medical tabs.",
+      "provider": "local"
+    },
+    {
+      "id": "snapshot_sc05",
+      "type": "image",
+      "path": "snapshots/sc05_cabin_build.png",
+      "source_tool": "resvg",
+      "scene_id": "sc05_cabin_build",
+      "cost_usd": 0.0,
+      "resolution": "1080x1920",
+      "format": "png",
+      "quality_score": 0.88,
+      "subtype": "assets_gate_snapshot",
+      "generation_summary": "Full-capacity paper cabin diagram frame.",
+      "provider": "local"
+    },
+    {
+      "id": "snapshot_sc06",
+      "type": "image",
+      "path": "snapshots/sc06_ninety_second_hero.png",
+      "source_tool": "resvg",
+      "scene_id": "sc06_ninety_second_hero",
+      "cost_usd": 0.0,
+      "resolution": "1080x1920",
+      "format": "png",
+      "quality_score": 0.96,
+      "subtype": "assets_gate_snapshot",
+      "generation_summary": "Certification-test side of the reversible 90-second hero card.",
+      "provider": "local"
+    },
+    {
+      "id": "snapshot_sc07",
+      "type": "image",
+      "path": "snapshots/sc07_doorway_check.png",
+      "source_tool": "resvg",
+      "scene_id": "sc07_doorway_check",
+      "cost_usd": 0.0,
+      "resolution": "1080x1920",
+      "format": "png",
+      "quality_score": 0.89,
+      "subtype": "assets_gate_snapshot",
+      "generation_summary": "Friendly doorway check frame with assistance/readiness bubble.",
+      "provider": "local"
+    },
+    {
+      "id": "snapshot_sc08",
+      "type": "image",
+      "path": "snapshots/sc08_pay_clock.png",
+      "source_tool": "resvg",
+      "scene_id": "sc08_pay_clock",
+      "cost_usd": 0.0,
+      "resolution": "1080x1920",
+      "format": "png",
+      "quality_score": 0.9,
+      "subtype": "assets_gate_snapshot",
+      "generation_summary": "Boarding-work versus main-hourly-clock comparison frame.",
+      "provider": "local"
+    },
+    {
+      "id": "snapshot_sc09",
+      "type": "image",
+      "path": "snapshots/sc09_rescue_crew_close.png",
+      "source_tool": "resvg",
+      "scene_id": "sc09_rescue_crew_close",
+      "cost_usd": 0.0,
+      "resolution": "1080x1920",
+      "format": "png",
+      "quality_score": 0.93,
+      "subtype": "assets_gate_snapshot",
+      "generation_summary": "Closing safety-crew card and next-episode tray-table tease.",
+      "provider": "local"
+    }
+  ],
+  "total_cost_usd": 0.0,
+  "metadata": {
+    "tool_path_map": {
+      "narration": "tts_selector -> piper_tts",
+      "music": "pixabay_music",
+      "captions": "transcriber -> subtitle_gen -> bespoke SVG caption renderer",
+      "visuals": "project-local SVG atelier source -> @resvg/resvg-js -> FFmpeg packaging"
+    },
+    "layer3_skills_read": [
+      "text-to-speech",
+      "music",
+      "remotion",
+      "remotion-best-practices",
+      "visual-style",
+      "framer-motion",
+      "speech-to-text"
+    ],
+    "reusable_assets": [
+      "paper texture patterns",
+      "paper person construction",
+      "torn evidence labels",
+      "word-level caption strip"
+    ],
+    "scene_asset_index": {
+      "sc01_coffee_to_fire": ["snapshot_sc01", "atelier_svg_renderer"],
+      "sc02_title_window": ["snapshot_sc02", "atelier_svg_renderer"],
+      "sc03_badge_reveal": ["snapshot_sc03", "atelier_svg_renderer"],
+      "sc04_training_scrapbook": ["snapshot_sc04", "atelier_svg_renderer"],
+      "sc05_cabin_build": ["snapshot_sc05", "atelier_svg_renderer"],
+      "sc06_ninety_second_hero": ["snapshot_sc06", "atelier_svg_renderer"],
+      "sc07_doorway_check": ["snapshot_sc07", "atelier_svg_renderer"],
+      "sc08_pay_clock": ["snapshot_sc08", "atelier_svg_renderer"],
+      "sc09_rescue_crew_close": ["snapshot_sc09", "atelier_svg_renderer"]
+    },
+    "blocked_assets": [
+      "Google Chirp 3 HD narration: HTTP 403 provider access failure",
+      "Remotion browser render: macOS Mach-port registration denied for both bundled Chromium and installed Google Chrome",
+      "Browser-canvas capture: external and in-app browser surfaces unavailable to automation"
+    ],
+    "voice_performance": {
+      "sample_approved": true,
+      "delivery_cues_applied": true,
+      "provider_revision_logged": true
+    },
+    "filmstrip_contact_sheet": "snapshots/contact-sheet.png"
+  }
+}

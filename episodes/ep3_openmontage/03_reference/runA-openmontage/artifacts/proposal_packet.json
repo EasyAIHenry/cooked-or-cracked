@@ -1,0 +1,351 @@
+{
+  "version": "1.0",
+  "concept_options": [
+    {
+      "id": "c1",
+      "title": "Your Drink Server Is Rescue Crew",
+      "hook": "That flight attendant holding a coffee pot? Trained to fight a cabin fire.",
+      "narrative_structure": "myth_busting",
+      "visual_approach": "A bespoke vertical paper cut-out collage in which familiar service props physically transform into safety equipment: coffee pot to extinguisher, welcome mat to passenger scan, cabin aisle to a 90-second evacuation clock, and aircraft door to a pay clock.",
+      "suggested_playbook": "custom-paper-collage",
+      "target_audience": "General travelers and all-ages short-form viewers who know the visible service role but not the regulated safety role.",
+      "target_platform": "youtube",
+      "target_duration_seconds": 70,
+      "key_points": [
+        "Flight attendants are safety crew first, with weeks of evacuation, firefighting, and medical training.",
+        "The 90-second rule is a simulated aircraft certification standard, not a promise for every real accident.",
+        "The boarding greeting doubles as an early safety and assistance check.",
+        "Traditional block-time pay often begins when the aircraft door closes, although newer contracts increasingly add boarding pay."
+      ],
+      "core_message": "The calm service role passengers see is the surface of a rigorously trained safety job.",
+      "cta": "Next episode: why your tray table matters more than you think.",
+      "tone": "Friendly, comic, precise, and suitable for all ages.",
+      "grounded_in": [
+        "FAA main-duty statement",
+        "14 CFR 121.417 emergency training rules",
+        "14 CFR 25.803 evacuation certification rule",
+        "14 CFR 121.575 and 121.585 boarding and exit-row rules",
+        "Government of Canada block-time pay review and 2026 boarding-pay caveat"
+      ],
+      "why_this_works": "It turns the audience's most familiar image of the job into a sequence of concrete visual reversals, letting every sourced fact land as a comic paper-object transformation rather than a lecture."
+    },
+    {
+      "id": "c2",
+      "title": "The Smile Is a Scanner",
+      "hook": "That hello at the aircraft door is doing more work than it looks.",
+      "narrative_structure": "journey",
+      "visual_approach": "Follow one passenger through boarding while a soft paper spotlight reveals the crew's safety checks, then widen into training, evacuation, and pay-clock context.",
+      "suggested_playbook": "custom-paper-collage",
+      "target_audience": "Frequent flyers curious about hidden routines.",
+      "target_platform": "youtube",
+      "target_duration_seconds": 68,
+      "key_points": [
+        "The door greeting can reveal intoxication, illness, distress, and need for assistance.",
+        "Exit-row suitability is a formal safety concern.",
+        "The same crew member trains for evacuation, fire, and first aid."
+      ],
+      "core_message": "Hospitality and safety happen at the same time.",
+      "cta": "Next episode: the tiny cabin rules with very big reasons.",
+      "tone": "Warm observational comedy with a gentle mystery reveal.",
+      "grounded_in": [
+        "14 CFR 121.575",
+        "14 CFR 121.585",
+        "FAA boarding task analysis"
+      ],
+      "why_this_works": "It makes an ordinary human interaction newly legible, but it is narrower than the selected concept and needs more exposition to cover the full brief."
+    },
+    {
+      "id": "c3",
+      "title": "Ninety Seconds Changes the Job",
+      "hook": "An airliner certification test gives everyone just 90 seconds to get out.",
+      "narrative_structure": "data_narrative",
+      "visual_approach": "Build a paper aircraft cabin around a large tactile countdown, intercutting training drills and passenger behavior as the timer advances.",
+      "suggested_playbook": "custom-paper-collage",
+      "target_audience": "Viewers drawn to surprising engineering and safety facts.",
+      "target_platform": "youtube",
+      "target_duration_seconds": 65,
+      "key_points": [
+        "Aircraft over 44 seats face a 90-second simulated evacuation demonstration standard.",
+        "Crew training includes exits, slides, firefighting, and protective breathing equipment.",
+        "The standard explains why calm cabin procedures matter."
+      ],
+      "core_message": "The job is designed around getting a cabin from normal to safe under extreme time pressure.",
+      "cta": "Next episode: why the safety demo sounds so specific.",
+      "tone": "Energetic and factual with a playful countdown.",
+      "grounded_in": [
+        "14 CFR 25.803",
+        "14 CFR 121.291",
+        "14 CFR 121.417"
+      ],
+      "why_this_works": "The number is memorable and highly visual, but precision demands that the video clearly identify it as a certification and demonstration standard rather than a real-accident guarantee."
+    }
+  ],
+  "selected_concept": {
+    "concept_id": "c1",
+    "rationale": "It best fulfills the brief's promise to explain the whole misunderstood job while providing a cold-open reversal, three-act structure, comic transformations, and room for every required fact.",
+    "modifications": [
+      "Use the 90-second certification fact as the act-two hero moment.",
+      "State the boarding-pay caveat so the pay-clock claim remains current and accurate.",
+      "End with a next-episode setup about the hidden reasons behind tiny cabin rules."
+    ],
+    "animation_mode": "mixed",
+    "audio_architecture": "single_narrator",
+    "target_duration_seconds": 70,
+    "suggested_playbook": "custom-paper-collage",
+    "reuse_strategy": {
+      "recurring_motifs": [
+        "torn-paper aircraft window",
+        "warm coral safety accent",
+        "hand-cut label strips",
+        "visible paper registration jitter"
+      ],
+      "layout_system": "One dominant cut-paper subject per beat, alternating centered hero, split-panel comparison, overhead diagram, and intimate character close-up compositions.",
+      "transition_family": "Physical paper actions only: peel, slide, flip, rip reveal, object morph, and brief stop-motion replacement cuts.",
+      "typography_hierarchy": "Chunky hand-cut display labels for hooks and numbers; clean rounded sans-serif captions in two-to-five-word word-level clusters.",
+      "estimated_unique_scenes": 9,
+      "estimated_reusable_templates": 0
+    }
+  },
+  "production_plan": {
+    "pipeline": "animation",
+    "playbook": "custom-paper-collage",
+    "stages": [
+      {
+        "stage": "script",
+        "tools": [],
+        "approach": "Write a 155-175 word, three-act narration with a five-second cold open, title card, sourced caveats, concrete performance cues, and a next-episode closing line."
+      },
+      {
+        "stage": "scene_plan",
+        "tools": [],
+        "approach": "Map nine visually distinct paper-collage scenes to exact narration windows and caption beats; reserve the signature 90-second paper timer for the single act-two hero moment."
+      },
+      {
+        "stage": "assets",
+        "tools": [
+          {
+            "tool_name": "tts_selector",
+            "role": "Generate one calm, warm female narration track.",
+            "provider": "google_tts",
+            "available": true,
+            "estimated_cost_usd": 0.05,
+            "why_this_provider": "The configured Chirp 3 HD Aoede voice directly matches the requested warm female narration and supports SSML pacing."
+          },
+          {
+            "tool_name": "pixabay_music",
+            "role": "Find and download a light, playful instrumental background track with commercial-use licensing.",
+            "provider": "pixabay_music",
+            "available": true,
+            "estimated_cost_usd": 0.0,
+            "why_this_provider": "It is configured, requires no paid generation, and preserves most of the hard budget for contingency."
+          },
+          {
+            "tool_name": "remotion atelier source",
+            "role": "Create all textured paper shapes, characters, props, shadows, and stop-motion motion locally as bespoke SVG/CSS/React artwork.",
+            "provider": "local",
+            "available": true,
+            "estimated_cost_usd": 0.0,
+            "why_this_provider": "Programmatic collage gives exact style consistency across every scene and avoids spending on inconsistent image generations."
+          }
+        ],
+        "approach": "Generate narration once, source one free music track, hand-author the paper-collage artwork locally, and render one representative still per scene for the assets gate.",
+        "fallback_if_unavailable": "If music search fails, use configured Google music generation only after logging the new paid-provider decision; do not change the narration provider or runtime silently."
+      },
+      {
+        "stage": "edit",
+        "tools": [],
+        "approach": "Lock scene timings to narration, word-level caption clusters, paper-replacement transitions, music ducking, and -14 LUFS delivery."
+      },
+      {
+        "stage": "compose",
+        "tools": [
+          {
+            "tool_name": "video_compose",
+            "role": "Render the bespoke vertical composition with Remotion.",
+            "provider": "ffmpeg/remotion",
+            "available": true,
+            "estimated_cost_usd": 0.0,
+            "why_this_provider": "Remotion is installed, supports deterministic bespoke animation and word-level captions, and renders locally."
+          },
+          {
+            "tool_name": "audio_mixer",
+            "role": "Duck music below narration and normalize the final mix.",
+            "provider": "ffmpeg",
+            "available": true,
+            "estimated_cost_usd": 0.0,
+            "why_this_provider": "Local, deterministic, and integrated with the pipeline."
+          }
+        ],
+        "approach": "Render a 1080x1920 H.264 MP4 at 30 fps, mix narration and music, visually inspect extracted keyframes, and verify duration, audio, and encoding with ffprobe."
+      },
+      {
+        "stage": "publish",
+        "tools": [],
+        "approach": "Create a local YouTube Shorts package containing the final MP4, title, description, sourced-fact notes, and thumbnail frame."
+      }
+    ],
+    "quality_tradeoffs": [
+      {
+        "tradeoff": "Bespoke local collage artwork versus multiple AI image generations",
+        "recommendation": "Use bespoke local artwork.",
+        "quality_impact": "Higher continuity and exact motion control, with more authoring time but near-zero provider spend."
+      },
+      {
+        "tradeoff": "Free licensed music search versus paid music generation",
+        "recommendation": "Use Pixabay music unless search quality fails.",
+        "quality_impact": "Less exact musical tailoring, but reliable production value and no provider cost."
+      },
+      {
+        "tradeoff": "Remotion versus unavailable HyperFrames versus FFmpeg-only composition",
+        "recommendation": "Use Remotion.",
+        "quality_impact": "Remotion supplies deterministic animation and word-level caption support; FFmpeg-only would visibly downgrade the promised motion treatment."
+      }
+    ],
+    "alternative_paths": [
+      {
+        "description": "Selected path: bespoke local paper collage, Google TTS, free Pixabay music, Remotion atelier render.",
+        "total_cost_usd": 0.05,
+        "quality_level": "premium",
+        "what_changes": "No change; this maximizes consistency while staying far below budget."
+      },
+      {
+        "description": "Generate a set of paper-collage background plates with Google Imagen and animate them in Remotion.",
+        "total_cost_usd": 0.45,
+        "quality_level": "standard",
+        "what_changes": "Faster authoring but weaker character and texture consistency across scenes."
+      },
+      {
+        "description": "FFmpeg-only still-led cut with local vector art.",
+        "total_cost_usd": 0.05,
+        "quality_level": "budget",
+        "what_changes": "Would lose bespoke scene animation and word-level caption motion; rejected because it breaks the delivery promise."
+      }
+    ],
+    "delivery_promise": {
+      "promise_type": "motion_led",
+      "motion_required": true,
+      "source_required": false,
+      "tone_mode": "playful educational",
+      "quality_floor": "broadcast",
+      "approved_fallback": null
+    },
+    "renderer_family": "animation-first",
+    "render_runtime": "remotion",
+    "composition_mode": "atelier",
+    "art_direction": "A one-off tactile safety-manual storybook: muted teal, sky, cream, and charcoal paper with coral-orange reserved for danger, countdowns, and key reveals; rough torn edges, soft dimensional shadows, tiny registration jitter, and object-to-object paper replacement morphs.",
+    "taste_profile": {
+      "design_read": "The piece should feel like a friendly children's safety book assembled on an animation table, while its factual precision earns adult trust. Comedy comes from literal paper-object transformations, not from mocking passengers or crew.",
+      "visual_variance": 8,
+      "motion_intensity": 7,
+      "information_density": 5,
+      "palette_discipline": "Muted cream, dusty teal, faded sky blue, charcoal, and kraft tan; coral-orange is the single warm accent and appears only on safety-critical objects and numbers.",
+      "layout_variation": "Alternate close character portraits, wide cabin tableaux, overhead diagrams, split comparisons, and one full-frame typographic countdown; never repeat the same primary subject in adjacent scenes.",
+      "reference_strategy": "Use physical cut-paper construction cues and stop-motion timing as principles, with no reference-copying or stock component reuse.",
+      "anti_patterns": [
+        "glossy 3D aviation imagery",
+        "generic corporate iconography",
+        "photorealistic mixed with collage",
+        "constant centered title-card layouts",
+        "more than one warm accent color",
+        "frantic motion during factual caveats"
+      ],
+      "quality_gates": [
+        "Every scene visibly reads as textured paper at 1080x1920.",
+        "The first spoken reversal lands within five seconds.",
+        "The 90-second statement visibly includes certification context.",
+        "Captions are legible in two-to-five-word clusters and stay clear of YouTube UI zones.",
+        "No two adjacent scenes share the same primary visual subject or layout."
+      ]
+    },
+    "music_source": {
+      "source_type": "bring_your_own",
+      "provider": "pixabay_music",
+      "mood_direction": "Light plucked percussion and warm marimba or pizzicato, 100-115 BPM, playful but not childish, no vocals, no dramatic trailer hits.",
+      "estimated_cost_usd": 0.0
+    },
+    "voice_selection": {
+      "provider": "google_tts",
+      "voice_id": "en-US-Chirp3-HD-Aoede",
+      "rationale": "Configured warm female voice with the calm clarity needed for all-ages factual narration.",
+      "estimated_cost_usd": 0.05,
+      "delivery_style": "Calm, warm, lightly amused, never breathless; confident on safety facts and gently conspiratorial on the boarding and pay reveals.",
+      "pacing_policy": "About 145-155 words per minute, with micro-pauses after visual reversals and a full beat before the 90-second reveal.",
+      "sample_approval_required": false
+    },
+    "decision_log_ref": "projects/flight-attendant-safety-crew/artifacts/decision_log.json"
+  },
+  "cost_estimate": {
+    "total_estimated_usd": 0.05,
+    "line_items": [
+      {
+        "tool": "google_tts",
+        "operation": "One approximately 165-word Chirp 3 HD narration generation",
+        "quantity": 1,
+        "estimated_usd": 0.05,
+        "notes": "Conservative allowance; actual billing may be lower or covered by quota."
+      },
+      {
+        "tool": "pixabay_music",
+        "operation": "Search and download one licensed instrumental track",
+        "quantity": 1,
+        "estimated_usd": 0.0,
+        "notes": "Free commercial-use source."
+      },
+      {
+        "tool": "remotion atelier plus ffmpeg",
+        "operation": "Artwork, animation, captions, mix, and final local render",
+        "quantity": 1,
+        "estimated_usd": 0.0,
+        "notes": "Runs locally."
+      }
+    ],
+    "budget_cap_usd": 5.0,
+    "budget_verdict": "within_budget",
+    "savings_options": [
+      "Keep all visuals programmatic and local.",
+      "Use the free music search provider before any paid music generation.",
+      "Generate narration once after the script gate instead of producing approval samples."
+    ],
+    "provider_comparison": [
+      {
+        "provider": "google_tts",
+        "capability": "tts",
+        "available": true,
+        "estimated_usd": 0.05,
+        "tradeoff": "Configured and natural with SSML controls; less expressive control than specialist premium voices."
+      },
+      {
+        "provider": "piper",
+        "capability": "tts",
+        "available": false,
+        "estimated_usd": 0.0,
+        "tradeoff": "Would be free and offline, but it is not installed and would not match the requested natural warmth as reliably."
+      },
+      {
+        "provider": "pixabay_music",
+        "capability": "music_search",
+        "available": true,
+        "estimated_usd": 0.0,
+        "tradeoff": "Free and polished, but the composition cannot be tailored to exact scene beats."
+      },
+      {
+        "provider": "google_music",
+        "capability": "music_generation",
+        "available": true,
+        "estimated_usd": 0.5,
+        "tradeoff": "Custom musical direction, but unnecessary paid spend for a narration-led short."
+      }
+    ]
+  },
+  "approval": {
+    "status": "approved",
+    "user_notes": "Recovered from the user's locked brief and full-run authorization; do not reopen research or proposal exploration. Self-approve every downstream gate using the first-ranked option.",
+    "approved_budget_usd": 5.0
+  },
+  "metadata": {
+    "recovery_note": "The user reported this packet as approved, but the file was absent while the proposal checkpoint remained in_progress. This packet restores the missing contract from the unchanged brief and completed research without re-running either stage.",
+    "target_aspect_ratio": "9:16",
+    "target_resolution": "1080x1920",
+    "target_platform": "youtube_shorts"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "version": "1.0",
+  "entries": [
+    {
+      "platform": "YouTube Shorts",
+      "status": "exported",
+      "export_path": "projects/flight-attendant-safety-crew/renders/final.mp4",
+      "timestamp": "2026-09-28T11:08:00+00:00",
+      "metadata_used": {
+        "title": "Flight Attendants Aren't Drink Servers — They're Safety Crew ✈️",
+        "description": "Flight attendants are trained safety crew. This sourced paper-collage Short explains emergency training, the 90-second certification standard, the door greeting, and the changing pay clock.",
+        "hashtags": [
+          "#FlightAttendant",
+          "#Aviation",
+          "#SafetyCrew",
+          "#YouTubeShorts",
+          "#DidYouKnow"
+        ],
+        "chapters": []
+      }
+    }
+  ],
+  "metadata": {
+    "animation_mode": "bespoke paper cut-out collage animation",
+    "hero_frame_notes": "Use the opening service-to-fire-extinguisher transformation; it communicates the myth reversal without relying on small text.",
+    "thumbnail_concept": "Coffee pot morphing into a coral fire extinguisher, with the cut-paper headline NOT JUST DRINKS.",
+    "platform_notes": "Native 9:16, 1080x1920, 70 seconds, H.264/AAC, word-level captions baked in, SRT sidecar included. Exported locally; no external account upload was authorized.",
+    "metadata_file": "projects/flight-attendant-safety-crew/artifacts/publish_metadata.json",
+    "caption_sidecar": "projects/flight-attendant-safety-crew/assets/subtitles.srt",
+    "final_review": "projects/flight-attendant-safety-crew/artifacts/final_review.json",
+    "provider_cost_usd": 0.0
+  }
+}

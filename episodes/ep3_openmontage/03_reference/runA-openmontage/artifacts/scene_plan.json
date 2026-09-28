@@ -1,0 +1,244 @@
+{
+  "version": "1.0",
+  "style_playbook": "custom-paper-collage",
+  "scenes": [
+    {
+      "id": "sc01_coffee_to_fire",
+      "type": "animation",
+      "description": "Cold open. A smiling paper flight attendant presents a coffee pot; on the word 'trained,' the pot snaps into a fire extinguisher and a tiny coral flame folds itself out.",
+      "start_seconds": 0,
+      "end_seconds": 4.4,
+      "script_section_id": "s1",
+      "framing": "Medium-close character portrait, attendant left of center, service object large on the right; layered paper cabin wall in the background.",
+      "movement": "Two-frame stop-motion replacement cut, slight hand-made registration jitter, one anticipatory dip before the object morph, then a held reaction.",
+      "transition_in": "cut",
+      "transition_out": "transform: extinguisher label expands into the title's coral underline",
+      "overlay_notes": "Word-level captions low-center; punch label SAFETY CREW appears upper-right after the morph.",
+      "shot_language": {"shot_size": "medium_close", "camera_movement": "static", "lens_mm": 50, "lighting_key": "overcast_soft", "depth_of_field": "deep", "color_temperature": "warm"},
+      "shot_intent": "Deliver the brief's core reversal before the viewer can scroll away.",
+      "narrative_role": "introduce_subject",
+      "information_role": "The visible service role conceals emergency capability.",
+      "hero_moment": false,
+      "texture_keywords": ["torn paper", "fibrous grain", "rough scissor edge", "soft drop shadow", "stop-motion jitter"],
+      "required_assets": [
+        {"type": "bespoke_remotion_scene", "description": "Layered paper attendant, coffee pot, fire extinguisher, flame, and cabin wall.", "source": "generate"}
+      ]
+    },
+    {
+      "id": "sc02_title_window",
+      "type": "text_card",
+      "description": "A torn-paper aircraft window opens like a storybook flap. The title assembles from mismatched cut-paper letters around it while a tiny aircraft glides behind the window.",
+      "start_seconds": 4.4,
+      "end_seconds": 6.7,
+      "script_section_id": "s2",
+      "framing": "Centered circular window with title wrapping above and below; generous cream negative space.",
+      "movement": "Paper flap opens, title pieces drop with staggered overshoot, aircraft crosses once, then the full card holds.",
+      "transition_in": "transform from coral underline",
+      "transition_out": "paper peel upward",
+      "overlay_notes": "Designed title only; captions temporarily move to the lower safe area and do not duplicate the entire title card.",
+      "shot_language": {"shot_size": "wide", "camera_movement": "zoom_in", "lens_mm": 35, "lighting_key": "high_key", "depth_of_field": "deep", "color_temperature": "neutral"},
+      "shot_intent": "Name the series premise and give the hook a clean visual landing.",
+      "narrative_role": "establish_context",
+      "information_role": "This is a myth-busting episode about a widely misunderstood profession.",
+      "hero_moment": false,
+      "texture_keywords": ["storybook paper", "hand-cut lettering", "kraft backing", "soft shadow"],
+      "required_assets": [
+        {"type": "bespoke_remotion_scene", "description": "Aircraft-window flap, cut-letter title, tiny moving aircraft silhouette.", "source": "generate"}
+      ]
+    },
+    {
+      "id": "sc03_badge_reveal",
+      "type": "character_scene",
+      "description": "Full paper crew figure stands beside a snack cart. The cart rolls aside to reveal a large shield-shaped SAFETY badge behind the character, with the FAA fact on a small pinned label.",
+      "start_seconds": 6.7,
+      "end_seconds": 10.5,
+      "script_section_id": "s3",
+      "framing": "Medium-wide full figure on the right third; cart begins foreground-left; oversized badge occupies midground after reveal.",
+      "movement": "Cart rolls with uneven stop-motion steps, character pivots toward the badge, badge scales up on a soft paper spring.",
+      "transition_in": "paper peel downward",
+      "transition_out": "slide: badge becomes the cover of a training scrapbook",
+      "overlay_notes": "Small evidence label: MAIN DUTY: SAFETY. Word-level captions above the bottom UI zone.",
+      "shot_language": {"shot_size": "medium_wide", "camera_movement": "pan_right", "lens_mm": 35, "lighting_key": "natural", "depth_of_field": "deep", "color_temperature": "neutral"},
+      "shot_intent": "State the authoritative thesis while preserving the friendly character focus.",
+      "narrative_role": "evidence",
+      "information_role": "The FAA defines passenger safety as the main duty.",
+      "hero_moment": false,
+      "character_actions": [
+        {"character_id": "attendant_a", "emotion": "calm pride", "action_sequence": ["stand beside cart", "pivot toward safety badge", "open palm toward evidence label"], "target": "safety badge", "notes": "Movement is paper replacement animation, not skeletal realism."}
+      ],
+      "texture_keywords": ["matte paper uniform", "stitched paper badge", "corrugated cart", "registration jitter"],
+      "required_assets": [
+        {"type": "bespoke_remotion_scene", "description": "Full crew character, snack cart, safety shield, pinned FAA label.", "source": "generate"}
+      ]
+    },
+    {
+      "id": "sc04_training_scrapbook",
+      "type": "animation",
+      "description": "Overhead training scrapbook. Five tactile tabs flip in sequence: evacuation slide, emergency exit, extinguisher, first-aid cross, and AED/medical kit.",
+      "start_seconds": 10.5,
+      "end_seconds": 19.3,
+      "script_section_id": "s3",
+      "framing": "Top-down full-page composition; icons occupy different clipped panels on a teal scrapbook spread, with a binder edge along the left.",
+      "movement": "Tabs flip and stamp into place one per narration item; a torn WEEK 1 → WEEKS label stretches across the binding; final one-second hold.",
+      "transition_in": "slide: safety badge opens as book cover",
+      "transition_out": "transform: round AED pad becomes a cabin porthole seen from above",
+      "overlay_notes": "Designed labels are single nouns only; captions sit on a cream strip at the bottom.",
+      "shot_language": {"shot_size": "insert", "camera_movement": "static", "lens_mm": 50, "lighting_key": "overcast_soft", "depth_of_field": "deep", "color_temperature": "cool"},
+      "shot_intent": "Make the breadth and duration of training tangible without turning the list into floating icons.",
+      "narrative_role": "deliver_payload",
+      "information_role": "Training spans weeks and covers evacuation, fire, first aid, and medical response.",
+      "hero_moment": false,
+      "texture_keywords": ["scrapbook", "paper tabs", "rubber-stamp ink", "torn labels", "fibrous card"],
+      "required_assets": [
+        {"type": "bespoke_remotion_scene", "description": "Scrapbook spread, five training panels, binder, stamps, and labels.", "source": "generate"}
+      ]
+    },
+    {
+      "id": "sc05_cabin_build",
+      "type": "diagram",
+      "description": "An empty cream field becomes an overhead aircraft cabin: seats slide in from both sides, paper passengers pop into every row, and coral exit arrows appear at the corners.",
+      "start_seconds": 19.3,
+      "end_seconds": 27.5,
+      "script_section_id": "s4",
+      "framing": "Extreme-wide overhead diagram, cabin centered vertically with clear margins; seats form two blue-teal columns around a cream aisle.",
+      "movement": "Progressive geometric build: fuselage outline draws, seats insert, passengers populate, exits pulse once; camera is N/A beyond a subtle virtual dolly-in.",
+      "transition_in": "transform from scrapbook porthole",
+      "transition_out": "slide: aisle stretches downward into a countdown track",
+      "overlay_notes": "Small label: MORE THAN 44 SEATS. Captions float above the cabin tail, never over the diagram.",
+      "shot_language": {"shot_size": "extreme_wide", "camera_movement": "dolly_in", "lens_mm": 50, "lighting_key": "high_key", "depth_of_field": "deep", "color_temperature": "cool"},
+      "shot_intent": "Establish that the 90-second rule concerns a full-capacity certification scenario, not an abstract number.",
+      "narrative_role": "build_tension",
+      "information_role": "The certification context begins with a full aircraft above the regulatory seat threshold.",
+      "hero_moment": false,
+      "texture_keywords": ["paper blueprint", "cut-card seats", "screen-printed arrows", "flat overhead shadow"],
+      "required_assets": [
+        {"type": "bespoke_remotion_scene", "description": "Procedural paper cabin diagram, seat rows, passenger dots, exit arrows.", "source": "generate"}
+      ]
+    },
+    {
+      "id": "sc06_ninety_second_hero",
+      "type": "animation",
+      "description": "Hero moment. A giant coral paper timer fills the frame at 90 while miniature passengers stream through two torn-paper exits. The timer flips over to reveal CERTIFICATION TEST, then a smaller NOT EVERY REAL ACCIDENT caveat settles beneath.",
+      "start_seconds": 27.5,
+      "end_seconds": 35.9,
+      "script_section_id": "s4",
+      "framing": "Extreme close-up on the timer face, slightly high angle; tiny cabin and moving figures occupy a lower paper layer for scale.",
+      "movement": "Numbers slap down with weighted overshoot, figures travel on curved paper paths, timer card physically flips for the caveat, then motion calms for a two-second accuracy hold.",
+      "transition_in": "slide from stretched aisle",
+      "transition_out": "transform: timer rim becomes an aircraft doorway arch",
+      "overlay_notes": "Designed labels: 90 SECONDS, CERTIFICATION TEST, SIMULATED CONDITIONS. Captions move to the upper safe area during the caveat.",
+      "shot_language": {"shot_size": "extreme_close_up", "camera_movement": "dolly_out", "lens_mm": 24, "lighting_key": "rim_lit", "depth_of_field": "medium", "color_temperature": "warm"},
+      "shot_intent": "Create the memorable visual peak while immediately protecting the fact from the common real-accident misinterpretation.",
+      "narrative_role": "deliver_payload",
+      "information_role": "Ninety seconds is a simulated certification and demonstration standard.",
+      "hero_moment": true,
+      "texture_keywords": ["layered card timer", "coral paper", "die-cut numerals", "deep soft shadow", "calm caveat panel"],
+      "required_assets": [
+        {"type": "bespoke_remotion_scene", "description": "Giant timer, miniature passengers, exit paths, flip-card caveat system.", "source": "generate"}
+      ]
+    },
+    {
+      "id": "sc07_doorway_check",
+      "type": "character_scene",
+      "description": "At the aircraft doorway, the attendant greets three different paper passengers. Gentle thought-bubble cut-outs appear in turn: assistance, wellness, and exit-row readiness, with check marks rather than surveillance graphics.",
+      "start_seconds": 35.9,
+      "end_seconds": 47.8,
+      "script_section_id": "s5",
+      "framing": "Over-shoulder view from behind the attendant at frame-left toward passengers entering from frame-right; bubbles occupy the upper half without covering faces.",
+      "movement": "Passengers advance one at a time on a short tracking move; attendant nods and gestures; each bubble unfolds from the welcome mat and returns before the next.",
+      "transition_in": "transform from timer rim to doorway arch",
+      "transition_out": "transform: welcome mat folds into a horizontal timeline",
+      "overlay_notes": "Three small labels: HELP, WELLNESS, EXIT ROW. Word-level captions remain low-center.",
+      "shot_language": {"shot_size": "over_shoulder", "camera_movement": "tracking_right", "lens_mm": 50, "lighting_key": "natural", "depth_of_field": "medium", "color_temperature": "warm"},
+      "shot_intent": "Reframe a familiar greeting as calm operational awareness without implying intrusive profiling.",
+      "narrative_role": "evidence",
+      "information_role": "The greeting can surface assistance needs, intoxication or illness concerns, and exit-row suitability.",
+      "hero_moment": false,
+      "character_actions": [
+        {"character_id": "attendant_a", "emotion": "welcoming attention", "action_sequence": ["open-palm greeting", "notice assistance cue", "check exit-row card", "reassuring nod"], "target": "boarding passengers", "notes": "All acting remains gentle and nonjudgmental."}
+      ],
+      "texture_keywords": ["doorway layers", "paper passengers", "fold-out thought bubbles", "warm coral check marks"],
+      "required_assets": [
+        {"type": "bespoke_remotion_scene", "description": "Doorway set, attendant and passenger cut-outs, three fold-out safety bubbles.", "source": "generate"}
+      ]
+    },
+    {
+      "id": "sc08_pay_clock",
+      "type": "diagram",
+      "description": "A split paper timeline shows BOARDING WORK already moving on the left while the MAIN HOURLY CLOCK on the right remains asleep. A cabin door slides shut at center and the coral clock springs awake; a NEWER CONTRACTS tab adds boarding pay as a current caveat.",
+      "start_seconds": 47.8,
+      "end_seconds": 61.7,
+      "script_section_id": "s6",
+      "framing": "Wide horizontal split adapted to the vertical canvas: upper lane for boarding tasks, lower lane for the pay clock, aircraft door acting as the center hinge.",
+      "movement": "Small task cards travel before the clock starts; door closes with a soft thump; clock hands begin; caveat tab slides in and partially overlaps the old rule.",
+      "transition_in": "transform from welcome mat to timeline",
+      "transition_out": "paper flip: timeline becomes a service tray",
+      "overlay_notes": "Designed labels: BOARDING WORK, DOOR CLOSES, MAIN HOURLY CLOCK, SOME NEW CONTRACTS ADD BOARDING PAY. Captions use the top safe area for this lower-heavy diagram.",
+      "shot_language": {"shot_size": "wide", "camera_movement": "pan_left", "lens_mm": 35, "lighting_key": "overcast_soft", "depth_of_field": "deep", "color_temperature": "mixed"},
+      "shot_intent": "Make the hidden timing mismatch instantly understandable while preserving the 2026 caveat.",
+      "narrative_role": "comparison",
+      "information_role": "Traditional block-time pay can start after boarding work; newer contracts increasingly modify that arrangement.",
+      "hero_moment": false,
+      "texture_keywords": ["paper timeline", "clockwork cut-outs", "sliding door", "contract tab", "inked arrows"],
+      "required_assets": [
+        {"type": "bespoke_remotion_scene", "description": "Two-lane pay timeline, door hinge, clock face, task cards, caveat tab.", "source": "generate"}
+      ]
+    },
+    {
+      "id": "sc09_rescue_crew_close",
+      "type": "animation",
+      "description": "A top-down service tray enters with a drink. It flips like a paper card to reveal the SAFETY CREW badge and a compact collage of extinguisher, first-aid kit, and exit arrow. A tiny tray table lowers for the next-episode tease.",
+      "start_seconds": 61.7,
+      "end_seconds": 70,
+      "script_section_id": "s7",
+      "framing": "Centered overhead hero tray against a quiet cream background; final tray-table tease peeks from the bottom edge.",
+      "movement": "Single satisfying card flip, safety icons fan out once, final words settle, then a small tray table click closes the episode.",
+      "transition_in": "paper flip from timeline",
+      "transition_out": "cut to cream on the tray-table click",
+      "overlay_notes": "Final designed line: UNDERNEATH THE SMILE: RESCUE CREW. Next-episode strip: WHY YOUR TRAY TABLE MATTERS. Captions remain distinct and finish before the tease strip.",
+      "shot_language": {"shot_size": "insert", "camera_movement": "crane_up", "lens_mm": 50, "lighting_key": "high_key", "depth_of_field": "deep", "color_temperature": "warm"},
+      "shot_intent": "Resolve the service-versus-safety contrast and provide a concrete series handoff.",
+      "narrative_role": "call_to_action",
+      "information_role": "The visible hospitality is real, but the underlying professional identity is safety crew.",
+      "hero_moment": false,
+      "texture_keywords": ["paper tray", "badge flip", "fan-out icons", "quiet cream field", "warm final accent"],
+      "required_assets": [
+        {"type": "bespoke_remotion_scene", "description": "Service tray card, drink, safety badge, three safety icons, tray-table tease.", "source": "generate"}
+      ]
+    }
+  ],
+  "metadata": {
+    "target_duration_seconds": 70,
+    "aspect_ratio": "9:16",
+    "resolution": "1080x1920",
+    "animation_mode": "mixed",
+    "render_runtime": "remotion",
+    "composition_mode": "atelier",
+    "animatic_rules": "Each scene has an entrance under 0.6 seconds, one main transformation or progressive build, at least a 0.6-second information hold, and a physical paper exit. Registration jitter stays below 2 pixels and changes only every two frames.",
+    "transition_rules": "Use only cut, slide, transform, and paper flip/peel. Transform transitions carry one object between narrative ideas; cuts are reserved for the hook and final click.",
+    "hold_rules": "Hold the title for 1.2 seconds, MAIN DUTY label for 1.0 second, 90-second caveat for 2.0 seconds, boarding-pay caveat for 1.5 seconds, and final next-episode strip for 1.0 second.",
+    "tool_path_map": {
+      "all_scenes": "Hand-authored project-local Remotion React/SVG/CSS; no stock scene registry and no AI-generated plates.",
+      "narration": "tts_selector -> google_tts en-US-Chirp3-HD-Aoede",
+      "captions": "word timings from narration transcript -> bespoke per-word caption renderer",
+      "music": "pixabay_music -> audio_mixer ducking -> Remotion Audio"
+    },
+    "reusable_motifs": ["coral safety accent", "torn label strips", "fibrous paper grain", "soft offset shadows", "two-frame registration jitter"],
+    "signature_device": "The giant reversible 90-second paper timer appears only in sc06.",
+    "scene_distinctness": {
+      "primary_subjects": [
+        "attendant plus transforming coffee pot",
+        "aircraft window title flap",
+        "crew figure plus hidden safety badge",
+        "overhead training scrapbook",
+        "building cabin diagram",
+        "giant 90-second timer",
+        "doorway greeting ensemble",
+        "two-lane pay timeline",
+        "flipping service tray"
+      ],
+      "adjacent_subject_reuse": false
+    },
+    "caption_safe_zone": "Keep baseline above y=1660 and below y=1450 only when top-positioned; maximum two lines and five words per cluster."
+  }
+}

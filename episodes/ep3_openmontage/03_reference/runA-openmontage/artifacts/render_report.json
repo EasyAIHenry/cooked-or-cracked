@@ -1,0 +1,43 @@
+{
+  "version": "1.0",
+  "outputs": [
+    {
+      "path": "projects/flight-attendant-safety-crew/renders/final.mp4",
+      "format": "mp4",
+      "codec": "h264",
+      "audio_codec": "aac",
+      "resolution": "1080x1920",
+      "fps": 30.0,
+      "duration_seconds": 70.0,
+      "file_size_bytes": 6387158,
+      "platform_target": "YouTube Shorts 9:16"
+    }
+  ],
+  "render_time_seconds": 664.0,
+  "warnings": [
+    "The proposal-locked Remotion runtime could not start Chromium under the macOS sandbox; approved decision d-011 selected the deterministic SVG-frame atelier plus FFmpeg packaging."
+  ],
+  "verification_notes": [
+    "All 2,100 frames rendered at 1080x1920 and 30 fps.",
+    "Nine post-render scene frames were visually inspected with no black frames, broken overlays, missing assets, or unreadable captions.",
+    "Final audio is 48 kHz stereo AAC with narration, music, no unexpected silence, and a -5.9 dB peak.",
+    "Local transcription of the final MP4 matched the approved 174-word normalized script at 98.0%."
+  ],
+  "render_grammar": "animation-first",
+  "slideshow_risk_score": {
+    "average": 0.0,
+    "verdict": "strong"
+  },
+  "decision_log_ref": "projects/flight-attendant-safety-crew/decision_log.json",
+  "final_review_ref": "projects/flight-attendant-safety-crew/artifacts/final_review.json",
+  "metadata": {
+    "render_runtime": "ffmpeg",
+    "composition_mode": "atelier",
+    "runtime_override_decision": "d-011",
+    "frame_count": 2100,
+    "caption_mode": "word-level baked-in karaoke",
+    "music_looped": true,
+    "provider_cost_usd": 0.0,
+    "sha256": "20a9f194f35f0ba180fad5d553ad80c06a046bc452126065aaea5d76fb58422c"
+  }
+}

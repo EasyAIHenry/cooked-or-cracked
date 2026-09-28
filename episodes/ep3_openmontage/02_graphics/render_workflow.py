@@ -311,7 +311,7 @@ class CutCard(Card):
 
 
 class ReceiptCard(Card):
-    ROWS = [("Time", "1 h 23 min and counting", "25 min"),
+    ROWS = [("Time", "1 h 38 min", "25 min"),
             ("Money", "$0.12", "about $2"),
             ("Voice", "robot", "chosen"),
             ("Style held", "no", "yes"),

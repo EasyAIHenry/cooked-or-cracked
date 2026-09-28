@@ -1,0 +1,198 @@
+{
+  "version": "1.0",
+  "project_id": "flight-attendant-safety-crew",
+  "decisions": [
+    {
+      "decision_id": "d-001",
+      "stage": "proposal",
+      "category": "concept_selection",
+      "subject": "Narrative concept",
+      "options_considered": [
+        {"option_id": "c1", "label": "Your Drink Server Is Rescue Crew", "score": 0.95, "reason": "Best complete myth-to-reality arc and strongest object-morph hook."},
+        {"option_id": "c2", "label": "The Smile Is a Scanner", "score": 0.82, "reason": "Strong mystery but too narrow for the full brief.", "rejected_because": "Would require extra exposition to cover training, evacuation, and pay."},
+        {"option_id": "c3", "label": "Ninety Seconds Changes the Job", "score": 0.85, "reason": "Memorable statistic and hero visual.", "rejected_because": "Risks making one certification rule feel like the entire job."}
+      ],
+      "selected": "c1",
+      "reason": "It fulfills every required fact in one compact three-act reversal and naturally supports the locked paper-collage style.",
+      "user_visible": true,
+      "user_approved": true,
+      "confidence": 0.95
+    },
+    {
+      "decision_id": "d-002",
+      "stage": "proposal",
+      "category": "render_runtime_selection",
+      "subject": "Composition runtime",
+      "options_considered": [
+        {"option_id": "remotion", "label": "Remotion", "score": 0.96, "reason": "Available locally; supports deterministic bespoke animation and word-level caption timing."},
+        {"option_id": "hyperframes", "label": "HyperFrames", "score": 0.35, "reason": "HTML and GSAP would suit tactile kinetic motion.", "rejected_because": "Runtime not available on this machine; npm package is not resolvable."},
+        {"option_id": "ffmpeg", "label": "FFmpeg only", "score": 0.48, "reason": "Available and reliable for packaging.", "rejected_because": "Cannot deliver the locked bespoke motion and caption character without a major downgrade."}
+      ],
+      "selected": "remotion",
+      "reason": "It is the only available runtime that preserves the motion-led paper-collage delivery promise and word-level captions.",
+      "user_visible": true,
+      "user_approved": true,
+      "confidence": 0.98
+    },
+    {
+      "decision_id": "d-003",
+      "stage": "proposal",
+      "category": "composition_mode",
+      "subject": "Composition authoring mode",
+      "options_considered": [
+        {"option_id": "atelier", "label": "Atelier", "score": 0.97, "reason": "A one-off hero explainer needs a bespoke visual system and scene-specific animation."},
+        {"option_id": "templated", "label": "Templated", "score": 0.52, "reason": "Faster and reliable.", "rejected_because": "Stock card scenes would undermine the locked tactile paper-collage identity."}
+      ],
+      "selected": "atelier",
+      "reason": "Hand-authored scenes can maintain paper texture, physical transitions, and visual distinctness across the entire short.",
+      "user_visible": true,
+      "user_approved": true,
+      "confidence": 0.96
+    },
+    {
+      "decision_id": "d-004",
+      "stage": "proposal",
+      "category": "voice_selection",
+      "subject": "Narration TTS provider",
+      "options_considered": [
+        {"option_id": "google_tts_aoede", "label": "Google Chirp 3 HD Aoede", "score": 0.92, "reason": "Configured warm female voice with SSML pacing controls."},
+        {"option_id": "piper", "label": "Piper local", "score": 0.42, "reason": "Free and offline.", "rejected_because": "Not installed and lower expected naturalness for the requested calm warmth."}
+      ],
+      "selected": "google_tts_aoede",
+      "reason": "It is the configured voice most closely matching the brief while keeping spend negligible.",
+      "user_visible": true,
+      "user_approved": true,
+      "confidence": 0.9
+    },
+    {
+      "decision_id": "d-005",
+      "stage": "proposal",
+      "category": "music_source",
+      "subject": "Background music source",
+      "options_considered": [
+        {"option_id": "pixabay_music", "label": "Pixabay licensed music", "score": 0.9, "reason": "Configured, polished, commercial-use, and free."},
+        {"option_id": "google_music", "label": "Google generated music", "score": 0.76, "reason": "Tailored mood and duration.", "rejected_because": "Paid generation is unnecessary unless free search fails."},
+        {"option_id": "no_music", "label": "No music", "score": 0.3, "reason": "Zero cost.", "rejected_because": "The brief explicitly requires music and the comic stop-motion rhythm benefits from it."}
+      ],
+      "selected": "pixabay_music",
+      "reason": "It fulfills the music requirement without compromising the hard budget.",
+      "user_visible": true,
+      "user_approved": true,
+      "confidence": 0.88
+    },
+    {
+      "decision_id": "d-006",
+      "stage": "proposal",
+      "category": "approval_policy",
+      "subject": "Remaining production approval gates",
+      "options_considered": [
+        {"option_id": "self_approve_first_ranked", "label": "Print, select, and self-approve first-ranked option", "score": 1.0, "reason": "Explicitly required because nobody is at the keyboard."},
+        {"option_id": "pause_each_gate", "label": "Pause for human at every gate", "score": 0.0, "reason": "Normal guided policy.", "rejected_because": "Contradicts the user's explicit unattended-session rule."}
+      ],
+      "selected": "self_approve_first_ranked",
+      "reason": "The user explicitly pre-authorized self-approval at every gate after printing the gate, options, and pick.",
+      "user_visible": true,
+      "user_approved": true,
+      "confidence": 1.0
+    },
+    {
+      "decision_id": "d-007",
+      "stage": "proposal",
+      "category": "budget_tradeoff",
+      "subject": "Visual asset production spend",
+      "options_considered": [
+        {"option_id": "local_bespoke", "label": "Local bespoke vector collage", "score": 0.95, "reason": "Exact style continuity and zero provider cost."},
+        {"option_id": "imagen_batch", "label": "Google Imagen batch", "score": 0.68, "reason": "Faster plate generation.", "rejected_because": "Higher continuity risk and unnecessary spend for vector-friendly artwork."}
+      ],
+      "selected": "local_bespoke",
+      "reason": "It leaves nearly the entire $5 cap untouched while improving consistency for this graphic style.",
+      "user_visible": true,
+      "user_approved": true,
+      "confidence": 0.93
+    },
+    {
+      "decision_id": "d-008",
+      "stage": "assets",
+      "category": "voice_selection",
+      "subject": "Narration TTS provider",
+      "options_considered": [
+        {"option_id": "macos_samantha", "label": "macOS Samantha local voice", "score": 0.78, "reason": "Installed, female US English, deterministic, free, and available in the unattended session."},
+        {"option_id": "google_tts_aoede", "label": "Google Chirp 3 HD Aoede", "score": 0.25, "reason": "Approved warm cloud voice.", "rejected_because": "Changed after the provider returned HTTP 403 Forbidden before producing the approval sample."},
+        {"option_id": "google_legacy_retry", "label": "Google legacy voice retry", "score": 0.18, "reason": "Could reduce model-specific access risk.", "rejected_because": "The Cloud TTS endpoint itself is forbidden, so another model is unlikely to succeed."},
+        {"option_id": "pause_for_access", "label": "Wait for cloud access", "score": 0.0, "reason": "Would preserve the preferred provider.", "rejected_because": "Nobody is at the keyboard and the user required autonomous completion."}
+      ],
+      "selected": "macos_samantha",
+      "reason": "This is the only installed path that preserves a calm female narrator and autonomous delivery after the approved provider failed authorization.",
+      "user_visible": true,
+      "user_approved": true,
+      "confidence": 0.82
+    },
+    {
+      "decision_id": "d-009",
+      "stage": "assets",
+      "category": "voice_selection",
+      "subject": "Narration TTS provider",
+      "options_considered": [
+        {"option_id": "piper_lessac", "label": "Piper en_US-lessac-medium", "score": 0.86, "reason": "Neural female US-English model and Piper executable are already installed locally; deterministic and free."},
+        {"option_id": "macos_samantha", "label": "macOS Samantha local voice", "score": 0.05, "reason": "Installed system voice.", "rejected_because": "Changed after it produced an AIFF container with zero audio samples."},
+        {"option_id": "google_tts_aoede", "label": "Google Chirp 3 HD Aoede", "score": 0.2, "reason": "Preferred natural cloud voice.", "rejected_because": "HTTP 403 Forbidden from the Cloud TTS endpoint."},
+        {"option_id": "no_narration", "label": "No narration", "score": 0.0, "reason": "Avoids speech generation.", "rejected_because": "Violates the locked calm female narrator requirement."}
+      ],
+      "selected": "piper_lessac",
+      "reason": "It is the first functioning, already-installed neural female voice path and stays within the registered tts_selector workflow.",
+      "user_visible": true,
+      "user_approved": true,
+      "confidence": 0.88
+    },
+    {
+      "decision_id": "d-010",
+      "stage": "assets",
+      "category": "render_runtime_selection",
+      "subject": "Composition runtime",
+      "options_considered": [
+        {"option_id": "ffmpeg_canvas", "label": "Browser Canvas atelier capture + FFmpeg packaging", "score": 0.84, "reason": "The existing browser surface can preserve bespoke object motion, paper texture, captions, narration, and music; FFmpeg can package the captured stream to MP4."},
+        {"option_id": "remotion", "label": "Remotion", "score": 0.1, "reason": "Approved and fully authored React composition.", "rejected_because": "Changed after both bundled Chromium and installed Google Chrome failed macOS Mach-port registration under the execution sandbox."},
+        {"option_id": "hyperframes", "label": "HyperFrames", "score": 0.05, "reason": "HTML/GSAP could express the motion language.", "rejected_because": "Runtime unavailable because the npm package is not resolvable."},
+        {"option_id": "ffmpeg_stills", "label": "FFmpeg still montage", "score": 0.25, "reason": "Reliable local packaging.", "rejected_because": "Would break the approved motion-led delivery promise."}
+      ],
+      "selected": "ffmpeg_canvas",
+      "reason": "This is the only functioning path that retains true per-object animation and every locked audio/caption requirement while still delivering a local MP4.",
+      "user_visible": true,
+      "user_approved": true,
+      "confidence": 0.84
+    },
+    {
+      "decision_id": "d-011",
+      "stage": "assets",
+      "category": "render_runtime_selection",
+      "subject": "Composition runtime",
+      "options_considered": [
+        {
+          "option_id": "ffmpeg_svg_frames",
+          "label": "Bespoke SVG frame atelier plus FFmpeg",
+          "score": 0.94,
+          "reason": "The project-local renderer preserves true per-object motion, paper texture, exact caption timing, and deterministic 1080x1920 frames; FFmpeg provides reliable video packaging."
+        },
+        {
+          "option_id": "ffmpeg_canvas",
+          "label": "Browser Canvas atelier capture plus FFmpeg",
+          "score": 0.12,
+          "reason": "Would preserve the same visual grammar.",
+          "rejected_because": "Changed after both external Chrome and the in-app browser automation surfaces rejected capture access."
+        },
+        {
+          "option_id": "pause_for_browser_access",
+          "label": "Pause for browser access",
+          "score": 0.0,
+          "reason": "Could retain the browser capture route.",
+          "rejected_because": "Nobody is at the keyboard and the user explicitly required autonomous completion."
+        }
+      ],
+      "selected": "ffmpeg_svg_frames",
+      "reason": "It is the functioning local runtime that preserves the approved atelier motion language without provider spend.",
+      "user_visible": true,
+      "user_approved": true,
+      "confidence": 0.95
+    }
+  ]
+}

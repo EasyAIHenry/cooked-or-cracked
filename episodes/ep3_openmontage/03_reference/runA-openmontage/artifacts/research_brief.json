@@ -1,0 +1,336 @@
+{
+  "version": "1.0",
+  "topic": "Why flight attendants are trained safety crew, not primarily airborne servers",
+  "research_date": "2026-09-28",
+  "landscape": {
+    "existing_content": [
+      {
+        "title": "Safety: The People — Flight Attendants",
+        "url": "https://www.faa.gov/safety/people",
+        "source": "FAA public safety explainer",
+        "angle": "Authoritative correction of the service-worker stereotype",
+        "what_it_covers": "The FAA states that a flight attendant's main duty is safety and lists evacuation, firefighting, first aid, and decompression training.",
+        "what_it_misses": "It does not turn the facts into a short narrative or explain the boarding greeting and pay-clock surprises.",
+        "engagement_signal": "Evergreen government explainer"
+      },
+      {
+        "title": "Flight Attendants — Occupational Outlook Handbook",
+        "url": "https://www.bls.gov/ooh/transportation-and-material-moving/flight-attendants.htm",
+        "source": "U.S. Bureau of Labor Statistics career profile",
+        "angle": "What the job actually includes",
+        "what_it_covers": "Several weeks or months of initial training, emergency equipment, first aid, medical care, and evacuation duties.",
+        "what_it_misses": "The presentation is factual but not visually surprising or social-video paced.",
+        "engagement_signal": "Frequently cited federal career reference"
+      },
+      {
+        "title": "Flight attendants don't earn their hourly pay until aircraft doors close. Here's why",
+        "url": "https://www.gpb.org/news/2024/02/12/flight-attendants-dont-earn-their-hourly-pay-until-aircraft-doors-close-heres-why",
+        "source": "NPR / Georgia Public Broadcasting report",
+        "angle": "The hidden economics of boarding work",
+        "what_it_covers": "Explains traditional block-time pay and why many passengers assume boarding work is paid normally.",
+        "what_it_misses": "Predates several 2024-2026 contracts that introduced boarding pay at major carriers, so the claim now needs a caveat.",
+        "engagement_signal": "National public-radio coverage and recurring labor debate"
+      },
+      {
+        "title": "Watch: Flight Attendant Gives the Funniest In-Flight Safety Demo Ever",
+        "url": "https://time.com/62077/watch-flight-attendant-gives-the-funniest-in-flight-safety-demo-ever/",
+        "source": "Time coverage of a viral Southwest safety demo",
+        "angle": "Comedy makes safety information memorable",
+        "what_it_covers": "A rapid-fire comic safety briefing that became widely shared.",
+        "what_it_misses": "It reinforces the performance side without explaining the deeper safety job.",
+        "engagement_signal": "Viral safety-demo format"
+      }
+    ],
+    "saturated_angles": [
+      "Generic day-in-the-life montage",
+      "Travel perks and glamorous layovers",
+      "Passenger horror stories without explaining safety responsibility"
+    ],
+    "underserved_gaps": [
+      "A compact myth-to-reality story connecting the greeting, training drills, 90-second certification rule, and pay clock",
+      "A friendly visual explanation of why calmness is an operational skill rather than merely hospitality"
+    ]
+  },
+  "trending": {
+    "recent_developments": [
+      {
+        "headline": "Boarding pay is spreading through new airline labor agreements",
+        "url": "https://apnews.com/article/4c56f7ef967fd57b1086816c3ca1ac5f",
+        "date": "2026-05-13",
+        "relevance": "The pay-clock surprise remains valid as a historical and still-common system, but current wording must acknowledge that Delta, American, Alaska, United, and others have introduced boarding pay."
+      }
+    ],
+    "active_discussions": [
+      {
+        "platform": "government labor review",
+        "topic_or_url": "https://www.canada.ca/en/employment-social-development/corporate/portfolio/labour/programs/labour-standards/reports/unpaid-work-airline.html",
+        "sentiment": "Flight attendants argue that safety checks, boarding, delays, and deplaning are real work even when direct compensation is based mainly on block time.",
+        "key_quotes": []
+      }
+    ],
+    "timeliness_window": "evergreen"
+  },
+  "data_points": [
+    {
+      "claim": "The FAA says a flight attendant's main duty is to keep passengers safe; initial training covers evacuations, firefighting, first aid, passenger safety, and decompression.",
+      "source_url": "https://www.faa.gov/safety/people",
+      "source_name": "Federal Aviation Administration",
+      "credibility": "primary_source",
+      "surprise_factor": "counterintuitive",
+      "usable_as": "cold-open reversal and core thesis"
+    },
+    {
+      "claim": "U.S. crewmember emergency training rules require instruction and drills involving evacuation slides, emergency exits, protective breathing equipment, and firefighting.",
+      "source_url": "https://www.law.cornell.edu/cfr/text/14/121.417",
+      "source_name": "14 CFR 121.417",
+      "credibility": "primary_source",
+      "surprise_factor": "surprising",
+      "usable_as": "training montage"
+    },
+    {
+      "claim": "Airplanes with more than 44 passenger seats must demonstrate that full capacity, including required crew, can evacuate to the ground within 90 seconds under simulated emergency conditions.",
+      "source_url": "https://www.law.cornell.edu/cfr/text/14/25.803",
+      "source_name": "14 CFR 25.803",
+      "credibility": "primary_source",
+      "surprise_factor": "surprising",
+      "usable_as": "90-second countdown hero moment"
+    },
+    {
+      "claim": "A U.S. carrier may not allow a person who appears intoxicated to board, and carriers must determine whether exit-row passengers can perform emergency functions.",
+      "source_url": "https://www.law.cornell.edu/cfr/text/14/121.575",
+      "source_name": "14 CFR 121.575 and 121.585",
+      "credibility": "primary_source",
+      "surprise_factor": "notable",
+      "usable_as": "door-greeting safety scan"
+    },
+    {
+      "claim": "Airline initial training typically lasts several weeks or a few months and includes evacuations, emergency equipment, and first aid.",
+      "source_url": "https://www.bls.gov/ooh/transportation-and-material-moving/flight-attendants.htm",
+      "source_name": "U.S. Bureau of Labor Statistics",
+      "credibility": "primary_source",
+      "surprise_factor": "surprising",
+      "usable_as": "weeks-of-training reveal"
+    },
+    {
+      "claim": "In many credit-based airline pay systems, direct compensation is traditionally tied mainly to block time, leaving boarding, safety checks, delays, and deplaning without separate full hourly pay; newer contracts increasingly add boarding pay.",
+      "source_url": "https://www.canada.ca/en/employment-social-development/corporate/portfolio/labour/programs/labour-standards/reports/unpaid-work-airline.html",
+      "source_name": "Government of Canada airline unpaid-work review",
+      "credibility": "primary_source",
+      "surprise_factor": "counterintuitive",
+      "usable_as": "late-act pay-clock twist with 2026 caveat"
+    },
+    {
+      "claim": "FAA rules require approved first-aid kits, an emergency medical kit, and at least one automated external defibrillator to be accessible to the crew on covered operations.",
+      "source_url": "https://www.law.cornell.edu/cfr/text/14/appendix-A_to_part_121",
+      "source_name": "14 CFR Part 121 Appendix A",
+      "credibility": "primary_source",
+      "surprise_factor": "notable",
+      "usable_as": "medical-response prop reveal"
+    }
+  ],
+  "audience_insights": {
+    "common_questions": [
+      "Are flight attendants mainly there to serve food and drinks?",
+      "Why does a flight attendant greet every passenger at the door?",
+      "What emergency and medical training do flight attendants receive?",
+      "Does the 90-second evacuation rule mean every real evacuation must finish in 90 seconds?",
+      "Are flight attendants paid while passengers board?"
+    ],
+    "misconceptions": [
+      {
+        "myth": "The job is mostly hospitality in the air.",
+        "reality": "Service is visible, but the regulated core is cabin safety, emergency response, and evacuation.",
+        "source": "FAA Safety: The People"
+      },
+      {
+        "myth": "The door greeting is only customer service.",
+        "reality": "It also gives crew an early chance to notice intoxication, illness, distress, disruptive behavior, and passengers who may need assistance; formal suitability checks apply to exit seating.",
+        "source": "14 CFR 121.575, 121.585; FAA Flight Attendant Fatigue task analysis"
+      },
+      {
+        "myth": "The 90-second rule is a promise about any real-world accident.",
+        "reality": "It is an aircraft certification and operator demonstration standard under controlled simulated conditions for aircraft over 44 seats.",
+        "source": "14 CFR 25.803 and 121.291"
+      },
+      {
+        "myth": "The hourly rate covers every minute from report time through deplaning.",
+        "reality": "Many systems traditionally center pay on block time, though boarding pay is now spreading and exact formulas differ by airline and contract.",
+        "source": "Government of Canada 2026 review; AP 2026 labor coverage"
+      }
+    ],
+    "knowledge_level": "General travelers know the visible service role but usually do not know the regulatory training, certification standard, boarding assessment, or pay mechanics.",
+    "pain_points": [
+      "Safety briefings are often tuned out because passengers mistake calm delivery for low stakes.",
+      "The word 'service' hides the work performed before takeoff and during emergencies.",
+      "Oversimplified social posts repeat the 90-second and pay claims without current caveats."
+    ]
+  },
+  "expert_voices": [
+    {
+      "name": "Federal Aviation Administration",
+      "title_or_affiliation": "U.S. civil aviation regulator",
+      "position": "Flight attendants are safety professionals whose main duty is passenger safety.",
+      "source_url": "https://www.faa.gov/safety/people",
+      "contrarian": true
+    },
+    {
+      "name": "U.S. Bureau of Labor Statistics",
+      "title_or_affiliation": "Federal labor-statistics agency",
+      "position": "Training typically lasts several weeks or months and includes evacuation, emergency equipment, and first aid.",
+      "source_url": "https://www.bls.gov/ooh/transportation-and-material-moving/flight-attendants.htm",
+      "contrarian": false
+    }
+  ],
+  "angles_discovered": [
+    {
+      "name": "Your Drink Server Is Rescue Crew",
+      "hook": "The person handing you ginger ale is trained to fight a cabin fire.",
+      "type": "contrarian",
+      "why_now": "The FAA's safety-first definition creates a clean visual reversal, while the paper-collage format can turn a drink cart into emergency equipment in one comic morph.",
+      "grounded_in": [
+        "FAA main-duty statement",
+        "14 CFR 121.417 drills",
+        "paper-object morph technique"
+      ]
+    },
+    {
+      "name": "The Smile Is a Scanner",
+      "hook": "That calm hello at the aircraft door is doing more work than it looks.",
+      "type": "narrative",
+      "why_now": "Boarding behavior and exit-row suitability rules make the familiar greeting newly legible; a split-screen paper scan can show observations without implying invasive profiling.",
+      "grounded_in": [
+        "14 CFR 121.575",
+        "14 CFR 121.585",
+        "FAA boarding task analysis"
+      ]
+    },
+    {
+      "name": "Ninety Seconds Changes the Job",
+      "hook": "An airliner certification test gives everyone just 90 seconds to get out.",
+      "type": "data_driven",
+      "why_now": "The number makes a powerful countdown but also rewards precision: it is a simulated certification standard, not a guarantee for every accident.",
+      "grounded_in": [
+        "14 CFR 25.803",
+        "14 CFR 121.291",
+        "countdown and progressive-cabin-build animation"
+      ]
+    },
+    {
+      "name": "Working Before the Pay Clock",
+      "hook": "The safety scan may begin before the main hourly pay clock does.",
+      "type": "evergreen",
+      "why_now": "New boarding-pay contracts make this both timely and nuanced: the old block-time norm is changing, but it remains central to understanding compensation.",
+      "grounded_in": [
+        "Government of Canada 2026 review",
+        "AP 2026 United contract report",
+        "clock-and-door visual gag"
+      ]
+    }
+  ],
+  "visual_references": [
+    {
+      "description": "Digital paper cut-out animation with textured pieces, torn edges, independent layers, and soft cast shadows.",
+      "url": "https://www.creationeffects.com/effects/paper-collage-effect",
+      "what_works": "Separating characters and props into layered paper pieces makes object morphs, jointed movement, and scene-to-scene reuse efficient."
+    },
+    {
+      "description": "Stop-motion look created by quantized movement, edge variation, and reduced motion blur.",
+      "url": "https://paper-animation.com/blog/creating-stop-motion-look",
+      "what_works": "Animating on twos, adding tiny position jitter, and avoiding silky motion creates the tactile handmade feeling requested."
+    },
+    {
+      "description": "Paper-cutout fire shapes animated as a small set of replaceable silhouettes.",
+      "url": "https://www.reddit.com/r/learnanimation/comments/1se113o/stop_motion_fire_effect_using_paper_cutouts/",
+      "what_works": "A limited flame-cycle can communicate firefighting training clearly without realistic danger imagery, keeping the tone suitable for all ages."
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.faa.gov/safety/people",
+      "title": "Safety: The People",
+      "used_for": "Core job definition and training topics",
+      "reliability": "primary"
+    },
+    {
+      "url": "https://www.bls.gov/ooh/transportation-and-material-moving/flight-attendants.htm",
+      "title": "Flight Attendants — Occupational Outlook Handbook",
+      "used_for": "Training duration and duties",
+      "reliability": "primary"
+    },
+    {
+      "url": "https://www.law.cornell.edu/cfr/text/14/121.417",
+      "title": "14 CFR 121.417 — Crewmember emergency training",
+      "used_for": "Fire, evacuation, exit, PBE, and recurrent drill requirements",
+      "reliability": "primary"
+    },
+    {
+      "url": "https://www.law.cornell.edu/cfr/text/14/25.803",
+      "title": "14 CFR 25.803 — Emergency evacuation",
+      "used_for": "90-second aircraft certification standard",
+      "reliability": "primary"
+    },
+    {
+      "url": "https://www.law.cornell.edu/cfr/text/14/121.291",
+      "title": "14 CFR 121.291 — Demonstration of emergency evacuation procedures",
+      "used_for": "Operator evacuation demonstration and 90-second requirement",
+      "reliability": "primary"
+    },
+    {
+      "url": "https://www.law.cornell.edu/cfr/text/14/121.575",
+      "title": "14 CFR 121.575 — Alcoholic beverages",
+      "used_for": "No boarding for passengers who appear intoxicated",
+      "reliability": "primary"
+    },
+    {
+      "url": "https://www.law.cornell.edu/cfr/text/14/121.585",
+      "title": "14 CFR 121.585 — Exit seating",
+      "used_for": "Passenger suitability for emergency exit functions",
+      "reliability": "primary"
+    },
+    {
+      "url": "https://www.faa.gov/sites/faa.gov/files/data_research/research/med_humanfacs/oamtechreports/200721.pdf",
+      "title": "Flight Attendant Fatigue — Task Analysis",
+      "used_for": "Boarding screening and problem-passenger duties",
+      "reliability": "primary"
+    },
+    {
+      "url": "https://www.canada.ca/en/employment-social-development/corporate/portfolio/labour/programs/labour-standards/reports/unpaid-work-airline.html",
+      "title": "Probe on Unpaid Work in the Airline Sector: What We Heard",
+      "used_for": "Block-time compensation and unpaid-work nuance",
+      "reliability": "primary"
+    },
+    {
+      "url": "https://apnews.com/article/4c56f7ef967fd57b1086816c3ca1ac5f",
+      "title": "United flight attendants ratify contract with boarding pay",
+      "used_for": "2026 caveat that boarding pay is spreading",
+      "reliability": "secondary"
+    },
+    {
+      "url": "https://www.creationeffects.com/effects/paper-collage-effect",
+      "title": "Paper Collage Effect",
+      "used_for": "Paper-collage technique reference",
+      "reliability": "secondary"
+    },
+    {
+      "url": "https://paper-animation.com/blog/creating-stop-motion-look",
+      "title": "How to Create a Stop-Motion Look in Digital Video",
+      "used_for": "Animation timing and texture technique",
+      "reliability": "secondary"
+    }
+  ],
+  "research_summary": "The strongest misconception reversal is not that flight attendants also know safety, but that safety is the regulated core of the job and service is the visible layer. The most effective short will begin with a drink-cart joke, rapidly reveal fire, evacuation, medical, and passenger-assessment responsibilities, use the precise 90-second certification standard as the central visual set piece, and end with the pay-clock twist using current 2026 wording. A digitally hand-authored paper-cutout system is ideal: the same layered character and cabin pieces can morph from hospitality props into safety equipment while quantized 12-fps motion, rough edges, and shadows preserve a tactile stop-motion feel.",
+  "metadata": {
+    "audience": "general public, all ages",
+    "platform": "YouTube Shorts, 9:16",
+    "target_duration_seconds": 68,
+    "searches_executed": 16,
+    "animation_techniques_researched": [
+      "layered paper puppet joints",
+      "object-to-object paper morphs",
+      "progressive cabin diagram builds",
+      "quantized 12-fps motion with micro-jitter",
+      "limited replacement cycles for paper fire and smoke"
+    ],
+    "accuracy_guardrail": "Describe 90 seconds as a certification/demonstration standard and boarding pay as a changing airline-by-airline system."
+  }
+}

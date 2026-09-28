@@ -1,0 +1,17 @@
+{
+  "platform": "YouTube Shorts",
+  "title": "Flight Attendants Aren't Drink Servers — They're Safety Crew ✈️",
+  "description": "That friendly hello at the aircraft door is only the beginning. Flight attendants train for evacuation, cabin fire, first aid, and medical response—and the famous 90-second evacuation is a certification test standard, not a promise for every real accident. Even the pay clock is more complicated than it looks, with traditional block-time systems changing airline by airline.\n\nSources:\nFAA — https://www.faa.gov/safety/people\nU.S. Bureau of Labor Statistics — https://www.bls.gov/ooh/transportation-and-material-moving/flight-attendants.htm\n14 CFR 121.417 — https://www.law.cornell.edu/cfr/text/14/121.417\n14 CFR 25.803 — https://www.law.cornell.edu/cfr/text/14/25.803\nGovernment of Canada airline unpaid-work review — https://www.canada.ca/en/employment-social-development/corporate/portfolio/labour/programs/labour-standards/reports/unpaid-work-airline.html\n\nNext episode: why your tray table really matters.",
+  "hashtags": [
+    "#FlightAttendant",
+    "#Aviation",
+    "#SafetyCrew",
+    "#YouTubeShorts",
+    "#DidYouKnow"
+  ],
+  "audience": "All ages",
+  "language": "en-US",
+  "caption_sidecar": "projects/flight-attendant-safety-crew/assets/subtitles.srt",
+  "thumbnail_concept": "Split paper-collage frame: a coffee pot on the left morphs into a coral fire extinguisher on the right, with the short cut-paper headline NOT JUST DRINKS.",
+  "hero_frame": "projects/flight-attendant-safety-crew/renders/review/scene-01.png"
+}

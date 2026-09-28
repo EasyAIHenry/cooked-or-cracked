@@ -1,0 +1,181 @@
+{
+  "version": "1.0",
+  "title": "The Most Misunderstood Job on Earth: Flight Attendant",
+  "total_duration_seconds": 70,
+  "voice_performance": {
+    "performance_intent": "A calm, warm female narrator who sounds like a trusted crew member sharing a surprising secret, with a small smile in the comic reversals and firm precision on safety facts.",
+    "pacing_profile": "conversational",
+    "energy_curve": "Immediate amused reversal, purposeful lift through training, deliberate focus on the 90-second fact, intimate curiosity at the door greeting, then a warm confident close.",
+    "pause_policy": "Use short breaths after object transformations, a full half-beat before 'ninety seconds,' and a clear pause before the final reframe and next-episode line.",
+    "sample_section_id": "s4",
+    "provider_notes": {
+      "google_tts": "Use en-US-Chirp3-HD-Aoede at speaking_rate 0.96 and pitch 0.0. Generate from the section provider_text with SSML breaks preserved.",
+      "captioning": "Word-level captions mirror narration in two-to-five-word clusters; designed labels show only facts or punch words so they do not duplicate whole sentences."
+    }
+  },
+  "sections": [
+    {
+      "id": "s1",
+      "label": "Cold open",
+      "text": "That flight attendant holding a coffee pot? Trained to fight a cabin fire.",
+      "start_seconds": 0,
+      "end_seconds": 5,
+      "speaker_directions": "Quick, friendly setup; land the final four words with dry confidence.",
+      "delivery_cues": {
+        "pace": "brisk",
+        "energy": "bright surprise",
+        "emphasis_words": ["coffee pot", "fight", "cabin fire"],
+        "pause_before_seconds": 0,
+        "pause_after_seconds": 0.35,
+        "delivery_note": "Smile through the question, then make the reversal crisp rather than dramatic.",
+        "provider_text": "That flight attendant holding a coffee pot? <break time=\"180ms\"/> Trained to fight a cabin fire."
+      },
+      "enhancement_cues": [
+        {"type": "animation", "description": "Paper coffee pot snaps into a fire extinguisher with a two-frame replacement cut.", "timestamp_seconds": 2.7},
+        {"type": "overlay", "description": "Punch label: SAFETY CREW.", "timestamp_seconds": 4.0}
+      ],
+      "source_ref": "FAA Safety: The People; 14 CFR 121.417"
+    },
+    {
+      "id": "s2",
+      "label": "Title card",
+      "text": "Meet the most misunderstood job on Earth.",
+      "start_seconds": 5,
+      "end_seconds": 9,
+      "speaker_directions": "Warm title read with a touch of playful exaggeration.",
+      "delivery_cues": {
+        "pace": "measured",
+        "energy": "inviting",
+        "emphasis_words": ["most misunderstood"],
+        "pause_before_seconds": 0.1,
+        "pause_after_seconds": 0.45,
+        "delivery_note": "Let the title settle for a visual hold.",
+        "provider_text": "Meet the most misunderstood job on Earth."
+      },
+      "enhancement_cues": [
+        {"type": "animation", "description": "Torn-paper title assembles around a tiny aircraft window.", "timestamp_seconds": 5.2}
+      ]
+    },
+    {
+      "id": "s3",
+      "label": "Act one — training",
+      "text": "The FAA says their main duty is keeping passengers safe. Before the snack cart, there are weeks of drills: evacuation slides, emergency exits, firefighting, first aid, and medical response.",
+      "start_seconds": 9,
+      "end_seconds": 23,
+      "speaker_directions": "Authoritative but buoyant; turn the training list into a rhythmic build.",
+      "delivery_cues": {
+        "pace": "conversational",
+        "energy": "purposeful build",
+        "emphasis_words": ["main duty", "safe", "weeks of drills"],
+        "pause_before_seconds": 0,
+        "pause_after_seconds": 0.35,
+        "delivery_note": "Keep the list even and clear, with tiny breaths between visual swaps.",
+        "provider_text": "The F A A says their main duty is keeping passengers safe. <break time=\"250ms\"/> Before the snack cart, there are weeks of drills: evacuation slides, emergency exits, firefighting, first aid, and medical response."
+      },
+      "enhancement_cues": [
+        {"type": "animation", "description": "Training scrapbook flips through slide, exit, fire, first-aid, and AED cut-outs.", "timestamp_seconds": 12.0}
+      ],
+      "source_ref": "FAA Safety: The People; BLS Flight Attendants; 14 CFR 121.417; 14 CFR Part 121 Appendix A"
+    },
+    {
+      "id": "s4",
+      "label": "Act two — 90 seconds",
+      "text": "Here is why speed matters. For aircraft with more than forty-four passenger seats, certification rules require a full-capacity evacuation demonstration in ninety seconds, under simulated emergency conditions. That is a test standard, not a promise for every real accident.",
+      "start_seconds": 23,
+      "end_seconds": 40,
+      "speaker_directions": "Slow slightly for the number and the legal caveat; sound precise, not ominous.",
+      "delivery_cues": {
+        "pace": "measured",
+        "energy": "focused reveal",
+        "emphasis_words": ["ninety seconds", "test standard", "not a promise"],
+        "pause_before_seconds": 0.1,
+        "pause_after_seconds": 0.45,
+        "delivery_note": "Give 'ninety seconds' a clean half-beat of space; soften into the corrective caveat.",
+        "provider_text": "Here is why speed matters. <break time=\"350ms\"/> For aircraft with more than forty-four passenger seats, certification rules require a full-capacity evacuation demonstration in <emphasis level=\"moderate\">ninety seconds</emphasis>, under simulated emergency conditions. <break time=\"300ms\"/> That is a test standard, not a promise for every real accident."
+      },
+      "enhancement_cues": [
+        {"type": "stat_card", "description": "Hero paper timer reads 90 SECONDS with small CERTIFICATION TEST label.", "timestamp_seconds": 29.0},
+        {"type": "diagram", "description": "Overhead cabin aisle empties into two paper exit arrows.", "timestamp_seconds": 32.0}
+      ],
+      "source_ref": "14 CFR 25.803 and 14 CFR 121.291"
+    },
+    {
+      "id": "s5",
+      "label": "Act three — the greeting",
+      "text": "And that friendly hello at the door? It is also an early safety check: who may need help, who seems unwell or intoxicated, and whether exit-row passengers can perform emergency tasks.",
+      "start_seconds": 40,
+      "end_seconds": 52,
+      "speaker_directions": "Return to an intimate, lightly conspiratorial tone without implying invasive profiling.",
+      "delivery_cues": {
+        "pace": "conversational",
+        "energy": "curious warmth",
+        "emphasis_words": ["also", "safety check", "need help"],
+        "pause_before_seconds": 0,
+        "pause_after_seconds": 0.35,
+        "delivery_note": "Treat each observation as assistance and readiness, not suspicion.",
+        "provider_text": "And that friendly hello at the door? <break time=\"220ms\"/> It is also an early safety check: who may need help, who seems unwell or intoxicated, and whether exit-row passengers can perform emergency tasks."
+      },
+      "enhancement_cues": [
+        {"type": "animation", "description": "Doorway greeting becomes three gentle paper thought-bubbles: assistance, wellness, exit-row readiness.", "timestamp_seconds": 43.0}
+      ],
+      "source_ref": "14 CFR 121.575 and 14 CFR 121.585"
+    },
+    {
+      "id": "s6",
+      "label": "Act three — the pay clock",
+      "text": "One more surprise: in many traditional pay systems, the main hourly clock starts when the aircraft door closes, even though boarding work starts earlier. Newer contracts increasingly add boarding pay, so rules vary by airline.",
+      "start_seconds": 52,
+      "end_seconds": 63,
+      "speaker_directions": "Matter-of-fact, sympathetic, and careful with the current caveat.",
+      "delivery_cues": {
+        "pace": "conversational",
+        "energy": "clear-eyed reveal",
+        "emphasis_words": ["door closes", "boarding work starts earlier", "depends on the airline"],
+        "pause_before_seconds": 0.1,
+        "pause_after_seconds": 0.45,
+        "delivery_note": "Let the clock gag land, then state the changing-contract caveat plainly.",
+        "provider_text": "One more surprise: in many traditional pay systems, the main hourly clock starts when the aircraft door closes, even though boarding work starts earlier. <break time=\"250ms\"/> Newer contracts increasingly add boarding pay, so rules vary by airline."
+      },
+      "enhancement_cues": [
+        {"type": "animation", "description": "Split paper timeline: BOARDING WORK begins before MAIN HOURLY CLOCK; coral clock starts as the door shuts.", "timestamp_seconds": 55.5}
+      ],
+      "source_ref": "Government of Canada airline unpaid-work review; AP 2026 labor coverage"
+    },
+    {
+      "id": "s7",
+      "label": "Close and next episode",
+      "text": "So yes, they serve drinks. Underneath the smile: rescue crew. Next episode—why your tray table matters.",
+      "start_seconds": 63,
+      "end_seconds": 70,
+      "speaker_directions": "Warm, appreciative conclusion; make the episode tease feel effortless.",
+      "delivery_cues": {
+        "pace": "measured",
+        "energy": "warm landing",
+        "emphasis_words": ["rescue crew", "tray table"],
+        "pause_before_seconds": 0,
+        "pause_after_seconds": 0.2,
+        "delivery_note": "Pause after 'drinks,' then close with a small smile.",
+      "provider_text": "So yes, they serve drinks. <break time=\"250ms\"/> Underneath the smile: rescue crew. <break time=\"300ms\"/> Next episode—why your tray table matters."
+      },
+      "enhancement_cues": [
+        {"type": "animation", "description": "Service tray flips into a safety badge, then a tiny tray table lowers as the episode tease appears.", "timestamp_seconds": 66.0}
+      ],
+      "source_ref": "FAA Safety: The People"
+    }
+  ],
+  "metadata": {
+    "target_platform": "youtube_shorts",
+    "aspect_ratio": "9:16",
+    "structure": "cold_open_title_three_acts_close",
+    "act_boundaries_seconds": [9, 23, 40, 63],
+    "animation_mode": "mixed",
+    "render_runtime": "remotion",
+    "composition_mode": "atelier",
+    "caption_policy": "Word-level timing with two-to-five-word display clusters; designed labels never duplicate full spoken sentences.",
+    "fact_precision_notes": [
+      "Ninety seconds is explicitly framed as a certification and operator demonstration standard under simulated conditions.",
+      "Pay wording says many traditional systems and notes that newer contracts add boarding pay.",
+      "The greeting is framed as an early assistance and readiness check, with formal regulatory grounding for intoxication and exit-row suitability."
+    ]
+  }
+}
