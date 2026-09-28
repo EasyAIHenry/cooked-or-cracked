@@ -3,8 +3,14 @@
 import json, subprocess, os, re, sys
 R = os.path.dirname(os.path.abspath(__file__))
 os.chdir(R)
-CLIP_LEN = {1:6,2:7,3:13,4:8,5:8,6:12,7:10,8:6,9:9}
-VO_IN = 0.25  # seconds of picture before the voice starts in each shot
+CLIP_LEN = {1:5,2:6,3:11,4:6,5:6,6:12,7:10,8:4,9:8}
+def pick(i):
+    for cand in (f"stock/stock{i}.mp4", f"stock/stock{i}.mov", f"mg/mg{i}.mp4", f"clips/c{i}_v2.mp4", f"clips/c{i}.mp4"):
+        if os.path.exists(cand): return cand
+    raise SystemExit(f"no source for shot {i}")
+CLIP_SRC = {i:pick(i) for i in range(1,10)}
+print("sources:", CLIP_SRC)
+VO_IN = 0.2  # seconds of picture before the voice starts in each shot
 SCRIPT = {
 1:"These parts fit perfectly in CAD. In real life, they jam.",
 2:"Build Failure Forensics. Broken things tell you what the drawing forgot.",
@@ -29,13 +35,13 @@ def run(cmd):
     if r.returncode: print(r.stderr[-2000:]); sys.exit(1)
 
 # 1. per-shot video with its voice
-words = json.load(open("vo/trim/words.json"))
+words = json.load(open("vo-nadine/trim/words.json"))
 offsets, t = {}, 0.0
 for i in range(1,10):
     L = CLIP_LEN[i]
     offsets[i] = t
-    vo = f"vo/trim/vo{i}.wav"
-    run(["ffmpeg","-v","error","-y","-i",f"clips/c{i}.mp4","-i",vo,
+    vo = f"vo-nadine/trim/vo{i}.wav"
+    run(["ffmpeg","-v","error","-y","-i",CLIP_SRC[i],"-i",vo,
          "-filter_complex",
          f"[0:v]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},fps={FPS},trim=0:{L},setpts=PTS-STARTPTS[v];"
          f"[1:a]adelay={int(VO_IN*1000)}|{int(VO_IN*1000)},apad=whole_dur={L}[a]",
@@ -111,8 +117,8 @@ prev="v0"
 for k,(s,e,_) in enumerate(cues):
     chain += f";[{prev}][{k+3}:v]overlay=0:{H-430}:enable='between(t,{s:.2f},{e:.2f})'[v{k+1}]"; prev=f"v{k+1}"
 chain += f";[{prev}]format=yuv420p[v]"
-chain += f";[1:a]atrim=0:{TOTAL},volume=-15dB,afade=t=out:st={TOTAL-2.5}:d=2.5[m];[0:a][m]amix=inputs=2:duration=first:dropout_transition=0:normalize=0,loudnorm=I=-16:TP=-1.5:LRA=11[a]"
+chain += f";[1:a]atrim=0:{TOTAL},volume=-15dB,afade=t=out:st={TOTAL-4}:d=4[m];[0:a][m]amix=inputs=2:duration=first:dropout_transition=0:normalize=0,loudnorm=I=-16:TP=-1.5:LRA=11[a]"
 open("clips/graph.txt","w").write(chain)
 run(["ffmpeg","-v","error","-y",*inputs,"-filter_complex",chain,"-map","[v]","-map","[a]","-t",str(TOTAL),
-     "-c:v","libx264","-preset","medium","-crf","18","-pix_fmt","yuv420p","-c:a","aac","-b:a","192k","-movflags","+faststart","build-failure-forensics-ep1-short-v1.mp4"])
+     "-c:v","libx264","-preset","medium","-crf","18","-pix_fmt","yuv420p","-c:a","aac","-b:a","192k","-movflags","+faststart","build-failure-forensics-ep1-short-v3.mp4"])
 print("done", TOTAL, "s")

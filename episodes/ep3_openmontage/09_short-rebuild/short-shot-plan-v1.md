@@ -74,3 +74,21 @@ Stills: GPT Image 2.5, 752x1344, all nine accepted first pass (2.25 credits). Vo
 Higgsfield credits: 269.65 before, 141.70 after. Spend 127.95 credits, about $4.13 at 31 credits per dollar. Breakdown: 9 stills 2.25, voice 11 takes about 8, video 9 clips 118.5.
 
 Kling clips come back at 716x1280, 24 fps in std mode; upscaled in the build. Pro mode (8.75 per 5 s) would be the next step up if the upscale shows.
+
+## Build v2 (28 Sep 2026, about 07:20)
+Gemini on v1: 5/10, voice 4/10, six shots read as stills with a slow push, three morphed (3, 6, 7). Henry chose: re-roll the three, and swap the voice after hearing samples.
+Voice test: five samples of the same 41 words (ElevenLabs Elodie, Juno, Soraya, Nadine; MiniMax Elodie) via Higgsfield text2speech_v2. Gemini ranked Nadine 9/10 (151 wpm, British, clear). Henry picked Nadine. Nine takes, no pause trimming needed, 59.0 s of speech total.
+Re-rolls: shots 3, 6, 7 in Kling 3.0 pro with SHOT 1 / HARD CUT / SHOT 2 timed prompts and named hand actions. Pro returns 1076x1924. All three show real cuts and hand articulation; shot 3's last cut pushes the pin in rather than refusing it.
+`build-failure-forensics-ep1-short-v2.mp4`: 68 s, 47 MB. Clip lengths 5,6,11,6,6,12,10,4,8. Music fade 4 s.
+Credits: 141.70 before, 73.40 after: 68.3 credits, about $2.20 (three pro clips 61.25, voice samples and takes about 7). Both versions together 196 credits, about $6.33.
+Lesson: write every Kling prompt as timed shots with a named physical action; "slow push in" buys a slideshow.
+
+## Gemini on v2 (28 Sep 2026)
+Overall 4/10, would not publish as episode 1. Voice (Nadine) 6/10, "slightly rigid". Captions in sync, facts correct, music level right, fade still "slightly abrupt". The three re-rolled shots (3, 6, 7) now move but warp: calipers and pins morph at 0:10 to 0:21, the press and glove morph into the pins in shot 6, fingers duplicate at 0:49 in shot 7. The six untouched shots (1, 2, 4, 5, 8, 9) still read as stills with a slow zoom. Biggest fix per Gemini: real mechanical footage instead of AI clips. Full text: `gemini-review-short-v2.md`.
+Read across v1 and v2: photoreal macro of hands and metal is where Kling warps; static metal is where it stalls. The explanatory middle (tolerance bands, three fits) is diagram content anyway.
+
+## v3 direction (28 Sep 2026, Henry's call): Artlist stock plus hybrid
+Higgsfield balance 73.4 credits. No further generation planned.
+Motion graphics rendered locally with Pillow and ffmpeg (`mg/render_mg.py`, no credits): mg3 11 s (10.00 splits into a 9.97 to 10.03 range, pin and hole bars overlap into a red "0 GAP"), mg4 6 s (five pins under a tolerance band), mg5 6 s (bore, pin, clearance ring, two bands with a gap), mg6 12 s (three fits, spinning, seated, pressed with a red stress ring, "same geometry" bracket). Same palette as the stills, everything draws on with easing, constant 3 percent push so nothing reads as a still.
+Stock: Artlist went blank for the browser pane after a few searches and downloads need Henry's licence, so `stock/STOCK-BRIEF.md` lists four slots (stock2, stock3, stock7, stock8) with search terms. `build_short.py` now picks per shot: stock file, else motion graphic, else Kling clip.
+`build-failure-forensics-ep1-short-v3-preview.mp4`: 68 s, shots 3 to 6 are motion graphics, shots 1, 2, 7, 8, 9 are Kling stand-ins pending stock. When stock3 arrives, shot 3 becomes 5 s of calliper footage followed by the last 6 s of mg3.
