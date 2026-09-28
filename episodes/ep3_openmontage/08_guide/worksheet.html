@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8">
+<title>Worksheet: shot plan and prompt pack</title>
+<link rel="stylesheet" href="style.css"><link rel="stylesheet" href="v2.css"><link rel="stylesheet" href="guide.css">
+</head><body>
+
+<!-- 1 SHOT PLAN -->
+<section class="page">
+  <span class="tag">worksheet · file 2 of 2</span>
+  <h2 style="margin-top:14px">The shot plan, filled in</h2>
+  <p class="lead" style="margin-bottom:6px">This is the whole video on one page: nine beats, and for each one the line, the still and the one motion. Ask Claude to draft your nine rows from your script in step 3, then edit them before anything is generated. Claude puts the style lock at the bottom at the front of every still prompt, word for word.</p>
+  <table class="plan">
+    <tr><th>#</th><th>the line (one take each)</th><th>the still (one image each)</th><th>the motion (one clip each)</th></tr>
+    <tr><td class="n">1</td><td>You think this job is pouring coffee at thirty-five thousand feet. The coffee is the least important thing on the plane.</td><td>Paper aircraft cabin, a flight attendant with a trolley, a paper coffee cup held up, passengers' round faces</td><td>Trolley rolls one step, the attendant lowers the cup and turns to the exit door</td></tr>
+    <tr><td class="n">2</td><td>Misunderstood Jobs. Tonight: the flight attendant.</td><td>Paper boarding pass and a small paper wings badge on a slate blue backdrop</td><td>Title card overlay, smooth push</td></tr>
+    <tr><td class="n">3</td><td>The very first one was a man called Heinrich Kubis, on a zeppelin, in 1912. Years later he survived the Hindenburg fire by jumping out of a window.</td><td>A grey paper zeppelin in the sky, a tiny paper man in a white jacket leaping from a gondola window, paper flames</td><td>The man leaps and lands on a paper cloud, the airship drifts</td></tr>
+    <tr><td class="n">4</td><td>In 1930, airlines hired nurses to do the job. The rule then is the rule now: safety first, service second.</td><td>A 1930 paper nurse in a cap beside a boxy paper airliner, a paper first aid kit</td><td>The nurse steps up to the plane door, the kit swings</td></tr>
+    <tr><td class="n">5</td><td>That smile at the door is a check. Are you unwell, drunk, or fit to open an exit if asked?</td><td>Attendant at the cabin door greeting a queue of passengers, one passenger holding a paper bottle, one huge</td><td>The attendant's eyes flick left and right, one passenger sways</td></tr>
+    <tr><td class="n">6</td><td>Training runs for weeks: fires, water landings, first aid, and emptying a full plane in ninety seconds with half the doors blocked.</td><td>A paper training hall: an evacuation slide, a paper fire, a stopwatch showing ninety, trainees sliding down</td><td>Trainee slides down, stopwatch hand sweeps, fire flickers</td></tr>
+    <tr><td class="n">7</td><td>The law says one attendant for every fifty seats. Not for the drinks. For the exits.</td><td>Top-down paper cabin plan, fifty tiny seats, one attendant figure, exit doors highlighted in the warm accent</td><td>Seats fill in row by row, the exits glow</td></tr>
+    <tr><td class="n">8</td><td>And on many airlines the pay clock only starts when the cabin door closes. Boarding is free.</td><td>The cabin door closing with a paper clock above it, hands at twelve, an attendant pulling the lever</td><td>Door swings shut, the clock hand starts moving</td></tr>
+    <tr><td class="n">9</td><td>So the coffee is a bonus. Next episode: the job everyone thinks is boring, and never is.</td><td>A paper coffee cup with a small gold bonus tag, a boarding pass teaser for episode two</td><td>Smooth push, the tag flutters</td></tr>
+  </table>
+  <div class="prompt tight" style="margin-top:10px"><span class="who">the style lock, as used</span><span class="n">front of every still prompt</span><p>Paper cut-out collage animation style: every character and prop cut from textured coloured paper with visible fibres and slightly rough edges, layered with soft drop shadows for depth, stop-motion feel, muted storybook palette of parchment cream, slate blue, oxblood red and moss green with one warm gold accent, friendly round-faced characters with small dot eyes and simple smiles, no text, no letters. Vertical 9:16 with the subject in the upper two thirds and quiet space at the bottom.</p></div>
+  <div class="recline"><span class="rec">rule</span> Same style lock, same aspect ratio, two or three small actions per motion prompt, steady camera every time.</div>
+  <div class="foot"><span>Cooked or Cracked · The AI video production process · worksheet</span><span>page 1</span></div>
+</section>
+
+<!-- 2 PROMPT PACK -->
+<section class="page">
+  <span class="tag">prompt pack</span>
+  <h2 style="margin-top:14px">Seven prompts, in the order you use them</h2>
+  <p class="lead" style="margin-bottom:4px">Replace the words in square brackets. Everything else works as written. Type every prompt into the same Claude chat: for three, four, five and six Claude sends the request to Higgsfield through the connector and shows you the result. Prompt seven goes to Gemini with the finished video attached.</p>
+  <div class="pack">
+    <div class="pn"><img src="img/icons/magnifer-bold.svg">1 · research</div>
+    <div class="pp">Give me ten surprising, checkable facts about <em>[the job or topic]</em>. One line each, with the source page for each. Mark the ones most people get wrong. Then tell me which ones would stop a thumb on a phone.</div>
+    <div class="pn"><img src="img/icons/pen-bold.svg">2 · script</div>
+    <div class="pp">Turn these facts into a 60 second script for a vertical video. Nine beats, one idea per line, under twelve words a line. Line one states what people think this job is. The last line pays that off. UK English. No hype words, no questions to the viewer.</div>
+    <div class="pn"><img src="img/icons/palette-bold.svg">3 · style samples</div>
+    <div class="pp">Five images of the same scene, <em>[beat 1 in one sentence]</em>, one in each style: flat vector, comedy cartoon, chibi 3D, pulp comic, paper cut-out. Vertical 9:16. Same framing in all five so the styles can be compared.</div>
+    <div class="pn"><img src="img/icons/camera-bold.svg">4 · one still</div>
+    <div class="pp"><em>[the style lock, word for word]</em> Scene: <em>[the still column from the shot plan]</em>. One clear subject, room at the top of the frame for captions, no text in the image. Vertical 9:16.</div>
+    <div class="pn"><img src="img/icons/clapperboard-play-bold.svg">5 · one motion</div>
+    <div class="pp">Image to video from this still, 5 seconds, steady camera, no new objects. <em>[the motion column from the shot plan]</em>. Everything else stays exactly as drawn.</div>
+    <div class="pn"><img src="img/icons/microphone-bold.svg">6 · voice</div>
+    <div class="pp">Read beat one in five different Higgsfield narrator voices so I can pick one. Then, with the voice I pick, one take per beat, calm and warm, natural pace, no music. Name the files by beat number.</div>
+    <div class="pn"><img src="img/icons/shield-check-bold.svg">7 · the check</div>
+    <div class="pp"><em>[in Gemini, with the video attached]</em> Watch this video and answer: Is every word in the captions on time? Which shots warp or morph, and at what second? Is each fact true, and where does it come from? Does the first five seconds make you want the rest? Rate the voice out of ten. Be specific, no praise.</div>
+  </div>
+  <div class="callout" style="margin:10px 0 0"><b>Order of work:</b> research, script, style and nine stills (a contact sheet is all nine on one page; say yes or regenerate one), animate, voice, then "stitch it". Each step gets a yes from you before the next one spends anything.</div>
+  <div class="foot"><span>Cooked or Cracked · The AI video production process · worksheet</span><span>page 2</span></div>
+</section>
+</body></html>
