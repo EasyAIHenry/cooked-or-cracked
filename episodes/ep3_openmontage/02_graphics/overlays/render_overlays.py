@@ -1,14 +1,19 @@
 #!/usr/bin/env python
-"""Render the four transparent overlay animations for the Ep3 reel.
+"""Render the transparent overlay animations for the Ep3 reel.
 
 Each overlay is rendered as Pillow RGBA frames (drawn at 2x and downsampled)
 and piped into ffmpeg as ProRes 4444 with alpha (yuva444p10le), 30 fps.
 After rendering, each .mov is decoded back with ffmpeg and a 1 fps strip on
 mid-grey is written next to it so the real output can be eyeballed.
 
+Overlays: the original four (styles-pick, install-loader, my-way-hero,
+tips-icons) and the seven v2 pieces (install-loader-v2, my-way-hero-v2,
+simplify-body, styles-strip, styles-selected, tips-icons-v2, comment-bubble).
+
 Usage:
-    render_overlays.py                 # render all four + strips
-    render_overlays.py styles-pick     # render one (names below)
+    render_overlays.py                 # render everything + strips
+    render_overlays.py --v2            # render only the seven v2 overlays
+    render_overlays.py styles-pick     # render one (names in OVERLAYS)
     render_overlays.py --strips-only   # only rebuild the strips from the .movs
 """
 import math
@@ -17,7 +22,7 @@ import random
 import subprocess
 import sys
 
-from PIL import Image, ImageDraw, ImageFilter, ImageFont
+from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageFont, ImageOps
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 FPS = 30
@@ -131,6 +136,11 @@ def torn_outline(w, h, seed, radius=0, amp=2.0, step=10, max_out=None):
         line(W, H, 0, H)
         line(0, H, 0, 0)
 
+    return _tear(pts, rng, amp, max_out)
+
+
+def _tear(pts, rng, amp, max_out=None):
+    """Displace a clockwise (y down) sampled polygon along its outward normal."""
     n = len(pts)
     phase = rng.random() * 6.28
     k = rng.uniform(0.02, 0.05)
@@ -148,6 +158,29 @@ def torn_outline(w, h, seed, radius=0, amp=2.0, step=10, max_out=None):
             d = min(d, max_out * SS)  # cap how far the tear reaches outward
         out.append((x + nx * d, y + ny * d))
     return out
+
+
+def torn_path(path, seed, amp=2.0, step=10, max_out=None):
+    """Torn version of an arbitrary closed polygon given in 1x px (clockwise,
+    y down). Resampled every `step` px, returned in SS px."""
+    rng = random.Random(seed)
+    st = step * SS
+    pts = []
+    for i in range(len(path)):
+        x0, y0 = path[i][0] * SS, path[i][1] * SS
+        x1, y1 = path[(i + 1) % len(path)][0] * SS, path[(i + 1) % len(path)][1] * SS
+        L = math.hypot(x1 - x0, y1 - y0)
+        n = max(1, int(L / st))
+        for k in range(n):
+            t = k / n
+            pts.append((x0 + (x1 - x0) * t, y0 + (y1 - y0) * t))
+    return _tear(pts, rng, amp, max_out)
+
+
+def arc_pts(cx, cy, r, a0, a1, n=8):
+    """Points along a circular arc (degrees, clockwise on screen)."""
+    return [(cx + r * math.cos(math.radians(a0 + (a1 - a0) * i / n)),
+             cy + r * math.sin(math.radians(a0 + (a1 - a0) * i / n))) for i in range(n + 1)]
 
 
 class Spr:
@@ -180,44 +213,91 @@ def rotate_spr(img, ax, ay, angle):
     return out, W2 / 2 + nx, H2 / 2 + ny
 
 
+_paper_base_cache = {}
+
+
 def paper_sprite(w, h, seed, tilt=0.0, radius=0, amp=2.0, color=PAPER, ruled=True,
-                 shadow=(0, 5, 7, 0.28), pad=28, draw_fn=None, max_out=None):
+                 shadow=(0, 5, 7, 0.28), pad=28, draw_fn=None, max_out=None,
+                 outline=None, anchor=None):
     """Torn-edge paper card (w x h in 1x px) with faint ruled lines, soft
     shadow and a tilt. draw_fn(img, P) draws contents at SS px offset P.
-    Anchor is the centre of the paper."""
+    Anchor is the centre of the paper unless `anchor` (1x px inside the w x h
+    box) is given. `outline` (closed polygon, 1x px, clockwise) replaces the
+    rectangle. The empty paper (shadow + sheet) is cached per geometry so
+    per-frame contents only cost the drawing and the rotation."""
     P = pad * SS
     W, H = int(w * SS + 2 * P), int(h * SS + 2 * P)
-    pts = [(x + P, y + P) for x, y in torn_outline(w, h, seed, radius, amp, max_out=max_out)]
-    mask = Image.new("L", (W, H), 0)
-    ImageDraw.Draw(mask).polygon(pts, fill=255)
+    key = (w, h, seed, radius, amp, color, ruled, shadow, pad, max_out,
+           None if outline is None else tuple(outline))
+    base = _paper_base_cache.get(key)
+    if base is None:
+        if outline is None:
+            raw = torn_outline(w, h, seed, radius, amp, max_out=max_out)
+        else:
+            raw = torn_path(outline, seed, amp, max_out=max_out)
+        pts = [(x + P, y + P) for x, y in raw]
+        mask = Image.new("L", (W, H), 0)
+        ImageDraw.Draw(mask).polygon(pts, fill=255)
 
-    img = Image.new("RGBA", (W, H), color + (0,))
-    if shadow:
-        dx, dy, blur, a = shadow
-        sh = Image.new("L", (W, H), 0)
-        sh.paste(mask, (int(round(dx * SS)), int(round(dy * SS))))
-        sh = sh.filter(ImageFilter.GaussianBlur(blur * SS)).point(lambda v: int(v * a))
-        sh_img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-        sh_img.putalpha(sh)
-        img.alpha_composite(sh_img)
+        base = Image.new("RGBA", (W, H), color + (0,))
+        if shadow:
+            dx, dy, blur, a = shadow
+            sh = Image.new("L", (W, H), 0)
+            sh.paste(mask, (int(round(dx * SS)), int(round(dy * SS))))
+            sh = sh.filter(ImageFilter.GaussianBlur(blur * SS)).point(lambda v: int(v * a))
+            sh_img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+            sh_img.putalpha(sh)
+            base.alpha_composite(sh_img)
 
-    paper = Image.new("RGBA", (W, H), color + (255,))
-    if ruled:
-        d = ImageDraw.Draw(paper)
-        rule = mix(color, RULE, 0.32) + (255,)
-        y = P + int(18 * SS)
-        while y < P + h * SS:
-            d.line([(0, y), (W, y)], fill=rule, width=SS)
-            y += int(26 * SS)
-    paper.putalpha(mask)
-    img.alpha_composite(paper)
+        paper = Image.new("RGBA", (W, H), color + (255,))
+        if ruled:
+            d = ImageDraw.Draw(paper)
+            rule = mix(color, RULE, 0.32) + (255,)
+            y = P + int(18 * SS)
+            while y < P + h * SS:
+                d.line([(0, y), (W, y)], fill=rule, width=SS)
+                y += int(26 * SS)
+        paper.putalpha(mask)
+        base.alpha_composite(paper)
+        if len(_paper_base_cache) > 96:
+            _paper_base_cache.clear()
+        _paper_base_cache[key] = base
 
+    img = base.copy()
     if draw_fn:
         draw_fn(img, P)
 
-    ax, ay = P + w * SS / 2, P + h * SS / 2
+    if anchor is None:
+        ax, ay = P + w * SS / 2, P + h * SS / 2
+    else:
+        ax, ay = P + anchor[0] * SS, P + anchor[1] * SS
     img, ax, ay = rotate_spr(img, ax, ay, tilt)
     return Spr(img, ax, ay)
+
+
+def image_sprite(path, size, radius=0, shadow=(0, 5, 7, 0.28), pad=24):
+    """A logo/image as a size x size sprite (LANCZOS at SS), optional rounded
+    corners and the same soft paper shadow as the cards. Centre anchor."""
+    im = Image.open(path).convert("RGBA")
+    S = int(size * SS)
+    im = im.resize((S, S), Image.LANCZOS)
+    if radius:
+        m = Image.new("L", (S, S), 0)
+        ImageDraw.Draw(m).rounded_rectangle((0, 0, S - 1, S - 1), radius=int(radius * SS), fill=255)
+        im.putalpha(ImageChops.multiply(im.getchannel("A"), m))
+    P = pad * SS
+    W = S + 2 * P
+    out = Image.new("RGBA", (W, W), (0, 0, 0, 0))
+    if shadow:
+        dx, dy, blur, a = shadow
+        sh = Image.new("L", (W, W), 0)
+        sh.paste(im.getchannel("A"), (P + int(round(dx * SS)), P + int(round(dy * SS))))
+        sh = sh.filter(ImageFilter.GaussianBlur(blur * SS)).point(lambda v: int(v * a))
+        sh_img = Image.new("RGBA", (W, W), (0, 0, 0, 0))
+        sh_img.putalpha(sh)
+        out.alpha_composite(sh_img)
+    out.alpha_composite(im, (P, P))
+    return Spr(out, W / 2, W / 2)
 
 
 def text_sprite(text, fnt, color=INK):
@@ -590,12 +670,47 @@ def _icon_receipt(d, cx, cy):
     stroke(d, [Q(-15, 6), Q(3, 6)], lw, ink)
 
 
+def _icon_magnifier(d, cx, cy):
+    lw = 5 * SS
+    ink = INK + (255,)
+    Q = lambda x, y: (cx + x * SS, cy + y * SS)
+    d.ellipse(Q(-38, -38) + Q(16, 16), outline=ink, width=lw)
+    stroke(d, [Q(8, 8), Q(38, 38)], lw * 1.5, ink)
+    d.arc(Q(-28, -28) + Q(6, 6), start=200, end=250, fill=ink, width=int(lw * 0.6))
+
+
+def _icon_script(d, cx, cy):
+    lw = 5 * SS
+    ink = INK + (255,)
+    Q = lambda x, y: (cx + x * SS, cy + y * SS)
+    # document with a folded corner
+    stroke(d, [Q(-36, -40), Q(8, -40), Q(22, -26), Q(22, 40), Q(-36, 40)], lw, ink, closed=True)
+    stroke(d, [Q(8, -40), Q(8, -26), Q(22, -26)], lw * 0.8, ink)
+    stroke(d, [Q(-22, -12), Q(8, -12)], lw, ink)
+    stroke(d, [Q(-22, 2), Q(8, 2)], lw, ink)
+    stroke(d, [Q(-22, 16), Q(-6, 16)], lw, ink)
+    # pen lying across the lower-right corner
+    stroke(d, [Q(12, 6), Q(40, 34)], lw * 2.2, ink)
+    stroke(d, [Q(40, 34), Q(46, 46)], lw * 0.9, ink)
+    stroke(d, [Q(12, 6), Q(8, 2)], lw * 0.9, ink)
+
+
 def render_tips_icons():
+    names = ["VOICE", "STILLS", "ANIMATE", "CUT", "RECEIPT"]
+    icons = [_icon_mic, _icon_photo, _icon_clapper, _icon_scissors, _icon_receipt]
+    return _render_tips(names, icons)
+
+
+def render_tips_icons_v2():
+    names = ["RESEARCH", "SCRIPT", "CUT", "ANIMATE", "VOICE"]
+    icons = [_icon_magnifier, _icon_script, _icon_scissors, _icon_clapper, _icon_mic]
+    return _render_tips(names, icons)
+
+
+def _render_tips(names, icons):
     W, H, N = 1000, 420, int(12.0 * FPS)
     f_lab = font(FONT_B, 30)
     f_ban = font(FONT_B, 36)
-    names = ["VOICE", "STILLS", "ANIMATE", "CUT", "RECEIPT"]
-    icons = [_icon_mic, _icon_photo, _icon_clapper, _icon_scissors, _icon_receipt]
     tilts = [1.5, -2.2, 1.0, -1.6, 2.4]
     chips = []
     for i in range(5):
@@ -647,6 +762,611 @@ def render_tips_icons():
         yield c
 
 
+# ------------------------------------------------------ 5 install-loader-v2
+
+def render_install_loader_v2():
+    W, H, N = 900, 440, int(9.0 * FPS)
+    cw, ch, tilt = 780, 340, 1.4
+    f_b = font(FONT_B, 34)
+    f_xb = font(FONT_XB, 52)
+    f_cmd = font(FONT_B, 30)
+    f_chip = font(FONT_B, 24)
+    installed = text_sprite("installed", f_b, INK)
+    ready = text_sprite("12 agents ready", f_cmd, ACCENT)
+    badge = tick_badge(24, tilt=-6, seed=98)
+    F0, F1 = int(0.3 * FPS), int(2.6 * FPS)
+    BADGE_F = int(2.7 * FPS)
+    BX0, BY0, BX1, BY1, R = 40, 132, 740, 166, 17
+    CMD = "$ openmontage run"
+    T0, T1 = int(4.4 * FPS), int(5.4 * FPS)
+    CHIP0 = int(5.6 * FPS)
+    chip_starts = [CHIP0 + int(round(0.35 * FPS * i)) for i in range(4)]
+    READY_F = int(7.2 * FPS)
+    CMD_Y, CHIP_Y = 258, 308
+    asc, _ = f_cmd.getmetrics()
+    cur_h = asc / SS  # block cursor height (1x)
+    cur_w = f_cmd.getlength("M") / SS * 0.9
+
+    names = ["RESEARCH", "SCRIPT", "ASSETS", "RENDER"]
+    chip_tilts = [1.2, -1.5, 1.0, -1.2]
+    chips, cxs, cws = [], [], []
+    x = 40
+    for i, n in enumerate(names):
+        t = text_sprite(n, f_chip, INK)
+        w = int(t.img.width / SS + 26)
+        chips.append(paper_sprite(w, 42, 60 + i, tilt=chip_tilts[i], amp=1.2, ruled=False,
+                                  shadow=(0, 2, 3, 0.28), pad=10,
+                                  draw_fn=lambda img, P, t=t, w=w: blit(img, t, P + w / 2 * SS,
+                                                                        P + 21 * SS, 1.0, ss=SS)))
+        cxs.append(x + w / 2)
+        cws.append(w)
+        x += w + 34
+
+    def arrow(d, X, x0, y, s):
+        """Small accent arrow -> centred at (x0, y), length 18 * s."""
+        if s <= 0:
+            return
+        L = 9 * s
+        col = ACCENT + (255,)
+        stroke(d, [(X(x0 - L), X(y)), (X(x0 + L), X(y))], 3 * SS, col)
+        stroke(d, [(X(x0 + L - 6 * s), X(y - 5 * s)), (X(x0 + L), X(y)),
+                   (X(x0 + L - 6 * s), X(y + 5 * s))], 3 * SS, col)
+
+    for f in range(N):
+        ft = ease_in_out_cubic((f - F0) / (F1 - F0))
+        pct = int(round(100 * ft))
+        nch = 0 if f < T0 else min(len(CMD), int(len(CMD) * (f - T0 + 1) / (T1 - T0)))
+        typing = T0 <= f < T1
+        blink_on = typing or ((f - T1) // 8) % 2 == 0
+        rs = pop(f - READY_F, dur=10)
+
+        def contents(img, P, ft=ft, pct=pct, f=f, nch=nch, blink_on=blink_on, rs=rs):
+            d = ImageDraw.Draw(img)
+            X = lambda v: P + v * SS
+            # stage 1: terminal line, percent, bar, tick, "installed"
+            d.text((X(40), X(52)), "$", font=f_b, fill=ACCENT + (255,), anchor="ls")
+            d.text((X(40) + f_b.getlength("$ "), X(52)), "make setup", font=f_b,
+                   fill=INK + (255,), anchor="ls")
+            d.text((X(BX1), X(118)), f"{pct}%", font=f_xb, fill=INK + (255,), anchor="rs")
+            d.rounded_rectangle((X(BX0), X(BY0), X(BX1), X(BY1)), radius=R * SS,
+                                outline=INK + (255,), width=3 * SS)
+            if ft > 0:
+                inset = 4
+                x0, y0 = X(BX0 + inset), X(BY0 + inset)
+                y1 = X(BY1 - inset)
+                x1 = X(BX0 + inset + (BX1 - BX0 - 2 * inset) * ft)
+                rr = min((R - inset) * SS, (x1 - x0) / 2)
+                if x1 - x0 >= 2:
+                    d.rounded_rectangle((x0, y0, x1, y1), radius=rr, fill=ACCENT + (255,))
+            bs = pop(f - BADGE_F)
+            if bs > 0:
+                blit(img, badge, X(BX1), X((BY0 + BY1) / 2), bs, ss=SS)
+                blit(img, installed, X(40) + installed.ax, X(200), bs, ss=SS)
+            # stage 2: typed command line with block cursor
+            if f >= T0:
+                shown = CMD[:nch]
+                cx = X(40)
+                if shown:
+                    d.text((cx, X(CMD_Y)), "$", font=f_cmd, fill=ACCENT + (255,), anchor="ls")
+                    d.text((cx + f_cmd.getlength("$"), X(CMD_Y)), shown[1:], font=f_cmd,
+                           fill=INK + (255,), anchor="ls")
+                    cx += f_cmd.getlength(shown)
+                if rs > 0:
+                    gap = f_cmd.getlength("  ")
+                    blit(img, ready, cx + gap + ready.ax, X(CMD_Y) - asc / 2, rs, ss=SS)
+                    cx += gap + ready.img.width
+                if blink_on:
+                    d.rectangle((cx + 3 * SS, X(CMD_Y - cur_h), cx + (3 + cur_w) * SS, X(CMD_Y)),
+                                fill=INK + (255,))
+            # stage 3: pipeline chips with arrows
+            for i in range(4):
+                s = pop(f - chip_starts[i])
+                if s > 0:
+                    blit(img, chips[i], X(cxs[i]), X(CHIP_Y), s, ss=SS)
+                    if i > 0:
+                        arrow(d, X, (cxs[i - 1] + cws[i - 1] / 2 + cxs[i] - cws[i] / 2) / 2,
+                              CHIP_Y, min(1.0, s))
+
+        card = paper_sprite(cw, ch, 7, tilt=tilt, draw_fn=contents)
+        c = new_canvas(W, H)
+        blit(c, card, 450, 220, pop(f))
+        yield c
+
+
+# --------------------------------------------------------- 6 my-way-hero-v2
+
+LOGO_DIR = ("/Users/henrychua/Content Creation/DRIVE_Cooked-or-Cracked_Ep3_OpenMontage"
+            "/02_graphics/logos")
+
+
+def plus_badge(r=32, seed=97):
+    def contents(img, P):
+        d = ImageDraw.Draw(img)
+        col = PAPER + (255,)
+        a = 0.46 * r
+        stroke(d, [(P + (r - a) * SS, P + r * SS), (P + (r + a) * SS, P + r * SS)], 0.2 * r * SS, col)
+        stroke(d, [(P + r * SS, P + (r - a) * SS), (P + r * SS, P + (r + a) * SS)], 0.2 * r * SS, col)
+    return paper_sprite(2 * r, 2 * r, seed, tilt=-6, radius=r, amp=0.6, color=ACCENT,
+                        ruled=False, shadow=(0, 3, 5, 0.3), pad=14, draw_fn=contents)
+
+
+def render_my_way_hero_v2():
+    W, H, N = 1000, 460, int(14.0 * FPS)
+    WORD = "CLAUDE + HIGGSFIELD"
+    LOGO = 140
+    LY = 90
+    CX_CL, CX_HG, CX = 385, 615, 500
+    claude = image_sprite(os.path.join(LOGO_DIR, "claude-color.png"), LOGO, radius=0)
+    higgs = image_sprite(os.path.join(LOGO_DIR, "higgsfield-icon.png"), LOGO, radius=31)
+    badge = plus_badge(32)
+
+    cw, ch, tilt = 924, 216, -1.2
+    CARD_X, CARD_Y = 500, 316
+    f_lab = font(FONT_B, 40)
+    size = 140
+    while True:
+        f_w = font(FONT_XB, size)
+        if f_w.getlength(WORD) <= 880 * SS or size <= 10:
+            break
+        size -= 1
+    asc_w, _ = f_w.getmetrics()
+    WORD_BASE, LAB_BASE, UL_Y = 170, 46, 190
+    word_w = f_w.getlength(WORD) / SS
+    wx0 = (cw - word_w) / 2
+    letters = []  # (sprite, cx, cy) in 1x card coords
+    k = 0
+    for i, chr_ in enumerate(WORD):
+        if chr_ == " ":
+            continue
+        l, t, r, b = f_w.getbbox(chr_)
+        lx = wx0 + f_w.getlength(WORD[:i]) / SS
+        cx = lx + (l + r) / 2 / SS
+        cy = WORD_BASE - asc_w / SS + (t + b) / 2 / SS
+        letters.append((text_sprite(chr_, f_w, INK), cx, cy, k))
+        k += 1
+    ux0, ux1 = wx0 - 4, wx0 + word_w + 4
+    upts = [(ux0 + (ux1 - ux0) * i / 40, UL_Y + 1.4 * math.sin(i * 0.8 + 0.4)) for i in range(41)]
+
+    SLIDE_D = 18
+    BADGE0 = int(0.5 * FPS)
+    CARD0 = int(0.8 * FPS)
+    LET0, LET_D = CARD0 + 2, 10
+    UL0, UL_D = int(1.6 * FPS), 16
+    BNC0, BNC_D = int(2.0 * FPS), 10
+    STATIC_F = max(UL0 + UL_D, LET0 + len(letters) + LET_D) + 1
+    rays = [math.radians(22.5 + 45 * i) for i in range(8)]
+    R0, R1 = 38, 54
+
+    static_card = None
+    settled = None
+    for f in range(N):
+        if settled is not None:
+            yield settled
+            continue
+        c = new_canvas(W, H)
+
+        # rays behind everything: burst out, then settle to 0.35 opacity
+        if f >= BADGE0:
+            t = ease_out_back((f - BADGE0) / 10, s=1.2)
+            op = 1.0 if f < BADGE0 + 8 else 1.0 - 0.65 * smooth((f - BADGE0 - 8) / 6)
+            box = 2 * (R1 + 6)
+            lay = Image.new("RGBA", (box * SS, box * SS), ACCENT + (0,))
+            d = ImageDraw.Draw(lay)
+            for a in rays:
+                length = R0 + (R1 - R0) * t
+                if length <= R0 + 0.5:
+                    continue
+                ux, uy = math.cos(a), math.sin(a)
+                p0 = (box / 2 + R0 * ux, box / 2 + R0 * uy)
+                p1 = (box / 2 + length * ux, box / 2 + length * uy)
+                stroke(d, [(p0[0] * SS, p0[1] * SS), (p1[0] * SS, p1[1] * SS)], 3.5 * SS,
+                       ACCENT + (255,))
+            lay = lay.resize((box, box), Image.LANCZOS)
+            lay.putalpha(lay.getchannel("A").point(lambda v: int(v * op)))
+            c.alpha_composite(lay, (CX - box // 2, LY - box // 2))
+
+        # logos slide in from the edges, later a single settle-bounce
+        st = ease_out_back(f / SLIDE_D, s=1.0)
+        bs = 1.0 if f < BNC0 else pop(f - BNC0, dur=BNC_D, peak=1.08, start=1.0)
+        xl = -90 + (CX_CL + 90) * st
+        xr = 1090 + (CX_HG - 1090) * st
+        blit(c, claude, xl, LY, bs)
+        blit(c, higgs, xr, LY, bs)
+
+        pb = pop(f - BADGE0)
+        if pb > 0:
+            blit(c, badge, CX, LY, pb)
+
+        cs = pop(f - CARD0, dur=8, peak=1.03)
+        if cs > 0:
+            if f >= STATIC_F and static_card is not None:
+                card = static_card
+            else:
+                p_ul = ease_out_cubic((f - UL0) / UL_D)
+
+                def contents(img, P, f=f, p_ul=p_ul):
+                    d = ImageDraw.Draw(img)
+                    X = lambda v: P + v * SS
+                    d.text((X(cw / 2), X(LAB_BASE)), "my way", font=f_lab, fill=INK + (255,),
+                           anchor="ms")
+                    for spr, cx, cy, k in letters:
+                        ls = pop(f - (LET0 + k), dur=LET_D, peak=1.15)
+                        if ls > 0:
+                            blit(img, spr, X(cx), X(cy), ls, ss=SS)
+                    seg = partial(upts, p_ul)
+                    if len(seg) >= 2:
+                        stroke(d, [(X(x), X(y)) for x, y in seg], 8 * SS, ACCENT + (255,))
+
+                card = paper_sprite(cw, ch, 11, tilt=tilt, draw_fn=contents)
+                if f >= STATIC_F:
+                    static_card = card
+            blit(c, card, CARD_X, CARD_Y, cs)
+
+        if f >= max(STATIC_F, BNC0 + BNC_D, BADGE0 + 16, SLIDE_D) + 1:
+            settled = c
+        yield c
+
+
+# ---------------------------------------------------------- 7 simplify-body
+
+def render_simplify_body():
+    W, H, N = 900, 420, int(6.0 * FPS)
+    XS = [170, 450, 730]
+    CY, LAB_Y = 172, 322
+    CARD = 220
+    f_lab = font(FONT_B, 26)
+    names = ["simplify", "no download", "no steps"]
+    labels = [text_sprite(n, f_lab, INK) for n in names]
+    starts = [int(0.3 * FPS), int(round(1.83 * FPS)), int(5.2 * FPS)]
+    tilts = [-1.6, 1.4, -1.2]
+    POP_D, UNT_D, CROSS_D = 13, 12, 8
+    cx0 = cy0 = CARD / 2
+
+    # scribble: tangled loops -> straight line, same point count
+    n_pts = 140
+    tangled, straight = [], []
+    for i in range(n_pts):
+        t = i / (n_pts - 1)
+        tangled.append((cx0 - 72 + 144 * t + 20 * math.cos(2 * math.pi * 3.5 * t + 0.3),
+                        cy0 + 30 * math.sin(2 * math.pi * 3.5 * t) + 10 * math.sin(2 * math.pi * 1.3 * t + 1)))
+        straight.append((cx0 - 72 + 144 * t, cy0))
+
+    def scribble(d, P, u):
+        e = smooth(u)
+        col = mix(INK, ACCENT, e) + (255,)
+        pts = [(P + (a[0] + (b[0] - a[0]) * e) * SS, P + (a[1] + (b[1] - a[1]) * e) * SS)
+               for a, b in zip(tangled, straight)]
+        stroke(d, pts, 6 * SS, col)
+
+    def download(d, P):
+        Q = lambda x, y: (P + (cx0 + x) * SS, P + (cy0 + y) * SS)
+        lw, ink = 6 * SS, INK + (255,)
+        stroke(d, [Q(0, -62), Q(0, 8)], lw, ink)
+        stroke(d, [Q(-26, -18), Q(0, 8), Q(26, -18)], lw, ink)
+        stroke(d, [Q(-52, 18), Q(-52, 50), Q(52, 50), Q(52, 18)], lw, ink)
+
+    def stairs(d, P):
+        Q = lambda x, y: (P + (cx0 + x) * SS, P + (cy0 + y) * SS)
+        lw, ink = 6 * SS, INK + (255,)
+        x0, y0, sw, sh = -64, 54, 25.6, 21.6
+        pts = [Q(x0, y0)]
+        for k in range(5):
+            pts.append(Q(x0 + (k + 1) * sw, y0 - k * sh))
+            pts.append(Q(x0 + (k + 1) * sw, y0 - (k + 1) * sh))
+        stroke(d, pts, lw, ink)
+
+    def cross(d, P, p):
+        Q = lambda x, y: (P + (cx0 + x) * SS, P + (cy0 + y) * SS)
+        col = ACCENT + (255,)
+        a = partial([Q(-64, -64), Q(64, 64)], clamp01(p * 2))
+        b = partial([Q(64, -64), Q(-64, 64)], clamp01(p * 2 - 1))
+        for seg in (a, b):
+            if len(seg) >= 2:
+                stroke(d, seg, 9 * SS, col)
+
+    cache = {}
+
+    def card(i, q):
+        key = (i, q)
+        if key not in cache:
+            def contents(img, P):
+                d = ImageDraw.Draw(img)
+                if i == 0:
+                    scribble(d, P, q)
+                elif i == 1:
+                    download(d, P)
+                    cross(d, P, q)
+                else:
+                    stairs(d, P)
+                    cross(d, P, q)
+            cache[key] = paper_sprite(CARD, CARD, 70 + i, tilt=tilts[i], radius=20, amp=1.6,
+                                      draw_fn=contents)
+        return cache[key]
+
+    for f in range(N):
+        c = new_canvas(W, H)
+        for i in range(3):
+            s = pop(f - starts[i], dur=POP_D)
+            if s <= 0:
+                continue
+            a0 = starts[i] + POP_D
+            D = UNT_D if i == 0 else CROSS_D
+            q = clamp01((f - a0) / D)
+            q = round(q * D) / D
+            blit(c, card(i, q), XS[i], CY, s)
+            blit(c, labels[i], XS[i], LAB_Y, s)
+        yield c
+
+
+# ----------------------------------------------------------- 8 styles-strip
+
+def pointer_sprite(height=46):
+    """Classic arrow cursor, ink with a white outline and a slight shadow.
+    Anchor at the tip."""
+    base = [(0, 0), (0, 16.5), (4, 12.5), (6.5, 18.5), (9, 17.5), (6.5, 11.5), (11.5, 11.5)]
+    k = height / 18.5
+    P = 12 * SS
+    pts = [(P + x * k * SS, P + y * k * SS) for x, y in base]
+    W = int(P * 2 + 12 * k * SS)
+    Hh = int(P * 2 + 19 * k * SS)
+    body = Image.new("RGBA", (W, Hh), (0, 0, 0, 0))
+    d = ImageDraw.Draw(body)
+    d.polygon(pts, fill=INK + (255,), outline=WHITE + (255,), width=int(2.4 * SS))
+    out = Image.new("RGBA", (W, Hh), (0, 0, 0, 0))
+    sh = Image.new("L", (W, Hh), 0)
+    sh.paste(body.getchannel("A"), (int(2 * SS), int(3 * SS)))
+    sh = sh.filter(ImageFilter.GaussianBlur(3 * SS)).point(lambda v: int(v * 0.3))
+    sh_img = Image.new("RGBA", (W, Hh), (0, 0, 0, 0))
+    sh_img.putalpha(sh)
+    out.alpha_composite(sh_img)
+    out.alpha_composite(body)
+    return Spr(out, P, P)
+
+
+_photo_cache2 = {}
+
+
+def style_card2(idx, tilt=0.0, border=WHITE, tag_size=30):
+    """180x322 torn card with the photo inset 8 px (border colour = card
+    colour) and a numbered paper tag top-left with a legible number."""
+    w, h, b = 180, 322, 8
+    if idx not in _photo_cache2:
+        im = Image.open(os.path.join(STYLE_DIR, STYLE_IMGS[idx])).convert("RGBA")
+        iw, ih = w - 2 * b, h - 2 * b
+        s = min(iw / im.width, ih / im.height)
+        pw, ph = int(round(im.width * s * SS)), int(round(im.height * s * SS))
+        _photo_cache2[idx] = im.resize((pw, ph), Image.LANCZOS)
+    photo = _photo_cache2[idx]
+    tag_txt = text_sprite(str(idx + 1), font(FONT_B, tag_size), INK)
+    tw, th = 46, 42
+
+    def contents(img, P):
+        x = int(round(P + (w * SS - photo.width) / 2))
+        y = int(round(P + (h * SS - photo.height) / 2))
+        img.alpha_composite(photo, (x, y))
+        tag = paper_sprite(tw, th, 300 + idx, tilt=-6, amp=1.0, ruled=False,
+                           shadow=(0, 2, 3, 0.3), pad=8,
+                           draw_fn=lambda im, Q: blit(im, tag_txt, Q + tw / 2 * SS,
+                                                      Q + th / 2 * SS, 1.0, ss=SS))
+        blit(img, tag, P + 28 * SS, P + 27 * SS, 1.0, ss=SS)
+
+    # shadow kept tight: the outer cards sit 10 px from the box edge
+    return paper_sprite(w, h, 100 + idx, tilt=tilt, amp=1.4, color=border, ruled=False,
+                        shadow=(0, 3, 3, 0.26), draw_fn=contents, max_out=2.4)
+
+
+def glow_sprite(w, h, blur=4, alpha=0.5, grow=2):
+    P = 40 * SS
+    W, H = int(w * SS + 2 * P), int(h * SS + 2 * P)
+    m = Image.new("L", (W, H), 0)
+    ImageDraw.Draw(m).rounded_rectangle((P - grow * SS, P - grow * SS, W - P + grow * SS,
+                                         H - P + grow * SS), radius=12 * SS, fill=255)
+    m = m.filter(ImageFilter.GaussianBlur(blur * SS)).point(lambda v: int(v * alpha))
+    img = Image.new("RGBA", (W, H), ACCENT + (0,))
+    img.putalpha(m)
+    return Spr(img, W / 2, H / 2)
+
+
+def render_styles_strip():
+    W, H, N = 1000, 420, int(10.0 * FPS)
+    XS = [100, 300, 500, 700, 900]
+    ROW_Y = 201
+    tilts = [0.6, -2.4, 1.6, -1.8, 0.6]
+    pointer = pointer_sprite(46)
+    glow = glow_sprite(180, 322)
+    badge = tick_badge(22, tilt=-8)
+    HQ = 5  # hover quantisation steps (5-frame ramp)
+    variants = {}
+
+    def card(i, hq, gq):
+        key = (i, hq, gq)
+        if key not in variants:
+            border = mix(WHITE, ACCENT, hq / HQ)
+            col = style_card2(i, tilts[i], border)
+            if gq > 0:
+                grey = ImageOps.grayscale(col.img.convert("RGB")).convert("RGBA")
+                grey.putalpha(col.img.getchannel("A"))
+                im = Image.blend(col.img, grey, gq / 15)
+                col = Spr(im, col.ax, col.ay)
+            variants[key] = col
+        return variants[key]
+
+    # pointer timeline (tip position)
+    ENTER = int(1.8 * FPS)
+    arrivals = [68, 92, 115, 139, 162]  # card 5 reached at 5.4 s
+    PAUSE = int(round(0.45 * FPS))
+    CLICK = int(5.9 * FPS)
+    LEAVE = CLICK + int(0.5 * FPS)
+    LEAVE_D = 14
+    P_START = (-24, 444)
+    P_END = (960, 480)
+
+    def pointer_pos(f):
+        if f < ENTER or f >= LEAVE + LEAVE_D:
+            return None
+        if f < arrivals[0]:
+            t = ease_out_cubic((f - ENTER) / (arrivals[0] - ENTER))
+            return (P_START[0] + (XS[0] - P_START[0]) * t, P_START[1] + (ROW_Y - P_START[1]) * t)
+        if f >= LEAVE:
+            t = ease_in_cubic((f - LEAVE) / LEAVE_D)
+            return (XS[4] + (P_END[0] - XS[4]) * t, ROW_Y + (P_END[1] - ROW_Y) * t)
+        for i in range(4):
+            a, nxt = arrivals[i], arrivals[i + 1]
+            if f < a + PAUSE:
+                return (XS[i], ROW_Y)
+            if f < nxt:
+                t = ease_in_out_cubic((f - a - PAUSE) / (nxt - a - PAUSE))
+                return (XS[i] + (XS[i + 1] - XS[i]) * t, ROW_Y)
+        return (XS[4], ROW_Y)
+
+    hover = [0.0] * 5
+    for f in range(N):
+        c = new_canvas(W, H)
+        pp = pointer_pos(f)
+        clicked = f >= CLICK
+        for i in range(5):
+            over = pp is not None and abs(pp[0] - XS[i]) <= 92 and abs(pp[1] - ROW_Y) <= 163
+            target = 1.0 if (over or (i == 4 and clicked)) else 0.0
+            hover[i] += max(-1.0 / HQ, min(1.0 / HQ, target - hover[i]))
+        for i in range(5):
+            s = pop(f - (6 + 6 * i), peak=1.03)  # 1.04+ pushes the outer shadows out of the box
+            if s <= 0:
+                continue
+            h = hover[i]
+            hq = int(round(h * HQ))
+            gq = 0
+            alpha = 1.0
+            if i < 4 and clicked:
+                gq = min(15, f - CLICK + 1)
+                alpha = 1.0 - 0.45 * gq / 15
+            y = ROW_Y - 6 * h
+            if i == 4 and clicked:
+                dt = f - CLICK
+                s *= 0.96 if dt < 3 else (1.04 if dt < 5 else 1.0)
+            if h > 0:
+                blit(c, glow, XS[i], y, 1.0, alpha=h)  # halo does not scale with the press
+            blit(c, card(i, hq, gq), XS[i], y, s, alpha=alpha)
+        bs = pop(f - (CLICK + 3))
+        if bs > 0:
+            blit(c, badge, 962, 58, bs)
+        if pp is not None:
+            blit(c, pointer, pp[0], pp[1])
+        yield c
+
+
+# -------------------------------------------------------- 9 styles-selected
+
+def render_styles_selected():
+    W, H, N = 600, 470, int(4.0 * FPS)
+    # 250x445 with a 2 degree tilt and the 1.06 overshoot needs ~480 px of
+    # height, so the card is 232x412 (still 9:16) to stay inside the box.
+    cw, ch, b, tilt = 232, 412, 8, 2.0
+    CX, CY = 300, 226
+    f_rib = font(FONT_B, 24)
+    im = Image.open(os.path.join(STYLE_DIR, STYLE_IMGS[4])).convert("RGBA")
+    s = min((cw - 2 * b) / im.width, (ch - 2 * b) / im.height)
+    photo = im.resize((int(round(im.width * s * SS)), int(round(im.height * s * SS))), Image.LANCZOS)
+    rib_txt = text_sprite("paper cut-out", f_rib, PAPER)
+    rw, rh = int(rib_txt.img.width / SS + 32), 40
+    ribbon = paper_sprite(rw, rh, 81, tilt=-1.5, amp=1.0, color=ACCENT, ruled=False,
+                          shadow=(0, 2, 3, 0.3), pad=10,
+                          draw_fn=lambda img, P: blit(img, rib_txt, P + rw / 2 * SS, P + rh / 2 * SS,
+                                                      1.0, ss=SS))
+
+    def contents(img, P):
+        x = int(round(P + (cw * SS - photo.width) / 2))
+        y = int(round(P + (ch * SS - photo.height) / 2))
+        img.alpha_composite(photo, (x, y))
+        blit(img, ribbon, P + cw / 2 * SS, P + (ch - 26) * SS, 1.0, ss=SS)
+
+    card = paper_sprite(cw, ch, 104, tilt=tilt, amp=1.4, color=WHITE, ruled=False,
+                        shadow=(0, 5, 6, 0.28), draw_fn=contents, max_out=2.4)
+    badge = tick_badge(24, tilt=-8)
+    BADGE0 = int(0.4 * FPS)
+    settled = None
+    for f in range(N):
+        if settled is not None:
+            yield settled
+            continue
+        c = new_canvas(W, H)
+        t = ease_out_back(f / 14, s=1.56)   # 0.3 -> 1.06 -> 1.0
+        blit(c, card, CX, CY, 0.3 + 0.7 * t)
+        bs = pop(f - BADGE0)
+        if bs > 0:
+            blit(c, badge, CX + cw / 2 - 6, CY - ch / 2 + 10, bs)
+        if f >= max(14, BADGE0 + 13):
+            settled = c
+        yield c
+
+
+# --------------------------------------------------------- 10 comment-bubble
+
+def bubble_outline(w, h, r, tail_x0, tail_x1, tip):
+    """Clockwise rounded rect with a triangular tail on the bottom edge."""
+    pts = [(r, 0), (w - r, 0)]
+    pts += arc_pts(w - r, r, r, -90, 0)[1:]
+    pts += [(w, h - r)]
+    pts += arc_pts(w - r, h - r, r, 0, 90)[1:]
+    pts += [(tail_x1, h), tip, (tail_x0, h), (r, h)]
+    pts += arc_pts(r, h - r, r, 90, 180)[1:]
+    pts += [(0, r)]
+    pts += arc_pts(r, r, r, 180, 270)[1:]
+    return pts
+
+
+def render_comment_bubble():
+    W, H, N = 460, 420, int(6.0 * FPS)
+    # 422x292 at x 24..446: at the 1.04 pop peak about the tail tip the far
+    # edges (and their shadow) still stay inside the 460x420 box
+    bw, bh, r = 422, 292, 28
+    TIP = (376, 336)
+    outline = bubble_outline(bw, bh, r, 318, 378, TIP)
+    TIP_X, TIP_Y = 400, 356
+    f_lab = font(FONT_B, 34)
+    f_big = font(FONT_XB, 120)
+
+    def contents(img, P):
+        d = ImageDraw.Draw(img)
+        X = lambda v: P + v * SS
+        d.text((X(bw / 2), X(92)), "comment", font=f_lab, fill=INK + (255,), anchor="ms")
+        d.text((X(bw / 2), X(226)), "PAPER", font=f_big, fill=ACCENT + (255,), anchor="ms")
+
+    bubble = paper_sprite(bw, TIP[1], 55, tilt=0.0, amp=1.8, shadow=(0, 4, 5, 0.28),
+                          max_out=2.5, outline=outline, anchor=TIP, draw_fn=contents)
+
+    # accent arrow pointing down-right, 40 px long, anchored at its centre
+    AW = 40
+    P = 10 * SS
+    aimg = Image.new("RGBA", ((AW + 20) * SS, (AW + 20) * SS), (0, 0, 0, 0))
+    d = ImageDraw.Draw(aimg)
+    Q = lambda x, y: (P + x * SS, P + y * SS)
+    u = AW / math.sqrt(2)
+    stroke(d, [Q(0, 0), Q(u, u)], 5 * SS, ACCENT + (255,))
+    stroke(d, [Q(u - 13, u), Q(u, u), Q(u, u - 13)], 5 * SS, ACCENT + (255,))
+    arrow = Spr(aimg, P + u / 2 * SS, P + u / 2 * SS)
+    AX, AY = TIP_X + 22, TIP_Y + 30
+    ARROW0 = 10
+    B1, B2, BD = int(0.6 * FPS), int(1.2 * FPS), 8
+
+    settled = None
+    for f in range(N):
+        if settled is not None:
+            yield settled
+            continue
+        c = new_canvas(W, H)
+        blit(c, bubble, TIP_X, TIP_Y, pop(f, peak=1.04))
+        a = pop(f - ARROW0, dur=8)
+        if a > 0:
+            off = 0.0
+            for b0 in (B1, B2):
+                if b0 <= f < b0 + BD:
+                    off = 6 * math.sin(math.pi * (f - b0) / BD)
+            blit(c, arrow, AX + off / math.sqrt(2), AY + off / math.sqrt(2), a)
+        if f >= B2 + BD:
+            settled = c
+        yield c
+
+
 # ------------------------------------------------------------- encode/verify
 
 OVERLAYS = {
@@ -654,7 +1374,16 @@ OVERLAYS = {
     "install-loader": (render_install_loader, 900, 330, 4.0),
     "my-way-hero": (render_my_way_hero, 1000, 400, 14.0),
     "tips-icons": (render_tips_icons, 1000, 420, 12.0),
+    "install-loader-v2": (render_install_loader_v2, 900, 440, 9.0),
+    "my-way-hero-v2": (render_my_way_hero_v2, 1000, 460, 14.0),
+    "simplify-body": (render_simplify_body, 900, 420, 6.0),
+    "styles-strip": (render_styles_strip, 1000, 420, 10.0),
+    "styles-selected": (render_styles_selected, 600, 470, 4.0),
+    "tips-icons-v2": (render_tips_icons_v2, 1000, 420, 12.0),
+    "comment-bubble": (render_comment_bubble, 460, 420, 6.0),
 }
+V2_NAMES = ["install-loader-v2", "my-way-hero-v2", "simplify-body", "styles-strip",
+            "styles-selected", "tips-icons-v2", "comment-bubble"]
 
 
 def encode(name, gen, W, H, dur):
@@ -723,7 +1452,10 @@ def make_strip(name, W, H, dur, per_row=4):
 
 def main(argv):
     strips_only = "--strips-only" in argv
-    names = [a for a in argv if not a.startswith("--")] or list(OVERLAYS)
+    names = [a for a in argv if not a.startswith("--")]
+    if "--v2" in argv:
+        names = names or V2_NAMES
+    names = names or list(OVERLAYS)
     for name in names:
         gen, W, H, dur = OVERLAYS[name]
         if not strips_only:

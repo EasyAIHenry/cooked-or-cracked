@@ -67,3 +67,7 @@ Edit lessons (from the v4 to v8 builds): the whole scrapbook template, Reels saf
 - Export check: cross-correlate every speech item against the source; a uniform -30 ms offset on all items is AAC encoder delay, not a bad join.
 - Gemini 3.1 Pro mislocated graphics ("overlaps the hair") on a 9:16 reel; trust the frame sheet over its layout claims, keep its audio-balance and flow notes.
 - Ripple: deleting a speech line means startDeltaFrames on every later item on every track in one batch, earliest first, and re-sending propertyOverrides on every moved MG.
+
+## Ep3 v3 (29 Sep 2026)
+- Henry's v2 notes: tease the best result under his face (no "his/mine" label) during the first line; loader must not sit idle after 100% (add a second stage); a dragged phrase is cut, not sped up (Gemini blind test: 1.35x and 1.8x pitch-preserved both read as glitches, a straight word-to-word cut at an energy valley passed); he wants real logos in the hero card; icon beats over his chest on "simplify / downloading / steps"; style pick = pointer hovering the strip with a glow, click SFX, chosen card grows BELOW the face, the rest go greyscale; five steps in HIS order RESEARCH, SCRIPT, CUT, ANIMATE, VOICE (never "receipt"); the CTA bubble must be a real speech bubble whose tail points at the Reels comment button (beside the shoulder, 420x383 at 655/880).
+- Gemini flags any 0.2 s sentence gap as "colliding"; a 5-frame breath fixed it. Ripple +N means startDeltaFrames on every later item on every track, latest first, with propertyOverrides re-sent on each moved MG.
