@@ -14,3 +14,9 @@ ASSETS 05:52: google_tts FAILED 403 (Cloud Text-to-Speech not enabled on the key
 ASSETS 06:03:48: narration fell back to Piper en_US-lessac-medium (free, offline, model auto-downloaded 63 MB); 1 Imagen hook image (hook-jammed-fit.png); Lyria music bed (forensic-pulse-source.mp3); final-mix.wav built. Remotion render started ~06:03.
 RENDERED 06:07: renders/faceless-builder-ep1-final.mp4, 75 s, 1920x1080 30fps, 4.8 MB. 39.5 min after the prompt (05:28:14). Provider spend reported $0.00 so far (Imagen + Lyria calls happened; cost tracker may report later). Copied to 03_reference/openmontage-output-v1-0607.mp4. Codex now in post-render QA.
 PIPELINE END 06:17:12. Wall clock from prompt 05:31:50: 45 min 22 s. Codex stage sum 43.4 min. Tokens 561,375 (Codex, gpt-5.6-sol high). Provider cost $0.119 (Gemini 2.5 Flash image $0.039 + Lyria 3 Pro $0.080). 12 self-approved gates. Final: why-perfect-parts-never-fit-upload.mp4, 75 s 1080p30 H.264/AAC, plus YouTube export bundle (SRT, thumbnail, description, chapters, tags). Recording seg2 stopped 06:17:50.
+
+RUN A (restart) START 17:24:24: OpenMontage one-shot, paper cut-out, flight attendant topic. Recording seg3.
+RUN A: Codex process died with the Claude session restart at ~18:00 (research 3.4 min and proposal checkpoints saved). Resumed from checkpoints at 18:11:35.
+RUN B (Higgsfield, Henry workflow) v1 built 18:19:56: 66.5 s, 62.9 credits. Run A still in script stage.
+RUN A 18:45:15: 1 h 23 min after the prompt (17:24:34), no MP4. At the assets gate, $0.00, Piper voice, flat vector cards instead of the paper cut-out style lock. Recording still rolling (pid 15964).
+RUN A RENDERED 19:03:18: renders/final.mp4, 70 s, 1080x1920, $0.00. 1 h 38 min after the prompt (17:24:34), of which 11 min lost to the session crash. Codex still doing post-render review and publish.
