@@ -19,6 +19,28 @@ def fetch(ds, fields):
         return json.load(r)
 
 
+# Topic filter: Henry wants automation / agents / builds, not visual-gen showcases.
+AUTO_KW = ("automat", "n8n", "make.com", "zapier", "agent", "workflow", "claude code", "claudecode", "mcp", " api",
+           "scrap", "inbox", "email", "crm", "lead", "pipeline", "cron", "integrat", "script", "repo", "github",
+           "saas", "backend", "database", "bot", "no-code", "nocode", "cursor", "codex", "vibe cod", "vibecod",
+           "app ", "build", "system", "notebooklm", "opus", "sonnet", "haiku", "token", "self-host", "deploy")
+VISUAL_KW = ("commercial", "cinematic", "photo", "image", "animation", "animated", "veo", "kling", "higgsfield", "seedance",
+             "midjourney", "sora", "portrait", "aesthetic", "outfit", "3d", "gaussian", "vr ", "glasses", "music video",
+             "ugc", "avatar", "headshot", "film", "movie", "trailer", "color analysis")
+
+
+def topic(cap):
+    c = " " + (cap or "").lower() + " "
+    a = sum(k in c for k in AUTO_KW); v = sum(k in c for k in VISUAL_KW)
+    if v > a: return "visual"
+    if a: return "automation"
+    return "unclear"
+
+
+def ig(u):
+    return f"[@{u}](https://www.instagram.com/{u}/)"
+
+
 def plays(r):
     return r.get("videoPlayCount") or r.get("videoViewCount") or 0
 
@@ -85,13 +107,14 @@ def main():
             ts = dt.datetime.fromisoformat(r["timestamp"].replace("Z", "+00:00"))
             age = (now - ts).days
             mult = plays(r) / med if med else 0
-            if age <= a.fresh_days and mult >= a.min_multiple and not r.get("isPinned"):
+            if age <= a.fresh_days and mult >= a.min_multiple:
                 leads.append(dict(
                     username=u, url=r["url"], shortCode=r["shortCode"], plays=plays(r),
                     multiple=round(mult, 1), age_days=age, likes=r.get("likesCount"),
                     comments=r.get("commentsCount"), duration=r.get("videoDuration"),
                     comment_gate=(r.get("commentsCount", 0) / plays(r)) > 0.02,
                     paid=r.get("paidPartnership"), caption=(r.get("caption") or "")[:220].replace("\n", " "),
+                    topic=topic(r.get("caption")),
                 ))
 
     creators = [c for c in creators if c["reels_30d"] >= 4]
@@ -122,7 +145,7 @@ def main():
             u = r.get("ownerUsername")
             cap = r.get("caption") or ""
             letters = [ch for ch in cap if ch.isalpha()]; ascii_share = sum(ch.isascii() for ch in letters) / max(len(letters), 1)
-            if u and ascii_share > 0.95 and plays(r) >= a.discovery_min_plays and plays(r) > best.get(u, {}).get("p", 0):
+            if u and ascii_share > 0.95 and topic(cap) == "automation" and plays(r) >= a.discovery_min_plays and plays(r) > best.get(u, {}).get("p", 0):
                 best[u] = {"p": plays(r), "url": r.get("url"), "cap": (r.get("caption") or "")[:100].replace("\n", " ")}
         for u, b in sorted(best.items(), key=lambda x: -x[1]["p"]):
             if u not in known:
@@ -137,16 +160,21 @@ def main():
     L = [f"# Lead Scout — {out.name}", "", f"{len(reels)} reels from {len(by)} creators scanned.", "",
          "## Top creators (30-day momentum)", "", "| # | Creator | Followers | Reels/30d | Median plays | Reach/followers | Eng % | Comment-gate |", "|---|---|---|---|---|---|---|---|"]
     for i, c in enumerate(creators[:15], 1):
-        L.append(f"| {i} | @{c['username']} | {c['followers']:,} | {c['reels_30d']} | {c['median_plays']:,} | {c['reach_ratio']} | {c['eng_rate']} | {'yes' if c['comment_gate'] else ''} |")
+        L.append(f"| {i} | {ig(c['username'])} | {c['followers']:,} | {c['reels_30d']} | {c['median_plays']:,} | {c['reach_ratio']} | {c['eng_rate']} | {'yes' if c['comment_gate'] else ''} |")
     L += ["", f"## Episode leads (last {a.fresh_days}d, ≥{a.min_multiple}x creator median)", ""]
-    for i, l in enumerate(leads[:10], 1):
-        L.append(f"{i}. **@{l['username']}** — {l['plays']:,} plays, **{l['multiple']}x** their median, {l['age_days']}d old{' · NEW' if l['new'] else ''}{' · comment-gate' if l['comment_gate'] else ''}  \n   {l['url']}  \n   _{l['caption'][:140]}_")
+    visual = [l for l in leads if l["topic"] == "visual"]
+    shown = [l for l in leads if l["topic"] != "visual"]
+    for i, l in enumerate(shown[:10], 1):
+        L.append(f"{i}. **{ig(l['username'])}** — {l['plays']:,} plays, **{l['multiple']}x** their median, {l['age_days']}d old{' · NEW' if l['new'] else ''}{' · comment-gate' if l['comment_gate'] else ''}{' · topic unclear, watch first' if l['topic'] == 'unclear' else ''}  \n   [▶ Watch reel]({l['url']})  \n   _{l['caption'][:140]}_")
+    if visual:
+        L.append("")
+        L.append("Skipped as visual-gen: " + ", ".join(f"[@{l['username']} {l['multiple']}x]({l['url']})" for l in visual[:8]))
     if not leads:
         L.append("No outliers today. Lower --min-multiple or widen the watchlist.")
     if new_faces:
         L += ["", "## New faces (from hashtags, added to pending — vet, then promote to candidates)", ""]
         for u, b in new_faces[:10]:
-            L.append(f"- @{u} — {b['p']:,} plays · {b['url']} · _{b['cap']}_")
+            L.append(f"- {ig(u)} — {b['p']:,} plays · [▶ reel]({b['url']}) · _{b['cap']}_")
     (out / "report.md").write_text("\n".join(L) + "\n")
     print("\n".join(L))
 

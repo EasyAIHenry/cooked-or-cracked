@@ -1,21 +1,17 @@
 {
   "creators": [
     "nateherkai",
-    "kaye.creatives",
     "massive.manas.exe",
     "sreemantideytech",
     "danborgia",
     "sabrina_ramonov",
     "alliekmiller",
-    "rowancheung",
     "liamottley",
     "godofprompt",
-    "chatgptricks",
     "freebuff.nate",
     "joinbuildingwithai",
     "dibratto",
     "mahbodpour",
-    "marketingmark__",
     "kevbuildsapps",
     "sebastianhardy_",
     "imaginetechz",
@@ -27,8 +23,9 @@
     "charlieautomates",
     "artificial.corner",
     "itsmariahbrunner",
-    "lifewithleenor",
-    "switech_solution"
+    "switech_solution",
+    "nickautomates",
+    "zubair_trabzada"
   ],
   "dropped": [
     "_ldcuts_",
@@ -53,6 +50,7 @@
     "celimar.morais",
     "chanti.dev",
     "chatgptips",
+    "chatgptricks",
     "chellpan_buffet",
     "chrisdonnellyofficial",
     "christianalmeida1973",
@@ -103,15 +101,18 @@
     "kaizenexecutive",
     "kallaway",
     "karenxcheng",
+    "kaye.creatives",
     "kevkevkiwi",
     "klingai_official",
     "leticiasebastian",
+    "lifewithleenor",
     "llarissalisboa",
     "magnific_ai",
     "maleditapizzeria",
     "mar_antaya",
     "marcia.centafro",
     "mariliacaldasfotografia",
+    "marketingmark__",
     "metav3rse",
     "mini_cart_tales",
     "mobile_learning_ai",
@@ -121,7 +122,6 @@
     "nataliefratto",
     "nayy_oliveira",
     "nexus_ai_bytes",
-    "nick_saraev",
     "openai",
     "openart_ai",
     "paige.prompts",
@@ -135,6 +135,7 @@
     "rengga.dev",
     "rodrigosoaressr",
     "rourke",
+    "rowancheung",
     "simonsinek",
     "skaigenerated",
     "sony",
@@ -168,8 +169,6 @@
     "claudecode",
     "aiautomation",
     "aiagents",
-    "vibecoding",
-    "aitools",
     "n8n"
   ],
   "pending": [
@@ -178,6 +177,7 @@
     "marina_uiux",
     "winkguys",
     "farhannrakhangi",
-    "imabgold"
+    "imabgold",
+    "nick_saraev"
   ]
 }
