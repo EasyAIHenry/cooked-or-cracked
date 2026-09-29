@@ -1,0 +1,158 @@
+[
+ {
+  "id": "S01",
+  "in": 0.36,
+  "out": 6.2,
+  "say": "Look into my palm. Here's the Claude logo. I'm gonna flick it to you. Nice!"
+ },
+ {
+  "id": "S02",
+  "in": 6.68,
+  "out": 10.1,
+  "say": "Okay, let's make it harder. Split me into three screens."
+ },
+ {
+  "id": "S03",
+  "in": 10.66,
+  "out": 11.75,
+  "say": "One with the background,"
+ },
+ {
+  "id": "S04",
+  "in": 12.36,
+  "out": 12.85,
+  "say": "me,"
+ },
+ {
+  "id": "S05",
+  "in": 13.14,
+  "out": 14.15,
+  "say": "and then the text."
+ },
+ {
+  "id": "S06",
+  "in": 16.24,
+  "out": 16.66,
+  "say": "Alright,"
+ },
+ {
+  "id": "S07",
+  "in": 17.05,
+  "out": 17.55,
+  "say": "now"
+ },
+ {
+  "id": "S08",
+  "in": 18.03,
+  "out": 20.1,
+  "say": "hide my layers. (hidden hold)"
+ },
+ {
+  "id": "S09",
+  "in": 27.84,
+  "out": 29.55,
+  "say": "Okay, bring me back."
+ },
+ {
+  "id": "S10",
+  "in": 32.64,
+  "out": 35.02,
+  "say": "Put me on a frame on the right and on the left."
+ },
+ {
+  "id": "S11",
+  "in": 38.84,
+  "out": 41.16,
+  "say": "And show how Claude edits a video."
+ },
+ {
+  "id": "S12",
+  "in": 44.4,
+  "out": 46.35,
+  "say": "So it listens with Whisper,"
+ },
+ {
+  "id": "S13",
+  "in": 47.21,
+  "out": 49.25,
+  "say": "it looks with FFmpeg,"
+ },
+ {
+  "id": "S14",
+  "in": 50.87,
+  "out": 52.55,
+  "say": "and it builds with HyperFrames."
+ },
+ {
+  "id": "S15",
+  "in": 56.91,
+  "out": 58.2,
+  "say": "Now back to the full screen."
+ },
+ {
+  "id": "S16",
+  "in": 59.9,
+  "out": 64.75,
+  "say": "Float my last three episodes. (look-back reaction)"
+ },
+ {
+  "id": "S17",
+  "in": 65.4,
+  "out": 66.33,
+  "say": "Nice."
+ },
+ {
+  "id": "S18",
+  "in": 74.94,
+  "out": 75.7,
+  "say": "Last one."
+ },
+ {
+  "id": "S19",
+  "in": 76.37,
+  "out": 78.38,
+  "say": "Make me the star of a documentary."
+ },
+ {
+  "id": "S20",
+  "in": 80.18,
+  "out": 82.3,
+  "say": "Make it more dramatic. (dramatic hold)"
+ },
+ {
+  "id": "S21",
+  "in": 84.28,
+  "out": 85.2,
+  "say": "Now bring me back."
+ },
+ {
+  "id": "S22",
+  "in": 87.52,
+  "out": 88.02,
+  "say": "Cool."
+ },
+ {
+  "id": "S23",
+  "in": 89.34,
+  "out": 90.76,
+  "say": "That was totally awesome."
+ },
+ {
+  "id": "S24",
+  "in": 100.04,
+  "out": 101.38,
+  "say": "I'd say that this guy has"
+ },
+ {
+  "id": "S25",
+  "in": 101.9,
+  "out": 103.18,
+  "say": "totally cooked it."
+ },
+ {
+  "id": "S26",
+  "in": 150.66,
+  "out": 155.0,
+  "say": "Like what you see, comment down, EDIT, and I'll send you the workflow."
+ }
+]

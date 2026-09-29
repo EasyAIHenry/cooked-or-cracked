@@ -1,5 +1,24 @@
 # Learning log (append after every episode's retro; newest first)
 
+## Ep4 full cut in ChatCut (29 Sep 2026, evening)
+1. "Too yellow" twice: the cause was HyperFrames' `--sdr` step, which skips the BT.2020 to BT.709 gamut conversion. Skin came out sallow (hue 24-27 deg vs 9-15 on his Ep3 upload) and the table came out mustard. Grading around it (saturation, warmth) cannot fix it. The fix was a 3D LUT fitted from HyperFrames' output to a correct HLG conversion of the same frames that keeps HyperFrames' brightness (colour error 0.026 to 0.004, same result on Part 1), then skin smoothing and a light curve. Files: Ep4 `02_graphics/hyperframes-part2/` (hf2ref.cube, graph_N5.txt, lutfit/). Measure against his last approved upload, not against "neutral".
+2. The opener follows the Ep3 v7 table, but window sizes come from the new take: in Part 1 his face reached x 728, so Paulo's window shrank to 270x480 at 752/762.
+3. Fill the top zone per stretch: tile the render at 0.1 s around every effect boundary so each stamp starts when the top clears and ends before the next effect. Stamps say his own words; never repeat a phrase.
+4. Pops: check the voice energy at every pop. Five landed on words and moved into the gaps. Whisper put "cracked" 0.35 s early, so the verdict pop was re-placed by energy. Silent 1-2 s holds in a HyperFrames edit need a fill (light clock tick during "hidden", a riser under the floating screens).
+5. Balance sections before the final gain. At 0 dB the sting was 8.6 LU hotter than his voice, so the sting and Paulo's audio went to -8.5 dB and the jingle pops to -17.5 dB. Result: hook -22.2 / sting -21.2 / Part 2 -21.3 LUFS, then one fixed gain to -14 with the latency-compensated limiter.
+6. ChatCut Desktop exported every MG correctly in one pass (no green matte). Test once per episode anyway.
+7. A word spliced from another day's take reads as "least natural word" to Gemini even after the vowel is rebuilt, yet it is transcribed right 9/9. Offer a 3 s pickup line for verdict words.
+8. The real stitch was a doubled consonant: the original "c" of "cooked" stayed in front of the spliced "cra", which carries its own k burst ("k-cracked"). Scan the junction with a 2 ms high-band (first-difference) trace, keep exactly one burst, and replace the other with the room floor. In a paired A/B with the clip order swapped, Gemini picked the fixed version 4/4. Single-clip ratings did not separate the two versions, so use paired tests.
+10. The opener needs Henry's intent line right after the creator's claim ("Well, I'm gonna try it out."), or the audience lacks context. Put it in the recording brief for every episode. When it is missing, take a whole phrase from an earlier take, not spliced words, and play it as a voice-over on a shot where his mouth is closed or covered. Ripple everything after it with startDeltaFrames, latest item first.
+9. Henry's v1 note: a stamp that shows for under about 1 s reads as a flicker ("too short, rather remove it"). Drop stamps under 1.2 s together with their scoreboard flash and pop, even if that leaves the top empty for a moment.
+
+## Ep4 edit, Paulo Shimas method in HyperFrames (29 Sep 2026)
+1. Henry's v1 notes: follow the reference reel exactly for show-off effects (Paulo's layers = title in scene, glass panes, Layers panel, cursor clicks the eye, HIDDEN tag). A fade-out inside a small pane does not read as "disappear".
+2. "Put me on a frame on the right and on the left" meant two frames: him talking right, a silent clone left. Unused retakes are the clone source; cut them out and mirror.
+3. His CTA is always the series comment stamp (paper-stamp-v4 look), in every edit tool.
+4. Colour outside ChatCut: HyperFrames' HDR to SDR comes out flatter and brighter. Rebuild the skin shader in FFmpeg (YCbCr mask + bilateral 0.55) and grade to his Ep3 look by measurement (face luma ~0.50, face saturation ~0.46), footage only.
+5. Audio: Adobe voice must be cut through the same video+audio concat as the picture (frame padding), or it drifts up to 65 ms. FFmpeg loudnorm in dynamic mode shifts the last 3 s; use fixed gain + alimiter latency=true.
+
 ## Ep3 A/B test and pivots (28 Sep 2026, evening)
 1. Henry's format for a tool claim is now a same-brief A/B: his way (one prompt, self-approved gates) vs my way (plan every shot, pick the voice from samples, approve stills, animate only what moves), same topic, same style lock, same Gemini prompt for both cuts. Receipts are time, money, gates, Gemini score, and whether the style lock held.
 2. Judge with an identical Gemini prompt or the scores are not comparable. Gemini is harsh on any AI motion; use it for relative ranking and facts, and let Henry judge the absolute.

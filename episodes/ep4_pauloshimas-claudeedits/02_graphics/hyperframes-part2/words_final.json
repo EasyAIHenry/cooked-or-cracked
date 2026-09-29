@@ -1,0 +1,662 @@
+[
+{
+"text": "Look",
+"start": 0.3,
+"end": 0.56
+},
+{
+"text": "into",
+"start": 0.48,
+"end": 0.87
+},
+{
+"text": "my",
+"start": 0.79,
+"end": 1.03
+},
+{
+"text": "palm.",
+"start": 0.95,
+"end": 1.23
+},
+{
+"text": "here's",
+"start": 1.63,
+"end": 1.94
+},
+{
+"text": "the",
+"start": 1.87,
+"end": 2.16
+},
+{
+"text": "Claude",
+"start": 2.08,
+"end": 2.58
+},
+{
+"text": "logo.",
+"start": 2.5,
+"end": 2.68
+},
+{
+"text": "I'm",
+"start": 2.91,
+"end": 3.09
+},
+{
+"text": "gonna",
+"start": 3.01,
+"end": 3.29
+},
+{
+"text": "flick",
+"start": 3.21,
+"end": 3.45
+},
+{
+"text": "it",
+"start": 3.37,
+"end": 3.53
+},
+{
+"text": "to",
+"start": 3.45,
+"end": 3.61
+},
+{
+"text": "you.",
+"start": 3.53,
+"end": 3.77
+},
+{
+"text": "Nice!",
+"start": 5.01,
+"end": 5.61
+},
+{
+"text": "Okay,",
+"start": 5.9,
+"end": 6.2
+},
+{
+"text": "let's",
+"start": 6.12,
+"end": 6.29
+},
+{
+"text": "make",
+"start": 6.45,
+"end": 6.74
+},
+{
+"text": "it",
+"start": 6.66,
+"end": 6.87
+},
+{
+"text": "harder.",
+"start": 7.16,
+"end": 7.27
+},
+{
+"text": "Split",
+"start": 7.24,
+"end": 7.61
+},
+{
+"text": "me",
+"start": 7.53,
+"end": 7.67
+},
+{
+"text": "into",
+"start": 7.89,
+"end": 8.14
+},
+{
+"text": "three",
+"start": 8.06,
+"end": 8.53
+},
+{
+"text": "screens.",
+"start": 8.45,
+"end": 9.18
+},
+{
+"text": "one",
+"start": 9.32,
+"end": 9.55
+},
+{
+"text": "with",
+"start": 9.4,
+"end": 9.6
+},
+{
+"text": "the",
+"start": 9.52,
+"end": 9.77
+},
+{
+"text": "background,",
+"start": 9.69,
+"end": 10.33
+},
+{
+"text": "me,",
+"start": 10.54,
+"end": 10.89
+},
+{
+"text": "and",
+"start": 10.92,
+"end": 11.04
+},
+{
+"text": "then",
+"start": 11.0,
+"end": 11.17
+},
+{
+"text": "the",
+"start": 11.15,
+"end": 11.32
+},
+{
+"text": "text.",
+"start": 11.24,
+"end": 11.53
+},
+{
+"text": "Alright,",
+"start": 11.96,
+"end": 12.52
+},
+{
+"text": "now",
+"start": 12.44,
+"end": 12.73
+},
+{
+"text": "hide",
+"start": 12.65,
+"end": 12.79
+},
+{
+"text": "my",
+"start": 12.85,
+"end": 13.15
+},
+{
+"text": "layers.",
+"start": 13.25,
+"end": 13.53
+},
+{
+"text": "Okay,",
+"start": 14.92,
+"end": 15.15
+},
+{
+"text": "bring",
+"start": 15.0,
+"end": 15.21
+},
+{
+"text": "me",
+"start": 15.13,
+"end": 15.34
+},
+{
+"text": "back.",
+"start": 15.44,
+"end": 16.55
+},
+{
+"text": "Put",
+"start": 16.64,
+"end": 16.76
+},
+{
+"text": "me",
+"start": 16.72,
+"end": 16.9
+},
+{
+"text": "on",
+"start": 16.82,
+"end": 17.04
+},
+{
+"text": "a",
+"start": 16.96,
+"end": 17.11
+},
+{
+"text": "frame",
+"start": 17.03,
+"end": 17.46
+},
+{
+"text": "on",
+"start": 17.38,
+"end": 17.59
+},
+{
+"text": "the",
+"start": 17.51,
+"end": 17.82
+},
+{
+"text": "right,",
+"start": 18.3,
+"end": 18.53
+},
+{
+"text": "and",
+"start": 18.38,
+"end": 18.53
+},
+{
+"text": "on",
+"start": 18.46,
+"end": 18.57
+},
+{
+"text": "the",
+"start": 18.54,
+"end": 18.72
+},
+{
+"text": "left,",
+"start": 18.64,
+"end": 18.95
+},
+{
+"text": "and",
+"start": 19.02,
+"end": 19.24
+},
+{
+"text": "show",
+"start": 19.22,
+"end": 19.52
+},
+{
+"text": "how",
+"start": 19.44,
+"end": 19.72
+},
+{
+"text": "Claude",
+"start": 19.65,
+"end": 20.09
+},
+{
+"text": "edits",
+"start": 20.09,
+"end": 20.26
+},
+{
+"text": "a",
+"start": 20.42,
+"end": 20.56
+},
+{
+"text": "video.",
+"start": 20.66,
+"end": 21.18
+},
+{
+"text": "So",
+"start": 21.38,
+"end": 21.61
+},
+{
+"text": "it",
+"start": 21.46,
+"end": 21.59
+},
+{
+"text": "listens",
+"start": 21.51,
+"end": 22.16
+},
+{
+"text": "with",
+"start": 22.08,
+"end": 22.52
+},
+{
+"text": "Whisper,",
+"start": 22.63,
+"end": 23.21
+},
+{
+"text": "it",
+"start": 23.3,
+"end": 23.51
+},
+{
+"text": "looks",
+"start": 23.43,
+"end": 23.61
+},
+{
+"text": "with",
+"start": 23.92,
+"end": 24.13
+},
+{
+"text": "FFmpeg,",
+"start": 24.44,
+"end": 25.26
+},
+{
+"text": "and",
+"start": 25.34,
+"end": 25.5
+},
+{
+"text": "it",
+"start": 25.42,
+"end": 25.61
+},
+{
+"text": "builds",
+"start": 25.53,
+"end": 25.95
+},
+{
+"text": "with",
+"start": 26.0,
+"end": 26.17
+},
+{
+"text": "HyperFrames.",
+"start": 26.09,
+"end": 26.93
+},
+{
+"text": "Now",
+"start": 27.02,
+"end": 27.25
+},
+{
+"text": "back",
+"start": 27.1,
+"end": 27.3
+},
+{
+"text": "to",
+"start": 27.22,
+"end": 27.4
+},
+{
+"text": "the",
+"start": 27.32,
+"end": 27.56
+},
+{
+"text": "full",
+"start": 27.48,
+"end": 27.77
+},
+{
+"text": "screen.",
+"start": 27.69,
+"end": 28.21
+},
+{
+"text": "float",
+"start": 28.41,
+"end": 28.58
+},
+{
+"text": "my",
+"start": 28.5,
+"end": 28.69
+},
+{
+"text": "last",
+"start": 28.61,
+"end": 28.91
+},
+{
+"text": "three",
+"start": 28.83,
+"end": 29.19
+},
+{
+"text": "episodes.",
+"start": 29.11,
+"end": 29.65
+},
+{
+"text": "Nice!",
+"start": 33.21,
+"end": 34.01
+},
+{
+"text": "Last",
+"start": 34.13,
+"end": 34.36
+},
+{
+"text": "one.",
+"start": 34.28,
+"end": 34.71
+},
+{
+"text": "make",
+"start": 34.63,
+"end": 34.98
+},
+{
+"text": "me",
+"start": 34.9,
+"end": 35.12
+},
+{
+"text": "the",
+"start": 35.04,
+"end": 35.34
+},
+{
+"text": "star",
+"start": 35.46,
+"end": 35.62
+},
+{
+"text": "of",
+"start": 35.54,
+"end": 35.76
+},
+{
+"text": "a",
+"start": 35.68,
+"end": 35.83
+},
+{
+"text": "documentary.",
+"start": 35.75,
+"end": 36.78
+},
+{
+"text": "make",
+"start": 36.87,
+"end": 36.98
+},
+{
+"text": "it",
+"start": 36.95,
+"end": 37.07
+},
+{
+"text": "more",
+"start": 37.03,
+"end": 37.25
+},
+{
+"text": "dramatic.",
+"start": 37.17,
+"end": 37.71
+},
+{
+"text": "Now",
+"start": 38.93,
+"end": 38.99
+},
+{
+"text": "bring",
+"start": 38.99,
+"end": 39.22
+},
+{
+"text": "me",
+"start": 39.07,
+"end": 39.22
+},
+{
+"text": "back.",
+"start": 39.15,
+"end": 39.78
+},
+{
+"text": "Cool.",
+"start": 39.97,
+"end": 40.27
+},
+{
+"text": "that",
+"start": 40.19,
+"end": 40.52
+},
+{
+"text": "was",
+"start": 40.44,
+"end": 40.7
+},
+{
+"text": "totally",
+"start": 40.62,
+"end": 40.89
+},
+{
+"text": "awesome.",
+"start": 41.26,
+"end": 41.75
+},
+{
+"text": "I'd",
+"start": 41.83,
+"end": 42.13
+},
+{
+"text": "say",
+"start": 42.05,
+"end": 42.31
+},
+{
+"text": "that",
+"start": 42.23,
+"end": 42.54
+},
+{
+"text": "this",
+"start": 42.46,
+"end": 42.69
+},
+{
+"text": "guy",
+"start": 42.7,
+"end": 42.97
+},
+{
+"text": "has",
+"start": 42.89,
+"end": 43.22
+},
+{
+"text": "totally",
+"start": 43.27,
+"end": 43.71
+},
+{
+"text": "cooked",
+"start": 43.63,
+"end": 44.08
+},
+{
+"text": "it.",
+"start": 44.0,
+"end": 44.31
+},
+{
+"text": "Like",
+"start": 44.5,
+"end": 44.69
+},
+{
+"text": "what",
+"start": 44.61,
+"end": 44.92
+},
+{
+"text": "you",
+"start": 44.85,
+"end": 45.09
+},
+{
+"text": "see,",
+"start": 45.02,
+"end": 45.37
+},
+{
+"text": "comment",
+"start": 45.5,
+"end": 45.77
+},
+{
+"text": "down,",
+"start": 45.83,
+"end": 46.07
+},
+{
+"text": "EDIT,",
+"start": 46.0,
+"end": 46.39
+},
+{
+"text": "and",
+"start": 46.31,
+"end": 46.47
+},
+{
+"text": "I'll",
+"start": 46.52,
+"end": 46.74
+},
+{
+"text": "send",
+"start": 46.66,
+"end": 46.81
+},
+{
+"text": "you",
+"start": 46.86,
+"end": 47.1
+},
+{
+"text": "the",
+"start": 47.11,
+"end": 47.25
+},
+{
+"text": "workflow.",
+"start": 47.17,
+"end": 47.81
+}
+]

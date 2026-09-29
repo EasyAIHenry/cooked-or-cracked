@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8">
+<title>Let Claude edit your videos</title>
+<link rel="stylesheet" href="style.css"><link rel="stylesheet" href="v2.css"><link rel="stylesheet" href="guide.css"><link rel="stylesheet" href="ep4.css">
+</head><body>
+
+<!-- 1 COVER -->
+<section class="page cover">
+  <span class="pill">Cooked or Cracked</span>
+  <img class="hero" src="img/stills/b03.jpg" alt="The shot split into three glass layers with a Layers panel">
+  <div class="big">Let Claude <i>edit</i> your videos.</div>
+  <p class="sub">Film one take on your phone and say each effect out loud. Claude hears every word, cuts the pauses and builds each effect on the word you said it, with three free tools: HyperFrames, Whisper and FFmpeg. Tested on a real 2 min 50 s take: a 48 second edit, first cut in 43 minutes, no editing app.</p>
+
+  <div class="contents torn">
+    <div class="k">what is inside</div>
+    <ol>
+      <li><span>How it works, and set up once</span><span>p2</span></li>
+      <li><span>Film one take Claude can edit</span><span>p3</span></li>
+      <li><span>The blueprint: say this, get this</span><span>p4</span></li>
+      <li><span>Hand the take to Claude</span><span>p6</span></li>
+      <li><span>Check and fix</span><span>p7</span></li>
+      <li><span>Finish and post</span><span>p8</span></li>
+      <li><span>Prompt pack, in order</span><span>p9</span></li>
+    </ol>
+  </div>
+  <div class="stamps">
+    <div class="st torn">first cut<b>43 min</b></div>
+    <div class="st torn">final edit<b>48 s</b></div>
+    <div class="st torn">extra cost<b>US$0</b></div>
+  </div>
+
+  <p class="who">By Henry Chua. The method comes from @pauloshimas's free guide; this is the tested version, timed on 29 September 2026. Nothing here is sponsored.</p>
+  <div class="receipt torn">
+    <div class="hand">what you need</div>
+    <p style="margin:4px 0 0"><b>Claude Pro</b>, US$20 a month, or higher, for the Code tab in the Claude desktop app<br><b>HyperFrames, Whisper, FFmpeg</b>: free, Claude installs them<br><b>A phone</b> on a tripod<br><b>Mac or Windows</b><br><b>About an hour</b> for your first edit</p>
+  </div>
+</section>
+
+<!-- 2 HOW IT WORKS + SET UP -->
+<section class="page">
+  <div class="kick">how it works</div>
+  <h2>How Claude edits a video</h2>
+  <p class="lead" style="font-size:10pt">Claude reads text and looks at pictures, but it cannot play a video. Three free tools fill the gap. Whisper writes down every word you say with its time. FFmpeg pulls frames so Claude can see the shot, and it cuts the clip. HyperFrames lets Claude write the edit as a web page and render it to an MP4. You film and give notes; Claude does the editing.</p>
+  <div class="flow6">
+    <div class="box you"><i>1</i><img src="img/icons/videocamera-record-bold.svg">Film<small>you, one take, effects said out loud</small></div>
+    <div class="box"><i>2</i><img src="img/icons/microphone-bold.svg">Listen<small>Whisper: every word with its time</small></div>
+    <div class="box"><i>3</i><img src="img/icons/eye-bold.svg">Look<small>FFmpeg: one frame per second</small></div>
+    <div class="box"><i>4</i><img src="img/icons/scissors-bold.svg">Cut<small>FFmpeg: pauses and retakes out</small></div>
+    <div class="box"><i>5</i><img src="img/icons/magic-stick-3-bold.svg">Build<small>HyperFrames: each effect on its word</small></div>
+    <div class="box"><i>6</i><img src="img/icons/play-circle-bold.svg">Check<small>Claude renders and checks its frames</small></div>
+  </div>
+  <div class="tools4">
+    <div class="t"><span class="k">the editor</span><b>Claude Code</b>The Code tab in the Claude desktop app. Needs Claude Pro or higher. <a href="https://claude.com/pricing">claude.com/pricing</a></div>
+    <div class="t"><span class="k">the engine</span><b>HyperFrames</b>Free and open source, by HeyGen. Turns a web page into a video. <a href="https://github.com/heygen-com/hyperframes">github.com/heygen-com/hyperframes</a></div>
+    <div class="t"><span class="k">the ears</span><b>Whisper</b>Free speech to text, with a time for every word. <a href="https://github.com/ggml-org/whisper.cpp">github.com/ggml-org/whisper.cpp</a></div>
+    <div class="t"><span class="k">the eyes and scissors</span><b>FFmpeg</b>Free. Pulls frames, cuts clips, fixes sound. <a href="https://ffmpeg.org">ffmpeg.org</a></div>
+  </div>
+
+  <div class="stephead"><b>1</b><img src="img/icons/settings-bold.svg"><h3>Set up once</h3><span class="hand">about 15 minutes</span></div>
+  <div class="road tight">
+    <div class="st"><div class="dot">1</div><div class="t">Install the Claude desktop app from <a href="https://claude.com/download">claude.com/download</a> and sign in. The Code tab needs Claude Pro or higher.</div></div>
+    <div class="st"><div class="dot">2</div><div class="t">Make a folder on your desktop called <b>my-edit</b>. Everything for this video goes in it.</div></div>
+    <div class="st"><div class="dot">3</div><div class="t">Open the app, click <b>Code</b> at the top and pick the my-edit folder. The Code tab is a chat that can run tools on your computer.</div></div>
+    <div class="st"><div class="dot">4</div><div class="t">Paste <b>prompt 1</b> from page 9. Claude checks what you have, installs what is missing and asks before each install. Say yes.</div></div>
+    <div class="st"><div class="dot">5</div><div class="t">It ends with this check. Every tool you need shows a tick; a cross on an optional line is fine.</div></div>
+  </div>
+  <div class="term sm"><div class="bar"><i></i><i></i><i></i><span>npx hyperframes doctor</span></div><pre><span class="ok">✓</span> Version          0.8.91 (latest)
+<span class="ok">✓</span> Node.js          v24.15.0
+<span class="ok">✓</span> whisper-cpp      /opt/homebrew/bin/whisper-cli
+<span class="ok">✓</span> FFmpeg           ffmpeg 9.0.2
+<span class="ok">✓</span> Chrome           HyperFrames downloads its own
+<span class="c">✗ TTS (Kokoro)     not installed (optional)
+✗ Docker running   not running (optional)</span></pre></div>
+  <div class="fail"><b>If it stops.</b> Mac, "brew: command not found": open the Terminal app, paste the one line from <a href="https://brew.sh">brew.sh</a>, type your Mac password (nothing shows while you type), press Return, then tell Claude "done". Windows: click yes on each installer window. Then start a new Code session so the new tools are found.</div>
+  <div class="recline"><span class="rec">receipt</span> On the test Mac the check took 20 seconds and the first 6 second test render 35 seconds.</div>
+  <div class="foot"><span>Cooked or Cracked · Let Claude edit your videos</span><span>page 2</span></div>
+</section>
+
+<!-- 3 FILM -->
+<section class="page">
+  <div class="stephead" style="margin-top:0"><b>2</b><img src="img/icons/videocamera-record-bold.svg"><h3>Film one take Claude can edit</h3><span class="hand">about 10 minutes</span></div>
+  <p class="do" style="font-size:10pt">Claude can only edit what the camera caught. Five minutes of set-up here decides how clean your cutouts, captions and effects look. A phone is enough.</p>
+  <div class="twocol">
+    <div class="card"><h3>Set up the shot</h3><ul>
+      <li><b>Phone on a tripod</b>, vertical 9:16 for Reels. The shot never moves, so effects stay locked to you.</li>
+      <li><b>Light on your face</b>, and about 1 metre between you and the wall. A clean edge gives a clean cutout.</li>
+      <li><b>Quiet room</b>, microphone close to you. Whisper hears better, and so do people.</li>
+      <li><b>iPhone: turn HDR video off.</b> Settings, Camera, Record Video, HDR Video. HDR footage turns your skin yellow in the edit (page 7).</li>
+    </ul></div>
+    <div class="card"><h3>While you talk</h3><ul>
+      <li><b>One effect per sentence</b>, from the blueprint on pages 4 and 5, or your own.</li>
+      <li><b>Pause a second</b> after each request. The effect needs the room; Claude trims the rest.</li>
+      <li><b>Hold still where it lands</b>: an open palm for the logo, standing still for "hide".</li>
+      <li><b>Look where the effect will appear</b> and react to it. That is what sells it.</li>
+      <li><b>Say your call to action slowly.</b> It is the line that matters most.</li>
+    </ul></div>
+  </div>
+  <div class="platerow">
+    <div class="callout" style="font-size:9.6pt;margin:0"><b>Before you stop recording:</b> step out of the shot and film 2 seconds of the empty room. That clean plate is what Claude shows when it hides you or splits the scene into layers. The test take had none, so Claude had to paint the empty room with an image model; filming it takes 2 seconds and looks better.<br><br><b>Frame it like this:</b> head in the upper third, chest and hands in shot, the table edge low in the frame, the same framing for the whole take.</div>
+    <figure><img src="img/stills/shot.jpg" alt="The test shot"><span class="label" style="left:-6px;top:10px">shot never moves</span><span class="label" style="right:-6px;top:112px">1 m to the wall</span><figcaption>your take</figcaption></figure>
+    <figure><img src="img/stills/plate.jpg" alt="The empty room"><figcaption>2 s of empty room</figcaption></figure>
+  </div>
+
+  <h3 style="margin:10px 0 2px">Put these in the my-edit folder</h3>
+  <div class="infolder">
+    <div class="tile on"><img src="img/icons/videocamera-record-bold.svg"><div>take.mp4<small>your video, straight off the phone</small></div></div>
+    <div class="tile"><img src="img/icons/star-bold.svg"><div>logo<small>SVG or PNG, for the 3D logo</small></div></div>
+    <div class="tile"><img src="img/icons/video-library-bold.svg"><div>3 clips<small>past videos, for "float my episodes"</small></div></div>
+    <div class="tile"><img src="img/icons/music-note-bold.svg"><div>sounds<small>optional: music or effects you own</small></div></div>
+  </div>
+
+  <div class="prompt tight"><span class="who">you, to Claude, before the real take</span><span class="n">prompt 2</span><p>test.mp4 is a 5 second test of my setup. Pull 3 frames and tell me if my face is well lit, if I am far enough from the wall for a clean cutout, and if anything important is near the edges. Tell me exactly what to fix.</p></div>
+  <p class="small" style="margin:2px 0 6px">Optional, but it saves a reshoot: film 5 seconds, drop it in the folder as test.mp4, paste the prompt.</p>
+  <div class="recline"><span class="rec">receipt</span> The test take ran 2 min 50 s, filmed once on an iPhone with retakes left in. Claude kept the best take of each line.</div>
+  <div class="foot"><span>Cooked or Cracked · Let Claude edit your videos</span><span>page 3</span></div>
+</section>
+
+<!-- 4 BLUEPRINT 1 -->
+<section class="page">
+  <div class="kick">the blueprint</div>
+  <h2>Say this, get this</h2>
+  <p class="lead" style="font-size:10pt">Twelve lines from the test take, in order. Say them word for word, or swap in your own words. Claude finds each line in the transcript and builds the effect on that exact word. Every picture is a real frame from the edit.</p>
+  <div class="bp">
+    <div class="c"><img src="img/stills/b01.jpg"><div class="t"><span class="n">1</span><h4>A 3D logo on your palm</h4><div class="say"><b>say</b>"Look into my palm. Here's the Claude logo."</div><div class="gets"><b>you get</b> a zoom onto your open hand and a real 3D logo spinning on it.</div><div class="need">needs: your logo file, palm still for a second</div></div></div>
+    <div class="c"><img src="img/stills/b02.jpg"><div class="t"><span class="n">2</span><h4>Throw it at the lens</h4><div class="say"><b>say</b>"I'm gonna flick it to you."</div><div class="gets"><b>you get</b> the logo flying at the camera, a glass crack, a flash and a shake.</div><div class="need">needs: a flick of the hand toward the lens</div></div></div>
+    <div class="c"><img src="img/stills/b03.jpg"><div class="t"><span class="n">3</span><h4>Split into layers</h4><div class="say"><b>say</b>"Split me into three screens: the background, me, and then the text."</div><div class="gets"><b>you get</b> three glass panes and a Layers panel that lights up on each word.</div><div class="need">needs: the 2 second empty room</div></div></div>
+    <div class="c"><img src="img/stills/b04.jpg"><div class="t"><span class="n">4</span><h4>Hide yourself</h4><div class="say"><b>say</b>"Now hide my layers."</div><div class="gets"><b>you get</b> a cursor that clicks the eye icon, you vanish, a HIDDEN tag.</div><div class="need">needs: stand still for a second</div></div></div>
+    <div class="c"><img src="img/stills/b05.jpg"><div class="t"><span class="n">5</span><h4>Come back</h4><div class="say"><b>say</b>"Okay, bring me back."</div><div class="gets"><b>you get</b> a second click, you pop back in, then a zoom back to full screen.</div><div class="need">needs: a small shrug sells it</div></div></div>
+    <div class="c"><img src="img/stills/b06.jpg"><div class="t"><span class="n">6</span><h4>You, framed, plus a clone</h4><div class="say"><b>say</b>"Put me on a frame on the right, and on the left show how Claude edits a video."</div><div class="gets"><b>you get</b> you talking in a frame, a silent clone of you in the other, a title that builds.</div><div class="need">needs: nothing extra; Claude uses a spare retake for the clone</div></div></div>
+  </div>
+  <div class="foot"><span>Cooked or Cracked · Let Claude edit your videos</span><span>page 4</span></div>
+</section>
+
+<!-- 5 BLUEPRINT 2 -->
+<section class="page">
+  <div class="kick">the blueprint, continued</div>
+  <div class="bp" style="margin-top:4px">
+    <div class="c"><img src="img/stills/b07.jpg"><div class="t"><span class="n">7</span><h4>The steps, one by one</h4><div class="say"><b>say</b>"It listens with Whisper, it looks with FFmpeg, and it builds with HyperFrames."</div><div class="gets"><b>you get</b> one labelled chip per step, each on its word.</div><div class="need">needs: a pause between the three parts</div></div></div>
+    <div class="c"><img src="img/stills/b08.jpg"><div class="t"><span class="n">8</span><h4>Your videos, in 3D</h4><div class="say"><b>say</b>"Now back to the full screen. Float my last three episodes."</div><div class="gets"><b>you get</b> your clips playing on 3D screens around you.</div><div class="need">needs: 3 clips in the folder; look up at them</div></div></div>
+    <div class="c"><img src="img/stills/b09.jpg"><div class="t"><span class="n">9</span><h4>Documentary mode</h4><div class="say"><b>say</b>"Last one. Make me the star of a documentary."</div><div class="gets"><b>you get</b> a black and white cutout of you on yellow, with your name as the title.</div><div class="need">needs: your name spelled right in prompt 3</div></div></div>
+    <div class="c"><img src="img/stills/b10.jpg"><div class="t"><span class="n">10</span><h4>More dramatic</h4><div class="say"><b>say</b>"Make it more dramatic."</div><div class="gets"><b>you get</b> black and red, letterbox bars, grain, a slow push in and a boom.</div><div class="need">needs: a serious face</div></div></div>
+    <div class="c"><img src="img/stills/b11.jpg"><div class="t"><span class="n">11</span><h4>Back to normal</h4><div class="say"><b>say</b>"Now bring me back. That was totally awesome."</div><div class="gets"><b>you get</b> everything cleared, just you and the captions.</div><div class="need">needs: nothing</div></div></div>
+    <div class="c"><img src="img/stills/b12.jpg"><div class="t"><span class="n">12</span><h4>Your call to action</h4><div class="say"><b>say</b>"Comment EDIT and I'll send you the workflow."</div><div class="gets"><b>you get</b> a comment stamp with your keyword, popping in with a sound.</div><div class="need">needs: your keyword, said slowly</div></div></div>
+  </div>
+  <div class="note ruled" style="margin:6px 0 0;padding:7px 14px"><div class="hand mute">make it yours</div><p style="margin:2px 0 0;font-size:9.2pt">Keep the pattern and change the words: one request per sentence, then react. Any effect you can describe in one sentence and point to a word for, Claude can build. Start with 3 effects on your first video, not 12.</p></div>
+  <div class="foot"><span>Cooked or Cracked · Let Claude edit your videos</span><span>page 5</span></div>
+</section>
+
+<!-- 6 HAND IT TO CLAUDE -->
+<section class="page">
+  <div class="stephead" style="margin-top:0"><b>3</b><img src="img/icons/code-square-bold.svg"><h3>Hand the take to Claude</h3><span class="hand">about 45 minutes</span></div>
+  <p class="do" style="font-size:9.6pt">Put take.mp4 in the my-edit folder, open a new Code session on that folder, and paste the prompts from page 9 one at a time. Wait for each to finish before the next.</p>
+
+  <div class="substep"><div class="l">a</div><div class="x"><b class="h">Ears and eyes.</b> Prompt 3, with your names in it. Claude writes down every word with its time, then looks at a frame every second. Whisper first wrote "Claude" as "cloud"; the names in the prompt fix that.</div></div>
+  <div class="term sm" style="margin:4px 0 6px"><div class="bar"><i></i><i></i><i></i><span>take.words.json, what Claude reads</span></div><pre><span class="c">start  end    word</span>
+0.30   0.56   Look        0.48   0.87   into        0.79   1.03   my       0.95   1.23   palm.
+1.63   1.94   here's      1.87   2.16   the         <span class="y">2.08   2.58   Claude</span>   2.50   2.68   logo.</pre></div>
+  <div class="substep"><div class="l">b</div><div class="x"><b class="h">Plan first.</b> Prompt 4. Claude writes a beat sheet: the time, your words, what appears, where, and the sound. Changes on paper cost nothing. Say OK when it reads right.</div></div>
+  <div class="substep"><div class="l">c</div><div class="x"><b class="h">Cut.</b> Prompt 5. The pauses and retakes go. The test take went from 2 min 50 s to 48 seconds in 26 pieces, in about a minute.</div></div>
+  <div class="substep"><div class="l">d</div><div class="x"><b class="h">Build and watch.</b> Prompts 6 and 7. Claude builds every effect, adds captions, checks its own frames, then opens the edit in HyperFrames Studio in your browser. Press play.</div></div>
+
+  <div class="shotwrap">
+    <div class="browser"><div class="bar"><i></i><i></i><i></i><span>localhost · HyperFrames Studio (npx hyperframes preview)</span></div><img src="img/screens/studio.jpg" alt="HyperFrames Studio with the edit in the preview and its layers on the timeline"></div>
+    <span class="mark" style="left:38.5%;top:24%"></span><span class="label" style="left:52%;top:9%">the edit, live at 0:10</span>
+    <span class="mark" style="left:30%;top:77%"></span><span class="label" style="left:40%;top:86%">every layer Claude wrote, on a timeline</span>
+  </div>
+
+  <div class="substep" style="margin-top:8px"><div class="l">e</div><div class="x"><b class="h">Give notes like a director.</b> One change per message, always with the time. Say what you want to see, not how to code it. Real notes from the test:</div></div>
+  <div class="notes3">
+    <div class="nt"><i>0:04</i> The logo covers my mouth. Make it smaller and lower.</div>
+    <div class="nt"><i>0:14</i> Two captions overlap. Show one at a time.</div>
+    <div class="nt"><i>0:13</i> When I say hide, click the eye and make me vanish, no fade.</div>
+  </div>
+  <div class="recline"><span class="rec">receipt</span> First cut in 43 minutes from the raw file, including three rounds of fixes Claude found itself. A round of notes took 33 minutes. Each render about 1 minute.</div>
+  <div class="foot"><span>Cooked or Cracked · Let Claude edit your videos</span><span>page 6</span></div>
+</section>
+
+<!-- 7 CHECK AND FIX -->
+<section class="page">
+  <div class="stephead" style="margin-top:0"><b>4</b><img src="img/icons/bug-bold.svg"><h3>Check and fix</h3><span class="hand">about 10 minutes</span></div>
+  <p class="do" style="font-size:9.8pt">Watch the render on your phone with the sound on. These are the problems the test ran into, and the one-line fix for each. Paste the fix as it is.</p>
+
+  <div class="fixrow"><div class="ic2"><img src="img/icons/palette-bold.svg"></div><div class="x"><h4>Skin looks yellow and flat</h4><span class="why">Why: iPhone HDR video. HyperFrames' conversion to normal video skips a colour step, so skin turns yellow and wood turns mustard. Best fix: film with HDR off (page 3). Already filmed? Paste:</span><span class="fp">My footage is iPhone HDR (HLG). Convert it properly from BT.2020 to BT.709 before any grade, so my skin does not turn yellow. Then add light skin smoothing. Show me a before and after frame.</span></div>
+    <div class="ba2"><figure><img src="img/ba/before.jpg"><figcaption>before</figcaption></figure><figure><img src="img/ba/after.jpg"><figcaption>after</figcaption></figure></div></div>
+
+  <div class="fixrow"><div class="ic2"><img src="img/icons/scissors-bold.svg"></div><div class="x"><h4>A word is cut off at a join</h4><span class="why">Why: Whisper's word times can be a little early or late, so a cut clips the first or last sound. The test had five, like "Look" and "Nice". Paste:</span><span class="fp">Listen around every cut and widen any cut that clips the start or end of a word. Keep 60 ms of room. List each cut you changed.</span></div></div>
+
+  <div class="fixrow"><div class="ic2"><img src="img/icons/microphone-bold.svg"></div><div class="x"><h4>Your voice drifts from your lips</h4><span class="why">Why: the sound was cut separately from the picture. In the test it slid up to 65 ms by the end. Paste:</span><span class="fp">Cut the audio in the same step as the video, then check the sync at five points and tell me the offset.</span></div></div>
+
+  <div class="fixrow"><div class="ic2"><img src="img/icons/smartphone-bold.svg"></div><div class="x"><h4>Text sits under the Instagram buttons, or on your face</h4><span class="why">Why: the app covers the top, the bottom and the right edge. Paste:</span><span class="fp">Keep all text out of the top 220 px, the bottom 450 px and the right 150 px, and never cover my face. Snapshot the frames and check.</span></div></div>
+
+  <div class="fixrow"><div class="ic2"><img src="img/icons/eye-bold.svg"></div><div class="x"><h4>Claude says it is done, but it looks wrong</h4><span class="why">Why: it has not looked at that frame. Paste, with your time:</span><span class="fp">Snapshot the frame at 0:07 and check it yourself before you tell me it is fixed.</span></div></div>
+  <div class="recline"><span class="rec">receipt</span> Each fix took one prompt and one render of about a minute.</div>
+  <div class="foot"><span>Cooked or Cracked · Let Claude edit your videos</span><span>page 7</span></div>
+</section>
+
+<!-- 8 FINISH -->
+<section class="page">
+  <div class="stephead" style="margin-top:0"><b>5</b><img src="img/icons/rocket-2-bold.svg"><h3>Finish and post</h3><span class="hand">about 10 minutes</span></div>
+  <p class="do" style="font-size:9.6pt">Prompt 8 levels the sound to -14 LUFS, the loudness Reels plays at, listens around every cut, renders a 1080 by 1920 MP4 and checks its own frames one last time. Then watch it once on your phone, sound on, and read every caption. For a studio sound, run your voice through <a href="https://podcast.adobe.com/enhance">Adobe Podcast Enhance</a> (free tier) before the edit and ask Claude to use the enhanced audio.</p>
+  <div class="strip4">
+    <figure><img src="img/final/f1.jpg"><figcaption>The hook: the claim being tested, in a window over the phone.</figcaption></figure>
+    <figure><img src="img/final/f2.jpg"><figcaption>The series sting, with the best effects as a teaser.</figcaption></figure>
+    <figure><img src="img/final/f3.jpg"><figcaption>A stamp on each plain stretch, the scoreboard on the wall.</figcaption></figure>
+    <figure><img src="img/final/f4.jpg"><figcaption>The verdict, ticked, with confetti.</figcaption></figure>
+  </div>
+  <p class="caption" style="margin:2px 0 6px">The finished reel. Every effect, cut and caption is Claude's; the series template on top (opener, stamps, scoreboard) was added in ChatCut and is optional.</p>
+  <div class="rc4">
+    <div class="r"><div class="k">raw take to edit</div><div class="n nb" style="font-size:16.5pt">2:50 → 48 s</div><small>26 pieces, one take</small></div>
+    <div class="r"><div class="k">first cut</div><div class="n">43 min</div><small>with three rounds of self-found fixes</small></div>
+    <div class="r"><div class="k">each render</div><div class="n">~1 min</div><small>48 s of 1080 by 1920 video</small></div>
+    <div class="r"><div class="k">extra cost</div><div class="n">US$0</div><small>on top of a Claude plan; the tools are free</small></div>
+  </div>
+  <h2 style="font-size:13.5pt;margin:4px 0 3px">Who this is for, and who it is not for</h2>
+  <div class="two">
+    <div class="card" style="padding:6px 12px"><div class="k">use it if</div><p style="margin:2px 0 0;font-size:9pt">You film yourself talking and want cuts, captions and effects without learning an editor. You are happy to type what you want, like notes to an editor. Explainers, tutorials, talking-head Reels and product demos fit best.</p></div>
+    <div class="card" style="padding:6px 12px"><div class="k">skip it if</div><p style="margin:2px 0 0;font-size:9pt">Your video is fast and messy: quick hands and loose hair get soft cutout edges. You need an hour-long edit in one go (work in sections). You want new footage made from nothing; this edits what you filmed.</p></div>
+  </div>
+  <div class="note ruled" style="margin:7px 0 3px;padding:5px 12px">
+    <div class="hand mute">about the numbers in this guide</div>
+    <p style="margin:2px 0 0;font-size:8.2pt;line-height:1.3">Prices, tool versions and plan details were checked on 29 September 2026 on <a href="https://claude.com/pricing">claude.com/pricing</a> and <a href="https://github.com/heygen-com/hyperframes">github.com/heygen-com/hyperframes</a>. Anthropic and HeyGen change pricing, features and terms at their own discretion, sometimes weekly. Treat every figure here as a snapshot on that date, not a quote, and confirm on the linked page before you pay. I am not affiliated with either company and I do not earn from these links.</p>
+  </div>
+  <p style="margin:3px 0 0;font-size:9pt;display:flex;justify-content:space-between;align-items:baseline">If something here has changed by the time you read it, tell me in the comments and I will update the file. <span class="serif" style="font-size:14pt;white-space:nowrap;margin-left:8px">Henry Chua<span class="coral">.</span></span></p>
+  <div class="foot"><span>Cooked or Cracked · Let Claude edit your videos</span><span>page 8</span></div>
+</section>
+
+<!-- 9 PROMPT PACK -->
+<section class="page">
+  <div class="kick">copy, paste, in order</div>
+  <h2>The prompt pack</h2>
+  <p class="lead" style="font-size:9.8pt;margin-bottom:4px">Paste into the Code tab, one at a time, and wait for each to finish. Swap the [brackets] for yours.</p>
+  <table class="pp">
+    <tr><td class="s"><img src="img/icons/settings-bold.svg">1 · Set up<small>once, in any folder</small></td><td class="p">Set up this computer to edit videos with HyperFrames. Check for Node.js 22 or newer, FFmpeg, Python 3 and Whisper (whisper-cpp on Mac, faster-whisper on Windows). Install anything missing and ask me before each install. Then run <span class="nb">npx skills add heygen-com/hyperframes --all</span> and <span class="nb">npx hyperframes doctor</span>, fix anything required that it flags, and list what is installed with versions.</td></tr>
+    <tr><td class="s"><img src="img/icons/camera-bold.svg">2 · Check your shot<small>optional, test.mp4 in the folder</small></td><td class="p">test.mp4 is a 5 second test of my setup. Pull 3 frames and tell me if my face is well lit, if I am far enough from the wall for a clean cutout, and if anything important is near the edges. Tell me exactly what to fix.</td></tr>
+    <tr><td class="s"><img src="img/icons/microphone-bold.svg">3 · Ears and eyes<small>take.mp4 in the folder</small></td><td class="p">My video is take.mp4 in this folder. Transcribe it with Whisper, with the start and end time of every word, and save it as take.words.json. Then pull one frame per second with FFmpeg and look at them. Tell me what I say, when, and what is in the shot. Spell these names right: [your name], [your brand], Claude, HyperFrames, Whisper, FFmpeg.</td></tr>
+    <tr><td class="s"><img src="img/icons/notebook-bold.svg">4 · Plan first<small>read it, then say OK</small></td><td class="p">Before you build anything, write a beat sheet: start and end time, my exact words, what appears on screen, where it sits, and the sound. Vertical 9:16 for Reels. Keep text out of the top 220 px, the bottom 450 px and the right 150 px, and never cover my face. Wait for my OK.</td></tr>
+    <tr><td class="s"><img src="img/icons/scissors-bold.svg">5 · Cut<small>pauses and retakes out</small></td><td class="p">Cut the pauses and retakes with FFmpeg. Keep full sentences and the best take of each line. Never cut inside a word: leave 0.3 s after each sentence and 60 ms of room at every cut. Cut the audio in the same step as the video. Tell me the new length.</td></tr>
+    <tr><td class="s"><img src="img/icons/magic-stick-3-bold.svg">6 · Build<small>every effect on its word</small></td><td class="p">Build the edit in HyperFrames from the beat sheet. Start every effect on the word where I asked for it. Use <span class="nb">npx hyperframes remove-background</span> for a cutout of me, and the empty room at the end of my take as the background. Add a sound effect to each animation, quieter than my voice. Snapshot your own frames and fix what looks wrong, then open the preview.</td></tr>
+    <tr><td class="s"><img src="img/icons/document-text-bold.svg">7 · Captions<small>after the build</small></td><td class="p">Add captions from the transcript: 2 to 3 words at a time, bold white with a dark outline, the key word of each sentence in orange, at about 65% of the screen height. One caption on screen at a time.</td></tr>
+    <tr><td class="s"><img src="img/icons/rocket-2-bold.svg">8 · Finish<small>sound, render, last check</small></td><td class="p">Level the sound to -14 LUFS with peaks under -1 dB. Listen around every cut and fix any clipped word. Render a 1080 by 1920 MP4, then pull a frame every half second from the render and check the sync, the captions and that nothing covers my face. Tell me what you fixed.</td></tr>
+  </table>
+  <p class="small" style="margin:4px 0 0">The fixes for yellow skin, clipped words, drifting sound and hidden text are on page 7. Notes during the edit: one change per message, always with the time.</p>
+  <div class="foot"><span>Cooked or Cracked · Let Claude edit your videos</span><span>page 9</span></div>
+</section>
+</body></html>
