@@ -1,6 +1,6 @@
 # Ep4 captions and ManyChat (29 Sep 2026)
 
-Keyword: EDIT (the word said on camera and on the end stamp). Post: `05_cuts/UPLOAD-THIS-ep4-v6.mp4`.
+Keyword: EDIT (the word said on camera and on the end stamp). Post: `05_cuts/UPLOAD-THIS-ep4-v7.mp4`.
 
 ## Caption (CHOSEN 29 Sep, v3: written for reach, verdict kept in the video)
 Comment "EDIT" and I'll send you the full workflow.
