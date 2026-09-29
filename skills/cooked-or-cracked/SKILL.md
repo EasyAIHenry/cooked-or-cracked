@@ -57,8 +57,8 @@ Load `henry-scrapbook-reel` and build to its current format (`references/format-
 5. Composite with the light chain in Ep3 `05_cuts/composite-ep3-v8.sh`: the grade, then highpass 80, -2 dB at 250 Hz, +3.5 dB at 3.2 kHz, +3 dB shelf at 5 kHz, 2:1 compression, limiter, two-pass loudnorm -14 LUFS with true peak -2 dB. Result clips about -6 dB inside their windows. Adobe's raw output reads a little muffled; the presence lift is what fixed it (Gemini blind test, twice).
 
 **Deliver to Henry's phone (every final cut):**
-- Copy the final into the synced Drive: `~/Library/CloudStorage/GoogleDrive-henry@tristeps.co/My Drive/Cooked or Cracked - to post/Ep<N>-<Topic>-FINAL-v<x>.mp4`. Henry downloads it in the Google Drive app (henry@tristeps.co account). It syncs in about a minute.
-- Also send a phone preview in chat with SendUserFile: Remote Control only takes files under 30 MB, so two-pass encode at about 2.3 Mbps video + 192k audio (a 90 s reel is about 28 MB). Retry once if the upload errors.
+- Send a phone copy in chat with SendUserFile: Remote Control only takes files under 30 MB, so two-pass encode at about 2.3 Mbps video + 192k audio (a 90 s reel is about 28 MB). Retry once if the upload errors. Henry saves it from the chat (Share, Save Video) and posts from his phone. This quality is fine for Reels.
+- Never put Cooked or Cracked files in the synced Google Drive on this Mac (`GoogleDrive-henry@tristeps.co`): that is Henry's work account. The series lives on his personal Gmail Drive, reached only through Claude in Chrome.
 
 ### 7. Captions and guide (20 min)
 - `01_scripts/ig-captions-ep<N>.md`: three captions, first line under 90 characters, keyword gate, hashtags, posting hour, pinned comment with the test date.
