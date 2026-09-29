@@ -18,7 +18,7 @@ sync_dir() { # src dst
     "$1/" "$2/"
 }
 
-for s in cooked-or-cracked henry-scrapbook-reel creator-audit henry-guide-pdf; do
+for s in cooked-or-cracked henry-scrapbook-reel creator-audit henry-guide-pdf adobe-podcast-enhance; do
   [ -d "$SK/$s" ] && sync_dir "$SK/$s" "$REPO/skills/$s"
 done
 # small sound cues are useful to keep (under 1 MB)

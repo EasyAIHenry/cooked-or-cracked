@@ -47,7 +47,7 @@ Write `01_scripts/script-ep<N>.md`: a scorecard to fill after the test, then a b
 - New supers per episode: keep the template (pill, sting title, scoreboard, paper stamps, table, confetti, captions) and design 3 to 6 new supers that match what Henry will say. List them with props, as in `references/supers-library.md`, and add them to that library after the edit.
 
 ### 6. Edit (1 h target)
-Load `henry-scrapbook-reel` and build to its current format (`references/format-ep3-v7.md`, approved 29 Sep 2026). After the speech cut, run `scripts/join_audit.py` and fix every flagged join (transcript word times drift), then do one unprimed verbatim listen of the render; see the Ep2 pass 1 entry in the learning log. Sentence breaks about 0.3 s. Build the new MG assets first from the supers list. Deliver `05_cuts/UPLOAD-THIS-ep<N>-v<x>.mp4`.
+Voice cleanup runs through the `adobe-podcast-enhance` skill (steps below). Load `henry-scrapbook-reel` and build to its current format (`references/format-ep3-v7.md`, approved 29 Sep 2026). After the speech cut, run `scripts/join_audit.py` and fix every flagged join (transcript word times drift), then do one unprimed verbatim listen of the render; see the Ep2 pass 1 entry in the learning log. Sentence breaks about 0.3 s. Build the new MG assets first from the supers list. Deliver `05_cuts/UPLOAD-THIS-ep<N>-v<x>.mp4`.
 
 **Voice cleanup with Adobe Podcast Enhance (every episode, after the cut is locked):**
 1. Make the whole take's voice a mono MP3 under 10 MB so it can go through the browser upload: `ffmpeg -i <take>.MP4 -vn -ac 1 -ar 48000 -c:a libmp3lame -b:a 160k 04_raw-footage/adobe-enhance/<take>-voice.mp3` (a 7 min take is about 8.5 MB). Use the full take, not the cut, so every timestamp stays the same.
