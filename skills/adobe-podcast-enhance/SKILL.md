@@ -51,5 +51,5 @@ Do not add denoise or voice isolation on top; Adobe already did that, and stacki
 
 ## Rules
 - Always ask before the Download click. The upload itself is part of the request, so no extra ask is needed for it.
-- Never put Henry's series files in the synced Google Drive on this Mac (`GoogleDrive-henry@tristeps.co`). That is his work account.
+- Never put Henry's series files in a Google Drive folder synced on this Mac (`~/Library/CloudStorage/GoogleDrive-*`). That is his work account.
 - Keep the prep MP3, the Adobe MP3 and the WAV together in `04_raw-footage/adobe-enhance/` (or `adobe-enhance/` next to the source). Adobe deletes its copy after 10 days.

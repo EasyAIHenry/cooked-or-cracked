@@ -58,7 +58,7 @@ Voice cleanup runs through the `adobe-podcast-enhance` skill (steps below). Load
 
 **Deliver to Henry's phone (every final cut):**
 - Send a phone copy in chat with SendUserFile: Remote Control only takes files under 30 MB, so two-pass encode at about 2.3 Mbps video + 192k audio (a 90 s reel is about 28 MB). Retry once if the upload errors. Henry saves it from the chat (Share, Save Video) and posts from his phone. This quality is fine for Reels.
-- Never put Cooked or Cracked files in the synced Google Drive on this Mac (`GoogleDrive-henry@tristeps.co`): that is Henry's work account. The series lives on his personal Gmail Drive, reached only through Claude in Chrome.
+- Never put Cooked or Cracked files in a Google Drive folder synced on this Mac (`~/Library/CloudStorage/GoogleDrive-*`): that is Henry's work account. The series lives on his personal Gmail Drive, reached only through Claude in Chrome.
 
 ### 7. Captions and guide (20 min)
 - `01_scripts/ig-captions-ep<N>.md`: one concise caption written for reach. Line 1 is the keyword gate, under 90 characters. Then what happens, in the words people search for, a no-spoiler line ("The verdict is at the end") and a share prompt to a named friend. End with 3 to 5 on-topic hashtags. Never write "Cooked or cracked?" and never give the verdict in the caption (Henry, 29 Sep 2026). Also give the posting hour and a pinned comment with the test date and any honesty notes.
