@@ -5,7 +5,7 @@ Henry: "Oh my god, I love it. This is perfect." Build every new episode to this 
 ## Running order (about 1:30)
 | Beat | Frames (Ep3) | Picture | Top zone | Under the face | Sound |
 |---|---|---|---|---|---|
-| Hook | 0-131 | Henry muted, the reviewed creator's own hook in a 380x676 window right (628/790) with HIS audio at -3 dB | Pill "Cooked or Cracked?" 560x120 at 260/330 | | pop |
+| Hook | 0-131 | Henry muted, the reviewed creator's busiest motion-graphics moment (one whole ~4 s sentence, not his talking hook line; Henry, 30 Sep) in a 380x676 window right (628/790) with HIS audio at -3 dB | Pill "Cooked or Cracked?" 560x120 at 260/330 | | pop |
 | Sting | 131-221 (90 f) | Henry silent hold (a stretch where he is quiet, typing is fine) | Jingle title 850x340 at 115/180, holds (asset duration 100 s) | Best-of teaser of the winning result, 460x383 at 310/1010, static landscape frame 484x407 at 298/998; topic stamp 520x208 at 280/1400 pops at frame 40 | sting v3, pops on the word beats 6/21/28 |
 | Install / setup | next | Henry | loader overlay (bar to 100 %) | | pop |
 | "What we are testing" | 3-4 s | "let's see what it can do" + "create an informational video" | stamp testing / INFO VIDEO | | pop |
