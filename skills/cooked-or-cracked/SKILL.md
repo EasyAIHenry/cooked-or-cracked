@@ -47,11 +47,22 @@ Write `01_scripts/script-ep<N>.md`: a scorecard to fill after the test, then a b
 - New supers per episode: keep the template (pill, sting title, scoreboard, paper stamps, table, confetti, captions) and design 3 to 6 new supers that match what Henry will say. List them with props, as in `references/supers-library.md`, and add them to that library after the edit.
 
 ### 6. Edit (1 h target)
-Load `henry-scrapbook-reel` and run its passes in order. After the speech cut, run `scripts/join_audit.py` and fix every flagged join (transcript word times drift), then do one unprimed verbatim listen of the render; see the Ep2 pass 1 entry in the learning log. Sentence breaks about 0.3 s. Build the new MG assets first from the supers list. Export by the v8 rule (single export + captions band). Deliver `05_cuts/UPLOAD-THIS-ep<N>-v<x>.mp4`.
+Load `henry-scrapbook-reel` and build to its current format (`references/format-ep3-v7.md`, approved 29 Sep 2026). After the speech cut, run `scripts/join_audit.py` and fix every flagged join (transcript word times drift), then do one unprimed verbatim listen of the render; see the Ep2 pass 1 entry in the learning log. Sentence breaks about 0.3 s. Build the new MG assets first from the supers list. Deliver `05_cuts/UPLOAD-THIS-ep<N>-v<x>.mp4`.
+
+**Voice cleanup with Adobe Podcast Enhance (every episode, after the cut is locked):**
+1. Make the whole take's voice a mono MP3 under 10 MB so it can go through the browser upload: `ffmpeg -i <take>.MP4 -vn -ac 1 -ar 48000 -c:a libmp3lame -b:a 160k 04_raw-footage/adobe-enhance/<take>-voice.mp3` (a 7 min take is about 8.5 MB). Use the full take, not the cut, so every timestamp stays the same.
+2. Claude in Chrome: open podcast.adobe.com/en/enhance (Henry is signed in), `find` the "Choose files" file input, `file_upload` the MP3. Wait for "Enhancing speech" to finish (about 2 min for 7 min). Defaults: Enhance v2, speech 50, music 10, background 10.
+3. Ask Henry before clicking Download (the rules require it), then move the MP3 from ~/Downloads into `04_raw-footage/adobe-enhance/` and convert to WAV. Free tier returns 64 kbps mono MP3; the timing matches the take to the millisecond (check by cross-correlation at 3 or 4 points).
+4. In ChatCut: push the WAV, create an audio track "VOICE — Adobe Enhanced", add one audio item per V1 speech item with the same startFrame, sourceIn and durationFrames, and mute the V1 speech items (they go to -60 dB).
+5. Composite with the light chain in Ep3 `05_cuts/composite-ep3-v8.sh`: the grade, then highpass 80, -2 dB at 250 Hz, +3.5 dB at 3.2 kHz, +3 dB shelf at 5 kHz, 2:1 compression, limiter, two-pass loudnorm -14 LUFS with true peak -2 dB. Result clips about -6 dB inside their windows. Adobe's raw output reads a little muffled; the presence lift is what fixed it (Gemini blind test, twice).
+
+**Deliver to Henry's phone (every final cut):**
+- Copy the final into the synced Drive: `~/Library/CloudStorage/GoogleDrive-henry@tristeps.co/My Drive/Cooked or Cracked - to post/Ep<N>-<Topic>-FINAL-v<x>.mp4`. Henry downloads it in the Google Drive app (henry@tristeps.co account). It syncs in about a minute.
+- Also send a phone preview in chat with SendUserFile: Remote Control only takes files under 30 MB, so two-pass encode at about 2.3 Mbps video + 192k audio (a 90 s reel is about 28 MB). Retry once if the upload errors.
 
 ### 7. Captions and guide (20 min)
 - `01_scripts/ig-captions-ep<N>.md`: three captions, first line under 90 characters, keyword gate, hashtags, posting hour, pinned comment with the test date.
-- Lead magnet with `henry-guide-pdf` into `08_guide/`: one page is enough (install order, the prompt, the scorecard). Henry uploads to Drive himself.
+- Lead magnet with `henry-guide-pdf` into `08_guide/`: a 3 page guide plus a 2 page worksheet at most (Ep3 is the model: steps with receipts, a picture storyboard, the prompt pack). Run two fresh-reader review rounds, then upload to the Drive folder Henry names via Claude in Chrome (see `henry-guide-pdf` for the file-input method). Switch the folder to Viewer before he shares it.
 
 ### 8. Retro (after 48 h of insights)
 Henry sends screenshots of Reel insights. Write `06_research/ep<N>-insights-retro.md`: the numbers table, what they mean, what changes next episode, numbers to beat. Then append a dated entry to `references/learning-log.md` and update this SKILL.md if a rule changed. Update the GitHub repo with `sync.sh` (see `references/github.md`).
