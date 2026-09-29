@@ -61,8 +61,9 @@ Voice cleanup runs through the `adobe-podcast-enhance` skill (steps below). Load
 - Never put Cooked or Cracked files in the synced Google Drive on this Mac (`GoogleDrive-henry@tristeps.co`): that is Henry's work account. The series lives on his personal Gmail Drive, reached only through Claude in Chrome.
 
 ### 7. Captions and guide (20 min)
-- `01_scripts/ig-captions-ep<N>.md`: three captions, first line under 90 characters, keyword gate, hashtags, posting hour, pinned comment with the test date.
+- `01_scripts/ig-captions-ep<N>.md`: one concise caption written for reach. Line 1 is the keyword gate, under 90 characters. Then what happens, in the words people search for, a no-spoiler line ("The verdict is at the end") and a share prompt to a named friend. End with 3 to 5 on-topic hashtags. Never write "Cooked or cracked?" and never give the verdict in the caption (Henry, 29 Sep 2026). Also give the posting hour and a pinned comment with the test date and any honesty notes.
 - Lead magnet with `henry-guide-pdf` into `08_guide/`: a 3 page guide plus a 2 page worksheet at most (Ep3 is the model: steps with receipts, a picture storyboard, the prompt pack). Run two fresh-reader review rounds, then upload to the Drive folder Henry names via Claude in Chrome (see `henry-guide-pdf` for the file-input method). Switch the folder to Viewer before he shares it.
+- ManyChat: the Quick Automation "Auto-DM links from comments", filled like Ep4 (`01_scripts/ig-captions-ep4.md`): the specific reel, the keyword, 3 public replies (one points to message requests), opening DM on with a button, follow check on, email off, a link DM that says which page to start on, and a follow-up that asks what to test next. Link the PDF file itself, not the folder, and confirm it opens without signing in.
 
 ### 8. Retro (after 48 h of insights)
 Henry sends screenshots of Reel insights. Write `06_research/ep<N>-insights-retro.md`: the numbers table, what they mean, what changes next episode, numbers to beat. Then append a dated entry to `references/learning-log.md` and update this SKILL.md if a rule changed. Update the GitHub repo with `sync.sh` (see `references/github.md`).
