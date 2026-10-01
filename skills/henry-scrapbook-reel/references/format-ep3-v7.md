@@ -5,7 +5,7 @@ Henry: "Oh my god, I love it. This is perfect." Build every new episode to this 
 ## Running order (about 1:30)
 | Beat | Frames (Ep3) | Picture | Top zone | Under the face | Sound |
 |---|---|---|---|---|---|
-| Hook | 0-131 | Henry muted, the reviewed creator's busiest motion-graphics moment (one whole ~4 s sentence, not his talking hook line; Henry, 30 Sep) in a 380x676 window right (628/790) with HIS audio at -3 dB | Pill "Cooked or Cracked?" 560x120 at 260/330 | | pop |
+| Hook | 0-115 | (v9, 1 Oct) HENRY'S OWN claim line from frame one ("One repository on GitHub that does from pre to post production"), the reviewed creator's reel MUTED in a 380x676 window right (628/790), starting on its busiest visual | Pill "Cooked or Cracked?" 560x120 at 260/330 | | pop |
 | Sting | 131-221 (90 f) | Henry silent hold (a stretch where he is quiet, typing is fine) | Jingle title 850x340 at 115/180, holds (asset duration 100 s) | Best-of teaser of the winning result, 460x383 at 310/1010, static landscape frame 484x407 at 298/998; topic stamp 520x208 at 280/1400 pops at frame 40 | sting v3, pops on the word beats 6/21/28 |
 | Install / setup | next | Henry | loader overlay (bar to 100 %) | | pop |
 | "What we are testing" | 3-4 s | "let's see what it can do" + "create an informational video" | stamp testing / INFO VIDEO | | pop |
@@ -18,6 +18,7 @@ Henry: "Oh my god, I love it. This is perfect." Build every new episode to this 
 | Styles | 10 s | Henry | styles strip: five cards, paper cursor hovers with a glow, click on the pick, others go greyscale | the picked card grows in 600x470 at 240/975 | click + pop |
 | My result | 3.6 s | FULL FRAME with its narration, -7 dB | nothing | nothing | scoreboard OFF |
 | Reaction | 8.6 s | Henry, my clip muted in the right window | narrow stamp my result / UNDER 30 MIN from the first frame back | | pop |
+| Real use | 7.5 s | Henry, my clip still muted in the right window | stamp how I'd use it / WEEKLY CONTENT on the word "week" | YouTube + Instagram paper cards 720x368 at 180/985 pop on each platform name | pop each |
 | Price | 5 s | Henry | price tags 750x285 at 165/225 on the spoken prices | confetti full frame at the second tag | clicks, cash register |
 | Verdict | 2.5 s | Henry | stamp verdict / COOKED (accent) | | scoreboard tick, pop |
 | Tips | 7 s | Henry | five icon chips in HIS order: RESEARCH, SCRIPT, CUT, ANIMATE, VOICE, banner "5 steps, one harness" | | pop |

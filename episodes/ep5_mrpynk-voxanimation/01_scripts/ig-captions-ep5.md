@@ -2,12 +2,12 @@
 
 Keyword: AMELIA (said on camera and on the end stamp). Post: `05_cuts/ep5-pass6-v2.mp4` (1080p master) or the latest approved pass.
 
-## Caption (v1, written for reach; verdict stays in the video)
-Comment "AMELIA" and I'll send you the full workflow, free.
+## Caption (FINAL v3, 1 Oct 2026, for the pass-10 cut)
+Comment "AMELIA" and I'll send you the skill and the full workflow, free.
 
 One Claude skill wrote the script, picked the look and wrote every prompt. Higgsfield made six clips with Seedance 2.5. Claude recorded the narrator and cut the video itself.
 
-A Vox-style motion graphics explainer on Amelia Earhart's last flight. 60 seconds. 30 minutes. Under US$15 of credits.
+A Vox-style motion graphics explainer on Amelia Earhart's last flight. 60 seconds of video. 30 minutes of work. Under US$15 of credits.
 
 The verdict is at the end.
 
@@ -16,20 +16,20 @@ Send this to the friend who still thinks explainer videos take a week.
 #ClaudeCode #AIVideo #MotionGraphics #Higgsfield #AmeliaEarhart
 
 Why each line is there:
-- Line 1 (62 characters): the comment gate above the fold. Comments on the keyword feed the ManyChat flow and count as engagement.
-- Lines 2 and 3: what happens, in the words people search for. Instagram search reads captions: Claude skill, Higgsfield, Seedance 2.5, Vox-style, motion graphics explainer, Amelia Earhart. The Earhart name also catches the people searching the October expedition news.
-- "Under US$15" is what the test cost on Henry's legacy plan; the pinned comment gives today's price.
-- "The verdict is at the end": no spoiler, a reason to watch to the last seconds.
+- Line 1 (73 characters, under the 90 limit): the comment gate above the fold, now promising the skill itself, which is a stronger reason to comment than a guide alone.
+- Lines 2 and 3: what happens, in the words people search for. Instagram search reads captions: Claude skill, Higgsfield, Seedance 2.5, Vox-style, motion graphics explainer, Amelia Earhart. The Earhart name also catches people searching the October expedition news.
+- "The verdict is at the end": no spoiler, a reason to watch to the last seconds. Nothing in the caption says cooked or cracked.
 - The share line names a friend. Sends per reach is the signal Instagram weights most for reaching non-followers.
 - 5 hashtags, all on topic. AmeliaEarhart rides the news cycle (the expedition sails 7 October 2026).
+- "Under US$15" is what the test cost on Henry's plan; the guide's last page gives today's price and the free way to try.
 
-Rules kept: no "Cooked or cracked?", no verdict, no hype words, no em dashes, no exclamation marks (Henry, 29 Sep 2026).
+Rules kept: no "Cooked or cracked?", no verdict, no hype words, no em dashes, no exclamation marks, no other creator named.
 
 ## Shorter option
-Comment "AMELIA" and I'll send you the workflow: the free skill, the Higgsfield settings, the costs and the one ask I typed.
+Comment "AMELIA" and I'll send you the skill: one prompt, six clips, a finished Vox-style explainer in 30 minutes.
 
 ## Pinned comment
-Tested 30 September 2026 on my own Mac: Claude Max (Pro does the same job), the free Vox Animation skill by @mr.pynk, Higgsfield Ultimate with Seedance 2.5 at 720p, edge-tts for the narrator. The explainer itself is 100% the skill's output; I only normalised the loudness. My review was edited in ChatCut. Credits: 424, US$13.65 on my older plan. The guide's last page lists every tool, what it costs today, and a free way to try the first scene (free Claude chat for the script, Gemini for the style image, Kling for the clip).
+Tested 30 September 2026 on my own Mac: Claude, my Vox Explainer skill, Higgsfield with Seedance 2.5 at 720p, edge-tts for the narrator. The explainer itself is 100% the skill's output; I only normalised the loudness. My review was edited in ChatCut. Credits: 424, US$13.65 on my plan. The guide's last page lists every tool, what it costs today, and a free way to try the first scene.
 
 ## Posting hour
 Mr Pynk posted at 20:18 UTC (4:18 am Singapore). Series rule: post at the subject's hour, so schedule for about 20:15 UTC. The Earhart expedition sails 7 October 2026: posting before then rides the search interest.
