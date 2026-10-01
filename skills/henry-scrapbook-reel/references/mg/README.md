@@ -16,6 +16,8 @@ Style constants used by all of them: paper `#FFFEFA` with ruled lines, ink `#171
 | `repo-chips-into-head.jsx` | Repo chips → into head → stamp (Ep2) | 1080x700 | Tool names flying into the head, then the stamp |
 | `work-split-bar.jsx` | Work split bar 60/20/20 (Ep2) | 1000x360 | Who does the work |
 | `film-strip.jsx` | Film strip → frames → 3D scroll (Ep2) | 560x330 | Explaining the scroll-scrubbed clip |
+| `effect-counter.jsx` | Effect counter n/12 (Ep4 v8) | 440x128 | Counting the effects or steps as they are spoken |
+| `save-card-lines.jsx` | Save card, numbered lines + receipt + share footer (Ep4 v8) | 940x430 | The held save frame before the verdict |
 
 Shaders (ChatCut pixel-effects) are in `../shaders/`: `talking-head-grade-skin.ts` (COLOUR 1; current rule is skin smoothing only, no grade) and `super-backing-shade.ts` (COLOUR 2; not used since 27 Sep 2026).
 
