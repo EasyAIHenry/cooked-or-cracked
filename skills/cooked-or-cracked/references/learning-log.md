@@ -1,5 +1,14 @@
 # Learning log (append after every episode's retro; newest first)
 
+## Ep2 retro (1 Oct 2026, insights at 18:53)
+44,612 views (top of the last 10), 36,777 viewers, 23.1 s average watch on 89 s, skip rate 47.4%, saves 2.5K (6.9%), comments 1.2K (3.4%), 811 shares, 583 follows, 98.1% non-followers, Reels tab 79.7% / Explore 10.5%. Full table: Ep2 `06_research/ep2-insights-retro.md`.
+1. Reach came from the rates, not watch time. Average watch was lower than Ep1 (23 s vs 31 s); saves doubled and comments rose 1.6x. Instagram ranks skip rate first among reach factors.
+2. Results were on screen from 0:00. Nate's window cut through finished designs every 0.5 s. Henry's product (cone, flavour sheet, site, order page) sat in mini boxes on the wall from 0:16 to 0:56. The cover was the cone box.
+3. A countable, free promise ("five free tools"), a stamp every 2 s, a "can't believe it" reaction at the reveal, and a money line ($1,000 site, $250 a month) near the end.
+4. Ep4's sting landed at 0:06 because of the intent line, against 0:03.5 in Ep2. Its first result showed at 0:06.
+5. Next test (Henry's idea): the finished product in a mini box from frame 0 to the sting, in the Ep2 cone-box spot, muted, with the creator's claim in the window. Use the same frame as the cover. A/B it with trial reels before making it a rule.
+6. Ep3 and Ep4 are not on the profile's Reels tab, so their numbers need Henry's insights screenshots.
+
 ## Ep4 full cut in ChatCut (29 Sep 2026, evening)
 1. "Too yellow" twice: the cause was HyperFrames' `--sdr` step, which skips the BT.2020 to BT.709 gamut conversion. Skin came out sallow (hue 24-27 deg vs 9-15 on his Ep3 upload) and the table came out mustard. Grading around it (saturation, warmth) cannot fix it. The fix was a 3D LUT fitted from HyperFrames' output to a correct HLG conversion of the same frames that keeps HyperFrames' brightness (colour error 0.026 to 0.004, same result on Part 1), then skin smoothing and a light curve. Files: Ep4 `02_graphics/hyperframes-part2/` (hf2ref.cube, graph_N5.txt, lutfit/). Measure against his last approved upload, not against "neutral".
 2. The opener follows the Ep3 v7 table, but window sizes come from the new take: in Part 1 his face reached x 728, so Paulo's window shrank to 270x480 at 752/762.
