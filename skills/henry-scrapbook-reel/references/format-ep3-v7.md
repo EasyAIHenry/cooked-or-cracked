@@ -33,3 +33,5 @@ Henry: "Oh my god, I love it. This is perfect." Build every new episode to this 
 - Voice: ChatCut isolate_voice on every speech item, then `composite-ep3-v5.sh`: grade (contrast 1.08, saturation 1.10, gamma 1.05, highlight curve, warmth) + highpass 100, -5 dB 250 Hz, +2 dB 1.6 kHz, +6 dB 3 kHz, +5 dB shelf 4.5 kHz, denoise, 3:1, limiter, two-pass loudnorm -14 LUFS; result clips -6/-7 dB inside their windows.
 - Cuts: word-level. Scan energy at 10 ms and cut at the consonant onset, not the whisper timestamp. join_audit, cross-correlate the export against the source, then a Gemini listen of every new join. Three attempts were needed on "actually create".
 - Pace: sting 3 s, ask under 4 s, timings under 7 s, whole reel about 1:30.
+
+- Face rule (Henry, 1 Oct 2026, Ep3 v11): side windows beside the chin must clear his face even when he leans. Check frames across the whole stretch with guide lines, not one frame. On Ep3's framing that means 300x533 at 704/918 (right of x 720, below y 900), not 380x676 at 614/790.

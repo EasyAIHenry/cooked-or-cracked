@@ -1,0 +1,22 @@
+[  0.0-  1.9] As of right now, Claude cannot watch videos.
+[  1.9-  5.1] It'll read the transcript and it misses like half the details.
+[  5.1-  8.6] Well with this new GitHub repo, you can basically give your Claude eyes.
+[  8.6- 10.2] And now I can see the entire video.
+[ 10.2- 11.3] And this is game-changer.
+[ 11.3- 13.3] First thing you need to do is go to this GitHub repo.
+[ 13.3- 15.6] If you come to repo in this video, I'll send it to you.
+[ 15.6- 18.4] And basically just grab this link and paste it into your Claude code
+[ 18.4- 21.3] and say, hey, download it and apply these skills into my Claude.
+[ 21.3- 23.2] It'll walk you through the entire installation,
+[ 23.2- 25.4] telling you if you gotta fix anything or anything like that.
+[ 25.4- 27.3] And it will ask you a couple of different questions.
+[ 27.4- 30.0] Then from there, all you gotta do is do backslash watch
+[ 30.0- 32.8] and then paste the link to whatever social media you want.
+[ 32.8- 35.2] This can be YouTube, Instagram, TikTok, whatever it is.
+[ 35.2- 38.2] Now Claude can watch the entire short form or long form video.
+[ 38.2- 41.2] It can analyze the structure of the video, find the best hooks,
+[ 41.2- 43.0] and understand everything that's happening on screen
+[ 43.0- 44.1] as if it were a viewer.
+[ 44.1- 46.5] And the best part is you can do all directly inside Claude code.
+[ 46.5- 48.3] If you want the link to the GitHub, come to the word repo
+[ 48.3- 49.4] and I'll send you the link directly.
