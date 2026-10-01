@@ -1,5 +1,12 @@
 # Learning log (append after every episode's retro; newest first)
 
+## Ep4 retro (1 Oct 2026, trial reel, insights at 19:15)
+1,761 views, 1,558 viewers, 14 s average watch on 57 s, skip rate 52.1%, shares 1.1%, saves 2.8%, comments 4.8%, 7 follows. Full table: Ep4 `06_research/ep4-insights-retro.md`.
+1. About half of viewers had gone by 0:02.5 and two thirds by 0:08. The first effect started at 0:09, after a silent reaction shot, the intent line and a sting hold. Show the result in the first second.
+2. Comments were the best rate in the series (the EDIT gate works), but comments are last in Instagram's reach order. Skip and share rates come first.
+3. Saves and shares were half of Ep2's. Nothing on screen could be counted or kept, and no line gave a reason to send it. Add a counter across the showcase, a save frame, a time receipt and a share line.
+4. Dark UI stretches (0:16-0:35) shrink Henry to small windows. Keep any dark panel to 2 s or less.
+
 ## Ep2 retro (1 Oct 2026, insights at 18:53)
 44,612 views (top of the last 10), 36,777 viewers, 23.1 s average watch on 89 s, skip rate 47.4%, saves 2.5K (6.9%), comments 1.2K (3.4%), 811 shares, 583 follows, 98.1% non-followers, Reels tab 79.7% / Explore 10.5%. Full table: Ep2 `06_research/ep2-insights-retro.md`.
 1. Reach came from the rates, not watch time. Average watch was lower than Ep1 (23 s vs 31 s); saves doubled and comments rose 1.6x. Instagram ranks skip rate first among reach factors.
