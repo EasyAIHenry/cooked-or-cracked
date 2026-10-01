@@ -7,9 +7,9 @@ It is public so you can follow the process. The style and the rules are Henry's;
 ## What you get when you clone it
 - **The process.** `sop/`: eight steps from picking a subject to the retro, with who does what and the time budget.
 - **The rules.** `skills/cooked-or-cracked/`: the series skill an agent runs, the writing rules, the learning log (what each episode's numbers taught, newest first), the supers library, the episode templates and `scripts/join_audit.py`.
-- **The style, as code.** `skills/henry-scrapbook-reel/`: the edit template for ChatCut Desktop with every layout number and gotcha; `references/mg/` holds the template graphics as ChatCut motion-graphic JSX (paper stamp, scoreboard, sting title, confetti, pill, window frame, the Ep2 supers); `references/shaders/` the skin-smoothing shader; `references/export-scripts/` the composite script; plus the sting and the two sound cues.
-- **The other two skills.** `skills/creator-audit/` (Apify + Gemini audit of a reel) and `skills/henry-guide-pdf/` (the lead-magnet PDF format, with CSS and examples).
-- **Two whole episodes on paper.** `episodes/`: scripts, pointers, cut lists, shot maps, de-myth sheets, audit reports, delivery reviews, captions, MG code, the lead-magnet HTML and the Ep1 insights retro.
+- **The style, as code.** `skills/henry-scrapbook-reel/`: the edit template for ChatCut Desktop with every layout number and gotcha, and `references/format-ep3-v7.md`, the approved reel format; `references/mg/` holds the template graphics as ChatCut motion-graphic JSX (paper stamp, scoreboard, sting title, confetti, pill, window frame, the Ep2 supers); `references/shaders/` the skin-smoothing shader; `references/export-scripts/` the composite script; plus the sting and the two sound cues.
+- **The other three skills.** `skills/creator-audit/` (Apify + Gemini audit of a reel), `skills/henry-guide-pdf/` (the lead-magnet PDF format, with CSS and examples) and `skills/adobe-podcast-enhance/` (the voice cleanup every episode gets).
+- **Five episodes on paper.** `episodes/`: scripts, pointers, cut lists, shot maps, de-myth sheets, audit reports, delivery reviews, captions, MG code, the lead-magnet HTML and the Ep1 insights retro.
 - **The Ep2 build.** `sites/`: the Pompette site and QR menu Henry built on camera.
 - **The editor's guide.** `students/`: 24 pages on what the series is, how the edit is built and the three cuts an editor has to learn.
 - **The scout.** `tools/lead-scout/`: the daily Instagram outlier finder.

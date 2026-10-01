@@ -9,7 +9,7 @@
 .frames.three-up > div { flex:0 0 44mm; }
 table.mx.dense td { padding:5px 8px; font-size:9pt; }
 table.mx.dense td:first-child { font-size:10.5pt; }
-.frames.two-up > div { flex:0 0 58mm; }
+.frames.two-up > div { flex:0 0 52mm; }
 .lead { font-size:11pt; margin:4px 0 10px; }
 table.fx td { padding:5px 8px 5px 0; }
 table.fx th { padding:3px 8px 4px 0; }

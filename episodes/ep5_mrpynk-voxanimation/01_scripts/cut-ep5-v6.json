@@ -1,0 +1,187 @@
+{
+ "fps": 30,
+ "sources": {
+  "take0001": "/Users/henrychua/Downloads/Video_1074790464_DJI_20260930224009_0001_D_MP4_471160069_38000_202693022408_video_original.MP4",
+  "take0003": "/Users/henrychua/Downloads/Video_1074790592_DJI_20260930224703_0003_D_MP4_730417133_60000_202693022472_video_original.mov",
+  "take0004": "/Users/henrychua/Downloads/Video_1074790656_DJI_20260930225221_0004_D_MP4_1206969049_99000_2026930225220_video_original.MP4",
+  "take0005": "/Users/henrychua/Downloads/Video_1074790720_DJI_20260930225411_0005_D_MP4_2562032123_212000_2026930225410_video_original.mov",
+  "take0006": "/Users/henrychua/Downloads/Video_1074790784_DJI_20260930230122_0006_D_MP4_1089957934_90000_202693023122_video_original.MP4",
+  "take0008": "/Users/henrychua/Downloads/Video_1074790912_DJI_20260930230913_0008_D_MP4_390220802_32000_202693023912_video_original.MP4",
+  "take0011": "/Users/henrychua/Downloads/Video_1074791104_DJI_20260930231643_0011_D_MP4_685424644_56000_2026930231642_video_original.MP4",
+  "take0012": "/Users/henrychua/Downloads/Video_1074791168_DJI_20260930233209_0012_D_MP4_772419737_63000_202693023328_video_original.mov",
+  "take0015": "/Users/henrychua/Downloads/Video_1074791360_DJI_20260930233413_0015_D_MP4_771354961_63000_2026930233412_video_original.MP4",
+  "take0016": "/Users/henrychua/Downloads/Video_1074791424_DJI_20260930233529_0016_D_MP4_315724348_26000_2026930233528_video_original.MP4"
+ },
+ "items": [
+  {
+   "spacer": 132
+  },
+  {
+   "take": "take0001",
+   "in": 29.06,
+   "frames": 54,
+   "label": "intent"
+  },
+  {
+   "spacer": 8
+  },
+  {
+   "spacer": 90
+  },
+  {
+   "take": "take0004",
+   "in": 31.4,
+   "frames": 107,
+   "label": "today.1"
+  },
+  {
+   "take": "take0004",
+   "in": 35.33,
+   "frames": 41,
+   "label": "today.2"
+  },
+  {
+   "spacer": 8
+  },
+  {
+   "take": "take0005",
+   "in": 18.55,
+   "frames": 96,
+   "label": "ask.1"
+  },
+  {
+   "take": "take0005",
+   "in": 22.23,
+   "frames": 56,
+   "label": "ask.2"
+  },
+  {
+   "spacer": 180,
+   "label": "MONTAGE: arc / voice / clips cards over the finished video"
+  },
+  {
+   "take": "take0006",
+   "in": 0.85,
+   "frames": 146,
+   "label": "topics.1"
+  },
+  {
+   "take": "take0006",
+   "in": 6.37,
+   "frames": 15,
+   "label": "topics.2"
+  },
+  {
+   "take": "take0006",
+   "in": 7.47,
+   "frames": 71,
+   "label": "topics.3"
+  },
+  {
+   "spacer": 8
+  },
+  {
+   "take": "take0008",
+   "in": 18.36,
+   "frames": 113,
+   "label": "style1"
+  },
+  {
+   "take": "take0008",
+   "in": 7.22,
+   "frames": 57,
+   "label": "style2.1"
+  },
+  {
+   "take": "take0008",
+   "in": 10.52,
+   "frames": 65,
+   "label": "style2.2"
+  },
+  {
+   "spacer": 14
+  },
+  {
+   "take": "take0011",
+   "in": 28.05,
+   "frames": 51,
+   "label": "budget.1"
+  },
+  {
+   "take": "take0011",
+   "in": 30.19,
+   "frames": 170,
+   "label": "budget.2"
+  },
+  {
+   "take": "take0011",
+   "in": 36.14,
+   "frames": 102,
+   "label": "budget.3"
+  },
+  {
+   "spacer": 8
+  },
+  {
+   "take": "take0016",
+   "in": 3.35,
+   "frames": 35,
+   "label": "done1"
+  },
+  {
+   "take": "take0016",
+   "in": 5.47,
+   "frames": 57,
+   "label": "done2"
+  },
+  {
+   "spacer": 261,
+   "label": "RESULT full frame 8.7s"
+  },
+  {
+   "spacer": 8
+  },
+  {
+   "take": "take0012",
+   "in": 0.55,
+   "frames": 32,
+   "label": "wow"
+  },
+  {
+   "take": "take0015",
+   "in": 7.46,
+   "frames": 96,
+   "label": "receipts.1"
+  },
+  {
+   "take": "take0015",
+   "in": 10.82,
+   "frames": 36,
+   "label": "receipts.2"
+  },
+  {
+   "take": "take0015",
+   "in": 12.24,
+   "frames": 53,
+   "label": "receipts.3"
+  },
+  {
+   "spacer": 8
+  },
+  {
+   "take": "take0012",
+   "in": 14.74,
+   "frames": 75,
+   "label": "verdict"
+  },
+  {
+   "spacer": 8
+  },
+  {
+   "take": "take0015",
+   "in": 58.27,
+   "frames": 110,
+   "label": "cta"
+  }
+ ]
+}

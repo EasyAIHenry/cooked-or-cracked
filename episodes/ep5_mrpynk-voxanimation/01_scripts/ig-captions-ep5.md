@@ -29,7 +29,7 @@ Rules kept: no "Cooked or cracked?", no verdict, no hype words, no em dashes, no
 Comment "AMELIA" and I'll send you the workflow: the free skill, the Higgsfield settings, the costs and the one ask I typed.
 
 ## Pinned comment
-Tested 30 September 2026 on my own Mac: Claude Max (Pro does the same job), the free Vox Animation skill by @mr.pynk, Higgsfield Ultimate with Seedance 2.5 at 720p, edge-tts for the narrator. The explainer itself is 100% the skill's output; I only normalised the loudness. My review was edited in ChatCut. Credits: 424, US$13.65 on my older Ultimate plan (1,200 credits for US$39). On the Plus plan Higgsfield sells today, about 1,000 credits for US$39 a month paid yearly, the same video is about US$16.
+Tested 30 September 2026 on my own Mac: Claude Max (Pro does the same job), the free Vox Animation skill by @mr.pynk, Higgsfield Ultimate with Seedance 2.5 at 720p, edge-tts for the narrator. The explainer itself is 100% the skill's output; I only normalised the loudness. My review was edited in ChatCut. Credits: 424, US$13.65 on my older plan. The guide's last page lists every tool, what it costs today, and a free way to try the first scene (free Claude chat for the script, Gemini for the style image, Kling for the clip).
 
 ## Posting hour
 Mr Pynk posted at 20:18 UTC (4:18 am Singapore). Series rule: post at the subject's hour, so schedule for about 20:15 UTC. The Earhart expedition sails 7 October 2026: posting before then rides the search interest.
@@ -43,22 +43,31 @@ Three more fields Instagram indexes, fill them when posting:
 - Cover text (the thumbnail frame): the "IN 30 MINUTES" title stamp, so the grid tile carries the claim.
 Search phrases this reel can own: "Vox style animation Claude", "Claude skill motion graphics", "Higgsfield Seedance 2.5 explainer", "Vox Animation skill mr pynk". Each appears in the speech, the stamps or the caption at least once.
 
-## ManyChat: Auto-DM links from comments (fill-in)
-Link for the DM: the PDF itself, once it is in Henry's personal Gmail Drive (AI Lessons Online > 1 October 2026 > A Vox-style explainer in 30 minutes), set to "anyone with the link can view". Replace LINK below after the upload and confirm it opens without signing in.
+## ManyChat: Auto-DM links from comments (FINAL, 1 Oct 2026)
+Link for the DM, the Drive folder with the guide and the skill together:
+https://drive.google.com/drive/folders/1J-XORzCZ3spk57kno0HvLzqqlPtGW9r3
+It sits in Henry's personal Gmail Drive: AI Lessons Online > 1 October 2026 VOX Explainer Video. Inside: `A Vox-style explainer in 30 minutes.pdf` (https://drive.google.com/file/d/1Lqwa8-QUz8UXrvPdfuwGumqz_uvlvhDb/view) and `Vox Explainer.zip` (https://drive.google.com/file/d/1jRZ984xYP21GUZslufRjIJJQEFg3ORtX/view). The folder is still "anyone with the link can EDIT"; switch it to Viewer before posting, because edit links sometimes force a Google sign-in.
 
 | ManyChat field | Fill in |
 |---|---|
-| Post or reel | A specific post or reel: the Ep5 reel. Set up before posting with "Next post or reel" (only one of those can run at a time). |
+| Post or reel | A specific post or reel: the Ep5 reel. Set up before posting: "Next post or reel" (only one of those can run at a time). |
 | Comment has | A specific word: AMELIA (add amelia and Amelia if it asks per spelling) |
-| Reply under the post | ON, 3 replies (shuffled): "Sent. Check your DMs." / "Sent. If you can't see it, check your message requests." / "It's in your DMs. Which AI claim should I test next?" |
-| Opening DM | ON. "Hey, thanks for commenting AMELIA. The workflow is ready: the free skill, the set-up, the Higgsfield settings, what the six clips cost, and the fixes for when it goes wrong. Tap below and I'll send it." Button: "Send me the guide" |
-| DM asking to follow | ON. "Last step before the link: follow me. I test viral AI claims on camera, with the receipts. Then tap I'm following below." |
+| Reply under the post | ON, 3 replies (ManyChat's maximum, shuffled): "Sent. Check your DMs." / "Sent. If you can't see it, check your message requests." / "It's in your DMs. Which AI claim should I test next?" |
+| Opening DM | ON. "Hey, thanks for commenting AMELIA. The full workflow is ready: the skill to install, the set-up, the five steps, the fixes, and a free way to try the first scene. Tap below and I'll send it." Button: "Send me the guide" |
+| DM asking to follow | ON. "Last step before the link: follow me. I test viral AI claims on camera, with the receipts. Then tap I'm following below." (Use the button's exact name if it differs.) |
 | DM asking for email | OFF |
-| DM with a link | "Here's the guide: A Vox-style explainer in 30 minutes." / "3 pages: set up once in about 20 minutes, the ask, the one image that locks the look, six clips at 720p and what they cost, the narrator, and how Claude cuts it." / "Start on page 2. The set-up and the costs are on page 2, the fixes on page 3." Link title: "Open the guide". URL: LINK |
-| Follow-up DM if they don't click | ON. "In case you missed it, the guide is in this chat. The set-up checklist is on page 2. Which AI claim should I test next? Reply here." Add the same link if the field offers one. |
+| DM with a link | "Here's the folder: the guide, A Vox-style explainer in 30 minutes, and the Vox Explainer skill to install." / "3 pages: set up once in about 20 minutes, the ask, the one image that locks the look, six clips, the narrator, and how Claude cuts it." / "Start on page 2. The tools, what they cost and the free way to try scene 1 are on the last page." (three short paragraphs) Link title: "Open the folder". URL: the folder link above. |
+| Follow-up DM if they don't click | ON. "In case you missed it, the folder is in this chat. The set-up checklist is on page 2 of the guide. Which AI claim should I test next? Reply with it here." Add the same link if the field offers one. |
 
-Why each piece: the same reasons as Ep4 (`DRIVE_Cooked-or-Cracked_Ep4_PauloShimas-ClaudeEdits/01_scripts/ig-captions-ep4.md`): the opening tap opens the 24 hour window, the follow check only goes to non-followers, email off keeps the path short, reply 2 points at message requests, the follow-up collects the next episode ideas. Button titles under 20 characters.
+Why each piece:
+- Opening DM ON: the tap opts them in and opens the 24-hour window. With it off, ManyChat cannot send the follow check or the follow-up.
+- Follow check ON: ManyChat sends it only to people who don't follow yet. It is the follower lever for an audience that is mostly non-followers.
+- Email OFF: every step before the link loses people.
+- The opening DM says "the full workflow" because the caption promises it, and names the skill because installing it is the first thing they do. The link DM says where to start, so nobody guesses.
+- Public replies: DMs from accounts people don't follow can land in message requests, so reply 2 points there. Reply 3 asks a question, which pulls more comments.
+- Follow-up: DM replies count as interactions with you and give you the next episode ideas.
+- Button titles stay under 20 characters (Instagram's limit).
 
-Test before posting: comment AMELIA from a second account that does not follow you. Check the public reply, the follow step, and that the PDF opens without signing in.
+Test before posting: comment AMELIA from a second account that doesn't follow you. Check the public reply, the follow step, and that the folder opens without signing in and shows both files.
 
 Targets from the Ep1 retro: follows 1.5% of views, comments 3%, saves 4%. Mr Pynk's reel did 8.9% comments on the PYNK gate; that is the number to chase.
