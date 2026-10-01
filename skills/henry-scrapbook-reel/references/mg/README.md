@@ -9,6 +9,7 @@ Style constants used by all of them: paper `#FFFEFA` with ruled lines, ink `#171
 | `pill-caption.jsx` | Pill caption — Cooked or Cracked? | 700x150 | Opener, top centre |
 | `window-frame.jsx` | Window frame — white border + shadow (portrait; landscape twin is 640x360) | 640x1107 | Reviewed-reel window and every screen window |
 | `jingle-title-compact.jsx` | Jingle title — compact top | 1000x400 | The sting, word by word |
+| `jingle-title-eggs.jsx` | Jingle title — eggs (Ep5, current) | 1000x400 | The sting from Ep5 on: burning-pan COOKED, gold-pouring CRACKED?; 900x360 at 90/225 |
 | `paper-stamp-v4.jsx` | Paper stamp — v4 with icon badge | 1000x400 | Every key-word stamp, verdict stamp, comment stamp |
 | `scoreboard.jsx` | Scoreboard — Cooked / Cracked checkboxes | 260x230 | Left wall, whole video, tick at the verdict |
 | `confetti-burst.jsx` | Confetti burst — paper | 1080x1920 | CRACKED or a declared winner |

@@ -1,6 +1,6 @@
 # Ep4 captions and ManyChat (29 Sep 2026)
 
-Keyword: EDIT (the word said on camera and on the end stamp). The first trial reel got 1,761 views (insights 1 Oct). Re-test file: `05_cuts/UPLOAD-THIS-ep4-v8.mp4` (result-first open, effect counter, save card). Last master before that: v7.
+Keyword: EDIT (the word said on camera and on the end stamp). The first trial reel got 1,761 views (insights 1 Oct). Re-test file: `05_cuts/UPLOAD-THIS-ep4-v9.mp4` (dramatic cold open, Ep5 egg jingle, IG safe area, effect counter, save card). Last master before that: v7.
 
 ## Caption (CHOSEN 29 Sep, v3: written for reach, verdict kept in the video)
 Comment "EDIT" and I'll send you the full workflow.

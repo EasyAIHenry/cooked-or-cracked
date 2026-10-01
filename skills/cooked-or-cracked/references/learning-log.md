@@ -7,6 +7,8 @@
 3. Saves and shares were half of Ep2's. Nothing on screen could be counted or kept, and no line gave a reason to send it. Add a counter across the showcase, a save frame, a time receipt and a share line.
 4. Dark UI stretches (0:16-0:35) shrink Henry to small windows. Keep any dark panel to 2 s or less.
 
+5. Re-test cuts (1 Oct): v8 opened on the result card with Henry's line, and Henry said "not dramatic enough". v9 opens on his real shot turning into the documentary card, picture only, with punch-ins and impact hits, then the creator's claim, the intent line over his own effect, and the Ep5 egg jingle. Every overlay sits inside the IG safe area. Effect counter and save card added. Henry to post v9 as a trial reel; compare skip rate (52.1%), shares (1.1%) and saves (2.8%).
+
 ## Ep2 retro (1 Oct 2026, insights at 18:53)
 44,612 views (top of the last 10), 36,777 viewers, 23.1 s average watch on 89 s, skip rate 47.4%, saves 2.5K (6.9%), comments 1.2K (3.4%), 811 shares, 583 follows, 98.1% non-followers, Reels tab 79.7% / Explore 10.5%. Full table: Ep2 `06_research/ep2-insights-retro.md`.
 1. Reach came from the rates, not watch time. Average watch was lower than Ep1 (23 s vs 31 s); saves doubled and comments rose 1.6x. Instagram ranks skip rate first among reach factors.
