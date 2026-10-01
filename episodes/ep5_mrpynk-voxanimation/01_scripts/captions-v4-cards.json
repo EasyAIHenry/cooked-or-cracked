@@ -1,0 +1,401 @@
+[
+{
+"f": 132,
+"n": 21,
+"text": "That's crazy",
+"times": "0,9",
+"label": "intent"
+},
+{
+"f": 153,
+"n": 36,
+"text": "Let's try this out",
+"times": "0,9,14,20",
+"label": "intent"
+},
+{
+"f": 284,
+"n": 41,
+"text": "inside and it's installing",
+"times": "0,7,13,20",
+"label": "install"
+},
+{
+"f": 325,
+"n": 47,
+"text": "the repo right now",
+"times": "0,11,26,32",
+"label": "install"
+},
+{
+"f": 377,
+"n": 80,
+"text": "unsolved mystery cases in",
+"times": "0,40,56,71",
+"label": "ask"
+},
+{
+"f": 457,
+"n": 20,
+"text": "the world",
+"times": "0,5",
+"label": "ask"
+},
+{
+"f": 482,
+"n": 49,
+"text": "the part where we",
+"times": "0,11,33,42",
+"label": "arc"
+},
+{
+"f": 531,
+"n": 38,
+"text": "see the cliffhanger",
+"times": "0,7,13",
+"label": "arc"
+},
+{
+"f": 574,
+"n": 68,
+"text": "choose a voiceover that",
+"times": "0,6,13,49",
+"label": "voice"
+},
+{
+"f": 642,
+"n": 91,
+"text": "sits into the mystery",
+"times": "0,29,44,75",
+"label": "voice"
+},
+{
+"f": 738,
+"n": 47,
+"text": "my favourite way to",
+"times": "0,15,34,42",
+"label": "higgs.1"
+},
+{
+"f": 785,
+"n": 17,
+"text": "do it",
+"times": "0,5",
+"label": "higgs.1"
+},
+{
+"f": 799,
+"n": 24,
+"text": "is to do it",
+"times": "0,6,12,17",
+"label": "higgs.2"
+},
+{
+"f": 823,
+"n": 35,
+"text": "on Higgsfield",
+"times": "0,9",
+"label": "higgs.2"
+},
+{
+"f": 855,
+"n": 22,
+"text": "where we have",
+"times": "0,6,11",
+"label": "higgs.3"
+},
+{
+"f": 875,
+"n": 38,
+"text": "Seedance 2.5",
+"times": "0,18",
+"label": "higgs.4"
+},
+{
+"f": 911,
+"n": 19,
+"text": "So I will let",
+"times": "0,8,11,15",
+"label": "stitch"
+},
+{
+"f": 930,
+"n": 38,
+"text": "it stitch everything on",
+"times": "0,4,15,29",
+"label": "stitch"
+},
+{
+"f": 968,
+"n": 15,
+"text": "its own",
+"times": "0,6",
+"label": "stitch"
+},
+{
+"f": 1014,
+"n": 26,
+"text": "Alright now we have",
+"times": "0,11,17,22",
+"label": "topics.1"
+},
+{
+"f": 1040,
+"n": 20,
+"text": "three topics",
+"times": "0,6",
+"label": "topics.1"
+},
+{
+"f": 1060,
+"n": 21,
+"text": "One is D.B",
+"times": "0,6,10",
+"label": "topics.1"
+},
+{
+"f": 1081,
+"n": 27,
+"text": "Cooper and one is",
+"times": "0,14,18,22",
+"label": "topics.1"
+},
+{
+"f": 1108,
+"n": 52,
+"text": "Atlas and Amelia",
+"times": "0,16,27",
+"label": "topics.1"
+},
+{
+"f": 1157,
+"n": 18,
+"text": "Earhart",
+"times": "0",
+"label": "topics.2"
+},
+{
+"f": 1172,
+"n": 34,
+"text": "I kind of like",
+"times": "0,14,22,27",
+"label": "topics.3"
+},
+{
+"f": 1206,
+"n": 40,
+"text": "Amelia's story",
+"times": "0,26",
+"label": "topics.3"
+},
+{
+"f": 1251,
+"n": 17,
+"text": "gives you three different",
+"times": "0,1,6,11",
+"label": "style1"
+},
+{
+"f": 1268,
+"n": 23,
+"text": "options So",
+"times": "0,14",
+"label": "style1"
+},
+{
+"f": 1291,
+"n": 55,
+"text": "like archive lagoon radio",
+"times": "0,6,21,37",
+"label": "style1"
+},
+{
+"f": 1343,
+"n": 71,
+"text": "is let's go for the",
+"times": "0,13,26,35,47",
+"label": "style2.1"
+},
+{
+"f": 1413,
+"n": 66,
+"text": "lagoon look",
+"times": "0,38",
+"label": "style2.2"
+},
+{
+"f": 1490,
+"n": 20,
+"text": "But if I'm going",
+"times": "0,5,10,16",
+"label": "budget.1"
+},
+{
+"f": 1510,
+"n": 34,
+"text": "at 720p",
+"times": "0,6",
+"label": "budget.1"
+},
+{
+"f": 1541,
+"n": 56,
+"text": "at 70 per clip",
+"times": "0,12,35,44",
+"label": "budget.2"
+},
+{
+"f": 1597,
+"n": 38,
+"text": "for the credits itself",
+"times": "0,7,12,25",
+"label": "budget.2"
+},
+{
+"f": 1635,
+"n": 23,
+"text": "I can go for",
+"times": "0,9,13,17",
+"label": "budget.2"
+},
+{
+"f": 1658,
+"n": 18,
+"text": "six clips",
+"times": "0,7",
+"label": "budget.2"
+},
+{
+"f": 1676,
+"n": 38,
+"text": "which is 420",
+"times": "0,5,10",
+"label": "budget.2"
+},
+{
+"f": 1711,
+"n": 20,
+"text": "credits",
+"times": "0",
+"label": "budget.3"
+},
+{
+"f": 1737,
+"n": 12,
+"text": "All right",
+"times": "0,5",
+"label": "done1"
+},
+{
+"f": 1749,
+"n": 37,
+"text": "The video is done",
+"times": "0,11,21,29",
+"label": "done1"
+},
+{
+"f": 1783,
+"n": 17,
+"text": "Let's see what we",
+"times": "0,6,10,14",
+"label": "done2"
+},
+{
+"f": 1800,
+"n": 37,
+"text": "have here",
+"times": "0,4",
+"label": "done2"
+},
+{
+"f": 2103,
+"n": 35,
+"text": "Wow this is amazing",
+"times": "0,6,11,16",
+"label": "wow"
+},
+{
+"f": 2135,
+"n": 41,
+"text": "and it would cost",
+"times": "0,14,23,32",
+"label": "receipts.1"
+},
+{
+"f": 2176,
+"n": 40,
+"text": "less than $15 to",
+"times": "0,9,16,35",
+"label": "receipts.1"
+},
+{
+"f": 2216,
+"n": 18,
+"text": "do this",
+"times": "0,4",
+"label": "receipts.1"
+},
+{
+"f": 2231,
+"n": 39,
+"text": "It's really crazy",
+"times": "0,11,19",
+"label": "receipts.2"
+},
+{
+"f": 2267,
+"n": 30,
+"text": "and I've done it",
+"times": "0,10,20,25",
+"label": "receipts.3"
+},
+{
+"f": 2297,
+"n": 26,
+"text": "within 30 minutes",
+"times": "0,7,16",
+"label": "receipts.3"
+},
+{
+"f": 2328,
+"n": 29,
+"text": "Overall I think this",
+"times": "0,14,20,25",
+"label": "verdict"
+},
+{
+"f": 2357,
+"n": 24,
+"text": "is cracked",
+"times": "0,8",
+"label": "verdict"
+},
+{
+"f": 2381,
+"n": 25,
+"text": "and I love it",
+"times": "0,8,12,17",
+"label": "verdict"
+},
+{
+"f": 2411,
+"n": 46,
+"text": "Comment down below Amelia",
+"times": "0,10,18,27",
+"label": "cta"
+},
+{
+"f": 2457,
+"n": 20,
+"text": "and I'll send you",
+"times": "0,5,11,17",
+"label": "cta"
+},
+{
+"f": 2477,
+"n": 47,
+"text": "my workflow",
+"times": "0,5",
+"label": "cta"
+}
+]

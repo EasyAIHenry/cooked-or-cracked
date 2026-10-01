@@ -1,0 +1,70 @@
+/* Ep5 two-pager additions */
+.cover .sub { max-width:104mm; }
+.callout.setup { margin:3px 0 7px; padding:7px 12px; font-size:8.7pt; line-height:1.35; }
+.flow5 { margin:6px 0 6px; }
+.flow5 .box { font-size:9pt; padding:5px 4px 4px; }
+.flow5 .box img { width:22px; height:22px; }
+.stephead { margin:4px 0 0; }
+.stephead h3 { font-size:13.2pt; }
+.stephead .hand { font-size:10pt; }
+.do { font-size:8.7pt; line-height:1.32; margin:1px 0 1px; }
+.example { font-size:8.7pt; margin:2px 0 2px; padding:2px 9px; }
+.recline { font-size:8.5pt; margin:1px 0 2px; }
+.stylerow { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin:3px 0 3px; }
+.stylerow .s { display:flex; gap:7px; align-items:center; border:1.5px solid var(--ink); background:#fff; padding:4px 7px 4px 4px; box-shadow:3px 3px 0 rgba(23,20,17,.18); font-size:8.3pt; line-height:1.25; }
+.stylerow .s img { width:17mm; height:22mm; object-fit:cover; object-position:center top; border:1px solid var(--ink); flex:0 0 17mm; }
+.stylerow .s b { display:block; font-family:Fraunces,Georgia,serif; font-weight:900; font-size:10pt; }
+.stylerow .s.pick { border-color:var(--coral); box-shadow:3px 3px 0 var(--coral); position:relative; }
+.stylerow .s.pick .label { position:absolute; top:-9px; right:-6px; font-size:9pt; }
+.cost { display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px; margin:3px 0 3px; }
+.cost .c { border:1.5px solid var(--ink); background:var(--paper); padding:4px 8px 5px; box-shadow:3px 3px 0 rgba(23,20,17,.18); font-size:8.3pt; line-height:1.25; }
+.cost .c b { display:block; font-family:Fraunces,Georgia,serif; font-weight:900; font-size:15pt; line-height:1.05; color:var(--coral); }
+.cost .c.ink b { color:var(--ink); }
+.stitchrow .fr img { width:16mm; height:28.4mm; }
+.two .card p { font-size:8.6pt; }
+.note.ruled p { font-size:7.9pt; }
+.roomy .do { font-size:9.2pt; line-height:1.4; }
+.roomy .stephead h3 { font-size:15pt; }
+.roomy .stitchrow .fr img { width:22mm; height:39mm; }
+.roomy .two .card p { font-size:9.2pt; }
+.roomy .note.ruled p { font-size:8.3pt; }
+.roomy .recline { font-size:9pt; }
+.finalrow { display:grid; grid-template-columns:repeat(6,1fr); gap:6px; margin:8px 0 4px; }
+.finalrow img { width:100%; height:28mm; object-fit:cover; object-position:center; border:1.5px solid var(--ink); box-shadow:3px 3px 0 rgba(23,20,17,.18); display:block; }
+.cost.fixes { grid-template-columns:repeat(3,1fr); gap:8px 10px; margin:4px 0 6px; }
+.cost.fixes .c b { font-size:12.5pt; margin-bottom:2px; }
+.cost.fixes .c { font-size:8.6pt; line-height:1.3; }
+.setup { background:var(--ink); color:var(--paper); padding:8px 12px 9px; margin:4px 0 7px; }
+.setup .k { font-family:Kalam,cursive; font-weight:700; font-size:10.5pt; color:var(--gold); margin-bottom:4px; }
+.setup .grid { display:grid; grid-template-columns:1fr 1fr; gap:4px 14px; }
+.setup .it { display:flex; gap:7px; align-items:flex-start; }
+.setup .it > b { flex:0 0 18px; width:18px; height:18px; border-radius:50%; background:var(--coral); color:var(--paper); font-family:Fraunces,Georgia,serif; font-weight:900; font-size:9.5pt; display:flex; align-items:center; justify-content:center; margin-top:1px; }
+.setup .it p { margin:0; font-size:8.1pt; line-height:1.3; color:var(--paper); }
+.setup .it p b { color:var(--gold); }
+.setup a { color:var(--gold); }
+.stylerow .s.pick .label { top:auto; bottom:-9px; right:-6px; }
+.cost.fixes .c b { font-size:11.5pt; }
+.cover .contents { margin-top:14px; }
+.cover .stamps { top:158mm; }
+.cover .contents ol { font-size:10pt; line-height:1.5; }
+.setup .it p a { word-break:break-all; }
+.setup .it p { font-size:7.9pt; line-height:1.28; }
+.setup { padding:6px 12px 7px; margin:3px 0 6px; }
+.flow5 .box { padding:5px 4px 6px; }
+.page:not(.cover) { padding-top:15mm; }
+.page:not(.cover) { padding-top:14mm; padding-bottom:14mm; }
+.finalrow img { height:30mm; }
+.recline { margin:1px 0 1px; }
+.finalrow img { height:26mm; }
+.setup { margin-bottom:8px; }
+.recline { flex-wrap:nowrap; align-items:flex-start; }
+.recline .rec { flex:0 0 auto; }
+.setup .grid { grid-auto-flow:column; grid-template-rows:repeat(3,auto); }
+.setup .it p a { word-break:normal; }
+.stylerow .s.pick .label { top:3px; right:4px; bottom:auto; }
+.note.ruled p { font-size:8.2pt; }
+.setup { margin-bottom:5px; }
+.stylerow .s img { height:20mm; }
+.cost { margin:3px 0 2px; }
+.example { margin:2px 0 1px; }
+.stylerow { margin:2px 0 2px; }

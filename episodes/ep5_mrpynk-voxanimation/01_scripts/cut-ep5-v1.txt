@@ -1,0 +1,53 @@
+  spacer 132 
+take0001 in=  29.060 f=  54 ( 1.80s) intent
+  spacer 8 
+  spacer 90 
+take0003 in=   3.920 f=  85 ( 2.83s) install
+  spacer 8 
+take0005 in=  14.690 f=  40 ( 1.33s) ask.1
+take0005 in=  16.330 f=  68 ( 2.27s) ask.2
+take0005 in=  18.770 f=  89 ( 2.97s) ask.3
+take0005 in=  22.230 f=  57 ( 1.90s) ask.4
+  spacer 8 
+take0005 in=  40.850 f=  38 ( 1.27s) arc.1
+take0005 in=  42.440 f=  54 ( 1.80s) arc.2
+take0005 in=  44.550 f=  50 ( 1.67s) arc.3
+  spacer 8 
+take0005 in=  52.810 f=  17 ( 0.57s) voice.1
+take0005 in=  53.590 f=  88 ( 2.93s) voice.2
+take0005 in=  56.690 f=  26 ( 0.87s) voice.3
+take0005 in=  57.680 f=  32 ( 1.07s) voice.4
+take0005 in=  59.210 f=  31 ( 1.03s) voice.5
+take0005 in=  60.700 f=  57 ( 1.90s) voice.6
+  spacer 8 
+take0005 in=  73.690 f=  61 ( 2.03s) higgs.1
+take0005 in=  75.890 f=  56 ( 1.87s) higgs.2
+take0005 in=  77.940 f=  19 ( 0.63s) higgs.3
+take0005 in=  78.730 f=  27 ( 0.90s) higgs.4
+take0005 in=  87.710 f=  70 ( 2.33s) stitch
+  spacer 8 
+take0006 in=   0.050 f= 169 ( 5.63s) topics.1
+take0006 in=   6.370 f=  15 ( 0.50s) topics.2
+take0006 in=   7.470 f=  71 ( 2.37s) topics.3
+  spacer 8 
+take0008 in=  19.040 f=  92 ( 3.07s) style1
+take0008 in=   6.850 f=  68 ( 2.27s) style2.1
+take0008 in=  10.520 f=  65 ( 2.17s) style2.2
+  spacer 8 
+take0011 in=  28.050 f=  51 ( 1.70s) budget.1
+take0011 in=  30.190 f= 170 ( 5.67s) budget.2
+take0011 in=  36.140 f=  17 ( 0.57s) budget.3
+  spacer 8 
+take0016 in=   2.970 f= 132 ( 4.40s) done
+  spacer 261 RESULT full frame 8.7s
+  spacer 8 
+take0012 in=   0.550 f=  32 ( 1.07s) wow
+take0015 in=   7.460 f=  96 ( 3.20s) receipts.1
+take0015 in=  10.820 f=  36 ( 1.20s) receipts.2
+take0015 in=  12.240 f=  53 ( 1.77s) receipts.3
+  spacer 8 
+take0012 in=  14.740 f=  75 ( 2.50s) verdict
+  spacer 8 
+take0015 in=  58.270 f= 110 ( 3.67s) cta
+TOTAL 2850 f = 95.0 s
+reel onset which: 5.12  offset minutes: 9.55  next word what: 9.41

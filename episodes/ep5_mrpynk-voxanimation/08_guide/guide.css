@@ -1,0 +1,76 @@
+/* Ep3 guide additions on top of style.css + v2.css */
+.cover .big { font-size:50pt; margin:22px 0 8px; }
+.cover .sub { font-size:12pt; max-width:110mm; margin:0 0 18px; color:#E9E4DC; }
+.cover .hero { position:absolute; right:16mm; top:40mm; width:62mm; height:110mm; object-fit:cover; object-position:center top; border:5px solid var(--paper); box-shadow:6px 8px 0 var(--coral); transform:rotate(1.5deg); }
+.cover .contents { background:var(--paper); color:var(--ink); width:104mm; padding:14px 18px 16px; margin-top:6px; }
+.cover .contents .k { font-family:Kalam,cursive; font-weight:700; font-size:12pt; color:var(--mute); }
+.cover .contents ol { margin:6px 0 0; padding:0 0 0 18px; font-size:10.5pt; line-height:1.55; }
+.cover .contents li { display:flex; justify-content:space-between; gap:10px; }
+.cover .contents li span:last-child { color:var(--mute); font-weight:700; }
+.cover .stamps { position:absolute; right:16mm; top:150mm; width:62mm; display:flex; flex-direction:column; gap:12px; align-items:flex-end; }
+.cover .st { background:var(--paper); color:var(--ink); padding:6px 16px 8px; font-family:Kalam,cursive; font-weight:700; font-size:11pt; width:46mm; transform:rotate(-2deg); box-shadow:4px 5px 0 var(--coral); }
+.cover .st:nth-child(2) { transform:rotate(1.5deg); }
+.cover .st:nth-child(3) { transform:rotate(-1deg); }
+.cover .st b { display:block; font-family:Fraunces,Georgia,serif; font-weight:900; font-size:30pt; line-height:1; color:var(--coral); }
+.cover .who { position:absolute; left:16mm; bottom:14mm; font-size:9.5pt; color:#C9C2B8; max-width:90mm; }
+.cover .receipt { position:absolute; right:16mm; bottom:12mm; width:66mm; background:var(--paper); color:var(--ink); padding:10px 14px; transform:rotate(1deg); box-shadow:4px 5px 0 var(--coral); font-size:9pt; line-height:1.35; }
+.cover .receipt .hand { color:var(--mute); }
+.flow5 { display:grid; grid-template-columns:repeat(5,1fr); gap:8px; margin:10px 0 12px; }
+.flow5 .box { text-align:center; background:var(--paper); border:1.5px solid var(--ink); padding:6px 4px 5px; box-shadow:3px 4px 0 rgba(23,20,17,.18); font-weight:800; font-size:9.5pt; position:relative; }
+.flow5 .box img { width:26px; height:26px; display:block; margin:0 auto 4px; }
+.flow5 .box small { display:block; font-weight:400; color:var(--mute); font-size:8pt; line-height:1.25; margin-top:2px; }
+.flow5 .box i { position:absolute; top:-9px; left:-9px; width:20px; height:20px; border-radius:50%; background:var(--coral); color:var(--paper); font-style:normal; font-family:Fraunces; font-weight:900; font-size:10pt; display:flex; align-items:center; justify-content:center; }
+.stephead { display:flex; align-items:center; gap:10px; margin:6px 0 1px; }
+.stephead img { width:26px; height:26px; }
+.stephead b { display:inline-flex; width:26px; height:26px; border-radius:50%; background:var(--coral); color:var(--paper); align-items:center; justify-content:center; font-family:Fraunces; font-weight:900; font-size:12pt; }
+.stephead h3 { margin:0; font-family:Fraunces,Georgia,serif; font-weight:900; font-size:15pt; }
+.stephead .hand { color:var(--coral); font-size:11pt; margin-left:auto; }
+.do { font-size:9.1pt; margin:1px 0 2px; line-height:1.34; }
+.do b { color:var(--ink); }
+.recline { display:flex; gap:8px; align-items:center; flex-wrap:wrap; font-size:9pt; margin:2px 0 3px; }
+.recline .rec { background:var(--gold); }
+.prompt.tight { padding:16px 14px 8px; margin:11px 0 4px; font-size:9.3pt; }
+.prompt.tight p { margin:0; }
+.samples { display:grid; grid-template-columns:repeat(5,1fr); gap:6px; margin:6px 0 4px; }
+.samples .s { position:relative; border:1.5px solid var(--ink); background:#fff; box-shadow:3px 3px 0 rgba(23,20,17,.18); }
+.samples .s img { width:100%; height:21mm; object-fit:cover; object-position:center top; display:block; }
+.samples .s small { display:block; text-align:center; font-weight:800; font-size:8pt; padding:3px 2px; }
+.samples .s.pick { border-color:var(--coral); box-shadow:3px 3px 0 var(--coral); }
+.samples .s.pick .label { top:-10px; right:-6px; font-size:10pt; }
+.strip3 { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin:6px 0 4px; }
+.strip3 img { width:100%; height:15mm; object-fit:cover; object-position:center; border:1.5px solid var(--ink); box-shadow:3px 3px 0 rgba(23,20,17,.18); display:block; }
+.example { border-left:4px solid var(--coral); padding:3px 10px; margin:3px 0 4px; font-size:9.3pt; background:#FFF6EF; }
+.example .hand { color:var(--coral); }
+table.plan { width:100%; border-collapse:collapse; font-size:8.6pt; margin:8px 0 6px; }
+table.plan th { text-align:left; font-family:Kalam,cursive; font-weight:700; font-size:10pt; color:var(--coral); border-bottom:1.5px solid var(--ink); padding:4px 6px; }
+table.plan td { border-bottom:1px solid var(--rule); padding:5px 6px; vertical-align:top; line-height:1.3; }
+table.plan td.n { font-family:Fraunces; font-weight:900; font-size:11pt; color:var(--coral); width:18px; }
+.pack { display:grid; grid-template-columns:34mm 1fr; gap:8px 12px; align-items:start; margin:8px 0; }
+.pack .pn { display:flex; align-items:center; gap:8px; font-weight:800; font-size:10pt; padding-top:6px; }
+.pack .pn img { width:22px; height:22px; }
+.pack .pp { background:#FFF6EF; border:1.5px solid var(--ink); border-radius:12px 12px 12px 4px; padding:8px 12px; font-size:9.4pt; box-shadow:3px 3px 0 var(--coral); line-height:1.4; }
+.pack .pp em { color:var(--mute); font-style:normal; }
+
+.page .lead { font-size:10pt; margin:3px 0 6px; line-height:1.4; }
+.page h2 { margin-bottom:2px; }
+.flow5 { margin:8px 0 8px; }
+.samples { margin:4px 0 2px; }
+.strip3 { margin:4px 0 2px; }
+.caption { margin:0 0 6px; font-size:9pt; }
+/* storyboard (worksheet p1) */
+.board { display:grid; grid-template-columns:repeat(3,1fr); gap:10px 12px; margin:10px 0 12px; }
+.board .bc { display:flex; gap:9px; align-items:stretch; background:var(--paper); border:1.5px solid var(--ink); box-shadow:3px 4px 0 rgba(23,20,17,.15); padding:6px; }
+.board .bc img { width:23mm; height:41mm; object-fit:cover; object-position:center top; border:1px solid var(--ink); flex:0 0 23mm; display:block; }
+.board .bc .t { display:flex; flex-direction:column; gap:3px; min-width:0; }
+.board .bc .n { font-family:Fraunces,Georgia,serif; font-weight:900; font-size:17pt; line-height:1; color:var(--coral); }
+.board .bc b { font-family:Fraunces,Georgia,serif; font-weight:900; font-size:11pt; line-height:1.1; }
+.board .bc .say { font-size:8.6pt; line-height:1.3; }
+.board .bc .mv { font-size:8pt; line-height:1.25; color:var(--mute); margin-top:auto; }
+.board .bc .mv i { font-style:normal; font-family:Kalam,cursive; font-weight:700; color:var(--coral); font-size:9pt; }
+.legend3 { display:flex; gap:18px; font-size:9pt; margin:2px 0 0; }
+.legend3 span b { font-family:Kalam,cursive; color:var(--coral); font-size:10.5pt; margin-right:4px; }
+/* page 3 finished frames beside the stitch text */
+.stitchrow { display:flex; gap:12px; align-items:flex-start; }
+.stitchrow .do { flex:1; margin:0; }
+.stitchrow .fr { display:flex; gap:5px; flex:0 0 auto; }
+.stitchrow .fr img { width:17mm; height:30.2mm; object-fit:cover; border:1.5px solid var(--ink); box-shadow:2px 2px 0 rgba(23,20,17,.2); display:block; }
