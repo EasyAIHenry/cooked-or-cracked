@@ -1,0 +1,16 @@
+Cloud Code plus Cdance 2.5 can build websites that look like this, and the process is actually
+insane.
+Start by designing the website you want inside Figma, then give that design directly to Cloud
+Code and have it build the entire thing for you.
+But this is where Cdance 2.5 comes in.
+Let's say you're building a website for a construction company.
+Give Cdance an image of the finished house and ask it to generate the entire construction
+process backwards, the foundations being laid, the framing going up, the roof and exterior
+being finished, until you eventually reach the completed house.
+Then give that video to Cloud Code and tell it to connect the playback to the user's
+scroll.
+So as someone scrolls down on the website, they literally watch the house being built
+in real time.
+Now you're combining AI generated websites with AI generated video to create interactions
+that would have been insanely difficult to make before.
+So just comment "scroll" and I'll send you the full workflow.
