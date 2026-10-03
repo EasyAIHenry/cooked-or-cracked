@@ -1,0 +1,415 @@
+{
+ "COLD": 81,
+ "H0": 81,
+ "S0": 234,
+ "M0": 324,
+ "END": 2397,
+ "VER_F": 2220,
+ "COST_F": 1988,
+ "pos": {
+  "wow": [
+   177,
+   234
+  ],
+  "setup": [
+   324,
+   574
+  ],
+  "figma": [
+   582,
+   769
+  ],
+  "build": [
+   777,
+   981
+  ],
+  "seed": [
+   985,
+   1413
+  ],
+  "result": [
+   1416,
+   1668
+  ],
+  "biz": [
+   1676,
+   1981
+  ],
+  "cost": [
+   1988,
+   2134
+  ],
+  "verdict": [
+   2138,
+   2301
+  ],
+  "cta": [
+   2306,
+   2385
+  ]
+ },
+ "stamps": [
+  [
+   422,
+   "SUPERSYSTEMS"
+  ],
+  [
+   471,
+   "523 REVIEWS"
+  ],
+  [
+   559,
+   "WEBSITE"
+  ],
+  [
+   602,
+   "FIGMA"
+  ],
+  [
+   648,
+   "CLAUDE DID"
+  ],
+  [
+   699,
+   "5 MINUTES"
+  ],
+  [
+   790,
+   "CLAUDE CODE"
+  ],
+  [
+   925,
+   "FREE"
+  ],
+  [
+   957,
+   "10 MINUTES"
+  ],
+  [
+   1014,
+   "SEEDANCE 2.5"
+  ],
+  [
+   1125,
+   "TEARDOWN"
+  ],
+  [
+   1154,
+   "FLIP IT"
+  ],
+  [
+   1264,
+   "REAL PHOTO"
+  ],
+  [
+   1354,
+   "24 CREDITS"
+  ],
+  [
+   1523,
+   "PC BUILDS"
+  ],
+  [
+   1634,
+   "POWER ON"
+  ],
+  [
+   1715,
+   "3D ARTIST"
+  ],
+  [
+   1758,
+   "EVERY BUILD"
+  ],
+  [
+   1949,
+   "WHATSAPP"
+  ],
+  [
+   2220,
+   "CRACKED"
+  ],
+  [
+   2332,
+   "SITE"
+  ]
+ ],
+ "caps": [
+  [
+   81,
+   "Claude Code plus Seedance 2.5"
+  ],
+  [
+   129,
+   "can build websites that look like this"
+  ],
+  [
+   177,
+   "wow"
+  ],
+  [
+   189,
+   "that's great"
+  ],
+  [
+   208,
+   "Let's try this"
+  ],
+  [
+   325,
+   "And I tested it"
+  ],
+  [
+   362,
+   "on a real shop"
+  ],
+  [
+   389,
+   "in Singapore"
+  ],
+  [
+   409,
+   "it's called Supersystems"
+  ],
+  [
+   450,
+   "They have 523 Google"
+  ],
+  [
+   505,
+   "reviews but they don't"
+  ],
+  [
+   536,
+   "really have a website"
+  ],
+  [
+   585,
+   "step one is Figma"
+  ],
+  [
+   624,
+   "I didn't draw this"
+  ],
+  [
+   648,
+   "Claude did"
+  ],
+  [
+   674,
+   "it took me about"
+  ],
+  [
+   699,
+   "five minutes using their"
+  ],
+  [
+   748,
+   "own photos"
+  ],
+  [
+   777,
+   "Then Claude code"
+  ],
+  [
+   815,
+   "builds the site"
+  ],
+  [
+   840,
+   "from the design"
+  ],
+  [
+   870,
+   "I use his skills"
+  ],
+  [
+   912,
+   "This is free and"
+  ],
+  [
+   944,
+   "it's about 10 minutes"
+  ],
+  [
+   986,
+   "Now this is where"
+  ],
+  [
+   1014,
+   "Seedance comes in"
+  ],
+  [
+   1058,
+   "what I did differently"
+  ],
+  [
+   1094,
+   "is I asked for"
+  ],
+  [
+   1120,
+   "the teardown"
+  ],
+  [
+   1142,
+   "then I flip it"
+  ],
+  [
+   1176,
+   "so the PC builds"
+  ],
+  [
+   1208,
+   "itself and it ends"
+  ],
+  [
+   1245,
+   "up on their real photo"
+  ],
+  [
+   1290,
+   "it's a first try"
+  ],
+  [
+   1325,
+   "and I spent about"
+  ],
+  [
+   1354,
+   "24 credits which is"
+  ],
+  [
+   1389,
+   "under a dollar"
+  ],
+  [
+   1416,
+   "So as I'm scrolling"
+  ],
+  [
+   1445,
+   "the website slowly"
+  ],
+  [
+   1482,
+   "you can see that"
+  ],
+  [
+   1513,
+   "these parts are building"
+  ],
+  [
+   1547,
+   "up together"
+  ],
+  [
+   1578,
+   "when the last part"
+  ],
+  [
+   1604,
+   "is actually in"
+  ],
+  [
+   1626,
+   "the power is"
+  ],
+  [
+   1651,
+   "actually on"
+  ],
+  [
+   1676,
+   "So you don't really"
+  ],
+  [
+   1697,
+   "need to pay a"
+  ],
+  [
+   1715,
+   "3D artist anymore"
+  ],
+  [
+   1754,
+   "A customer sees what"
+  ],
+  [
+   1785,
+   "they get before they"
+  ],
+  [
+   1818,
+   "message them"
+  ],
+  [
+   1845,
+   "They click on"
+  ],
+  [
+   1874,
+   "the button"
+  ],
+  [
+   1900,
+   "it goes to the"
+  ],
+  [
+   1931,
+   "company's WhatsApp business"
+  ],
+  [
+   1989,
+   "Overall"
+  ],
+  [
+   2004,
+   "here's my cost"
+  ],
+  [
+   2028,
+   "and time"
+  ],
+  [
+   2050,
+   "Total design and"
+  ],
+  [
+   2076,
+   "recorded site is"
+  ],
+  [
+   2102,
+   "about 18 minutes"
+  ],
+  [
+   2139,
+   "So honestly I think"
+  ],
+  [
+   2177,
+   "that this is definitely"
+  ],
+  [
+   2220,
+   "cracked and this is"
+  ],
+  [
+   2255,
+   "amazing for small businesses"
+  ],
+  [
+   2306,
+   "Comment down below site"
+  ],
+  [
+   2343,
+   "and I'll send you"
+  ],
+  [
+   2365,
+   "my workflow"
+  ]
+ ]
+}

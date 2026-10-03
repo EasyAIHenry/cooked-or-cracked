@@ -1,0 +1,43 @@
+[
+ {
+  "name": "ig_header",
+  "frames": 130
+ },
+ {
+  "name": "google",
+  "frames": 114,
+  "pan_at": 50
+ },
+ {
+  "name": "figma_overview",
+  "frames": 63
+ },
+ {
+  "name": "figma_selected",
+  "frames": 90
+ },
+ {
+  "name": "ig_grid",
+  "frames": 42
+ },
+ {
+  "name": "code",
+  "frames": 92
+ },
+ {
+  "name": "github",
+  "frames": 40
+ },
+ {
+  "name": "harness",
+  "frames": 76
+ },
+ {
+  "name": "higgsfield",
+  "frames": 73
+ },
+ {
+  "name": "higgsfield_details",
+  "frames": 127
+ }
+]

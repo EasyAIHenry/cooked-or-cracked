@@ -1,0 +1,480 @@
+{
+ "HK": 194,
+ "S0": 194,
+ "M0": 266,
+ "END": 2281,
+ "VER_F": 2104,
+ "COST_F": 1872,
+ "pos": {
+  "setup": [
+   266,
+   502
+  ],
+  "figma": [
+   510,
+   697
+  ],
+  "build": [
+   705,
+   864
+  ],
+  "seed": [
+   869,
+   1297
+  ],
+  "result": [
+   1300,
+   1552
+  ],
+  "biz": [
+   1560,
+   1865
+  ],
+  "cost": [
+   1872,
+   2018
+  ],
+  "verdict": [
+   2022,
+   2185
+  ],
+  "cta": [
+   2190,
+   2269
+  ]
+ },
+ "plab": {
+  "setup": [
+   266,
+   502
+  ],
+  "figma.a": [
+   510,
+   546
+  ],
+  "figma.b": [
+   552,
+   598
+  ],
+  "figma.c": [
+   602,
+   697
+  ],
+  "build.a": [
+   705,
+   792
+  ],
+  "build.b": [
+   798,
+   864
+  ],
+  "seed.a": [
+   869,
+   937
+  ],
+  "seed.b": [
+   942,
+   1053
+  ],
+  "seed.c": [
+   1057,
+   1166
+  ],
+  "seed.d": [
+   1173,
+   1297
+  ],
+  "result.a": [
+   1300,
+   1455
+  ],
+  "result.b": [
+   1462,
+   1552
+  ],
+  "biz.a": [
+   1560,
+   1630
+  ],
+  "biz.b": [
+   1638,
+   1725
+  ],
+  "biz.c": [
+   1729,
+   1865
+  ],
+  "cost.a": [
+   1872,
+   1931
+  ],
+  "cost.b": [
+   1934,
+   2018
+  ],
+  "verdict": [
+   2022,
+   2185
+  ],
+  "cta": [
+   2190,
+   2269
+  ]
+ },
+ "runs": [
+  [
+   266,
+   942,
+   "card"
+  ],
+  [
+   942,
+   1173,
+   "pip"
+  ],
+  [
+   1173,
+   1300,
+   "card"
+  ],
+  [
+   1300,
+   1872,
+   "pip"
+  ],
+  [
+   1872,
+   2022,
+   "card"
+  ],
+  [
+   2022,
+   2281,
+   "big"
+  ]
+ ],
+ "stickers": [
+  [
+   350,
+   "SUPERSYSTEMS"
+  ],
+  [
+   399,
+   "523 REVIEWS"
+  ],
+  [
+   487,
+   "WEBSITE"
+  ],
+  [
+   530,
+   "FIGMA"
+  ],
+  [
+   576,
+   "CLAUDE DID"
+  ],
+  [
+   627,
+   "5 MINUTES"
+  ],
+  [
+   718,
+   "CLAUDE CODE"
+  ],
+  [
+   840,
+   "FREE"
+  ],
+  [
+   898,
+   "SEEDANCE 2.5"
+  ],
+  [
+   1173,
+   "24 CREDITS"
+  ]
+ ],
+ "caps": [
+  [
+   0,
+   "Claude Code plus Seedance 2.5"
+  ],
+  [
+   44,
+   "can build websites"
+  ],
+  [
+   65,
+   "that look like this"
+  ],
+  [
+   94,
+   "So as someone scrolls"
+  ],
+  [
+   115,
+   "down on the website"
+  ],
+  [
+   138,
+   "they literally watch the house"
+  ],
+  [
+   167,
+   "being built in real time"
+  ],
+  [
+   266,
+   "I tested it"
+  ],
+  [
+   290,
+   "on a real"
+  ],
+  [
+   309,
+   "shop in Singapore"
+  ],
+  [
+   337,
+   "it's called Supersystems"
+  ],
+  [
+   378,
+   "They have 523 Google"
+  ],
+  [
+   433,
+   "reviews but they don't"
+  ],
+  [
+   464,
+   "really have a website"
+  ],
+  [
+   513,
+   "step one is Figma"
+  ],
+  [
+   552,
+   "I didn't draw this"
+  ],
+  [
+   576,
+   "Claude did"
+  ],
+  [
+   602,
+   "it took me about"
+  ],
+  [
+   627,
+   "five minutes using their"
+  ],
+  [
+   676,
+   "own photos"
+  ],
+  [
+   705,
+   "Then Claude Code"
+  ],
+  [
+   743,
+   "builds the site"
+  ],
+  [
+   768,
+   "from the design"
+  ],
+  [
+   798,
+   "I use his skills"
+  ],
+  [
+   840,
+   "This is free"
+  ],
+  [
+   870,
+   "Now this is where"
+  ],
+  [
+   898,
+   "Seedance comes in"
+  ],
+  [
+   942,
+   "what I did differently"
+  ],
+  [
+   978,
+   "is I asked for"
+  ],
+  [
+   1004,
+   "the teardown"
+  ],
+  [
+   1026,
+   "then I flip it"
+  ],
+  [
+   1060,
+   "so the PC builds"
+  ],
+  [
+   1092,
+   "itself and it ends"
+  ],
+  [
+   1129,
+   "up on their real photo"
+  ],
+  [
+   1174,
+   "it's a first try"
+  ],
+  [
+   1209,
+   "and I spent about"
+  ],
+  [
+   1238,
+   "24 credits which is"
+  ],
+  [
+   1273,
+   "under a dollar"
+  ],
+  [
+   1300,
+   "So as I'm scrolling"
+  ],
+  [
+   1329,
+   "the website slowly"
+  ],
+  [
+   1366,
+   "you can see that"
+  ],
+  [
+   1397,
+   "these parts are building"
+  ],
+  [
+   1431,
+   "up together"
+  ],
+  [
+   1462,
+   "when the last part"
+  ],
+  [
+   1488,
+   "is actually in"
+  ],
+  [
+   1510,
+   "the power is"
+  ],
+  [
+   1535,
+   "actually on"
+  ],
+  [
+   1560,
+   "So you don't really"
+  ],
+  [
+   1581,
+   "need to pay a"
+  ],
+  [
+   1599,
+   "3D artist anymore"
+  ],
+  [
+   1638,
+   "A customer sees what"
+  ],
+  [
+   1669,
+   "they get before they"
+  ],
+  [
+   1702,
+   "message them"
+  ],
+  [
+   1729,
+   "They click on"
+  ],
+  [
+   1758,
+   "the button"
+  ],
+  [
+   1784,
+   "it goes to the"
+  ],
+  [
+   1815,
+   "company's WhatsApp business"
+  ],
+  [
+   1873,
+   "Overall"
+  ],
+  [
+   1888,
+   "here's my cost"
+  ],
+  [
+   1912,
+   "and time"
+  ],
+  [
+   1934,
+   "Total design and"
+  ],
+  [
+   1960,
+   "recorded site is"
+  ],
+  [
+   1986,
+   "about 18 minutes"
+  ],
+  [
+   2023,
+   "So honestly I think"
+  ],
+  [
+   2061,
+   "that this is definitely"
+  ],
+  [
+   2104,
+   "cracked and this is"
+  ],
+  [
+   2139,
+   "amazing for small businesses"
+  ],
+  [
+   2190,
+   "Comment down below site"
+  ],
+  [
+   2227,
+   "and I'll send you"
+  ],
+  [
+   2249,
+   "my workflow"
+  ]
+ ]
+}

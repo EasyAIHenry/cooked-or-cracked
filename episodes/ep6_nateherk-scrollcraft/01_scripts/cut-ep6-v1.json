@@ -1,0 +1,245 @@
+{
+ "fps": 30,
+ "sources": {
+  "take17": "/Users/henrychua/Content Creation/DRIVE_Cooked-or-Cracked_Ep6_NateHerk-ScrollCraft/04_raw-footage/voice/take17_v.mp4"
+ },
+ "items": [
+  {
+   "take": "take17",
+   "in": 41.88,
+   "frames": 12,
+   "label": "wow.1"
+  },
+  {
+   "take": "take17",
+   "in": 42.46,
+   "frames": 45,
+   "label": "wow.2"
+  },
+  {
+   "spacer": 9
+  },
+  {
+   "take": "take17",
+   "in": 57.47,
+   "frames": 78,
+   "label": "setup.1"
+  },
+  {
+   "take": "take17",
+   "in": 60.76,
+   "frames": 149,
+   "label": "setup.2"
+  },
+  {
+   "take": "take17",
+   "in": 65.99,
+   "frames": 26,
+   "label": "setup.3"
+  },
+  {
+   "spacer": 9
+  },
+  {
+   "take": "take17",
+   "in": 125.62,
+   "frames": 39,
+   "label": "figma.a"
+  },
+  {
+   "spacer": 9
+  },
+  {
+   "take": "take17",
+   "in": 127.9,
+   "frames": 54,
+   "label": "figma.b"
+  },
+  {
+   "spacer": 9
+  },
+  {
+   "take": "take17",
+   "in": 134.18,
+   "frames": 53,
+   "label": "figma.c.1"
+  },
+  {
+   "take": "take17",
+   "in": 136.1,
+   "frames": 50,
+   "label": "figma.c.2"
+  },
+  {
+   "spacer": 9
+  },
+  {
+   "take": "take17",
+   "in": 191.64,
+   "frames": 13,
+   "label": "build.a.1"
+  },
+  {
+   "take": "take17",
+   "in": 192.22,
+   "frames": 74,
+   "label": "build.a.2"
+  },
+  {
+   "spacer": 9
+  },
+  {
+   "take": "take17",
+   "in": 195.2,
+   "frames": 66,
+   "label": "build.b.1"
+  },
+  {
+   "take": "take17",
+   "in": 197.76,
+   "frames": 45,
+   "label": "build.b.2"
+  },
+  {
+   "spacer": 9
+  },
+  {
+   "take": "take17",
+   "in": 205.87,
+   "frames": 68,
+   "label": "seed.a"
+  },
+  {
+   "spacer": 9
+  },
+  {
+   "take": "take17",
+   "in": 240.16,
+   "frames": 120,
+   "label": "seed.b"
+  },
+  {
+   "spacer": 9
+  },
+  {
+   "take": "take17",
+   "in": 258.45,
+   "frames": 86,
+   "label": "seed.c.1"
+  },
+  {
+   "take": "take17",
+   "in": 261.51,
+   "frames": 29,
+   "label": "seed.c.2"
+  },
+  {
+   "spacer": 9
+  },
+  {
+   "take": "take17",
+   "in": 263.64,
+   "frames": 124,
+   "label": "seed.d"
+  },
+  {
+   "spacer": 9
+  },
+  {
+   "take": "take17",
+   "in": 275.22,
+   "frames": 66,
+   "label": "result.a.1"
+  },
+  {
+   "take": "take17",
+   "in": 277.8,
+   "frames": 31,
+   "label": "result.a.2"
+  },
+  {
+   "take": "take17",
+   "in": 279.82,
+   "frames": 58,
+   "label": "result.a.3"
+  },
+  {
+   "spacer": 9
+  },
+  {
+   "take": "take17",
+   "in": 299.93,
+   "frames": 97,
+   "label": "result.b"
+  },
+  {
+   "spacer": 9
+  },
+  {
+   "take": "take17",
+   "in": 329.91,
+   "frames": 74,
+   "label": "biz.a"
+  },
+  {
+   "spacer": 9
+  },
+  {
+   "take": "take17",
+   "in": 380.6,
+   "frames": 95,
+   "label": "biz.b"
+  },
+  {
+   "spacer": 9
+  },
+  {
+   "take": "take17",
+   "in": 432.01,
+   "frames": 141,
+   "label": "biz.c"
+  },
+  {
+   "spacer": 9
+  },
+  {
+   "take": "take17",
+   "in": 448.01,
+   "frames": 59,
+   "label": "cost.a"
+  },
+  {
+   "spacer": 9
+  },
+  {
+   "take": "take17",
+   "in": 485.94,
+   "frames": 95,
+   "label": "cost.b"
+  },
+  {
+   "spacer": 9
+  },
+  {
+   "take": "take17",
+   "in": 513.42,
+   "frames": 97,
+   "label": "verdict.1"
+  },
+  {
+   "take": "take17",
+   "in": 516.84,
+   "frames": 68,
+   "label": "verdict.2"
+  },
+  {
+   "spacer": 9
+  },
+  {
+   "take": "take17",
+   "in": 547.02,
+   "frames": 83,
+   "label": "cta"
+  }
+ ]
+}
