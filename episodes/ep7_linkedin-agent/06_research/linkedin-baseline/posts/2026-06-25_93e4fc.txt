@@ -1,0 +1,13 @@
+My automated morning brief died, and I did not notice for six days. 
+
+FYI, I found out while vibe coding in my car at the end of the day.
+
+How it works is that every morning I programmed a system that pulls my day together. Calendar, meetings, tasks, summarised before I start. It runs the rhythm of a company that has one full-time person, so when it broke, I was flying on memory and scraps.
+
+That is the trade with running lean. Fifteen staff to one, revenue doubled, but the systems have to carry what the people used to. When one falls over, you feel it.
+
+The fix went past patching the script. I rebuilt the brief from the sources that still worked so it would be harder to take down next time.
+
+Systems break. The skill is noticing fast and rebuilding stronger.
+
+How do you catch it when one of your own systems goes dark? Curious how others handle this.

@@ -1,0 +1,519 @@
+{
+ "HK": 167,
+ "S0": 167,
+ "M0": 239,
+ "END": 3101,
+ "VER_F": 2934,
+ "CTA_F": 3019,
+ "SAVE0": 2518,
+ "pos": {
+  "L01": [
+   239,
+   380
+  ],
+  "L02": [
+   383,
+   545
+  ],
+  "L03": [
+   554,
+   726
+  ],
+  "L05": [
+   731,
+   1005
+  ],
+  "L06": [
+   1014,
+   1133
+  ],
+  "L07": [
+   1133,
+   1374
+  ],
+  "L08": [
+   1382,
+   1611
+  ],
+  "L09": [
+   1612,
+   1753
+  ],
+  "L10": [
+   1753,
+   1823
+  ],
+  "L11": [
+   1832,
+   1944
+  ],
+  "L12": [
+   1944,
+   2170
+  ],
+  "L16": [
+   2175,
+   2312
+  ],
+  "L14": [
+   2312,
+   2510
+  ],
+  "L15": [
+   2518,
+   2664
+  ],
+  "L18": [
+   2664,
+   2882
+  ],
+  "L17": [
+   2882,
+   2954
+  ],
+  "L20": [
+   2957,
+   3089
+  ]
+ },
+ "runs": [
+  [
+   239,
+   2882,
+   "card"
+  ],
+  [
+   2882,
+   3101,
+   "big"
+  ]
+ ],
+ "stickers": [
+  [
+   283,
+   "GHOSTWRITER?"
+  ],
+  [
+   441,
+   "30 DAYS"
+  ],
+  [
+   560,
+   "36 POSTS"
+  ],
+  [
+   658,
+   "BUFFER"
+  ],
+  [
+   861,
+   "134 vs 217"
+  ],
+  [
+   1016,
+   "LOWER PER POST"
+  ],
+  [
+   1175,
+   "FREE SKILLS"
+  ],
+  [
+   1332,
+   "NOT FLAGGED?"
+  ],
+  [
+   1472,
+   "SKILLSPECTOR"
+  ],
+  [
+   1592,
+   "DANGEROUS"
+  ],
+  [
+   1652,
+   "9 / 100"
+  ],
+  [
+   1806,
+   "NO POSTING"
+  ],
+  [
+   1854,
+   "3 FILES"
+  ],
+  [
+   2004,
+   "MY FILES"
+  ],
+  [
+   2139,
+   "10 MIN"
+  ],
+  [
+   2239,
+   "GHOST"
+  ],
+  [
+   2406,
+   "LINKEDIN VERIFIED"
+  ]
+ ],
+ "caps": [
+  [
+   1,
+   "Claude can now run"
+  ],
+  [
+   21,
+   "your entire LinkedIn"
+  ],
+  [
+   52,
+   "completely free"
+  ],
+  [
+   82,
+   "remove anything that sounds"
+  ],
+  [
+   117,
+   "AI-written"
+  ],
+  [
+   133,
+   "preventing you from getting flagged"
+  ],
+  [
+   240,
+   "People have told me"
+  ],
+  [
+   267,
+   "that I have a"
+  ],
+  [
+   283,
+   "ghostwriter on LinkedIn Honestly"
+  ],
+  [
+   349,
+   "it's just AI"
+  ],
+  [
+   383,
+   "I ran a challenge"
+  ],
+  [
+   415,
+   "in May and I"
+  ],
+  [
+   435,
+   "posted 30 days straight"
+  ],
+  [
+   489,
+   "no fail"
+  ],
+  [
+   512,
+   "Monday to Friday"
+  ],
+  [
+   556,
+   "So 36 posts"
+  ],
+  [
+   579,
+   "in 30 days"
+  ],
+  [
+   611,
+   "Claude wrote them"
+  ],
+  [
+   658,
+   "Buffer is the app"
+  ],
+  [
+   681,
+   "that I'm using"
+  ],
+  [
+   705,
+   "posted them"
+  ],
+  [
+   740,
+   "36 posts"
+  ],
+  [
+   768,
+   "9,600 impressions"
+  ],
+  [
+   836,
+   "a median of 134"
+  ],
+  [
+   886,
+   "per post against 217"
+  ],
+  [
+   949,
+   "for the rest of"
+  ],
+  [
+   977,
+   "my year"
+  ],
+  [
+   1016,
+   "More posts didn't mean"
+  ],
+  [
+   1070,
+   "it reached more people"
+  ],
+  [
+   1153,
+   "this reel says free"
+  ],
+  [
+   1186,
+   "Claude skills to run"
+  ],
+  [
+   1230,
+   "your whole LinkedIn inside"
+  ],
+  [
+   1286,
+   "your Claude plan and"
+  ],
+  [
+   1325,
+   "you won't get flagged"
+  ],
+  [
+   1384,
+   "before you install anything"
+  ],
+  [
+   1436,
+   "just a tip"
+  ],
+  [
+   1456,
+   "just go on NVIDIA"
+  ],
+  [
+   1480,
+   "to clear on the"
+  ],
+  [
+   1504,
+   "repos that you are"
+  ],
+  [
+   1534,
+   "actually doing"
+  ],
+  [
+   1570,
+   "It can get"
+  ],
+  [
+   1583,
+   "quite dangerous"
+  ],
+  [
+   1613,
+   "And this one's got"
+  ],
+  [
+   1652,
+   "9 out of 100"
+  ],
+  [
+   1702,
+   "which is kind"
+  ],
+  [
+   1731,
+   "of low risk"
+  ],
+  [
+   1752,
+   "and it's great"
+  ],
+  [
+   1755,
+   "It writes"
+  ],
+  [
+   1789,
+   "but it doesn't"
+  ],
+  [
+   1817,
+   "really post"
+  ],
+  [
+   1834,
+   "I dropped a poster"
+  ],
+  [
+   1873,
+   "a photo and"
+  ],
+  [
+   1894,
+   "a video of"
+  ],
+  [
+   1912,
+   "my next event"
+  ],
+  [
+   1945,
+   "Claude actually checked my"
+  ],
+  [
+   1997,
+   "old project files and"
+  ],
+  [
+   2033,
+   "then used Buffer to"
+  ],
+  [
+   2062,
+   "write it"
+  ],
+  [
+   2100,
+   "And totally it took"
+  ],
+  [
+   2130,
+   "about 10 minutes"
+  ],
+  [
+   2176,
+   "If you like"
+  ],
+  [
+   2197,
+   "what you see"
+  ],
+  [
+   2223,
+   "comment GHOST and I'll"
+  ],
+  [
+   2266,
+   "send you my workflow"
+  ],
+  [
+   2313,
+   "So always please check"
+  ],
+  [
+   2351,
+   "for your third-party apps"
+  ],
+  [
+   2394,
+   "if it's LinkedIn verified"
+  ],
+  [
+   2433,
+   "and you don't want"
+  ],
+  [
+   2466,
+   "to get kicked out"
+  ],
+  [
+   2497,
+   "of LinkedIn"
+  ],
+  [
+   2520,
+   "What changed this time"
+  ],
+  [
+   2561,
+   "is the research I"
+  ],
+  [
+   2590,
+   "did by hand"
+  ],
+  [
+   2607,
+   "Claude now does"
+  ],
+  [
+   2635,
+   "for my files"
+  ],
+  [
+   2665,
+   "If you just started"
+  ],
+  [
+   2694,
+   "and don't really know"
+  ],
+  [
+   2727,
+   "what to do"
+  ],
+  [
+   2745,
+   "use Buffer"
+  ],
+  [
+   2767,
+   "Only use Claude to"
+  ],
+  [
+   2792,
+   "do this if you're"
+  ],
+  [
+   2815,
+   "experienced and you're comfortable"
+  ],
+  [
+   2866,
+   "with it"
+  ],
+  [
+   2884,
+   "Overall the verdict is"
+  ],
+  [
+   2922,
+   "this is cracked"
+  ],
+  [
+   2958,
+   "If you like"
+  ],
+  [
+   2978,
+   "what you see"
+  ],
+  [
+   3004,
+   "comment GHOST and I'll"
+  ],
+  [
+   3045,
+   "send you my workflow"
+  ]
+ ]
+}

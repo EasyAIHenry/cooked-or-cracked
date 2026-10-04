@@ -1,0 +1,11 @@
+CAUGHT  not-just         "It's not just a tool, it's a teammate."  repo's own example wording
+MISSED  not-just         "AI isn't just a nice-to-have, it's a must."  common variant
+CAUGHT  isnt-about       "This isn't about speed. It's about trust."  repo's own pattern
+CAUGHT  the-result       'The result?'  line on its own
+MISSED  the-result       'The result? Everything changed.'  same line continues
+MISSED  triad            'We ship fast, learn faster, and win.'  one-word items
+MISSED  triad            'It saves time, cuts costs, and builds trust.'  two-word items
+CAUGHT  not-only         'Not only did it work but also it scaled.'  
+CAUGHT  heres-what       "Here's what I learned:"  
+CAUGHT  engagement-bait  'Thoughts?'  
+MISSED  engagement-bait  'What do you think?'  variant

@@ -1,0 +1,330 @@
+{
+ "fps": 30,
+ "sources": {
+  "take26": "/Users/henrychua/Content Creation/DRIVE_Cooked-or-Cracked_Ep7_LinkedIn-Agent/04_raw-footage/take/DJI_20261004182152_0026_D.MP4"
+ },
+ "items": [
+  {
+   "take": "take26",
+   "in": 11.13,
+   "frames": 85,
+   "label": "L01",
+   "text": "L01 hook: People have told me that I have a ghostwriter on LinkedIn."
+  },
+  {
+   "take": "take26",
+   "in": 13.95,
+   "frames": 56,
+   "label": "L01",
+   "text": "L01 hook: Honestly, it's just AI."
+  },
+  {
+   "spacer": 3
+  },
+  {
+   "take": "take26",
+   "in": 17.96,
+   "frames": 51,
+   "label": "L02.1",
+   "text": "L02 I ran a challenge in May ... 30 days straight, no fail, Monday to Friday."
+  },
+  {
+   "take": "take26",
+   "in": 19.92,
+   "frames": 78,
+   "label": "L02.2",
+   "text": "L02 I ran a challenge in May ... 30 days straight, no fail, Monday to Friday."
+  },
+  {
+   "take": "take26",
+   "in": 22.86,
+   "frames": 27,
+   "label": "L02.3",
+   "text": "L02 I ran a challenge in May ... 30 days straight, no fail, Monday to Friday."
+  },
+  {
+   "take": "take26",
+   "in": 24.49,
+   "frames": 6,
+   "label": "L02.4",
+   "text": "L02 I ran a challenge in May ... 30 days straight, no fail, Monday to Friday."
+  },
+  {
+   "spacer": 9
+  },
+  {
+   "take": "take26",
+   "in": 26.75,
+   "frames": 10,
+   "label": "L03.1",
+   "text": "L03 So 36 posts in 30 days, Claude wrote them."
+  },
+  {
+   "take": "take26",
+   "in": 27.26,
+   "frames": 68,
+   "label": "L03.2",
+   "text": "L03 So 36 posts in 30 days, Claude wrote them."
+  },
+  {
+   "take": "take26",
+   "in": 29.65,
+   "frames": 15,
+   "label": "L03.3",
+   "text": "L03 So 36 posts in 30 days, Claude wrote them."
+  },
+  {
+   "spacer": 9
+  },
+  {
+   "take": "take26",
+   "in": 30.15,
+   "frames": 70,
+   "label": "L03",
+   "text": "L03 Buffer is the app that I'm using, posted them."
+  },
+  {
+   "spacer": 5
+  },
+  {
+   "take": "take26",
+   "in": 52.45,
+   "frames": 32,
+   "label": "L05.1",
+   "text": "L05 36 posts, 9600 impressions, a median of 134 per post against 217 for the rest of my year."
+  },
+  {
+   "take": "take26",
+   "in": 53.8,
+   "frames": 195,
+   "label": "L05.2",
+   "text": "L05 36 posts, 9600 impressions, a median of 134 per post against 217 for the rest of my year."
+  },
+  {
+   "take": "take26",
+   "in": 60.45,
+   "frames": 47,
+   "label": "L05.3",
+   "text": "L05 36 posts, 9600 impressions, a median of 134 per post against 217 for the rest of my year."
+  },
+  {
+   "spacer": 9
+  },
+  {
+   "take": "take26",
+   "in": 65.18,
+   "frames": 119,
+   "label": "L06",
+   "text": "L06 More posts didn't mean it reached more people."
+  },
+  {
+   "take": "take26",
+   "in": 70.6,
+   "frames": 27,
+   "label": "L07.1",
+   "text": "L07 This reel says free Claude skills run your whole LinkedIn inside your Claude plan and you won't get flagged."
+  },
+  {
+   "take": "take26",
+   "in": 71.65,
+   "frames": 15,
+   "label": "L07.2",
+   "text": "L07 This reel says free Claude skills run your whole LinkedIn inside your Claude plan and you won't get flagged."
+  },
+  {
+   "take": "take26",
+   "in": 72.31,
+   "frames": 97,
+   "label": "L07.3",
+   "text": "L07 This reel says free Claude skills run your whole LinkedIn inside your Claude plan and you won't get flagged."
+  },
+  {
+   "take": "take26",
+   "in": 75.69,
+   "frames": 102,
+   "label": "L07.4",
+   "text": "L07 This reel says free Claude skills run your whole LinkedIn inside your Claude plan and you won't get flagged."
+  },
+  {
+   "spacer": 8
+  },
+  {
+   "take": "take26",
+   "in": 94.49,
+   "frames": 93,
+   "label": "L08.1",
+   "text": "L08 Before you install anything, just a tip, just go on NVIDIA to clear the repos that you are actually doing."
+  },
+  {
+   "take": "take26",
+   "in": 97.74,
+   "frames": 85,
+   "label": "L08.2",
+   "text": "L08 Before you install anything, just a tip, just go on NVIDIA to clear the repos that you are actually doing."
+  },
+  {
+   "spacer": 9
+  },
+  {
+   "take": "take26",
+   "in": 100.55,
+   "frames": 42,
+   "label": "L08",
+   "text": "L08 It can get quite dangerous."
+  },
+  {
+   "spacer": 1
+  },
+  {
+   "take": "take26",
+   "in": 117.31,
+   "frames": 141,
+   "label": "L09",
+   "text": "L09 And this one's got 9 out of 100, which is kind of low risk"
+  },
+  {
+   "take": "take26",
+   "in": 138.03,
+   "frames": 65,
+   "label": "L10.1",
+   "text": "L10 It writes, but it doesn't really post."
+  },
+  {
+   "take": "take26",
+   "in": 141.92,
+   "frames": 5,
+   "label": "L10.2",
+   "text": "L10 It writes, but it doesn't really post."
+  },
+  {
+   "spacer": 9
+  },
+  {
+   "take": "take26",
+   "in": 144.14,
+   "frames": 112,
+   "label": "L11",
+   "text": "L11 I dropped a poster, a photo and a video of my next event."
+  },
+  {
+   "take": "take26",
+   "in": 151.86,
+   "frames": 72,
+   "label": "L12.1",
+   "text": "L12 Claude actually checked my old project files and then used Buffer to write it."
+  },
+  {
+   "take": "take26",
+   "in": 154.42,
+   "frames": 46,
+   "label": "L12.2",
+   "text": "L12 Claude actually checked my old project files and then used Buffer to write it."
+  },
+  {
+   "take": "take26",
+   "in": 156.19,
+   "frames": 17,
+   "label": "L12.3",
+   "text": "L12 Claude actually checked my old project files and then used Buffer to write it."
+  },
+  {
+   "take": "take26",
+   "in": 157.19,
+   "frames": 10,
+   "label": "L12.4",
+   "text": "L12 Claude actually checked my old project files and then used Buffer to write it."
+  },
+  {
+   "spacer": 9
+  },
+  {
+   "take": "take26",
+   "in": 157.51,
+   "frames": 72,
+   "label": "L12",
+   "text": "L12 And totally it took about 10 minutes."
+  },
+  {
+   "spacer": 5
+  },
+  {
+   "take": "take26",
+   "in": 356.23,
+   "frames": 137,
+   "label": "L16",
+   "text": "L16 MID CTA: If you like what you see, comment GHOST and I'll send you my workflow."
+  },
+  {
+   "take": "take26",
+   "in": 173.09,
+   "frames": 116,
+   "label": "L14.1",
+   "text": "L14 So always please check your third-party apps, if it's LinkedIn verified, you don't want to get kicked out of LinkedIn"
+  },
+  {
+   "take": "take26",
+   "in": 177.14,
+   "frames": 82,
+   "label": "L14.2",
+   "text": "L14 So always please check your third-party apps, if it's LinkedIn verified, you don't want to get kicked out of LinkedIn"
+  },
+  {
+   "spacer": 8
+  },
+  {
+   "take": "take26",
+   "in": 259.51,
+   "frames": 79,
+   "label": "L15.1",
+   "text": "L15 What changed this time is the research I did by hand, Claude now does from my files."
+  },
+  {
+   "take": "take26",
+   "in": 262.36,
+   "frames": 67,
+   "label": "L15.2",
+   "text": "L15 What changed this time is the research I did by hand, Claude now does from my files."
+  },
+  {
+   "take": "take26",
+   "in": 326.47,
+   "frames": 88,
+   "label": "L18.1",
+   "text": "L18 If you just started and don't really know what to do, use Buffer."
+  },
+  {
+   "take": "take26",
+   "in": 329.68,
+   "frames": 5,
+   "label": "L18.2",
+   "text": "L18 If you just started and don't really know what to do, use Buffer."
+  },
+  {
+   "spacer": 9
+  },
+  {
+   "take": "take26",
+   "in": 329.85,
+   "frames": 116,
+   "label": "L18",
+   "text": "L18 Only use Claude to do this if you're experienced and you're comfortable with it."
+  },
+  {
+   "take": "take26",
+   "in": 333.71,
+   "frames": 72,
+   "label": "L17.v",
+   "text": "L17 VERDICT: Overall the verdict is, this is cracked."
+  },
+  {
+   "spacer": 3
+  },
+  {
+   "take": "take26",
+   "in": 360.79,
+   "frames": 132,
+   "label": "L20",
+   "text": "L20 CTA: If you like what you see, comment GHOST and I'll send you my workflow."
+  }
+ ]
+}

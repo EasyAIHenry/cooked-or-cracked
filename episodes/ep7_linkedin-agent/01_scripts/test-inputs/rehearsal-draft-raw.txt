@@ -1,0 +1,23 @@
+45 of my 105 LinkedIn posts this year got flagged as AI.
+
+I ran every post through a free AI-detection script. 45 flagged. 40 on review. 20 passed.
+
+The funny part is how many people have told me I must have a ghostwriter.
+
+I don't. It's AI, scheduled through Buffer.
+
+So I looked at what gave the 45 away.
+
+It wasn't em dashes. There were zero across all 105 posts.
+
+It wasn't "delve" or "game-changer" either. That part of the score came back clean.
+
+What dragged it down was specificity. Too few numbers. Too few names. Too few real places.
+
+My best-performing posts are the ones with names in them. Gavin and his 18 months of night driving. A lunch at 48 and 50 Niven Road.
+
+So the script and my readers disagree on 45 posts. This week I'm running a blind poll to see who's right.
+
+How many names and numbers are in your last LinkedIn post?
+
+#AI #LinkedIn

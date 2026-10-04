@@ -1,0 +1,11 @@
+In one week I built myself five AI team members. A researcher, a strategist, a copywriter, a data analyst, a campaign manager. Each a defined role, fed with our brand context.
+
+For a one-person studio it felt like hiring a department overnight. This is literally how I replaced a fifteen-person team and still grew revenue.
+
+Then I hit the part nobody posts about. Risk. Feed these systems your real business data and you open doors you have to think hard about. Prompt injection. Data leakage. Client information sitting where it should not.
+
+So we built the guardrails the same week as the agents. Sandboxed setups, clear rules on what data goes where.
+
+AI staff are a real unlock for small teams. They are also a security job most people sprint straight past.
+
+Setting up AI on real company data? DM me before you wire it together.

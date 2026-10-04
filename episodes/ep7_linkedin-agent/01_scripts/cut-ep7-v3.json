@@ -1,0 +1,300 @@
+{
+ "fps": 30,
+ "sources": {
+  "take26": "/Users/henrychua/Content Creation/DRIVE_Cooked-or-Cracked_Ep7_LinkedIn-Agent/04_raw-footage/transcripts/take26-16k.wav"
+ },
+ "items": [
+  {
+   "take": "take26",
+   "in": 83.77,
+   "frames": 99,
+   "label": "R01",
+   "text": "R01 Now as you can see here, I installed and it's"
+  },
+  {
+   "take": "take26",
+   "in": 87.51,
+   "frames": 37,
+   "label": "R01b.1",
+   "text": "R01b safe to say that there is free skills that are 11 types here."
+  },
+  {
+   "take": "take26",
+   "in": 88.93,
+   "frames": 38,
+   "label": "R01b.2",
+   "text": "R01b safe to say that there is free skills that are 11 types here."
+  },
+  {
+   "take": "take26",
+   "in": 90.41,
+   "frames": 56,
+   "label": "R01b.3",
+   "text": "R01b safe to say that there is free skills that are 11 types here."
+  },
+  {
+   "spacer": 3
+  },
+  {
+   "take": "take26",
+   "in": 94.47,
+   "frames": 94,
+   "label": "R02.1",
+   "text": "R02 Before you install anything, just a tip, just go on NVIDIA to clear the repos that you are actually doing. It can get quite dangerous."
+  },
+  {
+   "take": "take26",
+   "in": 97.74,
+   "frames": 122,
+   "label": "R02.2",
+   "text": "R02 Before you install anything, just a tip, just go on NVIDIA to clear the repos that you are actually doing. It can get quite dangerous."
+  },
+  {
+   "spacer": 2
+  },
+  {
+   "take": "take26",
+   "in": 117.16,
+   "frames": 137,
+   "label": "R03",
+   "text": "R03 And this one's got 9 out of 100, which is kind of low risk and it's great."
+  },
+  {
+   "spacer": 4
+  },
+  {
+   "take": "take26",
+   "in": 132.71,
+   "frames": 91,
+   "label": "R04",
+   "text": "R04 So the true test is, does it run on my LinkedIn?"
+  },
+  {
+   "spacer": 3
+  },
+  {
+   "take": "take26",
+   "in": 137.96,
+   "frames": 66,
+   "label": "R04b",
+   "text": "R04b It writes, but it doesn't really post."
+  },
+  {
+   "spacer": 4
+  },
+  {
+   "take": "take26",
+   "in": 164.43,
+   "frames": 149,
+   "label": "R05.1",
+   "text": "R05 But now with this prompt, it can be done entirely through Claude, as long as you have the right measures to connect to LinkedIn."
+  },
+  {
+   "take": "take26",
+   "in": 169.6,
+   "frames": 20,
+   "label": "R05.2",
+   "text": "R05 But now with this prompt, it can be done entirely through Claude, as long as you have the right measures to connect to LinkedIn."
+  },
+  {
+   "take": "take26",
+   "in": 170.54,
+   "frames": 33,
+   "label": "R05.3",
+   "text": "R05 But now with this prompt, it can be done entirely through Claude, as long as you have the right measures to connect to LinkedIn."
+  },
+  {
+   "spacer": 3
+  },
+  {
+   "take": "take26",
+   "in": 144.59,
+   "frames": 90,
+   "label": "R06",
+   "text": "R06 I dropped a poster, a photo and a video of my next event."
+  },
+  {
+   "spacer": 3
+  },
+  {
+   "take": "take26",
+   "in": 152.12,
+   "frames": 64,
+   "label": "R06b.1",
+   "text": "R06b Claude actually checked my old project files"
+  },
+  {
+   "take": "take26",
+   "in": 154.42,
+   "frames": 8,
+   "label": "R06b.2",
+   "text": "R06b Claude actually checked my old project files"
+  },
+  {
+   "spacer": 7
+  },
+  {
+   "take": "take26",
+   "in": 157.45,
+   "frames": 73,
+   "label": "R07",
+   "text": "R07 And totally it took about 10 minutes."
+  },
+  {
+   "spacer": 4
+  },
+  {
+   "take": "take26",
+   "in": 222.76,
+   "frames": 116,
+   "label": "R08.1",
+   "text": "R08 Now this is crazy because in the past I have to use Buffer to do it. Now I can just do it entirely on Claude."
+  },
+  {
+   "take": "take26",
+   "in": 226.74,
+   "frames": 58,
+   "label": "R08.2",
+   "text": "R08 Now this is crazy because in the past I have to use Buffer to do it. Now I can just do it entirely on Claude."
+  },
+  {
+   "spacer": 3
+  },
+  {
+   "take": "take26",
+   "in": 173.04,
+   "frames": 118,
+   "label": "R09.1",
+   "text": "R09 So always please check your third-party apps, if it's LinkedIn verified, you don't want to get kicked out of LinkedIn"
+  },
+  {
+   "take": "take26",
+   "in": 177.14,
+   "frames": 82,
+   "label": "R09.2",
+   "text": "R09 So always please check your third-party apps, if it's LinkedIn verified, you don't want to get kicked out of LinkedIn"
+  },
+  {
+   "spacer": 7
+  },
+  {
+   "take": "take26",
+   "in": 11.11,
+   "frames": 78,
+   "label": "P01a",
+   "text": "P01a People have told me that I have a ghostwriter on LinkedIn."
+  },
+  {
+   "spacer": 4
+  },
+  {
+   "take": "take26",
+   "in": 14.32,
+   "frames": 42,
+   "label": "P01",
+   "text": "P01 Honestly, it's just AI."
+  },
+  {
+   "spacer": 4
+  },
+  {
+   "take": "take26",
+   "in": 17.99,
+   "frames": 50,
+   "label": "P02.1",
+   "text": "P02 I ran a challenge in May and I posted 30 days straight, no fail, Monday to Friday."
+  },
+  {
+   "take": "take26",
+   "in": 19.92,
+   "frames": 78,
+   "label": "P02.2",
+   "text": "P02 I ran a challenge in May and I posted 30 days straight, no fail, Monday to Friday."
+  },
+  {
+   "take": "take26",
+   "in": 22.86,
+   "frames": 27,
+   "label": "P02.3",
+   "text": "P02 I ran a challenge in May and I posted 30 days straight, no fail, Monday to Friday."
+  },
+  {
+   "spacer": 3
+  },
+  {
+   "take": "take26",
+   "in": 26.71,
+   "frames": 11,
+   "label": "P03.1",
+   "text": "P03 So 36 posts in 30 days, Claude wrote them. Buffer is the app that I'm using, posted them."
+  },
+  {
+   "take": "take26",
+   "in": 27.26,
+   "frames": 70,
+   "label": "P03.2",
+   "text": "P03 So 36 posts in 30 days, Claude wrote them. Buffer is the app that I'm using, posted them."
+  },
+  {
+   "take": "take26",
+   "in": 29.65,
+   "frames": 75,
+   "label": "P03.3",
+   "text": "P03 So 36 posts in 30 days, Claude wrote them. Buffer is the app that I'm using, posted them."
+  },
+  {
+   "spacer": 7
+  },
+  {
+   "take": "take26",
+   "in": 229.28,
+   "frames": 95,
+   "label": "C01.1",
+   "text": "C01 It doesn't really has a dashboard unless you create it manually, but for Buffer you kind of have a dashboard."
+  },
+  {
+   "take": "take26",
+   "in": 232.62,
+   "frames": 74,
+   "label": "C01.2",
+   "text": "C01 It doesn't really has a dashboard unless you create it manually, but for Buffer you kind of have a dashboard."
+  },
+  {
+   "spacer": 3
+  },
+  {
+   "take": "take26",
+   "in": 326.44,
+   "frames": 91,
+   "label": "C02.1",
+   "text": "C02 If you just started and don't really know what to do, use Buffer. Only use Claude to do this if you're experienced and you're comfortable with it."
+  },
+  {
+   "take": "take26",
+   "in": 329.68,
+   "frames": 99,
+   "label": "C02.2",
+   "text": "C02 If you just started and don't really know what to do, use Buffer. Only use Claude to do this if you're experienced and you're comfortable with it."
+  },
+  {
+   "spacer": 3
+  },
+  {
+   "take": "take26",
+   "in": 334.0,
+   "frames": 61,
+   "label": "V01",
+   "text": "V01 Overall the verdict is, this is cracked."
+  },
+  {
+   "spacer": 5
+  },
+  {
+   "take": "take26",
+   "in": 360.78,
+   "frames": 101,
+   "label": "Z01",
+   "text": "Z01 If you like what you see, comment GHOST and I'll send you my workflow."
+  }
+ ]
+}

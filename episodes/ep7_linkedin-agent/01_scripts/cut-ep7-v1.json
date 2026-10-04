@@ -1,0 +1,208 @@
+{
+ "take": "DJI_20261004182152_0026_D.MP4",
+ "segments": [
+  {
+   "in": 11.13,
+   "out": 13.96,
+   "dur": 2.83,
+   "label": "L01 hook: People have told me that I have a ghostwriter on LinkedIn.",
+   "version": "both"
+  },
+  {
+   "in": 13.95,
+   "out": 15.8,
+   "dur": 1.85,
+   "label": "L01 hook: Honestly, it's just AI.",
+   "version": "both"
+  },
+  {
+   "in": 17.96,
+   "out": 24.7,
+   "dur": 6.74,
+   "label": "L02 I ran a challenge in May ... 30 days straight, no fail, Monday to Friday.",
+   "version": "both"
+  },
+  {
+   "in": 26.75,
+   "out": 30.16,
+   "dur": 3.41,
+   "label": "L03 So 36 posts in 30 days, Claude wrote them.",
+   "version": "both"
+  },
+  {
+   "in": 30.15,
+   "out": 32.48,
+   "dur": 2.33,
+   "label": "L03 Buffer is the app that I'm using, posted them.",
+   "version": "both"
+  },
+  {
+   "in": 32.47,
+   "out": 35.4,
+   "dur": 2.93,
+   "label": "L03 And the research and manual work was still on me.",
+   "version": "both"
+  },
+  {
+   "in": 35.39,
+   "out": 40.99,
+   "dur": 5.6,
+   "label": "L04 So what I paid was actually a Max plan for Claude and a one-year plan for Buffer",
+   "version": "full"
+  },
+  {
+   "in": 52.45,
+   "out": 62.0,
+   "dur": 9.55,
+   "label": "L05 36 posts, 9600 impressions, a median of 134 per post against 217 for the rest of my year.",
+   "version": "both"
+  },
+  {
+   "in": 65.18,
+   "out": 69.16,
+   "dur": 3.98,
+   "label": "L06 More posts didn't mean it reached more people.",
+   "version": "both"
+  },
+  {
+   "in": 70.6,
+   "out": 79.08,
+   "dur": 8.48,
+   "label": "L07 This reel says free Claude skills run your whole LinkedIn inside your Claude plan and you won't get flagged.",
+   "version": "both"
+  },
+  {
+   "in": 79.07,
+   "out": 83.8,
+   "dur": 4.73,
+   "label": "L07 Now it came out after my challenge, so I tested it.",
+   "version": "full"
+  },
+  {
+   "in": 94.49,
+   "out": 100.56,
+   "dur": 6.07,
+   "label": "L08 Before you install anything, just a tip, just go on NVIDIA to clear the repos that you are actually doing.",
+   "version": "both"
+  },
+  {
+   "in": 100.55,
+   "out": 101.96,
+   "dur": 1.41,
+   "label": "L08 It can get quite dangerous.",
+   "version": "both"
+  },
+  {
+   "in": 117.31,
+   "out": 122.01,
+   "dur": 4.7,
+   "label": "L09 And this one's got 9 out of 100, which is kind of low risk",
+   "version": "both"
+  },
+  {
+   "in": 132.79,
+   "out": 138.04,
+   "dur": 5.25,
+   "label": "L10 So the true test is, does it run on my LinkedIn?",
+   "version": "full"
+  },
+  {
+   "in": 138.03,
+   "out": 142.08,
+   "dur": 4.05,
+   "label": "L10 It writes, but it doesn't really post.",
+   "version": "both"
+  },
+  {
+   "in": 144.14,
+   "out": 147.87,
+   "dur": 3.73,
+   "label": "L11 I dropped a poster, a photo and a video of my next event.",
+   "version": "both"
+  },
+  {
+   "in": 151.86,
+   "out": 157.52,
+   "dur": 5.66,
+   "label": "L12 Claude actually checked my old project files and then used Buffer to write it.",
+   "version": "both"
+  },
+  {
+   "in": 157.51,
+   "out": 159.9,
+   "dur": 2.39,
+   "label": "L12 And totally it took about 10 minutes.",
+   "version": "both"
+  },
+  {
+   "in": 356.23,
+   "out": 360.8,
+   "dur": 4.57,
+   "label": "L16 MID CTA: If you like what you see, comment GHOST and I'll send you my workflow.",
+   "version": "both"
+  },
+  {
+   "in": 164.57,
+   "out": 173.1,
+   "dur": 8.53,
+   "label": "L13 But now with this prompt, it can be done entirely through Claude, as long as you have the right measures to connect to LinkedIn.",
+   "version": "full"
+  },
+  {
+   "in": 173.09,
+   "out": 179.86,
+   "dur": 6.77,
+   "label": "L14 So always please check your third-party apps, if it's LinkedIn verified, you don't want to get kicked out of LinkedIn",
+   "version": "both"
+  },
+  {
+   "in": 252.13,
+   "out": 259.52,
+   "dur": 7.39,
+   "label": "L15 The skills are free and my bills kind of never change, same Claude Max plan, same Buffer.",
+   "version": "both"
+  },
+  {
+   "in": 259.51,
+   "out": 264.6,
+   "dur": 5.09,
+   "label": "L15 What changed this time is the research I did by hand, Claude now does from my files.",
+   "version": "both"
+  },
+  {
+   "in": 326.47,
+   "out": 329.86,
+   "dur": 3.39,
+   "label": "L18 If you just started and don't really know what to do, use Buffer.",
+   "version": "both"
+  },
+  {
+   "in": 329.85,
+   "out": 333.72,
+   "dur": 3.87,
+   "label": "L18 Only use Claude to do this if you're experienced and you're comfortable with it.",
+   "version": "both"
+  },
+  {
+   "in": 333.71,
+   "out": 336.12,
+   "dur": 2.41,
+   "label": "L17 VERDICT: Overall the verdict is, this is cracked.",
+   "version": "both"
+  },
+  {
+   "in": 303.95,
+   "out": 307.35,
+   "dur": 3.4,
+   "label": "L19 I'm going to cancel my one year plan and start using this instead.",
+   "version": "both"
+  },
+  {
+   "in": 360.79,
+   "out": 365.2,
+   "dur": 4.41,
+   "label": "L20 CTA: If you like what you see, comment GHOST and I'll send you my workflow.",
+   "version": "both"
+  }
+ ]
+}

@@ -1,0 +1,46 @@
+[
+ {
+  "name": "activity",
+  "frames": 144
+ },
+ {
+  "name": "sent",
+  "frames": 348
+ },
+ {
+  "name": "chart",
+  "frames": 402
+ },
+ {
+  "name": "reel_ui",
+  "frames": 249
+ },
+ {
+  "name": "scan",
+  "frames": 371
+ },
+ {
+  "name": "fineprint",
+  "frames": 79
+ },
+ {
+  "name": "prompt",
+  "frames": 112
+ },
+ {
+  "name": "publish",
+  "frames": 231
+ },
+ {
+  "name": "live",
+  "frames": 137
+ },
+ {
+  "name": "ua",
+  "frames": 92
+ },
+ {
+  "name": "perm",
+  "frames": 114
+ }
+]

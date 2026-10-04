@@ -1,0 +1,144 @@
+
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ SkillSpector Security Report                                                 │
+╰────────────────────────────────── v2.11.2 ───────────────────────────────────╯
+
+Skill: unknown
+Source: /Users/henrychua/Content 
+Creation/DRIVE_Cooked-or-Cracked_Ep7_LinkedIn-Agent/03_reference/repo
+Scanned: 2026-10-04 08:53:01 UTC
+
+
+    Risk Assessment    
+ Score           9/100 
+ Severity        LOW   
+ Recommendation  SAFE  
+
+
+                          Components (37)                          
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━┳━━━━━━━━━━━━┓
+┃ File                            ┃ Type     ┃ Lines ┃ Executable ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━━┩
+│ .claude-plugin/marketplace.json │ json     │    18 │ No         │
+│ .claude-plugin/plugin.json      │ json     │    13 │ No         │
+│ .git/config                     │ other    │    13 │ No         │
+│ .gitignore                      │ other    │     5 │ No         │
+│ LICENSE                         │ other    │    21 │ No         │
+│ README.md                       │ markdown │   177 │ No         │
+│ skills/li-audit/SKILL.md        │ markdown │    88 │ No         │
+│ skills/li-carousel/SKILL.md     │ markdown │    71 │ No         │
+│ skills/li-comment/SKILL.md      │ markdown │    91 │ No         │
+│ skills/li-dm/SKILL.md           │ markdown │    83 │ No         │
+│ skills/li-human/SKILL.md        │ markdown │    98 │ No         │
+│ skills/li-human/detect.py       │ python   │   235 │ Yes        │
+│ skills/li-human/humanize.py     │ python   │   257 │ Yes        │
+│ skills/li-human/slop.json       │ json     │   785 │ No         │
+│ skills/li-inbox/SKILL.md        │ markdown │    67 │ No         │
+│ ... and 22 more                 │          │       │            │
+└─────────────────────────────────┴──────────┴───────┴────────────┘
+
+
+Issues (2)
+
+  MEDIUM: RA2 - Session Persistence...
+    Location: skills/li-plan/SKILL.md:90
+    Confidence: 60%
+    Remediation: Remove any persistence mechanisms (cron jobs, startup scripts, 
+state files). Skills should not maintain state across sessions without explicit 
+user co...
+
+  MEDIUM: RA2 - Session Persistence...
+    Location: skills/li-post/SKILL.md:4
+    Confidence: 60%
+    Remediation: Remove any persistence mechanisms (cron jobs, startup scripts, 
+state files). Skills should not maintain state across sessions without explicit 
+user co...
+
+
+     Inspection Completeness      
+ Execution             successful 
+ Status                complete   
+ Coverage              100.0%     
+ Fully inspected       23         
+ Partially inspected   0          
+ Entirely uninspected  0          
+Scope exclusions
+  - vcs_metadata .git/HEAD: VCS object and history metadata is outside the 
+bounded artifact inspection profile.
+  - vcs_metadata .git/description: VCS object and history metadata is outside 
+the bounded artifact inspection profile.
+  - vcs_metadata .git/hooks/applypatch-msg.sample: VCS object and history 
+metadata is outside the bounded artifact inspection profile.
+  - vcs_metadata .git/hooks/commit-msg.sample: VCS object and history metadata 
+is outside the bounded artifact inspection profile.
+  - vcs_metadata .git/hooks/fsmonitor-watchman.sample: VCS object and history 
+metadata is outside the bounded artifact inspection profile.
+  - vcs_metadata .git/hooks/post-update.sample: VCS object and history metadata 
+is outside the bounded artifact inspection profile.
+  - vcs_metadata .git/hooks/pre-applypatch.sample: VCS object and history 
+metadata is outside the bounded artifact inspection profile.
+  - vcs_metadata .git/hooks/pre-commit.sample: VCS object and history metadata 
+is outside the bounded artifact inspection profile.
+  - vcs_metadata .git/hooks/pre-merge-commit.sample: VCS object and history 
+metadata is outside the bounded artifact inspection profile.
+  - vcs_metadata .git/hooks/pre-push.sample: VCS object and history metadata is 
+outside the bounded artifact inspection profile.
+  - vcs_metadata .git/hooks/pre-rebase.sample: VCS object and history metadata 
+is outside the bounded artifact inspection profile.
+  - vcs_metadata .git/hooks/pre-receive.sample: VCS object and history metadata 
+is outside the bounded artifact inspection profile.
+  - vcs_metadata .git/hooks/prepare-commit-msg.sample: VCS object and history 
+metadata is outside the bounded artifact inspection profile.
+  - vcs_metadata .git/hooks/push-to-checkout.sample: VCS object and history 
+metadata is outside the bounded artifact inspection profile.
+  - vcs_metadata .git/hooks/sendemail-validate.sample: VCS object and history 
+metadata is outside the bounded artifact inspection profile.
+  - vcs_metadata .git/hooks/update.sample: VCS object and history metadata is 
+outside the bounded artifact inspection profile.
+  - vcs_metadata .git/index: VCS object and history metadata is outside the 
+bounded artifact inspection profile.
+  - vcs_metadata .git/info/: VCS object and history metadata is outside the 
+bounded artifact inspection profile.
+  - vcs_metadata .git/logs/: VCS object and history metadata is outside the 
+bounded artifact inspection profile.
+  - vcs_metadata .git/objects/: VCS object and history metadata is outside the 
+bounded artifact inspection profile.
+  - vcs_metadata .git/packed-refs: VCS object and history metadata is outside 
+the bounded artifact inspection profile.
+  - vcs_metadata .git/refs/: VCS object and history metadata is outside the 
+bounded artifact inspection profile.
+Analyzer statuses
+  - completed : 
+  - completed : 
+  - completed : 
+  - no_applicable_files : No files matched this analyzer's applicability 
+contract.
+  - manifest_absent : No compatible manifest was present for this analyzer.
+  - completed : 
+  - manifest_absent : No compatible manifest was present for this analyzer.
+  - disabled_by_configuration : Analyzer was disabled by the requested 
+configuration.
+  - disabled_by_configuration : Analyzer was disabled by the requested 
+configuration.
+  - disabled_by_configuration : Analyzer was disabled by the requested 
+configuration.
+  - disabled_by_configuration : Analyzer was disabled by the requested 
+configuration.
+  - completed : 
+  - completed : 
+  - completed : 
+  - completed : 
+  - completed : 
+  - completed : 
+  - completed : 
+  - completed : 
+  - completed : 
+  - completed : 
+  - completed : 
+  - completed : 
+  - completed : 
+  - completed : 
+  - completed : 
+  - completed : 
+Executable scripts: Yes
+

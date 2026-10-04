@@ -1,0 +1,11 @@
+What makes AI footage actually believable is the most boring step in the pipeline. Colour grading. Here is a recent work we did with VEO 3 on Higgsfield.
+
+Blend a generated scene with footage from a real camera and the giveaway is the mismatch in tone, temperature and contrast. Resolution is rarely the problem. Real light behaves in a certain way, and AI light needs grading to align.
+
+This is the kind of craft a one-person studio lives on. When I cut to one and kept serving premium clients, taste in post became the moat, not the size of the team.
+
+Done well, the grade disappears and the eye accepts one world. Done badly, the brain knows something is off.
+
+The future of this work is taste in post, far more than better prompts.
+
+Care about making AI look genuinely premium? DM me and we will go deep.
