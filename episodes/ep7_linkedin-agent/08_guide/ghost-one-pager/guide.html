@@ -1,0 +1,68 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><title>Automate your LinkedIn with Claude</title><link rel="stylesheet" href="style.css"></head><body>
+
+<section class="page op">
+  <div class="top">
+    <div>
+      <span class="kick">Cooked or Cracked</span>
+      <h1>Automate your <i>LinkedIn</i><br>with Claude.</h1>
+      <p class="lede">Drop a video, a photo and a poster into Claude. It checks your project files, writes the post and puts it in Buffer. You say yes, Buffer posts it. Once set up, our test took about 10 minutes, drop to live.</p>
+      <p class="what2"><b>What this is:</b> 11 free, open-source Claude skills for LinkedIn (MIT licence) that write and score your posts. <b>They do not post.</b> Their own README says so: <q>These skills write. You post.</q> The posting goes through <a href="https://buffer.com/integrations/claude">Buffer's connector for Claude</a>, and Buffer <a href="https://buffer.com/linkedin-capabilities">works with LinkedIn as an official marketing partner</a>.</p>
+
+    </div>
+    <div class="right">
+      <div class="proof">
+        <div class="label">live on LinkedIn, 4 Oct</div>
+        <img src="img/live-post.jpg" alt="The finished post, live on LinkedIn">
+      </div>
+      <p class="needs"><b>You need:</b> a paid <a href="https://claude.com/pricing">Claude plan</a> (Pro or above), the <a href="https://claude.com/download">Claude desktop app</a>, a <a href="https://buffer.com/pricing">Buffer Essentials plan</a> (what we tested).</p>
+    </div>
+  </div>
+
+  <div class="steps">
+    <div class="st">
+      <div class="hd"><div class="bd">1</div><h3>Install the skills</h3><img class="ic" src="img/icons/download-square-bold.svg" alt=""></div>
+      <div class="time">about 5 min</div>
+      <p>In the Claude desktop app, click the <b>Code</b> tab (Claude working on the files in a folder you pick). Find the 11 free LinkedIn skills on GitHub, paste the repo link and type:</p>
+      <p class="cmd">scan this with NVIDIA SkillSpector, then install the skills if it is low risk</p>
+      <div class="need">Prefer to scan it yourself? See rule 1 below.</div>
+    </div>
+    <div class="st">
+      <div class="hd"><div class="bd">2</div><h3>Connect Buffer</h3><img class="ic" src="img/icons/plug-circle-bold.svg" alt=""></div>
+      <div class="time">about 3 min</div>
+      <p>Sign up to Buffer and add LinkedIn. On claude.ai (same account as the app): <b>Customize → Connectors → Add custom connector</b>. Name <b>Buffer</b>, URL <code>https://mcp.buffer.com/mcp</code>. Add, Connect, sign in, approve (<a href="https://buffer.com/integrations/claude">Buffer's steps</a>). Test in the Code tab: <code>list my Buffer channels</code></p>
+      <div class="need"><a href="https://buffer.com/pricing">Buffer Essentials</a>: US$5 a month per channel, billed yearly, 14-day free trial.</div>
+    </div>
+    <div class="st">
+      <div class="hd"><div class="bd">3</div><h3>Drop and prompt</h3><img class="ic" src="img/icons/paperclip-bold.svg" alt=""></div>
+      <div class="time">about 10 min</div>
+      <p>Start a Code tab session in a folder with your notes (past posts, event details), or put the facts in the prompt. Drag in the three files, paste the prompt, check the draft and preview, say yes.</p>
+      <p class="warn"><b>Files left off?</b> Buffer's connector needs files as web links. Drag them into the Buffer draft before it goes out.</p>
+    </div>
+  </div>
+
+  <div class="prompt2">
+    <div class="ph"><img src="img/icons/copy-bold.svg" alt=""><b>The prompt</b><span>from the Reel, tidied up. Copy it and fill in the [brackets].</span></div>
+    <pre>Help me post this on my LinkedIn <em>[tomorrow at 9 am]</em>. It is about <em>[what it is]</em>, and the goal is <em>[sign-ups / an update / proof of work]</em>. Check my project files for the facts and for things I have done before that fit. Use my LinkedIn skills to write it in my voice and score it. Save it as a draft in Buffer with these files and show me the preview. Schedule it only after I say yes.</pre>
+  </div>
+
+  <div class="h2s"><span class="tag">stay safe</span> Three rules before you connect anything</div>
+  <div class="safe">
+    <div class="sf"><img src="img/icons/shield-check-bold.svg" alt=""><div><b>Scan every skill first</b><p>Install NVIDIA's free <a href="https://github.com/NVIDIA/skillspector">SkillSpector</a>, then run <code>skillspector scan --no-llm &lt;repo link&gt;</code>. The set we tested came back low risk.</p></div></div>
+    <div class="sf"><img src="img/icons/verified-check-bold.svg" alt=""><div><b>Only approved apps</b><p>Check the app is a named LinkedIn partner, as <a href="https://buffer.com/linkedin-capabilities">Buffer</a> does. Read what you approve: our Buffer connection lists 9 permissions.</p></div></div>
+    <div class="sf"><img src="img/icons/cursor-bold.svg" alt=""><div><b>No bots on LinkedIn</b><p><a href="https://www.linkedin.com/legal/user-agreement#dos">LinkedIn's User Agreement</a> bans bots that post, comment or like. Buffer is the approved route. Check every draft too: ours said "tonight" for a class the next day.</p></div></div>
+  </div>
+
+  <div class="h2s"><span class="tag">the honest bit</span> Who this is for, and who it is not for</div>
+  <div class="who">
+    <div class="card"><div class="k">just started on LinkedIn?</div><div class="n">Use Buffer by hand</div><p>Write and schedule in Buffer yourself until you know what works.</p></div>
+    <div class="card win"><div class="k">experienced and comfortable?</div><div class="n">Use Claude</div><p>You know your voice and check every draft. One prompt does the research and the copy-paste.</p></div>
+  </div>
+
+  <div class="end">
+    <div class="caveat"><span class="hand">about the details in this guide</span><br>Prices, limits and plan details were checked on 5 October 2026 on the pages linked in each step. Buffer, Anthropic and LinkedIn change pricing, limits, connectors and terms at their own discretion, sometimes weekly. Treat every figure here as a snapshot on that date, not a quote, and confirm on the linked page before you pay. I am not affiliated with any of these companies and I do not earn from these links.</div>
+    <p class="sig">Henry Chua<span class="coral">.</span></p>
+  </div>
+
+  <div class="foot"><span>Cooked or Cracked · Automate your LinkedIn with Claude</span><span>tested 4 Oct 2026</span></div>
+</section>
+</body></html>

@@ -1,0 +1,1158 @@
+[
+ {
+  "id": "B01_true-test",
+  "lines": [
+   "R04"
+  ],
+  "timelineStart": 152,
+  "timelineEnd": 248,
+  "duration": 96,
+  "text": "So the true test is does it run on my LinkedIn?",
+  "words": [
+   {
+    "w": "So",
+    "f": 3
+   },
+   {
+    "w": "the",
+    "f": 6
+   },
+   {
+    "w": "true",
+    "f": 16
+   },
+   {
+    "w": "test",
+    "f": 28
+   },
+   {
+    "w": "is",
+    "f": 41
+   },
+   {
+    "w": "does",
+    "f": 51
+   },
+   {
+    "w": "it",
+    "f": 58
+   },
+   {
+    "w": "run",
+    "f": 62
+   },
+   {
+    "w": "on",
+    "f": 68
+   },
+   {
+    "w": "my",
+    "f": 71
+   },
+   {
+    "w": "LinkedIn?",
+    "f": 75
+   }
+  ],
+  "brief": "The question of the whole episode. Set up 'the test': Claude on one side, Henry's LinkedIn on the other, and a connection that has not been proven yet. e.g. a Claude spark tile and a LinkedIn 'in' tile drawn as paper cutouts; a dashed wire draws between them on 'run'; a big hand-drawn question mark / test-tube or 'TEST' label pops on 'true test'; on 'LinkedIn' the LinkedIn tile pops. Feels like the opening of an experiment.",
+  "canvas": {
+   "width": 980,
+   "height": 500
+  },
+  "place": {
+   "left": 50,
+   "top": 234,
+   "width": 980,
+   "height": 500
+  }
+ },
+ {
+  "id": "B02_ghostwriter",
+  "lines": [
+   "P01a",
+   "P01"
+  ],
+  "timelineStart": 248,
+  "timelineEnd": 381,
+  "duration": 133,
+  "text": "People have told me that I have a ghostwriter on LinkedIn. Honestly, it's just AI.",
+  "words": [
+   {
+    "w": "People",
+    "f": 1
+   },
+   {
+    "w": "have",
+    "f": 11
+   },
+   {
+    "w": "told",
+    "f": 18
+   },
+   {
+    "w": "me",
+    "f": 26
+   },
+   {
+    "w": "that",
+    "f": 29
+   },
+   {
+    "w": "I",
+    "f": 35
+   },
+   {
+    "w": "have",
+    "f": 37
+   },
+   {
+    "w": "a",
+    "f": 44
+   },
+   {
+    "w": "ghostwriter",
+    "f": 47
+   },
+   {
+    "w": "on",
+    "f": 64
+   },
+   {
+    "w": "LinkedIn.",
+    "f": 69
+   },
+   {
+    "w": "Honestly,",
+    "f": 88
+   },
+   {
+    "w": "it's",
+    "f": 107
+   },
+   {
+    "w": "just",
+    "f": 116
+   },
+   {
+    "w": "AI.",
+    "f": 123
+   }
+  ],
+  "brief": "Rumour \u2192 reveal. On 'People have told me' comment bubbles pop in around (e.g. 'who writes these?', 'you have a ghostwriter?'). On 'ghostwriter' a cute paper ghost appears typing at a tiny desk/laptop. On 'Honestly, it's just AI' the ghost's sheet is whisked off revealing the Claude spark/AI underneath, bubbles get crossed out or a stamp lands. Tasteful, witty, not cartoon-busy.",
+  "canvas": {
+   "width": 980,
+   "height": 500
+  },
+  "place": {
+   "left": 50,
+   "top": 234,
+   "width": 980,
+   "height": 500
+  }
+ },
+ {
+  "id": "B03_30days",
+  "lines": [
+   "P02"
+  ],
+  "timelineStart": 381,
+  "timelineEnd": 539,
+  "duration": 158,
+  "text": "I ran a challenge in May and I posted 30 days straight, no fail, Monday to Friday.",
+  "words": [
+   {
+    "w": "I",
+    "f": 1
+   },
+   {
+    "w": "ran",
+    "f": 3
+   },
+   {
+    "w": "a",
+    "f": 12
+   },
+   {
+    "w": "challenge",
+    "f": 13
+   },
+   {
+    "w": "in",
+    "f": 37
+   },
+   {
+    "w": "May",
+    "f": 42
+   },
+   {
+    "w": "and",
+    "f": 51
+   },
+   {
+    "w": "I",
+    "f": 58
+   },
+   {
+    "w": "posted",
+    "f": 60
+   },
+   {
+    "w": "30",
+    "f": 75
+   },
+   {
+    "w": "days",
+    "f": 84
+   },
+   {
+    "w": "straight,",
+    "f": 98
+   },
+   {
+    "w": "no",
+    "f": 102
+   },
+   {
+    "w": "fail,",
+    "f": 107
+   },
+   {
+    "w": "Monday",
+    "f": 120
+   },
+   {
+    "w": "to",
+    "f": 134
+   },
+   {
+    "w": "Friday.",
+    "f": 138
+   }
+  ],
+  "brief": "The May challenge as a calendar. Real data: window Mon 4 May \u2192 Tue 2 Jun 2026, he posted every weekday (Mon\u2013Fri) = 22 posting days; weekends greyed. On 'challenge in May' a paper calendar card flips in titled MAY CHALLENGE; as he says 'posted 30 days straight' ticks sweep across the weekday cells in order with a running day counter; on 'no fail' a streak/flame or '0 missed' mark lands; on 'Monday to Friday' the M\u2013F column headers get the orange underline. This beat is the one Henry called static: make it feel alive and satisfying.",
+  "canvas": {
+   "width": 980,
+   "height": 500
+  },
+  "place": {
+   "left": 50,
+   "top": 234,
+   "width": 980,
+   "height": 500
+  }
+ },
+ {
+  "id": "B04_36posts",
+  "lines": [
+   "P03"
+  ],
+  "timelineStart": 539,
+  "timelineEnd": 702,
+  "duration": 163,
+  "text": "So 36 posts in 30 days, Claude wrote them. Buffer is the app that I'm using, posted them.",
+  "words": [
+   {
+    "w": "So",
+    "f": 1
+   },
+   {
+    "w": "36",
+    "f": 4
+   },
+   {
+    "w": "posts",
+    "f": 16
+   },
+   {
+    "w": "in",
+    "f": 25
+   },
+   {
+    "w": "30",
+    "f": 29
+   },
+   {
+    "w": "days,",
+    "f": 40
+   },
+   {
+    "w": "Claude",
+    "f": 51
+   },
+   {
+    "w": "wrote",
+    "f": 63
+   },
+   {
+    "w": "them.",
+    "f": 72
+   },
+   {
+    "w": "Buffer",
+    "f": 87
+   },
+   {
+    "w": "is",
+    "f": 99
+   },
+   {
+    "w": "the",
+    "f": 105
+   },
+   {
+    "w": "app",
+    "f": 108
+   },
+   {
+    "w": "that",
+    "f": 115
+   },
+   {
+    "w": "I'm",
+    "f": 122
+   },
+   {
+    "w": "using,",
+    "f": 127
+   },
+   {
+    "w": "posted",
+    "f": 137
+   },
+   {
+    "w": "them.",
+    "f": 149
+   }
+  ],
+  "brief": "Who did what. On '36 posts' a counter rolls up to 36 while mini post cards stack/fan. On 'Claude wrote them' a Claude box writes lines into a card (pen/scribble). On 'Buffer is the app that I'm using, posted them' the cards travel through a Buffer box (queue/stack icon) and land on LinkedIn. Clear left-to-right pipeline: Claude (writes) \u2192 Buffer (posts) \u2192 LinkedIn.",
+  "canvas": {
+   "width": 980,
+   "height": 500
+  },
+  "place": {
+   "left": 50,
+   "top": 234,
+   "width": 980,
+   "height": 500
+  }
+ },
+ {
+  "id": "B05_results",
+  "lines": [
+   "P04a",
+   "P04",
+   "P05"
+  ],
+  "timelineStart": 702,
+  "timelineEnd": 1039,
+  "duration": 337,
+  "text": "So how it went? 9,600 impressions, a median of 134 per post against 217 for the rest of my year. More posts didn't mean it reached more people.",
+  "words": [
+   {
+    "w": "So",
+    "f": 1
+   },
+   {
+    "w": "how",
+    "f": 5
+   },
+   {
+    "w": "it",
+    "f": 12
+   },
+   {
+    "w": "went?",
+    "f": 15
+   },
+   {
+    "w": "9,600",
+    "f": 29
+   },
+   {
+    "w": "impressions,",
+    "f": 64
+   },
+   {
+    "w": "a",
+    "f": 94
+   },
+   {
+    "w": "median",
+    "f": 97
+   },
+   {
+    "w": "of",
+    "f": 117
+   },
+   {
+    "w": "134",
+    "f": 123
+   },
+   {
+    "w": "per",
+    "f": 152
+   },
+   {
+    "w": "post",
+    "f": 162
+   },
+   {
+    "w": "against",
+    "f": 176
+   },
+   {
+    "w": "217",
+    "f": 196
+   },
+   {
+    "w": "for",
+    "f": 222
+   },
+   {
+    "w": "the",
+    "f": 226
+   },
+   {
+    "w": "rest",
+    "f": 231
+   },
+   {
+    "w": "of",
+    "f": 237
+   },
+   {
+    "w": "my",
+    "f": 240
+   },
+   {
+    "w": "year.",
+    "f": 243
+   },
+   {
+    "w": "More",
+    "f": 254
+   },
+   {
+    "w": "posts",
+    "f": 262
+   },
+   {
+    "w": "didn't",
+    "f": 272
+   },
+   {
+    "w": "mean",
+    "f": 284
+   },
+   {
+    "w": "it",
+    "f": 292
+   },
+   {
+    "w": "reached",
+    "f": 296
+   },
+   {
+    "w": "more",
+    "f": 310
+   },
+   {
+    "w": "people.",
+    "f": 318
+   }
+  ],
+  "brief": "The results, honestly. 'So how it went?' \u2192 a results card opens. '9,600 impressions' \u2192 an eye/impressions counter rolls to 9,600. 'a median of 134 per post against 217 for the rest of my year' \u2192 two bars grow: 'May challenge' 134 (accent) vs 'rest of year' 217 (ink, taller), numbers counting with the bars. 'More posts didn't mean it reached more people' \u2192 a small chart: posts line climbs while reach line stays flat, ending with a hand-written 'more posts \u2260 more reach'. Two or three clean sub-scenes inside one MG with quick transitions.",
+  "canvas": {
+   "width": 980,
+   "height": 500
+  },
+  "place": {
+   "left": 50,
+   "top": 234,
+   "width": 980,
+   "height": 500
+  }
+ },
+ {
+  "id": "B06_posting",
+  "lines": [
+   "R10"
+  ],
+  "timelineStart": 1039,
+  "timelineEnd": 1270,
+  "duration": 231,
+  "text": "What it helped me to do is directly on my LinkedIn, it actually does help me do the posting when I put one video, one photo and a poster inside.",
+  "words": [
+   {
+    "w": "What",
+    "f": 3
+   },
+   {
+    "w": "it",
+    "f": 9
+   },
+   {
+    "w": "helped",
+    "f": 12
+   },
+   {
+    "w": "me",
+    "f": 23
+   },
+   {
+    "w": "to",
+    "f": 29
+   },
+   {
+    "w": "do",
+    "f": 30
+   },
+   {
+    "w": "is",
+    "f": 34
+   },
+   {
+    "w": "directly",
+    "f": 39
+   },
+   {
+    "w": "on",
+    "f": 55
+   },
+   {
+    "w": "my",
+    "f": 60
+   },
+   {
+    "w": "LinkedIn,",
+    "f": 65
+   },
+   {
+    "w": "it",
+    "f": 84
+   },
+   {
+    "w": "actually",
+    "f": 87
+   },
+   {
+    "w": "does",
+    "f": 103
+   },
+   {
+    "w": "help",
+    "f": 112
+   },
+   {
+    "w": "me",
+    "f": 119
+   },
+   {
+    "w": "do",
+    "f": 122
+   },
+   {
+    "w": "the",
+    "f": 126
+   },
+   {
+    "w": "posting",
+    "f": 133
+   },
+   {
+    "w": "when",
+    "f": 146
+   },
+   {
+    "w": "I",
+    "f": 154
+   },
+   {
+    "w": "put",
+    "f": 156
+   },
+   {
+    "w": "one",
+    "f": 164
+   },
+   {
+    "w": "video,",
+    "f": 168
+   },
+   {
+    "w": "one",
+    "f": 182
+   },
+   {
+    "w": "photo",
+    "f": 188
+   },
+   {
+    "w": "and",
+    "f": 200
+   },
+   {
+    "w": "a",
+    "f": 204
+   },
+   {
+    "w": "poster",
+    "f": 206
+   },
+   {
+    "w": "inside.",
+    "f": 216
+   }
+  ],
+  "brief": "The money shot: Claude does the posting. A Claude chat window (paper UI mock). On 'one video', 'one photo', 'a poster' three file cards drop into the chat input exactly on each word (video has a play triangle, photo a mountain/sun, poster a tall card with an orange header). Before that, on 'directly on my LinkedIn' a LinkedIn tile sits at the right waiting; on 'posting' Claude sends and a LinkedIn post card (Henry Chua \u00b7 now) goes live with a check/'POSTED' mark. Use the real post: poster 'The AI Driving License' + class photo thumbnails as simple shapes.",
+  "canvas": {
+   "width": 980,
+   "height": 500
+  },
+  "place": {
+   "left": 50,
+   "top": 234,
+   "width": 980,
+   "height": 500
+  }
+ },
+ {
+  "id": "B07_files_10min",
+  "lines": [
+   "R06b",
+   "R07"
+  ],
+  "timelineStart": 1270,
+  "timelineEnd": 1426,
+  "duration": 156,
+  "text": "Claude actually checked my old project files And totally it took about 10 minutes.",
+  "words": [
+   {
+    "w": "Claude",
+    "f": 0
+   },
+   {
+    "w": "actually",
+    "f": 11
+   },
+   {
+    "w": "checked",
+    "f": 24
+   },
+   {
+    "w": "my",
+    "f": 36
+   },
+   {
+    "w": "old",
+    "f": 39
+   },
+   {
+    "w": "project",
+    "f": 47
+   },
+   {
+    "w": "files",
+    "f": 56
+   },
+   {
+    "w": "And",
+    "f": 65
+   },
+   {
+    "w": "totally",
+    "f": 72
+   },
+   {
+    "w": "it",
+    "f": 90
+   },
+   {
+    "w": "took",
+    "f": 94
+   },
+   {
+    "w": "about",
+    "f": 104
+   },
+   {
+    "w": "10",
+    "f": 116
+   },
+   {
+    "w": "minutes.",
+    "f": 131
+   }
+  ],
+  "brief": "Speed + context. On 'checked my old project files' a stack of project folders/files fans out and a magnifier (or scanning beam) passes over them, each getting a small tick. On 'totally it took about 10 minutes' a stopwatch/clock face sweeps quickly to 10:00 with a big '10 MIN' landing on 'minutes'.",
+  "canvas": {
+   "width": 980,
+   "height": 500
+  },
+  "place": {
+   "left": 50,
+   "top": 234,
+   "width": 980,
+   "height": 500
+  }
+ },
+ {
+  "id": "B08_past_buffer",
+  "lines": [
+   "R08"
+  ],
+  "timelineStart": 1426,
+  "timelineEnd": 1544,
+  "duration": 118,
+  "text": "Now this is crazy because in the past I have to use Buffer to do it.",
+  "words": [
+   {
+    "w": "Now",
+    "f": 0
+   },
+   {
+    "w": "this",
+    "f": 8
+   },
+   {
+    "w": "is",
+    "f": 19
+   },
+   {
+    "w": "crazy",
+    "f": 24
+   },
+   {
+    "w": "because",
+    "f": 39
+   },
+   {
+    "w": "in",
+    "f": 58
+   },
+   {
+    "w": "the",
+    "f": 61
+   },
+   {
+    "w": "past",
+    "f": 66
+   },
+   {
+    "w": "I",
+    "f": 74
+   },
+   {
+    "w": "have",
+    "f": 76
+   },
+   {
+    "w": "to",
+    "f": 84
+   },
+   {
+    "w": "use",
+    "f": 87
+   },
+   {
+    "w": "Buffer",
+    "f": 93
+   },
+   {
+    "w": "to",
+    "f": 106
+   },
+   {
+    "w": "do",
+    "f": 110
+   },
+   {
+    "w": "it.",
+    "f": 114
+   }
+  ],
+  "brief": "IN THE PAST (sepia/rewind feel within the palette, e.g. ink-only, greyed paper, a 'BEFORE' tab). Show the manual Buffer routine as a slow checklist that a hand cursor ticks one by one: copy the post \u2192 open Buffer \u2192 upload media \u2192 pick a time \u2192 schedule. On 'crazy' a little exclamation; on 'Buffer to do it' the Buffer card is circled. Should feel tedious in a witty way, not ugly.",
+  "canvas": {
+   "width": 980,
+   "height": 500
+  },
+  "place": {
+   "left": 50,
+   "top": 234,
+   "width": 980,
+   "height": 500
+  }
+ },
+ {
+  "id": "B09_now_prompt",
+  "lines": [
+   "R05"
+  ],
+  "timelineStart": 1544,
+  "timelineEnd": 1741,
+  "duration": 197,
+  "text": "now with this prompt, it can be done entirely through Claude, as long as you have the right measures to connect to LinkedIn.",
+  "words": [
+   {
+    "w": "now",
+    "f": 1
+   },
+   {
+    "w": "with",
+    "f": 7
+   },
+   {
+    "w": "this",
+    "f": 15
+   },
+   {
+    "w": "prompt,",
+    "f": 23
+   },
+   {
+    "w": "it",
+    "f": 40
+   },
+   {
+    "w": "can",
+    "f": 44
+   },
+   {
+    "w": "be",
+    "f": 51
+   },
+   {
+    "w": "done",
+    "f": 56
+   },
+   {
+    "w": "entirely",
+    "f": 65
+   },
+   {
+    "w": "through",
+    "f": 82
+   },
+   {
+    "w": "Claude,",
+    "f": 91
+   },
+   {
+    "w": "as",
+    "f": 99
+   },
+   {
+    "w": "long",
+    "f": 103
+   },
+   {
+    "w": "as",
+    "f": 111
+   },
+   {
+    "w": "you",
+    "f": 117
+   },
+   {
+    "w": "have",
+    "f": 121
+   },
+   {
+    "w": "the",
+    "f": 129
+   },
+   {
+    "w": "right",
+    "f": 135
+   },
+   {
+    "w": "measures",
+    "f": 146
+   },
+   {
+    "w": "to",
+    "f": 162
+   },
+   {
+    "w": "connect",
+    "f": 165
+   },
+   {
+    "w": "to",
+    "f": 176
+   },
+   {
+    "w": "LinkedIn.",
+    "f": 180
+   }
+  ],
+  "brief": "NOW. A single prompt bar types (e.g. 'post this to my LinkedIn') on 'with this prompt'. On 'entirely through Claude' the same steps from the past beat tick off instantly in a cascade inside Claude. On 'right measures to connect to LinkedIn' a plug/connector snaps into the LinkedIn tile with a small lock and a label 'via Buffer API \u00b7 LinkedIn-approved' (this is the honest mechanism). Contrast with B08: fast, clean, accent colour.",
+  "canvas": {
+   "width": 980,
+   "height": 500
+  },
+  "place": {
+   "left": 50,
+   "top": 234,
+   "width": 980,
+   "height": 500
+  }
+ },
+ {
+  "id": "B10_verified",
+  "lines": [
+   "R09"
+  ],
+  "timelineStart": 1741,
+  "timelineEnd": 1864,
+  "duration": 123,
+  "text": "So always please check for your third-party apps if it's LinkedIn verified",
+  "words": [
+   {
+    "w": "So",
+    "f": 1
+   },
+   {
+    "w": "always",
+    "f": 4
+   },
+   {
+    "w": "please",
+    "f": 14
+   },
+   {
+    "w": "check",
+    "f": 23
+   },
+   {
+    "w": "for",
+    "f": 32
+   },
+   {
+    "w": "your",
+    "f": 36
+   },
+   {
+    "w": "third-party",
+    "f": 48
+   },
+   {
+    "w": "apps",
+    "f": 59
+   },
+   {
+    "w": "if",
+    "f": 67
+   },
+   {
+    "w": "it's",
+    "f": 71
+   },
+   {
+    "w": "LinkedIn",
+    "f": 80
+   },
+   {
+    "w": "verified",
+    "f": 99
+   }
+  ],
+  "brief": "Safety check. An app-permission card list: 'Buffer' with a LinkedIn-verified shield \u2713, and a sketchy unnamed 'auto-poster' with a \u2717. A magnifier checks them on 'check your third-party apps'; on 'LinkedIn verified' a big verified shield/badge stamps down. Don't name any real bad app.",
+  "canvas": {
+   "width": 980,
+   "height": 500
+  },
+  "place": {
+   "left": 50,
+   "top": 234,
+   "width": 980,
+   "height": 500
+  }
+ },
+ {
+  "id": "B11_buffer_or_claude",
+  "lines": [
+   "C02"
+  ],
+  "timelineStart": 1864,
+  "timelineEnd": 2057,
+  "duration": 193,
+  "text": "If you just started and don't really know what to do, use Buffer. Only use Claude to do this if you're experienced and you're comfortable with it.",
+  "words": [
+   {
+    "w": "If",
+    "f": 0
+   },
+   {
+    "w": "you",
+    "f": 3
+   },
+   {
+    "w": "just",
+    "f": 8
+   },
+   {
+    "w": "started",
+    "f": 14
+   },
+   {
+    "w": "and",
+    "f": 26
+   },
+   {
+    "w": "don't",
+    "f": 29
+   },
+   {
+    "w": "really",
+    "f": 34
+   },
+   {
+    "w": "know",
+    "f": 41
+   },
+   {
+    "w": "what",
+    "f": 47
+   },
+   {
+    "w": "to",
+    "f": 56
+   },
+   {
+    "w": "do,",
+    "f": 61
+   },
+   {
+    "w": "use",
+    "f": 69
+   },
+   {
+    "w": "Buffer.",
+    "f": 73
+   },
+   {
+    "w": "Only",
+    "f": 92
+   },
+   {
+    "w": "use",
+    "f": 100
+   },
+   {
+    "w": "Claude",
+    "f": 105
+   },
+   {
+    "w": "to",
+    "f": 117
+   },
+   {
+    "w": "do",
+    "f": 121
+   },
+   {
+    "w": "this",
+    "f": 125
+   },
+   {
+    "w": "if",
+    "f": 134
+   },
+   {
+    "w": "you're",
+    "f": 136
+   },
+   {
+    "w": "experienced",
+    "f": 144
+   },
+   {
+    "w": "and",
+    "f": 160
+   },
+   {
+    "w": "you're",
+    "f": 163
+   },
+   {
+    "w": "comfortable",
+    "f": 171
+   },
+   {
+    "w": "with",
+    "f": 182
+   },
+   {
+    "w": "it.",
+    "f": 188
+   }
+  ],
+  "brief": "Who should use what. A fork / two paths from 'YOU': 'Just started? \u2192 Buffer' (on 'just started' \u2026 'use Buffer') and 'Experienced & comfortable? \u2192 Claude' (on 'experienced'). Make it save-worthy: it ends as a clean two-row summary card (Beginner \u2192 Buffer \u00b7 free plan | Experienced \u2192 Claude + one prompt). Honest footnote small: 'Claude posts through Buffer's API'.",
+  "canvas": {
+   "width": 980,
+   "height": 500
+  },
+  "place": {
+   "left": 50,
+   "top": 234,
+   "width": 980,
+   "height": 500
+  }
+ },
+ {
+  "id": "B12_ghost_cta",
+  "lines": [
+   "Z01"
+  ],
+  "timelineStart": 2159,
+  "timelineEnd": 2236,
+  "duration": 77,
+  "text": "comment GHOST and I'll send you my workflow.",
+  "words": [
+   {
+    "w": "comment",
+    "f": 3
+   },
+   {
+    "w": "GHOST",
+    "f": 15
+   },
+   {
+    "w": "and",
+    "f": 26
+   },
+   {
+    "w": "I'll",
+    "f": 31
+   },
+   {
+    "w": "send",
+    "f": 38
+   },
+   {
+    "w": "you",
+    "f": 44
+   },
+   {
+    "w": "my",
+    "f": 49
+   },
+   {
+    "w": "workflow.",
+    "f": 55
+   }
+  ],
+  "brief": "CTA, only 62 frames (2 s), smaller canvas 820x420 placed at 130/236 above Henry's big card. Words available: 'comment GHOST and I'll send you my workflow' (the 'If you like what you see' part is before this MG starts). An Instagram-style comment field types 'GHOST' fast and sends, then a DM bubble slides in with a 'my workflow' file card. Big, readable, punchy; 'GHOST' must be the biggest word.",
+  "canvas": {
+   "width": 820,
+   "height": 420
+  },
+  "place": {
+   "left": 130,
+   "top": 236,
+   "width": 820,
+   "height": 420
+  }
+ }
+]

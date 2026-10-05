@@ -1,0 +1,245 @@
+{
+ "fps": 30,
+ "sources": {
+  "take26": "/Users/henrychua/Content Creation/DRIVE_Cooked-or-Cracked_Ep7_LinkedIn-Agent/04_raw-footage/transcripts/take26-16k.wav"
+ },
+ "items": [
+  {
+   "take": "take26",
+   "in": 132.71,
+   "frames": 91,
+   "label": "R04",
+   "text": "R04 So the true test is, does it run on my LinkedIn?"
+  },
+  {
+   "spacer": 5
+  },
+  {
+   "take": "take26",
+   "in": 10.94,
+   "frames": 83,
+   "label": "P01a",
+   "text": "P01a People have told me that I have a ghostwriter on LinkedIn."
+  },
+  {
+   "spacer": 4
+  },
+  {
+   "take": "take26",
+   "in": 14.32,
+   "frames": 42,
+   "label": "P01",
+   "text": "P01 Honestly, it's just AI."
+  },
+  {
+   "spacer": 4
+  },
+  {
+   "take": "take26",
+   "in": 17.99,
+   "frames": 50,
+   "label": "P02.1",
+   "text": "P02 I ran a challenge in May and I posted 30 days straight, no fail, Monday to Friday."
+  },
+  {
+   "take": "take26",
+   "in": 19.92,
+   "frames": 78,
+   "label": "P02.2",
+   "text": "P02 I ran a challenge in May and I posted 30 days straight, no fail, Monday to Friday."
+  },
+  {
+   "take": "take26",
+   "in": 22.86,
+   "frames": 27,
+   "label": "P02.3",
+   "text": "P02 I ran a challenge in May and I posted 30 days straight, no fail, Monday to Friday."
+  },
+  {
+   "spacer": 3
+  },
+  {
+   "take": "take26",
+   "in": 26.71,
+   "frames": 11,
+   "label": "P03.1",
+   "text": "P03 So 36 posts in 30 days, Claude wrote them. Buffer is the app that I'm using, posted them."
+  },
+  {
+   "take": "take26",
+   "in": 27.26,
+   "frames": 70,
+   "label": "P03.2",
+   "text": "P03 So 36 posts in 30 days, Claude wrote them. Buffer is the app that I'm using, posted them."
+  },
+  {
+   "take": "take26",
+   "in": 29.65,
+   "frames": 75,
+   "label": "P03.3",
+   "text": "P03 So 36 posts in 30 days, Claude wrote them. Buffer is the app that I'm using, posted them."
+  },
+  {
+   "spacer": 7
+  },
+  {
+   "take": "take26",
+   "in": 51.4,
+   "frames": 24,
+   "label": "P04a",
+   "text": "P04a So how it went?"
+  },
+  {
+   "spacer": 3
+  },
+  {
+   "take": "take26",
+   "in": 53.83,
+   "frames": 194,
+   "label": "P04.1",
+   "text": "P04 9,600 impressions, a median of 134 per post against 217 for the rest of my year."
+  },
+  {
+   "take": "take26",
+   "in": 60.45,
+   "frames": 29,
+   "label": "P04.2",
+   "text": "P04 9,600 impressions, a median of 134 per post against 217 for the rest of my year."
+  },
+  {
+   "spacer": 4
+  },
+  {
+   "take": "take26",
+   "in": 65.08,
+   "frames": 77,
+   "label": "P05",
+   "text": "P05 More posts didn't mean it reached more people."
+  },
+  {
+   "spacer": 6
+  },
+  {
+   "take": "take26",
+   "in": 213.84,
+   "frames": 82,
+   "label": "R10.1",
+   "text": "R10 What it helped me to do is directly on my LinkedIn, it actually does help me do the posting when I put one video, one photo and a poster inside."
+  },
+  {
+   "take": "take26",
+   "in": 216.97,
+   "frames": 146,
+   "label": "R10.2",
+   "text": "R10 What it helped me to do is directly on my LinkedIn, it actually does help me do the posting when I put one video, one photo and a poster inside."
+  },
+  {
+   "spacer": 3
+  },
+  {
+   "take": "take26",
+   "in": 152.12,
+   "frames": 64,
+   "label": "R06b.1",
+   "text": "R06b Claude actually checked my old project files"
+  },
+  {
+   "take": "take26",
+   "in": 154.42,
+   "frames": 8,
+   "label": "R06b.2",
+   "text": "R06b Claude actually checked my old project files"
+  },
+  {
+   "spacer": 7
+  },
+  {
+   "take": "take26",
+   "in": 157.45,
+   "frames": 73,
+   "label": "R07",
+   "text": "R07 And totally it took about 10 minutes."
+  },
+  {
+   "spacer": 4
+  },
+  {
+   "take": "take26",
+   "in": 222.77,
+   "frames": 114,
+   "label": "R08",
+   "text": "R08 Now this is crazy because in the past I have to use Buffer to do it."
+  },
+  {
+   "spacer": 4
+  },
+  {
+   "take": "take26",
+   "in": 164.69,
+   "frames": 141,
+   "label": "R05.1",
+   "text": "R05 Now with this prompt, it can be done entirely through Claude, as long as you have the right measures to connect to LinkedIn."
+  },
+  {
+   "take": "take26",
+   "in": 169.6,
+   "frames": 20,
+   "label": "R05.2",
+   "text": "R05 Now with this prompt, it can be done entirely through Claude, as long as you have the right measures to connect to LinkedIn."
+  },
+  {
+   "take": "take26",
+   "in": 170.54,
+   "frames": 33,
+   "label": "R05.3",
+   "text": "R05 Now with this prompt, it can be done entirely through Claude, as long as you have the right measures to connect to LinkedIn."
+  },
+  {
+   "spacer": 3
+  },
+  {
+   "take": "take26",
+   "in": 173.04,
+   "frames": 119,
+   "label": "R09",
+   "text": "R09 So always please check your third-party apps, if it's LinkedIn verified."
+  },
+  {
+   "spacer": 4
+  },
+  {
+   "take": "take26",
+   "in": 326.44,
+   "frames": 91,
+   "label": "C02.1",
+   "text": "C02 If you just started and don't really know what to do, use Buffer. Only use Claude to do this if you're experienced and you're comfortable with it."
+  },
+  {
+   "take": "take26",
+   "in": 329.68,
+   "frames": 99,
+   "label": "C02.2",
+   "text": "C02 If you just started and don't really know what to do, use Buffer. Only use Claude to do this if you're experienced and you're comfortable with it."
+  },
+  {
+   "spacer": 3
+  },
+  {
+   "take": "take26",
+   "in": 334.0,
+   "frames": 61,
+   "label": "V01",
+   "text": "V01 Overall the verdict is, this is cracked."
+  },
+  {
+   "spacer": 5
+  },
+  {
+   "take": "take26",
+   "in": 360.78,
+   "frames": 101,
+   "label": "Z01",
+   "text": "Z01 If you like what you see, comment GHOST and I'll send you my workflow."
+  }
+ ]
+}

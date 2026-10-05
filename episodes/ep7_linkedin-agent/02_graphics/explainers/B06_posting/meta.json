@@ -1,0 +1,38 @@
+{
+  "width": 980,
+  "height": 500,
+  "duration": 231,
+  "props": {
+    "serif": "Fraunces",
+    "hand": "Kalam",
+    "sans": "Inter",
+    "paper": "#FFFEFA",
+    "ink": "#171411",
+    "accent": "#DF825F",
+    "gold": "#F2C14E"
+  },
+  "place": {
+    "left": 50,
+    "top": 234,
+    "width": 980,
+    "height": 500
+  },
+  "sheetFrames": [
+    6,
+    24,
+    40,
+    62,
+    80,
+    100,
+    125,
+    131,
+    133,
+    140,
+    158,
+    166,
+    186,
+    190,
+    206,
+    230
+  ]
+}

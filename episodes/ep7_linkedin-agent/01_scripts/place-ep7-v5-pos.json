@@ -1,0 +1,359 @@
+{
+ "HK": 126,
+ "S0": 126,
+ "M0": 198,
+ "END": 1942,
+ "VER_F": 1806,
+ "CTA_F": 1881,
+ "SAVE0": 1570,
+ "pos": {
+  "R04": [
+   198,
+   289
+  ],
+  "P01a": [
+   295,
+   373
+  ],
+  "P01": [
+   377,
+   419
+  ],
+  "P02": [
+   423,
+   578
+  ],
+  "P03": [
+   581,
+   737
+  ],
+  "R10": [
+   745,
+   973
+  ],
+  "R06b": [
+   976,
+   1048
+  ],
+  "R07": [
+   1055,
+   1128
+  ],
+  "R08": [
+   1132,
+   1246
+  ],
+  "R05": [
+   1250,
+   1444
+  ],
+  "R09": [
+   1447,
+   1566
+  ],
+  "C02": [
+   1570,
+   1760
+  ],
+  "V01": [
+   1763,
+   1824
+  ],
+  "Z01": [
+   1829,
+   1930
+  ]
+ },
+ "runs": [
+  [
+   198,
+   1763,
+   "card"
+  ],
+  [
+   1763,
+   1942,
+   "big"
+  ]
+ ],
+ "stickers": [
+  [
+   341,
+   "GHOSTWRITER?"
+  ],
+  [
+   498,
+   "30 DAYS"
+  ],
+  [
+   586,
+   "36 POSTS"
+  ],
+  [
+   668,
+   "BUFFER"
+  ],
+  [
+   876,
+   "POSTING"
+  ],
+  [
+   913,
+   "3 FILES"
+  ],
+  [
+   1024,
+   "MY FILES"
+  ],
+  [
+   1092,
+   "10 MIN"
+  ],
+  [
+   1226,
+   "BY HAND"
+  ],
+  [
+   1273,
+   "ONE PROMPT"
+  ],
+  [
+   1528,
+   "LINKEDIN VERIFIED"
+  ]
+ ],
+ "caps": [
+  [
+   201,
+   "So the true test"
+  ],
+  [
+   239,
+   "is does it run"
+  ],
+  [
+   268,
+   "on my LinkedIn?"
+  ],
+  [
+   295,
+   "People have told me"
+  ],
+  [
+   320,
+   "that I have a"
+  ],
+  [
+   341,
+   "ghostwriter on LinkedIn"
+  ],
+  [
+   378,
+   "Honestly"
+  ],
+  [
+   398,
+   "it's just AI"
+  ],
+  [
+   424,
+   "I ran a challenge"
+  ],
+  [
+   460,
+   "in May and I"
+  ],
+  [
+   483,
+   "posted 30 days straight"
+  ],
+  [
+   526,
+   "no fail"
+  ],
+  [
+   544,
+   "Monday to Friday"
+  ],
+  [
+   582,
+   "So 36 posts"
+  ],
+  [
+   606,
+   "in 30 days"
+  ],
+  [
+   632,
+   "Claude wrote them"
+  ],
+  [
+   668,
+   "Buffer is the app"
+  ],
+  [
+   696,
+   "that I'm using"
+  ],
+  [
+   719,
+   "posted them"
+  ],
+  [
+   746,
+   "What it helped me"
+  ],
+  [
+   774,
+   "to do is directly"
+  ],
+  [
+   800,
+   "on my LinkedIn"
+  ],
+  [
+   829,
+   "it actually does help"
+  ],
+  [
+   863,
+   "me do the posting"
+  ],
+  [
+   891,
+   "when I put one video"
+  ],
+  [
+   927,
+   "one photo and"
+  ],
+  [
+   949,
+   "a poster inside"
+  ],
+  [
+   977,
+   "Claude actually checked my"
+  ],
+  [
+   1015,
+   "old project files"
+  ],
+  [
+   1055,
+   "And totally it took"
+  ],
+  [
+   1080,
+   "about 10 minutes"
+  ],
+  [
+   1132,
+   "Now this is crazy"
+  ],
+  [
+   1171,
+   "because in the past"
+  ],
+  [
+   1206,
+   "I have to use"
+  ],
+  [
+   1226,
+   "Buffer to do it"
+  ],
+  [
+   1251,
+   "Now with this prompt"
+  ],
+  [
+   1289,
+   "it can be done"
+  ],
+  [
+   1315,
+   "entirely through Claude"
+  ],
+  [
+   1349,
+   "as long as you"
+  ],
+  [
+   1371,
+   "have the right measures"
+  ],
+  [
+   1412,
+   "to connect to LinkedIn"
+  ],
+  [
+   1448,
+   "So always please check"
+  ],
+  [
+   1479,
+   "for your third-party apps"
+  ],
+  [
+   1514,
+   "if it's LinkedIn verified"
+  ],
+  [
+   1571,
+   "If you just started"
+  ],
+  [
+   1596,
+   "and don't really know"
+  ],
+  [
+   1618,
+   "what to do"
+  ],
+  [
+   1637,
+   "use Buffer"
+  ],
+  [
+   1662,
+   "Only use Claude to"
+  ],
+  [
+   1690,
+   "do this if you're"
+  ],
+  [
+   1714,
+   "experienced and you're comfortable"
+  ],
+  [
+   1753,
+   "with it"
+  ],
+  [
+   1764,
+   "Overall the verdict is"
+  ],
+  [
+   1797,
+   "this is cracked"
+  ],
+  [
+   1829,
+   "If you like"
+  ],
+  [
+   1844,
+   "what you see"
+  ],
+  [
+   1868,
+   "comment GHOST and I'll"
+  ],
+  [
+   1902,
+   "send you my workflow"
+  ]
+ ]
+}

@@ -8,11 +8,12 @@ EP = '/Users/henrychua/Content Creation/DRIVE_Cooked-or-Cracked_Ep7_LinkedIn-Age
 R = f'{EP}/02_graphics/receipts'; P = f'{EP}/02_graphics/panels'
 OUT = f'{EP}/02_graphics/plates'; TMP = f'{OUT}/tmp'; os.makedirs(TMP, exist_ok=True)
 SUFFIX = os.environ.get('SUFFIX', '_r1')
-PW, PH = 944, 528
+PW, PH = (int(v) for v in os.environ.get('PANEL', '944x528').split('x'))   # v3: PANEL=880x492
 SRC = {
     'activity':  dict(kind='still', img=f'{R}/05-linkedin-activity-887-followers.jpg', crop=(318, 60, 930, 520)),
     'activity2': dict(kind='still', img=f'{R}/05-linkedin-activity-887-followers.jpg', crop=(318, 60, 930, 520)),
     'skills':    dict(kind='still', img=f'{P}/installed_skills.png'),
+    'install':   dict(kind='still', img=f'{P}/install_skillspector.png'),
     'sent':      dict(kind='still', img=f'{R}/04-buffer-sent-153.jpg', crop=(200, 0, 1100, 615)),
     'chart':     dict(kind='still', img=f'{P}/chart_challenge.png'),
     'reel_ui':   dict(kind='video', src=f'{EP}/03_reference/reel-DeChOhIPszm.mp4', ss=24.8, speed=0.9, portrait=True),
@@ -58,7 +59,7 @@ def render(name, frames):
             pth = f'{TMP}/{name}_part{i}.mp4'; still_content(img, crop, k, pth); parts.append(pth)
         lst = f'{TMP}/{name}_parts.txt'; open(lst, 'w').write(''.join(f"file '{p}'\n" for p in parts))
         run(['ffmpeg', '-nostdin', '-v', 'error', '-y', '-f', 'concat', '-safe', '0', '-i', lst, '-c', 'copy', content])
-    x = (1080 - (w + 16)) // 2 if s.get('portrait') else 54
+    x = (1080 - (w + 16)) // 2
     D = n / 30 + 0.2
     fc = (f"[0:v]split[a][b];"
           f"[a]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,boxblur=36:3,eq=brightness=-0.34:saturation=0.70[bg];"

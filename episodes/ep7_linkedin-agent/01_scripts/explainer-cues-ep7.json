@@ -1,0 +1,966 @@
+{
+ "B01_true-test": [
+  {
+   "f": 2,
+   "sfx": "pop",
+   "note": "paper flask pops in on 'So'"
+  },
+  {
+   "f": 6,
+   "sfx": "tick",
+   "note": "liquid starts filling the flask"
+  },
+  {
+   "f": 13,
+   "sfx": "none",
+   "note": "'the true' writes on in Kalam accent"
+  },
+  {
+   "f": 25,
+   "sfx": "pop",
+   "note": "torn TEST strip stamps on 'test'"
+  },
+  {
+   "f": 28,
+   "sfx": "whoosh",
+   "note": "orange underline (now 8-9 px at final scale) draws under TEST"
+  },
+  {
+   "f": 40,
+   "sfx": "whoosh",
+   "note": "'is': title condenses to one row at the top, flask drops into the rig"
+  },
+  {
+   "f": 48,
+   "sfx": "pop",
+   "note": "Claude spark tile pops on 'does'"
+  },
+  {
+   "f": 52,
+   "sfx": "none",
+   "note": "'Claude' label (Fraunces 900, 46 px) pops; empty dashed slot appears"
+  },
+  {
+   "f": 54,
+   "sfx": "click",
+   "note": "dashed wire draws out from Claude towards the empty slot"
+  },
+  {
+   "f": 60,
+   "sfx": "whoosh",
+   "note": "'run': orange pulse runs along the wire into the flask"
+  },
+  {
+   "f": 67,
+   "sfx": "none",
+   "note": "liquid surges as the pulse arrives"
+  },
+  {
+   "f": 71,
+   "sfx": "pop",
+   "note": "'LinkedIn': ink LinkedIn tile pops into the slot"
+  },
+  {
+   "f": 73,
+   "sfx": "pop",
+   "note": "'my LinkedIn' label pops ('my' in Kalam accent, LinkedIn in Fraunces 900); orange '?' bubble rises out of the flask"
+  },
+  {
+   "f": 86,
+   "sfx": "none",
+   "note": "final state holds still"
+  }
+ ],
+ "B02_ghostwriter": [
+  {
+   "f": 1,
+   "sfx": "pop",
+   "note": "'who writes these?' comment bubble pops top-left on 'People'"
+  },
+  {
+   "f": 3,
+   "sfx": "none",
+   "note": "empty office chair at a desk and laptop pops up from the floor line"
+  },
+  {
+   "f": 10,
+   "sfx": "typing",
+   "note": "'someone is typing' bubble above the empty chair, dots tick in one by one (f13/16/19)"
+  },
+  {
+   "f": 17,
+   "sfx": "pop",
+   "note": "'is this you?' bubble pops bottom-left on 'told'"
+  },
+  {
+   "f": 36,
+   "sfx": "pop",
+   "note": "'you have a' bubble pops on 'I have'"
+  },
+  {
+   "f": 44,
+   "sfx": "whoosh",
+   "note": "bubble widens and 'ghostwriter?' (80px accent) punches in, side rumours dim"
+  },
+  {
+   "f": 45,
+   "sfx": "pop",
+   "note": "paper ghost pops into the chair, typing bubble vanishes"
+  },
+  {
+   "f": 52,
+   "sfx": "typing",
+   "note": "ghost's sheet hands tap the lid (two clacks, f52/f55)"
+  },
+  {
+   "f": 65,
+   "sfx": "pop",
+   "note": "LinkedIn 'in' sticker (anchored bottom-right in its tile) spins onto the lid on 'LinkedIn'"
+  },
+  {
+   "f": 66,
+   "sfx": "typing",
+   "note": "ghost types again (f66/f69)"
+  },
+  {
+   "f": 83,
+   "sfx": "none",
+   "note": "ghost squashes in anticipation"
+  },
+  {
+   "f": 88,
+   "sfx": "whoosh",
+   "note": "'Honestly': the sheet is yanked off to the upper right with speed dashes, revealing the Claude spark (shared 12-ray mark) spinning from -24 deg to rest with an overshoot"
+  },
+  {
+   "f": 95,
+   "sfx": "ding",
+   "note": "two gold glints pop beside the spark (f95/f96)"
+  },
+  {
+   "f": 105,
+   "sfx": "click",
+   "note": "'ghostwriter?' is struck through with an ink line on 'it's', bubble dims"
+  },
+  {
+   "f": 114,
+   "sfx": "pop",
+   "note": "narrow 'just' rubber stamp slams over the third rumour on 'just'"
+  },
+  {
+   "f": 118,
+   "sfx": "pop",
+   "note": "stamp widens and 'AI.' (116px Fraunces accent) punches in with a knock on 'AI.', holds to f132"
+  }
+ ],
+ "B03_30days": [
+  {
+   "f": 3,
+   "sfx": "whoosh",
+   "note": "Calendar card starts swinging down from its top hinge on 'ran' (edge-on at f3, readable ~f9-10)"
+  },
+  {
+   "f": 12,
+   "sfx": "click",
+   "note": "Card lands on 'a challenge' (f12-13), 3deg bounce, settled f18"
+  },
+  {
+   "f": 40,
+   "sfx": "pop",
+   "note": "Orange MAY (62px) pops into the header, CHALLENGE slides right; dates fill in (f40-52) on 'May' f42"
+  },
+  {
+   "f": 47,
+   "sfx": "whoosh",
+   "note": "Card slides left (f47-56) to make room for the counter"
+  },
+  {
+   "f": 55,
+   "sfx": "pop",
+   "note": "DAY 1 torn-paper chip pops in (f55-64) as the first tick lands (cell 4 May orange f57) before 'posted' f60"
+  },
+  {
+   "f": 57,
+   "sfx": "tick",
+   "note": "Flip-wave ticks sweep every weekday, weekends hatch; counter runs 1,2,3,5,7,10,13,17,20,23,25,27,28,29 (f57-71)"
+  },
+  {
+   "f": 72,
+   "sfx": "ding",
+   "note": "Last cell (Tue 2 Jun) ticks and DAY 30 lands f72, scale pop peaks f75 on the word '30'"
+  },
+  {
+   "f": 94,
+   "sfx": "pop",
+   "note": "Streak flame pops on the counter chip, peak f98 on 'straight'"
+  },
+  {
+   "f": 101,
+   "sfx": "pop",
+   "note": "0 MISSED stamp slams into the empty June row (lands f104, settles f110) with 4 burst rays and a 4px card jolt, on 'no fail' f102-107"
+  },
+  {
+   "f": 116,
+   "sfx": "whoosh",
+   "note": "Orange underline draws under M-F (f115-141); M pops orange f120 on 'Monday', F f136 before 'Friday' f138; weekend letters and cells fade (f118-128). Still from f143 to end."
+  }
+ ],
+ "B04_36posts": [
+  {
+   "f": 2,
+   "sfx": "pop",
+   "note": "36 counter pops and starts rolling up"
+  },
+  {
+   "f": 3,
+   "sfx": "tick",
+   "note": "mini post cards pop into the 6x6 grid as the counter rolls (f3-21)"
+  },
+  {
+   "f": 13,
+   "sfx": "pop",
+   "note": "'posts' pops under the number"
+  },
+  {
+   "f": 26,
+   "sfx": "pop",
+   "note": "'in 30 days' calendar chip pops"
+  },
+  {
+   "f": 44,
+   "sfx": "whoosh",
+   "note": "grid cards fly together and become Claude's stack, scene A slides out"
+  },
+  {
+   "f": 48,
+   "sfx": "pop",
+   "note": "Claude tile with the shared 12-ray spark pops"
+  },
+  {
+   "f": 56,
+   "sfx": "typing",
+   "note": "pencil flies onto the top card and writes three lines plus an image block (f56-75)"
+  },
+  {
+   "f": 70,
+   "sfx": "pop",
+   "note": "36 badge stamps the stack on 'them'"
+  },
+  {
+   "f": 83,
+   "sfx": "whoosh",
+   "note": "camera pans to Buffer while the stack rides arrow 1 into the queue"
+  },
+  {
+   "f": 84,
+   "sfx": "pop",
+   "note": "Buffer window (filled-ink stack glyph + Queue) pops"
+  },
+  {
+   "f": 99,
+   "sfx": "click",
+   "note": "Mon/Tue/Wed queue rows dealt from the stack (f99-105)"
+  },
+  {
+   "f": 120,
+   "sfx": "click",
+   "note": "hand cursor taps Schedule on 'I'm', button fills orange with a ripple"
+  },
+  {
+   "f": 126,
+   "sfx": "whoosh",
+   "note": "camera pulls back to the full Claude -> Buffer -> LinkedIn pipeline"
+  },
+  {
+   "f": 133,
+   "sfx": "pop",
+   "note": "LinkedIn ink tile pops with 'in' anchored bottom-right"
+  },
+  {
+   "f": 135,
+   "sfx": "whoosh",
+   "note": "on 'posted' three posts fly along arrow 2, rows tick off"
+  },
+  {
+   "f": 143,
+   "sfx": "tick",
+   "note": "posts tuck behind the LinkedIn tile one by one (143, 146, 149)"
+  },
+  {
+   "f": 149,
+   "sfx": "pop",
+   "note": "36 badge lands on LinkedIn on 'them'; final state holds from f153"
+  }
+ ],
+ "B05_results": [
+  {
+   "f": 0,
+   "sfx": "pop",
+   "note": "folded 'May challenge' results card pops in (So how it went?)"
+  },
+  {
+   "f": 13,
+   "sfx": "whoosh",
+   "note": "bottom half of the card unfolds down"
+  },
+  {
+   "f": 24,
+   "sfx": "click",
+   "note": "eye blinks open, rays draw"
+  },
+  {
+   "f": 27,
+   "sfx": "tick",
+   "note": "impressions counter rolls 0 to 9,600 (f27-54), crisp whole digits"
+  },
+  {
+   "f": 54,
+   "sfx": "ding",
+   "note": "counter lands on 9,600"
+  },
+  {
+   "f": 60,
+   "sfx": "pop",
+   "note": "'impressions' label pops, orange underline draws f64-78"
+  },
+  {
+   "f": 88,
+   "sfx": "whoosh",
+   "note": "card flips over (f88-97), shrinks slightly mid-flip"
+  },
+  {
+   "f": 95,
+   "sfx": "tick",
+   "note": "five post bars rise from the baseline, short to tall (on 'median')"
+  },
+  {
+   "f": 102,
+   "sfx": "click",
+   "note": "middle bar turns orange, gold caret marks it as the median"
+  },
+  {
+   "f": 113,
+   "sfx": "whoosh",
+   "note": "other bars drop away; median bar widens and grows into the May bar (f117-131)"
+  },
+  {
+   "f": 117,
+   "sfx": "tick",
+   "note": "'134' counts up with the May bar, label 'May challenge' pops"
+  },
+  {
+   "f": 156,
+   "sfx": "pop",
+   "note": "post tile stamps onto the 134 bar ('per post', lands ~f161)"
+  },
+  {
+   "f": 172,
+   "sfx": "pop",
+   "note": "'vs' badge pops ('against')"
+  },
+  {
+   "f": 192,
+   "sfx": "tick",
+   "note": "ink bar grows with count to 217 (f192-214)"
+  },
+  {
+   "f": 224,
+   "sfx": "pop",
+   "note": "'rest of my year' label pops; dashed May-level line draws across the 217 bar f228-242"
+  },
+  {
+   "f": 249,
+   "sfx": "whoosh",
+   "note": "page lifts away to reveal the chart (f249-257)"
+  },
+  {
+   "f": 255,
+   "sfx": "tick",
+   "note": "posts line climbs from the shared start dot, counter rolls to 36 posts"
+  },
+  {
+   "f": 269,
+   "sfx": "none",
+   "note": "reach line draws flat from the same start (lands on 'didn't')"
+  },
+  {
+   "f": 289,
+   "sfx": "pop",
+   "note": "'reach' label pops ('reached')"
+  },
+  {
+   "f": 297,
+   "sfx": "pop",
+   "note": "taped note slaps on; 'more posts' writes f299-307"
+  },
+  {
+   "f": 305,
+   "sfx": "click",
+   "note": "orange \u2260 stamps"
+  },
+  {
+   "f": 309,
+   "sfx": "none",
+   "note": "'more reach' writes f309-317; full takeaway holds still f317-336"
+  }
+ ],
+ "B06_posting": [
+  {
+   "f": 0,
+   "sfx": "pop",
+   "note": "Claude chat window pops in centred ('What', f3). Overshoot capped at 1.04, so it stays inside the 16 px margin"
+  },
+  {
+   "f": 8,
+   "sfx": "none",
+   "note": "Claude spark spins in and the greeting fades up ('it helped me')"
+  },
+  {
+   "f": 33,
+   "sfx": "whoosh",
+   "note": "Chat slides left ('is', f34)"
+  },
+  {
+   "f": 38,
+   "sfx": "none",
+   "note": "Straight arrow draws out to the right ('directly', f39); arrowhead at f46"
+  },
+  {
+   "f": 57,
+   "sfx": "pop",
+   "note": "LinkedIn 'in' tile pops at the arrow's end. Readable from f61, peaks f64 ('LinkedIn,' f65)"
+  },
+  {
+   "f": 81,
+   "sfx": "pop",
+   "note": "Post draft pops centred inside the chat with the Claude avatar ('it' f84, 'actually' f87)"
+  },
+  {
+   "f": 89,
+   "sfx": "typing",
+   "note": "Claude types the post text f89-112 ('does help me')"
+  },
+  {
+   "f": 108,
+   "sfx": "pop",
+   "note": "Poster image pops into the draft (f108), then the class photo (f113)"
+  },
+  {
+   "f": 119,
+   "sfx": "whoosh",
+   "note": "Draft lifts off and flies along the arrow onto the LinkedIn spot ('me do the', f119-126). The 'in' tile shrinks onto the post as its badge"
+  },
+  {
+   "f": 131,
+   "sfx": "ding",
+   "note": "POSTED stamp slams on, fully opaque on its first frame, and presses down ('posting', f133). The chat reply 'Posted to LinkedIn' rises in at f130"
+  },
+  {
+   "f": 152,
+   "sfx": "pop",
+   "note": "Henry's message bubble opens ('I' f154, 'put' f156)"
+  },
+  {
+   "f": 159,
+   "sfx": "click",
+   "note": "Video card drops into the bubble and lands at about f164. 'video' writes on f164-168 ('video,' f168)"
+  },
+  {
+   "f": 180,
+   "sfx": "click",
+   "note": "Mini class photo drops into the bubble and lands at about f185. 'photo' writes on f184-188 ('photo' f188)"
+  },
+  {
+   "f": 185,
+   "sfx": "tick",
+   "note": "Class photo in the live post flashes, gets an accent outline and a tick badge that pops (input -> output)"
+  },
+  {
+   "f": 198,
+   "sfx": "click",
+   "note": "Mini copy of the poster drops into the bubble and lands at about f203. 'poster' writes on f202-206 ('poster' f206)"
+  },
+  {
+   "f": 203,
+   "sfx": "tick",
+   "note": "Poster in the live post flashes, gets an accent outline and a tick badge. Everything is settled by f215 and holds still to f230 ('inside.' f216)"
+  }
+ ],
+ "B07_files_10min": [
+  {
+   "f": 0,
+   "sfx": "pop",
+   "note": "Claude badge (shared 12-ray spark) pops on 'Claude'"
+  },
+  {
+   "f": 12,
+   "sfx": "whoosh",
+   "note": "handle grows, badge becomes a magnifier and slides left"
+  },
+  {
+   "f": 21,
+   "sfx": "pop",
+   "note": "folder pops in beside the lens"
+  },
+  {
+   "f": 24,
+   "sfx": "click",
+   "note": "lens leans in on 'checked'"
+  },
+  {
+   "f": 35,
+   "sfx": "typing",
+   "note": "'old project files' label writes on, word by word"
+  },
+  {
+   "f": 44,
+   "sfx": "pop",
+   "note": "four file cards fan out of the folder on 'project' (staggered 1.5 f)"
+  },
+  {
+   "f": 48,
+   "sfx": "whoosh",
+   "note": "lens sweeps across the cards f48-54"
+  },
+  {
+   "f": 49,
+   "sfx": "tick",
+   "note": "tick stamps on DOC card"
+  },
+  {
+   "f": 51,
+   "sfx": "tick",
+   "note": "tick on PNG card"
+  },
+  {
+   "f": 53,
+   "sfx": "tick",
+   "note": "tick on MP4 card"
+  },
+  {
+   "f": 55,
+   "sfx": "tick",
+   "note": "tick on PDF card"
+  },
+  {
+   "f": 75,
+   "sfx": "whoosh",
+   "note": "'totally': folder collapses, lens morphs into the stopwatch at centre"
+  },
+  {
+   "f": 91,
+   "sfx": "click",
+   "note": "crown pressed, sweep starts on 'took'"
+  },
+  {
+   "f": 101,
+   "sfx": "pop",
+   "note": "'about' lands as the stopwatch slides right"
+  },
+  {
+   "f": 110,
+   "sfx": "click",
+   "note": "crown pressed again, hand stops on 10 with burst"
+  },
+  {
+   "f": 116,
+   "sfx": "ding",
+   "note": "big '10' lands"
+  },
+  {
+   "f": 127,
+   "sfx": "pop",
+   "note": "'MIN' lands on 'minutes'"
+  },
+  {
+   "f": 131,
+   "sfx": "none",
+   "note": "orange underline draws under 10 MIN, holds to f155"
+  }
+ ],
+ "B08_past_buffer": [
+  {
+   "f": 2,
+   "sfx": "pop",
+   "note": "Claude tile pops on 'Now' (NOW card, now with the shared 12-ray spark)"
+  },
+  {
+   "f": 8,
+   "sfx": "whoosh",
+   "note": "arrow draws, 'one prompt' label pops"
+  },
+  {
+   "f": 12,
+   "sfx": "pop",
+   "note": "LinkedIn tile pops with the 'in' anchored bottom-right"
+  },
+  {
+   "f": 17,
+   "sfx": "ding",
+   "note": "tick badge on the LinkedIn tile"
+  },
+  {
+   "f": 20,
+   "sfx": "pop",
+   "note": "big accent '!' slams in on 'crazy', card jolts"
+  },
+  {
+   "f": 39,
+   "sfx": "whoosh",
+   "note": "rewind button stamps on 'because', speed streaks sweep left, NOW scene un-draws"
+  },
+  {
+   "f": 45,
+   "sfx": "tick",
+   "note": "tab flips to rewind, aged BEFORE paper wipes in"
+  },
+  {
+   "f": 51,
+   "sfx": "pop",
+   "note": "Buffer layers logo pops"
+  },
+  {
+   "f": 52,
+   "sfx": "pop",
+   "note": "five step tiles stagger in (copy, open, upload, time, schedule)"
+  },
+  {
+   "f": 62,
+   "sfx": "click",
+   "note": "tab widens to BEFORE on 'past'"
+  },
+  {
+   "f": 64,
+   "sfx": "click",
+   "note": "hand cursor ticks 'copy'"
+  },
+  {
+   "f": 70,
+   "sfx": "click",
+   "note": "ticks 'open'"
+  },
+  {
+   "f": 77,
+   "sfx": "click",
+   "note": "ticks 'upload'"
+  },
+  {
+   "f": 86,
+   "sfx": "click",
+   "note": "ticks 'time'"
+  },
+  {
+   "f": 88,
+   "sfx": "pop",
+   "note": "'Buffer' wordmark stamps in on 'Buffer'"
+  },
+  {
+   "f": 92,
+   "sfx": "whoosh",
+   "note": "accent circle draws around the Buffer logo and wordmark"
+  },
+  {
+   "f": 96,
+   "sfx": "click",
+   "note": "ticks 'schedule', the heaviest press"
+  },
+  {
+   "f": 101,
+   "sfx": "pop",
+   "note": "'every post' note with loop arrow lands on 'to do it', gold highlight sweeps"
+  }
+ ],
+ "B09_now_prompt": [
+  {
+   "f": 1,
+   "sfx": "pop",
+   "note": "NOW stamp lands big at the centre on 'now'; the BEFORE tab flips shut"
+  },
+  {
+   "f": 4,
+   "sfx": "whoosh",
+   "note": "aged paper wipes clean from the stamp; Buffer, the hand and 'every post' leave; NOW docks into the tab slot by f12"
+  },
+  {
+   "f": 13,
+   "sfx": "pop",
+   "note": "Claude prompt bar pops in where Buffer was, with the shared 12-ray spark icon"
+  },
+  {
+   "f": 16,
+   "sfx": "typing",
+   "note": "types 'post this to my LinkedIn' (f16-31)"
+  },
+  {
+   "f": 34,
+   "sfx": "click",
+   "note": "send button presses, ring ripples, bar spark spins"
+  },
+  {
+   "f": 44,
+   "sfx": "tick",
+   "note": "cascade: the five step boxes tick in accent at f44, 47, 50, 53, 56 (one tick sound per box or one roll)"
+  },
+  {
+   "f": 62,
+   "sfx": "whoosh",
+   "note": "'entirely': thick accent brace draws under all five (f62-72), card punch at f64"
+  },
+  {
+   "f": 83,
+   "sfx": "whoosh",
+   "note": "'through Claude': the bar's spark flies down to the brace tip"
+  },
+  {
+   "f": 87,
+   "sfx": "pop",
+   "note": "big 'Claude' pill pops with the 12-ray spark; word lands f89"
+  },
+  {
+   "f": 103,
+   "sfx": "whoosh",
+   "note": "pill morphs into B08's Claude tile; bar and chips clear"
+  },
+  {
+   "f": 108,
+   "sfx": "pop",
+   "note": "ghost LinkedIn tile ('in' bottom-right) pops in on the right"
+  },
+  {
+   "f": 110,
+   "sfx": "pop",
+   "note": "dotted gap with a '?' appears between Claude and LinkedIn"
+  },
+  {
+   "f": 121,
+   "sfx": "whoosh",
+   "note": "plug leaves Claude on its cable and slides across the gap (f121-137); '?' pops out at f126"
+  },
+  {
+   "f": 143,
+   "sfx": "click",
+   "note": "small lock pops on the plug"
+  },
+  {
+   "f": 146,
+   "sfx": "pop",
+   "note": "tag 'via Buffer API / LinkedIn-approved' drops and swings on its string"
+  },
+  {
+   "f": 165,
+   "sfx": "click",
+   "note": "'LinkedIn': plug snaps in, tile powers on (ink, white 'in' bottom-right), burst lines, cable turns accent"
+  },
+  {
+   "f": 166,
+   "sfx": "whoosh",
+   "note": "mini post card rides the cable into LinkedIn (f166-176)"
+  },
+  {
+   "f": 176,
+   "sfx": "ding",
+   "note": "accent tick badge stamps on the LinkedIn tile; holds to f196"
+  }
+ ],
+ "B10_verified": [
+  {
+   "f": 0,
+   "sfx": "pop",
+   "note": "So: the auto-poster card pops in (dashed robot tile, Fraunces 900 'auto-poster', Inter 'UNKNOWN DEVELOPER')"
+  },
+  {
+   "f": 4,
+   "sfx": "pop",
+   "note": "always: the Buffer card pops in (ink tile with the paper B08/B11 3-layer stack, Fraunces 900 'Buffer', Inter 'POST SCHEDULER')"
+  },
+  {
+   "f": 10,
+   "sfx": "tick",
+   "note": "please: dashed '?' check slots pop on both cards (10, 12)"
+  },
+  {
+   "f": 17,
+   "sfx": "whoosh",
+   "note": "the magnifier swings in from lower right and parks on the broken robot by 'check' (f23)"
+  },
+  {
+   "f": 32,
+   "sfx": "pop",
+   "note": "your: the LinkedIn 'in' tile pops at top centre"
+  },
+  {
+   "f": 44,
+   "sfx": "click",
+   "note": "third-party: plug cables draw from LinkedIn into both apps, plugs click in; the magnifier hops to the auto-poster's '?'"
+  },
+  {
+   "f": 53,
+   "sfx": "pop",
+   "note": "apps: the '?' becomes an X that draws in and shakes; the auto-poster card dims and sags"
+  },
+  {
+   "f": 63,
+   "sfx": "whoosh",
+   "note": "the magnifier glides over to Buffer's '?'"
+  },
+  {
+   "f": 66,
+   "sfx": "none",
+   "note": "if it's: 'not verified' writes on in Kalam under the auto-poster"
+  },
+  {
+   "f": 76,
+   "sfx": "pop",
+   "note": "LinkedIn: Buffer's '?' turns into a LinkedIn 'in' shield under the lens"
+  },
+  {
+   "f": 86,
+   "sfx": "whoosh",
+   "note": "the magnifier lifts away"
+  },
+  {
+   "f": 93,
+   "sfx": "pop",
+   "note": "verified: VERIFIED stamp (Fraunces 900, accent double outline) slams onto Buffer; card and cable turn accent"
+  },
+  {
+   "f": 95,
+   "sfx": "ding",
+   "note": "the shield grows, fills orange, gold burst lines and a tick badge draw in (f100-108)"
+  }
+ ],
+ "B11_buffer_or_claude": [
+  {
+   "f": 0,
+   "sfx": "pop",
+   "note": "'you' person badge pops in on 'If you'"
+  },
+  {
+   "f": 6,
+   "sfx": "whoosh",
+   "note": "Upper fork path draws out and the 'just started' L-plate tag slides in"
+  },
+  {
+   "f": 26,
+   "sfx": "none",
+   "note": "Empty dashed destination slot appears on 'don't really know'"
+  },
+  {
+   "f": 36,
+   "sfx": "pop",
+   "note": "'?' thought bubble pops above 'you', with a '?' in the slot"
+  },
+  {
+   "f": 46,
+   "sfx": "tick",
+   "note": "'?' slot shakes on 'what to do'"
+  },
+  {
+   "f": 64,
+   "sfx": "whoosh",
+   "note": "Slot flips to the Buffer card, and the 3-layer stack builds on 'use Buffer'"
+  },
+  {
+   "f": 69,
+   "sfx": "click",
+   "note": "Upper path turns solid and a dot travels to Buffer, with an arrow"
+  },
+  {
+   "f": 89,
+   "sfx": "whoosh",
+   "note": "Buffer row dims and the lower dotted path draws on 'Only'"
+  },
+  {
+   "f": 101,
+   "sfx": "pop",
+   "note": "Claude card pops in with the shared 12-ray spark spinning, on 'Claude'"
+  },
+  {
+   "f": 108,
+   "sfx": "click",
+   "note": "Padlock badge snaps onto the Claude card"
+  },
+  {
+   "f": 117,
+   "sfx": "none",
+   "note": "Kalam footnote 'via Buffer API' writes on under the Claude card"
+  },
+  {
+   "f": 131,
+   "sfx": "pop",
+   "note": "Torn-paper conditions card with two empty checkboxes arrives on 'if'"
+  },
+  {
+   "f": 139,
+   "sfx": "typing",
+   "note": "'experienced' is handwritten in"
+  },
+  {
+   "f": 146,
+   "sfx": "tick",
+   "note": "First box gets ticked"
+  },
+  {
+   "f": 165,
+   "sfx": "typing",
+   "note": "'comfortable' is handwritten in"
+  },
+  {
+   "f": 169,
+   "sfx": "tick",
+   "note": "Second box gets ticked"
+  },
+  {
+   "f": 171,
+   "sfx": "ding",
+   "note": "Padlock swings open with gold sparks, the lower path turns solid, a dot travels to Claude, and the Buffer row lights back up into the final two-row summary"
+  }
+ ],
+ "B12_ghost_cta": [
+  {
+   "f": 0,
+   "sfx": "pop",
+   "note": "Comment field pops in (0.3 -> 1.025 -> 1). The 'comment' sticker stamps onto its top edge at f2."
+  },
+  {
+   "f": 11,
+   "sfx": "typing",
+   "note": "GHOST types fast: one letter per frame f11-15, each pop-scaled. The full word is in by the 'GHOST' cue (f15) and sits complete at 116 px until f25."
+  },
+  {
+   "f": 19,
+   "sfx": "click",
+   "note": "Send button presses in (f19-23)."
+  },
+  {
+   "f": 31,
+   "sfx": "whoosh",
+   "note": "The posted comment has slid up-left and shrunk (f25-33, on 'and'). The send arrow takes off as a paper plane on a dotted arc toward the bubble corner (f31-37, on 'I'll'). A check stamps into the send button at f32."
+  },
+  {
+   "f": 36,
+   "sfx": "pop",
+   "note": "DM bubble goes from opacity 0 to 1 in one frame (f35->f36) and unfolds from the landing corner (scale 0.15 -> 1.06 at f41 -> 1 at f46). The file card pops in with it at f38 (0.6 -> 1.03 -> 1 by f45), with grey skeleton name bars, on 'send'."
+  },
+  {
+   "f": 40,
+   "sfx": "none",
+   "note": "'your DMs' sticker pops onto the bubble's top edge (f40-51), landing on 'you' (f44)."
+  },
+  {
+   "f": 46,
+   "sfx": "none",
+   "note": "'my' pops in (f46-50, on 'my' f49) and replaces its skeleton bar."
+  },
+  {
+   "f": 51,
+   "sfx": "none",
+   "note": "'workflow' wipes on left to right (f51-55, done on the f55 cue). Its skeleton bar is wiped away under it at the same moment."
+  },
+  {
+   "f": 55,
+   "sfx": "ding",
+   "note": "Orange underline draws under 'workflow' (f55-63). Final state holds still f63-76."
+  }
+ ]
+}

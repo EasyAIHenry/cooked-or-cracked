@@ -91,3 +91,17 @@ for i, n in enumerate(names):
     d.text((110 + col * 760, 250 + row * 100), n, font=mb, fill='#7EE787')
 d.text((70, 900), f'{len(names)} skills installed', font=mb, fill='#FFFFFF')
 im.save(f'{OUT}/installed_skills.png'); print('installed', len(names), names)
+
+# 7. SkillSpector install tip (v3, 4 Oct): Henry says "go on NVIDIA to clear the repos"; this card names the tool and shows the
+#    exact commands used on his Mac (uv receipt: git https://github.com/NVIDIA/skillspector.git, v2.11.2; scan run with --no-llm)
+im = Image.new('RGB', (W, H), '#11161A'); d = ImageDraw.Draw(im); m = F(MONO, 46); mb = ImageFont.truetype(MONO, 46, index=1)
+d.rectangle([0, 0, W, 86], fill='#1D252B')
+for i, c in enumerate(('#FF5F57', '#FEBC2E', '#28C840')): d.ellipse([40 + i * 52, 26, 74 + i * 52, 60], fill=c)
+d.rounded_rectangle([70, 140, 520, 222], radius=16, fill=ACC); d.text((295, 181), 'TIP', font=F(BLACK, 58), fill='#FFFFFF', anchor='mm')
+d.text((560, 152), 'before you install any skill', font=F(BOLD, 50), fill='#9FB3C2')
+d.text((70, 290), 'Install SkillSpector,', font=F(BLACK, 84), fill='#FFFFFF')
+d.text((70, 392), "NVIDIA's free scanner", font=F(BLACK, 84), fill='#7EE787')
+d.text((70, 580), '$ uv tool install git+https://github.com/NVIDIA/skillspector', font=m, fill='#9FB3C2')
+d.text((70, 680), '$ skillspector scan --no-llm <the repo>', font=mb, fill='#FFFFFF')
+d.text((70, 820), 'Scan first. Install only if it comes back LOW / SAFE.', font=F(BOLD, 50), fill='#E3B341')
+im.save(f'{OUT}/install_skillspector.png'); print('install tip panel')

@@ -1,0 +1,30 @@
+[
+ {
+  "name": "activity",
+  "frames": 97
+ },
+ {
+  "name": "chart",
+  "frames": 286
+ },
+ {
+  "name": "sent",
+  "frames": 164
+ },
+ {
+  "name": "prompt",
+  "frames": 310
+ },
+ {
+  "name": "publish",
+  "frames": 195
+ },
+ {
+  "name": "live",
+  "frames": 97
+ },
+ {
+  "name": "perm",
+  "frames": 223
+ }
+]
