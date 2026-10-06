@@ -1,0 +1,6 @@
+{"duration": 14, "fps": 30, "output_size": [1960, 1000], "source_size": [1960, 1000], "cursor_scale": 2.2, "click_strength": 15, "rotation_strength_degrees": 6,
+ "shots": {"compose": "/Users/henrychua/Content Creation/DRIVE_Cooked-or-Cracked_Ep8_Clone-Any-App/02_graphics/rerecord/src/slot-02-compose.png", "queue": "/Users/henrychua/Content Creation/DRIVE_Cooked-or-Cracked_Ep8_Clone-Any-App/02_graphics/rerecord/src/slot-01-queue.png", "sent": "/Users/henrychua/Content Creation/DRIVE_Cooked-or-Cracked_Ep8_Clone-Any-App/02_graphics/rerecord/src/slot-05-sent.png", "local": "/Users/henrychua/Content Creation/DRIVE_Cooked-or-Cracked_Ep8_Clone-Any-App/02_graphics/rerecord/src/slot-06-local.png"},
+ "scene_starts": [[0.0, "compose", "cut"], [4.0, "queue", "fade"], [7.6, "sent", "fade"], [10.8, "local", "fade"]],
+ "cursor_keys": [[0.0, 1400, 150], [1.0, 980, 380], [2.4, 980, 380], [3.0, 585, 690], [3.9, 585, 690], [4.4, 585, 690], [5.6, 560, 170], [6.6, 1470, 25], [7.5, 1470, 25], [8.4, 1240, 320], [9.8, 1240, 320], [10.6, 1240, 320], [11.5, 790, 390], [13.5, 790, 390]],
+ "camera_keys": [[0.0, 980, 500, 1.0], [1.8, 980, 520, 1.25], [4.0, 760, 420, 1.3], [7.6, 1220, 380, 1.3], [10.8, 980, 440, 1.5], [13.9, 980, 440, 1.5]],
+ "click_times": [3.9, 7.5, 10.6]}

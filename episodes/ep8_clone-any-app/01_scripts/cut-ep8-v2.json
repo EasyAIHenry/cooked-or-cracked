@@ -1,0 +1,228 @@
+{
+ "segments": [
+  {
+   "take": "part1",
+   "in": 32.45,
+   "out": 36.2,
+   "dur": 3.75,
+   "raw_dur": 3.75,
+   "pieces": [
+    [
+     32.45,
+     36.2
+    ]
+   ],
+   "label": "H00 HOOK (reel audio on his phone): You can now clone any app with Claude, so you never have to pay for a subscription again.",
+   "first": "abs",
+   "last": "abs"
+  },
+  {
+   "take": "part1",
+   "in": 42.09,
+   "out": 45.57,
+   "dur": 3.48,
+   "raw_dur": 3.48,
+   "pieces": [
+    [
+     42.09,
+     45.57
+    ]
+   ],
+   "label": "L01 Well, not sure if you can clone every app, but let's try.",
+   "first": "Well,",
+   "last": "try."
+  },
+  {
+   "take": "part1",
+   "in": 99.26,
+   "out": 103.74,
+   "dur": 4.48,
+   "raw_dur": 4.48,
+   "pieces": [
+    [
+     99.26,
+     103.74
+    ]
+   ],
+   "label": "L04 So today I'm gonna clone two apps. One is Loom and another is Buffer.",
+   "first": "So",
+   "last": "Buffer."
+  },
+  {
+   "take": "part1",
+   "in": 177.6,
+   "out": 186.7,
+   "dur": 8.2,
+   "raw_dur": 9.1,
+   "pieces": [
+    [
+     177.6,
+     182.19
+    ],
+    [
+     183.09,
+     186.7
+    ]
+   ],
+   "label": "L05 While there's 11 different types of skill sets, I wanted to put to the test whether it works or not. So as you can see, I've actually installed Loom over here.",
+   "first": "abs",
+   "last": "abs"
+  },
+  {
+   "take": "part1",
+   "in": 186.72,
+   "out": 197.05,
+   "dur": 8.9,
+   "raw_dur": 10.33,
+   "pieces": [
+    [
+     186.72,
+     189.3
+    ],
+    [
+     189.88,
+     192.25
+    ],
+    [
+     192.55,
+     193.38
+    ],
+    [
+     193.93,
+     197.05
+    ]
+   ],
+   "label": "L06 It is interesting because I can actually start to screen record my screen and when I'm done, I can share it with anyone that I want to.",
+   "first": "abs",
+   "last": "abs"
+  },
+  {
+   "take": "part1",
+   "in": 233.75,
+   "out": 238.35,
+   "dur": 4.41,
+   "raw_dur": 4.6,
+   "pieces": [
+    [
+     233.75,
+     235.75
+    ],
+    [
+     235.94,
+     238.35
+    ]
+   ],
+   "label": "L07 Now I actually clone Buffer and it's actually called Slotline.",
+   "first": "abs",
+   "last": "abs"
+  },
+  {
+   "take": "part1",
+   "in": 306.06,
+   "out": 307.8,
+   "dur": 1.74,
+   "raw_dur": 1.74,
+   "pieces": [
+    [
+     306.06,
+     307.8
+    ]
+   ],
+   "label": "L08 But it does look like Buffer.",
+   "first": "but",
+   "last": "buffer"
+  },
+  {
+   "take": "part1",
+   "in": 405.72,
+   "out": 414.93,
+   "dur": 8.81,
+   "raw_dur": 9.24,
+   "pieces": [
+    [
+     405.72,
+     409.99
+    ],
+    [
+     410.39,
+     414.93
+    ]
+   ],
+   "label": "L09 You're going to find it as a hassle to connect your Instagram to this. Let's not talk about Instagram banning third-party apps that are not even allowed.",
+   "first": "you're",
+   "last": "allowed."
+  },
+  {
+   "take": "part1",
+   "in": 415.08,
+   "out": 417.42,
+   "dur": 2.34,
+   "raw_dur": 2.81,
+   "pieces": [
+    [
+     415.08,
+     417.42
+    ]
+   ],
+   "label": "L10 So Meta is actually very strict on that.",
+   "first": "so",
+   "last": "that."
+  },
+  {
+   "take": "part1",
+   "in": 386.72,
+   "out": 398.34,
+   "dur": 11.14,
+   "raw_dur": 13.84,
+   "pieces": [
+    [
+     386.96,
+     388.97
+    ],
+    [
+     389.21,
+     398.34
+    ]
+   ],
+   "label": "L11 VERDICT: Overall, I think this is cooked, so it is not going to work if you are going to rely on the internet to actually do streaming or any storage of any cloud data.",
+   "first": "Overall,",
+   "last": "data."
+  },
+  {
+   "take": "part1",
+   "in": 376.07,
+   "out": 382.85,
+   "dur": 6.68,
+   "raw_dur": 6.68,
+   "pieces": [
+    [
+     376.17,
+     382.85
+    ]
+   ],
+   "label": "L12 Not everything is needed to be on cloud, I think some things are great if you install it in your local drive itself.",
+   "first": "Not",
+   "last": "itself."
+  },
+  {
+   "take": "part2",
+   "in": 143.88,
+   "out": 154.08,
+   "dur": 9.67,
+   "raw_dur": 12.14,
+   "pieces": [
+    [
+     144.04,
+     150.61
+    ],
+    [
+     150.98,
+     154.08
+    ]
+   ],
+   "label": "L13 CTA: While this is cooked, I've actually created 10 more apps that you can use without the internet and without cloud storage. Comment down below Clone and I'll send you my workflow.",
+   "first": "While",
+   "last": "workflow."
+  }
+ ]
+}

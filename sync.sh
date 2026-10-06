@@ -13,7 +13,7 @@ sync_dir() { # src dst
     --exclude '.DS_Store' --exclude '*.mp4' --exclude '*.MOV' --exclude '*.mov' --exclude '*.mp3' \
     --exclude '*.wav' --exclude '.env' --exclude '*.env' --exclude '04_raw-footage/' --exclude '05_cuts/' \
     --exclude 'reel.mp4' --exclude 'history.json' --exclude 'seen.json' --exclude 'profiles.json' --exclude 'runs/' \
-    --exclude '*.pdf' --exclude 'screens/' --exclude '09_ai-edit-reel/' \
+    --exclude '*.pdf' --exclude 'screens/' --exclude '09_ai-edit-reel/' --exclude '.render/' --exclude 'node_modules/' \
     --exclude '/assets/gen/' --exclude '/assets/cones/*.png' \
     "$1/" "$2/"
 }

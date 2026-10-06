@@ -1,0 +1,199 @@
+skillspector SkillSpector v2.11.2 scan --no-llm, 6 Oct 2026, commit 77c9436
+Warning: Found 11 skills in this directory. Use --recursive to scan each 
+independently.
+
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ SkillSpector Security Report                                                 │
+╰────────────────────────────────── v2.11.2 ───────────────────────────────────╯
+
+Skill: unknown
+Source: 
+/private/tmp/claude-501/-Users-henrychua-Content-Creation/3d2a471f-d567-4bb3-879
+3-f6c5e6124d19/scratchpad/replica-skill
+Scanned: 2026-10-06 15:37:34 UTC
+
+
+        Risk Assessment         
+ Score           60/100         
+ Severity        HIGH           
+ Recommendation  DO NOT INSTALL 
+
+
+                           Components (54)                           
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━┳━━━━━━━━━━━━┓
+┃ File                              ┃ Type     ┃ Lines ┃ Executable ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━━┩
+│ .claude-plugin/marketplace.json   │ json     │    18 │ No         │
+│ .claude-plugin/plugin.json        │ json     │    22 │ No         │
+│ .git/config                       │ other    │    13 │ No         │
+│ .gitignore                        │ other    │     5 │ No         │
+│ LICENSE                           │ other    │    21 │ No         │
+│ README.md                         │ markdown │   218 │ No         │
+│ replica-architect/SKILL.md        │ markdown │   115 │ No         │
+│ replica-architect/architecture.md │ markdown │    42 │ No         │
+│ replica-backend/SKILL.md          │ markdown │    90 │ No         │
+│ replica-brand/SKILL.md            │ markdown │   110 │ No         │
+│ replica-brand/sweep.py            │ python   │   177 │ Yes        │
+│ replica-build/SKILL.md            │ markdown │    87 │ No         │
+│ replica-deploy/SKILL.md           │ markdown │   104 │ No         │
+│ replica-deploy/preflight.md       │ markdown │    39 │ No         │
+│ replica-design/SKILL.md           │ markdown │    99 │ No         │
+│ ... and 39 more                   │          │       │            │
+└───────────────────────────────────┴──────────┴───────┴────────────┘
+
+
+Issues (7)
+
+  HIGH: YR4 - YARA rule 'agent_skill_mcp_tool_poisoning_metadata': MCP/too...
+    Location: replica-launch/listing.py:33
+    Confidence: 80%
+    Remediation: Remove offensive tool references and exploit code. Legitimate 
+agent skills should not contain penetration testing tools, exploit frameworks, 
+or reconn...
+
+  HIGH: YR4 - YARA rule 'agent_skill_mcp_tool_poisoning_metadata': MCP/too...
+    Location: tests/test_contrast_listing.py:55
+    Confidence: 80%
+    Remediation: Remove offensive tool references and exploit code. Legitimate 
+agent skills should not contain penetration testing tools, exploit frameworks, 
+or reconn...
+
+  MEDIUM: RA2 - Session Persistence...
+    Location: README.md:12
+    Confidence: 60%
+    Remediation: Remove any persistence mechanisms (cron jobs, startup scripts, 
+state files). Skills should not maintain state across sessions without explicit 
+user co...
+
+  MEDIUM: RP1 - MCP server referenced without pinned version: 'npx playwrigh...
+    Location: replica-deploy/SKILL.md:32
+    Confidence: 70%
+    Remediation: Pin the version: npx @scope/server@1.2.3...
+
+  MEDIUM: RP1 - MCP server referenced without pinned version: 'npx playwrigh...
+    Location: replica-test/SKILL.md:48
+    Confidence: 70%
+    Remediation: Pin the version: npx @scope/server@1.2.3...
+
+  MEDIUM: RP1 - MCP server referenced without pinned version: 'npx playwrigh...
+    Location: replica-test/SKILL.md:49
+    Confidence: 70%
+    Remediation: Pin the version: npx @scope/server@1.2.3...
+
+  LOW: EA3 - Scope Creep...
+    Location: README.md:116
+    Confidence: 65%
+    Remediation: Limit the skill's scope to its documented purpose. Remove 
+instructions that enable the agent to perform actions outside its stated 
+functionality....
+
+
+     Inspection Completeness      
+ Execution             successful 
+ Status                partial    
+ Coverage              97.5%      
+ Fully inspected       39         
+ Partially inspected   1          
+ Entirely uninspected  0          
+Scope exclusions
+bounded artifact inspection profile.
+the bounded artifact inspection profile.
+metadata is outside the bounded artifact inspection profile.
+is outside the bounded artifact inspection profile.
+metadata is outside the bounded artifact inspection profile.
+is outside the bounded artifact inspection profile.
+metadata is outside the bounded artifact inspection profile.
+is outside the bounded artifact inspection profile.
+metadata is outside the bounded artifact inspection profile.
+outside the bounded artifact inspection profile.
+is outside the bounded artifact inspection profile.
+is outside the bounded artifact inspection profile.
+metadata is outside the bounded artifact inspection profile.
+metadata is outside the bounded artifact inspection profile.
+metadata is outside the bounded artifact inspection profile.
+outside the bounded artifact inspection profile.
+bounded artifact inspection profile.
+bounded artifact inspection profile.
+bounded artifact inspection profile.
+bounded artifact inspection profile.
+the bounded artifact inspection profile.
+bounded artifact inspection profile.
+Ledger exceptions
+  - static_parse_limit replica-test/e2e.example.spec.ts: A security-relevant 
+expression exceeded a bounded static parser's span limit.
+Analyzer statuses
+  - completed : 
+  - completed : 
+  - completed : 
+  - no_applicable_files : No files matched this analyzer's applicability 
+contract.
+  - manifest_absent : No compatible manifest was present for this analyzer.
+  - completed : 
+  - manifest_absent : No compatible manifest was present for this analyzer.
+  - disabled_by_configuration : Analyzer was disabled by the requested 
+configuration.
+  - disabled_by_configuration : Analyzer was disabled by the requested 
+configuration.
+  - disabled_by_configuration : Analyzer was disabled by the requested 
+configuration.
+  - disabled_by_configuration : Analyzer was disabled by the requested 
+configuration.
+  - completed : 
+  - completed : 
+  - completed : 
+  - completed : 
+  - completed : 
+  - completed : 
+  - completed : 
+  - completed : 
+  - completed : 
+  - completed : 
+  - completed : 
+  - completed : 
+  - completed : 
+  - completed : 
+  - degraded : 
+  - completed : 
+Limitations
+  - Analyzer static_patterns_tool_misuse status: degraded.
+Executable scripts: Yes
+
+
+=== Own sweep (6 Oct 2026)
+invisible unicode: only U+200D (emoji joiner) in listing.py:50 and its test, used to count emoji length
+network: none (no urllib/requests/socket/http imports); shell: none (no subprocess/os.system/eval/exec)
+imports:
+  12 import json
+   9 import os
+   6 import unittest
+   6 import sys
+   6 import argparse
+   5 import tempfile
+   5 import re
+   5 import io
+   4 from contextlib import redirect_stdout, redirect_stderr
+   3 import csv
+   3 from _load import load
+   2 import zlib
+   2 import struct
+   2 from _load import load, ROOT
+   1 import unicodedata
+   1 import math
+   1 import importlib.util
+   1 import datetime as _dt
+   1 import datetime
+   1 from contextlib import redirect_stdout
+   1 from _load import ROOT
+outbound hosts in text:
+   9 https://github.com
+   4 https://apps.apple.com
+   3 https://opusjake.ai
+   2 https://www.g2.com
+   2 https://play.google.com
+   1 https://www.reddit.com
+   1 https://www.capterra.com
+   1 https://itunes.apple.com
+   1 https://help.calendly.com
+   1 https://anthropic.com
+unittest: 57 tests OK (python3 3.9.6)
+gh: 639 stars, 57 forks, created 2026-10-03T12:07:49Z, MIT
