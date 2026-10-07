@@ -1,0 +1,153 @@
+{
+ "fps": 30,
+ "sources": {
+  "t1": "../04_raw-footage/transcripts/part1-16k.wav",
+  "t2": "../04_raw-footage/transcripts/part2-16k.wav"
+ },
+ "items": [
+  {
+   "take": "t1",
+   "in": 42.09,
+   "frames": 104,
+   "label": "f183"
+  },
+  {
+   "spacer": 9
+  },
+  {
+   "take": "t1",
+   "in": 99.26,
+   "frames": 134,
+   "label": "f296"
+  },
+  {
+   "spacer": 9
+  },
+  {
+   "take": "t1",
+   "in": 177.6,
+   "frames": 138,
+   "label": "f439"
+  },
+  {
+   "take": "t1",
+   "in": 183.09,
+   "frames": 108,
+   "label": "f577"
+  },
+  {
+   "spacer": 9
+  },
+  {
+   "take": "t1",
+   "in": 186.72,
+   "frames": 77,
+   "label": "f694"
+  },
+  {
+   "take": "t1",
+   "in": 189.88,
+   "frames": 71,
+   "label": "f771"
+  },
+  {
+   "take": "t1",
+   "in": 192.55,
+   "frames": 25,
+   "label": "f842"
+  },
+  {
+   "take": "t1",
+   "in": 193.93,
+   "frames": 94,
+   "label": "f867"
+  },
+  {
+   "spacer": 9
+  },
+  {
+   "take": "t1",
+   "in": 233.75,
+   "frames": 60,
+   "label": "f970"
+  },
+  {
+   "take": "t1",
+   "in": 235.94,
+   "frames": 72,
+   "label": "f1030"
+  },
+  {
+   "spacer": 9
+  },
+  {
+   "take": "t1",
+   "in": 306.06,
+   "frames": 52,
+   "label": "f1111"
+  },
+  {
+   "spacer": 9
+  },
+  {
+   "take": "t1",
+   "in": 405.72,
+   "frames": 128,
+   "label": "f1172"
+  },
+  {
+   "take": "t1",
+   "in": 410.39,
+   "frames": 136,
+   "label": "f1300"
+  },
+  {
+   "spacer": 9
+  },
+  {
+   "take": "t1",
+   "in": 415.08,
+   "frames": 70,
+   "label": "f1445"
+  },
+  {
+   "spacer": 9
+  },
+  {
+   "take": "t1",
+   "in": 386.96,
+   "frames": 60,
+   "label": "f1524"
+  },
+  {
+   "take": "t1",
+   "in": 389.21,
+   "frames": 274,
+   "label": "f1584"
+  },
+  {
+   "spacer": 9
+  },
+  {
+   "take": "t1",
+   "in": 376.17,
+   "frames": 200,
+   "label": "f1867"
+  },
+  {
+   "spacer": 9
+  },
+  {
+   "take": "t2",
+   "in": 144.04,
+   "frames": 197,
+   "label": "f2076"
+  },
+  {
+   "take": "t2",
+   "in": 150.98,
+   "frames": 93,
+   "label": "f2273"
+  }
+ ]
+}

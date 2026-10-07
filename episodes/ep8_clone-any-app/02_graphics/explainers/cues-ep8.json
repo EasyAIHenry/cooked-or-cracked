@@ -1,0 +1,227 @@
+{
+ "B01_not-sure": [
+  {
+   "f": 16,
+   "sfx": "pop",
+   "note": "not"
+  },
+  {
+   "f": 41,
+   "sfx": "pop",
+   "note": "clone"
+  },
+  {
+   "f": 82,
+   "sfx": "pop",
+   "note": "try"
+  }
+ ],
+ "B02_two-apps": [
+  {
+   "f": 38,
+   "sfx": "pop",
+   "note": "two"
+  },
+  {
+   "f": 66,
+   "sfx": "pop",
+   "note": "Loom"
+  },
+  {
+   "f": 102,
+   "sfx": "pop",
+   "note": "Buffer"
+  }
+ ],
+ "B03_11-skills": [
+  {
+   "f": 15,
+   "sfx": "pop",
+   "note": "11"
+  },
+  {
+   "f": 98,
+   "sfx": "pop",
+   "note": "test"
+  },
+  {
+   "f": 159,
+   "sfx": "pop",
+   "note": "see"
+  },
+  {
+   "f": 193,
+   "sfx": "pop",
+   "note": "installed"
+  },
+  {
+   "f": 212,
+   "sfx": "pop",
+   "note": "Loom"
+  }
+ ],
+ "B06_parity": [
+  {
+   "f": 21,
+   "sfx": "pop",
+   "note": "look"
+  },
+  {
+   "f": 41,
+   "sfx": "pop",
+   "note": "buffer"
+  }
+ ],
+ "B07_instagram": [
+  {
+   "f": 32,
+   "sfx": "pop",
+   "note": "find"
+  },
+  {
+   "f": 69,
+   "sfx": "pop",
+   "note": "connect"
+  },
+  {
+   "f": 104,
+   "sfx": "pop",
+   "note": "Instagram"
+  },
+  {
+   "f": 176,
+   "sfx": "pop",
+   "note": "banning"
+  },
+  {
+   "f": 242,
+   "sfx": "pop",
+   "note": "allowed"
+  }
+ ],
+ "B08_strict": [
+  {
+   "f": 32,
+   "sfx": "pop",
+   "note": "very"
+  },
+  {
+   "f": 40,
+   "sfx": "pop",
+   "note": "strict"
+  }
+ ],
+ "B09_cooked": [
+  {
+   "f": 43,
+   "sfx": "pop",
+   "note": "cooked"
+  },
+  {
+   "f": 176,
+   "sfx": "pop",
+   "note": "internet"
+  },
+  {
+   "f": 221,
+   "sfx": "pop",
+   "note": "streaming"
+  },
+  {
+   "f": 267,
+   "sfx": "pop",
+   "note": "storage"
+  },
+  {
+   "f": 291,
+   "sfx": "pop",
+   "note": "cloud"
+  }
+ ],
+ "B10_local-disk": [
+  {
+   "f": 55,
+   "sfx": "pop",
+   "note": "cloud"
+  },
+  {
+   "f": 131,
+   "sfx": "pop",
+   "note": "install"
+  },
+  {
+   "f": 166,
+   "sfx": "pop",
+   "note": "local"
+  },
+  {
+   "f": 175,
+   "sfx": "pop",
+   "note": "drive"
+  }
+ ],
+ "B11_clone-cta": [
+  {
+   "f": 70,
+   "sfx": "pop",
+   "note": "10"
+  },
+  {
+   "f": 82,
+   "sfx": "pop",
+   "note": "apps"
+  },
+  {
+   "f": 115,
+   "sfx": "pop",
+   "note": "without"
+  },
+  {
+   "f": 166,
+   "sfx": "pop",
+   "note": "cloud"
+  },
+  {
+   "f": 200,
+   "sfx": "pop",
+   "note": "Comment"
+  },
+  {
+   "f": 224,
+   "sfx": "pop",
+   "note": "Clone"
+  },
+  {
+   "f": 252,
+   "sfx": "pop",
+   "note": "send"
+  }
+ ],
+ "B01b_features-not-app": [
+  {
+   "f": 4,
+   "sfx": "pop",
+   "note": "card"
+  },
+  {
+   "f": 94,
+   "sfx": "pop",
+   "note": "clone card"
+  },
+  {
+   "f": 206,
+   "sfx": "pop",
+   "note": "chip 1"
+  },
+  {
+   "f": 227,
+   "sfx": "pop",
+   "note": "chip 4"
+  },
+  {
+   "f": 246,
+   "sfx": "pop",
+   "note": "entire (cross)"
+  }
+ ]
+}

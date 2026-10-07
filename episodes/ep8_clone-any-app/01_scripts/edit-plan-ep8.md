@@ -21,3 +21,30 @@ Egg sting at the hold; bubble pop on every MG entrance (max 5 cues per beat, 18 
 
 ## QA before Henry sees it
 Safe-area lines on key frames, join_audit + unprimed Whisper on the export, frame sheet at 22 frames across the beats, loudness, no black tail frames.
+
+## Pass 2 status (7 Oct 2026, 05:45 SGT)
+- Timeline `f98c82dc0a` "Ep8 v1 — pass 2b (tight pauses)" in ChatCut project `cb036817`; 196 items from `place_ep8.py` (tracks in `tracks-ep8.json`). Pass 2a (`100299a6`) kept as fallback.
+- Export `05_cuts/pass2/ep8-pass2b-export.mp4` (77.3 s, 1080x1920 30p, raw lav at -22 LUFS); phone copy `ep8-pass2b-phone.mp4` (24 MB, -14.1 LUFS, highpass 70 + 2.5:1 comp + two-pass loudnorm) sent to Henry.
+- QA done on the export: 12-frame cue sheet (`sheet-2b.jpg`, pops land on Loom / Buffer / cooked / 10), safe-area lines clean, no black tail, join audit clean (no cut on speech; pauses 0.24 to 0.53 s, one 0.85 s paragraph break before "Not everything"), unprimed Whisper verbatim on every line (L08 "but" verified on the isolated piece; the full-file listen hears "I think" across that join, a context guess).
+- Cut changes vs pass 1/2a: `tighten_cut_ep8.py` (L04 in 99.10, L08 306.11 to 307.93, L11 out 398.26, L12 in 375.98 so "Not" is whole, 0.08/0.10 s margins, L01 keeps its breath). Explainers start earlier by their line's head trim (SHIFT in place_ep8.py). COOKED verdict stamp fills the top zone at "Well, this is cooked".
+- Open: Adobe Enhanced voice swap (needs Henry's "download"), Drive folder to Viewer (needs "viewer"), ManyChat CLONE automation, final sync to the public repo, learning-log entry. Henry's notes on pass 2 decide pass 3.
+
+## Pass 3 status (7 Oct 2026, 11:35 SGT), after Henry's pass 2 notes
+- Notes: voice too soft ("maxing out my sound"), the "why" not clear, start more direct, check the whole script for choppiness.
+- Cut v3 (build_cut_ep8.py LINES): hook, L04 two apps, L4a thesis (127.34-137.45, one piece), L05, L06, L07, L08, L11 verdict, L09, L10, LMa licence (422.92-429.45), L12, L13. Out: L01 hedge, L9a repository line (runtime; L11 carries storage). 90.8 s, verdict at 51%.
+- New: B01b_features-not-app explainer (`02_graphics/explainers/B01b_features-not-app/`, asset `5d200edc46`, cues from energy bursts: clone 94, features 206, not 236, entire 246, itself 282), LICENCE stamp on LMa, verdict stamp at "Well, this is cooked". Stamp beats in beats.json carry `stamp:{label,word,icon}`.
+- Word timing: both Whisper passes drift up to 1 s on L4a and LMa; `place_ep8.py` ENERGY_ALIGN spreads the line's own words over the energy runs (char-proportional). Caption highlights on L4a can sit up to 1 s off; explainer cues were set by hand from the runs.
+- Sound: VOX +3 dB, every SFX -3 dB in the placer; `05_cuts/pass3/mix_v3.sh` (highpass 90, -3 dB @250, +7 dB @2.8k, +5 dB shelf 5k, 3:1 comp, two-pass loudnorm -12, limiter -1). Result: 2-4 kHz from -16 to -7 dB vs low-mids, -11.3 LUFS integrated, speech RMS -14.8 dBFS. Files: `ep8-pass3-export.mp4` (ChatCut), `ep8-pass3-master.mp4` (remixed audio), `ep8-pass3-phone.mp4` (28 MB, sent).
+- QA on the export: 12-frame sheet (`sheet-v3.jpg`) with safe-area lines, no black tail, join audit clean (pauses 0.24-0.59 s), Whisper verbatim (its "cool" at 1:21 is the known cooked/cool guess).
+- ChatCut: timeline `df09fedae9` in cb036817, tracks in `tracks-ep8.json`. Two other sessions switch the window; the Showreel session cannot receive messages, so wait for its project folder to go quiet (8 min) before `target_project`, and `read_project` before every `edit_item`.
+- Open: Adobe voice swap ("download"), Drive to Viewer ("viewer"), ManyChat, repo sync, learning-log entry, retro.
+
+## Pass 4 status (7 Oct 2026, 12:15 SGT), after Henry's pass 3 notes
+- Notes: the sting hold looked tired and silent (it was him mid-sentence at 450.5 s with the sound off, read as "oh hold on"); lower the jingle; "I have installed Loom" is wrong, he cloned it; the Buffer clone's "why" (storage, Instagram, Meta) must be there.
+- Opener: no hold shot. Reel hook 0-93, then L04 starts at 93 with the egg jingle under it (A1, -17 dB after the global -3), the egg title on STK at 140/1420 800x320 for 72 frames, captions start after it (CAP0 = 169). Series rule restored: the sting overlaps the first beat, never its own silent shot.
+- Cut: L05 = first sentence only (177.60-182.16); L9a back (398.28-405.25, NO STORAGE stamp) between L11 and L09. 91.3 s, verdict at 43%.
+- The L9a out point was first cut 0.14 s inside "data" (join audit flagged it): fixed in ChatCut by hand (items 41666a56/754f2b0c 205 to 209 f, hold 5d41ef4a 1675/5 f) and in the cut files (tighten MANUAL L9a out 405.25); re-exported as `ep8-pass4-export.mp4` (first render kept as `ep8-pass4a-export.mp4`).
+- Captions: L9a per-piece Whisper wrote "post" and "anything"; the cards say "posts" and "any data" (FIX dict). One word to confirm with Henry: "photos or any data" vs "photos or anything" (the full-take pass says data, the export listen says anything).
+- QA on the export: 12-frame sheet (`sheet-v4.jpg`) and opener sheet (`sheet-v4a.jpg`), safe-area lines clean, no black tail, join audit clean (pauses 0.24-0.52 s), Whisper verbatim. Voice chain unchanged: `ep8-pass4-master.mp4`, `ep8-pass4-phone.mp4` (28.5 MB, -11.3 LUFS) sent.
+- ChatCut: timeline `df09fedae9` renamed "Ep8 v4 — pass 4 …" (pass 3 items deleted, pass 4 items added). Window handed back.
+- Open: Adobe voice swap ("download"), Drive Viewer ("viewer"), ManyChat, repo sync, learning log, retro.

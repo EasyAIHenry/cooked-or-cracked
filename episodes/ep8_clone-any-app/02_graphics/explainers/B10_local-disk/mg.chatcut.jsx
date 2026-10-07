@@ -89,7 +89,10 @@ const Component = ({ item }) => {
     const lapWrap = { ...abs, left: 0, top: 0, width: 980, height: 500, opacity: lap.o, transform: "rotate(" + lapR + "deg) scale(" + lap.s + ") translate(0, " + lapBump + "px)", transformOrigin: (LX + LW / 2) + "px " + (LY + LH / 2 + 20) + "px" };
     const screen = { ...abs, left: LX, top: LY, width: LW, height: LH, boxSizing: "border-box", backgroundColor: paper, border: "4px solid " + ink, borderRadius: 18, boxShadow: SHADOW };
     const screenIn = { ...abs, left: LX + 16, top: LY + 16, width: LW - 32, height: LH - 32, boxSizing: "border-box", borderRadius: 8, backgroundColor: "rgba(23,20,17,0.05)" };
+    const screenMicro = { ...abs, left: LX + 30, top: LY + 24, fontFamily: sans, fontWeight: 800, fontSize: 18, lineHeight: "22px", letterSpacing: 3, color: ink, opacity: 0.35 };
     const slotStyle = (sx, sy) => ({ ...abs, left: sx, top: sy, width: 166, height: 172, boxSizing: "border-box", border: "3px dashed " + ink, borderRadius: 16, opacity: 0.28 * slots, transform: "scale(" + (0.8 + 0.2 * slots) + ")" });
+    // faint serif numeral inside each empty slot; the tile covers it when it lands
+    const slotNum = { ...abs, left: 0, top: 0, width: 160, height: 166, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: serif, fontWeight: 900, fontSize: 78, lineHeight: 1, color: ink, opacity: 0.5 };
 
     const tileWrap = (sx, sy, d, rot) => ({ ...abs, left: sx, top: sy, width: 166, height: 172, opacity: d.o, transform: "translate(0, " + d.y + "px) rotate(" + (d.rot + rot) + "deg) scale(" + d.wd + ", " + d.sq + ")", transformOrigin: "50% 100%" });
     const tileFace = { ...abs, inset: 0, boxSizing: "border-box", backgroundColor: paper, border: "3.5px solid " + ink, borderRadius: 16, boxShadow: SHADOW, display: "flex", alignItems: "center", justifyContent: "center" };
@@ -146,13 +149,14 @@ const Component = ({ item }) => {
       <div style={lapWrap}>
         <div style={screen} />
         <div style={screenIn} />
+        <div style={screenMicro}>LOCAL</div>
         {/* base */}
         <svg viewBox="0 0 980 500" style={svgFull}>
           <path d={"M" + (LX - 40) + " " + (LY + LH + 2) + " H" + (LX + LW + 40) + " L" + (LX + LW + 28) + " " + (LY + LH + 26) + " Q" + (LX + LW + 24) + " " + (LY + LH + 34) + " " + (LX + LW + 12) + " " + (LY + LH + 34) + " H" + (LX - 12) + " Q" + (LX - 24) + " " + (LY + LH + 34) + " " + (LX - 28) + " " + (LY + LH + 26) + " Z"} fill={paper} stroke={ink} strokeWidth="4" strokeLinejoin="round" />
           <path d={"M" + (LX + LW / 2 - 50) + " " + (LY + LH + 2) + " H" + (LX + LW / 2 + 50)} stroke={ink} strokeWidth="4" strokeLinecap="round" opacity="0.5" />
         </svg>
-        <div style={slotStyle(SLOT[0][0], SLOT[0][1])} />
-        <div style={slotStyle(SLOT[1][0], SLOT[1][1])} />
+        <div style={slotStyle(SLOT[0][0], SLOT[0][1])}><div style={slotNum}>1</div></div>
+        <div style={slotStyle(SLOT[1][0], SLOT[1][1])}><div style={slotNum}>2</div></div>
         {/* tiles */}
         <div style={tileWrap(SLOT[0][0], SLOT[0][1], d1, -2)}><div style={tileFace}>{recGlyph}</div></div>
         <div style={tileWrap(SLOT[1][0], SLOT[1][1], d2, 1.5)}><div style={tileFace}>{queueGlyph}</div></div>

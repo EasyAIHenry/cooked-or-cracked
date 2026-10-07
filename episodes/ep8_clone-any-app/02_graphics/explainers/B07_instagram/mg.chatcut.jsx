@@ -169,8 +169,8 @@ const __Inner = ({ item }) => {
       {field(2, 192, 70)}
       <div style={{ position: "absolute", left: 20, top: 258, display: "flex", alignItems: "center", gap: 8, boxSizing: "border-box", border: "3px solid " + acc, borderRadius: 24, padding: "4px 16px 4px 12px", opacity: popO(pillT), transform: "rotate(" + popR(pillT, -2) + "deg) scale(" + popS(pillT) + ")", transformOrigin: "0% 50%" }}>
         <svg viewBox="0 0 24 24" width="28" height="28">
-          <circle cx="12" cy="12" r="9.5" fill="none" stroke={acc} strokeWidth="2.6" />
-          <path d="M12 7 V12 L15.5 14.5" fill="none" stroke={acc} strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" />
+          <circle cx="12" cy="12" r="9.5" fill={gold} stroke={acc} strokeWidth="2.6" />
+          <path d="M12 7 V12 L15.5 14.5" fill="none" stroke={ink} strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
         <span style={{ fontFamily: sans, fontWeight: 800, fontSize: 30, lineHeight: "34px", letterSpacing: 2, color: acc }}>REVIEW</span>
       </div>

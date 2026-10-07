@@ -1,0 +1,364 @@
+{
+ "HK": 93,
+ "S0": 93,
+ "M0": 93,
+ "END": 2740,
+ "VER_F": 1181,
+ "CTA_F": 2637,
+ "pos": {
+  "L04": [
+   93,
+   220
+  ],
+  "L4a": [
+   229,
+   530
+  ],
+  "L05": [
+   539,
+   676
+  ],
+  "L06": [
+   685,
+   934
+  ],
+  "L07": [
+   943,
+   1064
+  ],
+  "L08": [
+   1073,
+   1128
+  ],
+  "L11": [
+   1137,
+   1457
+  ],
+  "L9a": [
+   1466,
+   1671
+  ],
+  "L09": [
+   1680,
+   1932
+  ],
+  "L10": [
+   1941,
+   2009
+  ],
+  "LMa": [
+   2018,
+   2214
+  ],
+  "L12": [
+   2223,
+   2429
+  ],
+  "L13": [
+   2438,
+   2728
+  ]
+ },
+ "runs": [
+  [
+   93,
+   1137,
+   "card"
+  ],
+  [
+   1137,
+   2740,
+   "big"
+  ]
+ ],
+ "caps": [
+  [
+   169,
+   "one is Loom and"
+  ],
+  [
+   188,
+   "another is Buffer"
+  ],
+  [
+   231,
+   "I am guessing that"
+  ],
+  [
+   283,
+   "if you're gonna clone"
+  ],
+  [
+   369,
+   "an app"
+  ],
+  [
+   383,
+   "you're just gonna clone"
+  ],
+  [
+   437,
+   "the features and not"
+  ],
+  [
+   480,
+   "the entire app itself"
+  ],
+  [
+   540,
+   "While there's 11 different"
+  ],
+  [
+   581,
+   "types of skill sets"
+  ],
+  [
+   607,
+   "I wanted to put"
+  ],
+  [
+   631,
+   "to the test whether"
+  ],
+  [
+   653,
+   "it works or not"
+  ],
+  [
+   688,
+   "it is interesting because"
+  ],
+  [
+   748,
+   "I can actually start"
+  ],
+  [
+   783,
+   "to screen record"
+  ],
+  [
+   820,
+   "my screen And"
+  ],
+  [
+   848,
+   "when I'm done"
+  ],
+  [
+   867,
+   "I can share it"
+  ],
+  [
+   885,
+   "with anyone that I"
+  ],
+  [
+   919,
+   "want to"
+  ],
+  [
+   946,
+   "Now actually clone"
+  ],
+  [
+   1003,
+   "Buffer and it's"
+  ],
+  [
+   1023,
+   "actually called Slotline"
+  ],
+  [
+   1073,
+   "But it does"
+  ],
+  [
+   1096,
+   "look like Buffer"
+  ],
+  [
+   1141,
+   "Overall"
+  ],
+  [
+   1157,
+   "I think this"
+  ],
+  [
+   1175,
+   "is cooked"
+  ],
+  [
+   1201,
+   "So it is not"
+  ],
+  [
+   1225,
+   "going to work if"
+  ],
+  [
+   1265,
+   "you are going to"
+  ],
+  [
+   1290,
+   "rely on the internet"
+  ],
+  [
+   1340,
+   "to actually do streaming"
+  ],
+  [
+   1388,
+   "or any storage of"
+  ],
+  [
+   1415,
+   "any cloud data"
+  ],
+  [
+   1467,
+   "First thing"
+  ],
+  [
+   1487,
+   "this thing doesn't even"
+  ],
+  [
+   1517,
+   "have a repository to"
+  ],
+  [
+   1567,
+   "help you to store"
+  ],
+  [
+   1599,
+   "your post or any"
+  ],
+  [
+   1645,
+   "photos or anything"
+  ],
+  [
+   1682,
+   "and you're gonna find"
+  ],
+  [
+   1715,
+   "it as a hassle"
+  ],
+  [
+   1740,
+   "to connect your Instagram"
+  ],
+  [
+   1781,
+   "to this"
+  ],
+  [
+   1803,
+   "let's not talk about"
+  ],
+  [
+   1831,
+   "Instagram banning third-party apps"
+  ],
+  [
+   1894,
+   "that are not even allowed"
+  ],
+  [
+   1943,
+   "So Meta is actually"
+  ],
+  [
+   1972,
+   "very strict on that"
+  ],
+  [
+   2021,
+   "Apps like this"
+  ],
+  [
+   2042,
+   "actually spend time"
+  ],
+  [
+   2077,
+   "they buy the license"
+  ],
+  [
+   2108,
+   "and they work very"
+  ],
+  [
+   2147,
+   "closely with Meta to"
+  ],
+  [
+   2177,
+   "actually do this"
+  ],
+  [
+   2224,
+   "Not everything is needed"
+  ],
+  [
+   2271,
+   "to be on cloud"
+  ],
+  [
+   2302,
+   "I think some things"
+  ],
+  [
+   2326,
+   "are great if you"
+  ],
+  [
+   2359,
+   "install it in your"
+  ],
+  [
+   2386,
+   "local drive itself"
+  ],
+  [
+   2440,
+   "Well"
+  ],
+  [
+   2450,
+   "this is cooked"
+  ],
+  [
+   2475,
+   "I've actually created 10"
+  ],
+  [
+   2514,
+   "more apps that you"
+  ],
+  [
+   2537,
+   "can use without the"
+  ],
+  [
+   2563,
+   "internet and without cloud storage"
+  ],
+  [
+   2637,
+   "Comment down below \"Clone\""
+  ],
+  [
+   2676,
+   "and I'll send you"
+  ],
+  [
+   2704,
+   "my workflow"
+  ]
+ ]
+}

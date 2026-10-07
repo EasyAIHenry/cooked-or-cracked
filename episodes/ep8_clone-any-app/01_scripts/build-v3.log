@@ -1,0 +1,44 @@
+part1    32.45    36.20  3.75 (raw  3.75, 1 pcs)  [abs .. abs]  H00 HOOK (reel audio on his phone): You can now clone any ap
+part1    99.26   103.74  4.48 (raw  4.48, 1 pcs)  [So .. Buffer.]  L04 So today I'm gonna clone two apps. One is Loom and anoth
+part1   124.98   138.06 10.38 (raw 13.08, 5 pcs)  [I .. itself.]  L4a I am guessing that if you're gonna clone an app, you're 
+part1   177.60   186.70  8.20 (raw  9.10, 2 pcs)  [abs .. abs]  L05 While there's 11 different types of skill sets, I wanted
+part1   186.72   197.05  8.90 (raw 10.33, 4 pcs)  [abs .. abs]  L06 It is interesting because I can actually start to screen
+part1   233.75   238.35  4.41 (raw  4.60, 2 pcs)  [abs .. abs]  L07 Now I actually clone Buffer and it's actually called Slo
+part1   306.06   307.80  1.74 (raw  1.74, 1 pcs)  [but .. buffer]  L08 But it does look like Buffer.
+part1   386.72   398.34 11.14 (raw 13.84, 2 pcs)  [Overall, .. data.]  L11 VERDICT: Overall, I think this is cooked, so it is not g
+part1   398.28   405.11  6.83 (raw  6.83, 1 pcs)  [First .. data]  L9a First thing, this thing doesn't even have a repository t
+part1   405.72   414.93  8.81 (raw  9.24, 2 pcs)  [you're .. allowed.]  L09 You're going to find it as a hassle to connect your Inst
+part1   415.08   417.42  2.34 (raw  2.81, 1 pcs)  [so .. that.]  L10 So Meta is actually very strict on that.
+part1   422.91   429.61  6.70 (raw  6.70, 1 pcs)  [apps .. this.]  LMa Apps like this actually spend time, they buy the license
+part1   376.07   382.85  6.68 (raw  6.68, 1 pcs)  [Not .. itself.]  L12 Not everything is needed to be on cloud, I think some th
+part2   143.88   154.08  9.67 (raw 12.14, 2 pcs)  [While .. workflow.]  L13 CTA: While this is cooked, I've actually created 10 more
+speech total 94.0 s in 14 segments
+preview: /Users/henrychua/Content Creation/DRIVE_Cooked-or-Cracked_Ep8_Clone-Any-App/05_cuts/pass1/cut-ep8-v2-audio.wav
+L04   99.100- 103.340 dur   4.48 ->   4.24  pieces [[99.1, np.float64(103.34)]]
+L4a  124.980- 138.060 dur  10.38 ->  10.38  pieces [[124.98, 125.58], [127.34, 129.27], [129.62, 130.96], [131.2, 137.42], [137.77, 138.06]]
+L05  177.600- 186.520 dur   8.20 ->   8.02  pieces [[177.6, 182.19], [183.09, np.float64(186.52)]]
+L06  187.280- 197.010 dur   8.90 ->   8.30  pieces [[np.float64(187.28), 189.3], [189.88, 192.25], [192.55, 193.38], [193.93, np.float64(197.01)]]
+L07  233.880- 238.100 dur   4.41 ->   4.03  pieces [[np.float64(233.88), 235.75], [235.94, np.float64(238.1)]]
+L08  306.110- 307.930 dur   1.74 ->   1.82  pieces [[306.11, 307.93]]
+L11  386.980- 398.200 dur  11.14 ->  10.98  pieces [[np.float64(386.98), 388.97], [389.21, np.float64(398.2)]]
+L9a  398.280- 405.110 dur   6.83 ->   6.83  pieces [[398.28, 405.11]]
+L09  405.990- 414.780 dur   8.81 ->   8.39  pieces [[np.float64(405.99), 409.99], [410.39, np.float64(414.78)]]
+L10  415.080- 417.330 dur   2.34 ->   2.25  pieces [[415.08, np.float64(417.33)]]
+LMa  422.920- 429.450 dur   6.70 ->   6.53  pieces [[np.float64(422.92), np.float64(429.45)]]
+L12  375.980- 382.850 dur   6.68 ->   6.87  pieces [[np.float64(375.98), 382.85]]
+L13  144.060- 154.080 dur   9.67 ->   9.65  pieces [[np.float64(144.06), 150.61], [150.98, 154.08]]
+total speech 92.04
+300 words; cut length 96.24 s
+[0.04, 0.16, 'You', 'H00']
+[0.16, 0.32, 'can', 'H00']
+[0.32, 0.48, 'now', 'H00']
+[0.48, 0.75, 'claim', 'H00']
+[0.75, 0.91, 'any', 'H00']
+[0.91, 1.07, 'app', 'H00']
+[1.07, 1.28, 'with', 'H00']
+[1.28, 1.61, 'quad,', 'H00']
+[1.61, 1.68, 'so', 'H00']
+[1.68, 1.79, 'you', 'H00']
+[1.79, 1.97, 'never', 'H00']
+[1.97, 2.08, 'have', 'H00']
+CHAIN_OK

@@ -1,4 +1,4 @@
-{"duration": 9, "fps": 30, "output_size": [1960, 1000], "source_size": [1960, 1000], "cursor_scale": 2.2, "click_strength": 15, "rotation_strength_degrees": 6,
+{"duration": 9.6, "fps": 30, "output_size": [1960, 1000], "source_size": [1960, 1000], "cursor_scale": 2.2, "click_strength": 15, "rotation_strength_degrees": 6,
  "shots": {"home": "/Users/henrychua/Content Creation/DRIVE_Cooked-or-Cracked_Ep8_Clone-Any-App/02_graphics/rerecord/src/loom-01-home.png", "share": "/Users/henrychua/Content Creation/DRIVE_Cooked-or-Cracked_Ep8_Clone-Any-App/02_graphics/rerecord/src/loom-03-share.png"},
  "scene_starts": [[0.0, "home", "cut"], [4.6, "share", "fade"]],
  "cursor_keys": [[0.0, 1300, 160], [1.2, 420, 300], [2.6, 420, 300], [3.4, 170, 395], [4.2, 170, 395], [5.4, 300, 330], [7.0, 190, 1040], [8.6, 190, 1040]],

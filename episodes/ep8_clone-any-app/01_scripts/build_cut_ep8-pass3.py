@@ -20,12 +20,12 @@ LINES = [
     ('part1', 99.22, 'Buffer', 103.1, 'L04 So today I\'m gonna clone two apps. One is Loom and another is Buffer.'),
     # L4a: keep as ONE piece (edit cut-ep8-v2.json after build): the pause squeeze cut inside his words here
     ('part1', 'abs', 127.30, 138.06, 'L4a I am guessing that if you\'re gonna clone an app, you\'re just gonna clone the features and not the entire app itself.'),
-    ('part1', 'abs', 177.60, 182.19, 'L05 While there\'s 11 different types of skill sets, I wanted to put to the test whether it works or not.'),   # v4: "installed Loom over here" out (Henry: he cloned it)
+    ('part1', 'abs', 177.60, 186.70, 'L05 While there\'s 11 different types of skill sets, I wanted to put to the test whether it works or not. So as you can see, I\'ve actually installed Loom over here.'),
     ('part1', 'abs', 186.72, 197.05, 'L06 It is interesting because I can actually start to screen record my screen and when I\'m done, I can share it with anyone that I want to.'),
     ('part1', 'abs', 233.75, 238.35, 'L07 Now I actually clone Buffer and it\'s actually called Slotline.'),
     ('part1', 306.93, 'Buffer', 308.5, 'L08 But it does look like Buffer.'),
     ('part1', 386.90, 'data', 397.8, 'L11 VERDICT: Overall, I think this is cooked, so it is not going to work if you are going to rely on the internet to actually do streaming or any storage of any cloud data.'),
-    ('part1', 'abs', 398.28, 405.11, 'L9a First thing, this thing doesn\'t even have a repository to help you to store your posts or any photos or any data.'),
+    # ('part1', 398.50, 'data', 405.3, 'L9a First thing, this thing doesn\'t even have a repository to help you to store your posts or any photos or any data.'),
     ('part1', 405.52, 'allowed', 414.5, 'L09 You\'re going to find it as a hassle to connect your Instagram to this. Let\'s not talk about Instagram banning third-party apps that are not even allowed.'),
     ('part1', 415.22, 'that', 417.1, 'L10 So Meta is actually very strict on that.'),
     ('part1', 422.69, 'this', 429.1, 'LMa Apps like this actually spend time, they buy the license and they work very closely with Meta to actually do this.'),

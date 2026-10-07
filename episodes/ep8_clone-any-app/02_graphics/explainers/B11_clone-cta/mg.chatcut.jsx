@@ -138,6 +138,7 @@ const Component = ({ item }) => {
     const covWrap = { ...abs, left: covX, top: 178, width: COVW, height: COVH, opacity: covO, transform: "rotate(" + covR + "deg) scale(" + covS + ")", transformOrigin: "50% 50%" };
     const covFace = { ...abs, inset: 0, boxSizing: "border-box", backgroundColor: paper, border: "3.5px solid " + ink, borderRadius: 16, boxShadow: SHADOW, overflow: "hidden" };
     const spine = { ...abs, left: 0, top: 0, bottom: 0, width: 30, backgroundColor: acc, borderRight: "3.5px solid " + ink };
+    const spineMicro = { ...abs, left: 4, top: 96, width: 22, textAlign: "center", fontFamily: sans, fontWeight: 800, fontSize: 11, lineHeight: "12px", letterSpacing: 1, color: paper, opacity: 0.85, transform: "rotate(-90deg)", transformOrigin: "50% 50%", whiteSpace: "nowrap" };
     const covTitle = { ...abs, left: 62, top: 34, fontFamily: serif, fontWeight: 900, fontSize: 74, lineHeight: 1, color: ink, letterSpacing: -1, whiteSpace: "nowrap" };
     const covSub = { ...abs, left: 64, top: 128, fontFamily: hand, fontWeight: 700, fontSize: 38, lineHeight: 1.2, color: ink, whiteSpace: "nowrap" };
     const dog = { ...abs, right: -2, top: -2, width: 54, height: 54 };
@@ -181,6 +182,7 @@ const Component = ({ item }) => {
       <div style={covWrap}>
         <div style={covFace}>
           <div style={spine} />
+          <div style={spineMicro}>GUIDE</div>
           <div style={covTitle}>Ten apps</div>
           <div style={covSub}>worth cloning in an hour</div>
           <svg viewBox="0 0 54 54" style={dog}><path d="M0 0 H54 V54 Z" fill={gold} stroke={ink} strokeWidth="3.5" strokeLinejoin="round" /></svg>

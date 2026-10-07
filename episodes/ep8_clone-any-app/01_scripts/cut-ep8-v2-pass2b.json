@@ -18,6 +18,22 @@
   },
   {
    "take": "part1",
+   "in": 42.09,
+   "out": 45.28,
+   "dur": 3.19,
+   "raw_dur": 3.48,
+   "pieces": [
+    [
+     42.09,
+     45.28
+    ]
+   ],
+   "label": "L01 Well, not sure if you can clone every app, but let's try.",
+   "first": "Well,",
+   "last": "try."
+  },
+  {
+   "take": "part1",
    "in": 99.1,
    "out": 103.34,
    "dur": 4.24,
@@ -34,33 +50,21 @@
   },
   {
    "take": "part1",
-   "in": 127.36,
-   "out": 137.4,
-   "dur": 10.04,
-   "raw_dur": 10.76,
-   "pieces": [
-    [
-     127.36,
-     137.4
-    ]
-   ],
-   "label": "L4a I am guessing that if you're gonna clone an app, you're just gonna clone the features and not the entire app itself.",
-   "first": "abs",
-   "last": "abs"
-  },
-  {
-   "take": "part1",
    "in": 177.6,
-   "out": 182.16,
-   "dur": 4.56,
-   "raw_dur": 4.59,
+   "out": 186.52,
+   "dur": 8.02,
+   "raw_dur": 9.1,
    "pieces": [
     [
      177.6,
-     182.16
+     182.19
+    ],
+    [
+     183.09,
+     186.52
     ]
    ],
-   "label": "L05 While there's 11 different types of skill sets, I wanted to put to the test whether it works or not.",
+   "label": "L05 While there's 11 different types of skill sets, I wanted to put to the test whether it works or not. So as you can see, I've actually installed Loom over here.",
    "first": "abs",
    "last": "abs"
   },
@@ -130,42 +134,6 @@
   },
   {
    "take": "part1",
-   "in": 386.98,
-   "out": 397.86,
-   "dur": 10.64,
-   "raw_dur": 13.84,
-   "pieces": [
-    [
-     386.98,
-     388.97
-    ],
-    [
-     389.21,
-     397.86
-    ]
-   ],
-   "label": "L11 VERDICT: Overall, I think this is cooked, so it is not going to work if you are going to rely on the internet to actually do streaming or any storage of any cloud data.",
-   "first": "Overall,",
-   "last": "data."
-  },
-  {
-   "take": "part1",
-   "in": 398.28,
-   "out": 405.25,
-   "dur": 6.97,
-   "raw_dur": 6.83,
-   "pieces": [
-    [
-     398.28,
-     405.25
-    ]
-   ],
-   "label": "L9a First thing, this thing doesn't even have a repository to help you to store your posts or any photos or any data.",
-   "first": "abs",
-   "last": "abs"
-  },
-  {
-   "take": "part1",
    "in": 405.99,
    "out": 414.78,
    "dur": 8.39,
@@ -202,19 +170,23 @@
   },
   {
    "take": "part1",
-   "in": 422.92,
-   "out": 429.45,
-   "dur": 6.53,
-   "raw_dur": 6.7,
+   "in": 386.98,
+   "out": 398.2,
+   "dur": 10.98,
+   "raw_dur": 13.84,
    "pieces": [
     [
-     422.92,
-     429.45
+     386.98,
+     388.97
+    ],
+    [
+     389.21,
+     398.2
     ]
    ],
-   "label": "LMa Apps like this actually spend time, they buy the license and they work very closely with Meta to actually do this.",
-   "first": "apps",
-   "last": "this."
+   "label": "L11 VERDICT: Overall, I think this is cooked, so it is not going to work if you are going to rely on the internet to actually do streaming or any storage of any cloud data.",
+   "first": "Overall,",
+   "last": "data."
   },
   {
    "take": "part1",

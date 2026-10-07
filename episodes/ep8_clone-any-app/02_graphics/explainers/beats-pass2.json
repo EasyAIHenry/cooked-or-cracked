@@ -1,5 +1,76 @@
 [
  {
+  "id": "B01_not-sure",
+  "lines": [
+   "L01"
+  ],
+  "cutStart": 122,
+  "cutEnd": 235,
+  "duration": 113,
+  "text": "Well, I'm not sure it can clone every app, but let's try.",
+  "words": [
+   {
+    "w": "Well,",
+    "f": 0
+   },
+   {
+    "w": "I'm",
+    "f": 12
+   },
+   {
+    "w": "not",
+    "f": 18
+   },
+   {
+    "w": "sure",
+    "f": 24
+   },
+   {
+    "w": "it",
+    "f": 33
+   },
+   {
+    "w": "can",
+    "f": 36
+   },
+   {
+    "w": "clone",
+    "f": 43
+   },
+   {
+    "w": "every",
+    "f": 52
+   },
+   {
+    "w": "app,",
+    "f": 62
+   },
+   {
+    "w": "but",
+    "f": 73
+   },
+   {
+    "w": "let's",
+    "f": 76
+   },
+   {
+    "w": "try.",
+    "f": 84
+   }
+  ],
+  "brief": "The claim card with a question mark, then the test flask",
+  "canvas": {
+   "width": 980,
+   "height": 500
+  },
+  "place": {
+   "left": 50,
+   "top": 234,
+   "width": 980,
+   "height": 500
+  }
+ },
+ {
   "id": "B02_two-apps",
   "lines": [
    "L04"
@@ -71,25 +142,6 @@
    }
   ],
   "brief": "Two app tiles with price tags",
-  "canvas": {
-   "width": 980,
-   "height": 500
-  },
-  "place": {
-   "left": 50,
-   "top": 234,
-   "width": 980,
-   "height": 500
-  }
- },
- {
-  "id": "B01b_features-not-app",
-  "lines": [
-   "L4a"
-  ],
-  "duration": 330,
-  "text": "I am guessing that if you're gonna clone an app, you're just gonna clone the features and not the entire app itself.",
-  "brief": "The app card with four feature chips and a grey strip (users, servers, storage); a dashed clone card slides in on 'clone'; the chips copy across on 'features'; the strip glows gold and is crossed on 'not the entire app'; label 'the rest stays theirs' on 'itself'",
   "canvas": {
    "width": 980,
    "height": 500
@@ -490,173 +542,6 @@
   }
  },
  {
-  "id": "B09_cooked",
-  "lines": [
-   "L11"
-  ],
-  "cutStart": 1464,
-  "cutEnd": 1808,
-  "duration": 344,
-  "text": "Overall, I think this is cooked. So it is not going to work if you are going to rely on the internet to actually do streaming or any storage of any cloud data.",
-  "words": [
-   {
-    "w": "Overall,",
-    "f": 4
-   },
-   {
-    "w": "I",
-    "f": 18
-   },
-   {
-    "w": "think",
-    "f": 21
-   },
-   {
-    "w": "this",
-    "f": 30
-   },
-   {
-    "w": "is",
-    "f": 38
-   },
-   {
-    "w": "cooked.",
-    "f": 45
-   },
-   {
-    "w": "So",
-    "f": 65
-   },
-   {
-    "w": "it",
-    "f": 67
-   },
-   {
-    "w": "is",
-    "f": 72
-   },
-   {
-    "w": "not",
-    "f": 82
-   },
-   {
-    "w": "going",
-    "f": 89
-   },
-   {
-    "w": "to",
-    "f": 105
-   },
-   {
-    "w": "work",
-    "f": 111
-   },
-   {
-    "w": "if",
-    "f": 125
-   },
-   {
-    "w": "you",
-    "f": 129
-   },
-   {
-    "w": "are",
-    "f": 135
-   },
-   {
-    "w": "going",
-    "f": 142
-   },
-   {
-    "w": "to",
-    "f": 151
-   },
-   {
-    "w": "rely",
-    "f": 154
-   },
-   {
-    "w": "on",
-    "f": 161
-   },
-   {
-    "w": "the",
-    "f": 168
-   },
-   {
-    "w": "internet",
-    "f": 178
-   },
-   {
-    "w": "to",
-    "f": 204
-   },
-   {
-    "w": "actually",
-    "f": 207
-   },
-   {
-    "w": "do",
-    "f": 216
-   },
-   {
-    "w": "streaming",
-    "f": 223
-   },
-   {
-    "w": "or",
-    "f": 253
-   },
-   {
-    "w": "any",
-    "f": 253
-   },
-   {
-    "w": "storage",
-    "f": 269
-   },
-   {
-    "w": "of",
-    "f": 279
-   },
-   {
-    "w": "any",
-    "f": 292
-   },
-   {
-    "w": "cloud",
-    "f": 293
-   },
-   {
-    "w": "data.",
-    "f": 307
-   }
-  ],
-  "brief": "COOKED stamp, cloud with streaming and storage crossed",
-  "canvas": {
-   "width": 980,
-   "height": 500
-  },
-  "place": {
-   "left": 50,
-   "top": 234,
-   "width": 980,
-   "height": 500
-  }
- },
- {
-  "id": "B9a_no-storage",
-  "lines": [
-   "L9a"
-  ],
-  "stamp": {
-   "label": "nothing saved behind it",
-   "word": "NO STORAGE",
-   "icon": "table"
-  },
-  "text": "First thing, this thing doesn't even have a repository to help you to store your posts or any photos or any data."
- },
- {
   "id": "B07_instagram",
   "lines": [
    "L09"
@@ -843,16 +728,159 @@
   }
  },
  {
-  "id": "BMa_licence",
+  "id": "B09_cooked",
   "lines": [
-   "LMa"
+   "L11"
   ],
-  "stamp": {
-   "label": "the real app pays for access",
-   "word": "LICENCE",
-   "icon": "money"
+  "cutStart": 1464,
+  "cutEnd": 1808,
+  "duration": 344,
+  "text": "Overall, I think this is cooked. So it is not going to work if you are going to rely on the internet to actually do streaming or any storage of any cloud data.",
+  "words": [
+   {
+    "w": "Overall,",
+    "f": 4
+   },
+   {
+    "w": "I",
+    "f": 18
+   },
+   {
+    "w": "think",
+    "f": 21
+   },
+   {
+    "w": "this",
+    "f": 30
+   },
+   {
+    "w": "is",
+    "f": 38
+   },
+   {
+    "w": "cooked.",
+    "f": 45
+   },
+   {
+    "w": "So",
+    "f": 65
+   },
+   {
+    "w": "it",
+    "f": 67
+   },
+   {
+    "w": "is",
+    "f": 72
+   },
+   {
+    "w": "not",
+    "f": 82
+   },
+   {
+    "w": "going",
+    "f": 89
+   },
+   {
+    "w": "to",
+    "f": 105
+   },
+   {
+    "w": "work",
+    "f": 111
+   },
+   {
+    "w": "if",
+    "f": 125
+   },
+   {
+    "w": "you",
+    "f": 129
+   },
+   {
+    "w": "are",
+    "f": 135
+   },
+   {
+    "w": "going",
+    "f": 142
+   },
+   {
+    "w": "to",
+    "f": 151
+   },
+   {
+    "w": "rely",
+    "f": 154
+   },
+   {
+    "w": "on",
+    "f": 161
+   },
+   {
+    "w": "the",
+    "f": 168
+   },
+   {
+    "w": "internet",
+    "f": 178
+   },
+   {
+    "w": "to",
+    "f": 204
+   },
+   {
+    "w": "actually",
+    "f": 207
+   },
+   {
+    "w": "do",
+    "f": 216
+   },
+   {
+    "w": "streaming",
+    "f": 223
+   },
+   {
+    "w": "or",
+    "f": 253
+   },
+   {
+    "w": "any",
+    "f": 253
+   },
+   {
+    "w": "storage",
+    "f": 269
+   },
+   {
+    "w": "of",
+    "f": 279
+   },
+   {
+    "w": "any",
+    "f": 292
+   },
+   {
+    "w": "cloud",
+    "f": 293
+   },
+   {
+    "w": "data.",
+    "f": 307
+   }
+  ],
+  "brief": "COOKED stamp, cloud with streaming and storage crossed",
+  "canvas": {
+   "width": 980,
+   "height": 500
   },
-  "text": "Apps like this actually spend time, they buy the license and they work very closely with Meta to actually do this."
+  "place": {
+   "left": 50,
+   "top": 234,
+   "width": 980,
+   "height": 500
+  }
  },
  {
   "id": "B10_local-disk",

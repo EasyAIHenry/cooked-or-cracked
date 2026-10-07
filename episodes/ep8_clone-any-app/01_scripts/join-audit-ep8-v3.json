@@ -1,0 +1,162 @@
+{
+ "fps": 30,
+ "sources": {
+  "t1": "../04_raw-footage/transcripts/part1-16k.wav",
+  "t2": "../04_raw-footage/transcripts/part2-16k.wav"
+ },
+ "items": [
+  {
+   "take": "t1",
+   "in": 99.1,
+   "frames": 127,
+   "label": "f183"
+  },
+  {
+   "spacer": 9
+  },
+  {
+   "take": "t1",
+   "in": 127.34,
+   "frames": 303,
+   "label": "f319"
+  },
+  {
+   "spacer": 9
+  },
+  {
+   "take": "t1",
+   "in": 177.6,
+   "frames": 138,
+   "label": "f631"
+  },
+  {
+   "take": "t1",
+   "in": 183.09,
+   "frames": 103,
+   "label": "f769"
+  },
+  {
+   "spacer": 9
+  },
+  {
+   "take": "t1",
+   "in": 187.28,
+   "frames": 61,
+   "label": "f881"
+  },
+  {
+   "take": "t1",
+   "in": 189.88,
+   "frames": 71,
+   "label": "f942"
+  },
+  {
+   "take": "t1",
+   "in": 192.55,
+   "frames": 25,
+   "label": "f1013"
+  },
+  {
+   "take": "t1",
+   "in": 193.93,
+   "frames": 92,
+   "label": "f1038"
+  },
+  {
+   "spacer": 9
+  },
+  {
+   "take": "t1",
+   "in": 233.88,
+   "frames": 56,
+   "label": "f1139"
+  },
+  {
+   "take": "t1",
+   "in": 235.94,
+   "frames": 65,
+   "label": "f1195"
+  },
+  {
+   "spacer": 9
+  },
+  {
+   "take": "t1",
+   "in": 306.11,
+   "frames": 55,
+   "label": "f1269"
+  },
+  {
+   "spacer": 9
+  },
+  {
+   "take": "t1",
+   "in": 386.98,
+   "frames": 60,
+   "label": "f1333"
+  },
+  {
+   "take": "t1",
+   "in": 389.21,
+   "frames": 262,
+   "label": "f1393"
+  },
+  {
+   "spacer": 9
+  },
+  {
+   "take": "t1",
+   "in": 405.99,
+   "frames": 120,
+   "label": "f1664"
+  },
+  {
+   "take": "t1",
+   "in": 410.39,
+   "frames": 132,
+   "label": "f1784"
+  },
+  {
+   "spacer": 9
+  },
+  {
+   "take": "t1",
+   "in": 415.08,
+   "frames": 68,
+   "label": "f1925"
+  },
+  {
+   "spacer": 9
+  },
+  {
+   "take": "t1",
+   "in": 422.92,
+   "frames": 196,
+   "label": "f2002"
+  },
+  {
+   "spacer": 9
+  },
+  {
+   "take": "t1",
+   "in": 375.98,
+   "frames": 206,
+   "label": "f2207"
+  },
+  {
+   "spacer": 9
+  },
+  {
+   "take": "t2",
+   "in": 144.06,
+   "frames": 197,
+   "label": "f2422"
+  },
+  {
+   "take": "t2",
+   "in": 150.98,
+   "frames": 93,
+   "label": "f2619"
+  }
+ ]
+}

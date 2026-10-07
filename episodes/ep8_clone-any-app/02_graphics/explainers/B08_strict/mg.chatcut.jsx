@@ -40,6 +40,7 @@ const __Inner = ({ item }) => {
   const stR = interpolate(stT, [0, 5], [-10, -5], { ...CL, easing: EO });
   const shieldBump = interpolate(frame, [tStrict + 2, tStrict + 6, tStrict + 11], [1, 1.07, 1], CL);
   const ruled = "repeating-linear-gradient(0deg,transparent,transparent 41px," + ink + "14 42px,transparent 43px)";
+  const ticked = TICKS.filter((t) => frame >= t).length;
 
   const row = (top, i) => {
     const barW = interpolate(frame, [tSheet + 6 + i * 3, tSheet + 14 + i * 3], [0, 1], { ...CL, easing: EO });
@@ -66,7 +67,8 @@ const __Inner = ({ item }) => {
         <svg viewBox="0 0 160 20" width="160" height="20" style={{ position: "absolute", left: 26, top: 66 }}>
           <path d="M4 12 Q50 4 90 10 T156 8" fill="none" stroke={acc} strokeWidth="7" strokeLinecap="round" strokeDasharray="160" strokeDashoffset={160 * (1 - underline)} />
         </svg>
-        <div style={{ position: "absolute", right: 24, top: 22, fontFamily: sans, fontWeight: 800, fontSize: 22, lineHeight: "26px", letterSpacing: 3, color: ink, opacity: 0.5 }}>PLATFORM</div>
+        <div style={{ position: "absolute", right: 24, top: 22, fontFamily: serif, fontWeight: 800, fontSize: 22, lineHeight: "26px", letterSpacing: 3, color: ink, opacity: 0.5 }}>PLATFORM</div>
+        <div style={{ position: "absolute", right: 26, bottom: 14, fontFamily: sans, fontWeight: 800, fontSize: 18, lineHeight: "22px", letterSpacing: 2, color: ink, opacity: 0.4 }}>{String(ticked) + " / 3"}</div>
         {ROWS.map(row)}
       </div>
       {/* shield */}

@@ -1,0 +1,17 @@
+274 words; cut length 88.59 s
+[0.04, 0.16, 'You', 'H00']
+[0.16, 0.32, 'can', 'H00']
+[0.32, 0.48, 'now', 'H00']
+[0.48, 0.75, 'claim', 'H00']
+[0.75, 0.91, 'any', 'H00']
+[0.91, 1.07, 'app', 'H00']
+[1.07, 1.28, 'with', 'H00']
+[1.28, 1.61, 'quad,', 'H00']
+[1.61, 1.68, 'so', 'H00']
+[1.68, 1.79, 'you', 'H00']
+[1.79, 1.97, 'never', 'H00']
+[1.97, 2.08, 'have', 'H00']
+energy-aligned LMa [(3, 'apps'), (10, 'like'), (17, 'this'), (24, 'actually'), (38, 'spend'), (50, 'time,'), (59, 'they'), (66, 'buy'), (72, 'the'), (78, 'license'), (90, 'and'), (96, 'they'), (109, 'work'), (116, 'very'), (129, 'closely'), (140, 'with'), (148, 'Meta'), (155, 'to'), (159, 'actually'), (180, 'do'), (184, 'this.')]
+energy-aligned L4a [(3, 'I'), (7, 'am'), (13, 'guessing'), (31, 'that'), (75, 'if'), (89, "you're"), (124, 'gonna'), (136, 'clone'), (149, 'an'), (155, 'app,'), (165, "you're"), (179, 'just'), (200, 'gonna'), (212, 'clone'), (224, 'the'), (232, 'features'), (255, 'and'), (263, 'not'), (271, 'the'), (285, 'entire')]
+items 211 END 2724 90.8 s | hook 93 sting 93 main 183 verdict 1377 (51%) cta 2622
+longest captions [(34, 'internet and without cloud storage'), (34, 'Instagram banning third-party apps'), (26, "While there's 11 different"), (26, 'Comment down below "Clone"')]

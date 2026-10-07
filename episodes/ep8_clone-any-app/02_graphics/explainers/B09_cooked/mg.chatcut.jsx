@@ -106,6 +106,7 @@ const Component = ({ item }) => {
     const word = { fontFamily: serif, fontWeight: 900, fontSize: 140, lineHeight: 1, letterSpacing: 2, color: ink, whiteSpace: "nowrap", marginTop: -6 };
 
     const cloudWrap = { ...abs, left: 538, top: 50, width: 304, height: 200, opacity: cloud.o, transform: "rotate(" + cloudR + "deg) scale(" + cloud.s + ") translate(" + shake + "px, 0)", transformOrigin: "50% 60%" };
+    const cloudMicro = { ...abs, left: 538 + 112, top: 50 + 108, width: 80, textAlign: "center", fontFamily: sans, fontWeight: 800, fontSize: 16, lineHeight: "18px", letterSpacing: 3, color: ink, opacity: 0.3 * cloud.o * cloudDim };
 
     const hangTag = (p, left, top, rot, bump) => ({ ...abs, left: left, top: top, filter: "drop-shadow(" + SHADOW + ")", opacity: p.o, transform: "rotate(" + rot + "deg) scale(" + (p.s * bump) + ")", transformOrigin: "50% 0%" });
     const hangPaper = { backgroundColor: paper, clipPath: TORN2, padding: "6px 22px 6px 20px" };
@@ -153,6 +154,7 @@ const Component = ({ item }) => {
 
       {/* B: cloud with hanging tags */}
       <div style={cloudWrap}>{cloudSvg}</div>
+      <div style={cloudMicro}>DATA</div>
       <div style={hangTag(tA, 468, 324, -2, bumpA)}>
         <div style={tagEdge}><div style={hangPaper}><div style={hangText}>streaming</div></div></div>
         {strike(strA)}
