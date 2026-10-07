@@ -12,7 +12,7 @@ def load(p):
 A={'part1':load(f'{T}/part1-16k.wav'),'part2':load(f'{T}/part2-16k.wav')}
 # energy scans, 7 Oct: L04 "So" onset 99.18; L08 "but" valley 306.10 (305.92-306.06 is the tail of "anything"), "Buffer" ends 307.86;
 # L11 "First" onset 398.30; L12 "Not" onset 376.05 (Whisper full-take had it drifted into the previous sentence).
-MANUAL={'L04':{'in':99.10},'L08':{'in':306.11,'out':307.93},'L11':{'out':397.95},'L12':{'in':375.96},'L4a':{'in':127.34,'out':137.45},'L9a':{'out':405.25}}   # v4: "data" ends 405.21   # v3: L4a and L11 tails by energy (speech ends 137.30 / 397.9)
+MANUAL={'L04':{'in':99.10},'L08':{'in':306.11,'out':307.93},'L11':{'out':388.97},'L9a':{'out':405.72},'L09':{'in':405.99,'out':409.90},'L6b':{'in':116.33,'out':121.76}}   # v5 pins   # v4: "data" ends 405.21   # v3: L4a and L11 tails by energy (speech ends 137.30 / 397.9)
 HEAD, TAIL, FINAL_TAIL = 0.08, 0.10, 0.35
 def loud(a, x, y):
     seg=a[int(x*SR):int(y*SR)]

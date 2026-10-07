@@ -83,6 +83,25 @@
   }
  },
  {
+  "id": "B01b_features-not-app",
+  "lines": [
+   "L4a"
+  ],
+  "duration": 330,
+  "text": "I am guessing that if you're gonna clone an app, you're just gonna clone the features and not the entire app itself.",
+  "brief": "The app card with four feature chips and a grey strip (users, servers, storage); a dashed clone card slides in on 'clone'; the chips copy across on 'features'; the strip glows gold and is crossed on 'not the entire app'; label 'the rest stays theirs' on 'itself'",
+  "canvas": {
+   "width": 980,
+   "height": 500
+  },
+  "place": {
+   "left": 50,
+   "top": 234,
+   "width": 980,
+   "height": 500
+  }
+ },
+ {
   "id": "B03_11-skills",
   "lines": [
    "L05"
@@ -359,18 +378,6 @@
    "width": 980,
    "height": 500
   }
- },
- {
-  "id": "B6b_no-cloud",
-  "lines": [
-   "L6b"
-  ],
-  "stamp": {
-   "label": "it records, nothing online",
-   "word": "NO CLOUD",
-   "icon": "video"
-  },
-  "text": "So I'm a bit skeptical because right now I'm seeing that there's no cloud storage."
  },
  {
   "id": "B05_queue-clip",
@@ -824,6 +831,129 @@
    }
   ],
   "brief": "Rules sheet with shield, STRICT label",
+  "canvas": {
+   "width": 980,
+   "height": 500
+  },
+  "place": {
+   "left": 50,
+   "top": 234,
+   "width": 980,
+   "height": 500
+  }
+ },
+ {
+  "id": "BMa_licence",
+  "lines": [
+   "LMa"
+  ],
+  "stamp": {
+   "label": "the real app pays for access",
+   "word": "LICENCE",
+   "icon": "money"
+  },
+  "text": "Apps like this actually spend time, they buy the license and they work very closely with Meta to actually do this."
+ },
+ {
+  "id": "B10_local-disk",
+  "lines": [
+   "L12"
+  ],
+  "cutStart": 1808,
+  "cutEnd": 2017,
+  "duration": 209,
+  "text": "everything is needed to be on cloud. I think some things are great if you install it in your local drive itself.",
+  "words": [
+   {
+    "w": "everything",
+    "f": 0
+   },
+   {
+    "w": "is",
+    "f": 22
+   },
+   {
+    "w": "needed",
+    "f": 27
+   },
+   {
+    "w": "to",
+    "f": 41
+   },
+   {
+    "w": "be",
+    "f": 44
+   },
+   {
+    "w": "on",
+    "f": 49
+   },
+   {
+    "w": "cloud.",
+    "f": 57
+   },
+   {
+    "w": "I",
+    "f": 74
+   },
+   {
+    "w": "think",
+    "f": 75
+   },
+   {
+    "w": "some",
+    "f": 86
+   },
+   {
+    "w": "things",
+    "f": 93
+   },
+   {
+    "w": "are",
+    "f": 106
+   },
+   {
+    "w": "great",
+    "f": 118
+   },
+   {
+    "w": "if",
+    "f": 123
+   },
+   {
+    "w": "you",
+    "f": 126
+   },
+   {
+    "w": "install",
+    "f": 133
+   },
+   {
+    "w": "it",
+    "f": 145
+   },
+   {
+    "w": "in",
+    "f": 146
+   },
+   {
+    "w": "your",
+    "f": 158
+   },
+   {
+    "w": "local",
+    "f": 168
+   },
+   {
+    "w": "drive",
+    "f": 177
+   },
+   {
+    "w": "itself.",
+    "f": 186
+   }
+  ],
+  "brief": "Laptop/disk card, clone tiles drop in, on your own disk",
   "canvas": {
    "width": 980,
    "height": 500

@@ -2,72 +2,64 @@
  "HK": 93,
  "S0": 93,
  "M0": 93,
- "END": 2740,
- "VER_F": 1181,
- "CTA_F": 2637,
+ "END": 1787,
+ "VER_F": 1034,
+ "CTA_F": 1685,
  "pos": {
   "L04": [
    93,
    220
   ],
-  "L4a": [
-   229,
-   530
-  ],
   "L05": [
-   539,
-   676
+   229,
+   366
   ],
   "L06": [
-   685,
-   934
+   375,
+   624
+  ],
+  "L6b": [
+   633,
+   796
   ],
   "L07": [
-   943,
-   1064
+   805,
+   926
   ],
   "L08": [
-   1073,
-   1128
+   935,
+   990
   ],
   "L11": [
-   1137,
-   1457
+   999,
+   1057
   ],
   "L9a": [
-   1466,
-   1671
+   1066,
+   1275
   ],
   "L09": [
-   1680,
-   1932
+   1284,
+   1399
   ],
   "L10": [
-   1941,
-   2009
-  ],
-  "LMa": [
-   2018,
-   2214
-  ],
-  "L12": [
-   2223,
-   2429
+   1408,
+   1476
   ],
   "L13": [
-   2438,
-   2728
+   1485,
+   1775
   ]
  },
  "runs": [
   [
    93,
-   1137,
+   999,
    "card"
   ],
   [
-   1137,
-   2740,
+   999,
+   1787,
    "big"
   ]
  ],
@@ -81,283 +73,179 @@
    "another is Buffer"
   ],
   [
-   231,
-   "I am guessing that"
-  ],
-  [
-   283,
-   "if you're gonna clone"
-  ],
-  [
-   369,
-   "an app"
-  ],
-  [
-   383,
-   "you're just gonna clone"
-  ],
-  [
-   437,
-   "the features and not"
-  ],
-  [
-   480,
-   "the entire app itself"
-  ],
-  [
-   540,
+   229,
    "While there's 11 different"
   ],
   [
-   581,
+   271,
    "types of skill sets"
   ],
   [
-   607,
+   296,
    "I wanted to put"
   ],
   [
-   631,
+   321,
    "to the test whether"
   ],
   [
-   653,
+   343,
    "it works or not"
   ],
   [
-   688,
+   378,
    "it is interesting because"
   ],
   [
-   748,
+   438,
    "I can actually start"
   ],
   [
-   783,
+   473,
    "to screen record"
   ],
   [
-   820,
+   510,
    "my screen And"
   ],
   [
-   848,
+   536,
    "when I'm done"
   ],
   [
-   867,
+   557,
    "I can share it"
   ],
   [
-   885,
+   575,
    "with anyone that I"
   ],
   [
-   919,
+   608,
    "want to"
   ],
   [
-   946,
-   "Now actually clone"
+   635,
+   "So I'm a bit"
   ],
   [
-   1003,
+   657,
+   "skeptical because right now"
+  ],
+  [
+   709,
+   "I'm seeing that there's"
+  ],
+  [
+   763,
+   "no cloud storage"
+  ],
+  [
+   807,
+   "Now I actually clone"
+  ],
+  [
+   865,
    "Buffer and it's"
   ],
   [
-   1023,
+   885,
    "actually called Slotline"
   ],
   [
-   1073,
+   935,
    "But it does"
   ],
   [
-   1096,
+   958,
    "look like Buffer"
   ],
   [
-   1141,
+   1002,
    "Overall"
   ],
   [
-   1157,
+   1014,
    "I think this"
   ],
   [
-   1175,
+   1031,
    "is cooked"
   ],
   [
-   1201,
-   "So it is not"
-  ],
-  [
-   1225,
-   "going to work if"
-  ],
-  [
-   1265,
-   "you are going to"
-  ],
-  [
-   1290,
-   "rely on the internet"
-  ],
-  [
-   1340,
-   "to actually do streaming"
-  ],
-  [
-   1388,
-   "or any storage of"
-  ],
-  [
-   1415,
-   "any cloud data"
-  ],
-  [
-   1467,
+   1067,
    "First thing"
   ],
   [
-   1487,
+   1087,
    "this thing doesn't even"
   ],
   [
-   1517,
+   1118,
    "have a repository to"
   ],
   [
-   1567,
+   1168,
    "help you to store"
   ],
   [
-   1599,
-   "your post or any"
+   1200,
+   "your posts or any"
   ],
   [
-   1645,
-   "photos or anything"
+   1245,
+   "photos or any data"
   ],
   [
-   1682,
-   "and you're gonna find"
+   1289,
+   "you're gonna find it"
   ],
   [
-   1715,
-   "it as a hassle"
+   1324,
+   "as a hassle to"
   ],
   [
-   1740,
-   "to connect your Instagram"
+   1347,
+   "connect your Instagram to this"
   ],
   [
-   1781,
-   "to this"
-  ],
-  [
-   1803,
-   "let's not talk about"
-  ],
-  [
-   1831,
-   "Instagram banning third-party apps"
-  ],
-  [
-   1894,
-   "that are not even allowed"
-  ],
-  [
-   1943,
+   1411,
    "So Meta is actually"
   ],
   [
-   1972,
+   1440,
    "very strict on that"
   ],
   [
-   2021,
-   "Apps like this"
+   1488,
+   "While this is cooked"
   ],
   [
-   2042,
-   "actually spend time"
-  ],
-  [
-   2077,
-   "they buy the license"
-  ],
-  [
-   2108,
-   "and they work very"
-  ],
-  [
-   2147,
-   "closely with Meta to"
-  ],
-  [
-   2177,
-   "actually do this"
-  ],
-  [
-   2224,
-   "Not everything is needed"
-  ],
-  [
-   2271,
-   "to be on cloud"
-  ],
-  [
-   2302,
-   "I think some things"
-  ],
-  [
-   2326,
-   "are great if you"
-  ],
-  [
-   2359,
-   "install it in your"
-  ],
-  [
-   2386,
-   "local drive itself"
-  ],
-  [
-   2440,
-   "Well"
-  ],
-  [
-   2450,
-   "this is cooked"
-  ],
-  [
-   2475,
+   1523,
    "I've actually created 10"
   ],
   [
-   2514,
+   1562,
    "more apps that you"
   ],
   [
-   2537,
+   1585,
    "can use without the"
   ],
   [
-   2563,
+   1611,
    "internet and without cloud storage"
   ],
   [
-   2637,
+   1685,
    "Comment down below \"Clone\""
   ],
   [
-   2676,
+   1724,
    "and I'll send you"
   ],
   [
-   2704,
+   1752,
    "my workflow"
   ]
  ]

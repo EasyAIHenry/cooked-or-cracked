@@ -99,8 +99,8 @@ EXP = json.load(open(f'{X}/beats.json')); CUES = json.load(open(f'{X}/cues-ep8.j
 EXPROPS = {"serif": "Fraunces", "hand": "Kalam", "sans": "Inter", "paper": PAPER, "ink": INK, "accent": ACC, "gold": GOLD}
 mg('backdrop', 'V1', M0, END - M0, 0, 0, 1080, 1920, {"paper": PAPER, "line": "#D9D6D1", "accent": ACC})
 CLIPLEN = {'loomdemo': 288, 'slotdemo': 420}                       # 9.6 s and 14 s at 30 fps
-CLIP = {'B04_recorder-clip': ('loomdemo', 0.0, '6 MIN', 'Loom clone: screen recorder'),
-        'B05_queue-clip': ('slotdemo', 0.0, '8 MIN', 'Buffer clone: post scheduler')}
+CLIP = {'B04_recorder-clip': ('loomdemo', 0.0, '6 MIN', 'first command to a working recorder'),
+        'B05_queue-clip': ('slotdemo', 0.0, '8 MIN', 'to a working queue')}
 # pass 2b (7 Oct 2026): tighten_cut_ep8.py trimmed the dead air at line heads, but every explainer's cues were timed to the pass-2a
 # line starts. Start each MG earlier by its line's trim (later when the head grew) so the pops still land on the words. Clips
 # (B04/B05) have no cues and stay on the line start. L12 stays put: B09 cannot stretch the 6 frames it would need.
@@ -119,7 +119,7 @@ for bt in EXP:
         n = min(n, CLIPLEN[asset])                                   # an item must fit inside its asset's exact length
         vid(asset, 'TOP', s0, src, n, muted=True, left=p['left'], top=p['top'], width=p['width'], height=p['height'], fit="cover")
         frame_mg(s0, n, (p['left'], p['top'], p['width'], p['height']), 12, 26, track='FRM2')
-        mg('stamp', 'SPARE', s0 + 8, n - 8, 64, 520, 500, 200, {"serif": "Fraunces", "hand": "Kalam", "paper": PAPER, "ink": INK, "accent": ACC,   # SPARE = STK2, above TOP/FRM2 (STK sits under the clip window and hid these tags)
+        mg('stamp', 'STK', s0 + 8, n - 8, 60, 244, 420, 150, {"serif": "Fraunces", "hand": "Kalam", "paper": PAPER, "ink": INK, "accent": ACC,
            "wordColor": ACC, "label": label, "word": word, "wordSize": 110, "icon": "calendar"}); pop(s0 + 8)
         swish(s0); continue
     if 'stamp' in bt:                                                # v3: a reason line carried by the series stamp, top zone
@@ -159,7 +159,7 @@ FIX = {'quad': 'Claude', 'quad,': 'Claude,', 'claim': 'clone', 'Clawd': 'Claude'
 words = [(cf(w[0]), FIX.get(w[2], w[2]), w[3]) for w in W if w[3] != 'H00']
 # v3: on the two long single-piece lines both Whisper passes drift by up to a second, so their words are timed from the energy
 # envelope instead: the full-take word sequence (text only) spread over the speech bursts in proportion to character count.
-ENERGY_ALIGN = {x for x in ('L4a', 'LMa', 'L6b') if x in pos}   # v5: L6b is one long piece too; dropped lines skip
+ENERGY_ALIGN = {'L4a', 'LMa'}
 import wave, numpy as np
 def energy_runs(take, t0, t1, thr=-42.0, mingap=0.12):
     w_ = wave.open(f'{EP}/04_raw-footage/transcripts/{take}-16k.wav'); sr = w_.getframerate()
@@ -190,17 +190,9 @@ for lab in ENERGY_ALIGN:
     words = [w_ for w_ in words if w_[2] != lab] + [(line_cf + round((t_ - x0) * FPS), FIX.get(t, t), lab) for t_, t in zip(est, toks)]
     words.sort(key=lambda w_: w_[0])
     print('energy-aligned', lab, [(fr - line_cf, t) for fr, t, l in words if l == lab])
-if 'L12' in pos and not any(t == 'Not' for _, t, l in words if l == 'L12'):            # the per-piece transcriber dropped the first word of L12
+if not any(t == 'Not' for _, t, l in words if l == 'L12'):            # the per-piece transcriber dropped the first word of L12
     i = next(i for i, (_, _, l) in enumerate(words) if l == 'L12'); words.insert(i, (pos['L12'][0], 'Not', 'L12'))
 words = [(fr, t, l) for fr, t, l in words if t and '[' not in t and ']' not in t]   # Whisper's [BLANK_AUDIO] tokens
-# v5 spell-check against the take: L13 opens "While" (heard "Well"), L07 is "Now I actually clone" (the "I" was dropped), L09 has
-# no leading "and" (a breath), and Henry says "any data" at the end of L9a.
-PER_LINE = {('L13', 'Well'): 'While', ('L07', 'Now'): 'Now I', ('L9a', 'anything'): 'any data', ('L9a', 'anything.'): 'any data.',
-            ('L04', 'Loom'): 'Loom (screen recorder)', ('L04', 'Buffer'): 'Buffer (post scheduler)'}   # Henry 7 Oct: always say what Loom and Buffer are
-words = [(fr, PER_LINE.get((l, t.rstrip(',.')), t.rstrip(',.')) if (l, t.rstrip(',.')) in PER_LINE else PER_LINE.get((l, t), t), l) for fr, t, l in words]
-first = {}
-for fr, t, l in words: first.setdefault(l, (fr, t))
-words = [(fr, t, l) for fr, t, l in words if not (l == 'L09' and t.lower() == 'and' and first[l] == (fr, t))]
 caps = []
 for base in sorted(pos, key=lambda b: pos[b][0]):
     ws = [(fr, t) for fr, t, l in words if l == base]

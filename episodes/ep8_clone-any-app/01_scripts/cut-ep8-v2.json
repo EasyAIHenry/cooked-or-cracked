@@ -34,22 +34,6 @@
   },
   {
    "take": "part1",
-   "in": 127.36,
-   "out": 137.4,
-   "dur": 10.04,
-   "raw_dur": 10.76,
-   "pieces": [
-    [
-     127.36,
-     137.4
-    ]
-   ],
-   "label": "L4a I am guessing that if you're gonna clone an app, you're just gonna clone the features and not the entire app itself.",
-   "first": "abs",
-   "last": "abs"
-  },
-  {
-   "take": "part1",
    "in": 177.6,
    "out": 182.16,
    "dur": 4.56,
@@ -94,6 +78,22 @@
   },
   {
    "take": "part1",
+   "in": 116.33,
+   "out": 121.76,
+   "dur": 5.43,
+   "raw_dur": 5.43,
+   "pieces": [
+    [
+     116.33,
+     121.76
+    ]
+   ],
+   "label": "L6b So I'm a bit skeptical because right now I'm seeing that there's no cloud storage.",
+   "first": "abs",
+   "last": "abs"
+  },
+  {
+   "take": "part1",
    "in": 233.88,
    "out": 238.1,
    "dur": 4.03,
@@ -131,29 +131,25 @@
   {
    "take": "part1",
    "in": 386.98,
-   "out": 397.86,
-   "dur": 10.64,
-   "raw_dur": 13.84,
+   "out": 388.91,
+   "dur": 1.93,
+   "raw_dur": 2.07,
    "pieces": [
     [
      386.98,
-     388.97
-    ],
-    [
-     389.21,
-     397.86
+     388.91
     ]
    ],
-   "label": "L11 VERDICT: Overall, I think this is cooked, so it is not going to work if you are going to rely on the internet to actually do streaming or any storage of any cloud data.",
-   "first": "Overall,",
-   "last": "data."
+   "label": "L11 VERDICT: Overall, I think this is cooked.",
+   "first": "abs",
+   "last": "abs"
   },
   {
    "take": "part1",
    "in": 398.28,
    "out": 405.25,
    "dur": 6.97,
-   "raw_dur": 6.83,
+   "raw_dur": 6.97,
    "pieces": [
     [
      398.28,
@@ -166,23 +162,19 @@
   },
   {
    "take": "part1",
-   "in": 405.99,
-   "out": 414.78,
-   "dur": 8.39,
-   "raw_dur": 9.24,
+   "in": 406.02,
+   "out": 409.86,
+   "dur": 3.84,
+   "raw_dur": 4.0,
    "pieces": [
     [
-     405.99,
-     409.99
-    ],
-    [
-     410.39,
-     414.78
+     406.02,
+     409.86
     ]
    ],
-   "label": "L09 You're going to find it as a hassle to connect your Instagram to this. Let's not talk about Instagram banning third-party apps that are not even allowed.",
-   "first": "you're",
-   "last": "allowed."
+   "label": "L09 You're going to find it as a hassle to connect your Instagram to this.",
+   "first": "abs",
+   "last": "abs"
   },
   {
    "take": "part1",
@@ -199,38 +191,6 @@
    "label": "L10 So Meta is actually very strict on that.",
    "first": "so",
    "last": "that."
-  },
-  {
-   "take": "part1",
-   "in": 422.92,
-   "out": 429.45,
-   "dur": 6.53,
-   "raw_dur": 6.7,
-   "pieces": [
-    [
-     422.92,
-     429.45
-    ]
-   ],
-   "label": "LMa Apps like this actually spend time, they buy the license and they work very closely with Meta to actually do this.",
-   "first": "apps",
-   "last": "this."
-  },
-  {
-   "take": "part1",
-   "in": 375.98,
-   "out": 382.85,
-   "dur": 6.87,
-   "raw_dur": 6.68,
-   "pieces": [
-    [
-     375.98,
-     382.85
-    ]
-   ],
-   "label": "L12 Not everything is needed to be on cloud, I think some things are great if you install it in your local drive itself.",
-   "first": "Not",
-   "last": "itself."
   },
   {
    "take": "part2",

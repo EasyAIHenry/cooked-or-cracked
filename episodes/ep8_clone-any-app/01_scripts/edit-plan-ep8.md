@@ -48,3 +48,30 @@ Safe-area lines on key frames, join_audit + unprimed Whisper on the export, fram
 - QA on the export: 12-frame sheet (`sheet-v4.jpg`) and opener sheet (`sheet-v4a.jpg`), safe-area lines clean, no black tail, join audit clean (pauses 0.24-0.52 s), Whisper verbatim. Voice chain unchanged: `ep8-pass4-master.mp4`, `ep8-pass4-phone.mp4` (28.5 MB, -11.3 LUFS) sent.
 - ChatCut: timeline `df09fedae9` renamed "Ep8 v4 — pass 4 …" (pass 3 items deleted, pass 4 items added). Window handed back.
 - Open: Adobe voice swap ("download"), Drive Viewer ("viewer"), ManyChat, repo sync, learning log, retro.
+
+## Pass 5 (7 Oct 2026, 14:00) — built, waiting for the ChatCut window
+Henry's pass 4 notes: remove the "I am guessing that" thesis beat (L4a), voice too airy/echo-y, say the Loom clone records but has no
+cloud (like the Buffer clone), cut the over-explaining, hit one minute.
+- Cut v5 (`build_cut_ep8.py`, `tighten_cut_ep8.py` v5 pins): out L4a, LMa, L12, second sentences of L11 and L09. New L6b
+  "So I'm a bit skeptical because right now I'm seeing that there's no cloud storage" (part1 116.33–121.76) after the Loom clip, with a
+  NO CLOUD stamp (beat B6b_no-cloud). Speech 56.8 s, cut 59.6 s (1787 f), verdict at 1034 f (58%), CTA 1685 f. 154 adds, 48 caption
+  cards; caption spell-check: "While this is cooked", "Now I actually clone", "photos or any data", no leading "and" on L09.
+- Voice: `05_cuts/pass5/mix_v4.sh` (highpass 100, -4 @250, +5 @2.5k, -3 @9k, de-esser, expander gate, 2:1, loudnorm -12) to replace the
+  airy v3 chain. Tested on the pass 4 export.
+- ChatCut: "Frontend website build and user analysis" holds the window (reel v3, project 04524f98) and will send "ChatCut free".
+  Then: target_project cb036817, read_project, delete the 206 pass-4 items (`01_scripts/pass4-items-to-delete.json`, timeline
+  df09feda-…), rename the timeline to pass 5, add `place-ep8-adds.json`, export, QA (sheet, tail, join audit, Whisper), mix_v4, phone copy.
+- 14:30 DONE. Pass 4 items deleted (206), timeline df09feda renamed "Ep8 v5 — pass 5", 154 items added. First export: Whisper verbatim,
+  24-frame sheet (`05_cuts/pass5/sheet-v5.jpg`) clean, no black tail, but the NO CLOUD label ran under its icon (shortened to "it records,
+  nothing online", item 19c182e5) and the join audit (`01_scripts/join-audit-ep8-v5.json`) showed the L9a out at 405.25 sitting between
+  "da" and "ta" of "data" (energy bursts 405.05-405.19, 405.29-405.39, "and" 405.49-405.62): out moved to 405.45 (items 6fb3c5ee/de508b50
+  215 f, hold b00e5891 at 1281 for 3 f; tighten pin updated). Re-export `ep8-pass5-export.mp4` (from ChatCut ep8-pass5b-export.mp4):
+  Whisper verbatim, pause before "you're" 0.2 s. mix_v4 -> `ep8-pass5-master.mp4`, `ep8-pass5-phone.mp4` (18.6 MB, -11.6 LUFS) sent.
+  Open: Henry says "any data" or "anything" at the end of L9a (isolated Whisper hears "anything", full take hears "data"); caption says "any data".
+- 15:25 pass 5e (Henry's notes on 5: "da" at 0:40, say what Loom and Buffer are every time). "data" has three bursts in the take
+  (405.05-405.19, 405.29-405.39, 405.49-405.62); the isolated listen reads "anything" when cut at 405.45 and "any data" at 405.72.
+  L9a now starts at 1061 (hold before it 4 f) and runs 223 f (out 405.71); the hold after it is gone (pause before "you're" 0.14 s).
+  Captions on the first mention: "one is Loom (screen recorder) and" / "another is Buffer (post scheduler)". Clip tags rewritten
+  ("Loom clone: screen recorder" 6 MIN, "Buffer clone: post scheduler" 8 MIN) and moved to the STK2 track (d12074d05f, topmost) at
+  64/520 500x200: on STK they sat under the clip window and never showed in passes 2-5. Export `ep8-pass5-export.mp4` (= ChatCut
+  ep8-pass5e-export.mp4), Whisper hears "any data", phone copy sent 15:25.

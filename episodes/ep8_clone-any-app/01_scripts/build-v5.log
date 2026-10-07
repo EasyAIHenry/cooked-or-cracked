@@ -1,0 +1,44 @@
+part1    32.45    36.20  3.75 (raw  3.75, 1 pcs)  [abs .. abs]  H00 HOOK (reel audio on his phone): You can now clone any ap
+part1    99.26   103.74  4.48 (raw  4.48, 1 pcs)  [So .. Buffer.]  L04 So today I'm gonna clone two apps. One is Loom and anoth
+part1   177.60   182.19  4.59 (raw  4.59, 1 pcs)  [abs .. abs]  L05 While there's 11 different types of skill sets, I wanted
+part1   186.72   197.05  8.90 (raw 10.33, 4 pcs)  [abs .. abs]  L06 It is interesting because I can actually start to screen
+part1   116.33   121.76  5.43 (raw  5.43, 1 pcs)  [abs .. abs]  L6b So I'm a bit skeptical because right now I'm seeing that
+part1   233.75   238.35  4.41 (raw  4.60, 2 pcs)  [abs .. abs]  L07 Now I actually clone Buffer and it's actually called Slo
+part1   306.06   307.80  1.74 (raw  1.74, 1 pcs)  [but .. buffer]  L08 But it does look like Buffer.
+part1   386.72   388.97  2.07 (raw  2.07, 1 pcs)  [abs .. abs]  L11 VERDICT: Overall, I think this is cooked.
+part1   398.28   405.25  6.97 (raw  6.97, 1 pcs)  [abs .. abs]  L9a First thing, this thing doesn't even have a repository t
+part1   405.93   409.90  3.97 (raw  4.00, 1 pcs)  [abs .. abs]  L09 You're going to find it as a hassle to connect your Inst
+part1   415.08   417.42  2.34 (raw  2.81, 1 pcs)  [so .. that.]  L10 So Meta is actually very strict on that.
+part2   143.88   154.08  9.67 (raw 12.14, 2 pcs)  [While .. workflow.]  L13 CTA: While this is cooked, I've actually created 10 more
+speech total 58.3 s in 12 segments
+preview: /Users/henrychua/Content Creation/DRIVE_Cooked-or-Cracked_Ep8_Clone-Any-App/05_cuts/pass1/cut-ep8-v2-audio.wav
+L04   99.100- 103.340 dur   4.48 ->   4.24  pieces [[99.1, np.float64(103.34)]]
+L05  177.600- 182.160 dur   4.59 ->   4.56  pieces [[177.6, np.float64(182.16)]]
+L06  187.280- 197.010 dur   8.90 ->   8.30  pieces [[np.float64(187.28), 189.3], [189.88, 192.25], [192.55, 193.38], [193.93, np.float64(197.01)]]
+L6b  116.330- 121.760 dur   5.43 ->   5.43  pieces [[116.33, np.float64(121.76)]]
+L07  233.880- 238.100 dur   4.41 ->   4.03  pieces [[np.float64(233.88), 235.75], [235.94, np.float64(238.1)]]
+L08  306.110- 307.930 dur   1.74 ->   1.82  pieces [[306.11, 307.93]]
+L11  386.980- 388.910 dur   2.07 ->   1.93  pieces [[np.float64(386.98), np.float64(388.91)]]
+L9a  398.280- 405.250 dur   6.97 ->   6.97  pieces [[398.28, 405.25]]
+L09  406.020- 409.860 dur   3.97 ->   3.84  pieces [[np.float64(406.02), np.float64(409.86)]]
+L10  415.080- 417.330 dur   2.34 ->   2.25  pieces [[415.08, np.float64(417.33)]]
+L13  144.060- 154.080 dur   9.67 ->   9.65  pieces [[np.float64(144.06), 150.61], [150.98, 154.08]]
+total speech 56.77
+192 words; cut length 60.37 s
+[0.04, 0.16, 'You', 'H00']
+[0.16, 0.32, 'can', 'H00']
+[0.32, 0.48, 'now', 'H00']
+[0.48, 0.75, 'claim', 'H00']
+[0.75, 0.91, 'any', 'H00']
+[0.91, 1.07, 'app', 'H00']
+[1.07, 1.28, 'with', 'H00']
+[1.28, 1.61, 'quad,', 'H00']
+[1.61, 1.68, 'so', 'H00']
+[1.68, 1.79, 'you', 'H00']
+[1.79, 1.97, 'never', 'H00']
+[1.97, 2.08, 'have', 'H00']
+Traceback (most recent call last):
+  File "/Users/henrychua/Content Creation/DRIVE_Cooked-or-Cracked_Ep8_Clone-Any-App/01_scripts/place_ep8.py", line 177, in <module>
+    seg = next(s_ for s_ in cut if s_['label'][:3] == lab); x0, x1 = seg['pieces'][0]
+StopIteration
+CHAIN_FAIL

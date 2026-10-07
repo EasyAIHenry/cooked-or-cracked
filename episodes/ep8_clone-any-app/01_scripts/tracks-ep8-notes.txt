@@ -2,3 +2,4 @@ timeline pass2b f98c82dc0a
 timeline pass3 453e1b913d
 pass3 timeline (cb036817) df09fedae9 ; the earlier 453e1b913d was created in the wrong project and deleted
 v4 ChatCut fix: L9a items 41666a56 (video) + 754f2b0c (audio) 205 -> 209 f; hold 5d41ef4a 1671/9f -> 1675/5f src 405.82
+SPARE = STK2 — clip tags (above the clip windows), renamed 7 Oct pass 5
