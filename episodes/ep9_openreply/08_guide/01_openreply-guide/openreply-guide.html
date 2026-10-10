@@ -1,0 +1,324 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Free ManyChat, step by step: OpenReply setup guide</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="guide.css"></head><body>
+
+<!-- 1 COVER -->
+<section class="page cover">
+  <span class="pill">Cooked or Cracked</span>
+  <div class="big">Free <i>ManyChat,</i><br>step by step.</div>
+  <p class="sub">Comment a keyword, get a DM with your link. The same comment-to-DM flow, built from a free open-source app and free plans, on Meta's official API. Follow this top to bottom and it takes about 30 minutes.</p>
+  <div class="contents torn">
+    <div class="k">what is inside</div>
+    <ol>
+      <li><span>Before you start: the checklist</span><span>p2</span></li>
+      <li><span>How it works + your key sheet</span><span>p3</span></li>
+      <li><span>1-2 · Scan it, make your own copy</span><span>p4</span></li>
+      <li><span>3-4 · Neon and Redis</span><span>p5</span></li>
+      <li><span>5-6 · Resend and Netlify</span><span>p6-7</span></li>
+      <li><span>7 · The Meta app</span><span>p8-10</span></li>
+      <li><span>8 · The worker on Google Cloud</span><span>p11</span></li>
+      <li><span>9 · Your first campaign and test</span><span>p12</span></li>
+      <li><span>Claude prompts, fixes, limits</span><span>p13-15</span></li>
+    </ol>
+  </div>
+  <div class="stamps">
+    <div class="st torn">monthly fee<b>$0</b></div>
+    <div class="st torn">steps<b>9</b></div>
+    <div class="st torn">setup<b>30 min</b></div>
+  </div>
+  <div class="who">Written by Henry Chua after setting it up and testing it on his own Instagram. Checked 10 October 2026. Nothing here is sponsored.</div>
+  <div class="receipt torn">
+    <div class="hand mute">what the test showed</div>
+    <div class="n">DM in seconds</div>
+    <div>A test account commented the keyword and got the DM, the follow check and the link. Running on free plans.</div>
+  </div>
+</section>
+
+<!-- 2 CHECKLIST -->
+<section class="page">
+  <span class="tag">before you start</span>
+  <h2 style="margin-top:14px">Tick these off first</h2>
+  <p>Every account below has a free plan. Make them all before step 1, in this order, and keep one notes file open for the values you will collect (page 3). Use the <b>same email</b> for Resend and for logging in to your dashboard.</p>
+  <div class="two">
+    <div class="card"><div class="k">things you need</div>
+      <ul class="check">
+        <li>An Instagram <b>Creator or Business</b> account. Personal accounts cannot connect. Switch in Instagram: Settings, Account type and tools.</li>
+        <li>A second Instagram account for testing, one that does <b>not</b> follow you.</li>
+        <li>A laptop with <a href="https://claude.com/claude-code">Claude Code</a> (or a terminal you are comfortable in).</li>
+        <li>A card for Google Cloud's identity check. The server you use is in the always-free tier.</li>
+        <li>About 30 minutes, uninterrupted.</li>
+      </ul></div>
+    <div class="card"><div class="k">accounts to create</div>
+      <ul class="check">
+        <li><a href="https://github.com/signup">GitHub</a><span class="free">free</span></li>
+        <li><a href="https://console.neon.tech/signup">Neon</a> (database)<span class="free">free</span></li>
+        <li><a href="https://redis.io/try-free/">Redis Cloud</a> (waiting line)<span class="free">free</span></li>
+        <li><a href="https://resend.com/signup">Resend</a> (login email)<span class="free">free</span></li>
+        <li><a href="https://app.netlify.com/signup">Netlify</a> (puts it online)<span class="free">free</span></li>
+        <li><a href="https://developers.facebook.com/apps/">Meta for Developers</a> (log in with Facebook)<span class="free">free</span></li>
+        <li><a href="https://console.cloud.google.com/freetrial">Google Cloud</a> (the worker)<span class="free">always-free tier</span></li>
+      </ul></div>
+  </div>
+  <div class="warn"><b>Already use ManyChat or another DM tool?</b> You can keep it connected. Just make sure it has no automation on the same keyword, or people get two DMs.</div>
+  <div class="callout"><b>One rule for the whole guide.</b> Every key, password and connection string is a secret. Paste them only into your notes file and the settings pages named in each step. Never into a chat, a screenshot or a video.</div>
+  <div class="foot"><span>Cooked or Cracked · Free ManyChat, step by step</span><span>page 2</span></div>
+</section>
+
+<!-- 3 HOW IT WORKS + KEY SHEET -->
+<section class="page">
+  <span class="tag">how it works</span>
+  <h2 style="margin-top:14px">Six free pieces, one Meta app</h2>
+  <div class="flow">
+    <div class="box">Instagram<small>someone comments</small></div><div class="arr">→</div>
+    <div class="box k">Meta app<small>the key</small></div><div class="arr">→</div>
+    <div class="box">Netlify<small>your dashboard</small></div><div class="arr">→</div>
+    <div class="box">Neon + Redis<small>notebook + line</small></div><div class="arr">→</div>
+    <div class="box">Google server<small>sends the DM</small></div>
+  </div>
+  <p class="small">The Meta app tells Instagram to report every comment to your dashboard. The dashboard writes it down in Neon and puts the DM in Redis's waiting line. The worker on Google's free server sends it, all day, with your laptop off.</p>
+  <h3 style="margin-top:12px">Your key sheet</h3>
+  <p class="small" style="margin:0">Copy this list into your notes file. Fill each line as you reach its step.</p>
+  <table class="keys">
+    <tr><th>Name</th><th>What it is</th><th>Where you get it</th></tr>
+    <tr class="g"><td>NEXTAUTH_SECRET</td><td>Signs your logins</td><td>Claude makes it (page 13)</td></tr>
+    <tr class="g"><td>CRON_SECRET</td><td>Protects the daily jobs</td><td>Claude makes it</td></tr>
+    <tr class="g"><td>ENCRYPTION_KEY</td><td>Locks your Instagram token</td><td>Claude makes it (64 characters)</td></tr>
+    <tr class="g"><td>WEBHOOK_VERIFY_TOKEN</td><td>A password Meta checks once</td><td>Claude makes it</td></tr>
+    <tr><td>DATABASE_URL</td><td>Neon connection string</td><td>Step 3</td></tr>
+    <tr><td>REDIS_URL</td><td>Redis address + password</td><td>Step 4</td></tr>
+    <tr><td>RESEND_API_KEY</td><td>Sends your login email</td><td>Step 5</td></tr>
+    <tr><td>EMAIL_FROM</td><td><code>OpenReply &lt;onboarding@resend.dev&gt;</code></td><td>Step 5</td></tr>
+    <tr><td>ALLOWED_EMAILS</td><td>The only email that can log in</td><td>Your Resend email</td></tr>
+    <tr><td>NEXTAUTH_URL</td><td>Your web address</td><td>Step 6</td></tr>
+    <tr><td>INSTAGRAM_APP_ID</td><td>Meta app, Instagram ID</td><td>Step 7</td></tr>
+    <tr><td>INSTAGRAM_APP_SECRET</td><td>Meta app, Instagram secret</td><td>Step 7</td></tr>
+    <tr><td>FACEBOOK_APP_SECRET</td><td>Meta app, main secret</td><td>Step 7</td></tr>
+    <tr><td>META_GRAPH_API_VERSION</td><td><code>v25.0</code></td><td>Type it as shown</td></tr>
+    <tr><td>COMMENT_POLL_INTERVAL_MS</td><td><code>900000</code> (keeps Neon in its free hours)</td><td>Type it as shown</td></tr>
+  </table>
+  <div class="foot"><span>Cooked or Cracked · Free ManyChat, step by step</span><span>page 3</span></div>
+</section>
+
+<!-- 4 STEPS 1-2 -->
+<section class="page">
+  <div class="stephead"><div class="badge">1</div><img src="img/icons/magnifer.svg"><h3 style="margin:0">Scan the code before you install it</h3><span class="time">3 min</span></div>
+  <p>Free code from the internet can carry anything. Run it through <a href="https://github.com/NVIDIA/skillspector">SkillSpector</a>, a free scanner from NVIDIA, or paste the repo link into Claude and ask it to check what the code sends and where. In the version linked below, the one real issue (an out-of-date login library) is already updated.</p>
+  <div class="shot mid"><img src="screens/pub-skillspector.png" alt="SkillSpector on GitHub"><div class="label" style="left:24px; top:70px">free scanner, install steps in the README</div></div>
+  <p class="caption">A high score from a scanner is a reason to read the findings, not to panic. Most flags on this repo were words like "token" in the docs.</p>
+
+  <div class="stephead" style="margin-top:14px"><div class="badge">2</div><img src="img/icons/lock-keyhole.svg"><h3 style="margin:0">Make your own private copy on GitHub</h3><span class="time">2 min</span></div>
+  <p>Open <a href="https://github.com/EasyAIHenry/openreply-henry">the OpenReply version used in the video</a>, click <b>Use this template</b> (or <b>Fork</b>), and set it to <b>Private</b>. Your copy is yours: nobody sees your settings, and it keeps running if the original changes or disappears.</p>
+  <ol class="do">
+    <li>Name it anything, for example <code>openreply</code>.</li>
+    <li>Choose <b>Private</b>, then <b>Create repository</b>.</li>
+    <li>This version already includes the Netlify set-up file and the daily jobs, so there is nothing to edit.</li>
+  </ol>
+  <div class="foot"><span>Cooked or Cracked · Free ManyChat, step by step</span><span>page 4</span></div>
+</section>
+
+<!-- 5 STEPS 3-4 -->
+<section class="page">
+  <div class="stephead"><div class="badge">3</div><img src="img/icons/database.svg"><h3 style="margin:0">Neon: the notebook</h3><span class="time">3 min</span></div>
+  <p>Neon is a free database. It writes down every comment, campaign and DM, so nobody gets the same DM twice. In <a href="https://console.neon.tech/">the Neon console</a>, create a project (pick the region closest to you), then click <b>Connect</b>. Leave <b>Connection pooling</b> on and click <b>Copy snippet</b>. That is your <code>DATABASE_URL</code>.</p>
+  <div class="duo">
+    <div class="shot mid"><img src="screens/neon-connect.png" alt="Neon connect dialog"><div class="label" style="left:12px; bottom:14px">Copy snippet</div></div>
+    <div class="note ruled" style="margin:8px 0 0"><div class="hand mute">two versions of the same address</div><p class="small" style="margin:4px 0 0">The copied address contains <code>-pooler</code>. Use it as is for the app. For the one-off table set-up on page 13, Claude uses the same address with <code>-pooler</code> removed. Neon's free plan includes 0.5 GB of storage and 100 compute hours a month.</p></div>
+  </div>
+
+  <div class="stephead" style="margin-top:14px"><div class="badge">4</div><img src="img/icons/routing-2.svg"><h3 style="margin:0">Redis: the waiting line</h3><span class="time">4 min</span></div>
+  <p>Instagram allows <a href="https://developers.facebook.com/docs/graph-api/overview/rate-limiting/">750 private replies an hour</a> per account. If two thousand people comment at once, Redis holds the rest in line so nobody gets lost. On <a href="https://cloud.redis.io/">Redis Cloud</a>, click <b>New database</b> and pick the free 30 MB plan, which holds well over ten thousand waiting DMs.</p>
+  <div class="shot short"><img src="screens/redis-db.png" alt="Redis Cloud database list"><div class="label" style="left:20px; top:10px">open your database</div></div>
+  <ol class="do">
+    <li>Open the database. Copy the <b>public endpoint</b> and, under Security, the <b>default user password</b>.</li>
+    <li>Write <code>REDIS_URL</code> as <code>redis://default:PASSWORD@ENDPOINT</code>.</li>
+    <li>Configuration, Edit, <b>Eviction policy: noeviction</b>, Save. This stops Redis deleting queued DMs if it ever fills up.</li>
+  </ol>
+  <div class="foot"><span>Cooked or Cracked · Free ManyChat, step by step</span><span>page 5</span></div>
+</section>
+
+<!-- 6 STEP 5 -->
+<section class="page">
+  <div class="stephead"><div class="badge">5</div><img src="img/icons/letter.svg"><h3 style="margin:0">Resend: the login email</h3><span class="time">2 min</span></div>
+  <p>Your dashboard has no password. To log in, it emails you a link, so only your inbox gets in. <a href="https://resend.com/signup">Sign up to Resend</a> with the email you will log in with, then open <a href="https://resend.com/api-keys">API Keys</a>, click <b>Create API key</b> and copy it with the copy icon.</p>
+  <div class="shot mid"><img src="screens/pub-resend.png" alt="Resend sign-up page"><div class="label" style="right:40px; top:150px">use the email you will log in with</div></div>
+  <div class="warn"><b>The one trap here.</b> Without your own domain, Resend's free test sender (<code>onboarding@resend.dev</code>) only delivers to the email your Resend account was made with. Put that same email in <code>ALLOWED_EMAILS</code>. Sign up with one email and log in with another, and the login email never arrives.</div>
+  <div class="three">
+    <div class="card"><div class="k">free plan</div><div class="n">3,000</div><span class="small">emails a month, 100 a day</span></div>
+    <div class="card"><div class="k">you will use</div><div class="n">≈5</div><span class="small">one per login</span></div>
+    <div class="card win"><div class="k">your key sheet</div><div class="n">+3</div><span class="small">RESEND_API_KEY, EMAIL_FROM, ALLOWED_EMAILS</span></div>
+  </div>
+  <div class="foot"><span>Cooked or Cracked · Free ManyChat, step by step</span><span>page 6</span></div>
+</section>
+
+<!-- 7 STEP 6 -->
+<section class="page">
+  <div class="stephead"><div class="badge">6</div><img src="img/icons/global.svg"><h3 style="margin:0">Netlify: put your dashboard online</h3><span class="time">5 min</span></div>
+  <p>Netlify gives you a free web address, so there is no domain to buy. Instagram, the login emails and your tracked links all point at it.</p>
+  <ol class="do">
+    <li>In <a href="https://app.netlify.com/">Netlify</a>: <b>Add new project</b>, <b>Import an existing project</b>, GitHub, then pick your private copy. The build settings fill themselves in.</li>
+    <li>Open <b>Site configuration</b>, <b>Environment variables</b>. Add every line from your key sheet you have so far. Leave the three Meta values for step 7.</li>
+    <li>Click <b>Deploy</b>. Your address looks like <code>https://your-name.netlify.app</code>. Put it in <code>NEXTAUTH_URL</code> and deploy once more.</li>
+    <li>Open <code>https://your-name.netlify.app/api/health</code>. "database ok" and "redis ok" mean steps 3 to 6 worked. The worker shows as unhealthy until step 8.</li>
+  </ol>
+  <div class="shot mid"><img src="screens/pub-netlify.png" alt="Netlify homepage"><div class="label" style="right:40px; top:14px">sign up, then Add new project</div></div>
+  <div class="note ruled"><div class="hand mute">about Netlify's free plan</div><p class="small" style="margin:4px 0 0">The free plan runs on <a href="https://www.netlify.com/pricing/">limited monthly credits</a>. Each deploy uses some, and so does traffic. If the credits run out, the site pauses until the next month instead of charging you. Deploy only when you change something.</p></div>
+  <div class="foot"><span>Cooked or Cracked · Free ManyChat, step by step</span><span>page 7</span></div>
+</section>
+
+<!-- 8 STEP 7A -->
+<section class="page">
+  <div class="stephead"><div class="badge">7</div><img src="img/icons/key.svg"><h3 style="margin:0">The Meta app: the key that links everything</h3><span class="time">10 min</span></div>
+  <p>This is the slow part, and the part people get stuck on. Go slowly and tick each one off.</p>
+  <h3>7a · Create the app</h3>
+  <ol class="do">
+    <li>On <a href="https://developers.facebook.com/apps/">Meta for Developers</a>, click <b>Create app</b>. Name it, keep your contact email, click Next.</li>
+    <li>Under use cases, choose <b>All</b>, then tick <b>Manage messaging &amp; content on Instagram</b>. Only this one.</li>
+    <li>Business portfolio: <b>I don't want to connect a business portfolio yet</b> is fine. Then Next, and <b>Create app</b>. Meta may ask for your Facebook password.</li>
+  </ol>
+  <div class="shot short narrow"><img src="screens/meta-01-usecase.png" alt="Instagram use case ticked"><div class="label" style="right:10px; top:6px">tick only this</div></div>
+  <h3 style="margin-top:10px">7b · Turn on all four permissions</h3>
+  <p>Open <b>Use cases</b>, <b>Customize</b>, then <b>Add all required permissions</b>. Then open <b>Permissions and features</b> and check these four all say <b>Ready for testing</b>: <code>instagram_business_basic</code>, <code>instagram_business_manage_comments</code>, <code>instagram_business_manage_messages</code>, <code>instagram_business_manage_insights</code>.</p>
+  <div class="shot short"><img src="screens/meta-03-permissions.png" alt="Permissions table"><div class="label" style="right:30px; top:10px">manage_comments still says + Add: click it</div></div>
+  <div class="warn"><b>Check this twice.</b> In our set-up, "Add all" skipped <code>manage_comments</code>. Without it, comments never reach your dashboard. Click <b>+ Add</b> on any of the four still missing.</div>
+  <div class="foot"><span>Cooked or Cracked · Free ManyChat, step by step</span><span>page 8</span></div>
+</section>
+
+<!-- 9 STEP 7B -->
+<section class="page">
+  <h3>7c · Add yourself as a tester, then accept it in Instagram</h3>
+  <p>App roles, Roles, <b>Add People</b>, choose <b>Instagram Tester</b>, type your Instagram username, Add. Then accept it inside Instagram: Settings, <b>Apps and websites</b>, <b>Tester invitations</b>, Accept. Until you accept, login fails with "Insufficient developer role".</p>
+  <div class="duo">
+    <div class="shot mid"><img src="screens/meta-04-add-tester.png" alt="Add Instagram tester"><div class="label" style="left:14px; bottom:12px">Instagram Tester</div></div>
+    <div class="shot mid"><img src="screens/ig-11-tester-accept.png" alt="Accept tester invite in Instagram"><div class="label" style="left:14px; bottom:12px">Accept, in Instagram</div></div>
+  </div>
+  <h3 style="margin-top:12px">7d · Set the login address</h3>
+  <p>Back on <b>Customize</b>, open <b>Set up Instagram business login</b> and paste your redirect URL, with no slash at the end:</p>
+  <pre>https://your-name.netlify.app/api/instagram/callback</pre>
+  <div class="shot short narrow"><img src="screens/meta-06-redirect.png" alt="Redirect URL dialog"></div>
+  <h3 style="margin-top:12px">7e · Copy the three Meta values</h3>
+  <ul class="check">
+    <li><b>INSTAGRAM_APP_ID</b> and <b>INSTAGRAM_APP_SECRET</b>: Customize, API setup, "Instagram app ID" and "Instagram app secret" (click Show).</li>
+    <li><b>FACEBOOK_APP_SECRET</b>: App settings, Basic, App secret, Show.</li>
+    <li>Add all three in Netlify's environment variables and deploy once more.</li>
+  </ul>
+  <div class="foot"><span>Cooked or Cracked · Free ManyChat, step by step</span><span>page 9</span></div>
+</section>
+
+<!-- 10 STEP 7C -->
+<section class="page">
+  <h3>7f · Connect the webhook</h3>
+  <p>This is how Instagram tells your dashboard about every comment. Under <b>Configure webhooks</b>, paste your callback URL and your <code>WEBHOOK_VERIFY_TOKEN</code>, then click <b>Verify and save</b>. A green tick means your site answered.</p>
+  <pre>https://your-name.netlify.app/api/webhook</pre>
+  <div class="shot mid"><img src="screens/meta-08-webhook-fields.png" alt="Webhook fields"><div class="label" style="left:30px; top:150px">comments, messages, messaging_postbacks: Subscribed</div></div>
+  <p class="small">Check three fields say Subscribed: <b>comments</b> (comment to DM), <b>messages</b> (DM and Story replies) and <b>messaging_postbacks</b> (button taps).</p>
+  <h3 style="margin-top:10px">7g · Fill in the policy pages, then publish</h3>
+  <p>App settings, Basic: paste these three pages (your app already has them), pick a category, Save Changes. Then open <b>Publish</b> and publish the app.</p>
+  <pre>https://your-name.netlify.app/privacy
+https://your-name.netlify.app/terms
+https://your-name.netlify.app/data-deletion</pre>
+  <div class="warn"><b>Until you publish, Instagram sends you nothing.</b> Publishing does not open your app to strangers. Only accounts with a role on the app (you, as tester) can connect, so you never need Meta's App Review.</div>
+  <div class="foot"><span>Cooked or Cracked · Free ManyChat, step by step</span><span>page 10</span></div>
+</section>
+
+<!-- 11 STEP 8 -->
+<section class="page">
+  <div class="stephead"><div class="badge">8</div><img src="img/icons/server-square.svg"><h3 style="margin:0">The worker, on a free Google server</h3><span class="time">8 min</span></div>
+  <p>The worker is the part that actually sends the DMs. It has to run all day, so it lives on Google Cloud's <a href="https://cloud.google.com/free/docs/free-cloud-features">always-free</a> e2-micro server. Your laptop can be off.</p>
+  <div class="shot short"><img src="screens/pub-gcloud-free.png" alt="Google Cloud free tier page"><div class="label" style="left:24px; top:14px">sign up, add your card for the identity check</div></div>
+  <ol class="do">
+    <li>Create a Google Cloud account at <a href="https://console.cloud.google.com/freetrial">console.cloud.google.com</a>. New accounts also get trial credit.</li>
+    <li>Install the <a href="https://cloud.google.com/sdk/docs/install">Google Cloud CLI</a> and run <code>gcloud auth login</code> in your terminal.</li>
+    <li>Give Claude the worker prompt on page 13. It creates the server and starts the worker as a service that restarts itself.</li>
+    <li>Open your <code>/api/health</code> page again. <b>worker healthy: true</b> means it is running.</li>
+  </ol>
+  <div class="three">
+    <div class="card"><div class="k">server</div><div class="n">e2-micro</div><span class="small">in us-central1, us-east1 or us-west1 only</span></div>
+    <div class="card"><div class="k">disk</div><div class="n">≤30 GB</div><span class="small">standard disk</span></div>
+    <div class="card win"><div class="k">cost</div><div class="n">$0</div><span class="small">inside the free tier</span></div>
+  </div>
+  <div class="warn"><b>Set a budget alert.</b> In Billing, Budgets and alerts, create a budget of 1 to 2 dollars, alert at 1% and 100%, and set credits to <b>excluded</b> so the trial credit cannot hide a charge. An alert emails you. It does not stop the server.</div>
+  <div class="foot"><span>Cooked or Cracked · Free ManyChat, step by step</span><span>page 11</span></div>
+</section>
+
+<!-- 12 STEP 9 -->
+<section class="page">
+  <div class="stephead"><div class="badge">9</div><img src="img/icons/chat-round-dots.svg"><h3 style="margin:0">Connect Instagram, build a campaign, test it</h3><span class="time">5 min</span></div>
+  <ol class="do">
+    <li>Open <code>https://your-name.netlify.app/login</code>, enter your Resend email, click the link in your inbox.</li>
+    <li><b>Settings</b>, <b>Connect Instagram</b>, log in to the account you added as tester.</li>
+    <li><b>Campaigns</b>, <b>New campaign</b>. Pick a reel, type your keyword, and fill in the parts below.</li>
+  </ol>
+  <div class="duo">
+    <div class="shot tall"><img src="screens/app-campaign.png" alt="Campaign builder"></div>
+    <div>
+      <ul class="check">
+        <li><b>Reply under the comment</b>: two or three short lines, so replies do not look identical.</li>
+        <li><b>Opening DM</b> with a button, for example "Send me the guide". Instagram only shares follow status after a button tap.</li>
+        <li><b>Follow requirement</b> (optional): a short message and an "I'm following" button.</li>
+        <li><b>DM with the link</b>: your link becomes a tracked link, so you can see clicks.</li>
+        <li><b>Go Live.</b></li>
+      </ul>
+      <div class="note ruled"><div class="hand mute">the test</div><p class="small" style="margin:4px 0 0">From your second account, comment the keyword. Expect a reply under the comment and a DM within seconds. Tap through to the link. Comments from your own account are ignored on purpose.</p></div>
+    </div>
+  </div>
+  <div class="foot"><span>Cooked or Cracked · Free ManyChat, step by step</span><span>page 12</span></div>
+</section>
+
+<!-- 13 PROMPTS -->
+<section class="page">
+  <span class="tag">let Claude do the terminal parts</span>
+  <h2 style="margin-top:14px">Three prompts, copy and paste</h2>
+  <p>Open Claude Code inside the folder where you cloned your private copy, and paste these one at a time. Each one asks before anything that costs money.</p>
+  <div class="prompt"><span class="t">1 · secrets and settings file (before step 6)</span>Create a .env file for this OpenReply app. Generate NEXTAUTH_SECRET (openssl rand -base64 32), CRON_SECRET, ENCRYPTION_KEY (exactly 64 hex characters, openssl rand -hex 32) and WEBHOOK_VERIFY_TOKEN, and set META_GRAPH_API_VERSION=v25.0 and COMMENT_POLL_INTERVAL_MS=900000. Leave clearly labelled blank lines for every other value in .env.example. Do not print the secrets in the chat.</div>
+  <div class="prompt"><span class="t">2 · create the database tables (after step 3)</span>I have pasted my Neon DATABASE_URL into .env. Run the Prisma migrations for this app against the same address with "-pooler" removed from the host, without printing the address. Then run npm run db:generate and tell me if every migration applied.</div>
+  <div class="prompt"><span class="t">3 · the worker on Google Cloud (step 8)</span>I am logged in with gcloud. Create a new project, link my billing account, and create one e2-micro VM in us-central1 with Debian 12 and a 20 GB standard disk (all inside Google's always-free tier, no static IP). On it: add 1 GB of swap, install Node 22, copy this repo and my .env to /opt/openreply, run npm ci and npx prisma generate, and run "npm run worker" as a systemd service that restarts on failure and on boot. Then create a budget alert of 2 in my billing currency at 1% and 100%, with credits excluded. Ask me before any step that could cost money.</div>
+  <div class="note ruled"><div class="hand mute">no Claude?</div><p class="small" style="margin:4px 0 0">The repo's <code>docs/setup.md</code> has the same steps as plain commands. Netlify and Meta are all clicks, which this guide covers.</p></div>
+  <div class="foot"><span>Cooked or Cracked · Free ManyChat, step by step</span><span>page 13</span></div>
+</section>
+
+<!-- 14 FIXES + LIMITS -->
+<section class="page">
+  <span class="tag">if something does not work</span>
+  <h2 style="margin-top:14px">The six problems, and the fix</h2>
+  <table class="fix">
+    <tr><td>The login email never arrives</td><td>Resend's test sender only emails the address your Resend account uses. Log in with that one, and check it is in ALLOWED_EMAILS. Look in spam.</td></tr>
+    <tr><td>Comments come in, nothing happens</td><td>Open /api/health. If the worker is not healthy, check the Google server is running.</td></tr>
+    <tr><td>Instagram sends nothing at all</td><td>The Meta app is not published, or the webhook fields are not Subscribed (7f, 7g).</td></tr>
+    <tr><td>"Insufficient developer role" at login</td><td>Accept the tester invitation inside Instagram (7c).</td></tr>
+    <tr><td>DM buttons do nothing</td><td>Another DM tool may own the conversation. Remove it in Instagram, Settings, Apps and websites, or turn off its automation for that keyword.</td></tr>
+    <tr><td>A non-follower got the link</td><td>If Instagram does not answer the follow check in time, the link goes out anyway, so real followers never get stuck. That is by design.</td></tr>
+  </table>
+  <h3 style="margin-top:16px">What "free" means here</h3>
+  <div class="three">
+    <div class="card"><div class="k">Neon</div><div class="n">0.5 GB</div><span class="small">100 compute hours a month</span></div>
+    <div class="card"><div class="k">Redis Cloud</div><div class="n">30 MB</div><span class="small">one free database</span></div>
+    <div class="card"><div class="k">Resend</div><div class="n">3,000</div><span class="small">emails a month</span></div>
+    <div class="card"><div class="k">Netlify</div><div class="n">credits</div><span class="small">pauses when they run out</span></div>
+    <div class="card"><div class="k">Google Cloud</div><div class="n">1 server</div><span class="small">e2-micro, 1 GB out a month</span></div>
+    <div class="card win"><div class="k">Meta API</div><div class="n">$0</div><span class="small">no fee per DM</span></div>
+  </div>
+  <p class="small" style="margin-top:12px">Claude is the one paid piece if you use it for set-up. On ban risk: this uses Meta's <a href="https://developers.facebook.com/docs/instagram-platform/private-replies">official private replies</a>, the same route ManyChat uses, and you never hand over your Instagram password.</p>
+  <div class="foot"><span>Cooked or Cracked · Free ManyChat, step by step</span><span>page 14</span></div>
+</section>
+
+<!-- 15 CLOSE -->
+<section class="page">
+  <span class="tag">the honest bit</span>
+  <h2 style="margin-top:14px">Who this is for, and who it is not for</h2>
+  <div class="two">
+    <div class="card win"><div class="k">set this up if</div>
+      <p style="margin:6px 0 0">You pay for a DM tool mainly for comment-to-DM. You are happy to spend 30 minutes once. You want your campaigns, logs and links on accounts you control.</p></div>
+    <div class="card"><div class="k">stay on a paid tool if</div>
+      <p style="margin:6px 0 0">You want zero set-up. You need flows beyond comment-to-DM, like email capture sequences or multi-channel inboxes. You would rather pay than look after six free accounts.</p></div>
+  </div>
+  <div class="note" style="margin-top:18px">
+    <h3>Keep it running</h3>
+    <p>Instagram logins expire after 60 days. The daily job in this version refreshes yours automatically, so leave the Netlify site live. Check <code>/api/health</code> once a week, and keep your budget alert on.</p>
+  </div>
+  <div class="note ruled" style="margin-top:18px">
+    <div class="hand mute">about the numbers in this guide</div>
+    <p style="margin:6px 0 0">Free-plan limits, prices and page layouts were checked on 10 October 2026 on the pages linked in each step. Neon, Redis, Resend, Netlify, Google Cloud and Meta change their plans, limits and terms at their own discretion, sometimes weekly. Treat every figure here as a snapshot on that date, not a quote, and confirm on the linked page before you rely on it. Henry is not affiliated with any of these companies and does not earn from these links.</p>
+  </div>
+  <p style="margin-top:22px">If a screen has changed by the time you read this, say so in the comments and the file gets updated.</p>
+  <p class="serif" style="font-size:16pt; margin-top:18px">Henry Chua<span class="coral">.</span></p>
+  <div class="foot"><span>Cooked or Cracked · Free ManyChat, step by step</span><span>page 15</span></div>
+</section>
+</body></html>
